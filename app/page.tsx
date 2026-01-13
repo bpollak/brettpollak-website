@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* As Featured In */}
-      <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-16">
+      <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10">
             <div className="inline-block px-4 py-1.5 bg-rose-50 text-rose-700 text-sm font-semibold rounded-full mb-6">
@@ -209,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* Featured Content */}
-      <section className="bg-gradient-to-b from-gray-50 to-gray-50 pt-16 pb-20">
+      <section className="bg-white pt-16 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center">
             <div className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-6">

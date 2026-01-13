@@ -58,26 +58,26 @@ export default function About() {
         </div>
 
         {/* Key Achievements */}
-        <div className="mb-20 bg-gradient-to-br from-gray-50 to-purple-50/30 rounded-2xl p-12">
+        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">TritonGPT Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 60% and democratized access to institutional knowledge for 100,000+ users</p>
             </div>
-            <div className="bg-gray-50p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Leadership</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Manage 80+ technology professionals and oversee multi-million-dollar budgets</p>
             </div>
-            <div className="bg-gray-50p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Awards</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Larry L. Sautter Gold and Silver Awards for Innovation in Information Technology</p>
             </div>
-            <div className="bg-gray-50p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Institutional Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
             </div>
-            <div className="bg-gray-50p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving 100,000+ users across campus</p>
             </div>
@@ -116,7 +116,7 @@ export default function About() {
         </div>
 
         {/* Professional Background */}
-        <div className="mb-20">
+        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Professional Background</h2>
           <div className="space-y-6 max-w-4xl">
             <p className="text-lg text-gray-600 leading-relaxed">
