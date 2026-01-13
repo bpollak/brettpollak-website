@@ -4,11 +4,11 @@ import Image from 'next/image';
 const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' : '';
 
 export const metadata: Metadata = {
-  title: "Products | Brett Pollak - AI-Powered Solutions",
-  description: "Discover products built by Brett Pollak, including Resolution Companion - an AI-powered mobile app for identity-based habit building and personal growth.",
+  title: "Products | Brett Pollak - Innovative Technology Solutions",
+  description: "Explore innovative products and solutions built by Brett Pollak, leveraging AI and modern technology to solve real-world challenges.",
   openGraph: {
-    title: "Products | Brett Pollak - AI-Powered Solutions",
-    description: "AI-powered solutions for personal growth and productivity.",
+    title: "Products | Brett Pollak - Innovative Technology Solutions",
+    description: "Innovative products leveraging AI and technology to solve real-world challenges.",
   },
 };
 
@@ -23,7 +23,7 @@ export default function Products() {
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-6 tracking-tight">Built for Impact</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-amber-600 to-orange-600 mb-8"></div>
           <p className="text-2xl text-gray-600 mb-6 max-w-3xl leading-relaxed">
-            Creating AI-powered solutions that transform how people build habits and achieve their goals.
+            Leveraging technology and AI to build innovative solutions that solve real-world challenges across diverse domains.
           </p>
         </div>
 
