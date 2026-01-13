@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   description: "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Leading the TritonGPT initiative serving 100,000+ users. Featured in Forbes, CIO.com, and EDUCAUSE Review.",
   keywords: ["Brett Pollak", "AI in Higher Education", "Digital Transformation", "TritonGPT", "UC San Diego", "Data Governance", "Technology Leadership", "Artificial Intelligence"],
   authors: [{ name: "Brett Pollak" }],
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     title: "Brett Pollak | Technology Executive - AI, Data & Digital Transformation",
     description: "Leading AI implementation and digital transformation in higher education. Leading the TritonGPT initiative serving 100,000+ users.",
