@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="mb-20">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="mb-12">
           <div className="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 text-sm font-semibold rounded-full mb-6">
             PROFILE
           </div>
@@ -25,7 +25,7 @@ export default function About() {
         </div>
 
         {/* Main Bio Section */}
-        <div className="grid md:grid-cols-5 gap-16 mb-32">
+        <div className="grid md:grid-cols-5 gap-16 mb-20">
           <div className="md:col-span-2 relative overflow-hidden">
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl transform -rotate-2"></div>
             <div className="relative">
@@ -58,7 +58,7 @@ export default function About() {
         </div>
 
         {/* Key Achievements */}
-        <div className="mb-32 bg-gradient-to-br from-gray-50 to-purple-50/30 rounded-2xl p-12">
+        <div className="mb-20 bg-gradient-to-br from-gray-50 to-purple-50/30 rounded-2xl p-12">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow">
@@ -85,7 +85,7 @@ export default function About() {
         </div>
 
         {/* Areas of Expertise */}
-        <div className="mb-32">
+        <div className="mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Areas of Expertise</h2>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
             <div>
@@ -116,7 +116,7 @@ export default function About() {
         </div>
 
         {/* Professional Background */}
-        <div className="mb-32">
+        <div className="mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Professional Background</h2>
           <div className="space-y-6 max-w-4xl">
             <p className="text-lg text-gray-600 leading-relaxed">
