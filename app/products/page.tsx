@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: "Products | Brett Pollak - AI-Powered Solutions",
   description: "Discover products built by Brett Pollak, including Resolution Companion - an AI-powered mobile app for identity-based habit building and personal growth.",
@@ -36,7 +38,7 @@ export default function Products() {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden">
                 <Image
-                  src="/resolution-companion.png"
+                  src={`${basePath}/resolution-companion.png`}
                   alt="Resolution Companion App"
                   width={400}
                   height={800}

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
@@ -49,7 +51,7 @@ export default function Home() {
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2"></div>
             <div className="relative">
               <Image
-                src="/brett-pollak-headshot-sit-center.png"
+                src={`${basePath}/brett-pollak-headshot-sit-center.png`}
                 alt="Brett Pollak"
                 width={500}
                 height={650}
