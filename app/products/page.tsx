@@ -6,9 +6,13 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export const metadata: Metadata = {
   title: "Products | Brett Pollak - AI-Powered Solutions",
   description: "Discover products built by Brett Pollak, including Resolution Companion - an AI-powered mobile app for identity-based habit building and personal growth.",
+  alternates: {
+    canonical: "https://bpollak.github.io/brettpollak-website/products",
+  },
   openGraph: {
     title: "Products | Brett Pollak - AI-Powered Solutions",
     description: "AI-powered solutions for personal growth and productivity.",
+    url: "https://bpollak.github.io/brettpollak-website/products",
   },
 };
 

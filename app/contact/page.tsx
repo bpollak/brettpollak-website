@@ -4,9 +4,13 @@ import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: "Contact Brett Pollak | Speaking Engagements & Collaboration",
   description: "Connect with Brett Pollak for speaking engagements, collaboration opportunities, and insights on AI implementation in higher education. Available for keynotes, panels, and workshops.",
+  alternates: {
+    canonical: "https://bpollak.github.io/brettpollak-website/contact",
+  },
   openGraph: {
     title: "Contact Brett Pollak | Speaking Engagements & Collaboration",
     description: "Available for speaking engagements on AI in higher education, digital transformation, and technology leadership.",
+    url: "https://bpollak.github.io/brettpollak-website/contact",
   },
 };
 

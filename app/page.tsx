@@ -4,8 +4,47 @@ import Image from 'next/image';
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Home() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brett Pollak",
+    "jobTitle": "Technology Executive",
+    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 100,000+ users.",
+    "url": "https://bpollak.github.io/brettpollak-website/",
+    "image": "https://bpollak.github.io/brettpollak-website/brett-pollak-headshot-sit-center.png",
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "name": "University of California San Diego",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      }
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of California San Diego"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Digital Transformation",
+      "Data Governance",
+      "Higher Education Technology",
+      "AI Implementation",
+      "Technology Leadership"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/brettpollak/"
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative max-w-7xl mx-auto px-6 pt-24 pb-32">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full blur-3xl opacity-20 -z-10"></div>
@@ -297,11 +336,11 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-indigo-600 px-10 py-5 font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl group rounded-lg"
+            className="inline-flex items-center gap-3 bg-white text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20"
           >
             Contact Me
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
         </div>
