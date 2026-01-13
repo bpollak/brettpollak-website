@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-24">
@@ -15,24 +17,29 @@ export default function Footer() {
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wide mb-4">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/media" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="/products" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/media" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Media & Publications
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/linkedin" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="/linkedin" className="text-gray-600 hover:text-gray-900 transition-colors">
                   LinkedIn
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
