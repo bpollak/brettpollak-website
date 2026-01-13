@@ -1,14 +1,14 @@
 import type { NextConfig } from "next";
 
-const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: isGithubPages ? '/brettpollak-website' : '',
-  assetPrefix: isGithubPages ? '/brettpollak-website' : '',
+  basePath: isProd ? '/brettpollak-website' : '',
+  assetPrefix: isProd ? '/brettpollak-website' : '',
 };
 
 export default nextConfig;
