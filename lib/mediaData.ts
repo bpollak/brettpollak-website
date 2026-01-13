@@ -202,5 +202,40 @@ export const mediaItems: MediaItem[] = [
     url: 'https://www.academicimpressions.com/instructor/brett-pollak/',
     date: '2024-01-01',
     category: 'speaking'
+  },
+  {
+    publication: 'LinkedIn',
+    title: 'Workplace Technology & Infrastructure Services Updates',
+    url: 'https://www.linkedin.com/pulse/workplace-technology-infrastructure-services-updates-brett-pollak-arejc',
+    date: '2025-06-06',
+    category: 'article'
+  },
+  {
+    publication: 'LinkedIn',
+    title: 'Musings about UC San Diego\'s Return to Learn program; COVID testing pilot for students',
+    url: 'https://www.linkedin.com/pulse/musings-uc-san-diegos-return-learn-program-covid-testing-brett-pollak',
+    date: '2020-06-24',
+    category: 'article'
+  },
+  {
+    publication: 'LinkedIn',
+    title: 'UC San Diego Mobile App updated with real time parking availability and notification center',
+    url: 'https://www.linkedin.com/pulse/uc-san-diego-mobile-app-updated-real-time-parking-center-brett-pollak',
+    date: '2018-11-10',
+    category: 'article'
+  },
+  {
+    publication: 'LinkedIn',
+    title: 'Good things ahead for UC San Diego with Student Activity Hub',
+    url: 'https://www.linkedin.com/pulse/good-things-ahead-uc-san-diego-student-activity-hub-brett-pollak',
+    date: '2018-09-30',
+    category: 'article'
+  },
+  {
+    publication: 'The EvoLLLution',
+    title: 'Shifting to Responsive Web Design',
+    url: 'https://evolllution.com/opinions/shifting-to-responsive-web-design',
+    date: '2015-01-01',
+    category: 'article'
   }
 ];
