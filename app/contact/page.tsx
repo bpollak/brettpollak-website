@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="mb-20">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="mb-12">
           <div className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-6">
             GET IN TOUCH
           </div>
@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form Section */}
-        <div className="mb-24">
+        <div className="mb-16">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Contact Form */}
             <div className="flex">
