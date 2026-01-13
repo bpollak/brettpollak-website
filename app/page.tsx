@@ -40,7 +40,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900" id="main-content">
+    <div className="min-h-screen bg-gray-50" id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -77,7 +77,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-5 text-lg font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl dark:shadow-slate-900/60 hover:shadow-2xl dark:shadow-slate-900/70 transform hover:-translate-y-0.5 group"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-5 text-lg font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 group"
             >
               Get in Touch
               <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="md:col-span-5 relative overflow-visible">
             <div className="absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl animate-pulse"></div>
             <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-40 blur-xl"></div>
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2 shadow-2xl dark:shadow-slate-900/70"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2 shadow-2xl"></div>
             <div className="absolute -inset-3 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
@@ -96,7 +96,7 @@ export default function Home() {
                 alt="Brett Pollak"
                 width={500}
                 height={753}
-                className="w-full rounded-2xl shadow-2xl dark:shadow-slate-900/70 ring-4 ring-white relative z-10"
+                className="w-full rounded-2xl shadow-2xl ring-4 ring-white relative z-10"
                 placeholder="blur"
                 blurDataURL={heroBlurDataURL}
                 priority
@@ -117,25 +117,25 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            <div className="group flex items-center justify-center p-6 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-rose-500 hover:shadow-xl dark:shadow-slate-900/60 transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-rose-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-rose-600 transition-colors">Forbes</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Technology Leadership</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-xl dark:shadow-slate-900/60 transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">CIO.com</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Digital Innovation</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl dark:shadow-slate-900/60 transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">EdTech Magazine</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">AI in Education</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-indigo-500 hover:shadow-xl dark:shadow-slate-900/60 transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-indigo-600 transition-colors">EDUCAUSE Review</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Higher Ed Tech</div>
@@ -143,7 +143,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">
+            <p className="text-gray-600 mb-6 text-lg">
               Featured in 30+ publications on AI implementation, digital transformation, and technology leadership
             </p>
             <Link
@@ -258,7 +258,7 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/about" className="group relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg dark:shadow-slate-900/50 hover:shadow-2xl dark:shadow-slate-900/70 transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/about" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-600 to-purple-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-indigo-600 group-hover:to-purple-600 transition-all">
@@ -269,7 +269,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">
                   About
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                <p className="text-gray-600 leading-relaxed mb-6">
                   Learn about my background, expertise, and leadership in AI and digital transformation.
                 </p>
                 <div className="flex items-center text-indigo-600 font-semibold group-hover:gap-2 transition-all">
@@ -281,7 +281,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/media" className="group relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg dark:shadow-slate-900/50 hover:shadow-2xl dark:shadow-slate-900/70 transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/media" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-600 to-pink-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-rose-600 group-hover:to-pink-600 transition-all">
@@ -292,7 +292,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors">
                   Media & Publications
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                <p className="text-gray-600 leading-relaxed mb-6">
                   Featured in Forbes, CIO.com, EdTech Magazine, and 30+ other publications.
                 </p>
                 <div className="flex items-center text-rose-600 font-semibold group-hover:gap-2 transition-all">
@@ -304,7 +304,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/linkedin" className="group relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg dark:shadow-slate-900/50 hover:shadow-2xl dark:shadow-slate-900/70 transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-cyan-600 transition-all">
@@ -315,7 +315,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                   LinkedIn
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                <p className="text-gray-600 leading-relaxed mb-6">
                   Recent updates and insights from my LinkedIn profile.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
@@ -340,7 +340,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 bg-gray-50 text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl dark:shadow-slate-900/70 hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20"
+            className="inline-flex items-center gap-3 bg-gray-50 text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20"
           >
             Contact Me
             <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
