@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' : '';
 
 export const metadata: Metadata = {
   title: "About Brett Pollak | AI & Digital Transformation Leader",
