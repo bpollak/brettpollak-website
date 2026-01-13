@@ -36,7 +36,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-xl">
-              Leading AI implementation and digital transformation in higher education. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative, serving 100,000+ users and revolutionizing institutional knowledge access.
+              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 100,000+ users while guiding teams of 80+ technology professionals.
             </p>
             <Link
               href="/contact"
