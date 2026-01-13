@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: "About Brett Pollak | AI & Digital Transformation Leader",
   description: "Learn about Brett Pollak's leadership in AI and digital transformation at UC San Diego. Over two decades of technology innovation in higher education, including creation of TritonGPT.",
@@ -28,7 +30,7 @@ export default function About() {
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl transform -rotate-2"></div>
             <div className="relative">
               <Image
-                src="/brettpollak-headshot-lean.png"
+                src={`${basePath}/brettpollak-headshot-lean.png`}
                 alt="Brett Pollak"
                 width={300}
                 height={400}

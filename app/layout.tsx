@@ -22,6 +22,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bpollak.github.io/brettpollak-website'),
   title: "Brett Pollak | Technology Executive - AI, Data & Digital Transformation",
   description: "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 100,000+ users. Featured in Forbes, CIO.com, and EDUCAUSE Review.",
   keywords: ["Brett Pollak", "AI in Higher Education", "Digital Transformation", "TritonGPT", "UC San Diego", "Data Governance", "Technology Leadership", "Artificial Intelligence"],
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Brett Pollak | Technology Executive - AI, Data & Digital Transformation",
     description: "Leading AI implementation and digital transformation in higher education. Creator of TritonGPT serving 100,000+ users.",
-    url: "https://brettpollak.com",
+    url: "https://bpollak.github.io/brettpollak-website",
     siteName: "Brett Pollak",
     type: "profile",
     images: [
