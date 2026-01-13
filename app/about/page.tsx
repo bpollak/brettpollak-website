@@ -1,18 +1,16 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' : '';
-
 export const metadata: Metadata = {
   title: "About Brett Pollak | AI & Digital Transformation Leader",
   description: "Learn about Brett Pollak's leadership in AI and digital transformation at UC San Diego. Over two decades of technology innovation in higher education, including leading the TritonGPT initiative.",
   alternates: {
-    canonical: "https://bpollak.github.io/brettpollak-website/about",
+    canonical: "https://brettcpollak.com/about",
   },
   openGraph: {
     title: "About Brett Pollak | AI & Digital Transformation Leader",
     description: "Over two decades of technology leadership driving AI implementation and digital transformation in higher education.",
-    url: "https://bpollak.github.io/brettpollak-website/about",
+    url: "https://brettcpollak.com/about",
   },
 };
 
@@ -37,7 +35,7 @@ export default function About() {
             <div className="absolute -inset-3 bg-gradient-to-tl from-purple-100 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
-                src={`${basePath}/brettpollak-headshot-lean.png`}
+                src="/brettpollak-headshot-lean.png"
                 alt="Brett Pollak"
                 width={300}
                 height={400}

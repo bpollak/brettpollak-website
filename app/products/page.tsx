@@ -1,18 +1,16 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' : '';
-
 export const metadata: Metadata = {
   title: "Products | Brett Pollak - Innovative Technology Solutions",
   description: "Explore innovative products and solutions built by Brett Pollak, leveraging AI and modern technology to solve real-world challenges.",
   alternates: {
-    canonical: "https://bpollak.github.io/brettpollak-website/products",
+    canonical: "https://brettcpollak.com/products",
   },
   openGraph: {
     title: "Products | Brett Pollak - Innovative Technology Solutions",
     description: "Innovative products leveraging AI and technology to solve real-world challenges.",
-    url: "https://bpollak.github.io/brettpollak-website/products",
+    url: "https://brettcpollak.com/products",
   },
 };
 
@@ -42,7 +40,7 @@ export default function Products() {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden">
                 <Image
-                  src={`${basePath}/resolution-companion.png`}
+                  src="/resolution-companion.png"
                   alt="Resolution Companion App"
                   width={400}
                   height={800}

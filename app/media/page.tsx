@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Media & Publications | Brett Pollak",
   description: "Featured in 30+ publications including Forbes, CIO.com, EdTech Magazine, and EDUCAUSE Review. Insights on AI implementation, digital transformation, and technology leadership in higher education.",
   alternates: {
-    canonical: "https://bpollak.github.io/brettpollak-website/media",
+    canonical: "https://brettcpollak.com/media",
   },
   openGraph: {
     title: "Media & Publications | Brett Pollak",
     description: "Featured in Forbes, CIO.com, EdTech Magazine, EDUCAUSE Review, and 30+ other publications on AI and digital transformation.",
-    url: "https://bpollak.github.io/brettpollak-website/media",
+    url: "https://brettcpollak.com/media",
   },
 };
 
@@ -35,7 +35,7 @@ export default function Media() {
         "author": {
           "@type": "Person",
           "name": "Brett Pollak",
-          "url": "https://bpollak.github.io/brettpollak-website/"
+          "url": "https://brettcpollak.com/"
         },
         "publisher": {
           "@type": "Organization",
