@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' : '';
+
+const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
 export default function Home() {
   const personSchema = {
@@ -73,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-xl">
-              Leading AI implementation and digital transformation in higher education. Creator of <span className="font-semibold text-gray-900">TritonGPT</span>, serving 100,000+ users and revolutionizing institutional knowledge access.
+              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 100,000+ users while guiding teams of 80+ technology professionals.
             </p>
             <Link
               href="/contact"
@@ -85,16 +87,20 @@ export default function Home() {
               </svg>
             </Link>
           </div>
-          <div className="md:col-span-5 relative">
-            <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-30 blur-xl"></div>
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2"></div>
+          <div className="md:col-span-5 relative overflow-visible">
+            <div className="absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl animate-pulse"></div>
+            <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-40 blur-xl"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2 shadow-2xl"></div>
+            <div className="absolute -inset-3 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
                 src={`${basePath}/brett-pollak-headshot-sit-center.png`}
                 alt="Brett Pollak"
                 width={500}
-                height={650}
-                className="w-full rounded-2xl shadow-2xl ring-4 ring-white"
+                height={753}
+                className="w-full rounded-2xl shadow-2xl ring-4 ring-white relative z-10"
+                placeholder="blur"
+                blurDataURL={heroBlurDataURL}
                 priority
               />
             </div>
@@ -336,7 +342,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 bg-white text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20"
+            className="inline-flex items-center gap-3 bg-gray-50 text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20"
           >
             Contact Me
             <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
