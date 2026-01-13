@@ -4,9 +4,13 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Media & Publications | Brett Pollak",
   description: "Featured in 30+ publications including Forbes, CIO.com, EdTech Magazine, and EDUCAUSE Review. Insights on AI implementation, digital transformation, and technology leadership in higher education.",
+  alternates: {
+    canonical: "https://bpollak.github.io/brettpollak-website/media",
+  },
   openGraph: {
     title: "Media & Publications | Brett Pollak",
     description: "Featured in Forbes, CIO.com, EdTech Magazine, EDUCAUSE Review, and 30+ other publications on AI and digital transformation.",
+    url: "https://bpollak.github.io/brettpollak-website/media",
   },
 };
 
@@ -15,6 +19,35 @@ export default function Media() {
   const sortedItems = [...mediaItems].sort((a, b) =>
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+
+  // Create ItemList schema for all media items
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": sortedItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": item.category === 'article' || item.category === 'interview' ? "NewsArticle" : "CreativeWork",
+        "headline": item.title,
+        "url": item.url,
+        "datePublished": item.date,
+        "author": {
+          "@type": "Person",
+          "name": "Brett Pollak",
+          "url": "https://bpollak.github.io/brettpollak-website/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": item.publication
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": item.url
+        }
+      }
+    }))
+  };
 
   // Group by year
   const itemsByYear = sortedItems.reduce((acc, item) => {
@@ -36,6 +69,10 @@ export default function Media() {
 
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12">
           <div className="inline-block px-4 py-1.5 bg-rose-50 text-rose-700 text-sm font-semibold rounded-full mb-6">

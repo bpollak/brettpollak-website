@@ -6,9 +6,13 @@ const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' 
 export const metadata: Metadata = {
   title: "Products | Brett Pollak - Innovative Technology Solutions",
   description: "Explore innovative products and solutions built by Brett Pollak, leveraging AI and modern technology to solve real-world challenges.",
+  alternates: {
+    canonical: "https://bpollak.github.io/brettpollak-website/products",
+  },
   openGraph: {
     title: "Products | Brett Pollak - Innovative Technology Solutions",
     description: "Innovative products leveraging AI and technology to solve real-world challenges.",
+    url: "https://bpollak.github.io/brettpollak-website/products",
   },
 };
 

@@ -1,0 +1,12 @@
+# Robots.txt for Brett Pollak Website
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bpollak.github.io/brettpollak-website/sitemap.xml
+
+# Disallow crawling of admin or private areas (if any exist in the future)
+# Disallow: /admin/
+# Disallow: /private/
