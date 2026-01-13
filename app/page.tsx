@@ -48,16 +48,18 @@ export default function Home() {
               </svg>
             </Link>
           </div>
-          <div className="md:col-span-5 relative overflow-hidden">
-            <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-30 blur-xl"></div>
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2"></div>
+          <div className="md:col-span-5 relative overflow-visible">
+            <div className="absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl animate-pulse"></div>
+            <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-40 blur-xl"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2 shadow-2xl"></div>
+            <div className="absolute -inset-3 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
                 src={`${basePath}/brett-pollak-headshot-sit-center.png`}
                 alt="Brett Pollak"
                 width={500}
                 height={753}
-                className="w-full rounded-2xl shadow-2xl ring-4 ring-gray-100"
+                className="w-full rounded-2xl shadow-2xl ring-4 ring-white/50"
                 priority
                 placeholder="blur"
                 blurDataURL={heroBlurDataURL}

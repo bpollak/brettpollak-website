@@ -26,15 +26,18 @@ export default function About() {
 
         {/* Main Bio Section */}
         <div className="grid md:grid-cols-5 gap-16 mb-20">
-          <div className="md:col-span-2 relative overflow-hidden">
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl transform -rotate-2"></div>
+          <div className="md:col-span-2 relative overflow-visible">
+            <div className="absolute -inset-6 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-2xl transform -rotate-3 opacity-20 blur-2xl animate-pulse"></div>
+            <div className="absolute -inset-5 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 rounded-2xl transform -rotate-2 opacity-40 blur-xl"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-1 shadow-2xl"></div>
+            <div className="absolute -inset-3 bg-gradient-to-tl from-purple-100 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
                 src={`${basePath}/brettpollak-headshot-lean.png`}
                 alt="Brett Pollak"
                 width={300}
                 height={400}
-                className="w-full rounded-xl shadow-xl"
+                className="w-full rounded-xl shadow-2xl ring-4 ring-white/50"
               />
             </div>
           </div>
