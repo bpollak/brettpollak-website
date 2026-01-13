@@ -75,7 +75,7 @@ export default function About() {
             </div>
             <div className="bg-white p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Institutional Impact</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by major universities including UC Berkeley and SDSU</p>
+              <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
             </div>
             <div className="bg-white p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
