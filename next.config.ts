@@ -1,12 +1,14 @@
 import type { NextConfig } from "next";
 
+const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
+
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: '/brettpollak-website',
-  assetPrefix: '/brettpollak-website',
+  basePath: isGithubPages ? '/brettpollak-website' : '',
+  assetPrefix: isGithubPages ? '/brettpollak-website' : '',
 };
 
 export default nextConfig;
