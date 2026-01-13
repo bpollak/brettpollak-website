@@ -31,7 +31,7 @@ export default function About() {
           <div className="md:col-span-2 relative overflow-visible">
             <div className="absolute -inset-6 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-2xl transform -rotate-3 opacity-20 blur-2xl animate-pulse"></div>
             <div className="absolute -inset-5 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 rounded-2xl transform -rotate-2 opacity-40 blur-xl"></div>
-            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-1 shadow-2xl dark:shadow-slate-900/70"></div>
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-1 shadow-2xl"></div>
             <div className="absolute -inset-3 bg-gradient-to-tl from-purple-100 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
@@ -39,7 +39,7 @@ export default function About() {
                 alt="Brett Pollak"
                 width={300}
                 height={400}
-                className="w-full rounded-xl shadow-2xl dark:shadow-slate-900/70 ring-4 ring-white/50"
+                className="w-full rounded-xl shadow-2xl ring-4 ring-white/50"
               />
             </div>
           </div>
@@ -63,26 +63,26 @@ export default function About() {
         </div>
 
         {/* Key Achievements */}
-        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg dark:shadow-slate-900/50">
+        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">TritonGPT Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 60% and democratized access to institutional knowledge for 100,000+ users</p>
             </div>
-            <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Leadership</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Manage 80+ technology professionals and oversee multi-million-dollar budgets</p>
             </div>
-            <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Awards</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Larry L. Sautter Gold and Silver Awards for Innovation in Information Technology</p>
             </div>
-            <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Institutional Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
             </div>
-            <div className="bg-gray-50 dark:bg-slate-900 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving 100,000+ users across campus</p>
             </div>
@@ -121,7 +121,7 @@ export default function About() {
         </div>
 
         {/* Professional Background */}
-        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg dark:shadow-slate-900/50">
+        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Professional Background</h2>
           <div className="space-y-6 max-w-4xl">
             <p className="text-lg text-gray-600 leading-relaxed">

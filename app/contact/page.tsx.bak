@@ -44,12 +44,12 @@ export default function Contact() {
             </div>
 
             {/* Speaking & Collaboration Info */}
-            <div className="bg-white dark:bg-slate-800 p-10 rounded-xl border-l-4 border-purple-600 shadow-lg dark:shadow-slate-900/50 flex flex-col">
+            <div className="bg-white p-10 rounded-xl border-l-4 border-purple-600 shadow-lg flex flex-col">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Speaking & Collaboration</h3>
 
               <div className="mb-8">
                 <h4 className="text-xl font-bold text-purple-600 mb-4">Speaking Engagements</h4>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 leading-relaxed">
                   Available for keynotes, panels, workshops, and webinars on:
                 </p>
                 <ul className="space-y-3">
@@ -82,7 +82,7 @@ export default function Contact() {
 
               <div className="border-t border-gray-200 pt-8">
                 <h4 className="text-xl font-bold text-emerald-600 mb-4">Collaboration Opportunities</h4>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 leading-relaxed">
                   Interested in collaborating on:
                 </p>
                 <ul className="space-y-3">

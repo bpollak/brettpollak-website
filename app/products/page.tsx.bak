@@ -35,7 +35,7 @@ export default function Products() {
             href="https://resolutioncompanion.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-white rounded-2xl shadow-xl dark:shadow-slate-900/60 overflow-hidden hover:shadow-2xl dark:shadow-slate-900/70 transition-all duration-300 transform hover:-translate-y-2"
+            className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
           >
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden">

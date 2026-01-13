@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -60,13 +61,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${montserrat.variable} ${plusJakarta.variable} antialiased`}>
-        <GoogleAnalytics />
-        <Header />
-        {children}
-        <Footer />
-        <BackToTop />
+        <ThemeProvider>
+          <GoogleAnalytics />
+          <Header />
+          {children}
+          <Footer />
+          <BackToTop />
+        </ThemeProvider>
       </body>
     </html>
   );
