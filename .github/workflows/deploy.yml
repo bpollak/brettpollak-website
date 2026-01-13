@@ -32,6 +32,7 @@ jobs:
       - name: Build with Next.js
         run: npm run build
         env:
+          NODE_ENV: production
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Upload artifact
