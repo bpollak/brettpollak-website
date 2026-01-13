@@ -60,7 +60,7 @@ export default function Media() {
                 {itemsByYear[Number(year)].map((item, index) => (
                   <div
                     key={index}
-                    className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-rose-500 hover:shadow-lg transition-all duration-300"
+                    className="group bg-gray-50p-6 rounded-xl border border-gray-200 hover:border-rose-500 hover:shadow-lg transition-all duration-300"
                   >
                     <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                       {item.url !== '#' ? (
@@ -96,7 +96,7 @@ export default function Media() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group"
+              className="inline-flex items-center gap-2 bg-gray-50text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group"
             >
               Inquire About Speaking
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

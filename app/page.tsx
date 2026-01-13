@@ -57,7 +57,7 @@ export default function Home() {
                 alt="Brett Pollak"
                 width={500}
                 height={753}
-                className="w-full rounded-2xl shadow-2xl ring-4 ring-white"
+                className="w-full rounded-2xl shadow-2xl ring-4 ring-gray-100"
                 priority
                 placeholder="blur"
                 blurDataURL={heroBlurDataURL}
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* As Featured In */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-16">
+      <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10">
             <div className="inline-block px-4 py-1.5 bg-rose-50 text-rose-700 text-sm font-semibold rounded-full mb-6">
@@ -78,25 +78,25 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-rose-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-gray-50/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-rose-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-rose-600 transition-colors">Forbes</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Technology Leadership</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-gray-50/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">CIO.com</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Digital Innovation</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-gray-50/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">EdTech Magazine</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">AI in Education</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-gray-50/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-indigo-600 transition-colors">EDUCAUSE Review</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Higher Ed Tech</div>
@@ -209,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* Featured Content */}
-      <section className="bg-gradient-to-b from-gray-50 to-white pt-16 pb-20">
+      <section className="bg-gradient-to-b from-gray-50 to-gray-50 pt-16 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 text-center">
             <div className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-6">
@@ -219,7 +219,7 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/about" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/about" className="group relative bg-gray-50/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-600 to-purple-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-indigo-600 group-hover:to-purple-600 transition-all">
@@ -242,7 +242,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/media" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/media" className="group relative bg-gray-50/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-600 to-pink-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-rose-600 group-hover:to-pink-600 transition-all">
@@ -265,7 +265,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/linkedin" className="group relative bg-gray-50/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-cyan-600 transition-all">
@@ -301,7 +301,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-white text-indigo-600 px-10 py-5 font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl group rounded-lg"
+            className="inline-flex items-center gap-2 bg-gray-50text-indigo-600 px-10 py-5 font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl group rounded-lg"
           >
             Contact Me
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
