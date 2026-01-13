@@ -48,7 +48,7 @@ export default function Home() {
               </svg>
             </Link>
           </div>
-          <div className="md:col-span-5 relative">
+          <div className="md:col-span-5 relative overflow-hidden">
             <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-30 blur-xl"></div>
             <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2"></div>
             <div className="relative">
