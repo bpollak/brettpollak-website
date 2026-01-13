@@ -19,7 +19,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm">
+    <header className="sticky top-0 z-50 bg-gray-50/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm">
       <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-50"></div>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Skip to main content link for accessibility */}

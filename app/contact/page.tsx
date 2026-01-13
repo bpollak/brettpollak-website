@@ -40,7 +40,7 @@ export default function Contact() {
             </div>
 
             {/* Speaking & Collaboration Info */}
-            <div className="bg-white p-10 rounded-xl border-l-4 border-purple-600 shadow-lg flex flex-col">
+            <div className="bg-gray-50p-10 rounded-xl border-l-4 border-purple-600 shadow-lg flex flex-col">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Speaking & Collaboration</h3>
 
               <div className="mb-8">
