@@ -5,7 +5,7 @@ const basePath = process.env.NODE_ENV === 'production' ? '/brettpollak-website' 
 
 export const metadata: Metadata = {
   title: "About Brett Pollak | AI & Digital Transformation Leader",
-  description: "Learn about Brett Pollak's leadership in AI and digital transformation at UC San Diego. Over two decades of technology innovation in higher education, including creation of TritonGPT.",
+  description: "Learn about Brett Pollak's leadership in AI and digital transformation at UC San Diego. Over two decades of technology innovation in higher education, including leading the TritonGPT initiative.",
   openGraph: {
     title: "About Brett Pollak | AI & Digital Transformation Leader",
     description: "Over two decades of technology leadership driving AI implementation and digital transformation in higher education.",
