@@ -68,9 +68,9 @@ export default function Home() {
       </section>
 
       {/* As Featured In */}
-      <section className="bg-gradient-to-b from-white to-gray-50 py-24">
+      <section className="bg-gradient-to-b from-white to-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <div className="inline-block px-4 py-1.5 bg-rose-50 text-rose-700 text-sm font-semibold rounded-full mb-6">
               RECOGNITION
             </div>
@@ -121,9 +121,9 @@ export default function Home() {
       </section>
 
       {/* Impact Statement Cards */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-24">
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 text-center">
+          <div className="mb-10 text-center">
             <div className="inline-block px-4 py-1.5 bg-blue-600/20 text-blue-300 text-sm font-semibold rounded-full mb-6">
               REAL IMPACT
             </div>
@@ -172,8 +172,8 @@ export default function Home() {
       </section>
 
       {/* Areas of Expertise */}
-      <section className="max-w-7xl mx-auto px-6 py-32">
-        <div className="mb-20 text-center">
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="mb-12 text-center">
           <div className="inline-block px-4 py-1.5 bg-purple-50 text-purple-700 text-sm font-semibold rounded-full mb-6">
             EXPERTISE
           </div>
@@ -209,9 +209,9 @@ export default function Home() {
       </section>
 
       {/* Featured Content */}
-      <section className="bg-gradient-to-b from-gray-50 to-white pt-16 pb-32">
+      <section className="bg-gradient-to-b from-gray-50 to-white pt-16 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20 text-center">
+          <div className="mb-12 text-center">
             <div className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-6">
               EXPLORE
             </div>
@@ -292,7 +292,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 py-16 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative">
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 bg-clip-text text-transparent mb-8 tracking-tight">Let's Connect</h2>

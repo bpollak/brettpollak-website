@@ -36,8 +36,8 @@ export default function Media() {
 
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="mb-20">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="mb-12">
           <div className="inline-block px-4 py-1.5 bg-rose-50 text-rose-700 text-sm font-semibold rounded-full mb-6">
             PUBLICATIONS
           </div>
@@ -51,7 +51,7 @@ export default function Media() {
         {Object.keys(itemsByYear)
           .sort((a, b) => Number(b) - Number(a))
           .map(year => (
-            <div key={year} className="mb-20">
+            <div key={year} className="mb-12">
               <div className="flex items-center gap-4 mb-10">
                 <div className="text-5xl font-bold bg-gradient-to-r from-rose-600 to-purple-600 bg-clip-text text-transparent">{year}</div>
                 <div className="flex-1 h-px bg-gradient-to-r from-rose-600 via-pink-500 to-transparent"></div>

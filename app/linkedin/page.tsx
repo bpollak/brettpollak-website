@@ -17,7 +17,7 @@ export default function LinkedIn() {
         strategy="afterInteractive"
       />
 
-      <div className="max-w-6xl mx-auto px-6 py-24">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-8 tracking-tight">LinkedIn</h1>
         <p className="text-xl text-gray-600 mb-16 max-w-3xl">
           Recent updates and insights from my LinkedIn profile

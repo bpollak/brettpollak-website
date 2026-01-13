@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function Products() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
-      <div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="mb-20">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="mb-12">
           <div className="inline-block px-4 py-1.5 bg-amber-50 text-amber-700 text-sm font-semibold rounded-full mb-6">
             PRODUCTS
           </div>
@@ -28,7 +28,7 @@ export default function Products() {
         </div>
 
         {/* Resolution Companion */}
-        <div className="mb-24">
+        <div className="mb-16">
           <a
             href="https://resolutioncompanion.com/"
             target="_blank"
