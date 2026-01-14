@@ -334,7 +334,7 @@ export default function Home() {
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 bg-clip-text text-transparent mb-8 tracking-tight">Let's Connect</h2>
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 bg-clip-text text-transparent mb-8 tracking-tight">Let&apos;s Connect</h2>
           <p className="text-2xl text-purple-100 mb-12 leading-relaxed">
             Available for speaking engagements, consulting, and collaboration opportunities in AI implementation and digital transformation.
           </p>

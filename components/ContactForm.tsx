@@ -70,7 +70,7 @@ export default function ContactForm() {
 
       {status === 'success' && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 font-medium">Thank you for your message! I'll get back to you soon.</p>
+          <p className="text-green-800 font-medium">Thank you for your message! I&apos;ll get back to you soon.</p>
         </div>
       )}
 

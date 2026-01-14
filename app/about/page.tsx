@@ -53,7 +53,7 @@ export default function About() {
               technologies while managing risk and ensuring ethical implementation.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed">
-              As a proven innovator in AI implementation, I've demonstrated that breakthrough solutions can move from concept to
+              As a proven innovator in AI implementation, I&apos;ve demonstrated that breakthrough solutions can move from concept to
               production in weeks, not years—scaling to serve 100,000+ users while achieving 60-90% efficiency gains. I bring a
               track record of creating institutional knowledge platforms that democratize access to information, accelerate decision-making,
               and inspire sector-wide adoption. Organizations seeking to lead in the AI era benefit from my expertise in balancing innovation
@@ -132,7 +132,7 @@ export default function About() {
             <p className="text-lg text-gray-600 leading-relaxed">
               At UC San Diego, I oversee critical technology groups including Data Warehouse, Analytics, Predictive Technologies,
               Email, Service Desk, Field Support, and Web Technologies. My work focuses on operational efficiency, technology
-              integration, and cross-functional collaboration to support both the university's business and academic missions.
+              integration, and cross-functional collaboration to support both the university&apos;s business and academic missions.
             </p>
           </div>
         </div>

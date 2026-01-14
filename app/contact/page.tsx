@@ -25,10 +25,10 @@ export default function Contact() {
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent mb-6 tracking-tight">Contact</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-teal-600 to-cyan-600 mb-8"></div>
           <p className="text-2xl text-gray-600 mb-6 max-w-3xl leading-relaxed">
-            I'm always interested in connecting with fellow technology leaders, researchers, and innovators in higher education.
+            I&apos;m always interested in connecting with fellow technology leaders, researchers, and innovators in higher education.
           </p>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
-            Whether you're looking for speaking engagements, collaboration opportunities, or insights on AI implementation,
+            Whether you&apos;re looking for speaking engagements, collaboration opportunities, or insights on AI implementation,
             feel free to reach out.
           </p>
         </div>
