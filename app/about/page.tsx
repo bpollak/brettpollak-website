@@ -109,26 +109,47 @@ export default function About() {
 
         {/* Professional Background */}
         <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Career Journey</h2>
-          <div className="space-y-8 max-w-4xl">
-            <div className="border-l-4 border-blue-600 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">University of California San Diego</h3>
-              <p className="text-md text-gray-500 mb-3">Executive Director, Workplace Technology & Infrastructure Services | 2008–Present</p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-3">
-                Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
-                Email, Service Desk, Field Support, Endpoint Management, Enterprise Content Management, Web Technologies,
-                and Integrated Collaboration Services. Spearheaded the TritonGPT initiative, establishing UC San Diego as a
-                leader in institutional AI implementation.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Prior role as Manager of the Campus Web Office focused on mobile strategy, responsive design, and
-                user experience optimization across university digital properties.
-              </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Career Journey</h2>
+          <div className="space-y-12 max-w-4xl">
+            {/* UC San Diego */}
+            <div className="relative pl-8 border-l-2 border-gray-200">
+              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-blue-600 rounded-full ring-4 ring-white shadow-sm"></div>
+              
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                <h3 className="text-2xl font-bold text-gray-900">University of California San Diego</h3>
+                <span className="text-sm font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2008 – Present</span>
+              </div>
+              
+              <div className="text-xl font-medium text-blue-600 mb-4">Executive Director, Workplace Technology & Infrastructure Services</div>
+              
+              <div className="text-lg text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
+                  Email, Service Desk, Field Support, Endpoint Management, Enterprise Content Management, Web Technologies,
+                  and Integrated Collaboration Services.
+                </p>
+                <p>
+                  Spearheaded the <span className="font-semibold text-gray-800">TritonGPT</span> initiative, establishing UC San Diego as a
+                  leader in institutional AI implementation.
+                </p>
+                <p>
+                  Prior role as Manager of the Campus Web Office focused on mobile strategy, responsive design, and
+                  user experience optimization across university digital properties.
+                </p>
+              </div>
             </div>
 
-            <div className="border-l-4 border-purple-600 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">SAIC (Science Applications International Corporation)</h3>
-              <p className="text-md text-gray-500 mb-3">Corporate Web Team Manager | 2001–2008</p>
+            {/* SAIC */}
+            <div className="relative pl-8 border-l-2 border-gray-200">
+              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-purple-600 rounded-full ring-4 ring-white shadow-sm"></div>
+              
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                <h3 className="text-2xl font-bold text-gray-900">SAIC (Science Applications International Corporation)</h3>
+                <span className="text-sm font-bold text-purple-700 bg-purple-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2001 – 2008</span>
+              </div>
+              
+              <div className="text-xl font-medium text-purple-600 mb-4">Corporate Web Team Manager</div>
+              
               <p className="text-lg text-gray-600 leading-relaxed">
                 Managed a department of 40 professionals including web content developers, user interface designers,
                 programmers, project managers, and team leads. Developed expertise in large-scale enterprise web
@@ -136,10 +157,19 @@ export default function About() {
               </p>
             </div>
 
-            <div className="border-l-4 border-indigo-600 pl-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Education</h3>
+            {/* Education */}
+            <div className="relative pl-8 border-l-2 border-gray-200">
+              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-indigo-600 rounded-full ring-4 ring-white shadow-sm"></div>
+              
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+                <h3 className="text-2xl font-bold text-gray-900">University of San Diego</h3>
+                <span className="text-sm font-bold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">1995</span>
+              </div>
+              
+              <div className="text-xl font-medium text-indigo-600 mb-4">Education</div>
+              
               <p className="text-lg text-gray-600 leading-relaxed">
-                <span className="font-semibold">BBA in Marketing</span>, University of San Diego (1995)
+                <span className="font-semibold text-gray-900">BBA in Marketing</span>
               </p>
             </div>
           </div>
