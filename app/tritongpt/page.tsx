@@ -308,37 +308,52 @@ export default function TritonGPT() {
                   </svg>
                 )
               }
-            ].map((assistant, index) => (
-              <div 
-                key={index} 
-                className="card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-blue-500 hover:shadow-xl transition-all group flex flex-col"
-              >
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-all duration-300">
-                  <div className="text-blue-600 group-hover:text-white transition-colors">
-                    {assistant.icon}
+            ].map((assistant, index) => {
+              const colors = [
+                { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
+                { border: 'hover:border-purple-500', bg: 'bg-purple-50', iconBg: 'group-hover:bg-purple-600', text: 'text-purple-600', groupText: 'group-hover:text-purple-600', quoteBorder: 'border-purple-100' },
+                { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600', quoteBorder: 'border-emerald-100' },
+                { border: 'hover:border-rose-500', bg: 'bg-rose-50', iconBg: 'group-hover:bg-rose-600', text: 'text-rose-600', groupText: 'group-hover:text-rose-600', quoteBorder: 'border-rose-100' },
+                { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600', quoteBorder: 'border-cyan-100' },
+                { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
+                { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
+                { border: 'hover:border-teal-500', bg: 'bg-teal-50', iconBg: 'group-hover:bg-teal-600', text: 'text-teal-600', groupText: 'group-hover:text-teal-600', quoteBorder: 'border-teal-100' },
+                { border: 'hover:border-fuchsia-500', bg: 'bg-fuchsia-50', iconBg: 'group-hover:bg-fuchsia-600', text: 'text-fuchsia-600', groupText: 'group-hover:text-fuchsia-600', quoteBorder: 'border-fuchsia-100' },
+              ];
+              const color = colors[index % colors.length];
+
+              return (
+                <div 
+                  key={index} 
+                  className={`card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all group flex flex-col ${color.border}`}
+                >
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${color.bg} ${color.iconBg}`}>
+                    <div className={`${color.text} group-hover:text-white transition-colors`}>
+                      {assistant.icon}
+                    </div>
                   </div>
+                  <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
+                    {assistant.name}
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                    {assistant.desc}
+                  </p>
+                  {assistant.metric && (
+                    <div className="mt-auto">
+                      <p className={`text-sm font-semibold mb-1 ${color.text}`}>{assistant.metric}</p>
+                      {assistant.stats && <p className="text-xs text-gray-500">{assistant.stats}</p>}
+                    </div>
+                  )}
+                  {assistant.quote && (
+                    <div className={`mt-4 border-l-2 pl-4 py-1 ${color.quoteBorder}`}>
+                      <p className="text-[10px] text-gray-500 italic leading-tight">
+                        &ldquo;{assistant.quote}&rdquo;
+                      </p>
+                    </div>
+                  )}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {assistant.name}
-                </h4>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
-                  {assistant.desc}
-                </p>
-                {assistant.metric && (
-                  <div className="mt-auto">
-                    <p className="text-sm font-semibold text-blue-600 mb-1">{assistant.metric}</p>
-                    {assistant.stats && <p className="text-xs text-gray-500">{assistant.stats}</p>}
-                  </div>
-                )}
-                {assistant.quote && (
-                  <div className="mt-4 border-l-2 border-blue-100 pl-4 py-1">
-                    <p className="text-[10px] text-gray-500 italic leading-tight">
-                      &ldquo;{assistant.quote}&rdquo;
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -475,20 +490,34 @@ export default function TritonGPT() {
                 text: "“This is going to free me up to spend time on strategic relationships with suppliers.”",
                 context: "Strategic Focus"
               }
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="card-3d bg-white p-8 rounded-2xl shadow-sm border-l-4 border-purple-500 hover:shadow-xl transition-all group relative animate-slide-up"
-              >
-                <div className="absolute top-4 right-6 text-[10px] font-bold text-purple-300 uppercase tracking-widest group-hover:text-purple-500 transition-colors">
-                  {item.context}
+            ].map((item, index) => {
+              const colors = [
+                { border: 'border-purple-500', text: 'text-purple-300', hoverText: 'group-hover:text-purple-500', icon: 'text-purple-100' },
+                { border: 'border-blue-500', text: 'text-blue-300', hoverText: 'group-hover:text-blue-500', icon: 'text-blue-100' },
+                { border: 'border-emerald-500', text: 'text-emerald-300', hoverText: 'group-hover:text-emerald-500', icon: 'text-emerald-100' },
+                { border: 'border-rose-500', text: 'text-rose-300', hoverText: 'group-hover:text-rose-500', icon: 'text-rose-100' },
+                { border: 'border-cyan-500', text: 'text-cyan-300', hoverText: 'group-hover:text-cyan-500', icon: 'text-cyan-100' },
+                { border: 'border-indigo-500', text: 'text-indigo-300', hoverText: 'group-hover:text-indigo-500', icon: 'text-indigo-100' },
+                { border: 'border-amber-500', text: 'text-amber-300', hoverText: 'group-hover:text-amber-500', icon: 'text-amber-100' },
+                { border: 'border-teal-500', text: 'text-teal-300', hoverText: 'group-hover:text-teal-500', icon: 'text-teal-100' },
+              ];
+              const color = colors[index % colors.length];
+
+              return (
+                <div 
+                  key={index} 
+                  className={`card-3d bg-white p-8 rounded-2xl shadow-sm border-l-4 hover:shadow-xl transition-all group relative animate-slide-up ${color.border}`}
+                >
+                  <div className={`absolute top-4 right-6 text-[10px] font-bold uppercase tracking-widest transition-colors ${color.text} ${color.hoverText}`}>
+                    {item.context}
+                  </div>
+                  <svg className={`w-8 h-8 mb-4 ${color.icon}`} fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H12.017V4H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.9124 16 4.01697 16H7.01697C7.56925 16 8.01697 15.5523 8.01697 15V9C8.01697 8.44772 7.56925 8 7.01697 8H3.01697C2.46468 8 2.01697 8.44772 2.01697 9V12C2.01697 12.5523 1.56925 13 1.01697 13H0.0169678V4H10.017V15C10.017 18.3137 7.33068 21 4.01697 21H2.01697Z" />
+                  </svg>
+                  <p className="text-gray-700 italic leading-relaxed relative z-10">{item.text}</p>
                 </div>
-                <svg className="w-8 h-8 text-purple-100 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H12.017V4H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.9124 16 4.01697 16H7.01697C7.56925 16 8.01697 15.5523 8.01697 15V9C8.01697 8.44772 7.56925 8 7.01697 8H3.01697C2.46468 8 2.01697 8.44772 2.01697 9V12C2.01697 12.5523 1.56925 13 1.01697 13H0.0169678V4H10.017V15C10.017 18.3137 7.33068 21 4.01697 21H2.01697Z" />
-                </svg>
-                <p className="text-gray-700 italic leading-relaxed relative z-10">{item.text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
