@@ -11,7 +11,7 @@ export default function Home() {
     "@type": "Person",
     "name": "Brett Pollak",
     "jobTitle": "Technology Executive",
-    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 80,000+ users.",
+    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 73,000+ users.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
     "worksFor": {
@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-xl">
-              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 80,000+ users while guiding teams of 80+ technology professionals.
+              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 73,000+ users while guiding teams of 80+ technology professionals.
             </p>
             <Link
               href="/contact"
@@ -180,9 +180,9 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">Democratizing Knowledge</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                TritonGPT serves 80,000+ users across UC San Diego, making institutional knowledge accessible to students, faculty, and staff in seconds instead of hours.
+                TritonGPT serves 73,000+ users across UC San Diego, making institutional knowledge accessible to students, faculty, and staff in seconds instead of hours.
               </p>
-              <div className="text-cyan-400 font-semibold">80K+ active users</div>
+              <div className="text-cyan-400 font-semibold">73K+ active users</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all duration-300 group card-3d animate-slide-up delay-200">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
