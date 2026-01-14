@@ -327,7 +327,10 @@ export default function TritonGPT() {
                   <h4 className="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Contract Reviewer</h4>
                 </div>
                 <p className="text-sm text-gray-600 mb-2 ml-11">91% time savings for NDAs/T&Cs</p>
-                <div className="text-xs text-gray-500 ml-11">120 min → 11 min average</div>
+                <div className="text-xs text-gray-500 ml-11 mb-3">120 min → 11 min average</div>
+                <div className="ml-11 border-l-2 border-purple-100 pl-4 py-1">
+                  <p className="text-[10px] text-gray-500 italic leading-tight">“It&apos;s like having an extra attorney, basically.”</p>
+                </div>
               </div>
 
               <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-emerald-500 hover:shadow-lg transition-all group delay-200">
@@ -385,6 +388,67 @@ export default function TritonGPT() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* User Testimonials Section */}
+      <section className="bg-gray-50 py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Voices of the Campus</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Real-world impact of the Contract Reviewer assistant on university operations</p>
+            <div className="w-20 h-1 bg-purple-600 mx-auto mt-6"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                text: "“It's like having an extra attorney, basically.”",
+                context: "Contract Capacity"
+              },
+              {
+                text: "“It’s saved the day for me. We often get something that must turn around the same day. The more I use it, the more I trust it, and the easier it is to hit those deadlines.”",
+                context: "Urgent Turnaround"
+              },
+              {
+                text: "“It’s highlighting issues I might have overlooked. It’s extremely thorough and allows me to focus on the key issues.”",
+                context: "Quality Assurance"
+              },
+              {
+                text: "“It’s saving us so much time in terms of the legal review... I think it's a matter of hours to days [saved] in terms of each contract.”",
+                context: "Time Efficiency"
+              },
+              {
+                text: "“You could argue it's saving us a couple of days on some of these more complex contracts.”",
+                context: "Complexity Handling"
+              },
+              {
+                text: "“There's definitely some time savings, but it's also the consistency that I think it brings to the table as well.”",
+                context: "Operational Consistency"
+              },
+              {
+                text: "“It's enabling me to work on other things... I can run the tool, jump on something else, and then go back. It only takes minutes to process the contract.”",
+                context: "Parallel Processing"
+              },
+              {
+                text: "“This is going to free me up to spend time on strategic relationships with suppliers.”",
+                context: "Strategic Focus"
+              }
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="card-3d bg-white p-8 rounded-2xl shadow-sm border-l-4 border-purple-500 hover:shadow-xl transition-all group relative animate-slide-up"
+              >
+                <div className="absolute top-4 right-6 text-[10px] font-bold text-purple-300 uppercase tracking-widest group-hover:text-purple-500 transition-colors">
+                  {item.context}
+                </div>
+                <svg className="w-8 h-8 text-purple-100 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H12.017V4H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.9124 16 4.01697 16H7.01697C7.56925 16 8.01697 15.5523 8.01697 15V9C8.01697 8.44772 7.56925 8 7.01697 8H3.01697C2.46468 8 2.01697 8.44772 2.01697 9V12C2.01697 12.5523 1.56925 13 1.01697 13H0.0169678V4H10.017V15C10.017 18.3137 7.33068 21 4.01697 21H2.01697Z" />
+                </svg>
+                <p className="text-gray-700 italic leading-relaxed relative z-10">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
