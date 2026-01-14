@@ -13,7 +13,7 @@ export default function Products() {
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-6 tracking-tight">Built for Impact</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-amber-600 to-orange-600 mb-8"></div>
           <p className="text-2xl text-gray-600 mb-6 max-w-3xl leading-relaxed">
-            Leveraging technology and AI to build innovative solutions that solve real-world challenges across diverse domains.
+            Leveraging AI and modern technology to build innovative solutions that solve real-world challenges across diverse domains.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function Products() {
                       </svg>
                       <div>
                         <span className="font-semibold text-gray-900 block">120-Second Kickstart</span>
-                        <span className="text-gray-600">Abbreviated activities for high-friction days to maintain momentum</span>
+                        <span className="text-gray-600">Abbreviated activities for busy days to maintain momentum</span>
                       </div>
                     </div>
                   </div>
