@@ -88,7 +88,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="md:col-span-5 relative animate-slide-in-right">
-            <div className="hidden md:block absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl animate-pulse-glow"></div>
+            <div className="hidden md:block absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl"></div>
             <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-40 blur-xl"></div>
             <div className="hidden md:block absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2 shadow-2xl"></div>
             <div className="hidden md:block absolute -inset-3 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-2xl transform -rotate-1 opacity-70"></div>
