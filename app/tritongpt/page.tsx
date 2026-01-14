@@ -468,23 +468,35 @@ export default function TritonGPT() {
               color: "rose",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition-all group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex items-start gap-3">
-                <div className={`w-10 h-10 bg-${item.color}-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-${item.color}-500 transition-all text-${item.color}-600 group-hover:text-white`}>
-                  {item.icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.desc}</p>
+          ].map((item, index) => {
+            const colorClasses = {
+              blue: 'bg-blue-100 group-hover:bg-blue-500 text-blue-600',
+              purple: 'bg-purple-100 group-hover:bg-purple-500 text-purple-600',
+              pink: 'bg-pink-100 group-hover:bg-pink-500 text-pink-600',
+              cyan: 'bg-cyan-100 group-hover:bg-cyan-500 text-cyan-600',
+              emerald: 'bg-emerald-100 group-hover:bg-emerald-500 text-emerald-600',
+              indigo: 'bg-indigo-100 group-hover:bg-indigo-500 text-indigo-600',
+              rose: 'bg-rose-100 group-hover:bg-rose-500 text-rose-600',
+            };
+
+            return (
+              <div
+                key={index}
+                className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition-all group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start gap-3">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all group-hover:text-white ${colorClasses[item.color as keyof typeof colorClasses]}`}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                    <p className="text-sm text-gray-600">{item.desc}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
