@@ -109,34 +109,113 @@ export default function About() {
 
         {/* Professional Background */}
         <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Professional Background</h2>
-          <div className="space-y-6 max-w-4xl">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              With over two decades of experience in technology leadership, I have consistently driven innovation at the
-              intersection of education and technology. Before joining UC San Diego, I served as Corporate Web Team Manager
-              at SAIC for nearly seven years, where I developed expertise in large-scale technology implementations and team leadership.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              At UC San Diego, I oversee critical technology groups including Data Warehouse, Analytics, Predictive Technologies,
-              Email, Service Desk, Field Support, and Web Technologies. My work focuses on operational efficiency, technology
-              integration, and cross-functional collaboration to support both the university's business and academic missions.
-            </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Career Journey</h2>
+          <div className="space-y-8 max-w-4xl">
+            <div className="border-l-4 border-blue-600 pl-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">University of California San Diego</h3>
+              <p className="text-md text-gray-500 mb-3">Executive Director, Workplace Technology & Infrastructure Services | 2008–Present</p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-3">
+                Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
+                Email, Service Desk, Field Support, Endpoint Management, Enterprise Content Management, Web Technologies,
+                and Integrated Collaboration Services. Spearheaded the TritonGPT initiative, establishing UC San Diego as a
+                leader in institutional AI implementation.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Prior role as Manager of the Campus Web Office focused on mobile strategy, responsive design, and
+                user experience optimization across university digital properties.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-purple-600 pl-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">SAIC (Science Applications International Corporation)</h3>
+              <p className="text-md text-gray-500 mb-3">Corporate Web Team Manager | 2001–2008</p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Managed a department of 40 professionals including web content developers, user interface designers,
+                programmers, project managers, and team leads. Developed expertise in large-scale enterprise web
+                implementations and cross-functional team leadership in a Fortune 500 environment.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-indigo-600 pl-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Education</h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                <span className="font-semibold">BBA in Marketing</span>, University of San Diego (1995)
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Thought Leadership */}
         <div className="border-t border-gray-200 pt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Thought Leadership</h2>
-          <div className="space-y-6 max-w-4xl">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Speaking & Publications</h2>
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Conference Presentations</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span><span className="font-semibold">EDUCAUSE:</span> Data governance and AI implementation</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span><span className="font-semibold">AXIES 2025:</span> Keynote on EDUCAUSE Top 10 (Sapporo)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span><span className="font-semibold">ASU GSV Summit:</span> AI in higher education</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span><span className="font-semibold">High Ed Web & EduWeb:</span> Mobile design and UX</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Published Work</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>EDUCAUSE Review case studies</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>The Journal of Higher Education Web Professionals</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Eduniverse articles</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Featured in Forbes, CIO.com, EdTech Magazine (30+ publications)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="max-w-4xl">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Focus Areas</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              I am a frequent speaker and contributor on topics related to AI in higher education, having presented at major
-              conferences including EDUCAUSE, ASU GSV Summit, and AXIES. My work has been featured in leading publications
-              such as Forbes, CIO.com, EdTech Magazine, and the EDUCAUSE Review.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Through my writing and speaking engagements, I focus on sharing practical insights from real-world implementations,
-              emphasizing the importance of faculty engagement, robust data governance, and measured approaches to AI adoption
-              in educational settings.
+              My speaking and writing emphasize practical, implementation-focused insights: faculty engagement strategies,
+              data governance frameworks, ethical AI adoption, and change management in complex organizations. Rather than
+              theoretical approaches, I share battle-tested methods from real deployments serving tens of thousands of users.
             </p>
           </div>
         </div>
