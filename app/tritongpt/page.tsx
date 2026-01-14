@@ -423,7 +423,7 @@ export default function TritonGPT() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">Onyx: The Orchestration Layer</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Onyx serves as the enterprise orchestration platform and sophisticated front-end for TritonGPT. It manages complex agent workflows, user sessions, and secure data routing, providing a seamless and high-performance interface for institutional intelligence.
+                    <a href="https://www.onyx.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-rose-600 hover:text-rose-700 hover:underline">Onyx</a> serves as the enterprise orchestration platform and sophisticated front-end for TritonGPT. It manages complex agent workflows, user sessions, and secure data routing, providing a seamless and high-performance interface for institutional intelligence.
                   </p>
                 </div>
               </div>
