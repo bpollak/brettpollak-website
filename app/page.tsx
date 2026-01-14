@@ -11,7 +11,7 @@ export default function Home() {
     "@type": "Person",
     "name": "Brett Pollak",
     "jobTitle": "Technology Executive",
-    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 73,000+ users.",
+    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Spearheaded the implementation of TritonGPT serving 73,000+ users.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
     "worksFor": {
@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-xl">
-              Bridging the gap between ambitious AI visions and operational reality in higher education. Creator of <span className="font-semibold text-gray-900">TritonGPT</span>, demonstrating how universities can deploy institutional AI at scale—moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
+              Bridging the gap between ambitious AI visions and operational reality in higher education. Spearheaded the implementation of <span className="font-semibold text-gray-900">TritonGPT</span>, demonstrating how universities can deploy institutional AI at scale—moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
             </p>
             <Link
               href="/contact"

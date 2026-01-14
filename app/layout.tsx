@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Brett Pollak | Technology Executive - AI, Data & Digital Transformation",
-    description: "Leading AI implementation and digital transformation in higher education. Creator of TritonGPT serving 100,000+ users.",
+    description: "Leading AI implementation and digital transformation in higher education. Spearheaded the implementation of TritonGPT serving 100,000+ users.",
     images: ["/brett-pollak-headshot-sit-center.png"],
   },
 };
