@@ -25,9 +25,9 @@ export default function ContactForm() {
     setErrorMessage('');
 
     // Check for access key
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '98628ac2-b0b6-4edc-8753-59822ba57b21';
     if (!accessKey) {
-      console.error('Web3Forms Access Key is missing! Please check your .env.local file.');
+      console.error('Web3Forms Access Key is missing!');
       setStatus('error');
       setErrorMessage('Configuration error: Missing API Key. Please contact the administrator.');
       return;
@@ -42,7 +42,7 @@ export default function ContactForm() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          access_key: accessKey,
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
