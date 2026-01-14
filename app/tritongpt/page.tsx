@@ -412,6 +412,22 @@ export default function TritonGPT() {
                 </div>
               </div>
             </div>
+
+            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-rose-600 transition-all duration-300 group-hover:rotate-12">
+                  <svg className="w-6 h-6 text-rose-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">Onyx: The Orchestration Layer</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Onyx serves as the enterprise orchestration platform and sophisticated front-end for TritonGPT. It manages complex agent workflows, user sessions, and secure data routing, providing a seamless and high-performance interface for institutional intelligence.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
