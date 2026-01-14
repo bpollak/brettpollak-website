@@ -25,6 +25,10 @@ export default function ContactForm() {
     setErrorMessage('');
 
     try {
+      if (!process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY) {
+        console.warn('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is not defined. The form submission may fail.');
+      }
+
       // Using Web3Forms - you'll need to get your access key from https://web3forms.com
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
