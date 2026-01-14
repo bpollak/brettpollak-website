@@ -1,0 +1,16 @@
+
+> brettpollak-site@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 3.5s
+ GET /contact 200 in 2.5s (compile: 1822ms, render: 691ms)
+ GET / 200 in 1205ms (compile: 1060ms, render: 145ms)
+ HEAD / 200 in 73ms (compile: 6ms, render: 67ms)
+ GET /contact 200 in 116ms (compile: 4ms, render: 112ms)
+ GET /contact 200 in 96ms (compile: 5ms, render: 92ms)
