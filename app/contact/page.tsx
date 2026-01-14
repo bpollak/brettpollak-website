@@ -1,24 +1,12 @@
-import type { Metadata } from 'next';
-import ContactForm from '@/components/ContactForm';
+'use client';
 
-export const metadata: Metadata = {
-  title: "Contact Brett Pollak | Speaking Engagements & Collaboration",
-  description: "Connect with Brett Pollak for speaking engagements, collaboration opportunities, and insights on AI implementation in higher education. Available for keynotes, panels, and workshops.",
-  alternates: {
-    canonical: "https://brettcpollak.com/contact",
-  },
-  openGraph: {
-    title: "Contact Brett Pollak | Speaking Engagements & Collaboration",
-    description: "Available for speaking engagements on AI in higher education, digital transformation, and technology leadership.",
-    url: "https://brettcpollak.com/contact",
-  },
-};
+import ContactForm from '@/components/ContactForm';
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <div className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-sm font-semibold rounded-full mb-6">
             GET IN TOUCH
           </div>
@@ -37,14 +25,14 @@ export default function Contact() {
         <div className="mb-16">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Contact Form */}
-            <div className="flex">
+            <div className="flex animate-slide-in-left">
               <div className="flex-1">
                 <ContactForm />
               </div>
             </div>
 
             {/* Speaking & Collaboration Info */}
-            <div className="bg-white p-10 rounded-xl border-l-4 border-purple-600 shadow-lg flex flex-col">
+            <div className="bg-white p-10 rounded-xl border-l-4 border-purple-600 shadow-lg flex flex-col animate-slide-in-right card-3d">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Speaking & Collaboration</h3>
 
               <div className="mb-8">

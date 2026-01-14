@@ -1,24 +1,12 @@
-import type { Metadata } from 'next';
-import Image from 'next/image';
+'use client';
 
-export const metadata: Metadata = {
-  title: "Products | Brett Pollak - Innovative Technology Solutions",
-  description: "Explore innovative products and solutions built by Brett Pollak, leveraging AI and modern technology to solve real-world challenges.",
-  alternates: {
-    canonical: "https://brettcpollak.com/products",
-  },
-  openGraph: {
-    title: "Products | Brett Pollak - Innovative Technology Solutions",
-    description: "Innovative products leveraging AI and technology to solve real-world challenges.",
-    url: "https://brettcpollak.com/products",
-  },
-};
+import Image from 'next/image';
 
 export default function Products() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <div className="inline-block px-4 py-1.5 bg-amber-50 text-amber-700 text-sm font-semibold rounded-full mb-6">
             PRODUCTS
           </div>
@@ -35,7 +23,7 @@ export default function Products() {
             href="https://resolutioncompanion.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+            className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-100"
           >
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden">

@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -47,10 +49,10 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="relative max-w-7xl mx-auto px-6 pt-24 pb-32">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full blur-3xl opacity-20 -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-full blur-3xl opacity-15 -z-10"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full blur-3xl opacity-20 -z-10 animate-pulse-glow"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-full blur-3xl opacity-15 -z-10 animate-float-slow"></div>
         <div className="grid md:grid-cols-12 gap-16 items-center">
-          <div className="md:col-span-7 md:pr-8">
+          <div className="md:col-span-7 md:pr-8 animate-slide-in-left">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border-2 border-blue-200/60 text-blue-700 text-sm font-bold rounded-full mb-10 shadow-sm hover:shadow-md transition-shadow">
               <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
@@ -85,8 +87,8 @@ export default function Home() {
               </svg>
             </Link>
           </div>
-          <div className="md:col-span-5 relative">
-            <div className="hidden md:block absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl animate-pulse"></div>
+          <div className="md:col-span-5 relative animate-slide-in-right">
+            <div className="hidden md:block absolute -inset-8 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 rounded-3xl transform rotate-6 opacity-20 blur-2xl animate-pulse-glow"></div>
             <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 rounded-3xl transform rotate-3 opacity-40 blur-xl"></div>
             <div className="hidden md:block absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-2 shadow-2xl"></div>
             <div className="hidden md:block absolute -inset-3 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-2xl transform -rotate-1 opacity-70"></div>
@@ -117,25 +119,25 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-rose-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-rose-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-100">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-rose-600 transition-colors">Forbes</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Technology Leadership</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-200">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">CIO.com</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Digital Innovation</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-300">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">EdTech Magazine</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">AI in Education</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-400">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-indigo-600 transition-colors">EDUCAUSE Review</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Higher Ed Tech</div>
@@ -170,7 +172,7 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-blue-500 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-300 group">
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-300 group card-3d animate-slide-up delay-100">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -182,7 +184,7 @@ export default function Home() {
               </p>
               <div className="text-cyan-400 font-semibold">100K+ active users</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all duration-300 group">
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all duration-300 group card-3d animate-slide-up delay-200">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -194,7 +196,7 @@ export default function Home() {
               </p>
               <div className="text-amber-400 font-semibold">60% time reduction</div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all duration-300 group">
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all duration-300 group card-3d animate-slide-up delay-300">
               <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -220,25 +222,25 @@ export default function Home() {
           <div className="w-20 h-1.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mx-auto"></div>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="group p-8 border-l-4 border-blue-600 bg-gradient-to-br from-blue-50/40 to-cyan-50/40 hover:from-blue-50 hover:to-cyan-50 transition-all duration-300 rounded-xl">
+          <div className="group p-8 border-l-4 border-blue-600 bg-gradient-to-br from-blue-50/40 to-cyan-50/40 hover:from-blue-50 hover:to-cyan-50 transition-all duration-300 rounded-xl animate-slide-up delay-100">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-4">AI in Higher Education</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Implementation strategies, governance frameworks, and ethical considerations for artificial intelligence in academic institutions.
             </p>
           </div>
-          <div className="group p-8 border-l-4 border-purple-600 bg-gradient-to-br from-purple-50/40 to-pink-50/40 hover:from-purple-50 hover:to-pink-50 transition-all duration-300 rounded-xl">
+          <div className="group p-8 border-l-4 border-purple-600 bg-gradient-to-br from-purple-50/40 to-pink-50/40 hover:from-purple-50 hover:to-pink-50 transition-all duration-300 rounded-xl animate-slide-up delay-200">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">TritonGPT Platform</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Secure, scalable AI platform featuring specialized assistants for contract review, instructional support, and institutional knowledge access—achieving 91% time savings in legal reviews and transforming how universities leverage AI.
             </p>
           </div>
-          <div className="group p-8 border-l-4 border-indigo-600 bg-gradient-to-br from-indigo-50/40 to-blue-50/40 hover:from-indigo-50 hover:to-blue-50 transition-all duration-300 rounded-xl">
+          <div className="group p-8 border-l-4 border-indigo-600 bg-gradient-to-br from-indigo-50/40 to-blue-50/40 hover:from-indigo-50 hover:to-blue-50 transition-all duration-300 rounded-xl animate-slide-up delay-300">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-4">Data Governance</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Enterprise data warehousing, security frameworks, and democratizing institutional knowledge across organizations.
             </p>
           </div>
-          <div className="group p-8 border-l-4 border-teal-600 bg-gradient-to-br from-teal-50/40 to-emerald-50/40 hover:from-teal-50 hover:to-emerald-50 transition-all duration-300 rounded-xl">
+          <div className="group p-8 border-l-4 border-teal-600 bg-gradient-to-br from-teal-50/40 to-emerald-50/40 hover:from-teal-50 hover:to-emerald-50 transition-all duration-300 rounded-xl animate-slide-up delay-400">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent mb-4">Digital Transformation</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Change management, stakeholder engagement, and technology innovation at scale in complex organizations.
@@ -258,7 +260,7 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/about" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/about" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-100">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-600 to-purple-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-indigo-600 group-hover:to-purple-600 transition-all">
@@ -281,7 +283,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/media" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/media" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-200">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-600 to-pink-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-rose-600 group-hover:to-pink-600 transition-all">
@@ -304,7 +306,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-300">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-500"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-cyan-600 transition-all">
@@ -331,8 +333,9 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 py-24 overflow-hidden animate-gradient-shift">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-pink-400 rounded-full blur-3xl opacity-20 animate-float-slow"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative">
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 bg-clip-text text-transparent mb-8 tracking-tight">Let's Connect</h2>
           <p className="text-2xl text-purple-100 mb-12 leading-relaxed">

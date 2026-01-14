@@ -1,24 +1,12 @@
-import Image from 'next/image';
-import type { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-  title: "About Brett Pollak | AI & Digital Transformation Leader",
-  description: "Learn about Brett Pollak's leadership in AI and digital transformation at UC San Diego. Over two decades of technology innovation in higher education, including leading the TritonGPT initiative.",
-  alternates: {
-    canonical: "https://brettcpollak.com/about",
-  },
-  openGraph: {
-    title: "About Brett Pollak | AI & Digital Transformation Leader",
-    description: "Over two decades of technology leadership driving AI implementation and digital transformation in higher education.",
-    url: "https://brettcpollak.com/about",
-  },
-};
+import Image from 'next/image';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <div className="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 text-sm font-semibold rounded-full mb-6">
             PROFILE
           </div>
@@ -28,8 +16,8 @@ export default function About() {
 
         {/* Main Bio Section */}
         <div className="grid md:grid-cols-5 gap-16 mb-20">
-          <div className="md:col-span-2 relative">
-            <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-2xl transform -rotate-3 opacity-20 blur-2xl animate-pulse"></div>
+          <div className="md:col-span-2 relative animate-slide-in-left">
+            <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-2xl transform -rotate-3 opacity-20 blur-2xl animate-pulse-glow"></div>
             <div className="hidden md:block absolute -inset-5 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 rounded-2xl transform -rotate-2 opacity-40 blur-xl"></div>
             <div className="hidden md:block absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-1 shadow-2xl"></div>
             <div className="hidden md:block absolute -inset-3 bg-gradient-to-tl from-purple-100 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
@@ -43,7 +31,7 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="md:col-span-3 space-y-6">
+          <div className="md:col-span-3 space-y-6 animate-slide-in-right">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Transforming Organizations Through Strategic AI Leadership</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600"></div>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -66,23 +54,23 @@ export default function About() {
         <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">TritonGPT Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 60% and democratized access to institutional knowledge for 100,000+ users</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Leadership</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Manage 80+ technology professionals and oversee multi-million-dollar budgets</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Awards</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Larry L. Sautter Gold and Silver Awards for Innovation in Information Technology</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Institutional Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving 100,000+ users across campus</p>
             </div>
