@@ -461,7 +461,7 @@ export default function TritonGPT() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 text-teal-700">Enterprise Managed AI</h3>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  This multi-tenant platform allows partner universities to deploy their own instances of TritonGPT rapidly, leveraging UC San Diego&apos;s established infrastructure and security compliance.
+                  This enterprise-managed platform provides partner universities with dedicated, isolated Kubernetes clusters to deploy their own instances of TritonGPT rapidly, leveraging UC San Diego&apos;s established infrastructure and security compliance.
                 </p>
                 <div className="bg-teal-50 border border-teal-100 p-6 rounded-xl">
                   <h4 className="text-teal-900 font-bold mb-2">Licensed Nationwide</h4>
@@ -470,6 +470,7 @@ export default function TritonGPT() {
               </div>
               <ul className="space-y-4">
                 {[
+                  "Dedicated Infrastructure: Each partner institution receives their own isolated Kubernetes cluster.",
                   "Rapid Deployment: Launch a customized AI environment in weeks.",
                   "Enterprise Security: Managed FERPA-compliant architecture.",
                   "Shared Innovation: Collective roadmap driven by higher ed needs.",
