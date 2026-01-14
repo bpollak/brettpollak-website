@@ -189,15 +189,7 @@ export default function TritonGPT() {
             </p>
           </div>
 
-          <div className="card-3d bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl p-8 shadow-lg hover:shadow-2xl text-white relative overflow-hidden group">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-400 rounded-full blur-3xl opacity-20 animate-pulse-glow"></div>
-            </div>
-            <h3 className="text-2xl font-bold mb-4 relative z-10">The Chancellor's Mandate</h3>
-            <p className="text-blue-50 text-lg leading-relaxed relative z-10">
-              Chancellor Pradeep K. Khosla challenged Information Technology Services to harness generative AI to reduce administrative burden while maintaining strict FERPA compliance—leading to the build-versus-buy decision favoring on-premise SDSC hosting.
-            </p>
-          </div>
+
         </div>
       </section>
 
