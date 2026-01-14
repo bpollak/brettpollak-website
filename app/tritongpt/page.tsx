@@ -426,13 +426,48 @@ export default function TritonGPT() {
         <h2 className="text-4xl font-bold text-gray-900 mb-12">Future Roadmap: 2026 and Beyond</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { title: "Agentic AI", desc: "Transition from chat to action using Model Context Protocol (MCP)", color: "blue" },
-            { title: "Build Your Own Assistant", desc: "No-code self-service department bot creation", color: "purple" },
-            { title: "Voice-Activated Agents", desc: "Natural voice command interaction", color: "pink" },
-            { title: "Enrollment Management Automation", desc: "Automated transcript verification", color: "cyan" },
-            { title: "Risk-Based Research Review", desc: "Algorithm-driven proposal assessment", color: "emerald" },
-            { title: "Advising Support Agents", desc: "Specialized tier-one academic advising", color: "indigo" },
-            { title: "Multimodal Integration", desc: "Video and audio institutional data processing", color: "rose" },
+            {
+              title: "Agentic AI",
+              desc: "Transition from chat to action using Model Context Protocol (MCP)",
+              color: "blue",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>
+            },
+            {
+              title: "Build Your Own Assistant",
+              desc: "No-code self-service department bot creation",
+              color: "purple",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" /></svg>
+            },
+            {
+              title: "Voice-Activated Agents",
+              desc: "Natural voice command interaction",
+              color: "pink",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" /></svg>
+            },
+            {
+              title: "Enrollment Management Automation",
+              desc: "Automated transcript verification",
+              color: "cyan",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+            },
+            {
+              title: "Risk-Based Research Review",
+              desc: "Algorithm-driven proposal assessment",
+              color: "emerald",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+            },
+            {
+              title: "Advising Support Agents",
+              desc: "Specialized tier-one academic advising",
+              color: "indigo",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" /></svg>
+            },
+            {
+              title: "Multimodal Integration",
+              desc: "Video and audio institutional data processing",
+              color: "rose",
+              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
+            },
           ].map((item, index) => (
             <div
               key={index}
@@ -440,10 +475,8 @@ export default function TritonGPT() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start gap-3">
-                <div className={`w-10 h-10 bg-${item.color}-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-${item.color}-500 transition-all`}>
-                  <svg className={`w-5 h-5 text-${item.color}-600 group-hover:text-white transition-colors`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
+                <div className={`w-10 h-10 bg-${item.color}-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-${item.color}-500 transition-all text-${item.color}-600 group-hover:text-white`}>
+                  {item.icon}
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
