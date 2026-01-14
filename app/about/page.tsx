@@ -42,7 +42,7 @@ export default function About() {
             </p>
             <p className="text-xl text-gray-600 leading-relaxed">
               My work in AI implementation demonstrates that well-designed solutions can move from concept to
-              production in weeks, not years—scaling to serve 80,000+ users while achieving significant efficiency gains. I focus on
+              production in weeks, not years—scaling to serve 87,000+ users while achieving significant efficiency gains. I focus on
               creating institutional knowledge platforms that democratize access to information and accelerate decision-making.
               My approach balances innovation velocity with sustainable, scalable architecture that organizations can adopt with confidence.
             </p>
@@ -55,7 +55,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">TritonGPT Impact</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 91% and democratized access to institutional knowledge for 80,000+ users</p>
+              <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 91% and democratized access to institutional knowledge for 87,000+ users</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Leadership</h3>
@@ -71,7 +71,7 @@ export default function About() {
             </div>
             <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
-              <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving campus community of 80,000+ users</p>
+              <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving campus community of 87,000+ users</p>
             </div>
           </div>
         </div>

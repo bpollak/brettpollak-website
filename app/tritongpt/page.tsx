@@ -99,7 +99,7 @@ export default function TritonGPT() {
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <p className="text-xl text-gray-700 leading-relaxed relative z-10">
-            UC San Diego developed <span className="font-bold text-blue-600">TritonGPT</span>, a locally-hosted "Vertical AI" platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">80,000+ users</span>.
+            UC San Diego developed <span className="font-bold text-blue-600">TritonGPT</span>, a locally-hosted "Vertical AI" platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">87,000+ users</span>.
           </p>
         </div>
       </section>
@@ -136,10 +136,10 @@ export default function TritonGPT() {
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 to-blue-400/0 group-hover:from-cyan-400/10 group-hover:to-blue-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl font-bold text-cyan-600 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={80} suffix="K+" />
+                  <AnimatedNumber end={87} suffix="K+" />
                 </div>
                 <div className="text-gray-700 font-medium">Total Users Served</div>
-                <div className="text-sm text-gray-500 mt-2">38k Staff + 40k Students</div>
+                <div className="text-sm text-gray-500 mt-2">42k Staff + 45k Students</div>
               </div>
             </div>
             <div className="card-3d text-center p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
@@ -169,13 +169,13 @@ export default function TritonGPT() {
                 <svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="group-hover:translate-x-1 transition-transform inline-block">40,000 students across six undergraduate colleges</span>
+                <span className="group-hover:translate-x-1 transition-transform inline-block">45,000+ students across six undergraduate colleges</span>
               </li>
               <li className="flex items-start gap-3 group">
                 <svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="group-hover:translate-x-1 transition-transform inline-block">38,000 staff and faculty members</span>
+                <span className="group-hover:translate-x-1 transition-transform inline-block">42,000+ staff and faculty members</span>
               </li>
               <li className="flex items-start gap-3 group">
                 <svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
