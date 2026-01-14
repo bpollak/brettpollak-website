@@ -126,7 +126,7 @@ export default function TritonGPT() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/0 to-pink-400/0 group-hover:from-purple-400/10 group-hover:to-pink-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl font-bold text-purple-600 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={60} />%
+                  <AnimatedNumber end={83} />%
                 </div>
                 <div className="text-gray-700 font-medium">Faster Job Description Drafting</div>
                 <div className="text-sm text-gray-500 mt-2">30 min → 5 min</div>
@@ -315,7 +315,7 @@ export default function TritonGPT() {
                   </div>
                   <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Job Description Helper</h4>
                 </div>
-                <p className="text-sm text-gray-600 mb-2 ml-11">60% reduction in drafting time</p>
+                <p className="text-sm text-gray-600 mb-2 ml-11">83% reduction in drafting time</p>
                 <div className="text-xs text-gray-500 ml-11">30 min → 5 min average</div>
               </div>
 

@@ -11,7 +11,7 @@ export default function Home() {
     "@type": "Person",
     "name": "Brett Pollak",
     "jobTitle": "Technology Executive",
-    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 100,000+ users.",
+    "description": "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Creator of TritonGPT serving 80,000+ users.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
     "worksFor": {
@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-xl">
-              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 100,000+ users while guiding teams of 80+ technology professionals.
+              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 80,000+ users while guiding teams of 80+ technology professionals.
             </p>
             <Link
               href="/contact"
@@ -180,9 +180,9 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">Democratizing Knowledge</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                TritonGPT serves over 100,000 users across UC San Diego, making institutional knowledge accessible to students, faculty, and staff in seconds instead of hours.
+                TritonGPT serves 80,000+ users across UC San Diego, making institutional knowledge accessible to students, faculty, and staff in seconds instead of hours.
               </p>
-              <div className="text-cyan-400 font-semibold">100K+ active users</div>
+              <div className="text-cyan-400 font-semibold">80K+ active users</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all duration-300 group card-3d animate-slide-up delay-200">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -192,9 +192,9 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors">Accelerating Efficiency</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                By automating complex contract review processes, TritonGPT has cut review times by 60%, freeing administrators to focus on strategic decisions rather than document analysis.
+                By automating complex contract review processes, TritonGPT has cut review times by 91%, freeing administrators to focus on strategic decisions rather than document analysis.
               </p>
-              <div className="text-amber-400 font-semibold">60% time reduction</div>
+              <div className="text-amber-400 font-semibold">91% time reduction</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all duration-300 group card-3d animate-slide-up delay-300">
               <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="group p-8 border-l-4 border-purple-600 bg-gradient-to-br from-purple-50/40 to-pink-50/40 hover:from-purple-50 hover:to-pink-50 transition-all duration-300 rounded-xl animate-slide-up delay-200">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">TritonGPT Platform</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Secure, scalable AI platform featuring specialized assistants for contract review, instructional support, and institutional knowledge access—achieving 91% time savings in legal reviews and transforming how universities leverage AI.
+              Secure, scalable AI platform featuring specialized assistants for contract review, instructional support, and institutional knowledge access—achieving 91% time savings in contract reviews and demonstrating effective AI implementation in higher education.
             </p>
           </div>
           <div className="group p-8 border-l-4 border-indigo-600 bg-gradient-to-br from-indigo-50/40 to-blue-50/40 hover:from-indigo-50 hover:to-blue-50 transition-all duration-300 rounded-xl animate-slide-up delay-300">
