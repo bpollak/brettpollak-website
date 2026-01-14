@@ -389,6 +389,49 @@ export default function TritonGPT() {
         </div>
       </section>
 
+      {/* Implementation Lessons */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">Key Implementation Insights</h2>
+        <div className="space-y-6">
+          <div className="card-3d bg-white border-l-4 border-blue-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Student-Led Development Model</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Leveraging student developers as core contributors created a sustainable talent pipeline while reducing costs.
+              Students brought fresh perspectives on user experience and rapid prototyping, accelerating time-to-market for new assistants.
+              This approach also served as a training ground for the next generation of AI practitioners.
+            </p>
+          </div>
+
+          <div className="card-3d bg-white border-l-4 border-purple-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Faculty Engagement Strategy</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Success hinged on treating faculty as co-designers, not end users. Early faculty workshops identified academic
+              use cases like the Socratic Tutor and Instructor Assistant. This inclusive approach transformed potential
+              resistance into enthusiastic advocacy, with faculty becoming TritonGPT's strongest champions across campus.
+            </p>
+          </div>
+
+          <div className="card-3d bg-white border-l-4 border-emerald-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Build vs. Buy Decision Framework</h3>
+            <p className="text-gray-700 leading-relaxed">
+              The choice to build on SDSC infrastructure rather than purchase commercial solutions reflected three priorities:
+              data sovereignty (FERPA compliance), cost predictability at scale (avoiding per-token pricing), and architectural
+              flexibility (ability to swap models without vendor lock-in). These trade-offs favored on-premise deployment despite
+              higher upfront investment.
+            </p>
+          </div>
+
+          <div className="card-3d bg-white border-l-4 border-amber-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Iterative Release Strategy</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Launching with focused use cases (contract review, policy search) before expanding to broader applications built
+              trust through demonstrable ROI. Each successful deployment created momentum for the next, turning incremental wins
+              into campus-wide transformation. This measured approach prevented the "boil the ocean" trap common to AI initiatives.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Recognition & Awards */}
       <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-20 overflow-hidden">
         <div className="absolute top-10 right-10 w-40 h-40 bg-amber-300 rounded-full blur-3xl opacity-20 animate-float"></div>

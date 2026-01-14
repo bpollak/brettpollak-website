@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed mb-14 max-w-xl">
-              Two decades of technology leadership spanning AI implementation, data governance, cloud infrastructure, and digital transformation. Leading the <span className="font-semibold text-gray-900">TritonGPT</span> initiative and managing enterprise-scale systems serving 73,000+ users while guiding teams of 80+ technology professionals.
+              Bridging the gap between ambitious AI visions and operational reality in higher education. Creator of <span className="font-semibold text-gray-900">TritonGPT</span>, demonstrating how universities can deploy institutional AI at scale—moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
             </p>
             <Link
               href="/contact"
@@ -229,9 +229,9 @@ export default function Home() {
             </p>
           </div>
           <div className="group p-8 border-l-4 border-purple-600 bg-gradient-to-br from-purple-50/40 to-pink-50/40 hover:from-purple-50 hover:to-pink-50 transition-all duration-300 rounded-xl animate-slide-up delay-200">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">TritonGPT Platform</h3>
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">Enterprise AI Deployment</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Secure, scalable AI platform featuring specialized assistants for contract review, instructional support, and institutional knowledge access—achieving 91% time savings in contract reviews and demonstrating effective AI implementation in higher education.
+              From concept to campus-wide deployment in weeks. Specialized AI assistants reducing administrative burden by up to 91% while maintaining institutional data sovereignty through local infrastructure and ethical governance frameworks.
             </p>
           </div>
           <div className="group p-8 border-l-4 border-indigo-600 bg-gradient-to-br from-indigo-50/40 to-blue-50/40 hover:from-indigo-50 hover:to-blue-50 transition-all duration-300 rounded-xl animate-slide-up delay-300">
@@ -241,9 +241,9 @@ export default function Home() {
             </p>
           </div>
           <div className="group p-8 border-l-4 border-teal-600 bg-gradient-to-br from-teal-50/40 to-emerald-50/40 hover:from-teal-50 hover:to-emerald-50 transition-all duration-300 rounded-xl animate-slide-up delay-400">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent mb-4">Digital Transformation</h3>
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent mb-4">Organizational Change Leadership</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Change management, stakeholder engagement, and technology innovation at scale in complex organizations.
+              Leading technology transformation across 80+ professionals and 73,000+ end users. Building stakeholder buy-in through demonstration over declaration, turning skeptics into champions through measurable results.
             </p>
           </div>
         </div>
