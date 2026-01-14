@@ -201,79 +201,6 @@ export default function TritonGPT() {
         </div>
       </section>
 
-      {/* Technical Architecture */}
-      <section className="bg-gray-100 py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Technical Architecture: The TritonAI Platform</h2>
-
-          <div className="space-y-8">
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Infrastructure: Physical Sovereignty</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    TritonGPT operates on dedicated GPU clusters at the San Diego Supercomputer Center. This local hosting ensures sensitive institutional data remains on campus networks. The shift from variable token-based pricing to fixed capital expenditure models improves economics at scale.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-100">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
-                    <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
-                    <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">Model Flexibility and Cost Effectiveness</h3>
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    TritonAI's model-agnostic design avoids vendor lock-in through a hybrid strategy:
-                  </p>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2 group/item">
-                      <span className="text-purple-600 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
-                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Open-source models handle high-volume routine tasks</span>
-                    </li>
-                    <li className="flex items-start gap-2 group/item">
-                      <span className="text-purple-600 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
-                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Commercial models accessed via secure API gateways</span>
-                    </li>
-                    <li className="flex items-start gap-2 group/item">
-                      <span className="text-purple-600 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
-                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Avoids escalating token costs for high-volume usage</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-200">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">Precision Grounding: RAG & EDA</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Retrieval-Augmented Generation (RAG) separates AI reasoning from static knowledge bases. The Enterprise Data Agent (EDA) translates natural language into secure SQL queries within SAP HANA environments, enabling staff to access complex institutional data without technical expertise.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Assistant Ecosystem Image */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
@@ -418,6 +345,79 @@ export default function TritonGPT() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Architecture */}
+      <section className="bg-gray-100 py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12">Technical Architecture: The TritonAI Platform</h2>
+
+          <div className="space-y-8">
+            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-all duration-300 group-hover:rotate-12">
+                  <svg className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Infrastructure: Physical Sovereignty</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    TritonGPT operates on dedicated GPU clusters at the San Diego Supercomputer Center. This local hosting ensures sensitive institutional data remains on campus networks. The shift from variable token-based pricing to fixed capital expenditure models improves economics at scale.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-100">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 transition-all duration-300 group-hover:rotate-12">
+                  <svg className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
+                    <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
+                    <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">Model Flexibility and Cost Effectiveness</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    TritonAI's model-agnostic design avoids vendor lock-in through a hybrid strategy:
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2 group/item">
+                      <span className="text-purple-600 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
+                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Open-source models handle high-volume routine tasks</span>
+                    </li>
+                    <li className="flex items-start gap-2 group/item">
+                      <span className="text-purple-600 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
+                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Commercial models accessed via secure API gateways</span>
+                    </li>
+                    <li className="flex items-start gap-2 group/item">
+                      <span className="text-purple-600 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
+                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Avoids escalating token costs for high-volume usage</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-200">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 transition-all duration-300 group-hover:rotate-12">
+                  <svg className="w-6 h-6 text-indigo-600 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">Precision Grounding: RAG & EDA</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Retrieval-Augmented Generation (RAG) separates AI reasoning from static knowledge bases. The Enterprise Data Agent (EDA) translates natural language into secure SQL queries within SAP HANA environments, enabling staff to access complex institutional data without technical expertise.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
