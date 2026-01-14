@@ -115,27 +115,53 @@ export default function About() {
             <div className="relative pl-8 border-l-2 border-gray-200">
               <div className="absolute top-0 left-[-9px] w-4 h-4 bg-blue-600 rounded-full ring-4 ring-white shadow-sm"></div>
               
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-8 gap-2">
                 <h3 className="text-2xl font-bold text-gray-900">University of California San Diego</h3>
                 <span className="text-sm font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2008 – Present</span>
               </div>
-              
-              <div className="text-xl font-medium text-blue-600 mb-4">Executive Director, Workplace Technology & Infrastructure Services</div>
-              
-              <div className="text-lg text-gray-600 leading-relaxed space-y-4">
-                <p>
-                  Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
-                  Email, Service Desk, Field Support, Endpoint Management, Enterprise Content Management, Web Technologies,
-                  and Integrated Collaboration Services.
-                </p>
-                <p>
-                  Spearheaded the <span className="font-semibold text-gray-800">TritonGPT</span> initiative, establishing UC San Diego as a
-                  leader in institutional AI implementation.
-                </p>
-                <p>
-                  Prior role as Manager of the Campus Web Office focused on mobile strategy, responsive design, and
-                  user experience optimization across university digital properties.
-                </p>
+
+              <div className="space-y-8">
+                {/* Executive Director */}
+                <div className="relative">
+                  <h4 className="text-xl font-bold text-gray-800 text-blue-600">Executive Director, Workplace Technology & Infrastructure Services (WTIS)</h4>
+                  <p className="text-sm text-gray-500 font-semibold mb-3">Oct 2024 – Present</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
+                    Email, Service Desk, Field Support, Endpoint Management, Enterprise Content Management, Web Technologies,
+                    and Integrated Collaboration Services. Spearheaded the <span className="font-semibold text-gray-800">TritonGPT</span> initiative.
+                  </p>
+                </div>
+
+                {/* Senior Director */}
+                <div className="relative">
+                  <h4 className="text-lg font-bold text-gray-800">Senior Director, Workplace Technology Services</h4>
+                  <p className="text-sm text-gray-500 font-medium mb-2">Jan 2016 – Oct 2024</p>
+                  <ul className="list-disc list-outside ml-5 text-gray-600 space-y-2 leading-relaxed">
+                    <li>Directed strategy for campus-wide workplace services, emerging technologies, and business intelligence (BI) for data-driven decision making.</li>
+                    <li>Oversaw Customer Engagement Group (Service Desk, Field Support) and strategic platforms including ServiceNow, Microsoft 365, and Google Apps.</li>
+                  </ul>
+                </div>
+
+                {/* Director */}
+                <div className="relative">
+                  <h4 className="text-lg font-bold text-gray-800">Director, Cloud and Web Services</h4>
+                  <p className="text-sm text-gray-500 font-medium mb-2">Aug 2010 – Oct 2024</p>
+                  <ul className="list-disc list-outside ml-5 text-gray-600 space-y-2 leading-relaxed">
+                    <li>Managed UC San Diego&apos;s top-level digital channels (ucsd.edu, Blink, TritonLink) and 160+ websites via the campus CMS.</li>
+                    <li>Led cloud strategy (SaaS/PaaS/IaaS) and mobile presence, including the Mobile Web Framework (MWF) adopted by 5 UC campuses.</li>
+                    <li>Managed a $1M+ budget and a cross-functional web team delivering responsive frameworks and campus-wide applications.</li>
+                  </ul>
+                </div>
+
+                {/* Campus Web Manager */}
+                <div className="relative">
+                  <h4 className="text-lg font-bold text-gray-800">Campus Web Manager</h4>
+                  <p className="text-sm text-gray-500 font-medium mb-2">Apr 2008 – Aug 2010</p>
+                  <ul className="list-disc list-outside ml-5 text-gray-600 space-y-2 leading-relaxed">
+                    <li>Led the selection, implementation, and operations of the campus-wide Content Management System (CMS), serving 150+ users.</li>
+                    <li>Established ITIL-based best practices and Agile methodologies for web development, content migration, and system architecture.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
