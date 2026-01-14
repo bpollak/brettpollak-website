@@ -24,11 +24,16 @@ export default function ContactForm() {
     setStatus('loading');
     setErrorMessage('');
 
-    try {
-      if (!process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY) {
-        console.warn('NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is not defined. The form submission may fail.');
-      }
+    // Check for access key
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      console.error('Web3Forms Access Key is missing! Please check your .env.local file.');
+      setStatus('error');
+      setErrorMessage('Configuration error: Missing API Key. Please contact the administrator.');
+      return;
+    }
 
+    try {
       // Using Web3Forms - you'll need to get your access key from https://web3forms.com
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -56,6 +61,7 @@ export default function ContactForm() {
         setErrorMessage('Failed to send message. Please try again.');
       }
     } catch (error) {
+      console.error('Submission error:', error);
       setStatus('error');
       setErrorMessage('An error occurred. Please try again later.');
     }
@@ -74,7 +80,7 @@ export default function ContactForm() {
 
       {status === 'success' && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 font-medium">Thank you for your message! I'll get back to you soon.</p>
+          <p className="text-green-800 font-medium">Thank you for your message! I&apos;ll get back to you soon.</p>
         </div>
       )}
 
