@@ -296,98 +296,128 @@ export default function TritonGPT() {
 
       {/* Use Cases */}
       <section className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Implementation Use Cases</h2>
 
-          <div className="space-y-6">
-            {/* Universal Concierge */}
-            <div className="card-3d bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-blue-600 hover:border-blue-700 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Universal Concierge: UC San Diego Assistant</h3>
-              <p className="text-gray-700 mb-3">Draws from 70+ curated department websites, hundreds of ServiceNow knowledge base articles, and UC San Diego policies to serve as a cross-functional knowledge bridge.</p>
-            </div>
-
-            {/* Administrative Grid */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition-all group">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500 transition-all">
-                    <span className="text-blue-600 group-hover:text-white font-bold transition-colors">1</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "UC San Diego Assistant",
+                desc: "Cross-functional knowledge bridge drawing from 70+ curated department websites, hundreds of ServiceNow knowledge base articles, and UC San Diego policies.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                )
+              },
+              {
+                name: "Job Description Helper",
+                desc: "Assists HR and managers in drafting comprehensive, compliant job descriptions with significant efficiency gains.",
+                metric: "83% reduction in drafting time",
+                stats: "30 min → 5 min average",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Contract Reviewer",
+                desc: "Accelerates legal review for NDAs and Terms & Conditions, highlighting potential issues for specialist focus.",
+                metric: "91% time savings for NDAs/T&Cs",
+                stats: "120 min → 11 min average",
+                quote: "It's like having an extra attorney, basically.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Fund Manager Coach",
+                desc: "Expert guidance on grant compliance, spending restrictions, and financial management for research funds.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Email Phishing Analyzer",
+                desc: "Real-time security assessments and analysis of suspicious emails to protect campus data.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Deep Research Assistant",
+                desc: "Synthesis and analysis across hundreds of research documents and institutional data points.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Triton Developer Assistant",
+                desc: "On-demand coding support and documentation analysis for staff and administrators.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                )
+              },
+              {
+                name: "Socratic Tutor",
+                desc: "Guided learning assistant that helps students master materials without providing direct answers.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                )
+              },
+              {
+                name: "Instructor AI Assistant",
+                desc: "Automated generation of quizzes, summaries, and study guides directly from lecture content.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                )
+              }
+            ].map((assistant, index) => (
+              <div 
+                key={index} 
+                className="card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-blue-500 hover:shadow-xl transition-all group flex flex-col"
+              >
+                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-all duration-300">
+                  <div className="text-blue-600 group-hover:text-white transition-colors">
+                    {assistant.icon}
                   </div>
-                  <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Job Description Helper</h4>
                 </div>
-                <p className="text-sm text-gray-600 mb-2 ml-11">83% reduction in drafting time</p>
-                <div className="text-xs text-gray-500 ml-11">30 min → 5 min average</div>
-              </div>
-
-              <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-purple-500 hover:shadow-lg transition-all group delay-100">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-purple-500 transition-all">
-                    <span className="text-purple-600 group-hover:text-white font-bold transition-colors">2</span>
+                <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {assistant.name}
+                </h4>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                  {assistant.desc}
+                </p>
+                {assistant.metric && (
+                  <div className="mt-auto">
+                    <p className="text-sm font-semibold text-blue-600 mb-1">{assistant.metric}</p>
+                    {assistant.stats && <p className="text-xs text-gray-500">{assistant.stats}</p>}
                   </div>
-                  <h4 className="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Contract Reviewer</h4>
-                </div>
-                <p className="text-sm text-gray-600 mb-2 ml-11">91% time savings for NDAs/T&Cs</p>
-                <div className="text-xs text-gray-500 ml-11 mb-3">120 min → 11 min average</div>
-                <div className="ml-11 border-l-2 border-purple-100 pl-4 py-1">
-                  <p className="text-[10px] text-gray-500 italic leading-tight">“It&apos;s like having an extra attorney, basically.”</p>
-                </div>
-              </div>
-
-              <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-emerald-500 hover:shadow-lg transition-all group delay-200">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 transition-all">
-                    <span className="text-emerald-600 group-hover:text-white font-bold transition-colors">3</span>
+                )}
+                {assistant.quote && (
+                  <div className="mt-4 border-l-2 border-blue-100 pl-4 py-1">
+                    <p className="text-[10px] text-gray-500 italic leading-tight">
+                      &ldquo;{assistant.quote}&rdquo;
+                    </p>
                   </div>
-                  <h4 className="font-bold text-gray-900 group-hover:text-emerald-600 transition-colors">Fund Manager Coach</h4>
-                </div>
-                <p className="text-sm text-gray-600 ml-11">Expert guidance on grant compliance and spending restrictions</p>
+                )}
               </div>
-
-              <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-rose-500 hover:shadow-lg transition-all group delay-300">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className="w-8 h-8 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-rose-500 transition-all">
-                    <span className="text-rose-600 group-hover:text-white font-bold transition-colors">4</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 group-hover:text-rose-600 transition-colors">Email Phishing Analyzer</h4>
-                </div>
-                <p className="text-sm text-gray-600 ml-11">Real-time security assessments for suspicious emails</p>
-              </div>
-
-              <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-cyan-500 hover:shadow-lg transition-all group delay-400">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 transition-all">
-                    <span className="text-cyan-600 group-hover:text-white font-bold transition-colors">5</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">Deep Research Assistant</h4>
-                </div>
-                <p className="text-sm text-gray-600 ml-11">Synthesis across hundreds of documents</p>
-              </div>
-
-              <div className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-indigo-500 hover:shadow-lg transition-all group delay-500">
-                <div className="flex items-start gap-3 mb-2">
-                  <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-500 transition-all">
-                    <span className="text-indigo-600 group-hover:text-white font-bold transition-colors">6</span>
-                  </div>
-                  <h4 className="font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Triton Developer Assistant</h4>
-                </div>
-                <p className="text-sm text-gray-600 ml-11">Coding support for staff and administrators</p>
-              </div>
-            </div>
-
-            {/* Academic Assistants */}
-            <div className="card-3d bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border-l-4 border-purple-600 hover:border-purple-700 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Academic and Student Assistants</h3>
-              <div className="space-y-3">
-                <div className="group">
-                  <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">Socratic Tutor</h4>
-                  <p className="text-sm text-gray-700 group-hover:translate-x-2 transition-transform">Guides students through materials without providing direct answers</p>
-                </div>
-                <div className="group">
-                  <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">Instructor AI Assistant</h4>
-                  <p className="text-sm text-gray-700 group-hover:translate-x-2 transition-transform">Generates quizzes, summaries, and study guides from lecture content</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
