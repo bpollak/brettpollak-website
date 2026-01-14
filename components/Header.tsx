@@ -12,6 +12,7 @@ export default function Header() {
 
   const navLinks = [
     { href: '/about', label: 'About' },
+    { href: '/tritongpt', label: 'TritonGPT' },
     { href: '/products', label: 'Products' },
     { href: '/media', label: 'Media' },
     { href: '/linkedin', label: 'LinkedIn' },

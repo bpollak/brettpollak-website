@@ -22,6 +22,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tritongpt" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  TritonGPT
+                </Link>
+              </li>
+              <li>
                 <Link href="/products" className="text-gray-600 hover:text-gray-900 transition-colors">
                   Products
                 </Link>
