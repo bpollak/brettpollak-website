@@ -447,6 +447,56 @@ export default function TritonGPT() {
         </div>
       </section>
 
+      {/* Higher Education Partnerships */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Beyond UC San Diego: A SaaS Platform for Higher Education</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">TritonGPT is now available as a secure, managed Software-as-a-Service (SaaS) solution for other higher education institutions.</p>
+            <div className="w-20 h-1 bg-teal-600 mx-auto mt-6"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="card-3d bg-white p-8 rounded-xl shadow-lg border-l-4 border-teal-500 hover:shadow-2xl transition-all">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-teal-700">The Model</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                This multi-tenant platform allows partner universities to deploy their own instances of TritonGPT rapidly, leveraging UC San Diego&apos;s established infrastructure and security compliance.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Rapid Deployment: Launch a fully customized AI environment in weeks.",
+                  "Enterprise Security: FERPA-compliant architecture managed by UC San Diego.",
+                  "Shared Innovation: Benefit from a collective roadmap driven by higher ed needs.",
+                  "Cost Effective: Shared infrastructure reduces individual campus costs."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-teal-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="relative h-full flex flex-col justify-center space-y-6">
+              <div className="bg-gradient-to-br from-teal-500 to-blue-600 p-8 rounded-xl text-white shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                <h4 className="text-xl font-bold mb-2">Licensed Nationwide</h4>
+                <p className="opacity-90">TritonGPT technology is already licensed by multiple leading universities across the country.</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl border-2 border-gray-100 shadow-md transform hover:-translate-y-1 transition-transform duration-300 hover:border-teal-300">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Join the Consortium</h4>
+                <p className="text-gray-600 mb-4">Partner with us to bring sovereign AI to your campus without the heavy lift of building from scratch.</p>
+                <a href="/contact" className="text-teal-600 font-bold hover:text-teal-800 inline-flex items-center gap-1 transition-colors">
+                  Inquire about partnership 
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* User Testimonials Section */}
       <section className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
