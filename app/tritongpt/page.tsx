@@ -194,27 +194,29 @@ export default function TritonGPT() {
       </section>
 
       {/* Assistant Ecosystem Image */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">The Assistant Ecosystem</h2>
-          <p className="text-xl text-gray-600">Specialized assistants target specific campus roles and data domains</p>
-        </div>
-        <div className="card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-blue-400 transition-all duration-500 group">
-          <div className="relative">
-            <Image
-              src="/tritongpt-uc-san-diego-assistant.png"
-              alt="TritonGPT UC San Diego Assistant Interface"
-              width={1200}
-              height={800}
-              className="w-full transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Assistant Ecosystem</h2>
+            <p className="text-xl text-gray-600">Specialized assistants target specific campus roles and data domains</p>
+          </div>
+          <div className="card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-blue-400 transition-all duration-500 group">
+            <div className="relative">
+              <Image
+                src="/tritongpt-uc-san-diego-assistant.png"
+                alt="TritonGPT UC San Diego Assistant Interface"
+                width={1200}
+                height={800}
+                className="w-full transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Use Cases */}
-      <section className="bg-white py-20">
+      <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Implementation Use Cases</h2>
 
@@ -342,7 +344,7 @@ export default function TritonGPT() {
       </section>
 
       {/* Technical Architecture */}
-      <section className="bg-gray-100 py-20">
+      <section className="bg-white py-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Technical Architecture: The TritonAI Platform</h2>
 
@@ -476,10 +478,11 @@ export default function TritonGPT() {
       </section>
 
       {/* Implementation Lessons */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">Key Implementation Insights</h2>
-        <div className="space-y-6">
-          <div className="card-3d bg-white border-l-4 border-blue-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12">Key Implementation Insights</h2>
+          <div className="space-y-6">
+            <div className="card-3d bg-white border-l-4 border-blue-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
             <h3 className="text-xl font-bold text-gray-900 mb-3">Student-Led Development Model</h3>
             <p className="text-gray-700 leading-relaxed">
               Leveraging student developers as core contributors created a sustainable talent pipeline while reducing costs.
@@ -515,11 +518,11 @@ export default function TritonGPT() {
               into campus-wide transformation. This measured approach prevented the "boil the ocean" trap common to AI initiatives.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Recognition & Awards */}
-      <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-20 overflow-hidden">
+                  </div>
+                </div>
+              </section>
+        
+              {/* Recognition & Awards */}      <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-20 overflow-hidden">
         <div className="absolute top-10 right-10 w-40 h-40 bg-amber-300 rounded-full blur-3xl opacity-20 animate-float"></div>
         <div className="absolute bottom-10 left-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
 
