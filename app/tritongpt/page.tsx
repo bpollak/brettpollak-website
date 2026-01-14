@@ -50,22 +50,6 @@ export default function TritonGPT() {
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="relative -mt-16 mb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
-            <Image
-              src="/tritonGPT-header.png"
-              alt="TritonGPT Platform"
-              width={1200}
-              height={675}
-              className="w-full"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Executive Summary */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-l-4 border-blue-600 shadow-lg">
