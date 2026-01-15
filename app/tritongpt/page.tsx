@@ -609,36 +609,67 @@ export default function TritonGPT() {
                 </div>
               </section>
         
-              {/* Recognition & Awards */}      <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-20 overflow-hidden">
-        <div className="absolute top-10 right-10 w-40 h-40 bg-amber-300 rounded-full blur-3xl opacity-20 animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
-
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Recognition & Awards</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl text-center group transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">CIO 100 Award</h3>
-              <p className="text-gray-600">2025 - Recognized as top global IT innovation</p>
-            </div>
-
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl text-center group transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Gartner Eye on Innovation</h3>
-              <p className="text-gray-600">Finalist for transformational impact in education</p>
-            </div>
-          </div>
-        </div>
-      </section>
+                    {/* Recognition & Awards */}
+        
+                    <section className="relative bg-slate-900 py-24 overflow-hidden">
+        
+                      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        
+                      <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        
+              
+        
+                      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        
+                        <h2 className="text-4xl font-bold text-white mb-12 text-center">Recognition & Awards</h2>
+        
+                        <div className="grid md:grid-cols-2 gap-8">
+        
+                          <div className="card-3d bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-500/50 hover:bg-white/10 transition-all duration-300 group">
+        
+                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+        
+                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+        
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        
+                              </svg>
+        
+                            </div>
+        
+                            <h3 className="text-2xl font-bold text-white mb-2 text-center">CIO 100 Award</h3>
+        
+                            <p className="text-slate-400 text-center">2025 - Recognized as top global IT innovation</p>
+        
+                          </div>
+        
+              
+        
+                          <div className="card-3d bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all duration-300 group">
+        
+                            <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+        
+                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+        
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+        
+                                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+        
+                              </svg>
+        
+                            </div>
+        
+                            <h3 className="text-2xl font-bold text-white mb-2 text-center">Gartner Eye on Innovation</h3>
+        
+                            <p className="text-slate-400 text-center">Finalist for transformational impact in education</p>
+        
+                          </div>
+        
+                        </div>
+        
+                      </div>
+        
+                    </section>
 
       {/* Future Roadmap */}
       <section className="max-w-5xl mx-auto px-6 py-20">
