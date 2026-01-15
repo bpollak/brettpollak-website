@@ -221,6 +221,7 @@ export default function TritonGPT() {
           <h2 className="text-4xl font-bold text-gray-900 mb-12">Implementation Use Cases</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Dynamic color cycling for assistant cards */}
             {[
               {
                 name: "UC San Diego Assistant",
@@ -305,6 +306,87 @@ export default function TritonGPT() {
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Internet Search Assistant",
+                desc: "Conversational AI with internet access for real-time information and answers.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                )
+              },
+              {
+                name: "Expert Notetaker",
+                desc: "Converts transcripts or notes into structured documentation focused on decisions and actionability.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Project Charter Assistant",
+                desc: "Helps draft professional and comprehensive project charters.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                )
+              },
+              {
+                name: "AI Workplace Opportunity Assistant (v0.1)",
+                desc: "Interviews users about daily tasks to suggest tailored AI use cases and prompts.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Performance Review Evaluator",
+                desc: "Helps supervisors align performance ratings with written comments.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Data Dictionary Assistant",
+                desc: "Provides definitions from specific UC San Diego data sources like the Activity Hub and Blink.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                )
+              },
+              {
+                name: "Supplier Search Tool",
+                desc: "Assists in finding campus suppliers and explains the UCSD purchasing process.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )
+              },
+              {
+                name: "UCSD Benefit Assistant",
+                desc: "Answers questions regarding employee benefit packages.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                )
+              },
+              {
+                name: "UC San Diego Class Scheduling Assistant",
+                desc: "Helps students build optimized schedules based on subject codes and availability.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 )
               }
@@ -718,36 +800,52 @@ export default function TritonGPT() {
               color: "rose",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
-          ].map((item, index) => {
-            const colorClasses = {
-              blue: 'bg-blue-100 group-hover:bg-blue-500 text-blue-600',
-              purple: 'bg-purple-100 group-hover:bg-purple-500 text-purple-600',
-              pink: 'bg-pink-100 group-hover:bg-pink-500 text-pink-600',
-              cyan: 'bg-cyan-100 group-hover:bg-cyan-500 text-cyan-600',
-              emerald: 'bg-emerald-100 group-hover:bg-emerald-500 text-emerald-600',
-              indigo: 'bg-indigo-100 group-hover:bg-indigo-500 text-indigo-600',
-              rose: 'bg-rose-100 group-hover:bg-rose-500 text-rose-600',
-            };
-
-            return (
-              <div
-                key={index}
-                className="card-3d bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition-all group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-all group-hover:text-white ${colorClasses[item.color as keyof typeof colorClasses]}`}>
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{item.desc}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                      ].map((assistant, index) => {
+                        const colors = [
+                          { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
+                          { border: 'hover:border-purple-500', bg: 'bg-purple-50', iconBg: 'group-hover:bg-purple-600', text: 'text-purple-600', groupText: 'group-hover:text-purple-600', quoteBorder: 'border-purple-100' },
+                          { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600', quoteBorder: 'border-emerald-100' },
+                          { border: 'hover:border-rose-500', bg: 'bg-rose-50', iconBg: 'group-hover:bg-rose-600', text: 'text-rose-600', groupText: 'group-hover:text-rose-600', quoteBorder: 'border-rose-100' },
+                          { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600', quoteBorder: 'border-cyan-100' },
+                          { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
+                          { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
+                          { border: 'hover:border-teal-500', bg: 'bg-teal-50', iconBg: 'group-hover:bg-teal-600', text: 'text-teal-600', groupText: 'group-hover:text-teal-600', quoteBorder: 'border-teal-100' },
+                          { border: 'hover:border-fuchsia-500', bg: 'bg-fuchsia-50', iconBg: 'group-hover:bg-fuchsia-600', text: 'text-fuchsia-600', groupText: 'group-hover:text-fuchsia-600', quoteBorder: 'border-fuchsia-100' },
+                        ];
+                        const color = colors[index % colors.length];
+          
+                        return (
+                          <div 
+                            key={index} 
+                            className={`card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all group flex flex-col ${color.border}`}
+                          >
+                            <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${color.bg} ${color.iconBg}`}>
+                              <div className={`${color.text} group-hover:text-white transition-colors`}>
+                                {assistant.icon}
+                              </div>
+                            </div>
+                            <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
+                              {assistant.name}
+                            </h4>
+                            <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                              {assistant.desc}
+                            </p>
+                            {assistant.metric && (
+                              <div className="mt-auto">
+                                <p className={`text-sm font-semibold mb-1 ${color.text}`}>{assistant.metric}</p>
+                                {assistant.stats && <p className="text-xs text-gray-500">{assistant.stats}</p>}
+                              </div>
+                            )}
+                            {assistant.quote && (
+                              <div className={`mt-4 border-l-2 pl-4 py-1 ${color.quoteBorder}`}>
+                                <p className="text-[10px] text-gray-500 italic leading-tight">
+                                  &ldquo;{assistant.quote}&rdquo;
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}        </div>
       </section>
 
       {/* Conclusion */}
