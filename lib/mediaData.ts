@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'Ithaka S+R',
+    title: 'Human Values and AI Adoption in the Research Enterprise',
+    url: 'https://sr.ithaka.org/blog/human-values-and-ai-adoption-in-the-research-enterprise/',
+    date: '2026-01-15',
+    category: 'article'
+  },
+  {
     publication: 'UC San Diego Magazine',
     title: 'TritonGPT is Here and Ready to Help',
     url: 'https://today.ucsd.edu/story/tritongpt-is-here-and-ready-to-help',
