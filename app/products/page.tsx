@@ -1,6 +1,23 @@
-'use client';
-
 import Image from 'next/image';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
+  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion—an identity-based habit building app—and enterprise-scale institutional tools.",
+  openGraph: {
+    title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
+    description: "Discover innovative AI solutions and products including the Resolution Companion app and TritonGPT.",
+    url: "https://brettcpollak.com/products",
+    images: [
+      {
+        url: "/resolution-companion.png",
+        width: 400,
+        height: 800,
+        alt: "Resolution Companion App",
+      },
+    ],
+  },
+};
 
 export default function Products() {
   return (
