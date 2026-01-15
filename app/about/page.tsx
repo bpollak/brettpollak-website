@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 // Since this is a client component, we can't export metadata directly. 
