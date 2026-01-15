@@ -79,13 +79,13 @@ export default function ContactForm() {
       </div>
 
       {status === 'success' && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg" role="alert" aria-live="polite">
           <p className="text-green-800 font-medium">Thank you for your message! I&apos;ll get back to you soon.</p>
         </div>
       )}
 
       {status === 'error' && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg" role="alert" aria-live="assertive">
           <p className="text-red-800 font-medium">{errorMessage}</p>
         </div>
       )}

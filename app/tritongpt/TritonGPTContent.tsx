@@ -856,11 +856,11 @@ export default function TritonGPTContent() {
           <p className="text-xl text-gray-600 mb-8">
             Available for speaking engagements, consulting, and collaboration on AI implementation in higher education.
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-10 py-4 text-lg font-bold hover:bg-blue-700 transition-all shadow-xl hover:shadow-2xl rounded-lg group hover:-translate-y-1 transform"
-          >
-            Get in Touch
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600"
+            >
+              Inquire About Speaking
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

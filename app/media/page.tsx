@@ -99,7 +99,7 @@ export default function Media() {
                   <div className="relative z-10">
                     <div className="absolute -inset-4 bg-gradient-to-r from-rose-600 to-purple-600 rounded-full opacity-20 blur-xl"></div>
                     <div className="relative bg-gradient-to-r from-rose-600 to-purple-600 text-white px-8 py-4 rounded-full shadow-xl">
-                      <div className="text-4xl font-bold">{year}</div>
+                      <h2 className="text-4xl font-bold">{year}</h2>
                       <div className="text-sm opacity-90">{itemsByYear[Number(year)].length} publication{itemsByYear[Number(year)].length !== 1 ? 's' : ''}</div>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function Media() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group"
+              className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600"
             >
               Inquire About Speaking
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

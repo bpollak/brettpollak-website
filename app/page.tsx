@@ -79,7 +79,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-5 text-lg font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 group"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-12 py-5 text-lg font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
             >
               Get in Touch
               <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
@@ -343,7 +343,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 bg-gray-50 text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20"
+            className="inline-flex items-center gap-3 bg-gray-50 text-gray-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-yellow-300 hover:to-pink-300 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
           >
             Contact Me
             <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
