@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://bpollak.github.io/brettpollak-website/sitemap.xml
+Sitemap: https://brettcpollak.com/sitemap.xml
 
 # Disallow crawling of admin or private areas (if any exist in the future)
 # Disallow: /admin/
