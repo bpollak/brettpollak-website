@@ -800,52 +800,37 @@ export default function TritonGPT() {
               color: "rose",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
-                      ].map((assistant, index) => {
-                        const colors = [
-                          { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
-                          { border: 'hover:border-purple-500', bg: 'bg-purple-50', iconBg: 'group-hover:bg-purple-600', text: 'text-purple-600', groupText: 'group-hover:text-purple-600', quoteBorder: 'border-purple-100' },
-                          { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600', quoteBorder: 'border-emerald-100' },
-                          { border: 'hover:border-rose-500', bg: 'bg-rose-50', iconBg: 'group-hover:bg-rose-600', text: 'text-rose-600', groupText: 'group-hover:text-rose-600', quoteBorder: 'border-rose-100' },
-                          { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600', quoteBorder: 'border-cyan-100' },
-                          { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
-                          { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
-                          { border: 'hover:border-teal-500', bg: 'bg-teal-50', iconBg: 'group-hover:bg-teal-600', text: 'text-teal-600', groupText: 'group-hover:text-teal-600', quoteBorder: 'border-teal-100' },
-                          { border: 'hover:border-fuchsia-500', bg: 'bg-fuchsia-50', iconBg: 'group-hover:bg-fuchsia-600', text: 'text-fuchsia-600', groupText: 'group-hover:text-fuchsia-600', quoteBorder: 'border-fuchsia-100' },
-                        ];
-                        const color = colors[index % colors.length];
-          
-                        return (
-                          <div 
-                            key={index} 
-                            className={`card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all group flex flex-col ${color.border}`}
-                          >
-                            <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${color.bg} ${color.iconBg}`}>
-                              <div className={`${color.text} group-hover:text-white transition-colors`}>
-                                {assistant.icon}
-                              </div>
-                            </div>
-                            <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
-                              {assistant.name}
-                            </h4>
-                            <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
-                              {assistant.desc}
-                            </p>
-                            {assistant.metric && (
-                              <div className="mt-auto">
-                                <p className={`text-sm font-semibold mb-1 ${color.text}`}>{assistant.metric}</p>
-                                {assistant.stats && <p className="text-xs text-gray-500">{assistant.stats}</p>}
-                              </div>
-                            )}
-                            {assistant.quote && (
-                              <div className={`mt-4 border-l-2 pl-4 py-1 ${color.quoteBorder}`}>
-                                <p className="text-[10px] text-gray-500 italic leading-tight">
-                                  &ldquo;{assistant.quote}&rdquo;
-                                </p>
-                              </div>
-                            )}
-                          </div>
-                        );
-                      })}        </div>
+          ].map((item, index) => {
+            const colors = [
+              { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600' },
+              { border: 'hover:border-purple-500', bg: 'bg-purple-50', iconBg: 'group-hover:bg-purple-600', text: 'text-purple-600', groupText: 'group-hover:text-purple-600' },
+              { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600' },
+              { border: 'hover:border-rose-500', bg: 'bg-rose-50', iconBg: 'group-hover:bg-rose-600', text: 'text-rose-600', groupText: 'group-hover:text-rose-600' },
+              { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600' },
+              { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600' },
+              { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600' },
+            ];
+            const color = colors[index % colors.length];
+
+            return (
+              <div 
+                key={index} 
+                className={`card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all group flex flex-col ${color.border}`}
+              >
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${color.bg} ${color.iconBg}`}>
+                  <div className={`${color.text} group-hover:text-white transition-colors`}>
+                    {item.icon}
+                  </div>
+                </div>
+                <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
+                  {item.title}
+                </h4>
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}        </div>
       </section>
 
       {/* Conclusion */}
