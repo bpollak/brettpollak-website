@@ -25,60 +25,54 @@ const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?:
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [isVisible, end]);
+  }, [end, isVisible]);
 
-  return <>{count}{suffix}</>;
+  return <span>{count}{suffix}</span>;
 };
 
 export default function TritonGPTContent() {
   const [metricsVisible, setMetricsVisible] = useState(false);
-  const metricsRef = useRef<HTMLDivElement>(null);
+  const metricsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        if (entries[0].isIntersecting) {
           setMetricsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
-    const currentRef = metricsRef.current;
-
-    if (currentRef) {
-      observer.observe(currentRef);
+    if (metricsRef.current) {
+      observer.observe(metricsRef.current);
     }
 
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-emerald-600 text-white overflow-hidden animate-gradient-shift">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white overflow-hidden animate-gradient-shift">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
 
         {/* Animated floating orbs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-400 rounded-full blur-3xl opacity-20 animate-float-slow"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-400 rounded-full blur-3xl opacity-20 animate-float-slow" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-teal-400 rounded-full blur-3xl opacity-15 animate-pulse-glow"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20 animate-float-slow"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400 rounded-full blur-3xl opacity-20 animate-float-slow" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-amber-400 rounded-full blur-3xl opacity-15 animate-pulse-glow"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-24">
-          <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-green-500/20 text-green-300 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-green-400/30">
+          <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-blue-500/20 text-blue-200 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-blue-400/30">
             CASE STUDY
           </div>
           <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             Sovereignty in Intelligence
           </h1>
-          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-green-100 mb-8 max-w-4xl leading-relaxed font-light">
+          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-100 mb-8 max-w-4xl leading-relaxed font-light">
             The Strategic Architecture and Impact of TritonGPT at UC San Diego
           </p>
-          <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-green-200">
+          <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-200">
             <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
               <svg className="w-5 h-5 animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
@@ -97,11 +91,11 @@ export default function TritonGPTContent() {
 
       {/* Executive Summary */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="card-3d bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-10 border-l-4 border-green-700 shadow-lg relative overflow-hidden group">
+        <div className="card-3d bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-l-4 border-blue-800 shadow-lg relative overflow-hidden group">
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <p className="text-xl text-gray-700 leading-relaxed relative z-10">
-            UC San Diego developed <span className="font-bold text-green-700">TritonGPT</span>, a locally-hosted &quot;Vertical AI&quot; platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">73,000+ users</span>.
+            UC San Diego developed <span className="font-bold text-blue-800">TritonGPT</span>, a locally-hosted &quot;Vertical AI&quot; platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">73,000+ users</span>.
           </p>
         </div>
       </section>
@@ -111,43 +105,43 @@ export default function TritonGPTContent() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Impact Metrics</h2>
-            <div className="w-20 h-1 bg-green-700 mx-auto"></div>
+            <div className="w-20 h-1 bg-blue-800 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-400/0 to-emerald-400/0 group-hover:from-green-400/10 group-hover:to-emerald-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-indigo-400/0 group-hover:from-blue-400/10 group-hover:to-indigo-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-green-700 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-blue-700 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={91} isVisible={metricsVisible} />%
                 </div>
                 <div className="text-gray-700 font-medium">Time Saved on Contract Review</div>
                 <div className="text-sm text-gray-500 mt-2">120 min → 11 min</div>
               </div>
             </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-100">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/0 to-teal-400/0 group-hover:from-emerald-400/10 group-hover:to-teal-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-indigo-50 to-violet-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-100">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/0 to-violet-400/0 group-hover:from-indigo-400/10 group-hover:to-violet-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-emerald-700 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-indigo-700 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={83} isVisible={metricsVisible} />%
                 </div>
                 <div className="text-gray-700 font-medium">Faster Job Description Drafting</div>
                 <div className="text-sm text-gray-500 mt-2">30 min → 5 min</div>
               </div>
             </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-400/0 to-cyan-400/0 group-hover:from-teal-400/10 group-hover:to-cyan-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-yellow-400/0 group-hover:from-amber-400/10 group-hover:to-yellow-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-teal-700 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-amber-600 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={73} suffix="K+" isVisible={metricsVisible} />
                 </div>
                 <div className="text-gray-700 font-medium">Total Users Served</div>
                 <div className="text-sm text-gray-500 mt-2">28k Staff + 45k Students</div>
               </div>
             </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-lime-50 to-green-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-lime-400/0 to-green-400/0 group-hover:from-lime-400/10 group-hover:to-green-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-cyan-400/0 group-hover:from-blue-400/10 group-hover:to-cyan-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-green-600 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-blue-600 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={80} isVisible={metricsVisible} />%
                 </div>
                 <div className="text-gray-700 font-medium">Improved Policy Search Accuracy</div>
@@ -168,30 +162,56 @@ export default function TritonGPTContent() {
             <p className="text-gray-700 mb-4">UC San Diego manages a complex operational environment:</p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-3 group">
-                <svg className="w-6 h-6 text-green-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="group-hover:translate-x-1 transition-transform inline-block">45,000+ students across six undergraduate colleges</span>
               </li>
               <li className="flex items-start gap-3 group">
-                <svg className="w-6 h-6 text-green-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="group-hover:translate-x-1 transition-transform inline-block">28,000+ staff and faculty members</span>
               </li>
               <li className="flex items-start gap-3 group">
-                <svg className="w-6 h-6 text-green-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="group-hover:translate-x-1 transition-transform inline-block">Billions in research funding across multiple disciplines</span>
               </li>
             </ul>
             <p className="text-gray-700 mt-4">
-              Despite vast data resources, the university was <span className="font-semibold text-green-700">&quot;data-rich but information-poor,&quot;</span> with inefficient policy access creating operational friction.
+              Despite vast data resources, the university was <span className="font-semibold text-blue-700">&quot;data-rich but information-poor,&quot;</span> with inefficient policy access creating operational friction.
             </p>
           </div>
 
+          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Faculty Engagement Strategy</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Success hinged on treating faculty as co-designers, not end users. Early faculty workshops identified academic
+              use cases like the Socratic Tutor and Instructor Assistant. This inclusive approach transformed potential
+              resistance into enthusiastic advocacy, with faculty becoming TritonGPT&apos;s strongest champions across campus.
+            </p>
+          </div>
 
+          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Build vs. Buy Decision Framework</h3>
+            <p className="text-gray-700 leading-relaxed">
+              The choice to build on SDSC infrastructure rather than purchase commercial solutions reflected three priorities:
+              data sovereignty (FERPA compliance), cost predictability at scale (avoiding per-token pricing), and architectural
+              flexibility (ability to swap models without vendor lock-in). These trade-offs favored on-premise deployment despite
+              higher upfront investment.
+            </p>
+          </div>
+
+          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Iterative Release Strategy</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Launching with focused use cases (contract review, policy search) before expanding to broader applications built
+              trust through demonstrable ROI. Each successful deployment created momentum for the next, turning incremental wins
+              into campus-wide transformation. This measured approach prevented the &quot;boil the ocean&quot; trap common to AI initiatives.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -202,7 +222,7 @@ export default function TritonGPTContent() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The Assistant Ecosystem</h2>
             <p className="text-xl text-gray-600">Specialized assistants target specific campus roles and data domains</p>
           </div>
-          <div className="card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-green-700 transition-all duration-500 group">
+          <div className="card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-blue-700 transition-all duration-500 group">
             <div className="relative">
               <Image
                 src="/tritongpt-uc-san-diego-assistant.png"
@@ -211,7 +231,7 @@ export default function TritonGPTContent() {
                 height={800}
                 className="w-full transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
         </div>
@@ -394,15 +414,15 @@ export default function TritonGPTContent() {
               }
             ].map((assistant, index) => {
               const colors = [
-                { border: 'hover:border-green-500', bg: 'bg-green-50', iconBg: 'group-hover:bg-green-600', text: 'text-green-600', groupText: 'group-hover:text-green-600', quoteBorder: 'border-green-100' },
-                { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600', quoteBorder: 'border-emerald-100' },
-                { border: 'hover:border-teal-500', bg: 'bg-teal-50', iconBg: 'group-hover:bg-teal-600', text: 'text-teal-600', groupText: 'group-hover:text-teal-600', quoteBorder: 'border-teal-100' },
-                { border: 'hover:border-lime-500', bg: 'bg-lime-50', iconBg: 'group-hover:bg-lime-600', text: 'text-lime-600', groupText: 'group-hover:text-lime-600', quoteBorder: 'border-lime-100' },
-                { border: 'hover:border-green-500', bg: 'bg-green-50', iconBg: 'group-hover:bg-green-600', text: 'text-green-600', groupText: 'group-hover:text-green-600', quoteBorder: 'border-green-100' },
-                { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600', quoteBorder: 'border-emerald-100' },
-                { border: 'hover:border-teal-500', bg: 'bg-teal-50', iconBg: 'group-hover:bg-teal-600', text: 'text-teal-600', groupText: 'group-hover:text-teal-600', quoteBorder: 'border-teal-100' },
-                { border: 'hover:border-green-500', bg: 'bg-green-50', iconBg: 'group-hover:bg-green-600', text: 'text-green-600', groupText: 'group-hover:text-green-600', quoteBorder: 'border-green-100' },
-                { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600', quoteBorder: 'border-emerald-100' },
+                { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
+                { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
+                { border: 'hover:border-sky-500', bg: 'bg-sky-50', iconBg: 'group-hover:bg-sky-600', text: 'text-sky-600', groupText: 'group-hover:text-sky-600', quoteBorder: 'border-sky-100' },
+                { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
+                { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600', quoteBorder: 'border-cyan-100' },
+                { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
+                { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
+                { border: 'hover:border-sky-500', bg: 'bg-sky-50', iconBg: 'group-hover:bg-sky-600', text: 'text-sky-600', groupText: 'group-hover:text-sky-600', quoteBorder: 'border-sky-100' },
+                { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
               ];
               const color = colors[index % colors.length];
 
@@ -442,318 +462,35 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
-      {/* Technical Architecture */}
-      <section className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Technical Architecture: The TritonAI Platform</h2>
-
-          <div className="space-y-8">
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-700 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-green-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">Infrastructure: Physical Sovereignty</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    TritonGPT operates on dedicated GPU clusters at the San Diego Supercomputer Center. This local hosting ensures sensitive institutional data remains on campus networks. The shift from variable token-based pricing to fixed capital expenditure models improves economics at scale.
-                  </p>
-                </div>
+      {/* Recognition & Awards */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-24 overflow-hidden">
+        <div className="absolute top-10 right-10 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-30 animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Recognition & Awards</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
               </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-amber-600 transition-colors">CIO 100 Award</h3>
+              <p className="text-gray-600 text-center">2025 - Recognized as top global IT innovation</p>
             </div>
-
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-100">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-700 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
-                    <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
-                    <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-emerald-700 transition-colors">Model Flexibility and Cost Effectiveness</h3>
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    TritonAI&apos;s model-agnostic design avoids vendor lock-in through a hybrid strategy:
-                  </p>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start gap-2 group/item">
-                      <span className="text-emerald-700 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
-                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Open-source models handle high-volume routine tasks</span>
-                    </li>
-                    <li className="flex items-start gap-2 group/item">
-                      <span className="text-emerald-700 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
-                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Commercial models accessed via secure API gateways</span>
-                    </li>
-                    <li className="flex items-start gap-2 group/item">
-                      <span className="text-emerald-700 font-bold group-hover/item:scale-150 transition-transform inline-block">•</span>
-                      <span className="group-hover/item:translate-x-1 transition-transform inline-block">Avoids escalating token costs for high-volume usage</span>
-                    </li>
-                  </ul>
-                </div>
+            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                </svg>
               </div>
-            </div>
-
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-200">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-teal-700 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-teal-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-700 transition-colors">Precision Grounding: RAG & EDA</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Retrieval-Augmented Generation (RAG) separates AI reasoning from static knowledge bases. The Enterprise Data Agent (EDA) translates natural language into secure SQL queries within SAP HANA environments, enabling staff to access complex institutional data without technical expertise.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group delay-300">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-700 transition-all duration-300 group-hover:rotate-12">
-                  <svg className="w-6 h-6 text-green-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">Onyx: The Orchestration Layer</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    <a href="https://www.onyx.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-emerald-700 hover:text-emerald-800 hover:underline">Onyx</a> serves as the enterprise orchestration platform and sophisticated front-end for TritonGPT. It manages complex agent workflows, user sessions, and secure data routing, providing a seamless and high-performance interface for institutional intelligence.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-purple-600 transition-colors">Gartner Eye on Innovation</h3>
+              <p className="text-gray-600 text-center">Finalist for transformational impact in education</p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Higher Education Partnerships */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Beyond UC San Diego: A SaaS Platform for Higher Education</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">TritonGPT is now available as a secure, managed Software-as-a-Service (SaaS) solution, extending the impact of institutional AI to universities nationwide.</p>
-            <div className="w-20 h-1 bg-green-700 mx-auto mt-6"></div>
-          </div>
-
-          <div className="card-3d bg-white p-10 rounded-2xl shadow-xl border-t-4 border-green-600 hover:shadow-2xl transition-all">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-green-800">Enterprise Managed AI</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  This enterprise-managed platform provides partner universities with dedicated, isolated Kubernetes clusters to deploy their own instances of TritonGPT rapidly, leveraging UC San Diego&apos;s established infrastructure and security compliance.
-                </p>
-                <div className="bg-green-50 border border-green-100 p-6 rounded-xl">
-                  <h4 className="text-green-900 font-bold mb-2">Licensed Nationwide</h4>
-                  <p className="text-green-800 text-sm">TritonGPT technology is already being utilized by multiple leading universities across the country, establishing a new standard for shared innovation in the public sector.</p>
-                </div>
-              </div>
-              <ul className="space-y-4">
-                {[
-                  "Dedicated Infrastructure: Each partner institution receives their own isolated Kubernetes cluster.",
-                  "Rapid Deployment: Launch a customized AI environment in weeks.",
-                  "Enterprise Security: Managed FERPA-compliant architecture.",
-                  "Shared Innovation: Collective roadmap driven by higher ed needs.",
-                  "Scalable Economics: Fixed cost models instead of variable tokens."
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* User Testimonials Section */}
-      <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Voices of the Campus</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Real-world impact of the Contract Reviewer assistant on university operations</p>
-            <div className="w-20 h-1 bg-green-700 mx-auto mt-6"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                text: "“It&apos;s like having an extra attorney, basically.”",
-                context: "Contract Capacity"
-              },
-              {
-                text: "“It’s saved the day for me. We often get something that must turn around the same day. The more I use it, the more I trust it, and the easier it is to hit those deadlines.”",
-                context: "Urgent Turnaround"
-              },
-              {
-                text: "“It’s highlighting issues I might have overlooked. It’s extremely thorough and allows me to focus on the key issues.”",
-                context: "Quality Assurance"
-              },
-              {
-                text: "“It’s saving us so much time in terms of the legal review... I think it&apos;s a matter of hours to days [saved] in terms of each contract.”",
-                context: "Time Efficiency"
-              },
-              {
-                text: "“You could argue it&apos;s saving us a couple of days on some of these more complex contracts.”",
-                context: "Complexity Handling"
-              },
-              {
-                text: "“There&apos;s definitely some time savings, but it&apos;s also the consistency that I think it brings to the table as well.”",
-                context: "Operational Consistency"
-              },
-              {
-                text: "“It&apos;s enabling me to work on other things... I can run the tool, jump on something else, and then go back. It only takes minutes to process the contract.”",
-                context: "Parallel Processing"
-              },
-              {
-                text: "“This is going to free me up to spend time on strategic relationships with suppliers.”",
-                context: "Strategic Focus"
-              }
-            ].map((item, index) => {
-              const colors = [
-                { border: 'border-green-600', text: 'text-green-700', hoverText: 'group-hover:text-green-800', icon: 'text-green-100' },
-                { border: 'border-emerald-600', text: 'text-emerald-700', hoverText: 'group-hover:text-emerald-800', icon: 'text-emerald-100' },
-                { border: 'border-teal-600', text: 'text-teal-700', hoverText: 'group-hover:text-teal-800', icon: 'text-teal-100' },
-                { border: 'border-lime-600', text: 'text-lime-700', hoverText: 'group-hover:text-lime-800', icon: 'text-lime-100' },
-                { border: 'border-green-600', text: 'text-green-700', hoverText: 'group-hover:text-green-800', icon: 'text-green-100' },
-                { border: 'border-emerald-600', text: 'text-emerald-700', hoverText: 'group-hover:text-emerald-800', icon: 'text-emerald-100' },
-                { border: 'border-teal-600', text: 'text-teal-700', hoverText: 'group-hover:text-teal-800', icon: 'text-teal-100' },
-                { border: 'border-green-600', text: 'text-green-700', hoverText: 'group-hover:text-green-800', icon: 'text-green-100' },
-              ];
-              const color = colors[index % colors.length];
-
-              return (
-                <div 
-                  key={index} 
-                  className={`card-3d bg-white p-8 rounded-2xl shadow-sm border-l-4 hover:shadow-xl transition-all group relative animate-slide-up ${color.border}`}
-                >
-                  <div className={`absolute top-4 right-6 text-[10px] font-bold uppercase tracking-widest transition-colors ${color.text} ${color.hoverText}`}>
-                    {item.context}
-                  </div>
-                  <svg className={`w-8 h-8 mb-4 ${color.icon}`} fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H12.017V4H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.9124 16 4.01697 16H7.01697C7.56925 16 8.01697 15.5523 8.01697 15V9C8.01697 8.44772 7.56925 8 7.01697 8H3.01697C2.46468 8 2.01697 8.44772 2.01697 9V12C2.01697 12.5523 1.56925 13 1.01697 13H0.0169678V4H10.017V15C10.017 18.3137 7.33068 21 4.01697 21H2.01697Z" />
-                  </svg>
-                  <p className="text-gray-700 italic leading-relaxed relative z-10">{item.text}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Lessons */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Key Implementation Insights</h2>
-          <div className="space-y-6">
-            <div className="card-3d bg-white border-l-4 border-blue-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Student-Led Development Model</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Leveraging student developers as core contributors created a sustainable talent pipeline while reducing costs.
-              Students brought fresh perspectives on user experience and rapid prototyping, accelerating time-to-market for new assistants.
-              This approach also served as a training ground for the next generation of AI practitioners.
-            </p>
-          </div>
-
-          <div className="card-3d bg-white border-l-4 border-purple-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Faculty Engagement Strategy</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Success hinged on treating faculty as co-designers, not end users. Early faculty workshops identified academic
-              use cases like the Socratic Tutor and Instructor Assistant. This inclusive approach transformed potential
-              resistance into enthusiastic advocacy, with faculty becoming TritonGPT&apos;s strongest champions across campus.
-            </p>
-          </div>
-
-          <div className="card-3d bg-white border-l-4 border-emerald-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Build vs. Buy Decision Framework</h3>
-            <p className="text-gray-700 leading-relaxed">
-              The choice to build on SDSC infrastructure rather than purchase commercial solutions reflected three priorities:
-              data sovereignty (FERPA compliance), cost predictability at scale (avoiding per-token pricing), and architectural
-              flexibility (ability to swap models without vendor lock-in). These trade-offs favored on-premise deployment despite
-              higher upfront investment.
-            </p>
-          </div>
-
-          <div className="card-3d bg-white border-l-4 border-amber-600 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Iterative Release Strategy</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Launching with focused use cases (contract review, policy search) before expanding to broader applications built
-              trust through demonstrable ROI. Each successful deployment created momentum for the next, turning incremental wins
-              into campus-wide transformation. This measured approach prevented the &quot;boil the ocean&quot; trap common to AI initiatives.
-            </p>
-          </div>
-                  </div>
-                </div>
-              </section>
-        
-                          {/* Recognition & Awards */}
-        
-                          <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-24 overflow-hidden">
-        
-                            <div className="absolute top-10 right-10 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-30 animate-float"></div>
-        
-                            <div className="absolute bottom-10 left-10 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
-        
-                    
-        
-                            <div className="max-w-5xl mx-auto px-6 relative z-10">
-        
-                              <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Recognition & Awards</h2>
-        
-                                        <div className="grid md:grid-cols-2 gap-8">
-        
-                                          <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
-        
-                                            <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-        
-                                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-        
-                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        
-                                              </svg>
-        
-                                            </div>
-        
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-amber-600 transition-colors">CIO 100 Award</h3>
-        
-                                            <p className="text-gray-600 text-center">2025 - Recognized as top global IT innovation</p>
-        
-                                          </div>
-        
-                              
-        
-                                          <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
-        
-                                            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-        
-                                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-        
-                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-        
-                                                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-        
-                                              </svg>
-        
-                                            </div>
-        
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-purple-600 transition-colors">Gartner Eye on Innovation</h3>
-        
-                                            <p className="text-gray-600 text-center">Finalist for transformational impact in education</p>
-        
-                                          </div>
-        
-                                        </div>
-        
-                            </div>
-        
-                          </section>
 
       {/* Future Roadmap */}
       <section className="max-w-5xl mx-auto px-6 py-20">
@@ -827,15 +564,14 @@ export default function TritonGPTContent() {
                 <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
                   {item.title}
                 </h4>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
-                  {item.desc}
-                </p>
-              </div>
-            );
-          })}        </div>
-      </section>
-
-      {/* Conclusion */}
+                                                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                                                  {item.desc}
+                                                </p>
+                                              </div>
+                                            );
+                                          })}
+                                          </div>
+                                      </section>      {/* Conclusion */}
       <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-20 overflow-hidden animate-gradient-shift">
         <div className="absolute top-0 right-0 w-96 h-96 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse-glow"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400 rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>

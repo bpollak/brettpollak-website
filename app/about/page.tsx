@@ -85,23 +85,23 @@ export default function About() {
         <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">TritonGPT Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 91% and democratized access to institutional knowledge for 73,000+ users</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-700 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Leadership</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Manage 80+ technology professionals and oversee multi-million-dollar budgets</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-teal-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Awards</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Larry L. Sautter Gold and Silver Awards for Innovation in Information Technology</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Institutional Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-teal-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving campus community of 73,000+ users</p>
             </div>
@@ -267,29 +267,29 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Published Work</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>EDUCAUSE Review case studies</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>The Journal of Higher Education Web Professionals</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Eduniverse articles</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Featured in Forbes, CIO.com, EdTech Magazine (30+ publications)</span>

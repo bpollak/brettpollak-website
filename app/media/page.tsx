@@ -109,6 +109,16 @@ export default function Media() {
                 <div className="space-y-8">
                   {itemsByYear[Number(year)].map((item, index) => {
                     const isLeft = index % 2 === 0;
+                    
+                    // Cycle through colors for variety
+                    const colorCycle = [
+                      { from: 'from-green-700', to: 'to-emerald-600', text: 'text-green-700', border: 'hover:border-green-500', badge: 'bg-green-100 text-green-800' },
+                      { from: 'from-blue-700', to: 'to-cyan-600', text: 'text-blue-700', border: 'hover:border-blue-500', badge: 'bg-blue-100 text-blue-800' },
+                      { from: 'from-purple-700', to: 'to-pink-600', text: 'text-purple-700', border: 'hover:border-purple-500', badge: 'bg-purple-100 text-purple-800' },
+                      { from: 'from-amber-600', to: 'to-orange-500', text: 'text-amber-700', border: 'hover:border-amber-500', badge: 'bg-amber-100 text-amber-800' },
+                    ];
+                    const color = colorCycle[index % colorCycle.length];
+
                     return (
                       <div
                         key={index}
@@ -117,23 +127,23 @@ export default function Media() {
                         {/* Timeline dot */}
                         <div className="hidden sm:block absolute left-0 md:left-1/2 transform md:-translate-x-1/2 z-10">
                           <div className="relative">
-                            <div className="w-4 h-4 bg-gradient-to-br from-green-700 to-emerald-600 rounded-full ring-4 ring-white shadow-lg"></div>
-                            <div className="absolute inset-0 bg-gradient-to-br from-green-700 to-emerald-600 rounded-full animate-ping opacity-20"></div>
+                            <div className={`w-4 h-4 bg-gradient-to-br ${color.from} ${color.to} rounded-full ring-4 ring-white shadow-lg`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-br ${color.from} ${color.to} rounded-full animate-ping opacity-20`}></div>
                           </div>
                         </div>
 
                         {/* Content card */}
                         <div className={`w-full md:w-[calc(50%-2rem)] ${isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
-                          <div className="group relative bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-emerald-500 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                          <div className={`group relative bg-white p-6 rounded-xl border-2 border-gray-200 ${color.border} hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1`}>
                             {/* Connector line to timeline */}
-                            <div className={`hidden md:block absolute top-1/2 ${isLeft ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-8 h-0.5 bg-gradient-to-r ${isLeft ? 'from-emerald-500 to-transparent' : 'from-transparent to-emerald-500'}`}></div>
+                            <div className={`hidden md:block absolute top-1/2 ${isLeft ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-8 h-0.5 bg-gradient-to-r ${isLeft ? `${color.from.replace('from-', 'to-')} to-transparent` : `from-transparent ${color.to.replace('to-', 'from-')}`}`}></div>
 
                             {/* Category badge */}
-                            <div className="inline-block px-3 py-1 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 text-xs font-bold rounded-full mb-3 uppercase tracking-wide">
+                            <div className={`inline-block px-3 py-1 ${color.badge} text-xs font-bold rounded-full mb-3 uppercase tracking-wide`}>
                               {item.category}
                             </div>
 
-                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                            <h3 className={`text-xl font-bold text-gray-900 mb-3 group-hover:${color.text} transition-colors`}>
                               {item.url !== '#' ? (
                                 <a
                                   href={item.url}
@@ -152,14 +162,14 @@ export default function Media() {
                             </h3>
 
                             <div className="flex items-center gap-3 text-sm text-gray-600 mb-2">
-                              <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className={`w-4 h-4 ${color.text}`} fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                               </svg>
                               <span className="font-medium">{formatDate(item.date)}</span>
                             </div>
 
                             <div className="flex items-center gap-2 text-gray-700">
-                              <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className={`w-4 h-4 opacity-75 ${color.text}`} fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" />
                                 <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
                               </svg>
@@ -178,16 +188,16 @@ export default function Media() {
             ))}
         </div>
 
-        <div className="relative bg-gradient-to-br from-green-800 via-green-700 to-emerald-600 rounded-2xl p-12 text-center overflow-hidden">
+        <div className="relative bg-gradient-to-br from-blue-800 via-blue-700 to-cyan-600 rounded-2xl p-12 text-center overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
           <div className="relative">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-green-100 via-emerald-100 to-teal-100 bg-clip-text text-transparent mb-6">Speaking Engagements</h2>
-            <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-100 via-cyan-100 to-teal-100 bg-clip-text text-transparent mb-6">Speaking Engagements</h2>
+            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
               Available for keynotes, panels, and workshops on AI in higher education, digital transformation, and technology leadership.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gray-50 text-green-800 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600"
+              className="inline-flex items-center gap-2 bg-gray-50 text-blue-800 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
             >
               Inquire About Speaking
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

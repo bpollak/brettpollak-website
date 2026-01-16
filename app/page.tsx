@@ -119,27 +119,27 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-green-800 via-green-600 to-emerald-500 mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-green-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-100">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-700 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-100">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-green-700 transition-colors">Forbes</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors">Forbes</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Technology Leadership</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-emerald-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-200">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-red-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-emerald-700 transition-colors">CIO.com</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-red-600 transition-colors">CIO.com</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Digital Innovation</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-teal-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-300">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-cyan-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-300">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-teal-700 transition-colors">EdTech Magazine</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-cyan-600 transition-colors">EdTech Magazine</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">AI in Education</div>
               </div>
             </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-lime-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-400">
+            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-amber-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-400">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-lime-700 transition-colors">EDUCAUSE Review</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-amber-600 transition-colors">EDUCAUSE Review</div>
                 <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Higher Ed Tech</div>
               </div>
             </div>
@@ -228,20 +228,20 @@ export default function Home() {
               Implementation strategies, governance frameworks, and ethical considerations for artificial intelligence in academic institutions.
             </p>
           </div>
-          <div className="group p-8 border-l-4 border-emerald-700 bg-gradient-to-br from-emerald-50/40 to-teal-50/40 hover:from-emerald-50 hover:to-teal-50 transition-all duration-300 rounded-xl animate-slide-up delay-200">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent mb-4">Enterprise AI Deployment</h3>
+          <div className="group p-8 border-l-4 border-blue-700 bg-gradient-to-br from-blue-50/40 to-indigo-50/40 hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-xl animate-slide-up delay-200">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent mb-4">Enterprise AI Deployment</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               From concept to campus-wide deployment in weeks. Specialized AI assistants reducing administrative burden by up to 91% while maintaining institutional data sovereignty through local infrastructure and ethical governance frameworks.
             </p>
           </div>
-          <div className="group p-8 border-l-4 border-teal-700 bg-gradient-to-br from-teal-50/40 to-green-50/40 hover:from-teal-50 hover:to-green-50 transition-all duration-300 rounded-xl animate-slide-up delay-300">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-700 to-green-600 bg-clip-text text-transparent mb-4">Data Governance</h3>
+          <div className="group p-8 border-l-4 border-purple-700 bg-gradient-to-br from-purple-50/40 to-fuchsia-50/40 hover:from-purple-50 hover:to-fuchsia-50 transition-all duration-300 rounded-xl animate-slide-up delay-300">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-fuchsia-600 bg-clip-text text-transparent mb-4">Data Governance</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Enterprise data warehousing, security frameworks, and democratizing institutional knowledge across organizations.
             </p>
           </div>
-          <div className="group p-8 border-l-4 border-lime-600 bg-gradient-to-br from-lime-50/40 to-green-50/40 hover:from-lime-50 hover:to-green-50 transition-all duration-300 rounded-xl animate-slide-up delay-400">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-lime-600 to-green-600 bg-clip-text text-transparent mb-4">Organizational Change Leadership</h3>
+          <div className="group p-8 border-l-4 border-amber-600 bg-gradient-to-br from-amber-50/40 to-orange-50/40 hover:from-amber-50 hover:to-orange-50 transition-all duration-300 rounded-xl animate-slide-up delay-400">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-4">Organizational Change Leadership</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
               Leading technology transformation across 80+ professionals and 73,000+ end users. Building stakeholder buy-in through demonstration over declaration, turning skeptics into champions through measurable results.
             </p>
@@ -284,20 +284,20 @@ export default function Home() {
             </Link>
 
             <Link href="/media" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-200">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-700 to-teal-600"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-700 to-indigo-600"></div>
               <div className="p-10">
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-emerald-700 group-hover:to-teal-600 transition-all">
-                  <svg className="w-6 h-6 text-emerald-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-700 group-hover:to-indigo-600 transition-all">
+                  <svg className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-700 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
                   Media & Publications
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Featured in Forbes, CIO.com, EdTech Magazine, and 30+ other publications.
                 </p>
-                <div className="flex items-center text-emerald-700 font-semibold group-hover:gap-2 transition-all">
+                <div className="flex items-center text-blue-700 font-semibold group-hover:gap-2 transition-all">
                   View all
                   <svg className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -307,20 +307,20 @@ export default function Home() {
             </Link>
 
             <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-300">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-700 to-green-600"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-700 to-blue-600"></div>
               <div className="p-10">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-teal-700 group-hover:to-green-600 transition-all">
-                  <svg className="w-6 h-6 text-teal-800 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-cyan-700 group-hover:to-blue-600 transition-all">
+                  <svg className="w-6 h-6 text-cyan-800 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-teal-800 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-cyan-800 transition-colors">
                   LinkedIn
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Recent updates and insights from my LinkedIn profile.
                 </p>
-                <div className="flex items-center text-teal-800 font-semibold group-hover:gap-2 transition-all">
+                <div className="flex items-center text-cyan-800 font-semibold group-hover:gap-2 transition-all">
                   Follow along
                   <svg className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
