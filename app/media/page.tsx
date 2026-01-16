@@ -107,7 +107,6 @@ export default function Media() {
                   {/* Year marker on timeline */}
                   <div className="flex items-center justify-center mb-12">
                     <div className="relative z-10">
-                      <div className={`absolute -inset-4 bg-gradient-to-r ${yearGradient} rounded-full opacity-20 blur-xl animate-pulse-glow`}></div>
                       <div className={`relative bg-gradient-to-r ${yearGradient} text-white px-10 py-4 rounded-full shadow-2xl transform hover:scale-105 transition-transform cursor-default`}>
                         <h2 className="text-4xl font-bold tracking-tight">{year}</h2>
                         <div className="text-xs uppercase font-bold tracking-widest opacity-80 mt-1">{itemsByYear[Number(year)].length} publication{itemsByYear[Number(year)].length !== 1 ? 's' : ''}</div>
