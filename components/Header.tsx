@@ -21,17 +21,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-gray-50/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm">
-      <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-50"></div>
+      <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-green-900 via-green-700 to-emerald-500 opacity-50"></div>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Skip to main content link for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-700 focus:text-white focus:rounded-lg focus:shadow-lg"
         >
           Skip to main content
         </a>
         <div className="flex justify-between items-center h-16 sm:h-20">
-          <Link href="/" className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent hover:from-pink-700 hover:via-purple-700 hover:to-indigo-700 transition-all font-[family-name:var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 rounded" style={{ letterSpacing: '-0.005em' }}>
+          <Link href="/" className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-green-900 via-green-700 to-emerald-600 bg-clip-text text-transparent hover:from-green-800 hover:via-green-600 hover:to-emerald-500 transition-all font-[family-name:var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 rounded" style={{ letterSpacing: '-0.005em' }}>
             Brett Pollak
           </Link>
 
@@ -41,10 +41,10 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`px-3 lg:px-5 py-2 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 ${
+                className={`px-3 lg:px-5 py-2 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 ${
                   isActive(href)
-                    ? 'text-purple-600 bg-purple-50'
-                    : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50/50'
+                    ? 'text-green-800 bg-green-50'
+                    : 'text-gray-700 hover:text-green-700 hover:bg-green-50/50'
                 }`}
               >
                 {label}
@@ -55,7 +55,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-purple-50/50 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-green-50/50 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -86,10 +86,10 @@ export default function Header() {
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 ${
+                  className={`px-4 py-3 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 ${
                     isActive(href)
-                      ? 'text-purple-600 bg-purple-50'
-                      : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50/50'
+                      ? 'text-green-800 bg-green-50'
+                      : 'text-gray-700 hover:text-green-700 hover:bg-green-50/50'
                   }`}
                 >
                   {label}

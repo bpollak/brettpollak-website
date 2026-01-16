@@ -24,11 +24,11 @@ export default function Products() {
     <div className="min-h-screen bg-gray-50" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 bg-amber-50 text-amber-700 text-sm font-semibold rounded-full mb-6">
+          <div className="inline-block px-4 py-1.5 bg-green-50 text-green-800 text-sm font-semibold rounded-full mb-6">
             PRODUCTS
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-6 tracking-tight">Built for Impact</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-amber-600 to-orange-600 mb-8"></div>
+          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-green-900 via-green-700 to-emerald-600 bg-clip-text text-transparent mb-6 tracking-tight">Built for Impact</h1>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-green-800 to-emerald-600 mb-8"></div>
           <p className="text-2xl text-gray-600 mb-6 max-w-3xl leading-relaxed">
             Leveraging AI and modern technology to build innovative solutions that solve real-world challenges across diverse domains.
           </p>
@@ -53,10 +53,10 @@ export default function Products() {
                 />
               </div>
               <div className="p-12 flex flex-col justify-center">
-                <div className="inline-block px-3 py-1 bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-700 text-xs font-bold rounded-full mb-4 w-fit">
+                <div className="inline-block px-3 py-1 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 text-xs font-bold rounded-full mb-4 w-fit">
                   AI-POWERED HABIT BUILDING
                 </div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-600 group-hover:to-blue-600 group-hover:bg-clip-text transition-all">
+                <h2 className="text-4xl font-bold text-gray-900 mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-green-700 group-hover:to-emerald-600 group-hover:bg-clip-text transition-all">
                   Resolution Companion
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
@@ -67,7 +67,7 @@ export default function Products() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <div>
@@ -76,7 +76,7 @@ export default function Products() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <div>
@@ -85,7 +85,7 @@ export default function Products() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <div>
@@ -94,7 +94,7 @@ export default function Products() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <svg className="w-6 h-6 text-cyan-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <div>
@@ -105,7 +105,7 @@ export default function Products() {
                   </div>
                 </div>
 
-                <div className="inline-flex items-center gap-2 text-cyan-600 font-bold text-lg group-hover:gap-3 transition-all">
+                <div className="inline-flex items-center gap-2 text-green-600 font-bold text-lg group-hover:gap-3 transition-all">
                   Visit Resolution Companion
                   <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

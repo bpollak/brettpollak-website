@@ -39,20 +39,20 @@ export default function About() {
     <div className="min-h-screen bg-gray-50" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 text-sm font-semibold rounded-full mb-6">
+          <div className="inline-block px-4 py-1.5 bg-green-50 text-green-800 text-sm font-semibold rounded-full mb-6">
             PROFILE
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6 tracking-tight">About</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-indigo-600 to-purple-600"></div>
+          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-green-900 via-green-700 to-emerald-600 bg-clip-text text-transparent mb-6 tracking-tight">About</h1>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-green-800 to-emerald-600"></div>
         </div>
 
         {/* Main Bio Section */}
         <div className="grid md:grid-cols-5 gap-16 mb-20">
           <div className="md:col-span-2 relative animate-slide-in-left">
-            <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-indigo-300 via-purple-300 to-pink-300 rounded-2xl transform -rotate-3 opacity-20 blur-2xl"></div>
-            <div className="hidden md:block absolute -inset-5 bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 rounded-2xl transform -rotate-2 opacity-40 blur-xl"></div>
-            <div className="hidden md:block absolute -inset-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-1 shadow-2xl"></div>
-            <div className="hidden md:block absolute -inset-3 bg-gradient-to-tl from-purple-100 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
+            <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-green-300 via-emerald-300 to-teal-300 rounded-2xl transform -rotate-3 opacity-20 blur-2xl"></div>
+            <div className="hidden md:block absolute -inset-5 bg-gradient-to-br from-green-200 via-emerald-200 to-teal-200 rounded-2xl transform -rotate-2 opacity-40 blur-xl"></div>
+            <div className="hidden md:block absolute -inset-4 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl transform rotate-1 shadow-2xl"></div>
+            <div className="hidden md:block absolute -inset-3 bg-gradient-to-tl from-emerald-100 to-green-50 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
                 src="/brettpollak-headshot-lean.png"
@@ -64,8 +64,8 @@ export default function About() {
             </div>
           </div>
           <div className="md:col-span-3 space-y-6 animate-slide-in-right">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Transforming Organizations Through Strategic AI Leadership</h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600"></div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-green-800 to-emerald-700 bg-clip-text text-transparent">Transforming Organizations Through Strategic AI Leadership</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-green-800 to-emerald-700"></div>
             <p className="text-xl text-gray-600 leading-relaxed">
               I partner with organizations to unlock transformative value through AI and digital innovation. My approach combines
               rapid prototyping with enterprise-scale deployment, turning ambitious visions into measurable outcomes. By building
@@ -83,25 +83,25 @@ export default function About() {
 
         {/* Key Achievements */}
         <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent mb-12">Key Achievements</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-cyan-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">TritonGPT Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Reduced contract review time by 91% and democratized access to institutional knowledge for 73,000+ users</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-purple-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-700 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Leadership</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Manage 80+ technology professionals and oversee multi-million-dollar budgets</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-teal-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation Awards</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Larry L. Sautter Gold and Silver Awards for Innovation in Information Technology</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-rose-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Institutional Impact</h3>
               <p className="text-lg text-gray-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-emerald-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
+            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-green-600 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Infrastructure Scale</h3>
               <p className="text-lg text-gray-600 leading-relaxed">Support hybrid-cloud infrastructure serving campus community of 73,000+ users</p>
             </div>
@@ -145,17 +145,17 @@ export default function About() {
           <div className="space-y-12 max-w-4xl">
             {/* UC San Diego */}
             <div className="relative pl-8 border-l-2 border-gray-200">
-              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-blue-600 rounded-full ring-4 ring-white shadow-sm"></div>
+              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-green-700 rounded-full ring-4 ring-white shadow-sm"></div>
               
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-8 gap-2">
                 <h3 className="text-2xl font-bold text-gray-900">University of California San Diego</h3>
-                <span className="text-sm font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2008 – Present</span>
+                <span className="text-sm font-bold text-green-800 bg-green-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2008 – Present</span>
               </div>
 
               <div className="space-y-8">
                 {/* Executive Director */}
                 <div className="relative">
-                  <h4 className="text-xl font-bold text-gray-800 text-blue-600">Executive Director, Workplace Technology & Infrastructure Services (WTIS)</h4>
+                  <h4 className="text-xl font-bold text-gray-800 text-green-700">Executive Director, Workplace Technology & Infrastructure Services (WTIS)</h4>
                   <p className="text-sm text-gray-500 font-semibold mb-3">Oct 2024 – Present</p>
                   <p className="text-gray-600 leading-relaxed">
                     Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
@@ -199,14 +199,14 @@ export default function About() {
 
             {/* SAIC */}
             <div className="relative pl-8 border-l-2 border-gray-200">
-              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-purple-600 rounded-full ring-4 ring-white shadow-sm"></div>
+              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-emerald-700 rounded-full ring-4 ring-white shadow-sm"></div>
               
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
                 <h3 className="text-2xl font-bold text-gray-900">SAIC (Science Applications International Corporation)</h3>
-                <span className="text-sm font-bold text-purple-700 bg-purple-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2001 – 2008</span>
+                <span className="text-sm font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">2001 – 2008</span>
               </div>
               
-              <div className="text-xl font-medium text-purple-600 mb-4">Corporate Web Team Manager</div>
+              <div className="text-xl font-medium text-emerald-700 mb-4">Corporate Web Team Manager</div>
               
               <p className="text-lg text-gray-600 leading-relaxed">
                 Managed a department of 40 professionals including web content developers, user interface designers,
@@ -217,14 +217,14 @@ export default function About() {
 
             {/* Education */}
             <div className="relative pl-8 border-l-2 border-gray-200">
-              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-indigo-600 rounded-full ring-4 ring-white shadow-sm"></div>
+              <div className="absolute top-0 left-[-9px] w-4 h-4 bg-green-700 rounded-full ring-4 ring-white shadow-sm"></div>
               
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
                 <h3 className="text-2xl font-bold text-gray-900">University of San Diego</h3>
-                <span className="text-sm font-bold text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">1995</span>
+                <span className="text-sm font-bold text-green-800 bg-green-50 px-3 py-1 rounded-full w-fit whitespace-nowrap">1995</span>
               </div>
               
-              <div className="text-xl font-medium text-indigo-600 mb-4">Education</div>
+              <div className="text-xl font-medium text-green-700 mb-4">Education</div>
               
               <p className="text-lg text-gray-600 leading-relaxed">
                 <span className="font-semibold text-gray-900">BBA in Marketing</span>
@@ -237,29 +237,29 @@ export default function About() {
         <div className="border-t border-gray-200 pt-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Speaking & Publications</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Conference Presentations</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">EDUCAUSE:</span> Data governance and AI implementation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">AXIES 2025:</span> Keynote on EDUCAUSE Top 10 (Sapporo)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">ASU GSV Summit:</span> AI in higher education</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-green-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">High Ed Web & EduWeb:</span> Mobile design and UX</span>
@@ -267,29 +267,29 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Published Work</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>EDUCAUSE Review case studies</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>The Journal of Higher Education Web Professionals</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Eduniverse articles</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Featured in Forbes, CIO.com, EdTech Magazine (30+ publications)</span>
