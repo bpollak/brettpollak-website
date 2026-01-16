@@ -119,30 +119,51 @@ export default function Home() {
             <div className="w-20 h-1.5 bg-gradient-to-r from-green-800 via-green-600 to-emerald-500 mx-auto"></div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-blue-700 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-100">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-700 transition-colors">Forbes</div>
-                <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Technology Leadership</div>
+            {[
+              { 
+                name: "Forbes", 
+                topic: "Technology Leadership", 
+                color: "blue",
+                border: "hover:border-blue-600", 
+                text: "group-hover:text-blue-700",
+                bg: "hover:bg-blue-50/50"
+              },
+              { 
+                name: "CIO.com", 
+                topic: "Digital Innovation", 
+                color: "red",
+                border: "hover:border-red-600", 
+                text: "group-hover:text-red-600",
+                bg: "hover:bg-red-50/50"
+              },
+              { 
+                name: "EdTech Magazine", 
+                topic: "AI in Education", 
+                color: "cyan",
+                border: "hover:border-cyan-600", 
+                text: "group-hover:text-cyan-600",
+                bg: "hover:bg-cyan-50/50"
+              },
+              { 
+                name: "EDUCAUSE Review", 
+                topic: "Higher Ed Tech", 
+                color: "amber",
+                border: "hover:border-amber-600", 
+                text: "group-hover:text-amber-600",
+                bg: "hover:bg-amber-50/50"
+              }
+            ].map((pub, idx) => (
+              <div 
+                key={idx}
+                className={`group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 ${pub.border} ${pub.bg} hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in`}
+                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+              >
+                <div className="text-center">
+                  <div className={`text-2xl font-bold text-gray-900 mb-1 ${pub.text} transition-colors`}>{pub.name}</div>
+                  <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">{pub.topic}</div>
+                </div>
               </div>
-            </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-red-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-200">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-red-600 transition-colors">CIO.com</div>
-                <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Digital Innovation</div>
-              </div>
-            </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-cyan-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-300">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-cyan-600 transition-colors">EdTech Magazine</div>
-                <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">AI in Education</div>
-              </div>
-            </div>
-            <div className="group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 hover:border-amber-600 hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in delay-400">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-amber-600 transition-colors">EDUCAUSE Review</div>
-                <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">Higher Ed Tech</div>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6 text-lg">
