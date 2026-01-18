@@ -125,33 +125,37 @@ export default function Home() {
                 topic: "Technology Leadership", 
                 border: "hover:border-blue-700", 
                 text: "group-hover:text-blue-800",
-                bg: "hover:bg-blue-50/50"
+                bg: "hover:bg-blue-50/50",
+                initialBg: "bg-blue-50/30"
               },
               { 
                 name: "CIO.com", 
                 topic: "Digital Innovation", 
                 border: "hover:border-rose-700", 
                 text: "group-hover:text-rose-800",
-                bg: "hover:bg-rose-50/50"
+                bg: "hover:bg-rose-50/50",
+                initialBg: "bg-rose-50/30"
               },
               { 
                 name: "EdTech Magazine", 
                 topic: "AI in Education", 
                 border: "hover:border-cyan-600", 
                 text: "group-hover:text-cyan-700",
-                bg: "hover:bg-cyan-50/50"
+                bg: "hover:bg-cyan-50/50",
+                initialBg: "bg-cyan-50/30"
               },
               { 
                 name: "EDUCAUSE Review", 
                 topic: "Higher Ed Tech", 
                 border: "hover:border-amber-600", 
                 text: "group-hover:text-amber-700",
-                bg: "hover:bg-amber-50/50"
+                bg: "hover:bg-amber-50/50",
+                initialBg: "bg-amber-50/30"
               }
             ].map((pub, idx) => (
               <div 
                 key={idx}
-                className={`group flex items-center justify-center p-6 bg-white/80 backdrop-blur-sm rounded-xl border-2 border-gray-200 ${pub.border} ${pub.bg} hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in`}
+                className={`group flex items-center justify-center p-6 ${pub.initialBg} backdrop-blur-sm rounded-xl border-2 border-gray-200 ${pub.border} ${pub.bg} hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in`}
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 <div className="text-center">
