@@ -222,7 +222,12 @@ export default function TritonGPTContent() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The Assistant Ecosystem</h2>
             <p className="text-xl text-gray-600">Specialized assistants target specific campus roles and data domains</p>
           </div>
-          <div className="card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-blue-700 transition-all duration-500 group">
+          <a 
+            href="https://blink.ucsd.edu/technology/ai/tritongpt/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-blue-700 transition-all duration-500 group"
+          >
             <div className="relative">
               <Image
                 src="/tritongpt-uc-san-diego-assistant.png"
@@ -233,7 +238,7 @@ export default function TritonGPTContent() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
