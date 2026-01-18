@@ -54,25 +54,25 @@ export default function TritonGPTContent() {
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white overflow-hidden animate-gradient-shift">
+      <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-amber-950/20 text-white overflow-hidden animate-gradient-shift">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
 
-        {/* Gradient Background Effect (Blue to Tan/Gold) */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 via-transparent to-amber-500/30 opacity-60"></div>
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-amber-400/20 to-transparent rounded-full blur-3xl opacity-40 animate-pulse-glow"></div>
+        {/* Enhanced Gradient Background Effect (Blue to Tan/Gold) */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/70 via-blue-800/30 to-amber-500/50 opacity-90"></div>
+        <div className="absolute top-0 right-0 w-[1200px] h-[1200px] bg-gradient-to-bl from-amber-400/40 via-amber-200/10 to-transparent rounded-full blur-3xl opacity-60 animate-pulse-glow"></div>
         <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-blue-600/30 to-transparent rounded-full blur-3xl opacity-40 animate-pulse-glow" style={{ animationDelay: '4s' }}></div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-24">
-          <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-blue-500/20 text-blue-200 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-blue-400/30">
+          <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-amber-500/30 text-amber-100 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-amber-400/40">
             CASE STUDY
           </div>
-          <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+          <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm">
             Sovereignty in Intelligence
           </h1>
-          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-100 mb-8 max-w-4xl leading-relaxed font-light">
+          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-8 max-w-4xl leading-relaxed font-light">
             The Strategic Architecture and Impact of TritonGPT at UC San Diego
           </p>
-          <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-200">
+          <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-100">
             <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
               <svg className="w-5 h-5 animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
@@ -91,7 +91,7 @@ export default function TritonGPTContent() {
 
       {/* Executive Summary */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="card-3d bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 border-l-4 border-blue-800 shadow-lg relative overflow-hidden group">
+        <div className="card-3d bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-10 border-l-4 border-blue-800 shadow-lg relative overflow-hidden group">
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <p className="text-xl text-gray-700 leading-relaxed relative z-10">
@@ -459,7 +459,6 @@ export default function TritonGPTContent() {
               );
             })}
           </div>
-        </div>
       </section>
 
       {/* Recognition & Awards */}
