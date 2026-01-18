@@ -75,12 +75,12 @@ export default function Media() {
       />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12">
-          <div className="inline-block px-4 py-1.5 bg-green-50 text-green-800 text-sm font-semibold rounded-full mb-6">
+          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
             PUBLICATIONS
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-green-900 via-green-700 to-emerald-600 bg-clip-text text-transparent mb-6 tracking-tight">Media & Publications</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-green-800 via-green-600 to-emerald-500 mb-8"></div>
-          <p className="text-2xl text-gray-600 max-w-3xl leading-relaxed">
+          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Media & Publications</h1>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
+          <p className="text-2xl text-slate-600 max-w-3xl leading-relaxed">
             Featured in 30+ publications including Forbes, CIO.com, EdTech Magazine, and EDUCAUSE Review
           </p>
         </div>
@@ -88,17 +88,17 @@ export default function Media() {
         {/* Timeline visualization */}
         <div className="relative">
           {/* Vertical timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-gray-200 via-gray-300 to-gray-200 transform md:-translate-x-1/2 hidden sm:block"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-slate-200 via-slate-300 to-slate-200 transform md:-translate-x-1/2 hidden sm:block"></div>
 
           {Object.keys(itemsByYear)
             .sort((a, b) => Number(b) - Number(a))
             .map((year, yearIdx) => {
               const yearGradients = [
-                'from-emerald-600 to-green-700',
-                'from-blue-600 to-indigo-700',
-                'from-purple-600 to-fuchsia-700',
-                'from-orange-500 to-rose-600',
-                'from-cyan-500 to-blue-600'
+                'from-slate-800 to-blue-900',
+                'from-amber-500 to-orange-600',
+                'from-rose-800 to-red-900',
+                'from-blue-700 to-indigo-800',
+                'from-cyan-600 to-blue-700'
               ];
               const yearGradient = yearGradients[yearIdx % yearGradients.length];
 
@@ -121,12 +121,12 @@ export default function Media() {
                       
                       // Vibrant color cycle for items
                       const colorCycle = [
-                        { from: 'from-green-600', to: 'to-emerald-500', text: 'text-green-600', border: 'hover:border-green-500', badge: 'bg-green-100 text-green-800', hoverBg: 'hover:bg-green-50/30' },
-                        { from: 'from-blue-600', to: 'to-cyan-500', text: 'text-blue-600', border: 'hover:border-blue-500', badge: 'bg-blue-100 text-blue-800', hoverBg: 'hover:bg-blue-50/30' },
-                        { from: 'from-purple-600', to: 'to-pink-500', text: 'text-purple-600', border: 'hover:border-purple-500', badge: 'bg-purple-100 text-purple-800', hoverBg: 'hover:bg-purple-50/30' },
-                        { from: 'from-orange-500', to: 'to-amber-400', text: 'text-orange-600', border: 'hover:border-orange-500', badge: 'bg-orange-100 text-orange-800', hoverBg: 'hover:bg-orange-50/30' },
-                        { from: 'from-rose-500', to: 'to-pink-500', text: 'text-rose-600', border: 'hover:border-rose-500', badge: 'bg-rose-100 text-rose-800', hoverBg: 'hover:bg-rose-50/30' },
-                        { from: 'from-indigo-600', to: 'to-blue-500', text: 'text-indigo-600', border: 'hover:border-indigo-500', badge: 'bg-indigo-100 text-indigo-800', hoverBg: 'hover:bg-indigo-50/30' },
+                        { from: 'from-blue-800', to: 'to-indigo-700', text: 'text-blue-800', border: 'hover:border-blue-700', badge: 'bg-blue-50 text-blue-900', hoverBg: 'hover:bg-blue-50/30' },
+                        { from: 'from-amber-500', to: 'to-orange-600', text: 'text-amber-700', border: 'hover:border-amber-500', badge: 'bg-amber-50 text-amber-800', hoverBg: 'hover:bg-amber-50/30' },
+                        { from: 'from-rose-800', to: 'to-red-900', text: 'text-rose-800', border: 'hover:border-rose-700', badge: 'bg-rose-50 text-rose-900', hoverBg: 'hover:bg-rose-50/30' },
+                        { from: 'from-cyan-600', to: 'to-blue-600', text: 'text-cyan-700', border: 'hover:border-cyan-600', badge: 'bg-cyan-50 text-cyan-800', hoverBg: 'hover:bg-cyan-50/30' },
+                        { from: 'from-slate-700', to: 'to-slate-900', text: 'text-slate-700', border: 'hover:border-slate-600', badge: 'bg-slate-100 text-slate-800', hoverBg: 'hover:bg-slate-50/50' },
+                        { from: 'from-indigo-700', to: 'to-violet-800', text: 'text-indigo-800', border: 'hover:border-indigo-600', badge: 'bg-indigo-50 text-indigo-900', hoverBg: 'hover:bg-indigo-50/30' },
                       ];
                       const color = colorCycle[(index + yearIdx) % colorCycle.length];
 
@@ -145,16 +145,16 @@ export default function Media() {
 
                           {/* Content card */}
                           <div className={`w-full md:w-[calc(50%-2.5rem)] ${isLeft ? 'md:pr-10' : 'md:pl-10'}`}>
-                            <div className={`group relative bg-white p-8 rounded-2xl border-2 border-gray-100 ${color.border} ${color.hoverBg} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 card-3d`}>
+                            <div className={`group relative bg-white p-8 rounded-2xl border-2 border-slate-100 ${color.border} ${color.hoverBg} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 card-3d`}>
                               {/* Connector line to timeline */}
                               <div className={`hidden md:block absolute top-1/2 ${isLeft ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-10 h-0.5 bg-gradient-to-r ${isLeft ? `${color.from.replace('from-', 'to-')} to-transparent` : `from-transparent ${color.to.replace('to-', 'from-')}`} opacity-30 group-hover/item:opacity-100 transition-opacity`}></div>
 
                               {/* Category badge */}
-                              <div className={`inline-block px-4 py-1 ${color.badge} text-[10px] font-black rounded-full mb-4 uppercase tracking-widest`}>
+                              <div className={`inline-block px-4 py-1 ${color.badge} text-[10px] font-black rounded-full mb-4 uppercase tracking-widest border border-current border-opacity-10`}>
                                 {item.category}
                               </div>
 
-                              <h3 className={`text-2xl font-bold text-gray-900 mb-4 group-hover:${color.text} transition-colors leading-tight`}>
+                              <h3 className={`text-2xl font-bold text-slate-900 mb-4 group-hover:${color.text} transition-colors leading-tight`}>
                                 {item.url !== '#' ? (
                                   <a
                                     href={item.url}
@@ -175,14 +175,14 @@ export default function Media() {
                                 )}
                               </h3>
 
-                              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+                              <div className="flex flex-wrap items-center gap-6 text-sm text-slate-500">
                                 <div className="flex items-center gap-2">
                                   <div className={`p-1.5 rounded-lg ${color.badge.split(' ')[0]} bg-opacity-50`}>
                                     <svg className={`w-4 h-4 ${color.text}`} fill="currentColor" viewBox="0 0 20 20">
                                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                                     </svg>
                                   </div>
-                                  <span className="font-semibold tracking-wide uppercase text-[11px] text-gray-400">{formatDate(item.date)}</span>
+                                  <span className="font-semibold tracking-wide uppercase text-[11px] text-slate-400">{formatDate(item.date)}</span>
                                 </div>
 
                                 <div className="flex items-center gap-2">
@@ -192,7 +192,7 @@ export default function Media() {
                                       <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
                                     </svg>
                                   </div>
-                                  <span className="font-bold text-gray-700">{item.publication}</span>
+                                  <span className="font-bold text-slate-700">{item.publication}</span>
                                 </div>
                               </div>
                             </div>
@@ -209,16 +209,16 @@ export default function Media() {
             })}
         </div>
 
-        <div className="relative bg-gradient-to-br from-blue-800 via-blue-700 to-cyan-600 rounded-2xl p-12 text-center overflow-hidden mt-20">
+        <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 rounded-2xl p-12 text-center overflow-hidden mt-20">
           <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
           <div className="relative">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-100 via-cyan-100 to-teal-100 bg-clip-text text-transparent mb-6">Speaking Engagements</h2>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-200 via-orange-200 to-rose-200 bg-clip-text text-transparent mb-6">Speaking Engagements</h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
               Available for keynotes, panels, and workshops on AI in higher education, digital transformation, and technology leadership.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gray-50 text-blue-800 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
+              className="inline-flex items-center gap-2 bg-white text-slate-900 px-10 py-4 font-bold hover:bg-slate-50 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
             >
               Inquire About Speaking
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

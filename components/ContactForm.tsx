@@ -68,14 +68,14 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white p-8 rounded-xl border-2 border-gray-200 shadow-lg h-full flex flex-col">
+    <div className="bg-white p-8 rounded-xl border-2 border-slate-200 shadow-lg h-full flex flex-col">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-          <svg className="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+          <svg className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-gray-900">Send a Message</h3>
+        <h3 className="text-2xl font-bold text-slate-900">Send a Message</h3>
       </div>
 
       {status === 'success' && (
@@ -92,7 +92,7 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} className="space-y-5 flex-1 flex flex-col">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
             Name *
           </label>
           <input
@@ -102,13 +102,13 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent transition-all outline-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all outline-none"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
             Email *
           </label>
           <input
@@ -118,13 +118,13 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent transition-all outline-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all outline-none"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">
             Subject *
           </label>
           <select
@@ -133,7 +133,7 @@ export default function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent transition-all outline-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all outline-none"
           >
             <option value="">Select a topic</option>
             <option value="Speaking Engagement">Speaking Engagement</option>
@@ -145,7 +145,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
             Message *
           </label>
           <textarea
@@ -154,7 +154,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-700 focus:border-transparent transition-all resize-none outline-none"
+            className="w-full flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all resize-none outline-none"
             placeholder="Tell me about your inquiry..."
           />
         </div>
@@ -162,7 +162,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full bg-gradient-to-r from-green-800 to-green-600 text-white px-8 py-4 font-bold rounded-lg hover:from-green-900 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700"
+          className="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 font-bold rounded-lg hover:from-amber-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
         >
           {status === 'loading' ? 'Sending...' : 'Send Message'}
         </button>
