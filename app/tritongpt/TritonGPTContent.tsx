@@ -108,44 +108,44 @@ export default function TritonGPTContent() {
             <div className="w-20 h-1 bg-blue-800 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-indigo-400/0 group-hover:from-blue-400/10 group-hover:to-indigo-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-400/0 to-blue-400/0 group-hover:from-slate-400/10 group-hover:to-blue-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-blue-700 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-slate-800 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={91} isVisible={metricsVisible} />%
                 </div>
-                <div className="text-gray-700 font-medium">Time Saved on Contract Review</div>
-                <div className="text-sm text-gray-500 mt-2">120 min → 11 min</div>
+                <div className="text-slate-700 font-medium">Time Saved on Contract Review</div>
+                <div className="text-sm text-slate-500 mt-2">120 min → 11 min</div>
               </div>
             </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-indigo-50 to-violet-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-100">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/0 to-violet-400/0 group-hover:from-indigo-400/10 group-hover:to-violet-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-100">
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-400/0 to-pink-400/0 group-hover:from-rose-400/10 group-hover:to-pink-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-indigo-700 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-rose-700 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={83} isVisible={metricsVisible} />%
                 </div>
-                <div className="text-gray-700 font-medium">Faster Job Description Drafting</div>
-                <div className="text-sm text-gray-500 mt-2">30 min → 5 min</div>
+                <div className="text-rose-700 font-medium">Faster Job Description Drafting</div>
+                <div className="text-sm text-rose-500 mt-2">30 min → 5 min</div>
               </div>
             </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-yellow-400/0 group-hover:from-amber-400/10 group-hover:to-yellow-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-orange-400/0 group-hover:from-amber-400/10 group-hover:to-orange-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl font-bold text-amber-600 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={73} suffix="K+" isVisible={metricsVisible} />
                 </div>
-                <div className="text-gray-700 font-medium">Total Users Served</div>
-                <div className="text-sm text-gray-500 mt-2">28k Staff + 45k Students</div>
+                <div className="text-amber-700 font-medium">Total Users Served</div>
+                <div className="text-sm text-amber-600 mt-2">28k Staff + 45k Students</div>
               </div>
             </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-cyan-400/0 group-hover:from-blue-400/10 group-hover:to-cyan-400/10 transition-all duration-500"></div>
+            <div className="card-3d text-center p-8 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 to-teal-400/0 group-hover:from-cyan-400/10 group-hover:to-teal-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-blue-600 mb-2 transition-all duration-300 group-hover:scale-110">
+                <div className="text-5xl font-bold text-cyan-700 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={80} isVisible={metricsVisible} />%
                 </div>
-                <div className="text-gray-700 font-medium">Improved Policy Search Accuracy</div>
-                <div className="text-sm text-gray-500 mt-2">Across all departments</div>
+                <div className="text-teal-700 font-medium">Improved Policy Search Accuracy</div>
+                <div className="text-sm text-teal-600 mt-2">Across all departments</div>
               </div>
             </div>
           </div>
