@@ -57,10 +57,10 @@ export default function TritonGPTContent() {
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white overflow-hidden animate-gradient-shift">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
 
-        {/* Animated floating orbs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20 animate-float-slow"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400 rounded-full blur-3xl opacity-20 animate-float-slow" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-amber-400 rounded-full blur-3xl opacity-15 animate-pulse-glow"></div>
+        {/* Gradient Background Effect (Blue to Tan/Gold) */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 via-transparent to-amber-500/30 opacity-60"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-amber-400/20 to-transparent rounded-full blur-3xl opacity-40 animate-pulse-glow"></div>
+        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-blue-600/30 to-transparent rounded-full blur-3xl opacity-40 animate-pulse-glow" style={{ animationDelay: '4s' }}></div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-24">
           <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-blue-500/20 text-blue-200 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-blue-400/30">
@@ -564,17 +564,19 @@ export default function TritonGPTContent() {
                 <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
                   {item.title}
                 </h4>
-                                                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
-                                                  {item.desc}
-                                                </p>
-                                              </div>
-                                            );
-                                          })}
-                                          </div>
-                                      </section>      {/* Conclusion */}
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
+          </div>
+      </section>
+
+      {/* Conclusion */}
       <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-20 overflow-hidden animate-gradient-shift">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse-glow"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400 rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-amber-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-8 animate-fade-in">Conclusion</h2>
