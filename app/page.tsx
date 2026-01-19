@@ -126,7 +126,8 @@ export default function Home() {
                 border: "hover:border-blue-700", 
                 text: "group-hover:text-blue-800",
                 bg: "hover:bg-blue-50/50",
-                initialBg: "bg-blue-50/30"
+                initialBg: "bg-blue-50/30",
+                url: "https://www.forbes.com/sites/avivalegatt/2025/08/10/why-faculty-hold-the-keys-to-higher-eds-ai-digital-transformation/"
               },
               { 
                 name: "CIO.com", 
@@ -134,7 +135,8 @@ export default function Home() {
                 border: "hover:border-rose-700", 
                 text: "group-hover:text-rose-800",
                 bg: "hover:bg-rose-50/50",
-                initialBg: "bg-rose-50/30"
+                initialBg: "bg-rose-50/30",
+                url: "https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html"
               },
               { 
                 name: "EdTech Magazine", 
@@ -142,7 +144,8 @@ export default function Home() {
                 border: "hover:border-cyan-600", 
                 text: "group-hover:text-cyan-700",
                 bg: "hover:bg-cyan-50/50",
-                initialBg: "bg-cyan-50/30"
+                initialBg: "bg-cyan-50/30",
+                url: "https://edtechmagazine.com/higher/article/2025/05/uc-san-diego-launches-tritongpt-generative-ai-tool"
               },
               { 
                 name: "EDUCAUSE Review", 
@@ -150,19 +153,23 @@ export default function Home() {
                 border: "hover:border-amber-600", 
                 text: "group-hover:text-amber-700",
                 bg: "hover:bg-amber-50/50",
-                initialBg: "bg-amber-50/30"
+                initialBg: "bg-amber-50/30",
+                url: "https://er.educause.edu/articles/2025/2/ushering-in-a-new-era-of-ai-driven-data-insights-at-uc-san-diego"
               }
             ].map((pub, idx) => (
-              <div 
+              <a 
                 key={idx}
-                className={`group flex items-center justify-center p-6 ${pub.initialBg} backdrop-blur-sm rounded-xl border-2 border-gray-200 ${pub.border} ${pub.bg} hover:shadow-xl transition-all duration-300 cursor-default transform hover:-translate-y-1 animate-fade-in`}
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center justify-center p-6 ${pub.initialBg} backdrop-blur-sm rounded-xl border-2 border-gray-200 ${pub.border} ${pub.bg} hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in`}
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 <div className="text-center">
                   <div className={`text-2xl font-bold text-gray-900 mb-1 ${pub.text} transition-colors`}>{pub.name}</div>
                   <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">{pub.topic}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           <div className="text-center mt-12">
