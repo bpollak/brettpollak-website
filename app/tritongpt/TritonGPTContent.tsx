@@ -589,7 +589,7 @@ export default function TritonGPTContent() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-8 animate-fade-in">Conclusion</h2>
+          <h2 className="text-4xl font-bold mb-8 animate-fade-in">Strategic Impact & Vision</h2>
           <p className="text-2xl text-blue-100 leading-relaxed mb-8 animate-slide-up">
             TritonGPT demonstrates that AI value in higher education derives from institutional context integration. Through TritonAI, UC San Diego transformed data into a dynamic conversational asset while establishing new standards for public sector efficiency.
           </p>
