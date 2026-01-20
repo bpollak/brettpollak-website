@@ -491,7 +491,7 @@ export default function TritonGPTContent() {
               <p className="text-gray-600 text-center">2025 - Recognized as top global IT innovation</p>
             </a>
             <a 
-              href="https://www.gartner.com/en/industries/education/eye-on-innovation-awards-education"
+              href="https://www.gartner.com/en/about/awards/eye-on-innovation"
               target="_blank"
               rel="noopener noreferrer"
               className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group block"
