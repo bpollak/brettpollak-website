@@ -51,7 +51,7 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="md:col-span-3 space-y-6 animate-slide-in-right flex flex-col justify-center">
+          <div className="md:col-span-3 space-y-6 animate-slide-in-right">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">From Web Pioneer to AI Implementation Leader</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-slate-900 to-blue-800"></div>
             <p className="text-xl text-slate-600 leading-relaxed">
