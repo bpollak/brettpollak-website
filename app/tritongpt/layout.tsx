@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ReadingProgress from '@/components/ReadingProgress';
 
 export const metadata: Metadata = {
   title: "TritonGPT Case Study | Brett Pollak",
@@ -18,5 +19,10 @@ export default function TritonGPTLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <ReadingProgress />
+      {children}
+    </>
+  );
 }

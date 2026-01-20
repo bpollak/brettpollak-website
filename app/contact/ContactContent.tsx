@@ -110,7 +110,7 @@ export default function ContactContent() {
           <p className="text-2xl font-semibold mb-3 text-amber-400">
             Executive Director, Workplace Technology & Infrastructure Services
           </p>
-          <p className="text-xl text-slate-300">
+          <p className="text-xl text-slate-200">
             University of California San Diego
           </p>
         </div>

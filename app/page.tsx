@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-slate-600 leading-relaxed mb-14 max-w-xl">
-              Bridging the gap between ambitious AI visions and operational reality in higher education. Spearheaded the implementation of <span className="font-semibold text-slate-900">TritonGPT</span>, demonstrating how universities can deploy institutional AI at scale—moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
+              Bridging the gap between ambitious AI visions and operational reality in higher education. Spearheaded the implementation of <Link href="/tritongpt" className="font-semibold text-slate-900 hover:text-blue-700 underline underline-offset-2 decoration-blue-700/30 hover:decoration-blue-700 transition-colors">TritonGPT</Link>, demonstrating how universities can deploy institutional AI at scale—moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
@@ -226,8 +226,8 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors">Democratizing Knowledge</h3>
-              <p className="text-slate-300 leading-relaxed mb-4">
-                TritonGPT serves 73,000+ users across UC San Diego, making institutional knowledge accessible to students, faculty, and staff in seconds instead of hours.
+              <p className="text-slate-200 leading-relaxed mb-4">
+                <Link href="/tritongpt" className="text-amber-400 hover:text-amber-300 underline underline-offset-2 decoration-amber-400/30 hover:decoration-amber-300 transition-colors">TritonGPT</Link> serves 73,000+ users across UC San Diego, making institutional knowledge accessible to students, faculty, and staff in seconds instead of hours.
               </p>
               <div className="text-amber-400 font-semibold">73K+ active users</div>
             </div>
@@ -238,8 +238,8 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">Accelerating Efficiency</h3>
-              <p className="text-slate-300 leading-relaxed mb-4">
-                By automating complex contract review processes, TritonGPT has cut review times by 91%, freeing administrators to focus on strategic decisions rather than document analysis.
+              <p className="text-slate-200 leading-relaxed mb-4">
+                By automating complex contract review processes, <Link href="/tritongpt" className="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 hover:decoration-blue-300 transition-colors">TritonGPT</Link> has cut review times by 91%, freeing administrators to focus on strategic decisions rather than document analysis.
               </p>
               <div className="text-blue-400 font-semibold">91% time reduction</div>
             </div>
@@ -250,7 +250,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-rose-400 transition-colors">Leading at Scale</h3>
-              <p className="text-slate-300 leading-relaxed mb-4">
+              <p className="text-slate-200 leading-relaxed mb-4">
                 Managing a team of 80+ technology professionals while overseeing hybrid-cloud infrastructure that supports the entire UC San Diego campus community.
               </p>
               <div className="text-rose-400 font-semibold">80+ team members</div>
