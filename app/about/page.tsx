@@ -51,27 +51,14 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="md:col-span-3 space-y-6 animate-slide-in-right">
+          <div className="md:col-span-3 space-y-6 animate-slide-in-right flex flex-col justify-center">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">From Web Pioneer to AI Implementation Leader</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-slate-900 to-blue-800"></div>
             <p className="text-xl text-slate-600 leading-relaxed">
-              My journey into technology leadership began in the early days of the web, managing teams of 40+ at a Fortune 500 company.
-              I learned a fundamental truth: <span className="font-semibold text-slate-900">technology transformation isn't about the tools; it's about the people</span>.
+              My journey into technology leadership began in the early days of the web, managing teams at a Fortune 500 company where I learned that true transformation isn't about tools—it's about people. Over 17 years at UC San Diego, I've built this philosophy into every project, culminating in the TritonGPT initiative.
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
-              When I joined UC San Diego in 2008, I saw an opportunity to bring enterprise-scale innovation to higher education.
-              Over 17 years, I've built this philosophy into every project: rapid prototyping meets rigorous governance,
-              ambitious vision meets operational reality, cutting-edge AI meets ethical implementation.
-            </p>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              The TritonGPT initiative crystallized everything I've learned about transformational technology deployment.
-              We moved from concept to production serving 73,000+ users in weeks, not by cutting corners, but by <span className="font-semibold text-slate-900">demonstrating
-              value early and building trust through transparency</span>. Contract review times dropped 91%. Students found answers
-              in seconds instead of hours. But the real victory? Turning skeptics into champions by showing, not telling.
-            </p>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              Today, I help organizations navigate the AI transformation with clarity, speed, and confidence. Because I've learned that
-              the difference between AI projects that stall and those that scale isn't technical; it's cultural.
+              We moved TritonGPT from concept to serving 73,000+ users in weeks, cutting contract review times by 91% and turning skeptics into champions. Today, I help organizations navigate AI transformation with clarity, proving that the difference between projects that stall and those that scale is cultural, not just technical.
             </p>
           </div>
         </div>
