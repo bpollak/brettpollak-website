@@ -50,7 +50,7 @@ export default function LinkedIn() {
         {/* Custom Follow Me Button */}
         <div className="border-t border-slate-200 pt-12 text-center">
           <a
-            href="https://www.linkedin.com/in/bpollak/"
+            href="https://www.linkedin.com/in/brettpollak/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-slate-900 to-blue-900 text-white px-10 py-4 font-bold rounded-lg hover:from-slate-800 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
