@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,16 +10,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// Montserrat for brand name and hero headings
+// 300 (light) - hero heading
+// 600 (semibold) - brand name in header
+// 700 (bold) - occasional emphasis
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  weight: ['300', '400', '700', '800', '900'],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-  weight: ['500', '600', '700', '800'],
+  weight: ['300', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -68,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${montserrat.variable} ${plusJakarta.variable} antialiased`}>
+      <body className={`${inter.className} ${montserrat.variable} antialiased`}>
         <GoogleAnalytics />
         <Header />
         {children}

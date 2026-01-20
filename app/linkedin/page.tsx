@@ -1,10 +1,13 @@
 'use client';
 
 import Script from 'next/script';
+import { useState } from 'react';
 
 export default function LinkedIn() {
+  const [widgetLoaded, setWidgetLoaded] = useState(false);
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" id="main-content">
       {/* Hide SociableKit's Follow button */}
       <style jsx global>{`
         .sk-ww-linkedin-profile-post a[href*="linkedin.com"][target="_blank"] {
@@ -14,16 +17,32 @@ export default function LinkedIn() {
 
       <Script
         src="https://widgets.sociablekit.com/linkedin-profile-posts/widget.js"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
+        onLoad={() => setWidgetLoaded(true)}
       />
 
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-8 tracking-tight">LinkedIn</h1>
+        <div className="mb-8">
+          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
+            SOCIAL
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight">LinkedIn</h1>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
+        </div>
         <p className="text-xl text-slate-600 mb-16 max-w-3xl">
           Recent updates and insights from my LinkedIn profile
         </p>
 
-        <div className="mb-12 relative">
+        <div className="mb-12 relative min-h-[400px]">
+          {/* Loading placeholder */}
+          {!widgetLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center bg-white rounded-xl border border-slate-200">
+              <div className="text-center">
+                <div className="w-12 h-12 border-4 border-slate-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-slate-500">Loading LinkedIn posts...</p>
+              </div>
+            </div>
+          )}
           {/* LinkedIn widget embed */}
           <div className="sk-ww-linkedin-profile-post" data-embed-id="25642101"></div>
         </div>
