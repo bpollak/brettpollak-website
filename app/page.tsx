@@ -132,7 +132,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">As Featured In</h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mx-auto"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { 
                 name: "Forbes", 
