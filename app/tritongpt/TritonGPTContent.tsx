@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
+import ReadingProgress from '@/components/ReadingProgress';
 
 const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?: string; isVisible: boolean }) => {
   const [count, setCount] = useState(0);
@@ -53,6 +54,7 @@ export default function TritonGPTContent() {
 
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
+      <ReadingProgress />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-amber-950/20 text-white overflow-hidden animate-gradient-shift">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>

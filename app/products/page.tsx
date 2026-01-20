@@ -127,7 +127,7 @@ export default function Products() {
             </div>
             <h2 className="text-4xl font-bold mb-6">TritonGPT</h2>
             <p className="text-xl text-blue-100 leading-relaxed mb-8">
-              UC San Diego's enterprise AI platform serving 73,000+ users. A locally-hosted "Vertical AI" solution demonstrating how
+              UC San Diego&apos;s enterprise AI platform serving 73,000+ users. A locally-hosted &quot;Vertical AI&quot; solution demonstrating how
               institutions can deploy AI at scale while maintaining data sovereignty and ethical governance.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -166,7 +166,7 @@ export default function Products() {
             </div>
             <h3 className="text-3xl font-bold text-slate-900 mb-4">More Innovations Coming</h3>
             <p className="text-lg text-slate-600 mb-8">
-              I'm constantly building new AI-powered solutions across education, productivity, and enterprise domains.
+              I&apos;m constantly building new AI-powered solutions across education, productivity, and enterprise domains.
               Follow my journey on LinkedIn for updates on upcoming launches.
             </p>
             <a
