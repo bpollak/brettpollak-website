@@ -27,10 +27,10 @@ export default function Products() {
           <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
             PRODUCTS
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Built for Impact</h1>
+          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Innovation Portfolio</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
           <p className="text-2xl text-slate-600 mb-6 max-w-3xl leading-relaxed">
-            Leveraging AI and modern technology to build innovative solutions that solve real-world challenges across diverse domains.
+            Beyond consulting and speaking, I build AI-powered products that solve real problems. From enterprise platforms serving 73,000+ users to consumer apps helping individuals achieve their goals.
           </p>
         </div>
 
@@ -114,6 +114,68 @@ export default function Products() {
               </div>
             </div>
           </a>
+        </div>
+
+        {/* TritonGPT - Enterprise Product */}
+        <div className="mb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 rounded-2xl p-12 text-white">
+          <div className="max-w-4xl">
+            <div className="inline-block px-3 py-1 bg-white/10 text-blue-200 text-xs font-bold rounded-full mb-6 w-fit border border-white/20">
+              ENTERPRISE SOLUTION
+            </div>
+            <h2 className="text-4xl font-bold mb-6">TritonGPT</h2>
+            <p className="text-xl text-blue-100 leading-relaxed mb-8">
+              UC San Diego's enterprise AI platform serving 73,000+ users. A locally-hosted "Vertical AI" solution demonstrating how
+              institutions can deploy AI at scale while maintaining data sovereignty and ethical governance.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <div className="text-3xl font-bold text-amber-400 mb-2">73K+</div>
+                <div className="text-sm text-blue-200">Active Users</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <div className="text-3xl font-bold text-amber-400 mb-2">91%</div>
+                <div className="text-sm text-blue-200">Time Reduction</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+                <div className="text-3xl font-bold text-amber-400 mb-2">Weeks</div>
+                <div className="text-sm text-blue-200">To Production</div>
+              </div>
+            </div>
+            <a
+              href="/tritongpt"
+              className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 font-bold hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl rounded-xl group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            >
+              View Case Study
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* More Coming Soon */}
+        <div className="bg-white rounded-2xl p-12 text-center border-2 border-dashed border-slate-300">
+          <div className="max-w-2xl mx-auto">
+            <div className="w-16 h-16 bg-gradient-to-br from-slate-200 to-blue-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <svg className="w-8 h-8 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">More Innovations Coming</h3>
+            <p className="text-lg text-slate-600 mb-8">
+              I'm constantly building new AI-powered solutions across education, productivity, and enterprise domains.
+              Follow my journey on LinkedIn for updates on upcoming launches.
+            </p>
+            <a
+              href="/linkedin"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-blue-900 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900"
+            >
+              Follow on LinkedIn
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
