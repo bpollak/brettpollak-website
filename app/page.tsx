@@ -64,7 +64,7 @@ export default function Home() {
             </h1>
             <div className="w-24 h-1.5 bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 rounded-full mb-10"></div>
             <p className="text-2xl md:text-3xl text-slate-700 mb-8 font-light leading-relaxed">
-              Deploying Enterprise AI at Scale—From Concept to 73K+ Users in Weeks, Not Years
+              Deploying Enterprise AI at Scale: From Concept to 73K+ Users in Weeks, Not Years
             </p>
             <div className="flex items-center gap-3 mb-10">
               <svg className="w-6 h-6 text-blue-900" fill="currentColor" viewBox="0 0 20 20">
@@ -75,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-slate-600 leading-relaxed mb-14 max-w-xl">
-              Bridging the gap between ambitious AI visions and operational reality in higher education. Spearheaded the implementation of <Link href="/tritongpt" className="font-semibold text-slate-900 hover:text-blue-700 underline underline-offset-2 decoration-blue-700/30 hover:decoration-blue-700 transition-colors">TritonGPT</Link>, demonstrating how universities can deploy institutional AI at scale—moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
+              Bridging the gap between ambitious AI visions and operational reality in higher education. Spearheaded the implementation of <Link href="/tritongpt" className="font-semibold text-slate-900 hover:text-blue-700 underline underline-offset-2 decoration-blue-700/30 hover:decoration-blue-700 transition-colors">TritonGPT</Link>, demonstrating how universities can deploy institutional AI at scale, moving from concept to production serving 73,000+ users while maintaining data sovereignty and ethical governance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
@@ -305,7 +305,7 @@ export default function Home() {
                 <span className="text-sm font-semibold text-amber-600">On Innovation</span>
               </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-6 italic">
-                &ldquo;Ideally, we would have a &lsquo;coach&rsquo; for almost any position that we would have on campus—an information resource that&apos;s specific and pertinent to each individual&apos;s job.&rdquo;
+                &ldquo;Ideally, we would have a &lsquo;coach&rsquo; for almost any position that we would have on campus, an information resource that&apos;s specific and pertinent to each individual&apos;s job.&rdquo;
               </p>
               <div className="flex items-center justify-between">
                 <div className="text-sm text-slate-500">UC San Diego Today</div>

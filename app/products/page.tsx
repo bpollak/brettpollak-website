@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
-  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion—an identity-based habit building app—and enterprise-scale institutional tools.",
+  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion, an identity-based habit building app, and enterprise-scale institutional tools.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },

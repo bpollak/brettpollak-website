@@ -56,7 +56,7 @@ export default function About() {
             <div className="w-16 h-1 bg-gradient-to-r from-slate-900 to-blue-800"></div>
             <p className="text-xl text-slate-600 leading-relaxed">
               My journey into technology leadership began in the early days of the web, managing teams of 40+ at a Fortune 500 company.
-              I learned a fundamental truth: <span className="font-semibold text-slate-900">technology transformation isn't about the tools—it's about the people</span>.
+              I learned a fundamental truth: <span className="font-semibold text-slate-900">technology transformation isn't about the tools; it's about the people</span>.
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
               When I joined UC San Diego in 2008, I saw an opportunity to bring enterprise-scale innovation to higher education.
@@ -65,13 +65,13 @@ export default function About() {
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
               The TritonGPT initiative crystallized everything I've learned about transformational technology deployment.
-              We moved from concept to production serving 73,000+ users in weeks—not by cutting corners, but by <span className="font-semibold text-slate-900">demonstrating
+              We moved from concept to production serving 73,000+ users in weeks, not by cutting corners, but by <span className="font-semibold text-slate-900">demonstrating
               value early and building trust through transparency</span>. Contract review times dropped 91%. Students found answers
               in seconds instead of hours. But the real victory? Turning skeptics into champions by showing, not telling.
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
               Today, I help organizations navigate the AI transformation with clarity, speed, and confidence. Because I've learned that
-              the difference between AI projects that stall and those that scale isn't technical—it's cultural.
+              the difference between AI projects that stall and those that scale isn't technical; it's cultural.
             </p>
           </div>
         </div>
