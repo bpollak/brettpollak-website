@@ -490,7 +490,12 @@ export default function TritonGPTContent() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-amber-600 transition-colors">CIO 100 Award</h3>
               <p className="text-gray-600 text-center">2025 - Recognized as top global IT innovation</p>
             </a>
-            <div className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+            <a 
+              href="https://www.gartner.com/en/industries/education/eye-on-innovation-awards-education"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group block"
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
@@ -499,7 +504,7 @@ export default function TritonGPTContent() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-purple-600 transition-colors">Gartner Eye on Innovation</h3>
               <p className="text-gray-600 text-center">Finalist for transformational impact in education</p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
