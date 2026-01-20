@@ -86,9 +86,6 @@ export default function Footer() {
           <p className="text-slate-500 text-sm">
             &copy; {new Date().getFullYear()} Brett Pollak. All rights reserved.
           </p>
-          <p className="text-slate-400 text-sm">
-            UC San Diego • La Jolla, California
-          </p>
         </div>
       </div>
     </footer>

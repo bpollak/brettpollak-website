@@ -33,7 +33,7 @@ export default function Products() {
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Innovation Portfolio</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
           <p className="text-2xl text-slate-600 mb-6 max-w-3xl leading-relaxed">
-            Beyond consulting and speaking, I build AI-powered products that solve real problems. From enterprise platforms serving 73,000+ users to consumer apps helping individuals achieve their goals.
+            Beyond my role at UC San Diego and speaking, I build AI-powered products that solve real problems. From enterprise platforms serving 73,000+ users to consumer apps helping individuals achieve their goals.
           </p>
         </div>
 

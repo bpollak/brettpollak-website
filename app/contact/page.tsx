@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Brett Pollak | AI Speaker & Technology Consultant",
-  description: "Connect with Brett Pollak for speaking engagements, consulting on AI implementation in higher education, or collaboration opportunities.",
+  description: "Connect with Brett Pollak for speaking engagements, advising on AI implementation in higher education, or collaboration opportunities.",
   alternates: {
     canonical: "https://brettcpollak.com/contact",
   },
   openGraph: {
     title: "Contact Brett Pollak | AI Speaker & Technology Consultant",
-    description: "Get in touch with Brett Pollak for speaking engagements, collaboration, and consulting on AI in higher education.",
+    description: "Get in touch with Brett Pollak for speaking engagements, collaboration, and advising on AI in higher education.",
     url: "https://brettcpollak.com/contact",
   },
 };

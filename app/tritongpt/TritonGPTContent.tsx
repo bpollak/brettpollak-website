@@ -604,7 +604,7 @@ export default function TritonGPTContent() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Interested in Learning More?</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Available for speaking engagements, consulting, and collaboration on AI implementation in higher education.
+            Available for speaking engagements, advisory, and collaboration on AI implementation in higher education.
           </p>
             <a
               href="/contact"

@@ -91,14 +91,14 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-3 bg-white text-slate-900 px-10 py-5 text-lg font-bold rounded-xl border-2 border-slate-900 hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900"
               >
-                Consulting Inquiry
+                Collaboration Inquiry
                 <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
             </div>
             <p className="text-sm text-slate-500 max-w-xl">
-              Available for keynote presentations, workshops, strategic advisory, and AI implementation consulting
+              Available for keynote presentations, workshops, strategic advisory, and sharing best practices for AI implementation
             </p>
           </div>
           <div className="md:col-span-5 relative animate-slide-in-right">
@@ -469,7 +469,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center relative">
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-200 via-orange-200 to-rose-200 bg-clip-text text-transparent mb-8 tracking-tight pb-1">Let&apos;s Connect</h2>
           <p className="text-2xl text-blue-100 mb-12 leading-relaxed">
-            Available for speaking engagements, consulting, and collaboration opportunities in AI implementation and digital transformation.
+            Available for speaking engagements, advisory, and collaboration opportunities in AI implementation and digital transformation.
           </p>
           <Link
             href="/contact"

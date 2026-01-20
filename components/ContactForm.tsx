@@ -138,7 +138,7 @@ export default function ContactForm() {
             <option value="">Select a topic</option>
             <option value="Speaking Engagement">Speaking Engagement</option>
             <option value="Collaboration">Collaboration Opportunity</option>
-            <option value="Consulting">Consulting Inquiry</option>
+            <option value="Advisory">Advisory Inquiry</option>
             <option value="Media">Media Request</option>
             <option value="Other">Other</option>
           </select>
