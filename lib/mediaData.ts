@@ -244,5 +244,33 @@ export const mediaItems: MediaItem[] = [
     url: 'https://evolllution.com/opinions/shifting-to-responsive-web-design',
     date: '2015-01-01',
     category: 'article'
+  },
+  {
+    publication: 'UC Tech Awards',
+    title: 'The 2022 Student Activity Hub (Silver UC Collaboration Award)',
+    url: 'https://www.ucop.edu/information-technology-services/_files/uc-tech-awards/2022/student-activity-hub.pdf',
+    date: '2022-08-15',
+    category: 'whitepaper'
+  },
+  {
+    publication: 'Larry L. Sautter Awards',
+    title: 'The 2020 Return to Learn Program (Golden Award)',
+    url: 'https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/sautter-2020/ucsd-return-to-learn.pdf',
+    date: '2020-07-15',
+    category: 'whitepaper'
+  },
+  {
+    publication: 'Larry L. Sautter Awards',
+    title: 'The 2012 Responsive Design Framework (Golden Award)',
+    url: 'https://today.ucsd.edu/story/usa_today_names_uc_san_diego_among_5_colleges_with_great_mobile_apps',
+    date: '2012-07-15',
+    category: 'article'
+  },
+  {
+    publication: 'Larry L. Sautter Awards',
+    title: 'The 2011 Campus Web Toolbox',
+    url: 'https://ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/ucsd_webtoolbox.docx',
+    date: '2011-07-15',
+    category: 'article'
   }
 ];
