@@ -197,12 +197,12 @@ export default function TritonGPTContent() {
           </div>
 
           <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Build vs. Buy Decision Framework</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Strategic Infrastructure & Cloud Cost Management</h3>
             <p className="text-gray-700 leading-relaxed">
-              The choice to build on SDSC infrastructure rather than purchase commercial solutions reflected three priorities:
-              data sovereignty (FERPA compliance), cost predictability at scale (avoiding per-token pricing), and architectural
-              flexibility (ability to swap models without vendor lock-in). These trade-offs favored on-premise deployment despite
-              higher upfront investment.
+              By building on SDSC infrastructure, we eliminated the per-token operational costs that typically constrain AI adoption.
+              This <strong>Opex Cost Advantage</strong> allowed us to broadly deploy solutions to over 73,000 users without the fear of runaway costs.
+              We maintain a disciplined approach to cloud-based models, introducing them only where specific capabilities are required,
+              ensuring long-term financial sustainability while delivering enterprise-scale impact.
             </p>
           </div>
 
