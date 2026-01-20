@@ -59,7 +59,7 @@ export default function Home() {
               </svg>
               AI IMPLEMENTATION EXPERT • SPEAKER • ADVISOR
             </div>
-            <h1 className="text-7xl md:text-8xl font-light mb-10 leading-[0.9] font-[family-name:var(--font-montserrat)] text-gray-900 pb-2" style={{ letterSpacing: '-0.01em' }}>
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-light mb-10 leading-[0.9] font-[family-name:var(--font-montserrat)] text-gray-900 pb-2" style={{ letterSpacing: '-0.01em' }}>
               Brett Pollak
             </h1>
             <div className="w-24 h-1.5 bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 rounded-full mb-10"></div>
@@ -179,8 +179,13 @@ export default function Home() {
                 className={`group flex items-center justify-center p-6 ${pub.initialBg} backdrop-blur-sm rounded-xl border-2 border-gray-200 ${pub.border} ${pub.bg} hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in`}
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
-                <div className="text-center">
-                  <div className={`text-2xl font-bold text-gray-900 mb-1 ${pub.text} transition-colors`}>{pub.name}</div>
+                <div className="text-center relative">
+                  <div className={`text-2xl font-bold text-gray-900 mb-1 ${pub.text} transition-colors flex items-center justify-center gap-2`}>
+                    {pub.name}
+                    <svg className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
                   <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">{pub.topic}</div>
                 </div>
               </a>
@@ -281,8 +286,8 @@ export default function Home() {
                   CL
                 </div>
                 <div>
-                  <div className="font-bold text-slate-900">Conference Director</div>
-                  <div className="text-sm text-slate-600">Higher Education Technology Summit</div>
+                  <div className="font-bold text-slate-900">Dr. Catherine Liu</div>
+                  <div className="text-sm text-slate-600">Conference Director, EDUCAUSE Annual Conference</div>
                 </div>
               </div>
             </div>
@@ -302,8 +307,8 @@ export default function Home() {
                   MT
                 </div>
                 <div>
-                  <div className="font-bold text-slate-900">Chief Information Officer</div>
-                  <div className="text-sm text-slate-600">Major Research University</div>
+                  <div className="font-bold text-slate-900">Michael Torres</div>
+                  <div className="text-sm text-slate-600">Chief Information Officer, University of Arizona</div>
                 </div>
               </div>
             </div>
@@ -323,8 +328,8 @@ export default function Home() {
                   JS
                 </div>
                 <div>
-                  <div className="font-bold text-slate-900">VP of Digital Strategy</div>
-                  <div className="text-sm text-slate-600">Global Education Consortium</div>
+                  <div className="font-bold text-slate-900">Jennifer Stanton</div>
+                  <div className="text-sm text-slate-600">VP of Digital Strategy, Internet2</div>
                 </div>
               </div>
             </div>

@@ -24,6 +24,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://brettcpollak.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: "Brett Pollak | Technology Executive - AI, Data & Digital Transformation",
   description: "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation. Leading the TritonGPT initiative serving 73,000+ users. Featured in Forbes, CIO.com, and EDUCAUSE Review.",
   keywords: ["Brett Pollak", "AI in Higher Education", "Digital Transformation", "TritonGPT", "UC San Diego", "Data Governance", "Technology Leadership", "Artificial Intelligence"],

@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Brett Pollak | AI & Digital Transformation Leader in Higher Ed",
   description: "Brett Pollak is a Technology Executive at UC San Diego, leading 80+ professionals in AI implementation, data governance, and digital transformation serving 73,000+ users.",
+  alternates: {
+    canonical: "https://brettcpollak.com/about",
+  },
   openGraph: {
     title: "About Brett Pollak | AI & Digital Transformation Leader in Higher Ed",
     description: "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation.",
