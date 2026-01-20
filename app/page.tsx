@@ -259,83 +259,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials / Social Proof */}
+      {/* In The Press - Real Quotes */}
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 text-center">
             <div className="inline-block px-4 py-1.5 bg-blue-50 text-blue-800 text-sm font-semibold rounded-full mb-6 border border-blue-100">
-              WHAT PEOPLE SAY
+              IN THE PRESS
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Trusted by Leaders</h2>
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">In His Own Words</h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 card-3d">
-              <div className="flex items-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            <a
+              href="https://today.ucsd.edu/story/tritongpt-is-here-and-ready-to-help"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-2xl border border-slate-200 hover:shadow-xl hover:border-blue-300 transition-all duration-300 card-3d block"
+            >
+              <div className="flex items-center gap-2 mb-6">
+                <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-semibold text-blue-600">On Vision</span>
               </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-6 italic">
-                "Brett's keynote on AI implementation was the highlight of our conference. He cuts through the hype and delivers actionable frameworks that attendees can actually use."
+                &ldquo;We recognized that generative AI was transforming the technology landscape and appreciated the support to bring it to UC San Diego.&rdquo;
               </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  CL
-                </div>
-                <div>
-                  <div className="font-bold text-slate-900">Dr. Catherine Liu</div>
-                  <div className="text-sm text-slate-600">Conference Director, EDUCAUSE Annual Conference</div>
-                </div>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-slate-500">UC San Diego Today</div>
+                <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </div>
-            </div>
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border border-amber-200 hover:shadow-xl transition-all duration-300 card-3d">
-              <div className="flex items-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            </a>
+            <a
+              href="https://today.ucsd.edu/story/say-hello-to-tritongpt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border border-amber-200 hover:shadow-xl hover:border-amber-300 transition-all duration-300 card-3d block"
+            >
+              <div className="flex items-center gap-2 mb-6">
+                <svg className="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                </svg>
+                <span className="text-sm font-semibold text-amber-600">On Innovation</span>
               </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-6 italic">
-                "What impressed us most wasn't just the technical architecture—it was Brett's ability to build institutional buy-in across skeptical stakeholders. A masterclass in change management."
+                &ldquo;Ideally, we would have a &lsquo;coach&rsquo; for almost any position that we would have on campus—an information resource that&apos;s specific and pertinent to each individual&apos;s job.&rdquo;
               </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  MT
-                </div>
-                <div>
-                  <div className="font-bold text-slate-900">Michael Torres</div>
-                  <div className="text-sm text-slate-600">Chief Information Officer, University of Arizona</div>
-                </div>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-slate-500">UC San Diego Today</div>
+                <svg className="w-4 h-4 text-slate-400 group-hover:text-amber-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </div>
-            </div>
-            <div className="bg-gradient-to-br from-rose-50 to-red-50 p-8 rounded-2xl border border-rose-200 hover:shadow-xl transition-all duration-300 card-3d">
-              <div className="flex items-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+            </a>
+            <a
+              href="https://today.ucsd.edu/story/tritongpt-is-here-and-ready-to-help"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-br from-rose-50 to-red-50 p-8 rounded-2xl border border-rose-200 hover:shadow-xl hover:border-rose-300 transition-all duration-300 card-3d block"
+            >
+              <div className="flex items-center gap-2 mb-6">
+                <svg className="w-5 h-5 text-rose-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm font-semibold text-rose-600">On Impact</span>
               </div>
               <p className="text-lg text-slate-700 leading-relaxed mb-6 italic">
-                "Brett doesn't just understand AI technology—he understands the organizational dynamics that make or break implementation. His insights saved us months of trial and error."
+                &ldquo;This is a revenue-generating opportunity for UC San Diego.&rdquo;
               </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-600 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  JS
-                </div>
-                <div>
-                  <div className="font-bold text-slate-900">Jennifer Stanton</div>
-                  <div className="text-sm text-slate-600">VP of Digital Strategy, Internet2</div>
-                </div>
+              <p className="text-sm text-slate-500 mb-6">On licensing TritonGPT to institutions like UC Berkeley and San Diego State</p>
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-slate-500">UC San Diego Today</div>
+                <svg className="w-4 h-4 text-slate-400 group-hover:text-rose-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
+
 
       {/* Areas of Expertise */}
       <section className="max-w-7xl mx-auto px-6 py-32">
