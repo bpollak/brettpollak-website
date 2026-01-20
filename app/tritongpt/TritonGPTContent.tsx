@@ -71,9 +71,7 @@ export default function TritonGPTContent() {
           <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm">
             Sovereignty in Intelligence
           </h1>
-          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-8 max-w-4xl leading-relaxed font-light">
-            The Strategic Architecture and Impact of TritonGPT at UC San Diego
-          </p>
+          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-8 leading-relaxed font-light">The Strategic Architecture and Impact of TritonGPT at UC San Diego</p>
           <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-100">
             <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
               <svg className="w-5 h-5 animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20">
