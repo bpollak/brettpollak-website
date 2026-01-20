@@ -29,7 +29,11 @@ export const metadata: Metadata = {
   keywords: ["Brett Pollak", "AI in Higher Education", "Digital Transformation", "TritonGPT", "UC San Diego", "Data Governance", "Technology Leadership", "Artificial Intelligence"],
   authors: [{ name: "Brett Pollak" }],
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/favicon.png',
   },
   openGraph: {
     title: "Brett Pollak | Technology Executive - AI, Data & Digital Transformation",
