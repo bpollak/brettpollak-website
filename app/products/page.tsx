@@ -129,7 +129,7 @@ export default function Products() {
             </div>
             <h3 className="text-3xl font-bold text-slate-900 mb-4">More Innovations Coming</h3>
             <p className="text-lg text-slate-600 mb-8">
-              I&apos;m constantly building new AI-powered solutions across education, productivity, and enterprise domains.
+              Leveraging the power of AI coding tools, I am continuing to develop new software products across education, productivity, and enterprise domains that I will feature on this page.
               Follow my journey on LinkedIn for updates on upcoming launches.
             </p>
             <a
