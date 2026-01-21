@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'CCW Emerging Tech Exchange',
+    title: 'CCW Emerging Tech Exchange - San Diego',
+    url: 'https://www.ccwexchangefebruary.com/',
+    date: '2026-02-04',
+    category: 'speaking'
+  },
+  {
     publication: 'Ithaka S+R',
     title: 'Human Values and AI Adoption in the Research Enterprise',
     url: 'https://sr.ithaka.org/blog/human-values-and-ai-adoption-in-the-research-enterprise/',
