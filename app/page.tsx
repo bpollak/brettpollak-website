@@ -82,16 +82,7 @@ export default function Home() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-slate-900 to-blue-900 text-white px-10 py-5 text-lg font-bold rounded-xl hover:from-slate-800 hover:to-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900"
               >
-                Book a Speaking Engagement
-                <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-3 bg-white text-slate-900 px-10 py-5 text-lg font-bold rounded-xl border-2 border-slate-900 hover:bg-slate-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900"
-              >
-                Collaboration Inquiry
+                Contact Me
                 <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -463,25 +454,6 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 py-24 overflow-hidden animate-gradient-shift">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500 rounded-full blur-3xl opacity-10 animate-float-slow"></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-200 via-orange-200 to-rose-200 bg-clip-text text-transparent mb-8 tracking-tight pb-1">Let&apos;s Connect</h2>
-          <p className="text-2xl text-blue-100 mb-12 leading-relaxed">
-            Available for speaking engagements, advisory, and collaboration opportunities in AI implementation and digital transformation.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 bg-white text-slate-900 px-16 py-7 text-xl font-bold hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-100 transition-all duration-300 shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] group rounded-2xl transform hover:scale-105 border-4 border-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
-          >
-            Contact Me
-            <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
