@@ -89,6 +89,36 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
+      {/* Presentation Link Section */}
+      <section className="max-w-5xl mx-auto px-6 py-12">
+        <a
+          href="https://tritongpt-deck.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block card-3d bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 group relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-400/0 via-amber-400/20 to-amber-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex-1">
+              <div className="inline-block px-3 py-1 bg-amber-400/30 text-amber-100 text-xs font-semibold rounded-full mb-3 backdrop-blur-sm border border-amber-400/40">
+                INTERACTIVE PRESENTATION
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-3">View the Complete TritonGPT Presentation</h2>
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Explore the comprehensive presentation deck covering TritonGPT&apos;s strategic architecture, implementation journey, and transformational impact at UC San Diego.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all group-hover:scale-110 duration-300">
+                <svg className="w-8 h-8 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+
       {/* Executive Summary */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="card-3d bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-10 border-l-4 border-blue-800 shadow-lg relative overflow-hidden group">
