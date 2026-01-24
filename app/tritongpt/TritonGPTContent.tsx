@@ -89,44 +89,28 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
-      {/* Presentation Link Section */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
-        <a
-          href="https://tritongpt-deck.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block card-3d bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 group relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-400/0 via-amber-400/20 to-amber-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex-1">
-              <div className="inline-block px-3 py-1 bg-amber-400/30 text-amber-100 text-xs font-semibold rounded-full mb-3 backdrop-blur-sm border border-amber-400/40">
-                INTERACTIVE PRESENTATION
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-3">View the Complete TritonGPT Presentation</h2>
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Explore the comprehensive presentation deck covering TritonGPT&apos;s strategic architecture, implementation journey, and transformational impact at UC San Diego.
-              </p>
-            </div>
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all group-hover:scale-110 duration-300">
-                <svg className="w-8 h-8 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </a>
-      </section>
-
-      {/* Executive Summary */}
+      {/* Executive Summary with Presentation Link */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="card-3d bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-10 border-l-4 border-blue-800 shadow-lg relative overflow-hidden group">
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
-          <p className="text-xl text-gray-700 leading-relaxed relative z-10">
+          <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
             UC San Diego developed <span className="font-bold text-blue-800">TritonGPT</span>, a locally-hosted &quot;Vertical AI&quot; platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">73,000+ users</span>.
           </p>
+          <a
+            href="https://tritongpt-deck.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white px-6 py-4 rounded-xl font-semibold hover:from-blue-800 hover:to-blue-900 transition-all shadow-md hover:shadow-xl hover:scale-105 group/link"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>View Complete Presentation Deck</span>
+            <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </section>
 
