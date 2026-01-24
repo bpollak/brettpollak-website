@@ -50,10 +50,10 @@ export const mediaItems: MediaItem[] = [
     category: 'interview'
   },
   {
-    publication: 'EdTech Magazine',
-    title: 'UC San Diego Launches TritonGPT Generative AI Tool',
-    url: 'https://edtechmagazine.com/higher/article/2025/05/uc-san-diego-launches-tritongpt-generative-ai-tool',
-    date: '2025-05-22',
+    publication: 'Medium',
+    title: 'Architecting Gen AI for Knowledge Acquisition Bottleneck in the Context of Self-Optimization',
+    url: 'https://medium.com/@brzezinski_j/architecting-gen-ai-for-knowledge-acquisition-bottleneck-in-the-context-of-self-optimization-74a31d85d5e9',
+    date: '2025-06-16',
     category: 'article'
   },
   {
@@ -61,6 +61,20 @@ export const mediaItems: MediaItem[] = [
     title: 'Workplace Technology & Infrastructure Services Updates',
     url: 'https://www.linkedin.com/pulse/workplace-technology-infrastructure-services-updates-brett-pollak-arejc',
     date: '2025-06-06',
+    category: 'article'
+  },
+  {
+    publication: 'EdTech Magazine',
+    title: 'UC San Diego Launches TritonGPT Generative AI Tool',
+    url: 'https://edtechmagazine.com/higher/article/2025/05/uc-san-diego-launches-tritongpt-generative-ai-tool',
+    date: '2025-05-22',
+    category: 'article'
+  },
+  {
+    publication: 'EdTech Magazine',
+    title: 'Effective AI Requires Effective Data Governance',
+    url: 'https://edtechmagazine.com/higher/article/2025/05/effective-ai-requires-effective-data-governance',
+    date: '2025-05-18',
     category: 'article'
   },
   {
