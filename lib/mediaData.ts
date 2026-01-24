@@ -57,6 +57,13 @@ export const mediaItems: MediaItem[] = [
     category: 'article'
   },
   {
+    publication: 'LinkedIn',
+    title: 'Workplace Technology & Infrastructure Services Updates',
+    url: 'https://www.linkedin.com/pulse/workplace-technology-infrastructure-services-updates-brett-pollak-arejc',
+    date: '2025-06-06',
+    category: 'article'
+  },
+  {
     publication: 'GovTech Industry Insider',
     title: 'San Diego Area Colleges Band Together on AI',
     url: 'https://www.govtech.com/education/higher-ed/asu-gsv-2025-san-diego-area-colleges-band-together-on-ai',
@@ -71,18 +78,18 @@ export const mediaItems: MediaItem[] = [
     category: 'article'
   },
   {
-    publication: 'Verizon / Chronicle',
-    title: 'Protecting Your Campus in the AI Era (White Paper)',
-    url: 'https://www.verizon.com/business/resources/whitepapers/protecting-your-campus-ai-era.pdf',
-    date: '2025-02-10',
-    category: 'whitepaper'
-  },
-  {
     publication: 'EDUCAUSE Review',
     title: 'Ushering in a New Era of AI-Driven Data Insights at UC San Diego',
     url: 'https://er.educause.edu/articles/2025/2/ushering-in-a-new-era-of-ai-driven-data-insights-at-uc-san-diego',
     date: '2025-02-20',
     category: 'article'
+  },
+  {
+    publication: 'Verizon / Chronicle',
+    title: 'Protecting Your Campus in the AI Era (White Paper)',
+    url: 'https://www.verizon.com/business/resources/whitepapers/protecting-your-campus-ai-era.pdf',
+    date: '2025-02-10',
+    category: 'whitepaper'
   },
   {
     publication: 'Little Hoover Commission',
@@ -97,6 +104,13 @@ export const mediaItems: MediaItem[] = [
     url: 'https://aaai.sdsu.edu/initiatives/equitable-ai-alliance',
     date: '2024-11-25',
     category: 'article'
+  },
+  {
+    publication: 'EDUCAUSE Annual Conference',
+    title: 'Overcoming the AI Stalemate in Higher Ed: Empowering Campus Adoption through Tailored Solutions',
+    url: 'https://events.educause.edu/annual-conference/2024/agenda/overcoming-the-ai-stalemate-in-higher-ed-empowering-campus-adoption-through-tailored-solutions',
+    date: '2024-10-22',
+    category: 'speaking'
   },
   {
     publication: 'UC Tech News',
@@ -155,13 +169,6 @@ export const mediaItems: MediaItem[] = [
     category: 'article'
   },
   {
-    publication: 'GovTech',
-    title: 'UC Irvine, UC San Diego Launch Campuswide AI Programs',
-    url: 'https://insider.govtech.com/california/news/uc-irvine-uc-san-diego-launch-campuswide-ai-programs',
-    date: '2025-03-20',
-    category: 'article'
-  },
-  {
     publication: 'ScienceSprings',
     title: 'From The University of California-San Diego: Say Hello to TritonGPT',
     url: 'https://sciencesprings.wordpress.com/2024/03/19/from-the-university-of-california-san-diego-say-hello-to-tritongpt/',
@@ -176,13 +183,6 @@ export const mediaItems: MediaItem[] = [
     category: 'article'
   },
   {
-    publication: 'DigitalKoans',
-    title: 'How Can Universities Create AI Tools for their Communities? An Interview with the Creators of UC San Diego\'s TritonGPT',
-    url: 'https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/',
-    date: '2023-12-08',
-    category: 'interview'
-  },
-  {
     publication: 'Ithaka S+R',
     title: 'How Can Universities Create AI Tools for Their Communities?',
     url: 'https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/',
@@ -190,17 +190,38 @@ export const mediaItems: MediaItem[] = [
     category: 'interview'
   },
   {
-    publication: 'Scientific Route',
-    title: 'Empowering University Communities: TritonGPT at UC San Diego',
-    url: 'https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/',
-    date: '2023-12-06',
-    category: 'article'
-  },
-  {
     publication: 'EDUCAUSE Webinar',
     title: 'Business-Centric AI: From Problem Definition to Adoption',
     url: 'https://events.educause.edu/webinar/2025/business-centric-ai-from-problem-definition-to-adoption',
     date: '2025-09-10',
+    category: 'speaking'
+  },
+  {
+    publication: 'UC San Diego Educational Innovation Expo',
+    title: 'Building Instructional AI Assistants with TritonGPT: An Exploratory Pilot',
+    url: 'https://educationalinnovation.ucsd.edu/2025-expo/',
+    date: '2025-05-15',
+    category: 'speaking'
+  },
+  {
+    publication: 'ASU+GSV Summit',
+    title: 'Station 10: UC San Diego AI Assistant Transforming Campus Operations',
+    url: 'https://asugsvsummit.com/speakers/brett-pollak',
+    date: '2025-04-15',
+    category: 'speaking'
+  },
+  {
+    publication: 'GovTech',
+    title: 'UC Irvine, UC San Diego Launch Campuswide AI Programs',
+    url: 'https://insider.govtech.com/california/news/uc-irvine-uc-san-diego-launch-campuswide-ai-programs',
+    date: '2025-03-20',
+    category: 'article'
+  },
+  {
+    publication: 'Internet2 Community Exchange',
+    title: 'Unlocking Institutional Insights: Discover UC San Diego\'s TritonGPT Journey',
+    url: 'https://internet2.edu/2025-community-exchange/',
+    date: '2025-03-15',
     category: 'speaking'
   },
   {
@@ -216,13 +237,6 @@ export const mediaItems: MediaItem[] = [
     url: 'https://www.academicimpressions.com/instructor/brett-pollak/',
     date: '2024-01-01',
     category: 'speaking'
-  },
-  {
-    publication: 'LinkedIn',
-    title: 'Workplace Technology & Infrastructure Services Updates',
-    url: 'https://www.linkedin.com/pulse/workplace-technology-infrastructure-services-updates-brett-pollak-arejc',
-    date: '2025-06-06',
-    category: 'article'
   },
   {
     publication: 'LinkedIn',
@@ -251,6 +265,13 @@ export const mediaItems: MediaItem[] = [
     url: 'https://evolllution.com/opinions/shifting-to-responsive-web-design',
     date: '2015-01-01',
     category: 'article'
+  },
+  {
+    publication: 'EDUCAUSE Annual Conference',
+    title: 'Responsive Web Design',
+    url: 'https://events.educause.edu/annual-conference/2013/proceedings/responsive-web-design',
+    date: '2013-10-29',
+    category: 'speaking'
   },
   {
     publication: 'UC Tech Awards',
