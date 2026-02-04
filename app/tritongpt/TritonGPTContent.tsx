@@ -98,7 +98,7 @@ export default function TritonGPTContent() {
             UC San Diego developed <span className="font-bold text-blue-800">TritonGPT</span>, a locally-hosted &quot;Vertical AI&quot; platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">73,000+ users</span>.
           </p>
           <a
-            href="https://tritongpt-deck.vercel.app/"
+            href="https://tritongpt-deck.vercel.app/?audience=public"
             target="_blank"
             rel="noopener noreferrer"
             className="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white px-6 py-4 rounded-xl font-semibold hover:from-blue-800 hover:to-blue-900 transition-all shadow-md hover:shadow-xl hover:scale-105 group/link"
