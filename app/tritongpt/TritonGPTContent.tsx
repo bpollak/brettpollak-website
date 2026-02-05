@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
-import ReadingProgress from '@/components/ReadingProgress';
 
 const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?: string; isVisible: boolean }) => {
   const [count, setCount] = useState(0);
@@ -54,7 +54,6 @@ export default function TritonGPTContent() {
 
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
-      <ReadingProgress />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-amber-950/20 text-white overflow-hidden animate-gradient-shift">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
@@ -625,15 +624,15 @@ export default function TritonGPTContent() {
           <p className="text-xl text-gray-600 mb-8">
             Available for speaking engagements, advisory, and collaboration on AI implementation in higher education.
           </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600"
-            >
-              Inquire About Speaking
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600"
+          >
+            Inquire About Speaking
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
     </div>

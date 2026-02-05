@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import { mediaItems, MediaItem } from '@/lib/mediaData';
 
@@ -9,10 +10,10 @@ export default function MediaContent() {
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all');
 
   // Sort by date (most recent first)
-  const sortedItems = useMemo(() =>
-    [...mediaItems].sort((a, b) =>
-      new Date(b.date).getTime() - new Date(a.date).getTime()
-    ), []);
+  const sortedItems = useMemo(
+    () => [...mediaItems].sort((a, b) => b.date.localeCompare(a.date)),
+    []
+  );
 
   // Filter items based on active filter
   const filteredItems = useMemo(() =>
@@ -25,7 +26,7 @@ export default function MediaContent() {
   // Group by year
   const itemsByYear = useMemo(() =>
     filteredItems.reduce((acc, item) => {
-      const year = new Date(item.date).getFullYear();
+      const year = Number(item.date.slice(0, 4));
       if (!acc[year]) {
         acc[year] = [];
       }
@@ -36,7 +37,10 @@ export default function MediaContent() {
   );
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+    const [year, month, day] = dateString.split('-').map(Number);
+    const localDate = new Date(year, month - 1, day);
+
+    return localDate.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -124,12 +128,72 @@ export default function MediaContent() {
 
                       // Vibrant color cycle for items
                       const colorCycle = [
-                        { from: 'from-blue-800', to: 'to-indigo-700', text: 'text-blue-800', border: 'hover:border-blue-700', badge: 'bg-blue-50 text-blue-900', hoverBg: 'hover:bg-blue-50/30' },
-                        { from: 'from-amber-500', to: 'to-orange-600', text: 'text-amber-700', border: 'hover:border-amber-500', badge: 'bg-amber-50 text-amber-800', hoverBg: 'hover:bg-amber-50/30' },
-                        { from: 'from-rose-800', to: 'to-red-900', text: 'text-rose-800', border: 'hover:border-rose-700', badge: 'bg-rose-50 text-rose-900', hoverBg: 'hover:bg-rose-50/30' },
-                        { from: 'from-cyan-600', to: 'to-blue-600', text: 'text-cyan-700', border: 'hover:border-cyan-600', badge: 'bg-cyan-50 text-cyan-800', hoverBg: 'hover:bg-cyan-50/30' },
-                        { from: 'from-slate-700', to: 'to-slate-900', text: 'text-slate-700', border: 'hover:border-slate-600', badge: 'bg-slate-100 text-slate-800', hoverBg: 'hover:bg-slate-50/50' },
-                        { from: 'from-indigo-700', to: 'to-violet-800', text: 'text-indigo-800', border: 'hover:border-indigo-600', badge: 'bg-indigo-50 text-indigo-900', hoverBg: 'hover:bg-indigo-50/30' },
+                        {
+                          from: 'from-blue-800',
+                          to: 'to-indigo-700',
+                          text: 'text-blue-800',
+                          headingHover: 'group-hover:text-blue-800',
+                          border: 'hover:border-blue-700',
+                          badge: 'bg-blue-50 text-blue-900',
+                          hoverBg: 'hover:bg-blue-50/30',
+                          connectorLeft: 'from-blue-800 to-transparent',
+                          connectorRight: 'from-transparent to-indigo-700',
+                        },
+                        {
+                          from: 'from-amber-500',
+                          to: 'to-orange-600',
+                          text: 'text-amber-700',
+                          headingHover: 'group-hover:text-amber-700',
+                          border: 'hover:border-amber-500',
+                          badge: 'bg-amber-50 text-amber-800',
+                          hoverBg: 'hover:bg-amber-50/30',
+                          connectorLeft: 'from-amber-500 to-transparent',
+                          connectorRight: 'from-transparent to-orange-600',
+                        },
+                        {
+                          from: 'from-rose-800',
+                          to: 'to-red-900',
+                          text: 'text-rose-800',
+                          headingHover: 'group-hover:text-rose-800',
+                          border: 'hover:border-rose-700',
+                          badge: 'bg-rose-50 text-rose-900',
+                          hoverBg: 'hover:bg-rose-50/30',
+                          connectorLeft: 'from-rose-800 to-transparent',
+                          connectorRight: 'from-transparent to-red-900',
+                        },
+                        {
+                          from: 'from-cyan-600',
+                          to: 'to-blue-600',
+                          text: 'text-cyan-700',
+                          headingHover: 'group-hover:text-cyan-700',
+                          border: 'hover:border-cyan-600',
+                          badge: 'bg-cyan-50 text-cyan-800',
+                          hoverBg: 'hover:bg-cyan-50/30',
+                          connectorLeft: 'from-cyan-600 to-transparent',
+                          connectorRight: 'from-transparent to-blue-600',
+                        },
+                        {
+                          from: 'from-slate-700',
+                          to: 'to-slate-900',
+                          text: 'text-slate-700',
+                          headingHover: 'group-hover:text-slate-700',
+                          border: 'hover:border-slate-600',
+                          badge: 'bg-slate-100 text-slate-800',
+                          hoverBg: 'hover:bg-slate-50/50',
+                          connectorLeft: 'from-slate-700 to-transparent',
+                          connectorRight: 'from-transparent to-slate-900',
+                        },
+                        {
+                          from: 'from-indigo-700',
+                          to: 'to-violet-800',
+                          text: 'text-indigo-800',
+                          headingHover: 'group-hover:text-indigo-800',
+                          border: 'hover:border-indigo-600',
+                          badge: 'bg-indigo-50 text-indigo-900',
+                          hoverBg: 'hover:bg-indigo-50/30',
+                          connectorLeft: 'from-indigo-700 to-transparent',
+                          connectorRight: 'from-transparent to-violet-800',
+                        },
                       ];
                       const color = colorCycle[(index + yearIdx) % colorCycle.length];
 
@@ -150,14 +214,14 @@ export default function MediaContent() {
                           <div className={`w-full md:w-[calc(50%-2.5rem)] ${isLeft ? 'md:pr-10' : 'md:pl-10'}`}>
                             <div className={`group relative bg-white p-8 rounded-2xl border-2 border-slate-100 ${color.border} ${color.hoverBg} hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 card-3d`}>
                               {/* Connector line to timeline */}
-                              <div className={`hidden md:block absolute top-1/2 ${isLeft ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-10 h-0.5 bg-gradient-to-r ${isLeft ? `${color.from.replace('from-', 'to-')} to-transparent` : `from-transparent ${color.to.replace('to-', 'from-')}`} opacity-30 group-hover/item:opacity-100 transition-opacity`}></div>
+                              <div className={`hidden md:block absolute top-1/2 ${isLeft ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-10 h-0.5 bg-gradient-to-r ${isLeft ? color.connectorLeft : color.connectorRight} opacity-30 group-hover/item:opacity-100 transition-opacity`}></div>
 
                               {/* Category badge */}
                               <div className={`inline-block px-4 py-1 ${color.badge} text-[10px] font-black rounded-full mb-4 uppercase tracking-widest border border-current border-opacity-10`}>
                                 {item.category}
                               </div>
 
-                              <h3 className={`text-2xl font-bold text-slate-900 mb-4 group-hover:${color.text} transition-colors leading-tight`}>
+                              <h3 className={`text-2xl font-bold text-slate-900 mb-4 ${color.headingHover} transition-colors leading-tight`}>
                                 {item.url !== '#' ? (
                                   <a
                                     href={item.url}
@@ -220,7 +284,7 @@ export default function MediaContent() {
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
             Available for keynotes, panels, and workshops on AI in higher education, digital transformation, and technology leadership.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-slate-900 px-10 py-4 font-bold hover:bg-slate-50 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
           >
@@ -228,7 +292,7 @@ export default function MediaContent() {
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </>

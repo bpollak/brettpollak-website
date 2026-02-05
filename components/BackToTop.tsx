@@ -28,16 +28,15 @@ export default function BackToTop() {
     });
   };
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-40 p-3 bg-slate-900 text-white rounded-full shadow-lg hover:bg-slate-800 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 transform hover:-translate-y-1 ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-4 pointer-events-none'
-      }`}
+      className="fixed bottom-8 right-8 z-40 p-3 bg-slate-900 text-white rounded-full shadow-lg hover:bg-slate-800 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 transform hover:-translate-y-1"
       aria-label="Back to top"
-      aria-hidden={!isVisible}
     >
       <svg
         className="w-6 h-6"

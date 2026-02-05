@@ -12,7 +12,7 @@ A modern portfolio and thought leadership website for Brett Pollak, Executive Di
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with App Router
+- **Framework**: Next.js 16 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Deployment**: GitHub Pages
@@ -29,7 +29,7 @@ A modern portfolio and thought leadership website for Brett Pollak, Executive Di
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/brettpollak-website.git
-cd brettpollak-website/brettpollak-site
+cd brettpollak-website
 ```
 
 2. Install dependencies:
@@ -47,11 +47,12 @@ npm run dev
 ## Project Structure
 
 ```
-brettpollak-site/
+brettpollak-website/
 ├── app/                      # Next.js app directory
 │   ├── page.tsx             # Home page
 │   ├── about/               # About page
-│   ├── blog/                # Blog page (coming soon)
+│   ├── tritongpt/           # TritonGPT case study
+│   ├── products/            # Product showcase
 │   ├── media/               # Media & publications page
 │   ├── linkedin/            # LinkedIn feed page
 │   └── contact/             # Contact page
@@ -72,7 +73,7 @@ To add the LinkedIn feed:
 1. Sign up for [SociableKIT](https://www.sociablekit.com/)
 2. Create a LinkedIn feed widget in your dashboard
 3. Copy the embed code
-4. Replace the placeholder in `app/linkedin/page.tsx` with your embed code
+4. Update the widget embed in `app/linkedin/LinkedInContent.tsx`
 
 ### GitHub Pages Deployment
 
@@ -104,14 +105,9 @@ Edit `lib/mediaData.ts` to add new publications, articles, or speaking engagemen
 ### Updating Content
 
 - **About Page**: Edit `app/about/page.tsx`
-- **Blog Posts**: Edit `app/blog/page.tsx` to add your blog posts
+- **Home Page**: Edit `app/page.tsx`
+- **TritonGPT Case Study**: Edit `app/tritongpt/TritonGPTContent.tsx`
 - **Contact Info**: Edit `app/contact/page.tsx`
-
-### Adding Blog Posts
-
-When you're ready to add blog posts, you can:
-1. Create individual blog post files in `app/blog/[slug]/page.tsx`
-2. Or update `app/blog/page.tsx` to list your posts
 
 ## Building for Production
 

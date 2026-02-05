@@ -17,9 +17,7 @@ export const metadata: Metadata = {
 
 export default function Media() {
   // Sort by date (most recent first) for schema
-  const sortedItems = [...mediaItems].sort((a, b) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  const sortedItems = [...mediaItems].sort((a, b) => b.date.localeCompare(a.date));
 
   // Create ItemList schema for all media items (for SEO)
   const itemListSchema = {
