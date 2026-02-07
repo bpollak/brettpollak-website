@@ -33,6 +33,7 @@ const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?:
 export default function TritonGPTContent() {
   const [metricsVisible, setMetricsVisible] = useState(false);
   const metricsRef = useRef<HTMLElement>(null);
+  const fallbackVideoPoster = "/media/video-poster.svg";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -291,13 +292,14 @@ export default function TritonGPTContent() {
                       className="block transition-transform duration-500 hover:scale-105"
                     >
                       <video
-                        className="w-full"
+                        className="w-full aspect-video bg-black"
                         autoPlay
                         muted
                         loop
                         playsInline
+                        controls
                         preload="metadata"
-                        poster={video.poster}
+                        poster={video.poster ?? fallbackVideoPoster}
                       >
                         {(video.sources ?? [
                           {
@@ -312,13 +314,14 @@ export default function TritonGPTContent() {
                     </a>
                   ) : (
                     <video
-                      className="w-full"
+                      className="w-full aspect-video bg-black"
                       autoPlay
                       muted
                       loop
                       playsInline
+                      controls
                       preload="metadata"
-                      poster={video.poster}
+                      poster={video.poster ?? fallbackVideoPoster}
                     >
                       {(video.sources ?? [
                         {
