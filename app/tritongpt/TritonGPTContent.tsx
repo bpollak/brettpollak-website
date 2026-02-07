@@ -237,15 +237,15 @@ export default function TritonGPTContent() {
             {[
               {
                 title: "Job Description Helper",
-                src: "https://tritongpt-deck.vercel.app/media/media4.mp4",
+                src: "https://tritongpt-deck.vercel.app/media/media4.mov",
               },
               {
                 title: "Fund Manager Coach",
-                src: "https://tritongpt-deck.vercel.app/media/media3.mp4",
+                src: "https://tritongpt-deck.vercel.app/media/media3.mov",
               },
               {
                 title: "UC San Diego Assistant",
-                src: "https://tritongpt-deck.vercel.app/media/media1.mp4",
+                src: "https://tritongpt-deck.vercel.app/media/media1.mov",
                 poster: "https://tritongpt-deck.vercel.app/media/image36.png",
               },
               {
