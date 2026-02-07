@@ -236,15 +236,15 @@ export default function TritonGPTContent() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "Platform Overview",
+                title: "Job Description Helper",
                 src: "https://tritongpt-deck.vercel.app/media/media4.mov",
               },
               {
-                title: "Workflow Walkthrough",
+                title: "Fund Manager Coach",
                 src: "https://tritongpt-deck.vercel.app/media/media3.mov",
               },
               {
-                title: "Assistant Ecosystem",
+                title: "UC San Diego Assistant",
                 src: "https://tritongpt-deck.vercel.app/media/media1.mov",
                 poster: "https://tritongpt-deck.vercel.app/media/image36.png",
                 link: "https://blink.ucsd.edu/technology/ai/tritongpt/index.html",
@@ -267,7 +267,9 @@ export default function TritonGPTContent() {
                     >
                       <video
                         className="w-full"
-                        controls
+                        autoPlay
+                        muted
+                        loop
                         playsInline
                         preload="metadata"
                         poster={video.poster}
