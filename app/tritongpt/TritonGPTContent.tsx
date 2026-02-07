@@ -237,11 +237,31 @@ export default function TritonGPTContent() {
             {[
               {
                 title: "Job Description Helper",
-                src: "https://tritongpt-deck.vercel.app/media/media4.mov",
+                src: "https://tritongpt-deck.vercel.app/media/media4.mp4",
+                sources: [
+                  {
+                    src: "https://tritongpt-deck.vercel.app/media/media4.mp4",
+                    type: "video/mp4",
+                  },
+                  {
+                    src: "https://tritongpt-deck.vercel.app/media/media4.mov",
+                    type: "video/quicktime",
+                  },
+                ],
               },
               {
                 title: "Fund Manager Coach",
-                src: "https://tritongpt-deck.vercel.app/media/media3.mov",
+                src: "https://tritongpt-deck.vercel.app/media/media3.mp4",
+                sources: [
+                  {
+                    src: "https://tritongpt-deck.vercel.app/media/media3.mp4",
+                    type: "video/mp4",
+                  },
+                  {
+                    src: "https://tritongpt-deck.vercel.app/media/media3.mov",
+                    type: "video/quicktime",
+                  },
+                ],
               },
               {
                 title: "UC San Diego Assistant",
@@ -279,10 +299,14 @@ export default function TritonGPTContent() {
                         preload="metadata"
                         poster={video.poster}
                       >
-                        <source
-                          src={video.src}
-                          type={video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime"}
-                        />
+                        {(video.sources ?? [
+                          {
+                            src: video.src,
+                            type: video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime",
+                          },
+                        ]).map((source) => (
+                          <source key={source.src} src={source.src} type={source.type} />
+                        ))}
                         Your browser does not support the video tag.
                       </video>
                     </a>
@@ -296,10 +320,14 @@ export default function TritonGPTContent() {
                       preload="metadata"
                       poster={video.poster}
                     >
-                      <source
-                        src={video.src}
-                        type={video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime"}
-                      />
+                      {(video.sources ?? [
+                        {
+                          src: video.src,
+                          type: video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime",
+                        },
+                      ]).map((source) => (
+                        <source key={source.src} src={source.src} type={source.type} />
+                      ))}
                       Your browser does not support the video tag.
                     </video>
                   )}
