@@ -226,36 +226,6 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
-      {/* Assistant Ecosystem Image */}
-      <section className="bg-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Assistant Ecosystem</h2>
-            <p className="text-xl text-gray-600">Specialized assistants target specific campus roles and data domains</p>
-          </div>
-          <a
-            href="https://blink.ucsd.edu/technology/ai/tritongpt/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block card-3d rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 hover:border-blue-700 transition-all duration-500 group"
-          >
-            <div className="relative">
-              <video
-                className="w-full transition-transform duration-500 group-hover:scale-105"
-                controls
-                playsInline
-                preload="metadata"
-                poster="https://tritongpt-deck.vercel.app/media/image36.png"
-              >
-                <source src="https://tritongpt-deck.vercel.app/media/media1.mov" type="video/quicktime" />
-                Your browser does not support the video tag.
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
-          </a>
-        </div>
-      </section>
-
       {/* TritonGPT Demo Videos */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -266,12 +236,18 @@ export default function TritonGPTContent() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "Slide 8: Platform Overview",
+                title: "Platform Overview",
                 src: "https://tritongpt-deck.vercel.app/media/media4.mov",
               },
               {
-                title: "Slide 9: Workflow Walkthrough",
+                title: "Workflow Walkthrough",
                 src: "https://tritongpt-deck.vercel.app/media/media3.mov",
+              },
+              {
+                title: "Assistant Ecosystem",
+                src: "https://tritongpt-deck.vercel.app/media/media1.mov",
+                poster: "https://tritongpt-deck.vercel.app/media/image36.png",
+                link: "https://blink.ucsd.edu/technology/ai/tritongpt/index.html",
               },
             ].map((video) => (
               <div
@@ -282,17 +258,37 @@ export default function TritonGPTContent() {
                   <h3 className="text-xl font-semibold text-gray-900">{video.title}</h3>
                 </div>
                 <div className="relative">
-                  <video
-                    className="w-full"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={video.src} type="video/quicktime" />
-                    Your browser does not support the video tag.
-                  </video>
+                  {video.link ? (
+                    <a
+                      href={video.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block transition-transform duration-500 hover:scale-105"
+                    >
+                      <video
+                        className="w-full"
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={video.poster}
+                      >
+                        <source src={video.src} type="video/quicktime" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </a>
+                  ) : (
+                    <video
+                      className="w-full"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src={video.src} type="video/quicktime" />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                 </div>
               </div>
             ))}
