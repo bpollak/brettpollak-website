@@ -249,6 +249,11 @@ export default function TritonGPTContent() {
                 poster: "https://tritongpt-deck.vercel.app/media/image36.png",
                 link: "https://blink.ucsd.edu/technology/ai/tritongpt/index.html",
               },
+              {
+                title: "Contract Reviewer",
+                src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
+                poster: "https://tritongpt-deck.vercel.app/media/image47.png",
+              },
             ].map((video) => (
               <div
                 key={video.src}
@@ -274,7 +279,10 @@ export default function TritonGPTContent() {
                         preload="metadata"
                         poster={video.poster}
                       >
-                        <source src={video.src} type="video/quicktime" />
+                        <source
+                          src={video.src}
+                          type={video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime"}
+                        />
                         Your browser does not support the video tag.
                       </video>
                     </a>
@@ -286,8 +294,12 @@ export default function TritonGPTContent() {
                       loop
                       playsInline
                       preload="metadata"
+                      poster={video.poster}
                     >
-                      <source src={video.src} type="video/quicktime" />
+                      <source
+                        src={video.src}
+                        type={video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime"}
+                      />
                       Your browser does not support the video tag.
                     </video>
                   )}
