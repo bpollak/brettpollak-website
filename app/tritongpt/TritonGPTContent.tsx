@@ -65,18 +65,18 @@ export default function TritonGPTContent() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-24">
           <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-amber-500/30 text-amber-100 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-amber-400/40">
-            CASE STUDY
+            ROLLING UPDATES
           </div>
           <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm">
-            Sovereignty in Intelligence
+            The AI-Enabled University
           </h1>
-          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-8 leading-relaxed font-light">The Strategic Architecture and Impact of TritonGPT at UC San Diego</p>
+          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-8 leading-relaxed font-light">Operationalizing TritonAI for Service &amp; Support at Scale</p>
           <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-100">
             <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
               <svg className="w-5 h-5 animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>
-              January 2026
+              Rolling Updates | February 2026
             </div>
             <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
               <svg className="w-5 h-5 animate-bounce-subtle" style={{ animationDelay: '0.2s' }} fill="currentColor" viewBox="0 0 20 20">
@@ -94,7 +94,7 @@ export default function TritonGPTContent() {
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
-            UC San Diego developed <span className="font-bold text-blue-800">TritonGPT</span>, a locally-hosted &quot;Vertical AI&quot; platform powered by the TritonAI secure infrastructure. Leveraging San Diego Supercomputer Center (SDSC) computing resources and student-led development, the university created an institutional intelligence system serving <span className="font-bold">73,000+ users</span>.
+            UC San Diego developed <span className="font-bold text-blue-800">TritonGPT</span>, a secure, on-premises &quot;Vertical AI&quot; platform within the TritonAI stack. Hosted at SDSC with enterprise controls and P3 data compliance, it provides equal-access AI to <span className="font-bold">73,000+ students, staff, and faculty</span>. Built on open-source foundations with enterprise-grade RAG, TritonGPT eliminates per-token costs while laying the groundwork for agentic workflows.
           </p>
           <a
             href="https://tritongpt-deck.vercel.app/?audience=public"
@@ -148,7 +148,7 @@ export default function TritonGPTContent() {
                   <AnimatedNumber end={73} suffix="K+" isVisible={metricsVisible} />
                 </div>
                 <div className="text-amber-700 font-medium">Total Users Served</div>
-                <div className="text-sm text-amber-600 mt-2">28k Staff + 45k Students</div>
+                <div className="text-sm text-amber-600 mt-2">Equal access for every employee and student</div>
               </div>
             </div>
             <div className="card-3d text-center p-8 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
@@ -167,11 +167,11 @@ export default function TritonGPTContent() {
 
       {/* Strategic Vision */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">The Strategic Shift: From Data-Rich to Information-Fluent</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">The Strategic Shift: From Chatbots to Agentic Workflows</h2>
 
         <div className="prose prose-lg max-w-none space-y-8">
           <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">The Operational Context</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Institutional Scale &amp; Service Complexity</h3>
             <p className="text-gray-700 mb-4">UC San Diego manages a complex operational environment:</p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-3 group">
@@ -194,35 +194,34 @@ export default function TritonGPTContent() {
               </li>
             </ul>
             <p className="text-gray-700 mt-4">
-              Despite vast data resources, the university was <span className="font-semibold text-blue-700">&quot;data-rich but information-poor,&quot;</span> with inefficient policy access creating operational friction.
+              Despite vast data resources, the university was <span className="font-semibold text-blue-700">&quot;data-rich but information-poor,&quot;</span> with uneven access to policy and service knowledge creating operational friction.
             </p>
           </div>
 
           <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Faculty Engagement Strategy</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Sovereign Infrastructure as a Feature</h3>
             <p className="text-gray-700 leading-relaxed">
-              Success hinged on treating faculty as co-designers, not end users. Early faculty workshops identified academic
-              use cases like the Socratic Tutor and Instructor Assistant. This inclusive approach transformed potential
-              resistance into enthusiastic advocacy, with faculty becoming TritonGPT&apos;s strongest champions across campus.
+              On-prem hosting at SDSC enables secure access to sensitive systems (HR, Finance) that cloud models can&apos;t safely touch.
+              TritonGPT delivers enterprise-grade controls, P3 data compliance, and zero per-token costs—so scale is a design choice,
+              not a budget risk.
             </p>
           </div>
 
           <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Strategic Infrastructure & Cloud Cost Management</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Ground AI in Institutional Reality</h3>
             <p className="text-gray-700 leading-relaxed">
-              By building on SDSC infrastructure, we eliminated the per-token operational costs that typically constrain AI adoption.
-              This <strong>Opex Cost Advantage</strong> allowed us to broadly deploy solutions to over 73,000 users without the fear of runaway costs.
-              We maintain a disciplined approach to cloud-based models, introducing them only where specific capabilities are required,
-              ensuring long-term financial sustainability while delivering enterprise-scale impact.
+              TritonGPT combines curated policy, knowledge base content, and decision logs with faculty co-design to keep answers grounded in how
+              the university actually operates. This alignment with real-time institutional context turns AI from a novelty into a trusted
+              service layer.
             </p>
           </div>
 
           <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Iterative Release Strategy</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Move from Assisting to Doing</h3>
             <p className="text-gray-700 leading-relaxed">
-              Launching with focused use cases (contract review, policy search) before expanding to broader applications built
-              trust through demonstrable ROI. Each successful deployment created momentum for the next, turning incremental wins
-              into campus-wide transformation. This measured approach prevented the &quot;boil the ocean&quot; trap common to AI initiatives.
+              We started with high-impact workflows like contract review and policy search, then expanded into agent-ready use cases.
+              The next phase moves beyond chat into action with Model Context Protocol (MCP)-enabled workflows that can trigger
+              secure tasks on behalf of users—without the &quot;boil the ocean&quot; trap.
             </p>
           </div>
         </div>
