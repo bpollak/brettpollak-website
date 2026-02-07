@@ -191,8 +191,23 @@ html {
   transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.card-3d:hover {
-  transform: translateY(-8px) rotateX(2deg);
+@media (hover: hover) and (pointer: fine) {
+  .card-3d:hover {
+    transform: translateY(-8px) rotateX(2deg);
+  }
+
+  /* Keep embeds stable/clickable on desktop when cards are hovered. */
+  .card-3d:has(iframe):hover,
+  .card-3d:has(video):hover {
+    transform: none;
+  }
+}
+
+.card-3d iframe,
+.card-3d video {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 /* Grid pattern background */

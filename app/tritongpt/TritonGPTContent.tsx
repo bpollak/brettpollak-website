@@ -33,7 +33,6 @@ const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?:
 export default function TritonGPTContent() {
   const [metricsVisible, setMetricsVisible] = useState(false);
   const metricsRef = useRef<HTMLElement>(null);
-  const fallbackVideoPoster = "/media/video-poster.svg";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -239,12 +238,10 @@ export default function TritonGPTContent() {
               {
                 title: "Job Description Helper",
                 src: "https://tritongpt-deck.vercel.app/media/media4.mp4",
-                poster: fallbackVideoPoster,
               },
               {
                 title: "Fund Manager Coach",
                 src: "https://tritongpt-deck.vercel.app/media/media3.mp4",
-                poster: fallbackVideoPoster,
               },
               {
                 title: "UC San Diego Assistant",
@@ -265,56 +262,26 @@ export default function TritonGPTContent() {
                   <h3 className="text-xl font-semibold text-gray-900">{video.title}</h3>
                 </div>
                 <div className="relative">
-                  {video.link ? (
-                    <a
-                      href={video.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block transition-transform duration-500 hover:scale-105"
-                    >
-                      <video
-                        className="w-full aspect-video bg-black"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        controls
-                        preload="metadata"
-                        poster={video.poster ?? fallbackVideoPoster}
-                      >
-                        {(video.sources ?? [
-                          {
-                            src: video.src,
-                            type: video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime",
-                          },
-                        ]).map((source) => (
-                          <source key={source.src} src={source.src} type={source.type} />
-                        ))}
-                        Your browser does not support the video tag.
-                      </video>
-                    </a>
-                  ) : (
-                    <video
-                      className="w-full aspect-video bg-black"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      controls
-                      preload="metadata"
-                      poster={video.poster ?? fallbackVideoPoster}
-                    >
-                      {(video.sources ?? [
-                        {
-                          src: video.src,
-                          type: video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime",
-                        },
-                      ]).map((source) => (
-                        <source key={source.src} src={source.src} type={source.type} />
-                      ))}
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
+                  <video
+                    className="w-full aspect-video bg-black"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    preload="metadata"
+                    poster={video.poster}
+                  >
+                    {(video.sources ?? [
+                      {
+                        src: video.src,
+                        type: video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime",
+                      },
+                    ]).map((source) => (
+                      <source key={source.src} src={source.src} type={source.type} />
+                    ))}
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             ))}
