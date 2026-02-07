@@ -15,6 +15,7 @@ export default function Header() {
     { href: '/tritongpt', label: 'TritonGPT' },
     { href: '/products', label: 'Products' },
     { href: '/media', label: 'Media' },
+    { href: '/podcasts', label: 'Podcasts' },
     { href: '/linkedin', label: 'LinkedIn' },
     { href: '/contact', label: 'Contact' },
   ];
