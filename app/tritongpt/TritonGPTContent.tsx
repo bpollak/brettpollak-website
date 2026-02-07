@@ -233,7 +233,7 @@ export default function TritonGPTContent() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">TritonGPT in Action</h2>
             <p className="text-xl text-gray-600">Live workflows pulled from the TritonGPT presentation deck</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             {[
               {
                 title: "Job Description Helper",
