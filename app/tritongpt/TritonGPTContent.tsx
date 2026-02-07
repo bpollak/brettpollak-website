@@ -274,7 +274,6 @@ export default function TritonGPTContent() {
                   >
                     <source
                       src={video.src}
-                      type={video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime"}
                     />
                     Your browser does not support the video tag.
                   </video>
