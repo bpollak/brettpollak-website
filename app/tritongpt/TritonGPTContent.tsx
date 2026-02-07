@@ -230,26 +230,30 @@ export default function TritonGPTContent() {
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">TritonGPT in Action</h2>
-            <p className="text-xl text-gray-600">Live workflows pulled from the TritonGPT presentation deck</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">TritonAI in Action</h2>
+            <p className="text-xl text-gray-600">Assistants and agentic workflows from the TritonAI portfolio, running on TritonGPT.</p>
           </div>
           <div className="grid grid-cols-1 gap-8">
             {[
               {
                 title: "Job Description Helper",
+                description: "Helps HR and hiring managers draft clear, compliant job descriptions in minutes.",
                 src: "https://tritongpt-deck.vercel.app/media/media4.mov",
               },
               {
                 title: "Fund Manager Coach",
+                description: "Guides grant and fund managers on compliance, allowable expenses, and spending restrictions.",
                 src: "https://tritongpt-deck.vercel.app/media/media3.mov",
               },
               {
                 title: "UC San Diego Assistant",
+                description: "Answers campus policy and service questions using curated departmental knowledge and institutional resources.",
                 src: "https://tritongpt-deck.vercel.app/media/media1.mov",
                 poster: "https://tritongpt-deck.vercel.app/media/image36.png",
               },
               {
                 title: "Contract Reviewer",
+                description: "Reviews NDAs and T&Cs, flags risky clauses, and summarizes key changes to speed legal review.",
                 src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
                 poster: "https://tritongpt-deck.vercel.app/media/image47.png",
               },
@@ -260,6 +264,7 @@ export default function TritonGPTContent() {
               >
                 <div className="p-6 border-b border-gray-100">
                   <h3 className="text-xl font-semibold text-gray-900">{video.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{video.description}</p>
                 </div>
                 <div className="relative">
                   <video
