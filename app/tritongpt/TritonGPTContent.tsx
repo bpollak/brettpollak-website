@@ -256,6 +256,50 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
+      {/* TritonGPT Demo Videos */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">TritonGPT in Action</h2>
+            <p className="text-xl text-gray-600">Live workflows pulled from the TritonGPT presentation deck</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Slide 8: Platform Overview",
+                src: "https://tritongpt-deck.vercel.app/media/media4.mov",
+              },
+              {
+                title: "Slide 9: Workflow Walkthrough",
+                src: "https://tritongpt-deck.vercel.app/media/media3.mov",
+              },
+            ].map((video) => (
+              <div
+                key={video.src}
+                className="card-3d bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
+              >
+                <div className="p-6 border-b border-gray-100">
+                  <h3 className="text-xl font-semibold text-gray-900">{video.title}</h3>
+                </div>
+                <div className="relative">
+                  <video
+                    className="w-full"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  >
+                    <source src={video.src} type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
