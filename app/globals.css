@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #111827;
+  --font-montserrat: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @theme inline {

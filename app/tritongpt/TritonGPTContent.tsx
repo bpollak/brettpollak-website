@@ -272,14 +272,10 @@ export default function TritonGPTContent() {
                     preload="metadata"
                     poster={video.poster}
                   >
-                    {(video.sources ?? [
-                      {
-                        src: video.src,
-                        type: video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime",
-                      },
-                    ]).map((source) => (
-                      <source key={source.src} src={source.src} type={source.type} />
-                    ))}
+                    <source
+                      src={video.src}
+                      type={video.src.endsWith(".mp4") ? "video/mp4" : "video/quicktime"}
+                    />
                     Your browser does not support the video tag.
                   </video>
                 </div>

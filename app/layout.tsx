@@ -1,24 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
-
-// Montserrat for brand name and hero headings
-// 300 (light) - hero heading
-// 600 (semibold) - brand name in header
-// 700 (bold) - occasional emphasis
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ['300', '600', '700'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://brettcpollak.com'),
@@ -66,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${montserrat.variable} antialiased`}>
+      <body className="antialiased">
         <GoogleAnalytics />
         <Header />
         {children}
