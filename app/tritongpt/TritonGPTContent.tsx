@@ -239,34 +239,14 @@ export default function TritonGPTContent() {
               {
                 title: "Job Description Helper",
                 src: "https://tritongpt-deck.vercel.app/media/media4.mp4",
-                sources: [
-                  {
-                    src: "https://tritongpt-deck.vercel.app/media/media4.mp4",
-                    type: "video/mp4",
-                  },
-                  {
-                    src: "https://tritongpt-deck.vercel.app/media/media4.mov",
-                    type: "video/quicktime",
-                  },
-                ],
               },
               {
                 title: "Fund Manager Coach",
                 src: "https://tritongpt-deck.vercel.app/media/media3.mp4",
-                sources: [
-                  {
-                    src: "https://tritongpt-deck.vercel.app/media/media3.mp4",
-                    type: "video/mp4",
-                  },
-                  {
-                    src: "https://tritongpt-deck.vercel.app/media/media3.mov",
-                    type: "video/quicktime",
-                  },
-                ],
               },
               {
                 title: "UC San Diego Assistant",
-                src: "https://tritongpt-deck.vercel.app/media/media1.mov",
+                src: "https://tritongpt-deck.vercel.app/media/media1.mp4",
                 poster: "https://tritongpt-deck.vercel.app/media/image36.png",
                 link: "https://blink.ucsd.edu/technology/ai/tritongpt/index.html",
               },
