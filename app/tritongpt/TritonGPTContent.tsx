@@ -159,33 +159,22 @@ export default function TritonGPTContent() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            {
-              title: "TritonGPT (Core Platform)",
-              description:
-                "Secure, UC San Diego-hosted AI platform powering assistants, RAG, and agent-ready workflows.",
-              href: "https://tritonai.ucsd.edu/tritongpt/index.html",
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1.5-1.5L4 19.25l.75-3.25a7.5 7.5 0 1115-1.5 7.5 7.5 0 01-9.5 7.25z" />
-                </svg>
-              ),
-            },
-            {
-              title: "Assistants (TritonGPT)",
-              description:
-                "Task-specific assistants for campus workflows: UC San Diego Assistant, General AI Assistant, Fund Manager Coach, Job Description Helper, Phishing Analyzer, and Expert Notetaker.",
-              href: "https://tritonai.ucsd.edu/training-resources/tritongpt/assistants.html",
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              ),
-            },
-            {
-              title: "Chatbot Widget",
-              description:
-                "Embeddable AI assistant for UC San Diego CMS websites, enabling no-login Q&A directly on a webpage.",
+	          {[
+	            {
+	              title: "TritonGPT + Assistants",
+	              description:
+	                "Secure, UC San Diego-hosted AI platform plus task-specific assistants for campus workflows (policy, HR, finance, security).",
+	              href: "https://tritonai.ucsd.edu/tritongpt/index.html",
+	              icon: (
+	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1.5-1.5L4 19.25l.75-3.25a7.5 7.5 0 1115-1.5 7.5 7.5 0 01-9.5 7.25z" />
+	                </svg>
+	              ),
+	            },
+	            {
+	              title: "Chatbot Widget",
+	              description:
+	                "Embeddable AI assistant for UC San Diego CMS websites, enabling no-login Q&A directly on a webpage.",
               href: "https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html",
               icon: (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
