@@ -253,7 +253,7 @@ export default function TritonGPTContent() {
               },
               {
                 title: "Contract Reviewer",
-                description: "Reviews NDAs and T&Cs, flags risky clauses, and summarizes key changes to speed legal review.",
+                description: "Auto-redlines third-party NDAs/contracts against UC San Diego and UC Terms & Conditions and Legal Position.",
                 src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
                 poster: "https://tritongpt-deck.vercel.app/media/image47.png",
               },
