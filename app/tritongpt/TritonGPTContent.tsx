@@ -44,6 +44,31 @@ export default function TritonGPTContent() {
       iconWrap: "bg-amber-100/70 text-amber-800 group-hover:bg-amber-100",
       cta: "text-amber-800",
     },
+    {
+      card: "bg-gradient-to-br from-emerald-50 to-white border-emerald-200 hover:border-emerald-300",
+      iconWrap: "bg-emerald-100/70 text-emerald-800 group-hover:bg-emerald-100",
+      cta: "text-emerald-800",
+    },
+    {
+      card: "bg-gradient-to-br from-rose-50 to-white border-rose-200 hover:border-rose-300",
+      iconWrap: "bg-rose-100/70 text-rose-800 group-hover:bg-rose-100",
+      cta: "text-rose-800",
+    },
+    {
+      card: "bg-gradient-to-br from-violet-50 to-white border-violet-200 hover:border-violet-300",
+      iconWrap: "bg-violet-100/70 text-violet-800 group-hover:bg-violet-100",
+      cta: "text-violet-800",
+    },
+    {
+      card: "bg-gradient-to-br from-teal-50 to-white border-teal-200 hover:border-teal-300",
+      iconWrap: "bg-teal-100/70 text-teal-800 group-hover:bg-teal-100",
+      cta: "text-teal-800",
+    },
+    {
+      card: "bg-gradient-to-br from-indigo-50 to-white border-indigo-200 hover:border-indigo-300",
+      iconWrap: "bg-indigo-100/70 text-indigo-800 group-hover:bg-indigo-100",
+      cta: "text-indigo-800",
+    },
   ];
 
   useEffect(() => {
