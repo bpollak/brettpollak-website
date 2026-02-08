@@ -35,39 +35,39 @@ export default function TritonGPTContent() {
   const metricsRef = useRef<HTMLElement>(null);
   const programOfferingStyles = [
     {
-      card: "bg-gradient-to-br from-blue-50 to-white border-blue-200 hover:border-blue-300",
+      card: "bg-gradient-to-br from-blue-50 to-white border-blue-200 hover:border-blue-300 border-t-blue-600",
       iconWrap: "bg-blue-100/70 text-blue-800 group-hover:bg-blue-100",
       cta: "text-blue-800",
     },
     {
-      card: "bg-gradient-to-br from-amber-50 to-white border-amber-200 hover:border-amber-300",
+      card: "bg-gradient-to-br from-amber-50 to-white border-amber-200 hover:border-amber-300 border-t-amber-600",
       iconWrap: "bg-amber-100/70 text-amber-800 group-hover:bg-amber-100",
       cta: "text-amber-800",
     },
     {
-      card: "bg-gradient-to-br from-emerald-50 to-white border-emerald-200 hover:border-emerald-300",
+      card: "bg-gradient-to-br from-emerald-50 to-white border-emerald-200 hover:border-emerald-300 border-t-emerald-600",
       iconWrap: "bg-emerald-100/70 text-emerald-800 group-hover:bg-emerald-100",
       cta: "text-emerald-800",
     },
     {
-      card: "bg-gradient-to-br from-rose-50 to-white border-rose-200 hover:border-rose-300",
+      card: "bg-gradient-to-br from-rose-50 to-white border-rose-200 hover:border-rose-300 border-t-rose-600",
       iconWrap: "bg-rose-100/70 text-rose-800 group-hover:bg-rose-100",
       cta: "text-rose-800",
     },
     {
-      card: "bg-gradient-to-br from-violet-50 to-white border-violet-200 hover:border-violet-300",
+      card: "bg-gradient-to-br from-violet-50 to-white border-violet-200 hover:border-violet-300 border-t-violet-600",
       iconWrap: "bg-violet-100/70 text-violet-800 group-hover:bg-violet-100",
       cta: "text-violet-800",
     },
     {
-      card: "bg-gradient-to-br from-teal-50 to-white border-teal-200 hover:border-teal-300",
-      iconWrap: "bg-teal-100/70 text-teal-800 group-hover:bg-teal-100",
-      cta: "text-teal-800",
+      card: "bg-gradient-to-br from-cyan-50 to-white border-cyan-200 hover:border-cyan-300 border-t-cyan-600",
+      iconWrap: "bg-cyan-100/70 text-cyan-900 group-hover:bg-cyan-100",
+      cta: "text-cyan-900",
     },
     {
-      card: "bg-gradient-to-br from-indigo-50 to-white border-indigo-200 hover:border-indigo-300",
-      iconWrap: "bg-indigo-100/70 text-indigo-800 group-hover:bg-indigo-100",
-      cta: "text-indigo-800",
+      card: "bg-gradient-to-br from-lime-50 to-white border-lime-200 hover:border-lime-300 border-t-lime-700",
+      iconWrap: "bg-lime-100/70 text-lime-900 group-hover:bg-lime-100",
+      cta: "text-lime-900",
     },
   ];
 
@@ -247,7 +247,7 @@ export default function TritonGPTContent() {
                 href={offering.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`card-3d rounded-xl p-7 shadow-lg border hover:shadow-2xl transition-all group ${style.card}`}
+                className={`card-3d rounded-xl p-7 shadow-lg border border-t-4 hover:shadow-2xl transition-all group ${style.card}`}
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${style.iconWrap}`}>
