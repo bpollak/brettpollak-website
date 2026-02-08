@@ -33,6 +33,18 @@ const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?:
 export default function TritonGPTContent() {
   const [metricsVisible, setMetricsVisible] = useState(false);
   const metricsRef = useRef<HTMLElement>(null);
+  const programOfferingStyles = [
+    {
+      card: "bg-gradient-to-br from-blue-50 to-white border-blue-200 hover:border-blue-300",
+      iconWrap: "bg-blue-100/70 text-blue-800 group-hover:bg-blue-100",
+      cta: "text-blue-800",
+    },
+    {
+      card: "bg-gradient-to-br from-amber-50 to-white border-amber-200 hover:border-amber-300",
+      iconWrap: "bg-amber-100/70 text-amber-800 group-hover:bg-amber-100",
+      cta: "text-amber-800",
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -129,7 +141,7 @@ export default function TritonGPTContent() {
                 "Secure, UC San Diego-hosted AI platform powering assistants, RAG, and agent-ready workflows.",
               href: "https://tritonai.ucsd.edu/tritongpt/index.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1.5-1.5L4 19.25l.75-3.25a7.5 7.5 0 1115-1.5 7.5 7.5 0 01-9.5 7.25z" />
                 </svg>
               ),
@@ -140,7 +152,7 @@ export default function TritonGPTContent() {
                 "Task-specific assistants for campus workflows: UC San Diego Assistant, General AI Assistant, Fund Manager Coach, Job Description Helper, Phishing Analyzer, and Expert Notetaker.",
               href: "https://tritonai.ucsd.edu/training-resources/tritongpt/assistants.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               ),
@@ -151,7 +163,7 @@ export default function TritonGPTContent() {
                 "Embeddable AI assistant for UC San Diego CMS websites, enabling no-login Q&A directly on a webpage.",
               href: "https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.3-3.9A7.75 7.75 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               ),
@@ -162,7 +174,7 @@ export default function TritonGPTContent() {
                 "Course-grounded Instructor and Student assistants using retrieval over instructor-approved materials.",
               href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0121 14.5c0 4.418-4.03 8-9 8s-9-3.582-9-8a12.083 12.083 0 012.84-3.922L12 14z" />
                 </svg>
@@ -174,7 +186,7 @@ export default function TritonGPTContent() {
                 "Guides, prompting best practices, prompt library, and webinars to help teams adopt TritonAI effectively.",
               href: "https://tritonai.ucsd.edu/training-resources/index.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               ),
@@ -185,7 +197,7 @@ export default function TritonGPTContent() {
                 "Programmatic access to campus-governed models so teams can build applications and automations.",
               href: "https://tritonai.ucsd.edu/developer-apis/start.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
                 </svg>
               ),
@@ -196,37 +208,40 @@ export default function TritonGPTContent() {
                 "A growing toolkit including MCP servers and reusable agent skills for common campus tasks and workflows.",
               href: "https://tritonai.ucsd.edu/tools/index.html",
               icon: (
-                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3h9v9" />
                 </svg>
               ),
             },
-          ].map((offering) => (
-            <a
-              key={offering.href}
-              href={offering.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-3d bg-white rounded-xl p-7 shadow-lg border border-gray-200 hover:shadow-2xl transition-all group"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
-                  {offering.icon}
+          ].map((offering, index) => {
+            const style = programOfferingStyles[index % programOfferingStyles.length];
+            return (
+              <a
+                key={offering.href}
+                href={offering.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`card-3d rounded-xl p-7 shadow-lg border hover:shadow-2xl transition-all group ${style.card}`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${style.iconWrap}`}>
+                    {offering.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900">{offering.title}</h3>
+                    <p className="mt-2 text-sm text-gray-600 leading-relaxed">{offering.description}</p>
+                    <p className={`mt-4 text-sm font-semibold inline-flex items-center gap-2 ${style.cta}`}>
+                      Learn more
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">{offering.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{offering.description}</p>
-                  <p className="mt-4 text-sm font-semibold text-blue-800 inline-flex items-center gap-2">
-                    Learn more
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </p>
-                </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            );
+          })}
         </div>
       </section>
 
