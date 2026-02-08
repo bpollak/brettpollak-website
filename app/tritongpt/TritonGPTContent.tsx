@@ -93,7 +93,7 @@ export default function TritonGPTContent() {
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
-            UC San Diego developed <span className="font-bold text-blue-800">TritonGPT</span>, a secure, on-premises &quot;Vertical AI&quot; platform within the TritonAI stack. Hosted at SDSC with enterprise controls and P3 data compliance, it provides equal-access AI to <span className="font-bold">73,000+ students, staff, and faculty</span>. Built on open-source foundations with enterprise-grade RAG, TritonGPT eliminates per-token costs while laying the groundwork for agentic workflows.
+            <span className="font-bold text-blue-800">TritonAI</span> is the umbrella for UC San Diego&apos;s AI tools and services. <span className="font-bold text-blue-800">TritonGPT</span> is the cornerstone of that portfolio: a secure, on-premises &quot;Vertical AI&quot; platform hosted at SDSC with enterprise controls and P3 data compliance, providing equal-access AI to <span className="font-bold">73,000+ students, staff, and faculty</span>. Built on open-source foundations with enterprise-grade RAG, TritonGPT eliminates per-token costs while laying the groundwork for agentic workflows.
           </p>
           <a
             href="https://tritongpt-deck.vercel.app/?audience=public"
