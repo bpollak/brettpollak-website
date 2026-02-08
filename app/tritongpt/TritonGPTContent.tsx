@@ -112,6 +112,124 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
+      {/* TritonAI Program Offerings */}
+      <section className="max-w-6xl mx-auto px-6 pb-16">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">TritonAI Program Offerings</h2>
+          <p className="text-lg text-gray-600">
+            TritonGPT is the cornerstone platform; TritonAI includes assistants, embedded experiences, APIs, and enablement to support campus adoption.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "TritonGPT (Core Platform)",
+              description:
+                "Secure, UC San Diego-hosted AI platform powering assistants, RAG, and agent-ready workflows.",
+              href: "https://tritonai.ucsd.edu/tritongpt/index.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1.5-1.5L4 19.25l.75-3.25a7.5 7.5 0 1115-1.5 7.5 7.5 0 01-9.5 7.25z" />
+                </svg>
+              ),
+            },
+            {
+              title: "Assistants (TritonGPT)",
+              description:
+                "Task-specific assistants for campus workflows: UC San Diego Assistant, General AI Assistant, Fund Manager Coach, Job Description Helper, Phishing Analyzer, and Expert Notetaker.",
+              href: "https://tritonai.ucsd.edu/training-resources/tritongpt/assistants.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              ),
+            },
+            {
+              title: "Chatbot Widget",
+              description:
+                "Embeddable AI assistant for UC San Diego CMS websites, enabling no-login Q&A directly on a webpage.",
+              href: "https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.3-3.9A7.75 7.75 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              ),
+            },
+            {
+              title: "Instructional AI Pilot",
+              description:
+                "Course-grounded Instructor and Student assistants using retrieval over instructor-approved materials.",
+              href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0121 14.5c0 4.418-4.03 8-9 8s-9-3.582-9-8a12.083 12.083 0 012.84-3.922L12 14z" />
+                </svg>
+              ),
+            },
+            {
+              title: "Training & Resources",
+              description:
+                "Guides, prompting best practices, prompt library, and webinars to help teams adopt TritonAI effectively.",
+              href: "https://tritonai.ucsd.edu/training-resources/index.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              ),
+            },
+            {
+              title: "Developer APIs",
+              description:
+                "Programmatic access to campus-governed models so teams can build applications and automations.",
+              href: "https://tritonai.ucsd.edu/developer-apis/start.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                </svg>
+              ),
+            },
+            {
+              title: "AI Tools",
+              description:
+                "A growing toolkit including MCP servers and reusable agent skills for common campus tasks and workflows.",
+              href: "https://tritonai.ucsd.edu/tools/index.html",
+              icon: (
+                <svg className="w-5 h-5 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3h9v9" />
+                </svg>
+              ),
+            },
+          ].map((offering) => (
+            <a
+              key={offering.href}
+              href={offering.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-3d bg-white rounded-xl p-7 shadow-lg border border-gray-200 hover:shadow-2xl transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
+                  {offering.icon}
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">{offering.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{offering.description}</p>
+                  <p className="mt-4 text-sm font-semibold text-blue-800 inline-flex items-center gap-2">
+                    Learn more
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       {/* Key Metrics */}
       <section className="bg-white py-20" ref={metricsRef}>
         <div className="max-w-7xl mx-auto px-6">
@@ -307,6 +425,15 @@ export default function TritonGPTContent() {
                 )
               },
               {
+                name: "General AI Assistant",
+                desc: "Writing and editing support without UC San Diego-specific context or reference links.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                )
+              },
+              {
                 name: "Job Description Helper",
                 desc: "Assists HR and managers in drafting comprehensive, compliant job descriptions with significant efficiency gains.",
                 metric: "83% reduction in drafting time",
@@ -339,8 +466,8 @@ export default function TritonGPTContent() {
                 )
               },
               {
-                name: "Email Phishing Analyzer",
-                desc: "Real-time security assessments and analysis of suspicious emails to protect campus data.",
+                name: "Phishing Analyzer",
+                desc: "Scores suspicious emails for phishing risk and explains warning signs to protect campus data.",
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
