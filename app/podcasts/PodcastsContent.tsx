@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useMemo, useEffect, useCallback } from 'react';
-import Link from 'next/link';
 import { podcasts as staticPodcasts } from '@/lib/podcastData';
 import { isFirebaseConfigured } from '@/lib/firebase';
 import {
@@ -267,23 +266,15 @@ export default function PodcastsContent() {
 
         {/* Add Podcast button */}
         {firebaseEnabled && (
-          <div className="ml-auto flex flex-wrap items-center gap-2">
-            <Link
-              href="/podcasts/moderation"
-              className="px-4 py-2.5 rounded-full font-semibold text-sm border-2 border-slate-300 text-slate-700 hover:border-slate-500 hover:text-slate-900 transition-all duration-300"
-            >
-              Moderation
-            </Link>
-            <button
-              onClick={() => setModalOpen(true)}
-              className="px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center gap-2 hover:shadow-xl active:scale-95"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
-              Share a Podcast
-            </button>
-          </div>
+          <button
+            onClick={() => setModalOpen(true)}
+            className="ml-auto px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center gap-2 hover:shadow-xl active:scale-95"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+            Share a Podcast
+          </button>
         )}
       </div>
 
