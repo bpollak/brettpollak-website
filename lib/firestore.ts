@@ -47,6 +47,15 @@ export async function getPodcasts(): Promise<CommunityPodcast[]> {
   }));
 }
 
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error(`${label} timed out after ${ms / 1000}s`)), ms)
+    ),
+  ]);
+}
+
 export async function addPodcast(podcast: {
   name: string;
   hosts: string;
@@ -59,12 +68,16 @@ export async function addPodcast(podcast: {
   const db = getDb();
   if (!db) throw new Error('Firebase is not configured');
 
-  const docRef = await addDoc(collection(db, 'podcasts'), {
-    ...podcast,
-    featured: false,
-    upvotes: 0,
-    createdAt: serverTimestamp(),
-  });
+  const docRef = await withTimeout(
+    addDoc(collection(db, 'podcasts'), {
+      ...podcast,
+      featured: false,
+      upvotes: 0,
+      createdAt: serverTimestamp(),
+    }),
+    10000,
+    'Adding podcast'
+  );
   return docRef.id;
 }
 
@@ -73,7 +86,11 @@ export async function upvotePodcast(podcastId: string): Promise<void> {
   if (!db) throw new Error('Firebase is not configured');
 
   const docRef = doc(db, 'podcasts', podcastId);
-  await updateDoc(docRef, { upvotes: increment(1) });
+  await withTimeout(
+    updateDoc(docRef, { upvotes: increment(1) }),
+    10000,
+    'Upvoting podcast'
+  );
 }
 
 export async function seedPodcasts(
