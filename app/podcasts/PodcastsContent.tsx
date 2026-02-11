@@ -98,26 +98,41 @@ export default function PodcastsContent() {
         return;
       }
 
+      // Race Firestore against a timeout so the page never spins forever
+      const TIMEOUT_MS = 5000;
+      const timeout = new Promise<'timeout'>((resolve) =>
+        setTimeout(() => resolve('timeout'), TIMEOUT_MS)
+      );
+
       try {
-        const data = await getPodcasts();
-        if (!cancelled) {
-          // Seed Brett's picks if Firestore is empty
-          if (data.length === 0) {
-            await seedPodcasts(
-              staticPodcasts.map((p) => ({
-                name: p.name,
-                hosts: p.hosts,
-                coverImage: p.coverImage,
-                category: p.category,
-                summary: p.summary,
-                listenUrl: p.listenUrl,
-              }))
-            );
-            const seeded = await getPodcasts();
-            if (!cancelled) setFirestorePodcasts(seeded);
-          } else {
-            setFirestorePodcasts(data);
-          }
+        const result = await Promise.race([getPodcasts(), timeout]);
+
+        if (cancelled) return;
+
+        if (result === 'timeout') {
+          console.warn('Firestore timed out — falling back to static podcasts');
+          setLoading(false);
+          return;
+        }
+
+        const data = result;
+
+        // Seed Brett's picks if Firestore is empty
+        if (data.length === 0) {
+          await seedPodcasts(
+            staticPodcasts.map((p) => ({
+              name: p.name,
+              hosts: p.hosts,
+              coverImage: p.coverImage,
+              category: p.category,
+              summary: p.summary,
+              listenUrl: p.listenUrl,
+            }))
+          );
+          const seeded = await getPodcasts();
+          if (!cancelled) setFirestorePodcasts(seeded);
+        } else {
+          setFirestorePodcasts(data);
         }
       } catch (err) {
         console.error('Failed to load podcasts from Firestore:', err);
