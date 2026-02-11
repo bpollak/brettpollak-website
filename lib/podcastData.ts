@@ -7,6 +7,7 @@ export interface Podcast {
   listenUrl: string;
 }
 
+/** Brett's curated podcast picks — used as static fallback and Firestore seed data */
 export const podcasts: Podcast[] = [
   {
     name: 'The AI Daily Brief',
