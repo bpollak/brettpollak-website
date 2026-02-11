@@ -169,9 +169,9 @@ export default function PodcastSubmitModal({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Podcast Added!</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-2">Submission Received</h3>
             <p className="text-slate-600 mb-6">
-              Thanks for sharing your recommendation. It&apos;s now live on the page.
+              Thanks for sharing your recommendation. It&apos;s now pending moderator review.
             </p>
             <button
               onClick={handleClose}

@@ -75,6 +75,19 @@ To add the LinkedIn feed:
 3. Copy the embed code
 4. Update the widget embed in `app/linkedin/LinkedInContent.tsx`
 
+### Podcast Moderation Setup (Firebase)
+
+The podcast moderation workflow uses Firestore and Firebase Authentication.
+
+1. Enable Firebase Authentication with the **Google** provider.
+2. In Firebase Authentication settings, add your site domains (for example `brettcpollak.com` and localhost).
+3. Copy `firestore.rules` from this repo into Firebase Console > Firestore Database > Rules.
+4. Publish the rules.
+5. Use `/podcasts/moderation` to review submissions.
+
+Only the admin allowlisted in `lib/admin.ts` can moderate submissions. Current admin email:
+- `brettcpollak@gmail.com`
+
 ### GitHub Pages Deployment
 
 The site is configured for automatic deployment to GitHub Pages:

@@ -1,0 +1,71 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email != null
+        && request.auth.token.email == 'brettcpollak@gmail.com';
+    }
+
+    function isNonEmptyString(value, maxLen) {
+      return value is string && value.size() > 0 && value.size() <= maxLen;
+    }
+
+    function isOptionalString(value, maxLen) {
+      return value == null || (value is string && value.size() <= maxLen);
+    }
+
+    match /podcasts/{podcastId} {
+      allow read: if true;
+
+      allow create, delete: if isAdmin();
+
+      allow update: if isAdmin() || isPublicUpvote();
+
+      function isPublicUpvote() {
+        return request.resource.data.diff(resource.data).changedKeys().hasOnly(['upvotes'])
+          && resource.data.upvotes is int
+          && request.resource.data.upvotes is int
+          && request.resource.data.upvotes == resource.data.upvotes + 1;
+      }
+    }
+
+    match /podcast_submissions/{submissionId} {
+      // Submissions are internal-only once created.
+      allow read, update, delete: if isAdmin();
+
+      allow create: if isValidPublicSubmission();
+
+      function isValidPublicSubmission() {
+        return request.resource.data.keys().hasOnly([
+            'name',
+            'hosts',
+            'coverImage',
+            'category',
+            'summary',
+            'listenUrl',
+            'submittedBy',
+            'status',
+            'submittedAt',
+            'moderatedBy',
+            'moderatedAt',
+            'rejectionReason',
+            'publishedPodcastId'
+          ])
+          && isNonEmptyString(request.resource.data.name, 160)
+          && isNonEmptyString(request.resource.data.hosts, 160)
+          && isOptionalString(request.resource.data.coverImage, 600)
+          && isNonEmptyString(request.resource.data.category, 80)
+          && isNonEmptyString(request.resource.data.summary, 800)
+          && isNonEmptyString(request.resource.data.listenUrl, 600)
+          && isOptionalString(request.resource.data.submittedBy, 120)
+          && request.resource.data.status == 'pending'
+          && request.resource.data.submittedAt is timestamp
+          && request.resource.data.moderatedBy == null
+          && request.resource.data.moderatedAt == null
+          && request.resource.data.rejectionReason == null
+          && request.resource.data.publishedPodcastId == null;
+      }
+    }
+  }
+}
