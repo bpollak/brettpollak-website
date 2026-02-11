@@ -88,6 +88,54 @@ The podcast moderation workflow uses Firestore and Firebase Authentication.
 Only the admin allowlisted in `lib/admin.ts` can moderate submissions. Current admin email:
 - `brettcpollak@gmail.com`
 
+### Podcast Submission Email Notifications
+
+This repo includes a Firebase Cloud Function that emails you whenever a new podcast submission is created in Firestore:
+- Function name: `notifyNewPodcastSubmission`
+- Trigger: `podcast_submissions/{submissionId}` document create
+- Provider: Resend API
+
+Setup steps:
+
+1. Install Firebase CLI and login:
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+2. Select the Firebase project for this repo:
+```bash
+firebase use --add
+```
+
+3. Install and build functions:
+```bash
+cd functions
+npm install
+npm run build
+cd ..
+```
+
+4. Set required secret and params:
+```bash
+firebase functions:secrets:set RESEND_API_KEY
+firebase functions:params:set PODCAST_NOTIFICATION_TO="brettcpollak@gmail.com"
+firebase functions:params:set PODCAST_NOTIFICATION_FROM="Podcast Moderation <onboarding@resend.dev>"
+firebase functions:params:set PODCAST_MODERATION_URL="https://brettcpollak.com/podcasts/moderation"
+```
+
+5. Deploy the function:
+```bash
+firebase deploy --only functions:notifyNewPodcastSubmission
+```
+
+Notes:
+- If you use Resend in production, set `PODCAST_NOTIFICATION_FROM` to a domain/sender you verified in Resend.
+- After deployment, submit a test podcast and check function logs with:
+```bash
+firebase functions:log --only notifyNewPodcastSubmission
+```
+
 ### GitHub Pages Deployment
 
 The site is configured for automatic deployment to GitHub Pages:
