@@ -120,8 +120,11 @@ export default function PodcastSubmitModal({
         submittedBy: submittedBy.trim() || 'Anonymous',
       });
       setSuccess(true);
-    } catch {
-      setError('Failed to submit podcast. Please try again.');
+    } catch (err) {
+      const message = err instanceof Error && err.message.includes('timed out')
+        ? 'Request timed out. Please check your connection and try again.'
+        : 'Failed to submit podcast. Please try again.';
+      setError(message);
     } finally {
       setSubmitting(false);
     }

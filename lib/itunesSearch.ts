@@ -9,18 +9,27 @@ export interface ITunesResult {
 export async function searchPodcasts(term: string): Promise<ITunesResult[]> {
   if (!term || term.length < 2) return [];
 
-  const response = await fetch(
-    `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=5`
-  );
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
 
-  if (!response.ok) return [];
+    const response = await fetch(
+      `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=podcast&limit=5`,
+      { signal: controller.signal }
+    );
+    clearTimeout(timeout);
 
-  const data = await response.json();
-  return (data.results ?? []).map((r: Record<string, unknown>) => ({
-    trackName: r.trackName ?? '',
-    artistName: r.artistName ?? '',
-    artworkUrl600: r.artworkUrl600 ?? '',
-    collectionViewUrl: r.collectionViewUrl ?? '',
-    primaryGenreName: r.primaryGenreName ?? '',
-  }));
+    if (!response.ok) return [];
+
+    const data = await response.json();
+    return (data.results ?? []).map((r: Record<string, unknown>) => ({
+      trackName: r.trackName ?? '',
+      artistName: r.artistName ?? '',
+      artworkUrl600: r.artworkUrl600 ?? '',
+      collectionViewUrl: r.collectionViewUrl ?? '',
+      primaryGenreName: r.primaryGenreName ?? '',
+    }));
+  } catch {
+    return [];
+  }
 }
