@@ -30,7 +30,7 @@ export default function LinkedInContent() {
           <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
         </div>
         <p className="text-xl text-slate-600 mb-16 max-w-3xl">
-          Recent updates and insights from my LinkedIn profile
+          Recent notes and updates from my LinkedIn profile
         </p>
 
         <div className="mb-12 relative min-h-[400px]">
@@ -47,7 +47,7 @@ export default function LinkedInContent() {
           <div className="sk-ww-linkedin-profile-post" data-embed-id="25642101"></div>
         </div>
 
-        {/* Custom Follow Me Button */}
+        {/* LinkedIn Link */}
         <div className="border-t border-slate-200 pt-12 text-center">
           <a
             href="https://www.linkedin.com/in/brettpollak/"
@@ -58,7 +58,7 @@ export default function LinkedInContent() {
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
-            Follow Me on LinkedIn
+            Visit on LinkedIn
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

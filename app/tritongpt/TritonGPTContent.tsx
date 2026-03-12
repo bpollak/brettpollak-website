@@ -797,12 +797,12 @@ export default function TritonGPTContent() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-8 animate-fade-in">Strategic Impact & Vision</h2>
+          <h2 className="text-4xl font-bold mb-8 animate-fade-in">What We&apos;re Learning from TritonGPT</h2>
           <p className="text-2xl text-blue-100 leading-relaxed mb-8 animate-slide-up">
-            TritonGPT demonstrates that AI value in higher education derives from institutional context integration. Through TritonAI, UC San Diego transformed data into a dynamic conversational asset while establishing new standards for public sector efficiency.
+            One lesson from TritonGPT is that AI becomes more useful in higher education when it is grounded in institutional context, governance, and everyday work. The technical stack matters, but so do trust, adoption, and the ability to learn with campus partners over time.
           </p>
           <div className="card-3d inline-block px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <p className="text-blue-100 italic">Digital sovereignty through strategic AI implementation</p>
+            <p className="text-blue-100 italic">Institutional AI works best when it grows from local context</p>
           </div>
         </div>
       </section>
@@ -810,15 +810,15 @@ export default function TritonGPTContent() {
       {/* Contact CTA */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Interested in Learning More?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Compare Notes?</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Available for speaking engagements, advisory, and collaboration on AI implementation in higher education.
+            If you&apos;re exploring similar questions in higher education, I&apos;d be glad to hear what your institution is learning.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600"
           >
-            Inquire About Speaking
+            Start a Conversation
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

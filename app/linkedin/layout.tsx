@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LinkedIn | Brett Pollak - Insights & Updates",
-  description: "Recent insights and updates from Brett Pollak on AI implementation, digital transformation, and technology leadership in higher education. Connect on LinkedIn for more.",
+  title: "LinkedIn Notes | Brett Pollak",
+  description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
   alternates: {
     canonical: "https://brettcpollak.com/linkedin",
   },
   openGraph: {
-    title: "LinkedIn | Brett Pollak - Insights & Updates",
-    description: "Recent insights and updates from Brett Pollak on AI implementation, digital transformation, and technology leadership in higher education.",
+    title: "LinkedIn Notes | Brett Pollak",
+    description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
     url: "https://brettcpollak.com/linkedin",
     siteName: "Brett Pollak",
     type: "profile",

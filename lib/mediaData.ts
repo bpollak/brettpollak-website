@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'ASU+GSV Summit',
+    title: 'Shared AI at Scale: Developed by Universities for Universities',
+    url: 'https://www.asugsvsummit.com/schedule/shared-ai-at-scale-developed-by-universities-for-universities',
+    date: '2026-04-14',
+    category: 'speaking'
+  },
+  {
     publication: 'CCW Emerging Tech Exchange',
     title: 'CCW Emerging Tech Exchange - San Diego',
     url: 'https://www.ccwexchangefebruary.com/agenda/session/1819201',

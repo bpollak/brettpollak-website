@@ -280,15 +280,15 @@ export default function MediaContent() {
       <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 rounded-2xl p-12 text-center overflow-hidden mt-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="relative">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-200 via-orange-200 to-rose-200 bg-clip-text text-transparent mb-6">Speaking Engagements</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-200 via-orange-200 to-rose-200 bg-clip-text text-transparent mb-6">Want to Compare Notes?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Available for keynotes, panels, and workshops on AI in higher education, digital transformation, and technology leadership.
+            If you&apos;re working through similar questions in higher education, I&apos;d be glad to hear what your institution is learning.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-slate-900 px-10 py-4 font-bold hover:bg-slate-50 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
           >
-            Inquire About Speaking
+            Start a Conversation
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

@@ -2,11 +2,23 @@
   "name": "brettpollak-site",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <25"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/run-with-supported-node.mjs scripts/dev-local.mjs",
+    "dev:open": "node scripts/run-with-supported-node.mjs scripts/dev-local.mjs --open",
+    "doctor:local": "node scripts/run-with-supported-node.mjs scripts/check-local-runtime.mjs",
+    "clean": "node scripts/clean-generated.mjs",
+    "deploy:status": "node scripts/deploy-status.mjs --fetch",
+    "deploy:prompt": "node scripts/deploy-prompt.mjs",
+    "build": "node scripts/run-with-supported-node.mjs node_modules/next/dist/bin/next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "node scripts/run-with-supported-node.mjs node_modules/eslint/bin/eslint.js \"app/**/*.{ts,tsx}\" \"components/**/*.{ts,tsx}\" \"lib/**/*.{ts,tsx}\" \"scripts/**/*.{js,mjs}\" \"*.{js,mjs,ts}\" --cache --cache-location .next/cache/eslint/ --cache-strategy content --max-warnings=0",
+    "lint:fix": "node scripts/run-with-supported-node.mjs node_modules/eslint/bin/eslint.js \"app/**/*.{ts,tsx}\" \"components/**/*.{ts,tsx}\" \"lib/**/*.{ts,tsx}\" \"scripts/**/*.{js,mjs}\" \"*.{js,mjs,ts}\" --cache --cache-location .next/cache/eslint/ --cache-strategy content --fix",
+    "typecheck": "node scripts/run-with-supported-node.mjs node_modules/typescript/bin/tsc --noEmit --incremental false",
+    "check": "npm run lint && npm run typecheck",
+    "verify": "npm run check && npm run build"
   },
   "dependencies": {
     "firebase": "^12.9.0",

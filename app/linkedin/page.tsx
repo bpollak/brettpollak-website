@@ -2,14 +2,14 @@ import LinkedInContent from './LinkedInContent';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LinkedIn Updates | Brett Pollak",
-  description: "Stay updated with the latest insights on AI implementation, technology leadership, and higher education digital transformation from Brett Pollak's LinkedIn.",
+  title: "LinkedIn Notes | Brett Pollak",
+  description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
   alternates: {
     canonical: "https://brettcpollak.com/linkedin",
   },
   openGraph: {
-    title: "LinkedIn Updates | Brett Pollak",
-    description: "Insights on AI leadership and digital transformation in higher education.",
+    title: "LinkedIn Notes | Brett Pollak",
+    description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
     url: "https://brettcpollak.com/linkedin",
   },
 };

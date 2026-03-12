@@ -2,21 +2,21 @@ import Image from 'next/image';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Brett Pollak | AI & Digital Transformation Leader in Higher Ed",
-  description: "Brett Pollak is a Technology Executive at UC San Diego, leading 80+ professionals in AI implementation, data governance, and digital transformation serving 73,000+ users.",
+  title: "About Brett Pollak | Work in Higher Education and AI",
+  description: "Background and current work on AI, digital services, and institutional change in higher education.",
   alternates: {
     canonical: "https://brettcpollak.com/about",
   },
   openGraph: {
-    title: "About Brett Pollak | AI & Digital Transformation Leader in Higher Ed",
-    description: "Technology Executive at UC San Diego specializing in Artificial Intelligence, Data, and Digital Transformation.",
+    title: "About Brett Pollak | Work in Higher Education and AI",
+    description: "Background and current work on AI, digital services, and institutional change in higher education.",
     url: "https://brettcpollak.com/about",
     images: [
       {
         url: "/brettpollak-headshot-lean.png",
         width: 300,
         height: 400,
-        alt: "Brett Pollak - Technology Executive",
+        alt: "Brett Pollak",
       },
     ],
   },
@@ -28,7 +28,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12 animate-fade-in">
           <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            PROFILE
+            BACKGROUND
           </div>
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight">About</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700"></div>
@@ -52,71 +52,74 @@ export default function About() {
             </div>
           </div>
           <div className="md:col-span-3 space-y-6 animate-slide-in-right">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">From Web Pioneer to AI Implementation Leader</h2>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">Work Rooted in Practice, People, and Curiosity</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-slate-900 to-blue-800"></div>
             <p className="text-xl text-slate-600 leading-relaxed">
-              My journey into technology leadership began in the early days of the web, managing teams at a Fortune 500 company where I learned that true transformation isn&apos;t about tools - it&apos;s about people. Over 17 years at UC San Diego, I&apos;ve built this philosophy into every project, culminating in the TritonGPT initiative.
+              My career started in web and digital services, where I learned early that new tools only matter when they fit the real work people are trying to do.
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
-              We moved TritonGPT from concept to serving 73,000+ users in weeks, cutting contract review times by 91% and turning skeptics into champions. Today, I help organizations navigate AI transformation with clarity, proving that the difference between projects that stall and those that scale is cultural, not just technical.
+              At UC San Diego, I&apos;ve spent more than 17 years working with colleagues across web, cloud, data, and workplace technology. Projects like TritonGPT have reinforced that implementation is as much about trust, governance, and listening as it is about architecture.
+            </p>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              This site is a place to share what we&apos;ve learned so far and connect with others in higher education who are working through similar questions. I&apos;m especially interested in hearing how other institutions are approaching adoption, policy, and practical use cases.
             </p>
           </div>
         </div>
 
-        {/* Key Achievements */}
+        {/* Recent Work */}
         <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-slate-800 bg-clip-text text-transparent mb-12">Key Achievements</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-slate-800 bg-clip-text text-transparent mb-12">Recent Work</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT Impact</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Reduced contract review time by 91% and democratized access to institutional knowledge for 73,000+ users</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">Supporting campus access to institutional knowledge and reducing friction in workflows such as contract review</p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-800 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Technology Leadership</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Manage 80+ technology professionals and oversee multi-million-dollar budgets</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">Working with colleagues across service desk, infrastructure, analytics, web, and collaboration services</p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-rose-700 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Innovation Awards</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Larry L. Sautter Gold and Silver Awards for Innovation in Information Technology</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Recognition</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">Work connected to TritonGPT and related initiatives has received campus and industry recognition</p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-indigo-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Multi-Institutional Impact</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">TritonGPT technology licensed by multiple leading universities nationwide</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Cross-Institution Sharing</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">Lessons from TritonGPT have been shared with peer institutions exploring similar AI questions</p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Infrastructure Scale</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Support hybrid-cloud infrastructure serving campus community of 73,000+ users</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Daily Context</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">Supporting hybrid-cloud infrastructure and digital services for a campus community of more than 73,000 people</p>
             </div>
           </div>
         </div>
 
-        {/* Areas of Expertise */}
+        {/* Topics */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Areas of Expertise</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">Topics I Spend Time On</h2>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">AI & Machine Learning</h3>
-              <p className="text-lg text-slate-600">Implementation, governance, and ethical frameworks for AI in higher education</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">AI Implementation</h3>
+              <p className="text-lg text-slate-600">Governance, adoption, and the practical questions that show up once a pilot becomes real work</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Data Governance</h3>
-              <p className="text-lg text-slate-600">Enterprise data warehousing, security, privacy, and analytics</p>
+              <p className="text-lg text-slate-600">Privacy, security, stewardship, and how institutions make data usable without losing context</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Cloud Infrastructure</h3>
-              <p className="text-lg text-slate-600">Hybrid-cloud architecture and enterprise-scale deployments</p>
+              <p className="text-lg text-slate-600">Hybrid-cloud architecture, operations, and what it takes to support dependable institutional services</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Digital Transformation</h3>
-              <p className="text-lg text-slate-600">Change management, stakeholder engagement, and innovation at scale</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Organizational Change</h3>
+              <p className="text-lg text-slate-600">Stakeholder engagement, service design, and learning how new tools actually fit campus workflows</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Web Technologies</h3>
-              <p className="text-lg text-slate-600">Mobile strategy, responsive design, accessibility, and UX</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Digital Experience</h3>
+              <p className="text-lg text-slate-600">Web platforms, accessibility, and making institutional systems easier for people to navigate</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Predictive Analytics</h3>
-              <p className="text-lg text-slate-600">Data-driven insights and decision-making frameworks</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Data-Informed Decisions</h3>
+              <p className="text-lg text-slate-600">Analytics, reporting, and helping teams ask better questions about the work in front of them</p>
             </div>
           </div>
         </div>
@@ -140,9 +143,9 @@ export default function About() {
                   <h4 className="text-xl font-bold text-slate-800 text-blue-700">Executive Director, Workplace Technology & Infrastructure Services (WTIS)</h4>
                   <p className="text-sm text-slate-500 font-semibold mb-3">Oct 2024 – Present</p>
                   <p className="text-slate-600 leading-relaxed">
-                    Leading comprehensive technology portfolio including Data Warehouse, Analytics, Predictive Technologies,
-                    Email, Service Desk, Field Support, Endpoint Management, Enterprise Content Management, Web Technologies,
-                    and Integrated Collaboration Services. Spearheaded the <span className="font-semibold text-slate-800">TritonGPT</span> initiative.
+                    Working with teams across Data Warehouse, Analytics, Predictive Technologies, Email, Service Desk,
+                    Field Support, Endpoint Management, Enterprise Content Management, Web Technologies, and Integrated
+                    Collaboration Services. Part of the team behind <span className="font-semibold text-slate-800">TritonGPT</span>.
                   </p>
                 </div>
 
@@ -192,8 +195,8 @@ export default function About() {
               
               <p className="text-lg text-slate-600 leading-relaxed">
                 Managed a department of 40 professionals including web content developers, user interface designers,
-                programmers, project managers, and team leads. Developed expertise in large-scale enterprise web
-                implementations and cross-functional team leadership in a Fortune 500 environment.
+                programmers, project managers, and team leads. It was an early lesson in how large organizations adopt
+                technology through people, process, and collaboration.
               </p>
             </div>
 
@@ -215,9 +218,9 @@ export default function About() {
           </div>
         </div>
 
-        {/* Thought Leadership */}
+        {/* Talks and Writing */}
         <div className="border-t border-slate-200 pt-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Speaking & Publications</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Talks, Writing, and Shared Learning</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-6 rounded-xl border border-slate-100">
               <h3 className="text-lg font-bold text-slate-900 mb-4">Conference Presentations</h3>
