@@ -101,12 +101,18 @@ export default function TritonGPTContent() {
 
         <div className="relative max-w-7xl mx-auto px-6 py-24">
           <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-amber-500/30 text-amber-100 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-amber-400/40">
-            ROLLING UPDATES
+            PROGRAM OVERVIEW
           </div>
           <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm">
-            The AI-Enabled University
+            TritonAI
           </h1>
-          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-8 leading-relaxed font-light">Operationalizing TritonAI for Service &amp; Support at Scale</p>
+          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-6 leading-relaxed font-light">
+            A shared AI ecosystem for service, instruction, and everyday campus work
+          </p>
+          <p className="animate-slide-up delay-150 max-w-4xl text-lg md:text-xl text-blue-100/90 mb-8 leading-relaxed">
+            TritonAI brings together TritonGPT, embedded assistants, developer APIs, reusable tools, and emerging agent workflows so
+            campus teams can build on governed infrastructure instead of starting from scratch.
+          </p>
           <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-100">
             <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
               <svg className="w-5 h-5 animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20">
@@ -130,10 +136,13 @@ export default function TritonGPTContent() {
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
-            <span className="font-bold text-blue-800">TritonAI</span> is the umbrella for UC San Diego&apos;s AI tools and services. <span className="font-bold text-blue-800">TritonGPT</span> is the cornerstone of that portfolio: a secure, on-premises &quot;Vertical AI&quot; platform hosted at SDSC with enterprise controls and P3 data compliance, providing equal-access AI to <span className="font-bold">73,000+ students, staff, and faculty</span>. Built on open-source foundations with enterprise-grade RAG, TritonGPT eliminates per-token costs while laying the groundwork for agentic workflows.
+            <span className="font-bold text-blue-800">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It brings together secure infrastructure, task-specific assistants, embedded experiences, developer access, and shared tools into one campus ecosystem.
+          </p>
+          <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
+            <span className="font-bold text-blue-800">TritonGPT</span> is the platform layer at the center of that work: a secure, SDSC-hosted environment that supports more than <span className="font-bold">73,000 students, staff, and faculty</span> without per-token costs. From that foundation, TritonAI is expanding into instructional tools, public-facing support, model access for developers, and the building blocks for agentic workflows.
           </p>
           <a
-            href="https://tritongpt-deck.vercel.app/?audience=public"
+            href="https://ucsd-presentation.vercel.app/#slide=1"
             target="_blank"
             rel="noopener noreferrer"
             className="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white px-6 py-4 rounded-xl font-semibold hover:from-blue-800 hover:to-blue-900 transition-all shadow-md hover:shadow-xl hover:scale-105 group/link"
@@ -141,7 +150,7 @@ export default function TritonGPTContent() {
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <span>View Complete Presentation Deck</span>
+            <span>View TritonAI Slide Deck</span>
             <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -152,18 +161,19 @@ export default function TritonGPTContent() {
       {/* TritonAI Program Offerings */}
       <section className="max-w-6xl mx-auto px-6 pb-16">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">TritonAI Program Offerings</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">What TritonAI Includes</h2>
           <p className="text-lg text-gray-600">
-            TritonGPT is the cornerstone platform; TritonAI includes assistants, embedded experiences, APIs, and enablement to support campus adoption.
+            TritonAI includes the shared pieces needed to support campus adoption: a governed platform, embedded experiences, instructional tools,
+            developer access, reusable skills, and a path toward agent workflows.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 	          {[
 	            {
-	              title: "TritonGPT + Assistants",
+	              title: "TritonGPT Platform",
 	              description:
-	                "Secure, UC San Diego-hosted AI platform plus task-specific assistants for campus workflows (policy, HR, finance, security).",
+	                "A secure, SDSC-hosted foundation for campus AI with assistants built around specific university workflows.",
 	              href: "https://tritonai.ucsd.edu/tritongpt/index.html",
 	              icon: (
 	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,58 +182,58 @@ export default function TritonGPTContent() {
 	              ),
 	            },
 	            {
-	              title: "Chatbot Widget",
+	              title: "Embedded Website Support",
 	              description:
-	                "Embeddable AI assistant for UC San Diego CMS websites, enabling no-login Q&A directly on a webpage.",
+	                "Embeddable AI support for campus websites so visitors can ask questions in context without needing a login.",
               href: "https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html",
               icon: (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.3-3.9A7.75 7.75 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               ),
-            },
-            {
-              title: "Instructional AI Pilot",
-              description:
-                "Course-grounded Instructor and Student assistants using retrieval over instructor-approved materials.",
-              href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+	            },
+	            {
+	              title: "Instructional AI",
+	              description:
+	                "Course-grounded student and instructor assistants built around instructor-approved materials and teaching workflows.",
+	              href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
+	              icon: (
+	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0121 14.5c0 4.418-4.03 8-9 8s-9-3.582-9-8a12.083 12.083 0 012.84-3.922L12 14z" />
                 </svg>
               ),
-            },
-            {
-              title: "Training & Resources",
-              description:
-                "Guides, prompting best practices, prompt library, and webinars to help teams adopt TritonAI effectively.",
-              href: "https://tritonai.ucsd.edu/training-resources/index.html",
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+	            },
+	            {
+	              title: "Shared Resources and Adoption",
+	              description:
+	                "Guides, prompting practices, examples, and training that help campus teams use TritonAI more effectively.",
+	              href: "https://tritonai.ucsd.edu/training-resources/index.html",
+	              icon: (
+	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               ),
-            },
-            {
-              title: "Developer APIs",
-              description:
-                "Programmatic access to campus-governed models so teams can build applications and automations.",
-              href: "https://tritonai.ucsd.edu/developer-apis/start.html",
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+	            },
+	            {
+	              title: "Developer APIs",
+	              description:
+	                "A governed gateway to approved models so campus developers can build, test, and scale applications responsibly.",
+	              href: "https://tritonai.ucsd.edu/developer-apis/start.html",
+	              icon: (
+	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
                 </svg>
               ),
-            },
-            {
-              title: "AI Tools",
-              description:
-                "A growing toolkit including MCP servers and reusable agent skills for common campus tasks and workflows.",
-              href: "https://tritonai.ucsd.edu/tools/index.html",
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z" />
+	            },
+	            {
+	              title: "Tools, Skills, and MCP",
+	              description:
+	                "A growing toolkit of reusable tools, MCP-based connectors, and shared skills for common campus tasks and workflows.",
+	              href: "https://tritonai.ucsd.edu/tools/index.html",
+	              icon: (
+	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3h9v9" />
                 </svg>
               ),
@@ -263,7 +273,10 @@ export default function TritonGPTContent() {
       <section className="bg-white py-20" ref={metricsRef}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Impact Metrics</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Early Signals from TritonAI</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+              A few measures that show how the work is affecting administrative workflows, public support, and learning.
+            </p>
             <div className="w-20 h-1 bg-blue-800 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
@@ -273,8 +286,8 @@ export default function TritonGPTContent() {
                 <div className="text-5xl font-bold text-slate-800 mb-2 transition-all duration-300 group-hover:scale-110">
                   <AnimatedNumber end={91} isVisible={metricsVisible} />%
                 </div>
-                <div className="text-slate-700 font-medium">Time Saved on Contract Review</div>
-                <div className="text-sm text-slate-500 mt-2">120 min → 11 min</div>
+                <div className="text-slate-700 font-medium">Faster Contract Review</div>
+                <div className="text-sm text-slate-500 mt-2">120 minutes to 11 minutes on average</div>
               </div>
             </div>
             <div className="card-3d text-center p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-100">
@@ -284,27 +297,27 @@ export default function TritonGPTContent() {
                   <AnimatedNumber end={83} isVisible={metricsVisible} />%
                 </div>
                 <div className="text-rose-700 font-medium">Faster Job Description Drafting</div>
-                <div className="text-sm text-rose-500 mt-2">30 min → 5 min</div>
+                <div className="text-sm text-rose-500 mt-2">30 minutes to 5 minutes on average</div>
               </div>
             </div>
             <div className="card-3d text-center p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-200">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-orange-400/0 group-hover:from-amber-400/10 group-hover:to-orange-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl font-bold text-amber-600 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={73} suffix="K+" isVisible={metricsVisible} />
+                  $<AnimatedNumber end={300} isVisible={metricsVisible} />K
                 </div>
-                <div className="text-amber-700 font-medium">Total Users Served</div>
-                <div className="text-sm text-amber-600 mt-2">Equal access for every employee and student</div>
+                <div className="text-amber-700 font-medium">Recurring Annual Savings</div>
+                <div className="text-sm text-amber-600 mt-2">From replacing third-party public support tooling</div>
               </div>
             </div>
             <div className="card-3d text-center p-8 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 to-teal-400/0 group-hover:from-cyan-400/10 group-hover:to-teal-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl font-bold text-cyan-700 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={80} isVisible={metricsVisible} />%
+                  <AnimatedNumber end={81} isVisible={metricsVisible} />%
                 </div>
-                <div className="text-teal-700 font-medium">Improved Policy Search Accuracy</div>
-                <div className="text-sm text-teal-600 mt-2">Across all departments</div>
+                <div className="text-teal-700 font-medium">Student Learning Impact</div>
+                <div className="text-sm text-teal-600 mt-2">Reported the tutor helped them understand concepts</div>
               </div>
             </div>
           </div>
@@ -313,63 +326,50 @@ export default function TritonGPTContent() {
 
       {/* Strategic Vision */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">The Strategic Shift: From Chatbots to Agentic Workflows</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">How TritonAI Is Taking Shape</h2>
+        <p className="text-lg text-gray-600 max-w-4xl mb-10">
+          TritonAI is being built around a few practical principles: governed infrastructure for sensitive work, shared access instead of isolated pilots,
+          tools designed around specific campus pain points, and an architecture that can evolve from assistants toward supervised agency.
+        </p>
 
-        <div className="prose prose-lg max-w-none space-y-8">
-          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Institutional Scale &amp; Service Complexity</h3>
-            <p className="text-gray-700 mb-4">UC San Diego manages a complex operational environment:</p>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex items-start gap-3 group">
-                <svg className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="group-hover:translate-x-1 transition-transform inline-block">45,000+ students across six undergraduate colleges</span>
-              </li>
-              <li className="flex items-start gap-3 group">
-                <svg className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="group-hover:translate-x-1 transition-transform inline-block">28,000+ staff and faculty members</span>
-              </li>
-              <li className="flex items-start gap-3 group">
-                <svg className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0 transition-transform group-hover:scale-125" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="group-hover:translate-x-1 transition-transform inline-block">Billions in research funding across multiple disciplines</span>
-              </li>
-            </ul>
-            <p className="text-gray-700 mt-4">
-              Despite vast data resources, the university was <span className="font-semibold text-blue-700">&quot;data-rich but information-poor,&quot;</span> with uneven access to policy and service knowledge creating operational friction.
-            </p>
-          </div>
-
-          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Sovereign Infrastructure as a Feature</h3>
-            <p className="text-gray-700 leading-relaxed">
-              On-prem hosting at SDSC enables secure access to sensitive systems (HR, Finance) that cloud models can&apos;t safely touch.
-              TritonGPT delivers enterprise-grade controls, P3 data compliance, and zero per-token costs—so scale is a design choice,
-              not a budget risk.
-            </p>
-          </div>
-
-          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Ground AI in Institutional Reality</h3>
-            <p className="text-gray-700 leading-relaxed">
-              TritonGPT combines curated policy, knowledge base content, and decision logs with faculty co-design to keep answers grounded in how
-              the university actually operates. This alignment with real-time institutional context turns AI from a novelty into a trusted
-              service layer.
-            </p>
-          </div>
-
-          <div className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Move from Assisting to Doing</h3>
-            <p className="text-gray-700 leading-relaxed">
-              We started with high-impact workflows like contract review and policy search, then expanded into agent-ready use cases.
-              The next phase moves beyond chat into action with Model Context Protocol (MCP)-enabled workflows that can trigger
-              secure tasks on behalf of users—without the &quot;boil the ocean&quot; trap.
-            </p>
-          </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: 'Trust Is Infrastructure',
+              description:
+                'Sensitive work in HR, finance, legal, and student support needs governed infrastructure. TritonAI uses on-prem resources when data must stay on campus and approved hosted services when agreements provide the right security and scale.',
+            },
+            {
+              title: 'Make AI a Shared Utility',
+              description:
+                'Shared infrastructure and zero-variable-cost access make experimentation easier for more people. The goal is not a small number of premium tools, but broad and equitable access to useful ones.',
+            },
+            {
+              title: 'Solve Specific Pain Points',
+              description:
+                'The strongest early use cases have been concrete ones: contract review, public support, search, scheduling, and instructional support. Focused tools create trust faster than generic chat.',
+            },
+            {
+              title: 'Meet People in the Workflow',
+              description:
+                'TritonAI is showing up in Blink, public websites, teaching tools, mobile experiences, and departmental applications. Adoption improves when AI appears where work is already happening.',
+            },
+            {
+              title: 'Stay Model-Agnostic',
+              description:
+                'The architecture is built around gateways, connectors, and governance rather than a single provider. That keeps campus teams flexible as models and commercial terms change.',
+            },
+            {
+              title: 'Prepare for Agency',
+              description:
+                'The next step is moving from answering questions to completing supervised multi-step work. APIs, reusable skills, connectors, and observability are the pieces that make that shift practical.',
+            },
+          ].map((principle) => (
+            <div key={principle.title} className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{principle.title}</h3>
+              <p className="text-gray-700 leading-relaxed">{principle.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -378,7 +378,7 @@ export default function TritonGPTContent() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">TritonAI in Action</h2>
-            <p className="text-xl text-gray-600">Assistants and agentic workflows from the TritonAI portfolio, running on TritonGPT.</p>
+            <p className="text-xl text-gray-600">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
           </div>
           <div className="grid grid-cols-1 gap-8">
             {[
@@ -439,7 +439,12 @@ export default function TritonGPTContent() {
       {/* Use Cases */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Implementation Use Cases</h2>
+          <div className="max-w-4xl mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Examples Across the TritonAI Portfolio</h2>
+            <p className="text-lg text-gray-600">
+              These are not generic chatbots. They are focused tools built around specific service, instructional, research, and administrative workflows where grounded context and institutional trust matter.
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Dynamic color cycling for assistant cards */}
@@ -712,48 +717,52 @@ export default function TritonGPTContent() {
 
       {/* Future Roadmap */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">Future Roadmap: 2026 and Beyond</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Where TritonAI Is Going Next</h2>
+        <p className="text-lg text-gray-600 max-w-4xl mb-12">
+          The next phase expands beyond chat into a broader tools hub: model access for developers, more embedded campus experiences,
+          workflow orchestration, observability, and new support for academic and administrative use cases.
+        </p>
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              title: "Agentic AI",
-              desc: "Transition from chat to action using Model Context Protocol (MCP)",
+              title: "Transcript Verification",
+              desc: "OCR and transcript matching workflows for enrollment-related review.",
               color: "blue",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>
             },
             {
-              title: "Build Your Own Assistant",
-              desc: "No-code self-service department bot creation",
+              title: "Instructional AI Expansion",
+              desc: "More course pilots, faculty tooling, and simpler assistant creation for instructors.",
               color: "purple",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" /></svg>
             },
             {
-              title: "Voice-Activated Agents",
-              desc: "Natural voice command interaction",
+              title: "Campus Model APIs",
+              desc: "Direct access to local and commercial models through one governed gateway.",
               color: "pink",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" /></svg>
             },
             {
-              title: "Enrollment Management Automation",
-              desc: "Automated transcript verification",
+              title: "Mobile Integration",
+              desc: "Bringing TritonGPT-powered support into the UC San Diego mobile experience.",
               color: "cyan",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
             },
             {
-              title: "Risk-Based Research Review",
-              desc: "Algorithm-driven proposal assessment",
+              title: "IT Observability Pilot",
+              desc: "AI-assisted detection and response for system anomalies and operations signals.",
               color: "emerald",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
             },
             {
-              title: "Advising Support Agents",
-              desc: "Specialized tier-one academic advising",
+              title: "Academic Advising Agent",
+              desc: "Proof-of-concept support for tier-one academic advising questions and triage.",
               color: "indigo",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" /></svg>
             },
             {
-              title: "Multimodal Integration",
-              desc: "Video and audio institutional data processing",
+              title: "Agent Builder and Workflow Tools",
+              desc: "Low-code orchestration, reusable skills, and connectors for supervised agent workflows.",
               color: "rose",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
@@ -797,12 +806,12 @@ export default function TritonGPTContent() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-8 animate-fade-in">What We&apos;re Learning from TritonGPT</h2>
+          <h2 className="text-4xl font-bold mb-8 animate-fade-in">What We&apos;re Learning Through TritonAI</h2>
           <p className="text-2xl text-blue-100 leading-relaxed mb-8 animate-slide-up">
-            One lesson from TritonGPT is that AI becomes more useful in higher education when it is grounded in institutional context, governance, and everyday work. The technical stack matters, but so do trust, adoption, and the ability to learn with campus partners over time.
+            The clearest lesson so far is that institutional AI works best when it is treated as shared infrastructure rather than a collection of disconnected demos. Secure hosting matters, but so do good knowledge sources, reusable connectors, governance, and close partnership with the people doing the work.
           </p>
           <div className="card-3d inline-block px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <p className="text-blue-100 italic">Institutional AI works best when it grows from local context</p>
+            <p className="text-blue-100 italic">TritonAI is one way of learning how shared institutional AI can become practical, trusted, and reusable.</p>
           </div>
         </div>
       </section>
@@ -812,7 +821,7 @@ export default function TritonGPTContent() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Compare Notes?</h2>
           <p className="text-xl text-gray-600 mb-8">
-            If you&apos;re exploring similar questions in higher education, I&apos;d be glad to hear what your institution is learning.
+            If you&apos;re building something similar in higher education, I&apos;d be glad to compare notes and hear what your institution is learning.
           </p>
           <Link
             href="/contact"

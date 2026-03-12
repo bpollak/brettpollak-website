@@ -38,7 +38,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/tritongpt" className="text-slate-600 hover:text-blue-700 transition-colors">
-                  TritonGPT
+                  TritonAI
                 </Link>
               </li>
               <li>
@@ -68,7 +68,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/tritongpt" className="text-slate-600 hover:text-blue-700 transition-colors">
-                  TritonGPT Case Study
+                  TritonAI Overview
                 </Link>
               </li>
               <li>
