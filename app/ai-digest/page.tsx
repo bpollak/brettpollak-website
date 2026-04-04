@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 
 export default function AiDigestPage() {
   const { weekLabel, publishedThrough, digestCount, headlineCount, days } = weeklyAiDigestData;
+  const daysNewestFirst = [...days].sort((a, b) => b.isoDate.localeCompare(a.isoDate));
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/40" id="main-content">
@@ -63,7 +64,7 @@ export default function AiDigestPage() {
 
       <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="space-y-12 md:space-y-14">
-          {days.map((day) => (
+          {daysNewestFirst.map((day) => (
             <article
               key={day.isoDate}
               className="rounded-3xl border border-slate-200 bg-white/95 shadow-sm overflow-hidden"
