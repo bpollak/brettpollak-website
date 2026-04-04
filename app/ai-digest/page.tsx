@@ -30,7 +30,7 @@ export default function AiDigestPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/40" id="main-content">
-      <section className="max-w-6xl mx-auto px-6 pt-24 pb-12">
+      <section className="max-w-7xl mx-auto px-6 md:px-8 pt-24 pb-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-800 text-sm font-semibold rounded-full mb-8">
           AI DIGEST
         </div>
@@ -61,7 +61,7 @@ export default function AiDigestPage() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 pb-24">
+      <section className="max-w-7xl mx-auto px-6 md:px-8 pb-24">
         <div className="space-y-8">
           {days.map((day) => (
             <article
@@ -79,9 +79,9 @@ export default function AiDigestPage() {
                   </div>
                 </div>
               </div>
-              <div className="px-8 py-7">
+              <div className="px-8 md:px-10 xl:px-12 py-7 md:py-8">
                 <div
-                  className="prose prose-slate max-w-none prose-p:text-[1.05rem] prose-p:leading-8 prose-li:text-[1.05rem] prose-li:leading-8 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-hr:border-slate-200 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:bg-blue-50/70 [&_a]:px-1 [&_a]:rounded-sm [&_a]:transition-colors hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900 hover:[&_a]:bg-blue-100"
+                  className="prose prose-slate max-w-none 2xl:max-w-[110ch] prose-p:text-[1.08rem] prose-p:leading-8 prose-li:text-[1.08rem] prose-li:leading-8 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-hr:border-slate-200 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:bg-blue-50/70 [&_a]:px-1 [&_a]:rounded-sm [&_a]:transition-colors hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900 hover:[&_a]:bg-blue-100"
                   dangerouslySetInnerHTML={{ __html: renderMarkdown(day.raw) }}
                 />
               </div>
