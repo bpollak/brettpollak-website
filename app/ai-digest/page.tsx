@@ -81,7 +81,7 @@ export default function AiDigestPage() {
               </div>
               <div className="px-8 py-7">
                 <div
-                  className="prose prose-slate max-w-none prose-p:text-[1.05rem] prose-p:leading-8 prose-li:text-[1.05rem] prose-li:leading-8 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-a:text-blue-700 hover:prose-a:text-blue-900 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-blue-300 hover:prose-a:decoration-blue-700 prose-hr:border-slate-200 [&_a]:font-medium"
+                  className="prose prose-slate max-w-none prose-p:text-[1.05rem] prose-p:leading-8 prose-li:text-[1.05rem] prose-li:leading-8 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-hr:border-slate-200 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:bg-blue-50/70 [&_a]:px-1 [&_a]:rounded-sm [&_a]:transition-colors hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900 hover:[&_a]:bg-blue-100"
                   dangerouslySetInnerHTML={{ __html: renderMarkdown(day.raw) }}
                 />
               </div>
