@@ -106,7 +106,13 @@ export default function Products() {
           >
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 flex items-center justify-center p-12">
-                <img src="/henry-mission-control.png" alt="Henry - Mission Control" className="w-full rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                <Image
+                  src="/henry-mission-control.png"
+                  alt="Henry - Mission Control"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <div className="p-12 flex flex-col justify-center">
                 <div className="inline-block px-3 py-1 bg-blue-50 text-blue-800 text-xs font-bold rounded-full mb-4 w-fit border border-blue-200">
@@ -154,7 +160,13 @@ export default function Products() {
           >
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-red-950 to-slate-900 flex items-center justify-center p-12">
-                <img src="/pdf-remediator.png" alt="PDF Remediator" className="w-full rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                <Image
+                  src="/pdf-remediator.png"
+                  alt="PDF Remediator"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <div className="p-12 flex flex-col justify-center">
                 <div className="inline-block px-3 py-1 bg-red-50 text-red-800 text-xs font-bold rounded-full mb-4 w-fit border border-red-200">
@@ -202,7 +214,13 @@ export default function Products() {
           >
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-violet-950 to-slate-900 flex items-center justify-center p-12">
-                <img src="/dissertation-agent.png" alt="Dissertation Formatting Agent" className="w-full rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                <Image
+                  src="/dissertation-agent.png"
+                  alt="Dissertation Formatting Agent"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <div className="p-12 flex flex-col justify-center">
                 <div className="inline-block px-3 py-1 bg-violet-50 text-violet-800 text-xs font-bold rounded-full mb-4 w-fit border border-violet-200">
