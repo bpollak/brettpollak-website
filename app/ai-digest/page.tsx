@@ -62,7 +62,7 @@ export default function AiDigestPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 pb-24">
-        <div className="space-y-8">
+        <div className="space-y-12 md:space-y-14">
           {days.map((day) => (
             <article
               key={day.isoDate}
