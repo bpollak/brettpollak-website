@@ -104,8 +104,8 @@ for (let current = new Date(weekStart); current <= today; current.setDate(curren
     continue;
   }
 
-  const markdown = fs.readFileSync(filePath, 'utf8');
-  const headlines = extractHeadlines(markdown);
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const headlines = extractHeadlines(raw);
 
   if (!headlines.length) {
     continue;
@@ -116,6 +116,7 @@ for (let current = new Date(weekStart); current <= today; current.setDate(curren
     displayDate: formatShortDate(current),
     sourceFile: filename,
     headlines,
+    raw,
   });
 }
 
@@ -131,7 +132,7 @@ const data = {
   days,
 };
 
-const fileContent = `export type WeeklyDigestDay = {\n  isoDate: string;\n  displayDate: string;\n  sourceFile: string;\n  headlines: string[];\n};\n\nexport type WeeklyDigestData = {\n  generatedAt: string;\n  weekOf: string;\n  weekEnding: string;\n  weekLabel: string;\n  publishedThrough: string;\n  digestCount: number;\n  headlineCount: number;\n  days: WeeklyDigestDay[];\n};\n\nexport const weeklyAiDigestData: WeeklyDigestData = ${JSON.stringify(data, null, 2)};\n`;
+const fileContent = `export type WeeklyDigestDay = {\n  isoDate: string;\n  displayDate: string;\n  sourceFile: string;\n  headlines: string[];\n  raw: string;\n};\n\nexport type WeeklyDigestData = {\n  generatedAt: string;\n  weekOf: string;\n  weekEnding: string;\n  weekLabel: string;\n  publishedThrough: string;\n  digestCount: number;\n  headlineCount: number;\n  days: WeeklyDigestDay[];\n};\n\nexport const weeklyAiDigestData: WeeklyDigestData = ${JSON.stringify(data, null, 2)};\n`;
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, fileContent);

@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
+import { renderMarkdown } from '@/lib/markdown';
 
 export const metadata: Metadata = {
   title: 'AI Digest | Brett Pollak',
   description:
-    'A rolling weekly view of Brett Pollak’s AI digest headlines, updated daily and reset each Monday.',
+    'A rolling weekly view of Brett Pollak’s daily AI digests, updated daily and reset each Monday.',
   alternates: {
     canonical: '/ai-digest',
   },
   openGraph: {
     title: 'AI Digest | Brett Pollak',
     description:
-      'A rolling weekly view of Brett Pollak’s AI digest headlines, updated daily and reset each Monday.',
+      'A rolling weekly view of Brett Pollak’s daily AI digests, updated daily and reset each Monday.',
     url: 'https://brettcpollak.com/ai-digest',
     siteName: 'Brett Pollak',
     type: 'article',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Digest | Brett Pollak',
     description:
-      'A rolling weekly view of Brett Pollak’s AI digest headlines, updated daily and reset each Monday.',
+      'A rolling weekly view of Brett Pollak’s daily AI digests, updated daily and reset each Monday.',
   },
 };
 
@@ -34,10 +35,10 @@ export default function AiDigestPage() {
           AI DIGEST
         </div>
         <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent tracking-tight pb-1 mb-6">
-          This Week in AI Headlines
+          This Week in AI Digest
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-10">
-          A running weekly set of headlines from the daily AI digest. This page updates as new daily digests are published and automatically rolls over to a new week every Monday.
+          A running weekly archive of the same daily AI digest content shown in Mission Control. This page updates as new daily digests are published and automatically rolls over to a new week every Monday.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
@@ -50,7 +51,7 @@ export default function AiDigestPage() {
             <div className="text-2xl font-bold text-slate-900">{digestCount}</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
-            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Headlines captured</div>
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Headlines included</div>
             <div className="text-2xl font-bold text-slate-900">{headlineCount}</div>
           </div>
         </div>
@@ -74,19 +75,15 @@ export default function AiDigestPage() {
                     <p className="text-blue-100 text-sm mt-1">Source: {day.sourceFile}</p>
                   </div>
                   <div className="inline-flex w-fit items-center rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white border border-white/15">
-                    {day.headlines.length} headline{day.headlines.length === 1 ? '' : 's'}
+                    {day.headlines.length} article{day.headlines.length === 1 ? '' : 's'}
                   </div>
                 </div>
               </div>
               <div className="px-8 py-7">
-                <ul className="space-y-4">
-                  {day.headlines.map((headline) => (
-                    <li key={headline} className="flex items-start gap-4">
-                      <span className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-gradient-to-r from-amber-500 to-orange-500" />
-                      <span className="text-lg leading-relaxed text-slate-700">{headline}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div
+                  className="prose prose-slate max-w-none prose-p:text-[1.05rem] prose-p:leading-8 prose-li:text-[1.05rem] prose-li:leading-8 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-a:text-blue-700 hover:prose-a:text-blue-900 prose-hr:border-slate-200"
+                  dangerouslySetInnerHTML={{ __html: renderMarkdown(day.raw) }}
+                />
               </div>
             </article>
           ))}
