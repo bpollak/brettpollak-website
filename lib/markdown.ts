@@ -12,6 +12,31 @@ export function inlineFormat(text: string): string {
     .replace(/(?<!href="|">)(https?:\/\/[^\s<)"]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
 }
 
+export function linkDigestHeadlines(raw: string): string {
+  const lines = raw.split('\n');
+  const out: string[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const current = lines[i];
+    const trimmed = current.trim();
+    const next = lines[i + 1]?.trim() ?? '';
+
+    const headlineMatch = trimmed.match(/^• \*\*(.+?)\*\*(.*)$/);
+    const urlMatch = next.match(/^📰\s+(https?:\/\/\S+)$/);
+
+    if (headlineMatch && urlMatch) {
+      const [, headline, rest] = headlineMatch;
+      out.push(`• [${headline}](${urlMatch[1]})${rest}`);
+      i += 1;
+      continue;
+    }
+
+    out.push(current);
+  }
+
+  return out.join('\n');
+}
+
 /** Convert a block of markdown text to simple HTML */
 export function renderMarkdown(raw: string): string {
   const lines = raw.split('\n');
