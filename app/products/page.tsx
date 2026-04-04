@@ -122,7 +122,11 @@ export default function Products() {
 
         {/* PDF Remediator */}
         <div className="mb-16 animate-slide-up delay-200">
-          <div className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d">
+          <a href="https://pdf-remediator-codex.vercel.app" target="_blank" rel="noopener noreferrer" className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative h-auto overflow-hidden">
+                <img src="/pdf-remediator.png" alt="PDF Remediator App" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
             <div className="p-12">
               <div className="inline-block px-3 py-1 bg-red-50 text-red-800 text-xs font-bold rounded-full mb-4 w-fit border border-red-200">
                 ACCESSIBILITY &amp; COMPLIANCE
@@ -154,13 +158,19 @@ export default function Products() {
                   </div>
                 </div>
               </div>
+              <div className="inline-flex items-center gap-2 text-slate-800 font-bold text-lg group-hover:gap-3 transition-all">Visit PDF Remediator<svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
             </div>
-          </div>
+            </div>
+          </a>
         </div>
 
         {/* Dissertation Formatting Agent */}
         <div className="mb-16 animate-slide-up delay-300">
-          <div className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d">
+          <a href="https://dissertation-formatter.vercel.app" target="_blank" rel="noopener noreferrer" className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative h-auto overflow-hidden">
+                <img src="/dissertation-agent.png" alt="Dissertation Formatting Agent" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
             <div className="p-12">
               <div className="inline-block px-3 py-1 bg-violet-50 text-violet-800 text-xs font-bold rounded-full mb-4 w-fit border border-violet-200">
                 ACADEMIC WORKFLOW
@@ -188,8 +198,10 @@ export default function Products() {
                   </div>
                 </div>
               </div>
+              <div className="inline-flex items-center gap-2 text-slate-800 font-bold text-lg group-hover:gap-3 transition-all">Try Dissertation Formatter<svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></div>
             </div>
-          </div>
+            </div>
+          </a>
         </div>
 
         {/* Henry / OpenClaw */}
@@ -200,6 +212,10 @@ export default function Products() {
             rel="noopener noreferrer"
             className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d"
           >
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative h-auto overflow-hidden">
+                <img src="/henry-mission-control.png" alt="Henry - Mission Control Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
             <div className="p-12">
               <div className="inline-block px-3 py-1 bg-blue-50 text-blue-800 text-xs font-bold rounded-full mb-4 w-fit border border-blue-200">
                 AI AGENT SYSTEM
