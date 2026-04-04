@@ -19,19 +19,46 @@ export function linkDigestHeadlines(raw: string): string {
   for (let i = 0; i < lines.length; i++) {
     const current = lines[i];
     const trimmed = current.trim();
-    const next = lines[i + 1]?.trim() ?? '';
-
     const headlineMatch = trimmed.match(/^• \*\*(.+?)\*\*(.*)$/);
-    const urlMatch = next.match(/^📰\s+(https?:\/\/\S+)$/);
 
-    if (headlineMatch && urlMatch) {
-      const [, headline, rest] = headlineMatch;
-      out.push(`• [${headline}](${urlMatch[1]})${rest}`);
-      i += 1;
+    if (!headlineMatch) {
+      out.push(current);
       continue;
     }
 
-    out.push(current);
+    let url: string | null = null;
+    let urlIndex = -1;
+
+    for (let j = i + 1; j < lines.length; j++) {
+      const lookahead = lines[j].trim();
+
+      if (!lookahead) {
+        break;
+      }
+
+      const nextHeadline = lookahead.match(/^• \*\*(.+?)\*\*(.*)$/);
+      if (nextHeadline) {
+        break;
+      }
+
+      const urlMatch = lookahead.match(/^📰\s+(https?:\/\/\S+)$/);
+      if (urlMatch) {
+        url = urlMatch[1];
+        urlIndex = j;
+        break;
+      }
+    }
+
+    const [, headline, rest] = headlineMatch;
+    out.push(url ? `• [${headline}](${url})${rest}` : current);
+
+    if (urlIndex !== -1) {
+      for (let j = i + 1; j < urlIndex; j++) {
+        out.push(lines[j]);
+      }
+      i = urlIndex;
+      continue;
+    }
   }
 
   return out.join('\n');
