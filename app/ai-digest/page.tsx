@@ -5,14 +5,14 @@ import { renderMarkdown } from '@/lib/markdown';
 export const metadata: Metadata = {
   title: 'AI Digest | Brett Pollak',
   description:
-    'A rolling weekly view of Brett Pollak’s daily AI digests, updated daily and reset each Monday.',
+    'A rolling weekly view of Brett Pollak’s curated daily AI digests, updated daily and reset each Monday.',
   alternates: {
     canonical: '/ai-digest',
   },
   openGraph: {
     title: 'AI Digest | Brett Pollak',
     description:
-      'A rolling weekly view of Brett Pollak’s daily AI digests, updated daily and reset each Monday.',
+      'A rolling weekly view of Brett Pollak’s curated daily AI digests, updated daily and reset each Monday.',
     url: 'https://brettcpollak.com/ai-digest',
     siteName: 'Brett Pollak',
     type: 'article',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Digest | Brett Pollak',
     description:
-      'A rolling weekly view of Brett Pollak’s daily AI digests, updated daily and reset each Monday.',
+      'A rolling weekly view of Brett Pollak’s curated daily AI digests, updated daily and reset each Monday.',
   },
 };
 
@@ -38,7 +38,7 @@ export default function AiDigestPage() {
           This Week in AI Digest
         </h1>
         <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-10">
-          A running weekly archive of the same daily AI digest content shown in Mission Control. This page updates as new daily digests are published and automatically rolls over to a new week every Monday.
+          A rolling weekly archive of curated daily AI briefings focused on major developments, product launches, enterprise shifts, and higher education implications. This page updates as new digests are published and automatically resets to a new week every Monday.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
