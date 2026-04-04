@@ -355,7 +355,7 @@ export default function Home() {
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Learn More</h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
             <Link href="/about" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-100">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-800 to-blue-900"></div>
               <div className="p-10">
@@ -402,7 +402,30 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-300">
+            <Link href="/ai-digest" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-900 to-amber-500"></div>
+              <div className="p-10">
+                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-800 group-hover:to-amber-500 transition-all">
+                  <svg className="w-6 h-6 text-blue-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6M7 4h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-900 transition-colors">
+                  AI Digest
+                </h3>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  Rolling weekly headlines from the daily AI briefing, refreshed as new digests land and reset every Monday.
+                </p>
+                <div className="flex items-center text-blue-900 font-semibold group-hover:gap-2 transition-all">
+                  View headlines
+                  <svg className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/linkedin" className="group relative bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d animate-slide-up delay-400">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-700 to-indigo-600"></div>
               <div className="p-10">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-700 group-hover:to-indigo-600 transition-all">

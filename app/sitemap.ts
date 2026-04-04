@@ -39,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${siteUrl}/ai-digest`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.85,
+    },
+    {
       url: `${siteUrl}/podcasts`,
       lastModified,
       changeFrequency: "monthly",

@@ -52,6 +52,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/ai-digest" className="text-slate-600 hover:text-blue-700 transition-colors">
+                  AI Digest
+                </Link>
+              </li>
+              <li>
                 <Link href="/podcasts" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Podcasts
                 </Link>
@@ -82,6 +87,11 @@ export default function Footer() {
               <li>
                 <Link href="/media" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Publications & Press
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-digest" className="text-slate-600 hover:text-blue-700 transition-colors">
+                  Weekly AI Digest
                 </Link>
               </li>
             </ul>
