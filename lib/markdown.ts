@@ -64,44 +64,63 @@ export function linkDigestHeadlines(raw: string): string {
   return out.join('\n');
 }
 
-function sanitizeSentence(sentence: string): string {
-  const trimmed = sentence.trim();
-  if (!trimmed) return '';
-
-  const removeIfContains = [
-    /\bBrett\b/i,
-    /\byour\b/i,
-    /\byou\b/i,
-    /\bmeeting\b/i,
-    /\bcabinet\b/i,
-    /\bslides\b/i,
-    /\bpresentation\b/i,
-    /\bconference audiences?\b/i,
-    /\bUCLA IT All Hands\b/i,
-    /\bMonday\b/i,
-    /\bWorth a callout\b/i,
-    /\bWorth a look\b/i,
-    /\bflagging to\b/i,
-  ];
-
-  if (removeIfContains.some((pattern) => pattern.test(trimmed))) {
-    return '';
-  }
-
-  return trimmed
+function sanitizePublicLine(text: string): string {
+  return text
     .replace(/\bCurated from your knowledge graph\b/gi, 'Curated from recent AI developments')
     .replace(/\bAs a Claude-heavy shop\b/gi, 'For organizations with significant Claude usage')
-    .replace(/\bFor UC San Diego, this is a useful market proof point for your own recharge-model conversations\b/gi, 'For higher education and enterprise teams, this is a useful market proof point for recharge-style adoption models')
     .replace(/\bThis matters to you on two fronts:\b/gi, 'This matters on two fronts:')
-    .replace(/\bFor TritonGPT — which already uses both ServiceNow and MCP — this is the missing control-plane layer\b/gi, 'For TritonGPT and similar enterprise AI platforms, this is the missing control-plane layer')
-    .replace(/\bFor TritonGPT's model-agnostic architecture — already using MCP — this convergence validates the bet\b/gi, 'For model-agnostic enterprise AI architectures already using MCP, this convergence validates the approach')
-    .replace(/\bThis maps directly to TritonAI adoption strategy, Gemini-in-gateway decisions, and your governance message\b/gi, 'This maps directly to TritonAI adoption strategy, Gemini-in-gateway decisions, and broader governance messaging')
-    .replace(/\bThat reinforces your Agentic AI roadmap\b/gi, 'That reinforces an Agentic AI roadmap')
-    .replace(/\bThis is the production blueprint for your AI IT Observability Pilot launching in April\b/gi, 'This is a production blueprint for an AI IT observability pilot')
-    .replace(/\bWith TritonGPT already running LiteLLM as its unifying gateway across GPT-4, Claude, and Gemini, UC San Diego is ahead of the curve — but this is a clear mandate to document and evangelize that architecture\b/gi, 'With TritonGPT already running LiteLLM as its unifying gateway across GPT-4, Claude, and Gemini, UC San Diego is ahead of the curve, and this is a clear mandate to document and evangelize that architecture')
-    .replace(/\bThis is directly relevant to TritonAI's governance framework: as you build out agentic tools and the Developer API Program enables campus builders, establishing guardrails against indirect prompt injection needs to be part of the AI governance policy before agents proliferate\b/gi, 'This is directly relevant to TritonAI\'s governance framework: as agentic tools expand and developer programs enable more builders, guardrails against indirect prompt injection need to be part of institutional AI governance policy before agents proliferate')
-    .replace(/\bFor organizations standardizing on Claude-heavy stacks, this signals Anthropic is positioning itself as the responsible enterprise AI partner\b/gi, 'This signals Anthropic is positioning itself as a responsible enterprise AI partner')
-    .replace(/\bFor higher education and enterprise teams, this is a useful market proof point for recharge-style adoption models: enterprise buyers want controllable spend, lighter pilot entry, and clearer paths from experimentation to scaled adoption\b/gi, 'This is a useful market proof point for recharge-style adoption models: enterprise buyers want controllable spend, lighter pilot entry, and clearer paths from experimentation to scaled adoption');
+    .replace(/\byour own recharge-model conversations\b/gi, 'recharge-style adoption conversations')
+    .replace(/\byour governance message\b/gi, 'broader governance messaging')
+    .replace(/\byour Agentic AI roadmap\b/gi, 'an Agentic AI roadmap')
+    .replace(/\byour AI IT Observability Pilot\b/gi, 'an AI IT observability pilot')
+    .replace(/\byour April 6 cabinet slides are finalized\b/gi, 'institutional governance materials are finalized')
+    .replace(/\byour April 6 Cabinet meeting\b/gi, 'upcoming governance discussions')
+    .replace(/\bthe April 6 Cabinet meeting\b/gi, 'upcoming governance discussions')
+    .replace(/\bApril 6 Cabinet meeting\b/gi, 'upcoming governance discussions')
+    .replace(/\bthe April 6 cabinet meeting\b/gi, 'upcoming governance discussions')
+    .replace(/\bApril 6 cabinet meeting\b/gi, 'upcoming governance discussions')
+    .replace(/\bApril 6 Cabinet\b/gi, 'upcoming governance review')
+    .replace(/\bcabinet slides\b/gi, 'governance materials')
+    .replace(/\bCabinet slides\b/g, 'Governance materials')
+    .replace(/\bcabinet meeting\b/gi, 'governance review')
+    .replace(/\bconference audiences\b/gi, 'public audiences')
+    .replace(/\bconference audience\b/gi, 'public audience')
+    .replace(/\bUCLA IT All Hands\b/gi, 'higher education leadership forums')
+    .replace(/\bASU\+GSV\b/gi, 'industry events')
+    .replace(/\bCitizen AI presentation\b/gi, 'AI governance presentation')
+    .replace(/\bprep-citizen-ai-presentation-for-cabinets-and-deans-monday\b/gi, 'ai-governance-presentation')
+    .replace(/\bai-cabinet-meeting-april-6\b/gi, 'ai-governance-review')
+    .replace(/\bWorth a callout[^.]*\.?/gi, '')
+    .replace(/\bWorth a look[^.]*\.?/gi, '')
+    .replace(/\bworth flagging to [^.]*\.?/gi, '')
+    .replace(/\bThis is the right venue to make that case\b/gi, 'This is a timely opportunity to make that case')
+    .replace(/\bFor Brett, the combination of [^.]*? means /gi, '')
+    .replace(/\bfor your calendar, meetings,? or presentations\b/gi, 'for institutional planning')
+    .replace(/\byour calendar\b/gi, 'internal planning')
+    .replace(/\byour meetings\b/gi, 'internal discussions')
+    .replace(/\byour presentation\b/gi, 'a public presentation')
+    .replace(/\byour slides\b/gi, 'presentation materials')
+    .replace(/\byour stack\b/gi, 'the stack')
+    .replace(/\byour model-agnosticism strategy\b/gi, 'a model-agnostic strategy')
+    .replace(/\byour enterprise data agent\b/gi, 'the enterprise data agent')
+    .replace(/\byour Developer API Program\b/gi, 'the Developer API Program')
+    .replace(/\byour AI governance policy\b/gi, 'institutional AI governance policy')
+    .replace(/\byour UCSD security team\b/gi, 'the UCSD security team')
+    .replace(/\byour core LLM gateway\b/gi, 'the core LLM gateway')
+    .replace(/\byour active HANA → Databricks proof-of-technology underway\b/gi, 'an active HANA → Databricks proof-of-technology')
+    .replace(/\byour on-prem TritonGPT model\b/gi, 'the on-prem TritonGPT model')
+    .replace(/\byour on-prem TritonGPT model at SDSC exists precisely to avoid these failure modes\b/gi, 'The on-prem TritonGPT model at SDSC is designed to avoid these failure modes')
+    .replace(/\byour April roadmap\b/gi, 'the April roadmap')
+    .replace(/\byour Incident Intelligence Dashboard\b/gi, 'an Incident Intelligence Dashboard')
+    .replace(/\byour AI IT Observability Pilot roadmap for April\b/gi, 'an AI IT observability pilot roadmap')
+    .replace(/\byour cabinet and conference audiences\b/gi, 'governance and public audiences')
+    .replace(/\byour institutional answer\b/gi, 'an institutional answer')
+    .replace(/\byou\b/gi, 'organizations')
+    .replace(/\byour\b/gi, 'institutional')
+    .replace(/\bBrett\b/g, 'institutional leaders')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/\s+([.,;:!?])/g, '$1')
+    .trim();
 }
 
 export function sanitizePublicDigest(raw: string): string {
@@ -117,30 +136,18 @@ export function sanitizePublicDigest(raw: string): string {
 
     if (/^💡\s+\*\*Signal:\*\*/i.test(trimmed)) {
       const text = trimmed.replace(/^💡\s+\*\*Signal:\*\*\s*/i, '');
-      const cleaned = text
-        .split(/(?<=[.!?])\s+/)
-        .map(sanitizeSentence)
-        .filter(Boolean)
-        .join(' ');
-      if (cleaned) {
-        out.push(`💡 **Signal:** ${cleaned}`);
-      }
+      const cleaned = sanitizePublicLine(text);
+      if (cleaned) out.push(`💡 **Signal:** ${cleaned}`);
       continue;
     }
 
     if (/^• /.test(trimmed)) {
-      const cleaned = trimmed
-        .split(/(?<=[.!?])\s+/)
-        .map(sanitizeSentence)
-        .filter(Boolean)
-        .join(' ');
-      if (cleaned) {
-        out.push(cleaned);
-      }
+      const cleaned = sanitizePublicLine(trimmed);
+      if (cleaned) out.push(cleaned);
       continue;
     }
 
-    out.push(line);
+    out.push(sanitizePublicLine(line));
   }
 
   return out.join('\n');
