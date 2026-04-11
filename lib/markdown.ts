@@ -216,7 +216,13 @@ export function renderMarkdown(raw: string): string {
       continue;
     }
 
-    if (/^[-•] /.test(t)) {
+    // Bullet list items. Recognizes:
+    //   • or -   → standard bullets; the marker is stripped
+    //   📅       → calendar-emoji bullets used for upcoming events in the UCSD newsletter
+    //   📼       → videotape-emoji bullets used for recent recordings in the UCSD newsletter
+    // For emoji bullets the emoji is preserved inside the <li> as a visual marker;
+    // for plain bullets the marker is stripped as usual.
+    if (/^(?:[-•]|📅|📼) /.test(t)) {
       if (inOrderedList) {
         out.push('</ol>');
         inOrderedList = false;
@@ -225,7 +231,8 @@ export function renderMarkdown(raw: string): string {
         out.push('<ul>');
         inList = true;
       }
-      out.push(`<li>${inlineFormat(t.replace(/^[-•] /, ''))}</li>`);
+      const itemText = /^[-•] /.test(t) ? t.replace(/^[-•] /, '') : t;
+      out.push(`<li>${inlineFormat(itemText)}</li>`);
       continue;
     }
 

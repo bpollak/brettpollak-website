@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import { ucsdAiNewsletterData } from '@/lib/ucsdAiNewsletterData';
-import { linkDigestHeadlines, renderMarkdown, sanitizePublicDigest } from '@/lib/markdown';
+import { renderMarkdown } from '@/lib/markdown';
+
+// Intentionally NOT using sanitizePublicDigest or linkDigestHeadlines here.
+// Those utilities were built for the /ai-digest page (Brett's personal daily
+// digest archive) and rewrite second-person pronouns ("you" → "organizations",
+// "your" → "institutional") to scrub personal references before publication.
+// This newsletter is written directly TO UCSD staff in second person, so that
+// scrubbing would corrupt the voice. The agent's draft is already audience-safe.
 
 export const metadata: Metadata = {
   title: 'UCSD AI News | Brett Pollak',
@@ -108,7 +115,7 @@ export default function UcsdAiNewsPage() {
                     <div
                       className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-h2:mb-4 prose-h2:mt-10 prose-h2:text-xl prose-h2:font-bold prose-h3:mb-3 prose-hr:border-slate-200 prose-hr:my-8 [&_ul>li]:mb-6 [&_ol>li]:mb-6 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:transition-colors hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900"
                       dangerouslySetInnerHTML={{
-                        __html: renderMarkdown(sanitizePublicDigest(linkDigestHeadlines(edition.raw))),
+                        __html: renderMarkdown(edition.raw),
                       }}
                     />
                   </div>
