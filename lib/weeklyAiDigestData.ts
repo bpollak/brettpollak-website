@@ -18,14 +18,26 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-11T20:08:30.949Z",
+  "generatedAt": "2026-04-11T20:27:22.287Z",
   "weekOf": "2026-04-06",
   "weekEnding": "2026-04-12",
   "weekLabel": "Week of April 6–12, 2026",
   "publishedThrough": "April 11, 2026",
-  "digestCount": 5,
-  "headlineCount": 30,
+  "digestCount": 6,
+  "headlineCount": 34,
   "days": [
+    {
+      "isoDate": "2026-04-06",
+      "displayDate": "Monday, April 6",
+      "sourceFile": "ai-news-digest-2026-04-06.md",
+      "headlines": [
+        "LLM News Today (April 2026) – AI Model Releases",
+        "OpenAI Release Notes - April 2026 Latest Updates",
+        "ChatGPT vs Claude vs Gemini vs DeepSeek [April 2026 Benchmarks]",
+        "Daily AI Agent News - Last 7 Days"
+      ],
+      "raw": "# AI Intelligence Briefing - April 6, 2026\n*Curated from knowledge graph*\n*(Backfilled on 2026-04-11 — original cron run was failing.)*\n\n• **LLM News Today (April 2026) – AI Model Releases** — The roundup highlights enterprise AI movement around agents, bank testing, and security tooling, all of which reinforce that the market is shifting toward governed AI infrastructure. That matters for TritonAI because Brett’s LiteLLM gateway story is exactly the kind of control plane this category is converging on.\n  🔗 Graph: Agentic AI, LiteLLM Enterprise\n  📰 https://llm-stats.com/ai-news\n\n• **OpenAI Release Notes - April 2026 Latest Updates** — OpenAI’s release cadence remains relevant to TritonAI’s model-routing and procurement decisions, especially with rapid workflow and MCP-adjacent improvements in the ecosystem. Brett’s team needs to keep a close eye on platform changes that affect developer workflows and agent orchestration.\n  🔗 Graph: OpenAI, Developer API Program\n  📰 https://releasebot.io/updates/openai\n\n• **ChatGPT vs Claude vs Gemini vs DeepSeek [April 2026 Benchmarks]** — Benchmark comparisons keep showing the model race is still moving fast, with Gemini and GPT-5.4 both staying highly competitive. For TritonAI, that reinforces the need to stay model-agnostic rather than over-committing to any single vendor.\n  🔗 Graph: Google, OpenAI, Anthropic\n  📰 https://tech-insider.org/chatgpt-vs-claude-vs-deepseek-vs-gemini-2026/\n\n• **Daily AI Agent News - Last 7 Days** — The enterprise agent market is maturing quickly, with more applications adding agent workflows for automation and reconciliation. That’s directly aligned with Brett’s agentic AI direction and the campus opportunity to build higher-ed specific agent services.\n  🔗 Graph: Agentic AI, Enterprise Data Agent\n  📰 https://aiagentstore.ai/ai-agent-news/this-week\n\n💡 Signal: Even with a thin exact-date window, the pattern is clear, enterprise AI is consolidating around agents, governance, and control planes. That is very much TritonAI’s lane, and it strengthens Brett’s case for model-agnostic, policy-aware infrastructure.\n"
+    },
     {
       "isoDate": "2026-04-07",
       "displayDate": "Tuesday, April 7",
