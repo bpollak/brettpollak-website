@@ -23,6 +23,7 @@ type Cron = {
 
 const CRONS: Cron[] = [
   { hour: 3, minute: 0, label: 'Memory dreaming', role: 'synthesis', note: 'short-term → long-term' },
+  { hour: 4, minute: 0, label: 'Confluence sync', role: 'accumulation', note: '9 UCSD ITS spaces' },
   { hour: 5, minute: 0, label: 'Weekly newsletter', role: 'publication', note: 'Mondays only' },
   { hour: 6, minute: 25, label: 'Calendar briefing', role: 'accumulation' },
   { hour: 6, minute: 35, label: 'AI news digest', role: 'accumulation' },

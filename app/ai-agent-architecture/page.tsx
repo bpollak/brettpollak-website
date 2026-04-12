@@ -316,6 +316,13 @@ export default function AiAgentArchitecturePage() {
             variations. A periodic dedup pass merges these at the graph level so the wiki
             stays clean.
           </p>
+          <p>
+            The wiki is also fed from outside the personal stream. A nightly sync mirrors
+            2,500+ pages from nine institutional Confluence spaces &mdash; runbooks, team
+            documentation, service desk procedures, build &amp; release practices, AI governance
+            &mdash; into the same knowledge layer. &ldquo;Your work world&rdquo; is no longer just
+            what you touch directly; it&rsquo;s also what your org has already written down.
+          </p>
           <p className="text-slate-900 font-semibold border-l-4 border-amber-500 pl-5 py-2 bg-amber-50/50 rounded-r-lg">
             The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
             &mdash; slow, rich, narrative. Together they&rsquo;re a cheap institutional memory
@@ -659,6 +666,21 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 12, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Confluence integration (hybrid)</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Added the institutional Confluence wiki as a sixth data source. Hybrid setup:
+              a nightly 4&nbsp;AM cron mirrors 2,500+ pages from nine UCSD ITS spaces (AI Hub,
+              WTS, BIA, Service Desk KB, Endpoint Management, Hybrid Cloud, Enterprise
+              Architecture, Build &amp; Release, CI Ops) into the local cache, and an Atlassian
+              MCP server provides realtime search for fresh lookups. Wiki-ingest&rsquo;s strategic
+              doc scanner auto-promotes high-signal pages into the Layer 2 wiki nightly.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-600 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">

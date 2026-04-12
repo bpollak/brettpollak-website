@@ -32,6 +32,7 @@ const DATA_SOURCES: Item[] = [
   { label: 'Meetings', note: 'Granola transcripts' },
   { label: 'Web & AI news', note: 'filtered searches' },
   { label: 'Campus signals', note: 'forums, status pages' },
+  { label: 'Institutional wiki', note: 'Confluence · 9 spaces' },
   { label: 'Your conversations', note: 'Telegram chat' },
 ];
 
