@@ -721,22 +721,23 @@ export default function AiAgentArchitecturePage() {
       <section className="max-w-3xl mx-auto px-6 pb-24 pt-8 border-t border-slate-200 space-y-5">
         <div className="rounded-2xl border border-slate-200 bg-white/90 p-5">
           <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-2">
-            Acknowledgment
+            Built on
           </div>
           <p className="text-sm text-slate-700 leading-7">
-            The memory system described on this page &mdash; the knowledge graph, wiki, daily
-            accumulation crons, weekly signal synthesis, and the three-layer context loading
-            strategy &mdash; was developed using{' '}
+            The foundation of this ecosystem is{' '}
             <a
               href="https://openclaw.ai"
               className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
             >
               OpenClaw
             </a>
-            {' '}as the underlying framework. OpenClaw provides the agent runtime, cron scheduler,
-            Telegram integration, and multi-model gateway. Everything else on this page is work
-            layered on top of that foundation, tailored and extended over time to fit a specific
-            work context.
+            {' '}&mdash; a personal AI assistant framework that provides the cron scheduler,
+            agent runtime, Telegram integration, multi-model gateway, and plugin SDK that the
+            entire pipeline runs on. What you see here isn&rsquo;t OpenClaw out of the box;
+            it&rsquo;s OpenClaw tailored, extended, and reshaped over many months to fit a specific
+            work context. The accumulation pipeline, knowledge graph reconciliation, three-layer
+            context loading strategy, and scaling vision are all layered on top of that
+            foundation. Without OpenClaw as the starting point, none of this would have shipped.
           </p>
         </div>
         <p className="text-sm text-slate-500 leading-7">
