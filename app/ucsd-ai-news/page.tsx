@@ -125,9 +125,9 @@ export default function UcsdAiNewsPage() {
                         prose-h2:mt-14 prose-h2:mb-6
                         prose-h2:pb-3
                         prose-h2:border-b-2 prose-h2:border-blue-900/20
-                        prose-h3:text-xs prose-h3:uppercase prose-h3:tracking-[0.18em]
+                        prose-h3:text-sm prose-h3:uppercase prose-h3:tracking-[0.18em]
                         prose-h3:text-slate-500 prose-h3:font-semibold
-                        prose-h3:mt-10 prose-h3:mb-4
+                        prose-h3:mt-16 prose-h3:mb-5
                         prose-h3:pb-2 prose-h3:border-b prose-h3:border-slate-200
                         prose-hr:border-slate-200 prose-hr:my-10
                         [&_ul>li]:mb-8 [&_ol>li]:mb-8
