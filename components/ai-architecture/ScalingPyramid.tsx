@@ -73,7 +73,7 @@ export default function ScalingPyramid() {
     <figure className="w-full my-10" role="img" aria-labelledby="scaling-pyramid-title">
       <svg
         viewBox="0 0 720 560"
-        className="w-full h-auto max-w-3xl mx-auto"
+        className="w-full h-auto max-w-3xl"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="scaling-pyramid-title">Scaling pyramid — personal to campus</title>

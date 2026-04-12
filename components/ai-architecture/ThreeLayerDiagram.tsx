@@ -15,7 +15,7 @@ export default function ThreeLayerDiagram() {
     <figure className="w-full my-10" role="img" aria-labelledby="three-layer-title">
       <svg
         viewBox="0 0 720 520"
-        className="w-full h-auto max-w-3xl mx-auto"
+        className="w-full h-auto max-w-3xl"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="three-layer-title">Three-layer context loading architecture</title>
