@@ -16,6 +16,7 @@ export default function Header() {
     { href: '/products', label: 'Products' },
     { href: '/media', label: 'Media' },
     { href: '/ai-digest', label: 'AI Digest' },
+    { href: '/ai-agent-architecture', label: 'Agent Arch' },
     { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
     { href: '/podcasts', label: 'Podcasts' },
     { href: '/linkedin', label: 'LinkedIn' },
