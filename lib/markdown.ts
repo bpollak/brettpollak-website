@@ -66,6 +66,7 @@ export function linkDigestHeadlines(raw: string): string {
 
 function sanitizePublicLine(text: string): string {
   return text
+    .replace(/\bBrett[’']s\b/g, 'the')
     .replace(/\bCurated from your knowledge graph\b/gi, 'Curated from recent AI developments')
     .replace(/\bAs a Claude-heavy shop\b/gi, 'For organizations with significant Claude usage')
     .replace(/\bThis matters to you on two fronts:\b/gi, 'This matters on two fronts:')
@@ -85,9 +86,14 @@ function sanitizePublicLine(text: string): string {
     .replace(/\bcabinet meeting\b/gi, 'governance review')
     .replace(/\bconference audiences\b/gi, 'public audiences')
     .replace(/\bconference audience\b/gi, 'public audience')
+    .replace(/\bconference narrative\b/gi, 'public narrative')
     .replace(/\bUCLA IT All Hands\b/gi, 'higher education leadership forums')
     .replace(/\bASU\+GSV\b/gi, 'industry events')
     .replace(/\bCitizen AI presentation\b/gi, 'AI governance presentation')
+    .replace(/\bAI governance presentation for cabinet scheduled\b/gi, 'AI governance presentation is scheduled')
+    .replace(/\bcabinet and Regents briefings\b/gi, 'leadership and Regents briefings')
+    .replace(/\bChuck Rose's Service Desk\b/gi, 'the Service Desk')
+    .replace(/\bChuck Rose’s Service Desk\b/gi, 'the Service Desk')
     .replace(/\bprep-citizen-ai-presentation-for-cabinets-and-deans-monday\b/gi, 'ai-governance-presentation')
     .replace(/\bai-cabinet-meeting-april-6\b/gi, 'ai-governance-review')
     .replace(/\bWorth a callout[^.]*\.?/gi, '')
