@@ -113,26 +113,22 @@ export default function UcsdAiNewsPage() {
                   </div>
                   <div className="px-8 py-7">
                     <div
-                      className="prose prose-slate max-w-none
-                        prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5
-                        prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4
-                        prose-ul:my-6 prose-ol:my-6
-                        prose-strong:text-slate-900
-                        prose-h2:text-slate-900
-                        prose-h2:text-2xl md:prose-h2:text-3xl
-                        prose-h2:font-bold
-                        prose-h2:tracking-tight
-                        prose-h2:mt-14 prose-h2:mb-6
-                        prose-h2:pb-3
-                        prose-h2:border-b-2 prose-h2:border-blue-900/20
-                        prose-h3:text-sm prose-h3:uppercase prose-h3:tracking-[0.18em]
-                        prose-h3:text-slate-500 prose-h3:font-semibold
-                        prose-h3:mt-16 prose-h3:mb-5
-                        prose-h3:pb-2 prose-h3:border-b prose-h3:border-slate-200
-                        prose-hr:border-slate-200 prose-hr:my-10
-                        [&_ul>li]:mb-8 [&_ol>li]:mb-8
-                        [&_ul]:pl-0 [&_ul>li]:pl-0 [&_ul>li]:list-none
-                        [&_ul>li]:border-l-2 [&_ul>li]:border-slate-100 [&_ul>li]:pl-5
+                      className="max-w-none text-slate-700
+                        [&_p]:text-[1.06rem] [&_p]:leading-9 [&_p]:my-5 [&_p]:text-slate-700
+                        [&_ul]:my-6 [&_ul]:pl-0
+                        [&_ul>li]:list-none [&_ul>li]:pl-5 [&_ul>li]:mb-8
+                        [&_ul>li]:border-l-2 [&_ul>li]:border-slate-100
+                        [&_ul>li]:text-[1.06rem] [&_ul>li]:leading-9 [&_ul>li]:text-slate-700
+                        [&_strong]:text-slate-900 [&_strong]:font-bold
+                        [&_h2]:text-2xl md:[&_h2]:text-3xl
+                        [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-slate-900
+                        [&_h2]:mt-16 [&_h2]:mb-6 [&_h2]:pb-3
+                        [&_h2]:border-b-2 [&_h2]:border-blue-900/20
+                        [&_h3]:text-sm [&_h3]:uppercase [&_h3]:tracking-[0.18em]
+                        [&_h3]:text-slate-500 [&_h3]:font-semibold
+                        [&_h3]:mt-16 [&_h3]:mb-5 [&_h3]:pb-2
+                        [&_h3]:border-b [&_h3]:border-slate-200
+                        [&_hr]:border-slate-200 [&_hr]:my-10
                         [&_a]:font-semibold [&_a]:text-blue-800
                         [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600
                         [&_a]:transition-colors
