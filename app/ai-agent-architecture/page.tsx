@@ -114,9 +114,9 @@ export default function AiAgentArchitecturePage() {
               collaborators, what have you decided, what&rsquo;s recurring)
             </li>
             <li>
-              <strong>Retrieves</strong> the right context at the right moment (when you mention
-              Sandra, the AI remembers your 18 meetings with her &mdash; not every meeting
-              you&rsquo;ve ever had)
+              <strong>Retrieves</strong> the right context at the right moment &mdash; when you
+              mention a colleague by name, the AI remembers your meeting history with that person,
+              not every meeting you&rsquo;ve ever had
             </li>
           </ul>
           <p>
@@ -172,17 +172,17 @@ export default function AiAgentArchitecturePage() {
           <p>
             <strong className="text-slate-900">Layer 2 &mdash; Loaded on Trigger.</strong> When
             the conversation mentions a person, technology, decision, project, or trend, the
-            agent proactively reads the matching wiki page before responding. Mention
-            &ldquo;Sandra&rdquo; and the agent reads{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/people/sandra-chalmers.md</code>.
-            Mention &ldquo;LiteLLM&rdquo; and it reads{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/tech-stack/litellm-enterprise.md</code>.
-            Ask &ldquo;why did we go model-agnostic?&rdquo; and it reads{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            This is the biggest unlock in the whole architecture: 105 wiki pages that would
-            otherwise sit unused become a live reference library, pulled in silently the moment
-            they&rsquo;re relevant. The knowledge feels like the AI &ldquo;just knows,&rdquo; not
-            like it&rsquo;s performing a lookup.
+            agent proactively reads the matching wiki page before responding. Mention a colleague
+            by name and the agent reads{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/people/{'{person-id}'}.md</code>.
+            Mention a technology or vendor and it reads{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
+            Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/decisions/</code>{' '}
+            for a matching entry. This is the biggest unlock in the whole architecture: 105 wiki
+            pages that would otherwise sit unused become a live reference library, pulled in
+            silently the moment they&rsquo;re relevant. The knowledge feels like the AI
+            &ldquo;just knows,&rdquo; not like it&rsquo;s performing a lookup.
           </p>
           <p>
             <strong className="text-slate-900">Layer 3 &mdash; Loaded on Explicit Request.</strong>{' '}
@@ -311,9 +311,10 @@ export default function AiAgentArchitecturePage() {
           <p>
             <strong className="text-slate-900">Dedup:</strong> the graph is updated from multiple
             sources (meeting transcripts, calendar, manual edits) so duplicate nodes creep in
-            &mdash; &ldquo;Dan Suchy&rdquo; vs &ldquo;Daniel Suchy,&rdquo; &ldquo;Sandra Chalmers&rdquo;
-            vs &ldquo;Chalmers, Sandra.&rdquo; A periodic dedup pass merges reversed-name
-            duplicates at the graph level so the wiki stays clean.
+            &mdash; the same person appearing under both &ldquo;First Last&rdquo; and
+            &ldquo;Last, First&rdquo; name formats, or the same vendor under slight spelling
+            variations. A periodic dedup pass merges these at the graph level so the wiki
+            stays clean.
           </p>
           <p className="text-slate-900 font-semibold border-l-4 border-amber-500 pl-5 py-2 bg-amber-50/50 rounded-r-lg">
             The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
@@ -324,7 +325,233 @@ export default function AiAgentArchitecturePage() {
       </section>
 
       {/* ======================================================================
-          SECTION 6 — SCALING VISION
+          SECTION 6 — OUTCOMES & VALUE
+          ====================================================================== */}
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
+          Outcomes &amp; Value
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
+          What this actually does
+        </h2>
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl mb-10">
+          <p>
+            Building this was the hard part. Using it is where it pays off. Here&rsquo;s what the
+            ecosystem actually delivers today, what value it generates, and what else becomes
+            possible once the foundation is in place.
+          </p>
+        </div>
+
+        {/* --- What it does today --- */}
+        <div className="mb-12">
+          <h3 className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-5 pb-2 border-b border-slate-200">
+            What it does today
+          </h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Daily briefings, delivered automatically</div>
+              <p className="text-sm text-slate-700 leading-6">
+                Calendar + email summary at 6:25 AM. AI news digest filtered through my
+                priorities at 6:35. A daily opportunity scan of higher-ed AI projects at 7:00.
+                Campus pain signals scraped from forums and status pages at 7:30. All waiting
+                before I open a laptop.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Meeting intelligence after every meeting</div>
+              <p className="text-sm text-slate-700 leading-6">
+                Meeting transcripts are processed for commitments (who promised what), sentiment
+                (how people actually felt), participation patterns (who dominated, who stayed
+                quiet), and undercurrents (what was implied but not said). Searchable across a
+                14-month corpus.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Weekly trend synthesis</div>
+              <p className="text-sm text-slate-700 leading-6">
+                A Sunday cron reads the last 7 days of daily signals and extracts patterns: which
+                opportunities kept recurring, which pain points became systemic, which themes
+                faded. The strongest patterns are promoted to long-term memory.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Real-time conversational context</div>
+              <p className="text-sm text-slate-700 leading-6">
+                When I message the agent on Telegram, it loads my long-term memory, my work
+                patterns, the last 48 hours, and proactively pulls in wiki pages for any person,
+                technology, or decision I mention. Feels like it just knows.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Auto-published public artifacts</div>
+              <p className="text-sm text-slate-700 leading-6">
+                The weekly UCSD AI newsletter auto-generates and publishes to{' '}
+                <a href="/ucsd-ai-news" className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600">/ucsd-ai-news</a>.
+                The personal AI digest auto-publishes daily to{' '}
+                <a href="/ai-digest" className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600">/ai-digest</a>.
+                The knowledge framework documents itself &mdash; you&rsquo;re reading that output right now.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Cross-session continuity</div>
+              <p className="text-sm text-slate-700 leading-6">
+                Decisions made in conversation get written back to the wiki. Patterns the agent
+                observes get written to a patterns file. The framework is bidirectional &mdash;
+                read for context, write for continuity. Future sessions inherit what present
+                sessions learn.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* --- The value delivered --- */}
+        <div className="mb-12">
+          <h3 className="text-xs uppercase tracking-[0.18em] text-emerald-800 font-semibold mb-5 pb-2 border-b border-slate-200">
+            The value delivered
+          </h3>
+          <ul className="space-y-5 max-w-3xl">
+            <li className="flex gap-4 items-start">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
+                1
+              </span>
+              <div>
+                <div className="text-slate-900 font-semibold mb-1">Time saved: 2&ndash;3 hours per week</div>
+                <p className="text-sm text-slate-700 leading-6">
+                  Manual research, meeting prep, email triage, news scanning, and follow-up
+                  tracking used to consume several hours a week. The crons do the gathering;
+                  I do the judgment. That time gets reclaimed for actual decisions.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
+                2
+              </span>
+              <div>
+                <div className="text-slate-900 font-semibold mb-1">Pattern recognition I&rsquo;d otherwise miss</div>
+                <p className="text-sm text-slate-700 leading-6">
+                  Individual daily reports don&rsquo;t tell you that the VPN failed 5 of 7 days
+                  last week. The weekly synthesis does. The graph shows who I actually meet with
+                  most frequently &mdash; not who I think I meet with most. Data surfaces
+                  patterns intuition can&rsquo;t.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
+                3
+              </span>
+              <div>
+                <div className="text-slate-900 font-semibold mb-1">Institutional memory, not just personal memory</div>
+                <p className="text-sm text-slate-700 leading-6">
+                  Decisions, architectural choices, vendor evaluations, and their reasoning are
+                  preserved. &ldquo;Why did we pick this over that?&rdquo; has an answer.
+                  &ldquo;When did we last discuss X?&rdquo; has an answer. Memory persists across
+                  sessions, across weeks, across staff changes.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
+                4
+              </span>
+              <div>
+                <div className="text-slate-900 font-semibold mb-1">Never starting from zero</div>
+                <p className="text-sm text-slate-700 leading-6">
+                  Every conversation begins with 48 hours of recent context plus curated
+                  long-term memory plus triggered wiki lookups. I don&rsquo;t re-explain my
+                  world every time I ask a question, and the agent doesn&rsquo;t need to be
+                  reminded who the key people and projects are.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
+                5
+              </span>
+              <div>
+                <div className="text-slate-900 font-semibold mb-1">Opportunities surfaced proactively</div>
+                <p className="text-sm text-slate-700 leading-6">
+                  The opportunity scanner and AI news digest find campus projects, industry
+                  developments, and trends that match my priorities. I review them in about 60
+                  seconds each morning. Without this pipeline, I&rsquo;d either miss them or
+                  spend an hour hunting.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        {/* --- What else becomes possible --- */}
+        <div>
+          <h3 className="text-xs uppercase tracking-[0.18em] text-amber-800 font-semibold mb-5 pb-2 border-b border-slate-200">
+            What else becomes possible
+          </h3>
+          <div className="grid md:grid-cols-2 gap-5">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Meeting prep automation</div>
+              <p className="text-sm text-slate-700 leading-6">
+                Before every meeting, auto-compile: attendee wiki pages, recent interactions,
+                open commitments from previous meetings, relevant decisions, and a one-page prep
+                doc. No more walking into meetings cold.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Proactive nudges</div>
+              <p className="text-sm text-slate-700 leading-6">
+                The agent notices patterns without being asked. &ldquo;This problem has come up
+                three weeks in a row &mdash; here are the options you&rsquo;ve already explored.&rdquo;
+                &ldquo;This person has asked about the same thing five times &mdash; worth a
+                1:1?&rdquo;
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Draft-first communications</div>
+              <p className="text-sm text-slate-700 leading-6">
+                Emails, memos, responses drafted in my voice using my actual context. Not
+                generic AI writing; contextual writing grounded in what I&rsquo;ve said and
+                decided before. Human review becomes faster than drafting from scratch.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Decision archaeology</div>
+              <p className="text-sm text-slate-700 leading-6">
+                &ldquo;Why did we pick this architecture two years ago?&rdquo; &mdash; immediate
+                answer with the full reasoning, the voices that disagreed, and the tradeoffs
+                considered. No more Slack/email archaeology to reconstruct institutional
+                decisions.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Self-monitoring system health</div>
+              <p className="text-sm text-slate-700 leading-6">
+                The agent notices when data sources are stale, when cron jobs are degrading,
+                when the knowledge layer has gaps. Self-monitoring becomes self-repairing &mdash;
+                the system maintains itself instead of waiting for a human to notice failures.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Domain-aware research</div>
+              <p className="text-sm text-slate-700 leading-6">
+                Instead of &ldquo;search the web,&rdquo; the agent does &ldquo;search the web
+                filtered through what I care about, scored against my graph, and synthesized
+                with what I already know.&rdquo; Research becomes targeted, not exhaustive.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-slate-700 text-[1.06rem] leading-8 mt-10 max-w-3xl">
+          <p className="border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg text-slate-900 font-semibold">
+            The accumulation layer took months to build. But once it exists, the outcomes
+            compound &mdash; each new capability is a thin layer on top of the same knowledge
+            foundation, not a rebuild from scratch.
+          </p>
+        </div>
+      </section>
+
+      {/* ======================================================================
+          SECTION 7 — SCALING VISION
           ====================================================================== */}
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
