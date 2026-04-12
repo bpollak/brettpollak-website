@@ -45,21 +45,48 @@ export default function UcsdAiNewsPage() {
         <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent tracking-tight pb-1 mb-6">
           UC San Diego AI Weekly Update
         </h1>
-        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-4">
+        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-8">
           A weekly roundup of what&rsquo;s new with UC San Diego&rsquo;s supported AI services. Each edition
           covers release notes from your supported tools, updates from TritonAI, and trainings
           coming up in the next two weeks.
         </p>
-        <p className="text-base text-slate-500 leading-relaxed max-w-3xl mb-10">
-          Curated for UCSD staff. For the official TritonAI platform, visit{' '}
-          <a
-            href="https://tritonai.ucsd.edu/"
-            className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950 hover:decoration-blue-900"
-          >
-            tritonai.ucsd.edu
-          </a>
-          .
-        </p>
+
+        <a
+          href="https://tritonai.ucsd.edu/"
+          className="group block max-w-3xl mb-12 rounded-2xl border border-blue-200/70 bg-gradient-to-r from-blue-50/80 via-white to-blue-50/40 p-5 sm:p-6 shadow-sm hover:border-blue-300 hover:shadow-md hover:from-blue-50 hover:to-blue-50/60 transition-all focus:outline-none focus:ring-2 focus:ring-blue-900/30 focus:ring-offset-2"
+        >
+          <div className="flex items-start gap-4">
+            <div className="flex-none rounded-xl bg-white/80 border border-blue-200/60 p-3 shadow-sm group-hover:border-blue-300 transition-colors">
+              <svg
+                className="w-6 h-6 text-blue-800"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-1.5">
+                Official UCSD AI Platform
+              </div>
+              <p className="text-base text-slate-700 leading-relaxed">
+                This newsletter is curated for UCSD staff. For the full TritonAI platform &mdash;
+                supported tools, trainings, documentation, and support &mdash; visit{' '}
+                <span className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 group-hover:text-blue-950 group-hover:decoration-blue-900 transition-colors whitespace-nowrap">
+                  tritonai.ucsd.edu
+                  <span className="inline-block ml-1 transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </a>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
