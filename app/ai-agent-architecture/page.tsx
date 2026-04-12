@@ -76,7 +76,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 2 — THE PROBLEM
           ====================================================================== */}
-      <section className="max-w-3xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Problem
         </div>
@@ -140,7 +140,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 3 — THREE LAYERS
           ====================================================================== */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Architecture
         </div>
@@ -207,7 +207,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 4 — DAILY RHYTHM
           ====================================================================== */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Pipeline
         </div>
@@ -263,7 +263,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 5 — GRAPH + WIKI
           ====================================================================== */}
-      <section className="max-w-3xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Durable Layer
         </div>
@@ -327,7 +327,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 6 — OUTCOMES & VALUE
           ====================================================================== */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           Outcomes &amp; Value
         </div>
@@ -546,7 +546,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 7 — SCALING VISION
           ====================================================================== */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Vision
         </div>
@@ -636,7 +636,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 7 — EVOLUTION / CHANGELOG
           ====================================================================== */}
-      <section className="max-w-3xl mx-auto px-6 py-16 border-t border-slate-200">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
         <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           Evolution
         </div>
@@ -718,7 +718,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           FOOTER — meta / links / attribution
           ====================================================================== */}
-      <section className="max-w-3xl mx-auto px-6 pb-24 pt-8 border-t border-slate-200 space-y-5">
+      <section className="max-w-6xl mx-auto px-6 pb-24 pt-8 border-t border-slate-200 space-y-5">
         <div className="rounded-2xl border border-slate-200 bg-white/90 p-5">
           <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-2">
             Built on
