@@ -541,13 +541,6 @@ export default function AiAgentArchitecturePage() {
           </div>
         </div>
 
-        <div className="text-slate-700 text-[1.06rem] leading-8 mt-10 max-w-3xl">
-          <p className="border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg text-slate-900 font-semibold">
-            The accumulation layer took months to build. But once it exists, the outcomes
-            compound &mdash; each new capability is a thin layer on top of the same knowledge
-            foundation, not a rebuild from scratch.
-          </p>
-        </div>
       </section>
 
       {/* ======================================================================
