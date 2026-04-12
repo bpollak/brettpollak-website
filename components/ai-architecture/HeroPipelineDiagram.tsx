@@ -86,9 +86,9 @@ function Item({
   variant: 'source' | 'knowledge' | 'action';
 }) {
   const styles = {
-    source: { fill: '#eff6ff', stroke: '#bfdbfe', labelFill: '#1e3a8a', noteFill: '#3b82f6' },
-    knowledge: { fill: '#fef3c7', stroke: '#fcd34d', labelFill: '#78350f', noteFill: '#b45309' },
-    action: { fill: '#d1fae5', stroke: '#6ee7b7', labelFill: '#064e3b', noteFill: '#059669' },
+    source: { fill: '#dbeafe', stroke: '#3b82f6', labelFill: '#1e3a8a', noteFill: '#1d4ed8' },
+    knowledge: { fill: '#fde68a', stroke: '#d97706', labelFill: '#78350f', noteFill: '#92400e' },
+    action: { fill: '#a7f3d0', stroke: '#059669', labelFill: '#064e3b', noteFill: '#047857' },
   }[variant];
 
   return (
@@ -102,7 +102,7 @@ function Item({
         ry={12}
         fill={styles.fill}
         stroke={styles.stroke}
-        strokeWidth="1.5"
+        strokeWidth="2.5"
       />
       <text
         x={x}
@@ -157,12 +157,12 @@ export default function HeroPipelineDiagram() {
         <defs>
           {/* Subtle gradients */}
           <linearGradient id="source-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
-            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.35" />
+            <stop offset="0%" stopColor="#2563eb" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0.95" />
           </linearGradient>
           <linearGradient id="action-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#059669" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#059669" stopOpacity="0" />
+            <stop offset="0%" stopColor="#047857" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#059669" stopOpacity="0.55" />
           </linearGradient>
         </defs>
 
@@ -193,7 +193,7 @@ export default function HeroPipelineDiagram() {
         </text>
 
         {/* Connector paths — drawn first so they sit behind the boxes */}
-        <g strokeWidth="1.5" fill="none">
+        <g strokeWidth="2.25" fill="none" strokeLinecap="round">
           {/* Each left item curves into each middle item */}
           {DATA_SOURCES.map((_, i) => {
             const y1 = columnY(DATA_SOURCES.length, i) + ITEM_H / 2;
@@ -204,7 +204,7 @@ export default function HeroPipelineDiagram() {
                   key={`src-${i}-kn-${j}`}
                   d={curvePath(LEFT_CX + ITEM_W / 2, y1, MID_CX - ITEM_W / 2, y2)}
                   stroke="url(#source-glow)"
-                  strokeOpacity="0.3"
+                  strokeOpacity="0.85"
                 />
               );
             });
@@ -219,7 +219,7 @@ export default function HeroPipelineDiagram() {
                   key={`kn-${i}-act-${j}`}
                   d={curvePath(MID_CX + ITEM_W / 2, y1, RIGHT_CX - ITEM_W / 2, y2)}
                   stroke="url(#action-glow)"
-                  strokeOpacity="0.3"
+                  strokeOpacity="0.85"
                 />
               );
             });
