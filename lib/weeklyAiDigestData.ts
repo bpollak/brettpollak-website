@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-11T20:27:22.287Z",
+  "generatedAt": "2026-04-12T13:35:50.499Z",
   "weekOf": "2026-04-06",
   "weekEnding": "2026-04-12",
   "weekLabel": "Week of April 6–12, 2026",
-  "publishedThrough": "April 11, 2026",
-  "digestCount": 6,
-  "headlineCount": 34,
+  "publishedThrough": "April 12, 2026",
+  "digestCount": 7,
+  "headlineCount": 38,
   "days": [
     {
       "isoDate": "2026-04-06",
@@ -107,6 +107,18 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Microsoft Agent Framework Overview"
       ],
       "raw": "# AI Intelligence Briefing - April 11, 2026\n*Curated from knowledge graph (125 nodes, 145 edges)*\n\n• **Anthropic Launches New Tools to Simplify AI Agent Development** — Anthropic is pushing further into the agentic space by simplifying development with the Model Context Protocol (MCP), directly impacting how you might architect TritonAI's autonomous workflows.\n  🔗 Graph: Anthropic, Claude, Model Context Protocol, Agentic AI\n  📰 https://explore.n1n.ai/blog/anthropic-launches-tools-simplify-ai-agent-development-2026-04-09\n\n• **What Does It Mean To Learn With AI? - UC San Diego Today** — TritonGPT and its on-premise hosting at the San Diego Supercomputer Center are featured in this recent piece on UC San Diego's AI strategy, highlighting your platform's growing campus visibility.\n  🔗 Graph: TritonGPT, UC San Diego, San Diego Supercomputer Center, Higher Ed AI\n  📰 https://today.ucsd.edu/story/how-ai-is-showing-up-in-our-classrooms\n\n• **Top 5 Enterprise AI Gateways to Reduce LLM Cost and Latency** — LiteLLM is highlighted for its wide provider support in Python, reinforcing your architectural choice for the TritonAI gateway as you balance cost, latency, and governance.\n  🔗 Graph: LiteLLM Enterprise, LLM Gateway, AI Governance\n  📰 https://dev.to/debmckinney/top-5-enterprise-ai-gateways-to-reduce-llm-cost-and-latency-24cg\n\n• **Connect Claude Code to tools via MCP - Claude Code Docs** — Documentation on integrating Claude Code via the Model Context Protocol, which is highly relevant for your Developer API Program and team's coding workflows.\n  🔗 Graph: Claude Code, Model Context Protocol, Anthropic\n  📰 https://code.claude.com/docs/en/mcp\n\n• **Guidance for Multi-Provider Generative AI Gateway on AWS** — Amazon is releasing specific guidance on multi-provider API gateways based on OpenAI standards, representing a direct parallel to the LiteLLM gateway architecture you're running.\n  🔗 Graph: LLM Gateway, Amazon Web Services, OpenAI\n  📰 https://aws.amazon.com/solutions/guidance/multi-provider-generative-ai-gateway-on-aws/\n\n• **Microsoft Agent Framework Overview** — Microsoft is integrating graph-based workflows for multi-agent orchestration, which is worth tracking as you evaluate how Agentic AI will scale across the enterprise.\n  🔗 Graph: Microsoft, Agentic AI\n  📰 https://learn.microsoft.com/en-us/agent-framework/overview/\n\n💡 Signal: The tooling around LLM gateways and multi-agent orchestration (specifically the Model Context Protocol) is rapidly maturing, shifting the enterprise focus from accessing single models to securely managing complex, interconnected agent workflows.\n"
+    },
+    {
+      "isoDate": "2026-04-12",
+      "displayDate": "Sunday, April 12",
+      "sourceFile": "ai-news-digest-2026-04-12.md",
+      "headlines": [
+        "Gartner Predicts 40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026",
+        "Enterprise Agentic AI Landscape 2026: Trust, Flexibility, and Vendor Lock-in",
+        "AI Governance in Higher Education: An Overview",
+        "7 AI Decisions That Will Define Higher Education In 2026"
+      ],
+      "raw": "# AI Intelligence Briefing - April 12, 2026\n*Curated from knowledge graph (125 nodes, 145 edges)*\n\n• **Gartner Predicts 40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026** — Agentic AI integration into enterprise software is rapidly accelerating, moving beyond pilots into core application features.\n  🔗 Graph: Agentic AI, Gartner, TritonAI\n  📰 https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025\n\n• **Enterprise Agentic AI Landscape 2026: Trust, Flexibility, and Vendor Lock-in** — Evaluates the leading AI platforms including Anthropic, Google, and AWS, focusing on architectural flexibility and minimizing vendor dependencies for agentic workflows.\n  🔗 Graph: Agentic AI, Anthropic, Google, AWS Bedrock\n  📰 https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/\n\n• **AI Governance in Higher Education: An Overview** — Outlines the necessary cross-functional steering committees and strategic direction required from leadership to manage AI implementations in educational institutions.\n  🔗 Graph: AI Governance, Higher Ed AI, Leadership & Governance\n  📰 https://edtechmagazine.com/higher/article/2026/02/overview-ai-governance-education-perfcon\n\n• **7 AI Decisions That Will Define Higher Education In 2026** — A strategic playbook for higher ed leaders focusing on AI infrastructure, governance, and scaling agentic workflows.\n  🔗 Graph: Higher Ed AI, AI Governance, Agentic AI\n  📰 https://www.forbes.com/sites/avivalegatt/2025/12/26/7-ai-decisions-that-will-define-higher-education-in-2026/\n\n💡 Signal: The convergence of Agentic AI and enterprise systems is the central theme for 2026, making AI governance and vendor flexibility critical for higher education platforms like TritonGPT."
     }
   ]
 };
