@@ -3,25 +3,22 @@ import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 import { linkDigestHeadlines, renderMarkdown, sanitizePublicDigest } from '@/lib/markdown';
 
 export const metadata: Metadata = {
-  title: 'AI Digest | Brett Pollak',
-  description:
-    'A rolling weekly view of Brett Pollak’s curated daily AI digests, updated daily and reset each Monday.',
+  title: 'AI Digest',
+  description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
   alternates: {
     canonical: '/ai-digest',
   },
   openGraph: {
-    title: 'AI Digest | Brett Pollak',
-    description:
-      'A rolling weekly view of Brett Pollak’s curated daily AI digests, updated daily and reset each Monday.',
+    title: 'AI Digest',
+    description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
     url: 'https://brettcpollak.com/ai-digest',
-    siteName: 'Brett Pollak',
+    siteName: 'brettcpollak.com',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Digest | Brett Pollak',
-    description:
-      'A rolling weekly view of Brett Pollak’s curated daily AI digests, updated daily and reset each Monday.',
+    title: 'AI Digest',
+    description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
   },
 };
 
