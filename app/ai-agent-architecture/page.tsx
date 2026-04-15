@@ -130,9 +130,26 @@ export default function AiAgentArchitecturePage() {
             scale to thousands of staff at UC San Diego, giving every person a personal AI that
             understands their specific work world.
           </p>
+          <div className="my-8 border-l-4 border-blue-600 bg-blue-50/60 pl-5 py-4 rounded-r-lg">
+            <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
+              Why this matters now
+            </div>
+            <p className="text-slate-800 leading-7 mb-3">
+              Every major research lab is converging on the same thing: a single app that turns
+              chat into an agent, and uses <em>your context</em> &mdash; your memory, your files,
+              your history &mdash; as the lock-in. Switch vendors and you lose it.
+            </p>
+            <p className="text-slate-800 leading-7">
+              The approach on this page flips that. Knowledge lives in <em>my</em> filesystem, in
+              open formats, under my control. Any model can plug into it; any model can be
+              swapped out. The context layer is the moat &mdash; and it doesn&rsquo;t belong to
+              the vendor.
+            </p>
+          </div>
           <p className="text-slate-900 font-semibold">
             The question isn&rsquo;t &ldquo;can AI do this?&rdquo; &mdash; it&rsquo;s &ldquo;how do
-            you build the knowledge layer that makes it possible?&rdquo; This is my answer.
+            you build the knowledge layer that makes it possible, without handing your
+            institutional memory to a vendor?&rdquo; This is my answer.
           </p>
         </div>
       </section>
