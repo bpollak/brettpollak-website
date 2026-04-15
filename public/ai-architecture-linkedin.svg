@@ -130,13 +130,6 @@
     <text x="0" y="15" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-style="italic" fill="#475569">automated jobs turn raw signals into durable knowledge</text>
   </g>
 
-  <!-- Vendor-agnostic callout -->
-  <g transform="translate(600, 985)">
-    <rect x="-540" y="-40" width="1080" height="80" rx="12" fill="#1e3a8a"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="800" letter-spacing="1" fill="#bfdbfe">THE MOAT ISN'T THE MODEL.</text>
-    <text x="0" y="17" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#dbeafe">Knowledge stays in open formats on my filesystem.</text>
-    <text x="0" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#dbeafe">Any model plugs in. Any model gets swapped out.</text>
-  </g>
 
 
 </svg>
