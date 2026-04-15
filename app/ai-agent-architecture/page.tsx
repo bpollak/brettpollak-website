@@ -7,7 +7,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 30+ automated jobs, a 163-node knowledge graph, 105 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 30+ automated jobs, a 163-node knowledge graph, 111 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: '/ai-agent-architecture',
   },
@@ -46,7 +46,7 @@ export default function AiAgentArchitecturePage() {
           scaling the pattern across UC San Diego.
         </p>
         <p className="text-sm text-slate-500 mb-10">
-          Last updated: April 12, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: April 15, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
@@ -56,7 +56,7 @@ export default function AiAgentArchitecturePage() {
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
-            <div className="text-2xl font-bold text-slate-900">163 nodes · 105 pages</div>
+            <div className="text-2xl font-bold text-slate-900">163 nodes · 111 pages</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Context loading</div>
@@ -125,7 +125,7 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p>
             This page documents how I built that knowledge layer for myself: 30+ automated jobs,
-            a 163-node knowledge graph, 105 wiki pages, and a three-layer memory system. It&rsquo;s
+            a 163-node knowledge graph, 111 wiki pages, and a three-layer memory system. It&rsquo;s
             one working implementation &mdash; but it&rsquo;s also a design pattern I think could
             scale to thousands of staff at UC San Diego, giving every person a personal AI that
             understands their specific work world.
@@ -290,7 +290,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">105 narrative pages</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">111 narrative pages</div>
               <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities from the graph. People,
                 tech-stack, decisions, projects, concepts. Slow, rich, narrative &mdash; good at
@@ -320,8 +320,11 @@ export default function AiAgentArchitecturePage() {
             The wiki is also fed from outside the personal stream. A nightly sync mirrors
             2,500+ pages from nine institutional Confluence spaces &mdash; runbooks, team
             documentation, service desk procedures, build &amp; release practices, AI governance
-            &mdash; into the same knowledge layer. &ldquo;Your work world&rdquo; is no longer just
-            what you touch directly; it&rsquo;s also what your org has already written down.
+            &mdash; into the same knowledge layer. A second nightly sync pulls messages from
+            scoped Microsoft Teams channels so the agent also sees the live conversations where
+            decisions actually get made. &ldquo;Your work world&rdquo; is no longer just what
+            you touch directly; it&rsquo;s also what your org has already written down and
+            what your team is talking about right now.
           </p>
           <p className="text-slate-900 font-semibold border-l-4 border-amber-500 pl-5 py-2 bg-amber-50/50 rounded-r-lg">
             The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
@@ -666,6 +669,35 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 15, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Hybrid AI digest sourcing</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Replaced flaky generic web search with a hybrid pipeline: 14 curated RSS feeds
+              (AI research labs, arXiv, and higher-ed technology publications) pulled fresh at
+              6&nbsp;AM daily, plus site-scoped searches across major news outlets (NYT,
+              Bloomberg, WSJ, Wired, Ars Technica, TechCrunch, and others). Added a fallback
+              rule so the digest produces real content even when search APIs are offline, and
+              loosened the diversity gate so digests reliably surface 5&ndash;7 articles.
+            </p>
+          </li>
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 14, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Team chat ingestion + weekly deep-dive</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Added Microsoft Teams channel sync via MS Graph delegated scopes &mdash; scoped
+              to specific high-signal channels, noise-filtered, chmod-600 on disk. Registered
+              a new Sunday 2&nbsp;PM deep-research cron that picks one significant AI
+              development each week and produces a 600&ndash;1000 word multi-source research
+              brief, separate from the daily headlines digest.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">

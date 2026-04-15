@@ -30,9 +30,10 @@ type Item = {
 const DATA_SOURCES: Item[] = [
   { label: 'Calendar & email', note: 'MS Graph' },
   { label: 'Meetings', note: 'Granola transcripts' },
-  { label: 'Web & AI news', note: 'filtered searches' },
+  { label: 'Curated feeds & news', note: '14 RSS + major outlets' },
   { label: 'Campus signals', note: 'forums, status pages' },
   { label: 'Institutional wiki', note: 'Confluence · 9 spaces' },
+  { label: 'Team chats', note: 'scoped channels' },
   { label: 'Your conversations', note: 'Telegram chat' },
 ];
 
