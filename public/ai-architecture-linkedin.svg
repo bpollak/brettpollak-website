@@ -80,9 +80,9 @@
     <!-- Campus signals -->
     <rect x="80" y="590" width="240" height="50" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
     <text x="200" y="620" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Campus signals</text>
-    <!-- Institutional wiki -->
+    <!-- Confluence -->
     <rect x="80" y="660" width="240" height="50" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-    <text x="200" y="690" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Institutional wiki</text>
+    <text x="200" y="690" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Confluence</text>
     <!-- Teams -->
     <rect x="80" y="730" width="240" height="50" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
     <text x="200" y="760" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Teams</text>
@@ -94,7 +94,7 @@
     <text x="600" y="535" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">Knowledge Graph</text>
 
     <rect x="490" y="595" width="220" height="50" rx="10" fill="#fde68a" stroke="#d97706" stroke-width="2.5"/>
-    <text x="600" y="625" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">Wiki</text>
+    <text x="600" y="625" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">Curated wiki</text>
 
     <rect x="490" y="685" width="220" height="50" rx="10" fill="#fde68a" stroke="#d97706" stroke-width="2.5"/>
     <text x="600" y="710" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">Long-term memory</text>
@@ -132,9 +132,10 @@
 
   <!-- Vendor-agnostic callout -->
   <g transform="translate(600, 985)">
-    <rect x="-540" y="-32" width="1080" height="64" rx="12" fill="#1e3a8a"/>
-    <text x="-510" y="-5" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="#bfdbfe">THE MOAT ISN'T THE MODEL.</text>
-    <text x="-510" y="20" font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#dbeafe">Knowledge stays in open formats on my filesystem. Any model plugs in. Any model gets swapped out.</text>
+    <rect x="-540" y="-40" width="1080" height="80" rx="12" fill="#1e3a8a"/>
+    <text x="0" y="-10" text-anchor="middle" font-family="Inter, sans-serif" font-size="17" font-weight="800" letter-spacing="1" fill="#bfdbfe">THE MOAT ISN'T THE MODEL.</text>
+    <text x="0" y="17" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#dbeafe">Knowledge stays in open formats on my filesystem.</text>
+    <text x="0" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#dbeafe">Any model plugs in. Any model gets swapped out.</text>
   </g>
 
 
