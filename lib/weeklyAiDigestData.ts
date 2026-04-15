@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-15T18:47:21.548Z",
+  "generatedAt": "2026-04-15T19:49:48.398Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
   "publishedThrough": "April 15, 2026",
   "digestCount": 3,
-  "headlineCount": 11,
+  "headlineCount": 12,
   "days": [
     {
       "isoDate": "2026-04-13",
@@ -56,10 +56,11 @@ export const weeklyAiDigestData: WeeklyDigestData = {
       "displayDate": "Wednesday, April 15",
       "sourceFile": "ai-news-digest-2026-04-15.md",
       "headlines": [
-        "Anthropic’s New Product Aims to Handle the Hard Part of Building AI Agents",
-        "LIFE -- an energy efficient advanced continual learning agentic AI framework for frontier systems"
+        "The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break",
+        "‘There is no silver bullet’: How 2 colleges use AI to support nontraditional learners",
+        "What Is ‘Jagged Intelligence’ and How Can It Reframe the AI Debate? - The New York Times"
       ],
-      "raw": "# AI Intelligence Briefing - April 15, 2026\n*Curated from knowledge graph (163 nodes, 195 edges) · All articles published within the last 7 days*\n\n• **Anthropic’s New Product Aims to Handle the Hard Part of Building AI Agents** — The tool, Claude Managed Agents, offers developers out-of-the-box infrastructure to build autonomous AI systems......\n  🔗 Graph: Claude, Anthropic, Agentic AI\n  📅 Published: 2026-04-09\n  📰 https://www.wired.com/story/anthropic-launches-claude-managed-agents/\n\n• **LIFE -- an energy efficient advanced continual learning agentic AI framework for frontier systems** — arXiv:2604.12874v1 Announce Type: new Abstract: The rapid advancement of AI has changed the character of HPC usage such as dimensioning, provisioning,...\n  🔗 Graph: Agentic AI\n  📅 Published: 2026-04-15\n  📰 https://arxiv.org/abs/2604.12874\n\n💡 Signal: Continued rapid developments in the agentic AI and enterprise vendor space.\n"
+      "raw": "# AI Intelligence Briefing - April 15, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break** — Recent evaluations reveal how long-horizon tasks challenge current agentic systems. A cross-domain diagnostic benchmark highlights execution layer vulnerabilities.\n  🔗 Graph: Agentic AI\n  📅 Published: 2026-04-15\n  📰 https://arxiv.org/abs/2604.11978\n\n• **‘There is no silver bullet’: How 2 colleges use AI to support nontraditional learners** — Leaders at the ASU+GSV Summit emphasize that effectively adopting AI requires more than just buying products; it requires strategic implementation to bridge student gaps.\n  🔗 Graph: Higher Ed AI, ASU+GSV Summit\n  📅 Published: 2026-04-15\n  📰 https://www.highereddive.com/news/there-is-no-silver-bullet-how-2-colleges-use-ai-to-support-nontraditiona/817465/\n\n• **What Is ‘Jagged Intelligence’ and How Can It Reframe the AI Debate? - The New York Times** — Researchers introduce the concept of jagged intelligence to explain why AI excels at complex coding but struggles with simple tasks, reframing how organizations evaluate model capabilities.\n  🔗 Graph: AI Strategy\n  📅 Published: 2026-04-15\n  📰 https://www.nytimes.com/2026/04/15/technology/how-jagged-intelligence-can-reframe-the-ai-debate.html\n\n💡 Signal: The conversation is moving past generic AI capabilities into the realities of implementation—diagnosing agentic breakdowns, managing uneven model capabilities (\"jagged intelligence\"), and acknowledging the organizational heavy lifting required in higher education."
     }
   ]
 };
