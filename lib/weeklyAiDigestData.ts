@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-15T13:39:22.283Z",
+  "generatedAt": "2026-04-15T15:24:00.957Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
   "publishedThrough": "April 15, 2026",
-  "digestCount": 2,
-  "headlineCount": 9,
+  "digestCount": 3,
+  "headlineCount": 11,
   "days": [
     {
       "isoDate": "2026-04-13",
@@ -50,6 +50,16 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "AI governance really matters amid evolving compliance landscape"
       ],
       "raw": "# AI Intelligence Briefing - April 14, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Expanding the MCP Maintainer Team | Model Context Protocol Blog** — The open-source Model Context Protocol framework has announced new maintainers to help scale the project as its enterprise adoption accelerates. This signals further stabilization of the tooling ecosystem connecting LLMs to external systems.\n  🔗 Graph: Model Context Protocol, Agentic AI, Anthropic\n  📅 Published: 2026-04-09\n  📰 https://blog.modelcontextprotocol.io/posts/2026-04-08-maintainer-update/\n\n• **Anthropic Claims Its New A.I. Model, Mythos, Is a Cybersecurity ‘Reckoning’ - The New York Times** — Anthropic is rolling out a new model called Claude Mythos Preview to a select consortium of enterprise partners. The specialized model is built heavily around advancing cybersecurity and system defense capabilities.\n  🔗 Graph: Anthropic, Claude, AI Security\n  📅 Published: 2026-04-07\n  📰 https://www.nytimes.com/2026/04/07/technology/anthropic-claims-its-new-ai-model-mythos-is-a-cybersecurity-reckoning.html\n\n• **Vercel CEO Signals IPO Readiness Amid AI Agent Revenue Surge | Enterprise Unified LLM API Gateway (One Key for All Models) | n1n.ai** — Vercel's CEO highlighted a major push towards making AI deployment as frictionless as a git push, coinciding with surging growth from AI agent workloads. The strategic positioning could shape how platforms host next-gen orchestrated workflows.\n  🔗 Graph: Vercel, Agentic AI, LLM Gateway\n  📅 Published: 2026-04-14\n  📰 https://explore.n1n.ai/blog/vercel-ceo-signals-ipo-readiness-ai-agent-growth-2026-04-14\n\n• **Google Open Sources Experimental Multi-Agent Orchestration Testbed Scion - InfoQ** — Google has open-sourced Scion, an experimental testbed for coordinating complex multi-agent architectures using deep agents like Claude Code, Gemini CLI, and Codex. It isolates agents in separate containers and git worktrees to orchestrate parallel tasks safely.\n  🔗 Graph: Google, Agentic AI, Claude Code\n  📅 Published: 2026-04-07\n  📰 https://www.infoq.com/news/2026/04/google-agent-testbed-scion/\n\n• **Top Databricks Features Transforming Data and AI in 2026** — An overview of new Databricks functionality that promises to democratize data analytics across the enterprise. The tools aim to bridge the divide between technical data engineers and broad functional departments leveraging AI.\n  🔗 Graph: Databricks, Data Analytics\n  📅 Published: 2026-04-09\n  📰 https://www.beyondkey.com/blog/databricks-features/\n\n• **AI governance really matters amid evolving compliance landscape** — Enterprise HR and IT teams are increasingly demanding stronger risk controls, governance, and transparency from their AI vendors. Compliance structures are rapidly shifting from optional features to critical procurement blockers.\n  🔗 Graph: AI Governance, AI Compliance & Governance\n  📅 Published: 2026-04-07\n  📰 https://www.hr-brew.com/stories/2026/04/07/ai-governance-really-matters-amid-evolving-compliance-landscape\n\n💡 Signal: The ecosystem is rapidly shifting focus from raw model performance toward robust enterprise infrastructure, with major developments in agent orchestration testbeds (Scion), cybersecurity-focused models (Mythos), and tightening governance standards.\n"
+    },
+    {
+      "isoDate": "2026-04-15",
+      "displayDate": "Wednesday, April 15",
+      "sourceFile": "ai-news-digest-2026-04-15.md",
+      "headlines": [
+        "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+        "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning"
+      ],
+      "raw": "# AI Intelligence Briefing - April 15, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI** — Cloudflare has integrated OpenAI’s models into its Agent Cloud to help enterprises securely build and deploy AI agents at scale.\n  🔗 Graph: OpenAI, Agentic AI\n  📅 Published: 2026-04-13\n  📰 https://openai.com/index/cloudflare-openai-agent-cloud\n\n• **Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning** — Google DeepMind released an update to its Gemini Robotics model that enhances spatial reasoning and multi-view understanding for autonomous robotics.\n  🔗 Graph: Google, Gemini\n  📅 Published: 2026-04-13\n  📰 https://deepmind.google/blog/gemini-robotics-er-1-6/\n\n💡 Signal: This week's updates focus heavily on moving models into active, agentic environments—from software workflows via Cloudflare to physical robotics via Google DeepMind.\n"
     }
   ]
 };
