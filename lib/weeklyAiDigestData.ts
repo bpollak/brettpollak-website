@@ -18,7 +18,7 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-15T17:20:05.903Z",
+  "generatedAt": "2026-04-15T18:47:21.548Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
@@ -56,10 +56,10 @@ export const weeklyAiDigestData: WeeklyDigestData = {
       "displayDate": "Wednesday, April 15",
       "sourceFile": "ai-news-digest-2026-04-15.md",
       "headlines": [
-        "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
-        "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning"
+        "Anthropic’s New Product Aims to Handle the Hard Part of Building AI Agents",
+        "LIFE -- an energy efficient advanced continual learning agentic AI framework for frontier systems"
       ],
-      "raw": "# AI Intelligence Briefing - April 15, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI** — Cloudflare has integrated OpenAI’s models into its Agent Cloud to help enterprises securely build and deploy AI agents at scale.\n  🔗 Graph: OpenAI, Agentic AI\n  📅 Published: 2026-04-13\n  📰 https://openai.com/index/cloudflare-openai-agent-cloud\n\n• **Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning** — Google DeepMind released an update to its Gemini Robotics model that enhances spatial reasoning and multi-view understanding for autonomous robotics.\n  🔗 Graph: Google, Gemini\n  📅 Published: 2026-04-13\n  📰 https://deepmind.google/blog/gemini-robotics-er-1-6/\n\n💡 Signal: This week's updates focus heavily on moving models into active, agentic environments—from software workflows via Cloudflare to physical robotics via Google DeepMind.\n"
+      "raw": "# AI Intelligence Briefing - April 15, 2026\n*Curated from knowledge graph (163 nodes, 195 edges) · All articles published within the last 7 days*\n\n• **Anthropic’s New Product Aims to Handle the Hard Part of Building AI Agents** — The tool, Claude Managed Agents, offers developers out-of-the-box infrastructure to build autonomous AI systems......\n  🔗 Graph: Claude, Anthropic, Agentic AI\n  📅 Published: 2026-04-09\n  📰 https://www.wired.com/story/anthropic-launches-claude-managed-agents/\n\n• **LIFE -- an energy efficient advanced continual learning agentic AI framework for frontier systems** — arXiv:2604.12874v1 Announce Type: new Abstract: The rapid advancement of AI has changed the character of HPC usage such as dimensioning, provisioning,...\n  🔗 Graph: Agentic AI\n  📅 Published: 2026-04-15\n  📰 https://arxiv.org/abs/2604.12874\n\n💡 Signal: Continued rapid developments in the agentic AI and enterprise vendor space.\n"
     }
   ]
 };
