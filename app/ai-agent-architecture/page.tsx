@@ -618,7 +618,7 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p>
             The tech mostly exists. The governance doesn&rsquo;t. Sharing boundaries have to be
-            first-class features, not bolt-ons, and the Council of Data Stewards has to be
+            first-class features, not bolt-ons &mdash; and campus data stewardship has to be
             comfortable with the model before anything scales beyond the personal tier.
           </p>
           <p>
