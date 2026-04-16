@@ -77,7 +77,7 @@ export default function ScalingPyramid() {
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title id="scaling-pyramid-title">Scaling pyramid — personal to campus, privacy-first</title>
+        <title id="scaling-pyramid-title">Scaling pyramid</title>
         <desc>
           A four-tier pyramid showing how the personal-agent architecture could scale across UC
           San Diego while preserving privacy at every tier. The foundation is one agent per
@@ -86,29 +86,20 @@ export default function ScalingPyramid() {
           patterns only.
         </desc>
 
-        {/* Privacy axis on the left — made more prominent */}
+        {/* Privacy axis on the left */}
         <g>
-          <text x="20" y="70" className="fill-blue-700" style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 800 }}>
+          <text x="20" y="90" className="fill-blue-700" style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 800 }}>
             Privacy
           </text>
-          <text x="20" y="88" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
-            aggregates
+          <text x="20" y="108" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
+            aggregate only
           </text>
-          <text x="20" y="102" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
-            only
-          </text>
-          <line x1="80" y1="120" x2="80" y2="480" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4 4" />
+          <line x1="80" y1="130" x2="80" y2="470" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4 4" />
           <g transform="translate(74, 250)">
             <polygon points="0,-8 8,0 0,8 -8,0" fill="#64748b" />
           </g>
-          <text x="20" y="500" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
-            individual
-          </text>
-          <text x="20" y="514" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
-            private
-          </text>
-          <text x="20" y="532" className="fill-blue-700" style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 800 }}>
-            Guaranteed
+          <text x="20" y="490" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
+            individual private
           </text>
         </g>
 
