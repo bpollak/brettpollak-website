@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-15T19:49:48.398Z",
+  "generatedAt": "2026-04-16T13:36:42.091Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
-  "publishedThrough": "April 15, 2026",
-  "digestCount": 3,
-  "headlineCount": 12,
+  "publishedThrough": "April 16, 2026",
+  "digestCount": 4,
+  "headlineCount": 17,
   "days": [
     {
       "isoDate": "2026-04-13",
@@ -61,6 +61,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "What Is ‘Jagged Intelligence’ and How Can It Reframe the AI Debate? - The New York Times"
       ],
       "raw": "# AI Intelligence Briefing - April 15, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break** — Recent evaluations reveal how long-horizon tasks challenge current agentic systems. A cross-domain diagnostic benchmark highlights execution layer vulnerabilities.\n  🔗 Graph: Agentic AI\n  📅 Published: 2026-04-15\n  📰 https://arxiv.org/abs/2604.11978\n\n• **‘There is no silver bullet’: How 2 colleges use AI to support nontraditional learners** — Leaders at the ASU+GSV Summit emphasize that effectively adopting AI requires more than just buying products; it requires strategic implementation to bridge student gaps.\n  🔗 Graph: Higher Ed AI, ASU+GSV Summit\n  📅 Published: 2026-04-15\n  📰 https://www.highereddive.com/news/there-is-no-silver-bullet-how-2-colleges-use-ai-to-support-nontraditiona/817465/\n\n• **What Is ‘Jagged Intelligence’ and How Can It Reframe the AI Debate? - The New York Times** — Researchers introduce the concept of jagged intelligence to explain why AI excels at complex coding but struggles with simple tasks, reframing how organizations evaluate model capabilities.\n  🔗 Graph: AI Strategy\n  📅 Published: 2026-04-15\n  📰 https://www.nytimes.com/2026/04/15/technology/how-jagged-intelligence-can-reframe-the-ai-debate.html\n\n💡 Signal: The conversation is moving past generic AI capabilities into the realities of implementation—diagnosing agentic breakdowns, managing uneven model capabilities (\"jagged intelligence\"), and acknowledging the organizational heavy lifting required in higher education."
+    },
+    {
+      "isoDate": "2026-04-16",
+      "displayDate": "Thursday, April 16",
+      "sourceFile": "ai-news-digest-2026-04-16.md",
+      "headlines": [
+        "AI is remaking the workforce. How can colleges ensure students thrive?",
+        "Databricks Tames Agentic AI",
+        "The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break",
+        "When to Forget: A Memory Governance Primitive",
+        "Enterprises Align AI and Data Platforms to Scale AI Deployments with Accuracy, – ISG – April 15, 2026."
+      ],
+      "raw": "# AI Intelligence Briefing - April 16, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **AI is remaking the workforce. How can colleges ensure students thrive?** — Skills training and public-private partnerships are key in a rapidly changing job landscape, as discussed at the annual ASU+GSV Summit.\n  🔗 Graph: Higher Ed AI, ASU+GSV Summit\n  📅 Published: 2026-04-16\n  📰 https://www.highereddive.com/news/ai-is-remaking-the-workforce-how-can-colleges-ensure-students-thrive/817598/\n\n• **Databricks Tames Agentic AI** — Databricks is extending its AI Gateway to manage LLM interactions with tools and APIs, including support for the Model Context Protocol (MCP) to govern agentic usage.\n  🔗 Graph: Databricks, Agentic AI, Model Context Protocol\n  📅 Published: 2026-04-15\n  📰 https://www.startuphub.ai/ai-news/technology/2026/databricks-tames-agentic-ai\n\n• **The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break** — A new cross-domain diagnostic benchmark characterizes why LLM agents often break down on long-horizon tasks that require extended, interdependent action sequences.\n  🔗 Graph: Agentic AI\n  📅 Published: 2026-04-16\n  📰 https://arxiv.org/abs/2604.11978\n\n• **When to Forget: A Memory Governance Primitive** — Proposes a new memory governance metric, Memory Worth (MW), for managing memory quality in AI agents dynamically as task distributions shift.\n  🔗 Graph: AI Governance, Agentic AI\n  📅 Published: 2026-04-16\n  📰 https://arxiv.org/abs/2604.12007\n\n• **Enterprises Align AI and Data Platforms to Scale AI Deployments with Accuracy, – ISG – April 15, 2026.** — Supabase and other emerging data platforms are recognized as innovative in supporting enterprise AI deployments and scaling architectures.\n  🔗 Graph: Supabase, Data Analytics\n  📅 Published: 2026-04-15\n  📰 https://www.biztechreports.com/news-archive/2026/4/10/enterprises-align-ai-and-data-platforms-to-scale-ai-deployments-with-accuracy-isg-april-14-2026\n\n💡 Signal: This week's developments emphasize the operationalization of agentic systems, focusing on governance mechanisms like Databricks' MCP integration and memory management frameworks, while higher ed institutions grapple with workforce alignment at forums like ASU+GSV."
     }
   ]
 };
