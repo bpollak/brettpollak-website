@@ -568,61 +568,58 @@ export default function AiAgentArchitecturePage() {
             Everything above is one person&rsquo;s implementation. The interesting question:
             what if every UCSD staff member had one?
           </p>
-          <p>The answer has four levels:</p>
+          <div className="my-6 border-l-4 border-blue-700 bg-blue-50 pl-5 py-4 rounded-r-lg">
+            <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
+              Privacy is the precondition
+            </div>
+            <p className="text-slate-800 leading-7">
+              This only scales if privacy scales with it. Personal data never leaves the personal
+              agent. Each tier above is opt-in, anonymized, or aggregate-only &mdash; never
+              individual records flowing upward. Without that guarantee at every level, nothing
+              ships.
+            </p>
+          </div>
         </div>
 
         <ScalingPyramid />
 
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-slate-900">Level 1 &mdash; Personal.</strong> Every staff
-            member gets their own agent, memory files, wiki, and daily crons. Data never leaves
-            their agent. This is what I&rsquo;ve built and proven &mdash; it works for one
-            person, and the architecture is replicable.
+            <strong className="text-slate-900">Personal &mdash; the foundation.</strong> Every
+            staff member gets their own agent, memory, wiki, and crons. Data never leaves their
+            agent. This is proven &mdash; it works for one person, and the architecture is
+            replicable. The hard part isn&rsquo;t the technology; it&rsquo;s the deployment
+            pattern: dedicated runtime, isolated data store, and a governance model that says
+            &ldquo;this is yours, private by default.&rdquo;
           </p>
           <p>
-            The hard part isn&rsquo;t technology; it&rsquo;s the deployment pattern. Every
-            person needs a dedicated runtime (container, serverless function), isolated data
-            store, connections to their email/calendar/meeting sources, and a governance model
-            that says &ldquo;this is yours, private by default.&rdquo;
+            <strong className="text-slate-900">Team &mdash; opt-in sharing, not opt-out.</strong>{' '}
+            Team members choose what to share. The team wiki is visible to all members; 1:1s and
+            personal notes stay private. Nothing crosses the boundary automatically. This is
+            where governance gets interesting: who decides what&rsquo;s shared, how do you
+            handle a team member leaving, and how do you prevent context from leaking between
+            people.
           </p>
           <p>
-            <strong className="text-slate-900">Level 2 &mdash; Team.</strong> Selective
-            context-sharing within a team. The team graph pulls deduplicated people from
-            everyone&rsquo;s graphs. The team wiki is visible to all members. Shared calendar
-            visibility for internal meetings, individual privacy for 1:1s and personal notes.
-            Opt-in, not opt-out.
+            <strong className="text-slate-900">Department &mdash; anonymized aggregates only.</strong>{' '}
+            At WTS or Academic Technology Services, the useful view is patterns, not records.
+            &ldquo;Trending pain points this week&rdquo; or &ldquo;which vendors are we all
+            evaluating&rdquo; &mdash; no individual data, just signals that emerge from many
+            agents, the way public health surveillance works. Individual identity is stripped
+            before aggregation; the dashboard never shows who said what.
           </p>
           <p>
-            This is where governance gets interesting. Who decides what&rsquo;s shared? How do
-            you handle a team member leaving? How do you prevent context from leaking between
-            people?
+            <strong className="text-slate-900">Campus &mdash; statistical patterns only.</strong>{' '}
+            TritonAI provides campus-wide AI services. The missing piece is connective tissue:
+            aggregate department patterns up to institutional insights. Which departments
+            struggle with the same vendor, which AI use cases are converging, what decisions
+            would help everyone. This tier only ever sees statistical patterns &mdash; never
+            individual records, never attributable content.
           </p>
           <p>
-            <strong className="text-slate-900">Level 3 &mdash; Department.</strong> At the
-            department level (WTS, Academic Technology Services), anonymized aggregates become
-            useful. &ldquo;Trending pain points across teams this week?&rdquo; (from
-            student-pain signals). &ldquo;What vendors are we all evaluating?&rdquo; (from
-            graphs). &ldquo;What trainings would help us all?&rdquo; (from synthesis across
-            agents).
-          </p>
-          <p>
-            No individual data &mdash; just patterns that emerge from many individual signals,
-            the way public health surveillance works. A department dashboard shows &ldquo;what
-            your teams are seeing this week&rdquo; without violating anyone&rsquo;s privacy.
-          </p>
-          <p>
-            <strong className="text-slate-900">Level 4 &mdash; Campus.</strong> TritonAI
-            provides campus-wide AI services. Henry Dashboard shows operational state. The
-            missing piece is the connective tissue: aggregate department patterns up to
-            campus-level insights. Which departments struggle with the same vendor? Which AI use
-            cases are converging? What institutional decisions would help everyone?
-          </p>
-          <p>
-            The tech mostly exists. The governance doesn&rsquo;t. Privacy at the personal level
-            has to be ironclad &mdash; sharing boundaries as first-class features, not bolt-ons
-            &mdash; and the Council of Data Stewards has to be comfortable with the model before
-            anything ships.
+            The tech mostly exists. The governance doesn&rsquo;t. Sharing boundaries have to be
+            first-class features, not bolt-ons, and the Council of Data Stewards has to be
+            comfortable with the model before anything scales beyond the personal tier.
           </p>
           <p>
             <strong className="text-slate-900">Proven vs. speculative:</strong> the personal
@@ -633,9 +630,10 @@ export default function AiAgentArchitecturePage() {
           <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
             The real question isn&rsquo;t &ldquo;can we do this?&rdquo; &mdash; it&rsquo;s
             &ldquo;what would it take to do it responsibly, at scale, in a way a 30,000-employee
-            university can actually adopt?&rdquo; That&rsquo;s a design + governance +
-            procurement project, not just a technology one. Worth having the conversation now,
-            while the personal-AI space is still small enough to shape intentionally.
+            university can actually adopt without violating anyone&rsquo;s privacy along the
+            way?&rdquo; That&rsquo;s a design + governance + procurement project, not just a
+            technology one. Worth having the conversation now, while the personal-AI space is
+            still small enough to shape intentionally.
           </p>
         </div>
       </section>
