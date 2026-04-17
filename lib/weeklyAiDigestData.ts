@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-16T13:36:42.091Z",
+  "generatedAt": "2026-04-17T13:36:00.871Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
-  "publishedThrough": "April 16, 2026",
-  "digestCount": 4,
-  "headlineCount": 17,
+  "publishedThrough": "April 17, 2026",
+  "digestCount": 5,
+  "headlineCount": 22,
   "days": [
     {
       "isoDate": "2026-04-13",
@@ -74,6 +74,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Enterprises Align AI and Data Platforms to Scale AI Deployments with Accuracy, – ISG – April 15, 2026."
       ],
       "raw": "# AI Intelligence Briefing - April 16, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **AI is remaking the workforce. How can colleges ensure students thrive?** — Skills training and public-private partnerships are key in a rapidly changing job landscape, as discussed at the annual ASU+GSV Summit.\n  🔗 Graph: Higher Ed AI, ASU+GSV Summit\n  📅 Published: 2026-04-16\n  📰 https://www.highereddive.com/news/ai-is-remaking-the-workforce-how-can-colleges-ensure-students-thrive/817598/\n\n• **Databricks Tames Agentic AI** — Databricks is extending its AI Gateway to manage LLM interactions with tools and APIs, including support for the Model Context Protocol (MCP) to govern agentic usage.\n  🔗 Graph: Databricks, Agentic AI, Model Context Protocol\n  📅 Published: 2026-04-15\n  📰 https://www.startuphub.ai/ai-news/technology/2026/databricks-tames-agentic-ai\n\n• **The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break** — A new cross-domain diagnostic benchmark characterizes why LLM agents often break down on long-horizon tasks that require extended, interdependent action sequences.\n  🔗 Graph: Agentic AI\n  📅 Published: 2026-04-16\n  📰 https://arxiv.org/abs/2604.11978\n\n• **When to Forget: A Memory Governance Primitive** — Proposes a new memory governance metric, Memory Worth (MW), for managing memory quality in AI agents dynamically as task distributions shift.\n  🔗 Graph: AI Governance, Agentic AI\n  📅 Published: 2026-04-16\n  📰 https://arxiv.org/abs/2604.12007\n\n• **Enterprises Align AI and Data Platforms to Scale AI Deployments with Accuracy, – ISG – April 15, 2026.** — Supabase and other emerging data platforms are recognized as innovative in supporting enterprise AI deployments and scaling architectures.\n  🔗 Graph: Supabase, Data Analytics\n  📅 Published: 2026-04-15\n  📰 https://www.biztechreports.com/news-archive/2026/4/10/enterprises-align-ai-and-data-platforms-to-scale-ai-deployments-with-accuracy-isg-april-14-2026\n\n💡 Signal: This week's developments emphasize the operationalization of agentic systems, focusing on governance mechanisms like Databricks' MCP integration and memory management frameworks, while higher ed institutions grapple with workforce alignment at forums like ASU+GSV."
+    },
+    {
+      "isoDate": "2026-04-17",
+      "displayDate": "Friday, April 17",
+      "sourceFile": "ai-news-digest-2026-04-17.md",
+      "headlines": [
+        "Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems",
+        "Can Coding Agents Be General Agents?",
+        "OpenAI has bought AI personal finance startup Hiro",
+        "AgentForge: Execution-Grounded Multi-Agent LLM Framework for Autonomous Software Engineering",
+        "MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems"
+      ],
+      "raw": "# AI Intelligence Briefing - April 17, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems** — Explores the critical safety and functional properties of agentic ecosystems, highlighting the need for cohesive standards across fragmented communication layers like the Model Context Protocol (MCP).\n  🔗 Graph: Agentic AI, AI Security, Model Context Protocol\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2510.14133\n\n• **Can Coding Agents Be General Agents?** — Investigates whether specialized AI coding agents can successfully generalize their reasoning patterns to tackle end-to-end business process automation beyond software engineering.\n  🔗 Graph: Agentic AI, Claude Code, Codex\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2604.13107\n\n• **OpenAI has bought AI personal finance startup Hiro** — OpenAI signals an expansion of ChatGPT's capabilities into financial planning by acquiring the specialized AI personal finance startup.\n  🔗 Graph: OpenAI, GPT-4\n  📅 Published: 2026-04-16\n  📰 https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/\n\n• **AgentForge: Execution-Grounded Multi-Agent LLM Framework for Autonomous Software Engineering** — Proposes a new framework where autonomous coding agents must verify every generated code change through sandboxed execution before deploying to the codebase.\n  🔗 Graph: Agentic AI, Developer API Program\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2604.13120\n\n• **MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems** — Introduces an open-source platform specifically designed to monitor and address new security vulnerabilities introduced by integrating Model Context Protocol (MCP) into agentic systems.\n  🔗 Graph: Model Context Protocol, AI Security\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2604.13849\n\n💡 Signal: This week shows a strong shift toward securing and standardizing agentic infrastructure, particularly around the Model Context Protocol (MCP), alongside continued efforts to generalize coding agents for broader enterprise automation."
     }
   ]
 };
