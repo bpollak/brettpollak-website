@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-17T17:20:06.800Z",
+  "generatedAt": "2026-04-18T13:36:46.136Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
-  "publishedThrough": "April 17, 2026",
-  "digestCount": 5,
-  "headlineCount": 22,
+  "publishedThrough": "April 18, 2026",
+  "digestCount": 6,
+  "headlineCount": 26,
   "days": [
     {
       "isoDate": "2026-04-13",
@@ -87,6 +87,18 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems"
       ],
       "raw": "# AI Intelligence Briefing - April 17, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems** — Explores the critical safety and functional properties of agentic ecosystems, highlighting the need for cohesive standards across fragmented communication layers like the Model Context Protocol (MCP).\n  🔗 Graph: Agentic AI, AI Security, Model Context Protocol\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2510.14133\n\n• **Can Coding Agents Be General Agents?** — Investigates whether specialized AI coding agents can successfully generalize their reasoning patterns to tackle end-to-end business process automation beyond software engineering.\n  🔗 Graph: Agentic AI, Claude Code, Codex\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2604.13107\n\n• **OpenAI has bought AI personal finance startup Hiro** — OpenAI signals an expansion of ChatGPT's capabilities into financial planning by acquiring the specialized AI personal finance startup.\n  🔗 Graph: OpenAI, GPT-4\n  📅 Published: 2026-04-16\n  📰 https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/\n\n• **AgentForge: Execution-Grounded Multi-Agent LLM Framework for Autonomous Software Engineering** — Proposes a new framework where autonomous coding agents must verify every generated code change through sandboxed execution before deploying to the codebase.\n  🔗 Graph: Agentic AI, Developer API Program\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2604.13120\n\n• **MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems** — Introduces an open-source platform specifically designed to monitor and address new security vulnerabilities introduced by integrating Model Context Protocol (MCP) into agentic systems.\n  🔗 Graph: Model Context Protocol, AI Security\n  📅 Published: 2026-04-17\n  📰 https://arxiv.org/abs/2604.13849\n\n💡 Signal: This week shows a strong shift toward securing and standardizing agentic infrastructure, particularly around the Model Context Protocol (MCP), alongside continued efforts to generalize coding agents for broader enterprise automation."
+    },
+    {
+      "isoDate": "2026-04-18",
+      "displayDate": "Saturday, April 18",
+      "sourceFile": "ai-news-digest-2026-04-18.md",
+      "headlines": [
+        "Nvidia’s Huang Says Mythos Shows Need for US-China AI Dialogue - Bloomberg",
+        "Anthropic faces user backlash over reported performance issues with its Claude AI chatbot | Fortune",
+        "April 2026 | Databricks on AWS",
+        "Vercel CEO Guillermo Rauch signals IPO readiness as AI agents fuel revenue surge | TechCrunch"
+      ],
+      "raw": "# AI Intelligence Briefing - April 18, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Nvidia’s Huang Says Mythos Shows Need for US-China AI Dialogue - Bloomberg** — Nvidia CEO Jensen Huang suggests Anthropic’s Mythos breakthrough necessitates greater US-China cooperation to safely manage increasingly powerful AI technology.\n  🔗 Graph: Anthropic, AI Governance\n  📅 Published: 2026-04-16\n  📰 https://www.bloomberg.com/news/articles/2026-04-15/nvidia-s-huang-says-mythos-shows-need-for-us-china-ai-dialogue\n\n• **Anthropic faces user backlash over reported performance issues with its Claude AI chatbot | Fortune** — Users are expressing frustration over a reported decline in Claude's performance, pointing to silent reductions in the model’s default effort levels to economize on processing tokens.\n  🔗 Graph: Anthropic, Claude\n  📅 Published: 2026-04-15\n  📰 https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/\n\n• **April 2026 | Databricks on AWS** — Databricks released its ai_parse_document function to general availability, enabling structured data extraction from unstructured PDFs, images, and office documents.\n  🔗 Graph: Databricks, Data Analytics\n  📅 Published: 2026-04-15\n  📰 https://docs.databricks.com/aws/en/release-notes/product/2026/april\n\n• **Vercel CEO Guillermo Rauch signals IPO readiness as AI agents fuel revenue surge | TechCrunch** — Amid a quiet IPO market, Vercel’s CEO indicates the company is preparing for a public listing, driven by significant revenue growth from AI agent infrastructure.\n  🔗 Graph: Vercel, Agentic AI\n  📅 Published: 2026-04-13\n  📰 https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/\n\n💡 Signal: This week highlights the operational growing pains of major AI vendors—with Anthropic facing compute-crunch backlash despite releasing new models—alongside strong momentum from infrastructure providers like Vercel preparing for public markets.\n"
     }
   ]
 };
