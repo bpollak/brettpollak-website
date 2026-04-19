@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 import { linkDigestHeadlines, renderMarkdown, sanitizePublicDigest } from '@/lib/markdown';
+import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 
 export const metadata: Metadata = {
   title: 'AI Digest',
@@ -56,6 +57,10 @@ export default function AiDigestPage() {
 
         <div className="rounded-2xl border border-amber-200 bg-amber-50/80 px-5 py-4 text-sm text-amber-900">
           Published through <span className="font-semibold">{publishedThrough}</span>. Days without an available digest are omitted rather than backfilled.
+        </div>
+
+        <div className="mt-8">
+          <SubscribeForm />
         </div>
       </section>
 
