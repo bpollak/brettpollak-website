@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-18T13:36:46.136Z",
+  "generatedAt": "2026-04-19T13:36:04.410Z",
   "weekOf": "2026-04-13",
   "weekEnding": "2026-04-19",
   "weekLabel": "Week of April 13–19, 2026",
-  "publishedThrough": "April 18, 2026",
-  "digestCount": 6,
-  "headlineCount": 26,
+  "publishedThrough": "April 19, 2026",
+  "digestCount": 7,
+  "headlineCount": 31,
   "days": [
     {
       "isoDate": "2026-04-13",
@@ -99,6 +99,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Vercel CEO Guillermo Rauch signals IPO readiness as AI agents fuel revenue surge | TechCrunch"
       ],
       "raw": "# AI Intelligence Briefing - April 18, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Nvidia’s Huang Says Mythos Shows Need for US-China AI Dialogue - Bloomberg** — Nvidia CEO Jensen Huang suggests Anthropic’s Mythos breakthrough necessitates greater US-China cooperation to safely manage increasingly powerful AI technology.\n  🔗 Graph: Anthropic, AI Governance\n  📅 Published: 2026-04-16\n  📰 https://www.bloomberg.com/news/articles/2026-04-15/nvidia-s-huang-says-mythos-shows-need-for-us-china-ai-dialogue\n\n• **Anthropic faces user backlash over reported performance issues with its Claude AI chatbot | Fortune** — Users are expressing frustration over a reported decline in Claude's performance, pointing to silent reductions in the model’s default effort levels to economize on processing tokens.\n  🔗 Graph: Anthropic, Claude\n  📅 Published: 2026-04-15\n  📰 https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/\n\n• **April 2026 | Databricks on AWS** — Databricks released its ai_parse_document function to general availability, enabling structured data extraction from unstructured PDFs, images, and office documents.\n  🔗 Graph: Databricks, Data Analytics\n  📅 Published: 2026-04-15\n  📰 https://docs.databricks.com/aws/en/release-notes/product/2026/april\n\n• **Vercel CEO Guillermo Rauch signals IPO readiness as AI agents fuel revenue surge | TechCrunch** — Amid a quiet IPO market, Vercel’s CEO indicates the company is preparing for a public listing, driven by significant revenue growth from AI agent infrastructure.\n  🔗 Graph: Vercel, Agentic AI\n  📅 Published: 2026-04-13\n  📰 https://techcrunch.com/2026/04/13/vercel-ceo-guillermo-rauch-signals-ipo-readiness-as-ai-agents-fuel-revenue-surge/\n\n💡 Signal: This week highlights the operational growing pains of major AI vendors—with Anthropic facing compute-crunch backlash despite releasing new models—alongside strong momentum from infrastructure providers like Vercel preparing for public markets.\n"
+    },
+    {
+      "isoDate": "2026-04-19",
+      "displayDate": "Sunday, April 19",
+      "sourceFile": "ai-news-digest-2026-04-19.md",
+      "headlines": [
+        "Codex for (almost) everything",
+        "The next evolution of the Agents SDK",
+        "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+        "5 Considerations for Building an AI-Ready Infrastructure",
+        "Listening to Skepticism: What Faculty Concerns About Generative AI Reveal"
+      ],
+      "raw": "# AI Intelligence Briefing - April 19, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Codex for (almost) everything** — The updated Codex app for macOS and Windows adds computer use, in-app browsing, image generation, memory, and plugins to accelerate developer workflows.\n  🔗 Graph: Codex, OpenAI, Agentic AI\n  📅 Published: 2026-04-16\n  📰 https://openai.com/index/codex-for-almost-everything\n\n• **The next evolution of the Agents SDK** — OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools.\n  🔗 Graph: Agentic AI, OpenAI, Developer API Program\n  📅 Published: 2026-04-15\n  📰 https://openai.com/index/the-next-evolution-of-the-agents-sdk\n\n• **Gemini 3.1 Flash TTS: the next generation of expressive AI speech** — Google's newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.\n  🔗 Graph: Gemini, Google, TritonAI\n  📅 Published: 2026-04-15\n  📰 https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/\n\n• **5 Considerations for Building an AI-Ready Infrastructure** — The most effective artificial intelligence infrastructure strategies deliver new capabilities without neglecting governance, security and operational efficiency.\n  🔗 Graph: Higher Ed AI, AI Governance, AI Security\n  📅 Published: 2026-04-16\n  📰 https://edtechmagazine.com/higher/article/2026/04/5-considerations-building-ai-ready-infrastructure\n\n• **Listening to Skepticism: What Faculty Concerns About Generative AI Reveal** — Listening to faculty concerns about generative AI can help institutions respond with more clarity, precision, and trust.\n  🔗 Graph: Higher Ed AI, EDUCAUSE, AI Adoption\n  📅 Published: 2026-04-13\n  📰 https://er.educause.edu/articles/2026/4/listening-to-skepticism-what-faculty-concerns-about-generative-ai-reveal\n\n💡 Signal: This week's developments heavily favor agentic workflows and developer enablement via OpenAI's expanded Codex and Agents SDK, alongside crucial guidance on higher-ed AI infrastructure and faculty adoption."
     }
   ]
 };
