@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'CIO.com',
+    title: 'How poor data foundations can undermine AI success',
+    url: 'https://www.cio.com/article/4158048/how-poor-data-foundations-can-undermine-ai-success.html',
+    date: '2026-04-17',
+    category: 'article'
+  },
+  {
     publication: 'ASU+GSV Summit',
     title: 'Shared AI at Scale: Developed by Universities for Universities',
     url: 'https://www.asugsvsummit.com/schedule/shared-ai-at-scale-developed-by-universities-for-universities',
