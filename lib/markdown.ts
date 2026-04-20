@@ -139,6 +139,7 @@ export function sanitizePublicDigest(raw: string): string {
     if (/^\*Curated from knowledge graph/i.test(trimmed)) continue;
     if (/^Curated from your knowledge graph/i.test(trimmed)) continue;
     if (/^🔗\s+Graph:/i.test(trimmed)) continue;
+    if (/^📅\s+Published:/i.test(trimmed)) continue;
 
     if (/^💡\s+\*\*Signal:\*\*/i.test(trimmed)) {
       const text = trimmed.replace(/^💡\s+\*\*Signal:\*\*\s*/i, '');
