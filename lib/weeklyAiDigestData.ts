@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-23T17:20:05.265Z",
+  "generatedAt": "2026-04-24T13:36:01.209Z",
   "weekOf": "2026-04-20",
   "weekEnding": "2026-04-26",
   "weekLabel": "Week of April 20–26, 2026",
-  "publishedThrough": "April 23, 2026",
-  "digestCount": 3,
-  "headlineCount": 11,
+  "publishedThrough": "April 24, 2026",
+  "digestCount": 4,
+  "headlineCount": 16,
   "days": [
     {
       "isoDate": "2026-04-21",
@@ -60,6 +60,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "From OpenAI to Nvidia, firms channel billions into AI infrastructure as demand booms"
       ],
       "raw": "# AI Intelligence Briefing - April 23, 2026\n*Curated from knowledge graph (110 nodes, 34 edges) · All articles published within the last 7 days*\n\n• **Amazon to invest up to $25 billion in Anthropic as part of $100 billion cloud deal** — Amazon is doubling down on its generative AI investments, significantly expanding its commitment to Anthropic following earlier multi-billion dollar stakes in both Anthropic and OpenAI.\n  🔗 Graph: Amazon Web Services, Anthropic, GenAI\n  📅 Published: 2026-04-21\n  📰 https://www.reuters.com/technology/anthropic-spend-over-100-billion-amazons-cloud-technology-2026-04-20/\n\n• **OpenAI starts offering a biology-tuned LLM** — OpenAI has launched a specialized language model designed to help life science researchers tackle massive datasets generated from genome sequencing and protein biochemistry.\n  🔗 Graph: OpenAI, LLM, Healthcare IT\n  📅 Published: 2026-04-16\n  📰 https://arstechnica.com/science/2026/04/openai-starts-offering-a-biology-tuned-llm/\n\n• **US security agency is using Anthropic's Mythos despite blacklist, Axios reports** — The Pentagon and the US administration are engaging with Anthropic's latest and most advanced AI model, Mythos, designed for defensive cybersecurity tasks, despite previous disputes over AI usage models.\n  🔗 Graph: Anthropic, Cybersecurity, Infrastructure\n  📅 Published: 2026-04-19\n  📰 https://www.reuters.com/business/us-security-agency-is-using-anthropics-mythos-despite-blacklist-axios-reports-2026-04-19/\n\n• **The AI apps are coming for your PC** — OpenAI's newest tool, Codex, aims to be an all-in-one AI superapp that features a web browser, coding integrations, and settings enabling autonomous computer control for end users.\n  🔗 Graph: OpenAI, Endpoint Management, Developer Tools\n  📅 Published: 2026-04-18\n  📰 https://www.theverge.com/tech/914429/the-ai-apps-are-coming-for-your-pc\n\n• **From OpenAI to Nvidia, firms channel billions into AI infrastructure as demand booms** — Surging demand is driving major firms to heavily fund next-generation AI infrastructure, hardware, and specialized silicon facilities worldwide.\n  🔗 Graph: Infrastructure, Cloud Computing, OpenAI\n  📅 Published: 2026-04-21\n  📰 https://www.reuters.com/business/autos-transportation/companies-pouring-billions-advance-ai-infrastructure-2026-04-21/\n\n💡 Signal: Massive capital injections are accelerating the deployment of specialized AI hardware and tailored LLMs (like biology-tuned models and cybersecurity-focused Mythos), moving the industry beyond general-purpose chat toward domain-specific enterprise infrastructure."
+    },
+    {
+      "isoDate": "2026-04-24",
+      "displayDate": "Friday, April 24",
+      "sourceFile": "ai-news-digest-2026-04-24.md",
+      "headlines": [
+        "Google invests in its first data center in the Alps.",
+        "Survey: Americans View AI Use on Campus as Important, Yet Remain Skeptical",
+        "Higher Ed’s Data Problem",
+        "AI to Learn 2.0: A Deliverable-Oriented Governance Framework and Maturity Rubric for Opaque AI in Learning-Intensive Domains",
+        "SkillGraph: Graph Foundation Priors for LLM Agent Tool Sequence Recommendation"
+      ],
+      "raw": "# AI Intelligence Briefing - Friday, April 24, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google invests in its first data center in the Alps.** — Google’s infrastructure move is a reminder that AI capacity is still a physical business: power, land, and latency. That matters for any campus or enterprise betting on scale, especially around cloud AI and data residency.\n  🔗 Graph: Google, Google Cloud AI, Vertical AI\n  📅 Published: 2026-04-23\n  📰 https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-data-center-austria/\n\n• **Survey: Americans View AI Use on Campus as Important, Yet Remain Skeptical** — This is the higher-ed signal Brett cares about: AI is becoming normal on campus, but trust is still lagging. Good reminder that adoption without governance will keep feeling fragile.\n  🔗 Graph: Higher Ed AI, AI Governance, AI Compliance & Governance\n  📅 Published: 2026-04-23\n  📰 https://www.insidehighered.com/news/quick-takes/2026/04/23/survey-americans-skeptical-view-ai-use-campus-important\n\n• **Higher Ed’s Data Problem** — The piece lands squarely on the plumbing Brett keeps running into: messy institutional data blocks better AI, analytics, and decision support. It’s basically a governance story wearing a data hat.\n  🔗 Graph: Data Analytics, Data Analytics Governance, AI Governance\n  📅 Published: 2026-04-23\n  📰 https://www.insidehighered.com/opinion/columns/editors-note/2026/04/23/higher-eds-data-problem\n\n• **AI to Learn 2.0: A Deliverable-Oriented Governance Framework and Maturity Rubric for Opaque AI in Learning-Intensive Domains** — This is very close to Brett’s world: how to evaluate AI output when the real question is whether humans actually learned or just produced something polished. Strong fit for TritonAI governance and campus policy.\n  🔗 Graph: AI Governance, AI Compliance & Governance, Higher Ed AI\n  📅 Published: 2026-04-23\n  📰 https://arxiv.org/abs/2604.19751\n\n• **SkillGraph: Graph Foundation Priors for LLM Agent Tool Sequence Recommendation** — Useful signal for agentic systems: tool choice and tool order are becoming first-class problems, not just prompt craft. That maps directly to Brett’s agentic AI and LLM gateway work.\n  🔗 Graph: Agentic AI, Model Context Protocol, LLM Gateway\n  📅 Published: 2026-04-23\n  📰 https://arxiv.org/abs/2604.19793\n\n💡 Signal: The week’s pattern is pretty clear: AI is moving from “model capability” to “institutional fit.” The strongest stories are about governance, data plumbing, and operational infrastructure — exactly where TritonAI’s next gains will come from.\n"
     }
   ]
 };
