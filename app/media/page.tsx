@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     description: "Articles, interviews, and case studies about AI, digital services, and institutional change in higher education.",
     url: "https://brettcpollak.com/media",
   },
+  twitter: {
+    card: "summary",
+    title: "Writing & Conversations | Brett Pollak",
+    description: "Articles, interviews, and case studies about AI, digital services, and institutional change in higher education.",
+  },
 };
 
 export default function Media() {
@@ -48,11 +53,34 @@ export default function Media() {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://brettcpollak.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing & Conversations",
+        "item": "https://brettcpollak.com/media"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12">

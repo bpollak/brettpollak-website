@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     'A weekly roundup of what’s new with UC San Diego’s supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
   alternates: {
-    canonical: '/ucsd-ai-news',
+    canonical: 'https://brettcpollak.com/ucsd-ai-news',
   },
   openGraph: {
     title: 'UC San Diego AI Weekly Update | Brett Pollak',

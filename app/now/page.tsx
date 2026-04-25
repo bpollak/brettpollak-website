@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "What Brett Pollak is focused on right now — work, projects, and what's on his mind. Refreshed weekly.",
   alternates: {
-    canonical: '/now',
+    canonical: 'https://brettcpollak.com/now',
   },
   openGraph: {
     title: 'Now | Brett Pollak',

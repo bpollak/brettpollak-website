@@ -20,6 +20,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Brett Pollak | Work in Higher Education and AI",
+    description: "Background and current work on AI, digital services, and institutional change in higher education.",
+    images: ["/brettpollak-headshot-lean.png"],
+  },
 };
 
 export default function About() {

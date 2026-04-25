@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description: "Discover and share your favorite podcasts on AI, technology, economics, and more.",
     url: "https://brettcpollak.com/podcasts",
   },
+  twitter: {
+    card: "summary",
+    title: "Podcast Discovery | Brett Pollak",
+    description: "Discover and share your favorite podcasts on AI, technology, economics, and more.",
+  },
 };
 
 export default function Podcasts() {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'AI Digest',
   description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
   alternates: {
-    canonical: '/ai-digest',
+    canonical: 'https://brettcpollak.com/ai-digest',
   },
   openGraph: {
     title: 'AI Digest',

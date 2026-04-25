@@ -1,6 +1,36 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://brettcpollak.com/',
+  },
+  openGraph: {
+    title: 'Brett Pollak | AI in Higher Education',
+    description:
+      'Notes and conversations about building useful, responsible AI in higher education — informed by work at UC San Diego on TritonAI, the Developer API Program, and citizen agentic development.',
+    url: 'https://brettcpollak.com/',
+    siteName: 'Brett Pollak',
+    type: 'profile',
+    images: [
+      {
+        url: '/brett-pollak-headshot-sit-center.png',
+        width: 500,
+        height: 650,
+        alt: 'Brett Pollak — Executive Director, Workplace Technology & Infrastructure Services at UC San Diego',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brett Pollak | AI in Higher Education',
+    description:
+      'Building and learning from institutional AI in higher education — TritonAI, citizen-developer enablement, and the architecture behind it.',
+    images: ['/brett-pollak-headshot-sit-center.png'],
+  },
+};
 
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
@@ -50,11 +80,31 @@ export default function Home() {
     ]
   };
 
+  const tritonAISchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TritonAI",
+    "alternateName": "TritonAI Program at UC San Diego",
+    "url": "https://brettcpollak.com/tritongpt",
+    "description":
+      "UC San Diego's institutional AI program — a shared ecosystem that includes TritonGPT (the campus AI assistant platform), the TritonAI Developer API Program, and the Citizen Agentic Development Framework. Serves 73,000+ campus users.",
+    "foundingDate": "2024",
+    "parentOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "University of California San Diego",
+      "url": "https://ucsd.edu/"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50" id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(tritonAISchema) }}
       />
       {/* Hero Section */}
       <section className="relative max-w-7xl mx-auto px-6 pt-24 pb-32">

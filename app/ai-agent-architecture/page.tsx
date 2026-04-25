@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 40+ automated jobs, a 179-node knowledge graph, 185 wiki pages, and a three-layer memory system.',
   alternates: {
-    canonical: '/ai-agent-architecture',
+    canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
   openGraph: {
     title: 'AI Agent Architecture | Brett Pollak',

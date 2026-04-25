@@ -21,6 +21,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
+    description: "Discover innovative AI solutions and products built by Brett Pollak.",
+    images: ["/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg"],
+  },
 };
 
 export default function Products() {
