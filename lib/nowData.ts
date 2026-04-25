@@ -49,17 +49,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Sharing the work",
       body:
-        "Drafting four submissions to the 2026 Gartner Eye on Innovation Awards on behalf of UC San Diego — Contract Review for Legal, AI Transcript Matching, the Developer API Program, and the Citizen Dev Framework. Also socializing the citizen-dev approach with internal IT services leadership and at upcoming UC peer-campus discussions.",
+        "Socializing the citizen-developer approach with peer institutions and writing it up so other higher-ed IT teams can adapt it. Most universities are stuck choosing between buying generic AI for everyone and routing every request through central IT — there's a third path, and it's worth documenting clearly.",
     },
     {
       label: "Thinking about",
       body:
         "How universities can adopt AI without ceding their institutional memory to a vendor. The architecture lives in our filesystems and under our control; any model can plug in and any model can be swapped out. The context layer is the moat — and it shouldn't belong to OpenAI, Anthropic, or Google.",
-    },
-    {
-      label: "Outside work",
-      body:
-        "Family in 4S Ranch — wife Gaby and a blended family of five kids. Watching Cason's varsity basketball season at Del Norte and trying to be present at home in the same way I expect AI to keep me present at work.",
     },
   ],
 };
