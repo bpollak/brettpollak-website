@@ -61,7 +61,7 @@ export default function NowPage() {
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-6 pb-16">
+      <section className="max-w-3xl mx-auto px-6 pb-32">
         <ul className="space-y-10">
           {currentNow.items.map((item) => (
             <li key={item.label} className="border-l-2 border-blue-200 pl-6">
@@ -74,15 +74,6 @@ export default function NowPage() {
         </ul>
       </section>
 
-      <section className="max-w-3xl mx-auto px-6 pb-32">
-        <div className="border-t border-slate-200 pt-8 text-sm text-slate-500 leading-6">
-          <p>
-            Refreshed weekly by an automated review job; manual edits also
-            stick. If something here is materially out of date, it&rsquo;s
-            because nothing has shifted enough to warrant a new entry.
-          </p>
-        </div>
-      </section>
     </main>
   );
 }
