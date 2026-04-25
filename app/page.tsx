@@ -19,8 +19,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Brett Pollak",
-    "jobTitle": "Technology Executive",
-    "description": "Technology Executive at UC San Diego sharing lessons from building TritonGPT and other institutional AI efforts in higher education.",
+    "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+    "description": "Executive Director at UC San Diego sharing lessons from building TritonAI — the campus AI program that includes TritonGPT and other institutional AI efforts in higher education.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
     "worksFor": {
