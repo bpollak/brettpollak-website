@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-25T17:20:01.257Z",
+  "generatedAt": "2026-04-25T22:39:34.843Z",
   "weekOf": "2026-04-20",
   "weekEnding": "2026-04-26",
   "weekLabel": "Week of April 20–26, 2026",
   "publishedThrough": "April 25, 2026",
-  "digestCount": 4,
-  "headlineCount": 16,
+  "digestCount": 5,
+  "headlineCount": 21,
   "days": [
     {
       "isoDate": "2026-04-21",
@@ -73,6 +73,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "SkillGraph: Graph Foundation Priors for LLM Agent Tool Sequence Recommendation"
       ],
       "raw": "# AI Intelligence Briefing - Friday, April 24, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google invests in its first data center in the Alps.** — Google’s infrastructure move is a reminder that AI capacity is still a physical business: power, land, and latency. That matters for any campus or enterprise betting on scale, especially around cloud AI and data residency.\n  🔗 Graph: Google, Google Cloud AI, Vertical AI\n  📅 Published: 2026-04-23\n  📰 https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-data-center-austria/\n\n• **Survey: Americans View AI Use on Campus as Important, Yet Remain Skeptical** — This is the higher-ed signal Brett cares about: AI is becoming normal on campus, but trust is still lagging. Good reminder that adoption without governance will keep feeling fragile.\n  🔗 Graph: Higher Ed AI, AI Governance, AI Compliance & Governance\n  📅 Published: 2026-04-23\n  📰 https://www.insidehighered.com/news/quick-takes/2026/04/23/survey-americans-skeptical-view-ai-use-campus-important\n\n• **Higher Ed’s Data Problem** — The piece lands squarely on the plumbing Brett keeps running into: messy institutional data blocks better AI, analytics, and decision support. It’s basically a governance story wearing a data hat.\n  🔗 Graph: Data Analytics, Data Analytics Governance, AI Governance\n  📅 Published: 2026-04-23\n  📰 https://www.insidehighered.com/opinion/columns/editors-note/2026/04/23/higher-eds-data-problem\n\n• **AI to Learn 2.0: A Deliverable-Oriented Governance Framework and Maturity Rubric for Opaque AI in Learning-Intensive Domains** — This is very close to Brett’s world: how to evaluate AI output when the real question is whether humans actually learned or just produced something polished. Strong fit for TritonAI governance and campus policy.\n  🔗 Graph: AI Governance, AI Compliance & Governance, Higher Ed AI\n  📅 Published: 2026-04-23\n  📰 https://arxiv.org/abs/2604.19751\n\n• **SkillGraph: Graph Foundation Priors for LLM Agent Tool Sequence Recommendation** — Useful signal for agentic systems: tool choice and tool order are becoming first-class problems, not just prompt craft. That maps directly to Brett’s agentic AI and LLM gateway work.\n  🔗 Graph: Agentic AI, Model Context Protocol, LLM Gateway\n  📅 Published: 2026-04-23\n  📰 https://arxiv.org/abs/2604.19793\n\n💡 Signal: The week’s pattern is pretty clear: AI is moving from “model capability” to “institutional fit.” The strongest stories are about governance, data plumbing, and operational infrastructure — exactly where TritonAI’s next gains will come from.\n"
+    },
+    {
+      "isoDate": "2026-04-25",
+      "displayDate": "Saturday, April 25",
+      "sourceFile": "ai-news-digest-2026-04-25.md",
+      "headlines": [
+        "Introducing GPT-5.5",
+        "Anthropic Launches Opus 4.7 AI Model, Focusing on Coding, Visual Tasks, and Cybersecurity Guardrails",
+        "Scaling Codex to enterprises worldwide",
+        "White House Unveils National AI Legislative Framework",
+        "We're launching two specialized TPUs for the agentic era."
+      ],
+      "raw": "# AI Intelligence Briefing - April 25, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Introducing GPT-5.5** — OpenAI introduces its smartest model yet, bringing faster performance and advanced capabilities tailored for complex coding, research, and cross-tool data analysis workflows.\n  🔗 Graph: openai, gpt-4\n  📅 Published: 2026-04-23\n  📰 https://openai.com/index/introducing-gpt-5-5\n\n• **Anthropic Launches Opus 4.7 AI Model, Focusing on Coding, Visual Tasks, and Cybersecurity Guardrails** — The updated Claude large language model significantly outperforms its predecessor in software engineering, multi-step autonomous work, and visual analysis.\n  🔗 Graph: anthropic, claude\n  📅 Published: 2026-04-21\n  📰 https://campustechnology.com/articles/2026/04/21/anthropic-launches-opus-4-7-ai-model-focusing-on-coding-visual-tasks-and-cybersecurity-guardrails.aspx\n\n• **Scaling Codex to enterprises worldwide** — OpenAI launches Codex Labs in partnership with major consultancies to deploy and scale its autonomous coding agent across the software development lifecycle, reaching 4M weekly active users.\n  🔗 Graph: codex, openai\n  📅 Published: 2026-04-21\n  📰 https://openai.com/index/scaling-codex-to-enterprises-worldwide\n\n• **White House Unveils National AI Legislative Framework** — A newly proposed federal framework seeks to establish uniform AI standards across the U.S., focusing on energy protections, child safety, and preemption of state-level regulations.\n  🔗 Graph: ai-governance, educause\n  📅 Published: 2026-04-21\n  📰 https://er.educause.edu/articles/2026/4/white-house-unveils-national-ai-legislative-framework\n\n• **We're launching two specialized TPUs for the agentic era.** — Google Cloud announces its eighth-generation TPU architecture, featuring specialized chips designed specifically to power high-throughput agentic AI workloads.\n  🔗 Graph: google, google-cloud-ai, agentic-ai\n  📅 Published: 2026-04-22\n  📰 https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/tpus-8t-8i-cloud-next/\n\n💡 Signal: The frontier models (GPT-5.5, Opus 4.7) are explicitly rotating toward robust agentic capability and coding automation, supported by new specialized infrastructure like Google's agent-focused TPUs and broad enterprise deployments of Codex.\n"
     }
   ]
 };
