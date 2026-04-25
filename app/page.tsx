@@ -1,5 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { currentNow } from '@/lib/nowData';
+
+function formatNowDate(iso: string): string {
+  const d = new Date(iso + 'T12:00:00Z');
+  return d.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
 
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
@@ -107,6 +118,35 @@ export default function Home() {
                 priority
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Currently — pulled from /now */}
+      <section className="bg-white border-y border-slate-200 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <div className="flex items-baseline gap-3 mb-3">
+              <span className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold">
+                Currently
+              </span>
+              <span className="text-xs text-slate-400">
+                {formatNowDate(currentNow.lastUpdated)}
+              </span>
+            </div>
+            <p className="text-lg text-slate-700 leading-8 mb-3">
+              <span className="font-semibold text-slate-900">
+                {currentNow.items[0].label}:
+              </span>{' '}
+              {currentNow.items[0].body}
+            </p>
+            <Link
+              href="/now"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-blue-700 hover:text-blue-900"
+            >
+              See what else I&rsquo;m focused on
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
         </div>
       </section>
