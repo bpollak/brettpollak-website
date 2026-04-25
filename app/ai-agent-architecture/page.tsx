@@ -7,7 +7,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 30+ automated jobs, a 163-node knowledge graph, 111 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 40+ automated jobs, a 179-node knowledge graph, 185 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: '/ai-agent-architecture',
   },
@@ -46,17 +46,17 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-slate-500 mb-10">
-          Last updated: April 15, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: April 24, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Automated jobs</div>
-            <div className="text-2xl font-bold text-slate-900">30+ cron jobs</div>
+            <div className="text-2xl font-bold text-slate-900">40+ cron jobs</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
-            <div className="text-2xl font-bold text-slate-900">163 nodes · 111 pages</div>
+            <div className="text-2xl font-bold text-slate-900">179 nodes · 185 pages</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Context loading</div>
@@ -123,8 +123,8 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 30+ automated jobs,
-            a 163-node knowledge graph, 111 wiki pages, and a three-layer memory system. It&rsquo;s
+            This page documents how I built that knowledge layer for myself: 40+ automated jobs,
+            a 179-node knowledge graph, 185 wiki pages, and a three-layer memory system. It&rsquo;s
             also a design pattern that could scale to thousands of staff at UC San Diego, giving
             every person a personal AI that understands their work world.
           </p>
@@ -225,7 +225,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            30+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            40+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -285,7 +285,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">163 nodes · 195 edges</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">179 nodes · 222 edges</div>
               <p className="text-sm text-slate-700 leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -297,7 +297,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">111 narrative pages</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">185 narrative pages</div>
               <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
@@ -664,6 +664,26 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 24, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Citizen developer framework + accessibility audit + new monitoring crons</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Knowledge layer crossed 179 graph nodes and 185 wiki pages (up from 163/111 nine
+              days earlier &mdash; a +67% jump in wiki coverage as graph-to-wiki reconciliation
+              caught up with accumulated entities). Two new crons: a daily{' '}
+              <span className="font-mono text-xs">tritonai-model-hub-snapshot</span> that diffs
+              UCSD&rsquo;s LLM gateway model catalog week-over-week into the Monday newsletter,
+              and a Friday{' '}
+              <span className="font-mono text-xs">backlog-completion-scan</span> that
+              cross-references backlog tasks against the week&rsquo;s meetings, debriefs, and
+              sent mail to flag probable completions. Mission Control gained an Accessibility
+              Audit screen surfacing vendor accessibility statements across 150 enterprise
+              systems. New wiki page: TritonAI AI Initiative Readiness Copilot.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
