@@ -37,7 +37,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Work focus",
       body:
-        "Standing up UC San Diego's Citizen Agentic Development Framework — a four-tier model that lets faculty and staff build AI-assisted apps with risk-appropriate review at each tier. The first hosting environment is live; the first production apps (transcript matching for Enrollment Management, contract review for General Counsel) are running on it.",
+        "Standing up UC San Diego's Citizen Agentic Development Framework — a four-tier model that lets faculty and staff build AI-assisted apps with risk-appropriate review at each tier. The first hosting environment is live and onboarding pilots; in parallel, the ITS team is shipping enterprise-grade agentic apps (transcript matching for Enrollment Management, contract review for General Counsel) on the same Developer API substrate.",
     },
     {
       label: "Building",

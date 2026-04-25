@@ -84,7 +84,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-xl text-slate-600 leading-relaxed mb-14 max-w-xl">
-              I work with colleagues at UC San Diego on practical AI systems like <Link href="/tritongpt" className="font-semibold text-slate-900 hover:text-blue-700 underline underline-offset-2 decoration-blue-700/30 hover:decoration-blue-700 transition-colors">TritonGPT</Link>. This site is a place to share what we&apos;re learning about implementation, governance, adoption, and the institutional questions that matter once AI moves beyond experimentation.
+              I work with colleagues at UC San Diego on practical AI systems through <Link href="/tritongpt" className="font-semibold text-slate-900 hover:text-blue-700 underline underline-offset-2 decoration-blue-700/30 hover:decoration-blue-700 transition-colors">TritonAI</Link>. This site is a place to share what we&apos;re learning about implementation, governance, adoption, and the institutional questions that matter once AI moves beyond experimentation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
