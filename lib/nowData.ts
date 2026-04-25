@@ -8,8 +8,6 @@
  * Manual edits welcome — the cron compares against current state and only
  * pushes changes that the prompt has reasoned about, so a human edit will
  * stick until something materially changes.
- *
- * Convention: https://nownownow.com/about
  */
 
 export type NowItem = {

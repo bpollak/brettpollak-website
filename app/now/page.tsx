@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { currentNow } from '@/lib/nowData';
 
 export const metadata: Metadata = {
@@ -77,20 +76,6 @@ export default function NowPage() {
 
       <section className="max-w-3xl mx-auto px-6 pb-32">
         <div className="border-t border-slate-200 pt-8 text-sm text-slate-500 leading-6">
-          <p className="mb-2">
-            This is a{' '}
-            <Link
-              href="https://nownownow.com/about"
-              className="underline hover:text-slate-700"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              now page
-            </Link>
-            , inspired by Derek Sivers. The convention: a single page on a
-            personal site that says what someone is focused on at this point in
-            their life.
-          </p>
           <p>
             Refreshed weekly by an automated review job; manual edits also
             stick. If something here is materially out of date, it&rsquo;s
