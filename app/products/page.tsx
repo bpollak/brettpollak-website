@@ -107,10 +107,10 @@ export default function Products() {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 flex items-center justify-center p-12">
                 <Image
-                  src="/henry-mission-control.png"
-                  alt="Henry - Mission Control"
-                  width={1600}
-                  height={900}
+                  src="/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg"
+                  alt="Mission Control — Build / Campus App Pipeline view, showing 14 tracked AI use-case ideas with priority, audience, and tier tags"
+                  width={590}
+                  height={1280}
                   className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
