@@ -304,9 +304,9 @@ export default function TritonGPTContent() {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-orange-400/0 group-hover:from-amber-400/10 group-hover:to-orange-400/10 transition-all duration-500"></div>
               <div className="relative z-10">
                 <div className="text-5xl font-bold text-amber-600 mb-2 transition-all duration-300 group-hover:scale-110">
-                  $<AnimatedNumber end={300} isVisible={metricsVisible} />K
+                  $<AnimatedNumber end={500} isVisible={metricsVisible} />K
                 </div>
-                <div className="text-amber-700 font-medium">Recurring Annual Savings</div>
+                <div className="text-amber-700 font-medium">Projected Annual Savings</div>
                 <div className="text-sm text-amber-600 mt-2">From replacing third-party public support tooling</div>
               </div>
             </div>
