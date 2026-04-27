@@ -68,9 +68,9 @@ function countSectionBullets(markdown, sectionHeading) {
   for (let i = startIdx + 1; i < lines.length; i++) {
     const trimmed = lines[i].trim();
     if (trimmed.startsWith('## ')) break;
-    // Count bullets that start with "• **", calendar "📅 **" (upcoming events),
-    // or videotape "📼 **" (recent recordings used as fallback in the trainings section).
-    if (/^(•|📅|📼)\s+\*\*/.test(trimmed)) {
+    // Count bold-headline bullets across both bullet styles agents emit:
+    //   "• **...", "- **..." (Sonnet), and the training-section glyphs "📅 **" / "📼 **".
+    if (/^(•|-|📅|📼)\s+\*\*/.test(trimmed)) {
       count++;
     }
   }
