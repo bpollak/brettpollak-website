@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-04-26T17:20:10.920Z",
+  "generatedAt": "2026-04-27T04:05:30.015Z",
   "weekOf": "2026-04-20",
   "weekEnding": "2026-04-26",
   "weekLabel": "Week of April 20–26, 2026",
   "publishedThrough": "April 26, 2026",
-  "digestCount": 5,
-  "headlineCount": 21,
+  "digestCount": 6,
+  "headlineCount": 27,
   "days": [
     {
       "isoDate": "2026-04-21",
@@ -86,6 +86,20 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "We're launching two specialized TPUs for the agentic era."
       ],
       "raw": "# AI Intelligence Briefing - April 25, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Introducing GPT-5.5** — OpenAI introduces its smartest model yet, bringing faster performance and advanced capabilities tailored for complex coding, research, and cross-tool data analysis workflows.\n  🔗 Graph: openai, gpt-4\n  📅 Published: 2026-04-23\n  📰 https://openai.com/index/introducing-gpt-5-5\n\n• **Anthropic Launches Opus 4.7 AI Model, Focusing on Coding, Visual Tasks, and Cybersecurity Guardrails** — The updated Claude large language model significantly outperforms its predecessor in software engineering, multi-step autonomous work, and visual analysis.\n  🔗 Graph: anthropic, claude\n  📅 Published: 2026-04-21\n  📰 https://campustechnology.com/articles/2026/04/21/anthropic-launches-opus-4-7-ai-model-focusing-on-coding-visual-tasks-and-cybersecurity-guardrails.aspx\n\n• **Scaling Codex to enterprises worldwide** — OpenAI launches Codex Labs in partnership with major consultancies to deploy and scale its autonomous coding agent across the software development lifecycle, reaching 4M weekly active users.\n  🔗 Graph: codex, openai\n  📅 Published: 2026-04-21\n  📰 https://openai.com/index/scaling-codex-to-enterprises-worldwide\n\n• **White House Unveils National AI Legislative Framework** — A newly proposed federal framework seeks to establish uniform AI standards across the U.S., focusing on energy protections, child safety, and preemption of state-level regulations.\n  🔗 Graph: ai-governance, educause\n  📅 Published: 2026-04-21\n  📰 https://er.educause.edu/articles/2026/4/white-house-unveils-national-ai-legislative-framework\n\n• **We're launching two specialized TPUs for the agentic era.** — Google Cloud announces its eighth-generation TPU architecture, featuring specialized chips designed specifically to power high-throughput agentic AI workloads.\n  🔗 Graph: google, google-cloud-ai, agentic-ai\n  📅 Published: 2026-04-22\n  📰 https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/tpus-8t-8i-cloud-next/\n\n💡 Signal: The frontier models (GPT-5.5, Opus 4.7) are explicitly rotating toward robust agentic capability and coding automation, supported by new specialized infrastructure like Google's agent-focused TPUs and broad enterprise deployments of Codex.\n"
+    },
+    {
+      "isoDate": "2026-04-26",
+      "displayDate": "Sunday, April 26",
+      "sourceFile": "ai-news-digest-2026-04-26.md",
+      "headlines": [
+        "Speeding up agentic workflows with WebSockets in the Responses API",
+        "Train separately, merge together: Modular post-training with mixture-of-experts",
+        "Anthropic Launches Opus 4.7 AI Model, Focusing on Coding, Visual Tasks, and Cybersecurity Guardrails",
+        "We're launching two specialized TPUs for the agentic era.",
+        "Introducing workspace agents in ChatGPT",
+        "Model Context Protocol (MCP) on Databricks | Databricks on AWS"
+      ],
+      "raw": "# AI Intelligence Briefing - April 26, 2026\n*Curated from knowledge graph (183 nodes, 260 edges) · All articles published within the last 7 days*\n\n• **Speeding up agentic workflows with WebSockets in the Responses API** — OpenAI breaks down how connection-scoped caching and WebSockets significantly reduce API latency for the Codex agent loop. Better latency fundamentally improves autonomous software engineering.\n  🔗 Graph: openai, codex, agentic-ai\n  📅 Published: 2026-04-22\n  📰 https://openai.com/index/speeding-up-agentic-workflows-with-websockets\n\n• **Train separately, merge together: Modular post-training with mixture-of-experts** — AI2 demonstrates BAR, a method for post-training language models by independent domain experts that are then merged. This represents a modular upgrade path without risking global model stability.\n  🔗 Graph: ai2, higher-ed-ai, model-agnosticism\n  📅 Published: 2026-04-20\n  📰 https://allenai.org/blog/bar\n\n• **Anthropic Launches Opus 4.7 AI Model, Focusing on Coding, Visual Tasks, and Cybersecurity Guardrails** — Anthropic’s flagship Claude capability receives an update pushing it further regarding autonomous execution, multi-step work, and coding tasks.\n  🔗 Graph: anthropic, claude, agentic-ai\n  📅 Published: 2026-04-21\n  📰 https://campustechnology.com/articles/2026/04/21/anthropic-launches-opus-4-7-ai-model-focusing-on-coding-visual-tasks-and-cybersecurity-guardrails.aspx\n\n• **We're launching two specialized TPUs for the agentic era.** — Google Cloud unveils its 8th generation of TPU hardware. These new processors target the unique hardware economics behind executing and serving long-running, process-heavy agentic systems.\n  🔗 Graph: google, google-cloud-ai, agentic-ai\n  📅 Published: 2026-04-22\n  📰 https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/tpus-8t-8i-cloud-next/\n\n• **Introducing workspace agents in ChatGPT** — OpenAI brings its Codex-powered workspace agents into ChatGPT’s enterprise offerings, targeting automated complex workflows that scale securely across standard enterprise tools. \n  🔗 Graph: openai, codex, agentic-ai\n  📅 Published: 2026-04-22\n  📰 https://openai.com/index/introducing-workspace-agents-in-chatgpt\n\n• **Model Context Protocol (MCP) on Databricks | Databricks on AWS** — Databricks introduces MCP to its ecosystem, positioning its AI Gateway as the enterprise control plane for governing MCP servers alongside standard LLM endpoints.\n  🔗 Graph: databricks, model-context-protocol, ai-governance\n  📅 Published: 2026-04-22\n  📰 https://docs.databricks.com/aws/en/generative-ai/mcp/\n\n💡 Signal: This week's core narrative revolves entirely around *agentic execution* and *workflow automation*. OpenAI, Anthropic, Databricks, and Google are all actively laying down infrastructure (WebSockets, specialized chips, enterprise routing/governance) specifically designed for agents navigating enterprise IT tooling—which is exactly the trajectory Mission Control and the Enterprise Data Agent are running on."
     }
   ]
 };
