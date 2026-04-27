@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ucsdAiNewsletterData } from '@/lib/ucsdAiNewsletterData';
 import { renderMarkdown } from '@/lib/markdown';
@@ -140,18 +139,6 @@ export default function UcsdAiNewsPage() {
                     </div>
                   </div>
                   <div className="px-8 py-7">
-                    {edition.heroImage && (
-                      <div className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-                        <Image
-                          src={edition.heroImage}
-                          alt={`Hero image for UC San Diego AI Weekly Update ${edition.displayDate}`}
-                          width={1600}
-                          height={900}
-                          className="h-auto w-full object-cover"
-                          priority={edition === editionsNewestFirst[0]}
-                        />
-                      </div>
-                    )}
                     <div
                       className="max-w-none text-slate-700
                         [&_p]:text-[1.06rem] [&_p]:leading-9 [&_p]:my-5 [&_p]:text-slate-700
