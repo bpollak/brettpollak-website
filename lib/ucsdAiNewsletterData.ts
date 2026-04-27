@@ -21,14 +21,24 @@ export type UcsdAiNewsletterData = {
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
-  "generatedAt": "2026-04-25T04:52:46.199Z",
-  "weekLabel": "Week of April 20–26, 2026",
-  "weekOf": "2026-04-20",
-  "weekEnding": "2026-04-26",
-  "publishedThrough": "April 20, 2026",
-  "editionCount": 3,
-  "itemCount": 24,
+  "generatedAt": "2026-04-27T12:01:10.210Z",
+  "weekLabel": "Week of April 27 – May 3, 2026",
+  "weekOf": "2026-04-27",
+  "weekEnding": "2026-05-03",
+  "publishedThrough": "April 27, 2026",
+  "editionCount": 4,
+  "itemCount": 33,
   "editions": [
+    {
+      "isoDate": "2026-04-27",
+      "displayDate": "Monday, April 27",
+      "sourceFile": "ucsd-ai-newsletter-2026-04-27.md",
+      "toolUpdatesCount": 4,
+      "tritonAiNewsCount": 2,
+      "upcomingTrainingsCount": 3,
+      "heroImage": null,
+      "raw": "# UC San Diego AI Weekly Update\n\n## What's New in Your AI Tools\n### TritonGPT\n• **New LLMs, UCSD Assistant tools, and search improvements**: GPT 5.4, Gemini 3.1 Pro/Flash, Gemma 4 26b, and Claude Sonnet 4.6 added, with new Parking and Busyness tools for the UC San Diego Assistant.\n\n### Microsoft Copilot with Data Protection\n• **Microsoft Copilot with Data Protection Updates**: Ongoing updates to the data protection chatbot for secure image generation, PDF summarization, and fact retrieval.\n\n### Copilot for Microsoft 365\n• **Copilot for Microsoft 365 Enhancements**: Continued rollout of AI-powered productivity features across Word, Excel, PowerPoint, Outlook, and Teams.\n\n### Google Gemini & NotebookLM\n• **Gemini and NotebookLM Updates**: New features and capabilities rolling out across Google's AI chatbot and NotebookLM research assistant.\n\n## Coming Up: Trainings & Workshops\n📅 **AI Webinar #6 - One Year of Innovation with TritonGPT: Past, Present, and Future**: Discover how far we've come and where we're headed with exciting new features like \"MyDocuments\" and model switching.\n📼 **AI Webinar #5 - Lean Six Sigma vs. Artificial Intelligence**: Explore how Lean Six Sigma principles and AI-driven tools like TritonGPT can optimize workflows.\n📼 **AI Webinar #4 - Prompting Practice for Generating a Great New Year**: Learn best prompting practices with Everyday I AI videos #2 and #3.\n\n## TritonAI News\n• **New Chip Design Could Boost Efficiency of Power Management in Data Centers**: Innovations in chip technology promise enhanced efficiency for data center operations.\n• **What Skills Do Humans Need to Become Robot Proof in the Age of AI?**: Exploring the critical skills needed for humans to thrive alongside AI technologies.\n"
+    },
     {
       "isoDate": "2026-04-20",
       "displayDate": "Monday, April 20",
