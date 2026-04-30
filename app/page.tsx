@@ -173,30 +173,46 @@ export default function Home() {
       </section>
 
       {/* Currently — pulled from /now */}
-      <section className="bg-white border-y border-slate-200 py-12">
+      <section className="bg-gradient-to-b from-blue-50/40 via-white to-white border-y border-slate-200 py-14">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <div className="flex items-baseline gap-3 mb-3">
-              <span className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold">
-                Currently
-              </span>
-              <span className="text-xs text-slate-400">
-                {formatNowDate(currentNow.lastUpdated)}
-              </span>
+            <div className="relative rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/50 border border-blue-200/70 shadow-lg shadow-blue-900/5 p-7 md:p-8 overflow-hidden">
+              {/* top accent stripe */}
+              <div
+                className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700"
+                aria-hidden="true"
+              />
+              <div className="flex items-center gap-3 mb-4 flex-wrap">
+                <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 ring-2 ring-emerald-100" />
+                </span>
+                <span className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold">
+                  Currently
+                </span>
+                <span className="text-xs text-slate-500 md:ml-auto">
+                  {formatNowDate(currentNow.lastUpdated)}
+                </span>
+              </div>
+              <p className="text-lg text-slate-800 leading-8 mb-5">
+                <span className="font-bold text-slate-900">
+                  {currentNow.items[0].label}:
+                </span>{' '}
+                {currentNow.items[0].body}
+              </p>
+              <Link
+                href="/now"
+                className="group inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 hover:text-blue-900"
+              >
+                See what else I&rsquo;m focused on
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-0.5"
+                >
+                  &rarr;
+                </span>
+              </Link>
             </div>
-            <p className="text-lg text-slate-700 leading-8 mb-3">
-              <span className="font-semibold text-slate-900">
-                {currentNow.items[0].label}:
-              </span>{' '}
-              {currentNow.items[0].body}
-            </p>
-            <Link
-              href="/now"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-blue-700 hover:text-blue-900"
-            >
-              See what else I&rsquo;m focused on
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
           </div>
         </div>
       </section>
