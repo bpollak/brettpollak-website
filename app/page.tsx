@@ -176,13 +176,13 @@ export default function Home() {
       <section className="bg-gradient-to-b from-blue-50/40 via-white to-white border-y border-slate-200 py-14">
         <div className="max-w-3xl mx-auto px-6">
           <div className="w-full">
-            <div className="relative rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/50 border border-blue-200/70 shadow-lg shadow-blue-900/5 p-7 md:p-8 overflow-hidden">
+            <div className="relative rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/50 border border-blue-200/70 shadow-lg shadow-blue-900/5 p-7 md:p-8 overflow-hidden text-center">
               {/* top accent stripe */}
               <div
                 className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700"
                 aria-hidden="true"
               />
-              <div className="flex items-center gap-3 mb-4 flex-wrap">
+              <div className="flex items-center justify-center gap-3 mb-4 flex-wrap">
                 <span className="relative flex h-2.5 w-2.5" aria-hidden="true">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 ring-2 ring-emerald-100" />
@@ -190,8 +190,8 @@ export default function Home() {
                 <span className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold">
                   Currently
                 </span>
-                <span className="text-xs text-slate-500 md:ml-auto">
-                  {formatNowDate(currentNow.lastUpdated)}
+                <span className="text-xs text-slate-500">
+                  &middot; {formatNowDate(currentNow.lastUpdated)}
                 </span>
               </div>
               <p className="text-lg text-slate-800 leading-8 mb-5">
