@@ -175,7 +175,7 @@ export default function Home() {
       {/* Currently — pulled from /now */}
       <section className="bg-gradient-to-b from-blue-50/40 via-white to-white border-y border-slate-200 py-14">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
+          <div className="w-full">
             <div className="relative rounded-2xl bg-gradient-to-br from-white via-white to-blue-50/50 border border-blue-200/70 shadow-lg shadow-blue-900/5 p-7 md:p-8 overflow-hidden">
               {/* top accent stripe */}
               <div
