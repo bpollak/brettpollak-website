@@ -7,7 +7,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 45+ automated jobs, a 179-node knowledge graph, 189 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 46 automated jobs across nine model variants, a 201-node knowledge graph, 190 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -46,17 +46,17 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-slate-500 mb-10">
-          Last updated: April 26, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: April 30, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Automated jobs</div>
-            <div className="text-2xl font-bold text-slate-900">45+ cron jobs</div>
+            <div className="text-2xl font-bold text-slate-900">46 cron jobs</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
-            <div className="text-2xl font-bold text-slate-900">179 nodes · 189 pages</div>
+            <div className="text-2xl font-bold text-slate-900">201 nodes · 190 pages</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Context loading</div>
@@ -123,10 +123,11 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 40+ automated jobs,
-            a 179-node knowledge graph, 185 wiki pages, and a three-layer memory system. It&rsquo;s
-            also a design pattern that could scale to thousands of staff at UC San Diego, giving
-            every person a personal AI that understands their work world.
+            This page documents how I built that knowledge layer for myself: 46 automated jobs
+            across nine model variants, a 201-node knowledge graph, 190 wiki pages, and a
+            three-layer memory system. It&rsquo;s also a design pattern that could scale to
+            thousands of staff at UC San Diego, giving every person a personal AI that
+            understands their work world.
           </p>
           <div className="my-8 border-l-4 border-blue-600 bg-blue-50/60 pl-5 py-4 rounded-r-lg">
             <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
@@ -190,7 +191,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            This is the biggest unlock: 105 wiki pages that would otherwise sit unused become a
+            This is the biggest unlock: 190 wiki pages that would otherwise sit unused become a
             live reference library, pulled in silently the moment they&rsquo;re relevant. It
             feels like the AI &ldquo;just knows,&rdquo; not like it&rsquo;s doing a lookup.
           </p>
@@ -225,7 +226,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            45+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            46 cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -285,7 +286,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">179 nodes · 222 edges</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">201 nodes · 244 edges</div>
               <p className="text-sm text-slate-700 leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -297,7 +298,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">189 narrative pages</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">190 narrative pages</div>
               <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
@@ -334,6 +335,147 @@ export default function AiAgentArchitecturePage() {
             The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
             &mdash; slow, rich, narrative. Together they&rsquo;re a cheap institutional memory
             system.
+          </p>
+        </div>
+      </section>
+
+      {/* ======================================================================
+          SECTION 5.5 — MODEL ALLOCATION
+          ====================================================================== */}
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
+          The Inference Layer
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
+          Model allocation: matching jobs to capabilities
+        </h2>
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+          <p>
+            Different jobs need different models. A 30-second token-refresh check shouldn&rsquo;t
+            run on the same model that drafts a weekly newsletter, and a deep architectural
+            review needs reasoning depth a light monitor would waste. Each cron is routed to a
+            model class that fits its work shape.
+          </p>
+          <p>
+            As of April 30, 2026, <strong>45 of 46 enabled jobs run on{' '}
+            <a
+              href="https://tritonai.ucsd.edu/"
+              className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
+            >
+              TritonAI
+            </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway, hosted on-prem at
+            the San Diego Supercomputer Center. One job stays on OpenAI Codex as a cross-provider
+            canary. Nine model variants serve different roles:
+          </p>
+        </div>
+
+        <div className="overflow-x-auto my-8 rounded-2xl border border-slate-200 bg-white/90 shadow-sm">
+          <table className="min-w-full text-sm">
+            <thead>
+              <tr className="bg-slate-50 border-b border-slate-200">
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Tier</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Model</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Provider</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Use</th>
+                <th className="px-4 py-3 text-right font-semibold text-slate-900">Jobs</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Light monitor</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-haiku</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Claude Haiku 4.5</td>
+                <td className="px-4 py-3 text-slate-700">Status checks, syncs, lightweight monitors</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">14</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Synthesis &amp; agentic</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">kimi-k2.5</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Moonshot Kimi K2.5</td>
+                <td className="px-4 py-3 text-slate-700">Briefings, daily reflection, opportunity scan, newsletter</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">9</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Single-shot agentic</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">gpt-oss-120b</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · OpenAI gpt-oss 120B</td>
+                <td className="px-4 py-3 text-slate-700">Audits, scans, candidate selection</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">7</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Long-form generation</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">mistral-large-3</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Large 3 675B</td>
+                <td className="px-4 py-3 text-slate-700">LinkedIn drafts, weekly audits, wiki ingest</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">5</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Mid-tier multimodal</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">gemma-4</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Gemma 4 26B</td>
+                <td className="px-4 py-3 text-slate-700">Meeting debriefs, relationship checks</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Heavy reasoning</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-opus</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Claude Opus 4.7</td>
+                <td className="px-4 py-3 text-slate-700">Architecture review, weekly deep-dive</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Fastest light monitor</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-mistral-small</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Small 3.2</td>
+                <td className="px-4 py-3 text-slate-700">High-frequency checks (token refresh, health)</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Provider diversity</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-nemotron-instant</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · NVIDIA Nemotron 3 Super 120B</td>
+                <td className="px-4 py-3 text-slate-700">Weekly backlog prune</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
+              </tr>
+              <tr className="bg-amber-50/40">
+                <td className="px-4 py-3 font-semibold text-slate-900">Cross-provider canary</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">codex</td>
+                <td className="px-4 py-3 text-slate-700">OpenAI Codex · gpt-5.5</td>
+                <td className="px-4 py-3 text-slate-700">Provider-quota-monitor (only)</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+          <p>
+            <strong className="text-slate-900">Why TritonAI as primary:</strong> the gateway runs
+            on-prem, supports multi-provider routing through LiteLLM Enterprise, and a raised
+            institutional quota means cron-driven workloads aren&rsquo;t competing against
+            personal-tier API limits. It also matches the platform pattern I&rsquo;m advocating
+            for campus &mdash; eat your own cooking.
+          </p>
+          <p>
+            <strong className="text-slate-900">Why a cross-provider canary:</strong> if every job
+            runs through the same provider and that provider has an outage, every job silently
+            falls back to the same emergency model and the failure becomes invisible. One job
+            kept on a different provider acts as the smoke detector. <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
+            stays on OpenAI Codex specifically so it can detect TritonAI-wide problems from
+            outside.
+          </p>
+          <p>
+            <strong className="text-slate-900">How models get matched:</strong> each cron declares
+            an alias (e.g.{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">kimi-k2.5</code>);
+            the gateway resolves the alias to a provider/model path. Rebalancing &mdash; e.g.,
+            moving the LinkedIn-post crons from one model to another &mdash; is a one-line config
+            change, not a code change. The architecture is intentionally provider-agnostic; the
+            point is that no specific model in the table above is load-bearing.
+          </p>
+          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
+            Provider lock-in is the moat AI vendors want. Aliases plus a multi-provider gateway
+            keep that moat from forming around your automation.
           </p>
         </div>
       </section>
@@ -664,6 +806,63 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 30, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Codex deprecation handled · all-TritonAI achieved · cron tuning</div>
+            <p className="text-sm text-slate-600 leading-6">
+              OpenAI Codex deprecated <span className="font-mono text-xs">gpt-5.4-mini</span> on
+              the OAuth route mid-morning, breaking 6 cron jobs that depended on it. Migrated 10
+              affected jobs to TritonAI in a single bulk patch &mdash; 9 to TritonAI open-weight
+              models (Kimi K2.5 for synthesis, Mistral Large 3 for long-form, Opus 4.7 for heavy
+              reasoning), 1 kept on OpenAI Codex (gpt-5.5) as a cross-provider canary. End state:
+              45 of 46 enabled jobs on TritonAI. Same day, tuned five high-frequency crons (-1,860
+              fires/month) and added two new TritonAI aliases for verified-clean light-monitor
+              models: <span className="font-mono text-xs">tritonai-mistral-small</span> (Mistral
+              Small 3.2) and <span className="font-mono text-xs">tritonai-nemotron-instant</span>
+              {' '}(NVIDIA Nemotron 3).
+            </p>
+          </li>
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 29, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">OpenRouter dependency dropped · OpenClaw upgraded to 2026.4.27</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Migrated 9 remaining OpenRouter-paid jobs onto TritonAI (light monitors to{' '}
+              <span className="font-mono text-xs">tritonai-haiku</span>; weekly deep-dive to{' '}
+              <span className="font-mono text-xs">tritonai-opus</span> &mdash; Claude Opus 4.7 on
+              raised institutional quota). Zero jobs on OpenRouter post-migration. Upgraded the
+              OpenClaw runtime from 2026.4.23 to 2026.4.27 (skipping the 2026.4.24 bonjour-broken
+              release) for cron correctness improvements, OpenAI-compatible empty-response retry,
+              and mixed-version safety. Ran <span className="font-mono text-xs">openclaw security
+              audit</span> &mdash; chmod 600 on the config file fixed a critical world-readable
+              finding.
+            </p>
+          </li>
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              April 28, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">31-job migration to TritonAI open-weight models</div>
+            <p className="text-sm text-slate-600 leading-6">
+              UCSD raised the TritonAI virtual-key budget. Migrated 31 cron jobs from a mixed
+              OpenRouter / Codex / Google fleet onto TritonAI&rsquo;s open-weight catalog: Kimi
+              K2.5 for synthesis-heavy work (briefings, opportunity scan), Mistral Large 3 for
+              long-form (newsletter, audits), gpt-oss 120B for single-shot agentic, Gemma 4 for
+              mid-tier multimodal. Discovered along the way that the catalog&rsquo;s{' '}
+              <span className="font-mono text-xs">reasoning</span> flag was unreliable for
+              short-output cron tasks &mdash; some &ldquo;non-reasoning&rdquo; models burned
+              their token budget on chain-of-thought scratch and never produced final content.
+              Two TritonAI model identifiers also turned out to need vendor prefixes (e.g.{' '}
+              <span className="font-mono text-xs">moonshotai.kimi-k2.5</span>); fixed at the
+              alias-registry level so the cron prompts stayed unchanged.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
