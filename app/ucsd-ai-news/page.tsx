@@ -117,7 +117,7 @@ export default function UcsdAiNewsPage() {
       </section>
 
       {editionCount > 0 && (
-        <section className="max-w-6xl mx-auto px-6 pb-24">
+        <section id="ai-updates" className="max-w-6xl mx-auto px-6 pb-24">
           <div className="space-y-12 md:space-y-14">
             {editionsNewestFirst.map((edition) => {
               const totalItems =
