@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-04-24",
+  lastUpdated: "2026-05-03",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,22 +37,22 @@ export const currentNow: NowSnapshot = {
     {
       label: "Work focus",
       body:
-        "Standing up UC San Diego's Citizen Agentic Development Framework — a four-tier model that lets faculty and staff build AI-assisted apps with risk-appropriate review at each tier. The first hosting environment is live and onboarding pilots; in parallel, the ITS team is shipping enterprise-grade agentic apps (transcript matching for Enrollment Management, contract review for Procurement) on the same Developer API substrate.",
+        "Stabilizing UC San Diego's Citizen Agentic Development Framework, moving pilot implementations from onboarding into early-stage production performance review. The focus is now on tuning tier-two review processes based on real usage data and hardening the underlying agentic infrastructure.",
     },
     {
       label: "Building",
       body:
-        "Expanding the TritonAI Developer API Program — every UCSD affiliate now gets $15/month in free credits and a paved path from Claude Code on a laptop to a hosted app on *.apps.ucsd.edu. The hard part isn't the gateway; it's getting the right APIs and MCPs in front of campus builders so they don't reach for browser-scraping workarounds.",
+        "Maturing the TritonAI Developer API Program. We're prioritizing reliable access to agentic tools and workflow APIs so campus developers can build on the platform's core substrate rather than relying on brittle, one-off scraping workarounds.",
     },
     {
       label: "Sharing the work",
       body:
-        "Socializing the citizen-developer approach with peer institutions and writing it up so other higher-ed IT teams can adapt it. Most universities are stuck choosing between buying generic AI for everyone and routing every request through central IT — there's a third path, and it's worth documenting clearly.",
+        "Automating the weekly AI News Digest for campus distribution to keep stakeholders informed of the rapidly shifting external landscape. Providing a consistent signal is just as important as building the tools, helping campus leaders filter noise and identify high-value operational opportunities.",
     },
     {
       label: "Thinking about",
       body:
-        "How universities can adopt AI without ceding their institutional memory to a vendor. The architecture lives in our filesystems and under our control; any model can plug in and any model can be swapped out. The context layer is the moat — and it shouldn't belong to OpenAI, Anthropic, or Google.",
+        "How universities can maintain control of institutional context. The power of agentic AI lies in our own file systems and data repositories; as long as the architecture remains model-agnostic and under our governance, we avoid vendor lock-in and keep our institutional memory secure.",
     },
   ],
 };
