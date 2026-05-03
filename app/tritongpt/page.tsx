@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "TritonAI | Shared AI Infrastructure in Higher Education",
-  description: "How UC San Diego is building TritonAI: a shared ecosystem of secure infrastructure, assistants, APIs, tools, and agent-ready workflows grounded in everyday campus work.",
+  description: "How UC San Diego is building TritonAI: a shared ecosystem of secure infrastructure, assistants, APIs, tools, and agent-ready workflows grounded in everyday workflows across campus.",
   alternates: {
     canonical: "https://brettcpollak.com/tritongpt",
   },
   openGraph: {
     title: "TritonAI | Shared AI Infrastructure in Higher Education",
-    description: "How UC San Diego is building TritonAI through TritonGPT, embedded support, instructional tools, developer APIs, and agent-ready workflows.",
+    description: "How UC San Diego is building TritonAI through TritonGPT, embedded support, instructional tools, developer APIs, and agent-ready workflows grounded in everyday workflows across campus.",
     url: "https://brettcpollak.com/tritongpt",
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "TritonAI | Shared AI Infrastructure in Higher Education",
-    description: "How UC San Diego is building TritonAI through TritonGPT, embedded support, instructional tools, developer APIs, and agent-ready workflows.",
+    description: "How UC San Diego is building TritonAI through TritonGPT, embedded support, instructional tools, developer APIs, and agent-ready workflows grounded in everyday workflows across campus.",
     images: ["/tritongpt-uc-san-diego-assistant.png"],
   },
 };

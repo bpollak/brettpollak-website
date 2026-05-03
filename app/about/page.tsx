@@ -78,7 +78,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Supporting campus access to institutional knowledge and reducing friction in workflows such as contract review</p>
+              <p className="text-lg text-slate-600 leading-relaxed">Supporting campus access to institutional knowledge and reducing friction in workflows such as contract review for Procurement</p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-800 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>

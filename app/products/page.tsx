@@ -213,6 +213,60 @@ export default function Products() {
         {/* Dissertation Formatting Agent */}
         <div className="mb-16 animate-slide-up delay-400">
           <a
+            href="https://tritonaiexample.ucsd.edu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d"
+          >
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-emerald-950 to-slate-900 flex items-center justify-center p-12">
+                <Image
+                  src="/tritonai-embedded-app-builder.png"
+                  alt="TritonAI Embedded App Builder"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-12 flex flex-col justify-center">
+                <div className="inline-block px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold rounded-full mb-4 w-fit border border-emerald-200">
+                  DEVELOPER PLATFORM
+                </div>
+                <h2 className="text-4xl font-bold text-slate-900 mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:via-emerald-900 group-hover:to-slate-800 group-hover:bg-clip-text transition-all">
+                  TritonAI Embedded App Builder
+                </h2>
+                <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                  Empower campus staff to build self-service micro-agents directly in ServiceNow, Canvas, and Blink. Accelerate institutional service delivery by decentralizing development on top of the campus AI API stack.
+                </p>
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">Key Capabilities</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Self-Service Micro-Agents</span><span className="text-slate-600">Drag-and-drop orchestration of AI service workflows</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Seamless Integration</span><span className="text-slate-600">Native embeddings for ServiceNow, Canvas, and Blink environments</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-emerald-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Governance-First Design</span><span className="text-slate-600">Built-in guardrails and API-key management for institutional scale</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="inline-flex items-center gap-2 text-slate-800 font-bold text-lg group-hover:gap-3 transition-all">
+                  View App Builder Docs
+                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* Dissertation Formatting Agent */}
+        <div className="mb-16 animate-slide-up delay-400">
+          <a
             href="https://dissertation-formatter.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
