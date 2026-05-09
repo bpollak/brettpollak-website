@@ -7,7 +7,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 46 automated jobs across nine model variants, a 201-node knowledge graph, 190 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 48 automated jobs running 100% on UCSD-hosted open-weight models, a 201-node knowledge graph, 190 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -46,13 +46,13 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-slate-500 mb-10">
-          Last updated: April 30, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: May 9, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Automated jobs</div>
-            <div className="text-2xl font-bold text-slate-900">46 cron jobs</div>
+            <div className="text-2xl font-bold text-slate-900">48 cron jobs</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
@@ -123,9 +123,9 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 46 automated jobs
-            across nine model variants, a 201-node knowledge graph, 190 wiki pages, and a
-            three-layer memory system. It&rsquo;s also a design pattern that could scale to
+            This page documents how I built that knowledge layer for myself: 48 automated jobs
+            running on UCSD-hosted open-weight models, a 201-node knowledge graph, 190 wiki pages,
+            and a three-layer memory system. It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
             understands their work world.
           </p>
@@ -226,7 +226,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            46 cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            48 cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -357,15 +357,16 @@ export default function AiAgentArchitecturePage() {
             model class that fits its work shape.
           </p>
           <p>
-            As of April 30, 2026, <strong>45 of 46 enabled jobs run on{' '}
+            As of May 9, 2026, <strong>all 48 enabled jobs run on{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
             >
               TritonAI
             </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway, hosted on-prem at
-            the San Diego Supercomputer Center. One job stays on OpenAI Codex as a cross-provider
-            canary. Nine model variants serve different roles:
+            the San Diego Supercomputer Center &mdash; and every model in use is{' '}
+            <strong>open-weight</strong>. No proxied closed-weight models, no third-party API
+            dependencies. Six model variants split the load:
           </p>
         </div>
 
@@ -375,73 +376,52 @@ export default function AiAgentArchitecturePage() {
               <tr className="bg-slate-50 border-b border-slate-200">
                 <th className="px-4 py-3 text-left font-semibold text-slate-900">Tier</th>
                 <th className="px-4 py-3 text-left font-semibold text-slate-900">Model</th>
-                <th className="px-4 py-3 text-left font-semibold text-slate-900">Provider</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Hosting</th>
                 <th className="px-4 py-3 text-left font-semibold text-slate-900">Use</th>
                 <th className="px-4 py-3 text-right font-semibold text-slate-900">Jobs</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Light monitor</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-haiku</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Claude Haiku 4.5</td>
-                <td className="px-4 py-3 text-slate-700">Status checks, syncs, lightweight monitors</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">14</td>
-              </tr>
-              <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Synthesis &amp; agentic</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">kimi-k2.5</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Moonshot Kimi K2.5</td>
-                <td className="px-4 py-3 text-slate-700">Briefings, daily reflection, opportunity scan, newsletter</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">9</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Moonshot Kimi K2.5 (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Briefings, daily reflection, opportunity scan, newsletter, evening wrap</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">12</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Fast light monitor</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-nemotron-instant</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · NVIDIA Nemotron 3 Super 120B (instant)</td>
+                <td className="px-4 py-3 text-slate-700">Light synthesis, daily digests, image-prompt gen, gpt-oss replacements</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">12</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Long-form &amp; deep reasoning</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">mistral-large-3</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Large 3 675B (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">LinkedIn drafts, weekly audits, wiki ingest, architecture &amp; harness reviews, weekly AI deep-dive</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">10</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Fastest status check</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-mistral-small</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Small 3.2B (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Pure status checks &mdash; disk, uncommitted changes, cron failure, openclaw update, weekly backup</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">8</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Single-shot agentic</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">gpt-oss-120b</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · OpenAI gpt-oss 120B</td>
-                <td className="px-4 py-3 text-slate-700">Audits, scans, candidate selection</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">7</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Long-form generation</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">mistral-large-3</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Large 3 675B</td>
-                <td className="px-4 py-3 text-slate-700">LinkedIn drafts, weekly audits, wiki ingest</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · OpenAI gpt-oss 120B (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Architecture audit, gmail school filter, LinkedIn candidates, model-hub snapshot, TritonGPT intel</td>
                 <td className="px-4 py-3 text-right font-semibold text-slate-900">5</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Mid-tier multimodal</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">gemma-4</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Gemma 4 26B</td>
-                <td className="px-4 py-3 text-slate-700">Meeting debriefs, relationship checks</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Heavy reasoning</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-opus</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Claude Opus 4.7</td>
-                <td className="px-4 py-3 text-slate-700">Architecture review, weekly deep-dive</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Fastest light monitor</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-mistral-small</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Small 3.2</td>
-                <td className="px-4 py-3 text-slate-700">High-frequency checks (token refresh, health)</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Provider diversity</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-nemotron-instant</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · NVIDIA Nemotron 3 Super 120B</td>
-                <td className="px-4 py-3 text-slate-700">Weekly backlog prune</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
-              </tr>
-              <tr className="bg-amber-50/40">
-                <td className="px-4 py-3 font-semibold text-slate-900">Cross-provider canary</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">codex</td>
-                <td className="px-4 py-3 text-slate-700">OpenAI Codex · gpt-5.5</td>
-                <td className="px-4 py-3 text-slate-700">Provider-quota-monitor (only)</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Google Gemma 4 26B (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Now-page weekly refresh, knowledge-graph rebuild</td>
                 <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
               </tr>
             </tbody>
@@ -450,32 +430,47 @@ export default function AiAgentArchitecturePage() {
 
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-slate-900">Why TritonAI as primary:</strong> the gateway runs
-            on-prem, supports multi-provider routing through LiteLLM Enterprise, and a raised
-            institutional quota means cron-driven workloads aren&rsquo;t competing against
-            personal-tier API limits. It also matches the platform pattern I&rsquo;m advocating
-            for campus &mdash; eat your own cooking.
+            <strong className="text-slate-900">Why all-local, all-TritonAI:</strong> the gateway
+            runs on-prem at the San Diego Supercomputer Center, models are served on UCSD compute,
+            and the institutional virtual-key budget covers cron-driven workloads with no
+            personal-tier API charges. Open-weight models also remove the &ldquo;model rugpull&rdquo;
+            risk: when OpenAI deprecated <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gpt-5.4-mini</code>{' '}
+            in late April it broke six of my crons in a single morning. Open weights don&rsquo;t
+            get deprecated out from under you.
           </p>
           <p>
-            <strong className="text-slate-900">Why a cross-provider canary:</strong> if every job
-            runs through the same provider and that provider has an outage, every job silently
-            falls back to the same emergency model and the failure becomes invisible. One job
-            kept on a different provider acts as the smoke detector. <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
-            stays on OpenAI Codex specifically so it can detect TritonAI-wide problems from
-            outside.
+            <strong className="text-slate-900">Why no cross-provider canary anymore:</strong> the
+            old architecture kept one job on OpenAI Codex specifically to detect TritonAI-wide
+            problems from outside. That worked until Codex itself hit a weekly cap and silently
+            broke the canary. The lesson: the canary&rsquo;s job is just to alert, and TritonAI
+            already has rich health endpoints that do that more reliably. Concentration risk is
+            real, but it&rsquo;s now an explicit institutional bet rather than a hedged compromise.
+          </p>
+          <p>
+            <strong className="text-slate-900">How jobs were matched to tiers:</strong> every
+            candidate model was probe-tested against two prompts &mdash; a strict 50-token
+            short-output check (to catch &ldquo;reasoning trap&rdquo; models that burn their token
+            budget on chain-of-thought scratch and never produce final content) and a 400-token
+            synthesis prompt (to verify quality on the longer-form jobs). Three of the new
+            TritonAI variants &mdash;{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">minimax-m2</code>,{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gpt-oss-120b-high</code>,
+            and the original <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gemma-4-bg</code>{' '}
+            background variant &mdash; failed the trap test and were excluded.
           </p>
           <p>
             <strong className="text-slate-900">How models get matched:</strong> each cron declares
             an alias (e.g.{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">kimi-k2.5</code>);
             the gateway resolves the alias to a provider/model path. Rebalancing &mdash; e.g.,
-            moving the LinkedIn-post crons from one model to another &mdash; is a one-line config
-            change, not a code change. The architecture is intentionally provider-agnostic; the
-            point is that no specific model in the table above is load-bearing.
+            moving a job to a different model &mdash; is a one-line config change, not a code
+            change. The architecture is intentionally provider-agnostic; the point is that no
+            specific model in the table above is load-bearing.
           </p>
           <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
-            Provider lock-in is the moat AI vendors want. Aliases plus a multi-provider gateway
-            keep that moat from forming around your automation.
+            Provider lock-in is the moat AI vendors want. Open weights on institutional infra,
+            wired through a gateway with aliases, keep that moat from forming around your
+            automation.
           </p>
         </div>
       </section>
@@ -806,6 +801,37 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              May 9, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">100% local open-weight achieved · 31-job migration · Telegram routing fix</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Bulk-migrated 31 cron jobs onto TritonAI&rsquo;s locally-hosted open-weight catalog.
+              Every proxied closed-weight model retired in one pass: 14 jobs off{' '}
+              <span className="font-mono text-xs">tritonai-haiku</span> (Claude Haiku 4.5 via
+              proxy), 4 off <span className="font-mono text-xs">tritonai-opus</span> (Claude Opus
+              4.6), 3 off Codex / codex-mini (capped weekly cap + a model that no longer existed),
+              1 off <span className="font-mono text-xs">or-haiku</span> (OpenRouter Anthropic), 1
+              off Ollama gemma4 (slow on Apple Silicon). New endpoints brought in: TritonAI&rsquo;s
+              <span className="font-mono text-xs"> mistral-small-3.2-2506</span> for fastest light
+              monitors, more weight on
+              <span className="font-mono text-xs"> nemotron-3-super-120b-instant</span>,{' '}
+              <span className="font-mono text-xs">moonshotai.kimi-k2.5</span>, and{' '}
+              <span className="font-mono text-xs">mistral-large-3-675b</span>. Each candidate
+              probe-tested against a strict 50-token short-output prompt and a 400-token synthesis
+              prompt before assignment;{' '}
+              <span className="font-mono text-xs">minimax-m2</span> and{' '}
+              <span className="font-mono text-xs">gpt-oss-120b-high</span> failed the trap test
+              and were excluded. End state: 48 of 48 enabled jobs on TritonAI, every model
+              open-weight, zero ongoing third-party API spend on automation. Cross-provider
+              canary retired &mdash; concentration risk now an explicit institutional bet.
+              Separately, repaired a Telegram-DM routing collision: the heartbeat lane had quietly
+              captured the bot&rsquo;s direct-chat session and was returning{' '}
+              <span className="font-mono text-xs">HEARTBEAT_OK</span> to every message.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
