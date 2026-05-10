@@ -18,7 +18,7 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-10T13:35:50.751Z",
+  "generatedAt": "2026-05-10T17:19:58.558Z",
   "weekOf": "2026-05-04",
   "weekEnding": "2026-05-10",
   "weekLabel": "Week of May 4–10, 2026",
