@@ -151,7 +151,7 @@ export default function About() {
                   <p className="text-slate-600 leading-relaxed">
                     Working with teams across Data Warehouse, Analytics, Predictive Technologies, Email, Service Desk,
                     Field Support, Endpoint Management, Enterprise Content Management, Web Technologies, and Integrated
-                    Collaboration Services. Part of the team behind <span className="font-semibold text-slate-800">TritonGPT</span>.
+                    Collaboration Services. Part of the team behind the **TritonAI program**, which includes TritonGPT and other institutional AI efforts at UC San Diego.
                   </p>
                 </div>
 
