@@ -37,17 +37,17 @@ export const currentNow: NowSnapshot = {
     {
       label: "Work focus",
       body:
-        "Stabilizing UC San Diego's Citizen Agentic Development Framework. Pilot implementations are now moving through tier-two production review, tuning safety gates and governance processes based on real usage data. Talent win: just secured Dominic Feliton's retention to lead the infrastructure layer through launch.",
+        "Stabilizing UC San Diego's Citizen Agentic Development Framework. Pilot implementations are now moving through tier-two production review, tuning safety gates and governance processes based on real usage data. Key infrastructure leadership is now locked in through launch.",
     },
     {
       label: "Organizational restructuring",
       body:
-        "Leading a comprehensive reorg discussion across our senior management team with Kevin Chou. The org design will reshape how we handle observability, endpoint management, and infrastructure platform strategy. This is forcing function for how we allocate resources against TritonAI's scaling needs and operational dependencies.",
+        "Leading a comprehensive reorg discussion across the senior ITS leadership team. The org design will reshape how we handle observability, endpoint management, and infrastructure platform strategy. This is forcing function for how we allocate resources against TritonAI's scaling needs and operational dependencies.",
     },
     {
       label: "High-stakes commitment",
       body:
-        "Preparing a Health Sciences AI/BI presentation for the Chancellor on May 27 with Rina Davison and cross-functional leadership. The goal is to showcase progress while framing adoption challenges honestly — positioning AI as an institutional capability, not a mandate.",
+        "Preparing a Health Sciences AI/BI presentation for the Chancellor on May 27 with cross-functional leadership. The goal is to showcase progress while framing adoption challenges honestly — positioning AI as an institutional capability, not a mandate.",
     },
     {
       label: "Data foundation",
