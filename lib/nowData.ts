@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-05-03",
+  lastUpdated: "2026-05-10",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,22 +37,22 @@ export const currentNow: NowSnapshot = {
     {
       label: "Work focus",
       body:
-        "Stabilizing UC San Diego's Citizen Agentic Development Framework, moving pilot implementations from onboarding into early-stage production performance review. The focus is now on tuning tier-two review processes based on real usage data and hardening the underlying agentic infrastructure.",
+        "Stabilizing UC San Diego's Citizen Agentic Development Framework. Pilot implementations are now moving through tier-two production review, tuning safety gates and governance processes based on real usage data. Talent win: just secured Dominic Feliton's retention to lead the infrastructure layer through launch.",
     },
     {
-      label: "Building",
+      label: "Organizational restructuring",
       body:
-        "Maturing the TritonAI Developer API Program. We're prioritizing reliable access to agentic tools and workflow APIs so campus developers can build on the platform's core substrate rather than relying on brittle, one-off scraping workarounds.",
+        "Leading a comprehensive reorg discussion across our senior management team with Kevin Chou. The org design will reshape how we handle observability, endpoint management, and infrastructure platform strategy. This is forcing function for how we allocate resources against TritonAI's scaling needs and operational dependencies.",
     },
     {
-      label: "Sharing the work",
+      label: "High-stakes commitment",
       body:
-        "Automating the weekly AI News Digest for campus distribution to keep stakeholders informed of the rapidly shifting external landscape. Providing a consistent signal is just as important as building the tools, helping campus leaders filter noise and identify high-value operational opportunities.",
+        "Preparing a Health Sciences AI/BI presentation for the Chancellor on May 27 with Rina Davison and cross-functional leadership. The goal is to showcase progress while framing adoption challenges honestly — positioning AI as an institutional capability, not a mandate.",
     },
     {
-      label: "Thinking about",
+      label: "Data foundation",
       body:
-        "How universities can maintain control of institutional context. The power of agentic AI lies in our own file systems and data repositories; as long as the architecture remains model-agnostic and under our governance, we avoid vendor lock-in and keep our institutional memory secure.",
+        "Financial data extracts are now ready (6.7M rows) for AI agent benchmarking and ground-truth validation. This is the backbone for preventing agent drift and building confidence in agentic decision-making in high-stakes domains.",
     },
   ],
 };
