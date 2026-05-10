@@ -35,24 +35,19 @@ export const currentNow: NowSnapshot = {
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
   items: [
     {
-      label: "Work focus",
+      label: "AI as institutional infrastructure",
       body:
-        "Stabilizing UC San Diego's Citizen Agentic Development Framework. Pilot implementations are now moving through tier-two production review, tuning safety gates and governance processes based on real usage data. Key infrastructure leadership is now locked in through launch.",
+        "Focused on moving AI from experimentation to durable institutional capability at UC San Diego. The work is less about individual tools and more about governance, safety, and making AI reliably useful at scale.",
     },
     {
-      label: "Organizational restructuring",
+      label: "Agentic AI",
       body:
-        "Leading a comprehensive reorg discussion across the senior ITS leadership team. The org design will reshape how we handle observability, endpoint management, and infrastructure platform strategy. This is forcing function for how we allocate resources against TritonAI's scaling needs and operational dependencies.",
+        "Exploring how AI agents can take on structured, high-stakes university workflows — not just answering questions, but acting on behalf of the institution within clear guardrails.",
     },
     {
-      label: "High-stakes commitment",
+      label: "AI and data in higher education",
       body:
-        "Preparing a Health Sciences AI/BI presentation for the Chancellor on May 27 with cross-functional leadership. The goal is to showcase progress while framing adoption challenges honestly — positioning AI as an institutional capability, not a mandate.",
-    },
-    {
-      label: "Data foundation",
-      body:
-        "Financial data extracts are now ready (6.7M rows) for AI agent benchmarking and ground-truth validation. This is the backbone for preventing agent drift and building confidence in agentic decision-making in high-stakes domains.",
+        "Helping campus and health sciences leadership understand what AI can and can't do today — and building the data foundation that makes future AI work trustworthy.",
     },
   ],
 };
