@@ -55,7 +55,11 @@ const AGENT_ACTIONS: Item[] = [
 
 // Viewbox layout
 const VB_W = 1200;
-const VB_H = 620;
+const VB_H = 720;
+
+// Reserve vertical space at the bottom for the synthesis band so columns
+// don't overlap it. Synth band is 38px tall + breathing room.
+const SYNTH_RESERVE = 80;
 
 // Column x centers
 const LEFT_CX = 180;
@@ -67,10 +71,12 @@ const ITEM_W = 220;
 const ITEM_H = 62;
 const ITEM_GAP = 16;
 
-// Compute y positions for a column of N items, vertically centered around y=300
+// Compute y positions for a column of N items, vertically centered within
+// the area above the synthesis band.
 function columnY(count: number, idx: number) {
+  const usableH = VB_H - SYNTH_RESERVE;
   const totalH = count * ITEM_H + (count - 1) * ITEM_GAP;
-  const startY = (VB_H - totalH) / 2;
+  const startY = (usableH - totalH) / 2;
   return startY + idx * (ITEM_H + ITEM_GAP);
 }
 
