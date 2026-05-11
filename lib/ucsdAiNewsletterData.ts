@@ -21,14 +21,24 @@ export type UcsdAiNewsletterData = {
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
-  "generatedAt": "2026-05-04T12:01:36.466Z",
-  "weekLabel": "Week of May 4–10, 2026",
-  "weekOf": "2026-05-04",
-  "weekEnding": "2026-05-10",
-  "publishedThrough": "May 4, 2026",
-  "editionCount": 5,
-  "itemCount": 43,
+  "generatedAt": "2026-05-11T12:01:43.977Z",
+  "weekLabel": "Week of May 11–17, 2026",
+  "weekOf": "2026-05-11",
+  "weekEnding": "2026-05-17",
+  "publishedThrough": "May 11, 2026",
+  "editionCount": 6,
+  "itemCount": 50,
   "editions": [
+    {
+      "isoDate": "2026-05-11",
+      "displayDate": "Monday, May 11",
+      "sourceFile": "ucsd-ai-newsletter-2026-05-11.md",
+      "toolUpdatesCount": 3,
+      "tritonAiNewsCount": 1,
+      "upcomingTrainingsCount": 3,
+      "heroImage": null,
+      "raw": "# UC San Diego AI Weekly Update\n\n*Week of May 11, 2026 — your roundup of what's new with UC San Diego's supported AI services.*\n\n## What's New in Your AI Tools\n\n### TritonGPT\n- **[TGPT Widget updates with live campus data (May 1)](https://tritonai.ucsd.edu/tritongpt/release-notes/index.html)**: The TritonGPT widget on Blink now shows live parking availability and real-time busyness levels at Geisel Library. The interface has also been redesigned to make it easier to trace how the AI generates responses. Behind-the-scenes work improved system performance and reliability.\n\n### Zoom AI Companion\n- No major updates this week.\n\n### Microsoft Copilot with Data Protection\n- **[Federated Copilot connectors bring real-time enterprise data (May 5)](https://techcommunity.microsoft.com/blog/microsoft365copilotblog/federated-copilot-connectors---bringing-real-time-enterprise-data-within-microso/4515993)**: Microsoft launched federated connectors that pull live data from external systems like HubSpot, Notion, and Moody's directly into Copilot responses. For staff, this means getting current CRM records, stock ratings, or deal statuses without switching apps. Data stays in the source system and access is governed through your existing permissions.\n\n### Copilot for Microsoft 365\n- **[GPT-5.5 Instant now available in Microsoft 365 Copilot (May 7)](https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-5-instant-in-microsoft-365-copilot/4517084)**: OpenAI's latest model is now available in Copilot Studio and rolling out to Copilot Chat. It's designed for faster responses on everyday tasks while maintaining quality. You can select it from the model picker in supported Copilot experiences.\n\n### Google Gemini & NotebookLM\n- No major updates this week.\n\n### TritonAI Developer API\n- No changes to the model hub this week.\n\n---\n\n## Coming Up: Trainings & Workshops\n\nNo new live sessions are scheduled for the next two weeks. The TritonAI webinar series remains available on demand:\n\n- **[AI Webinar #6 — One Year of Innovation with TritonGPT](https://youtu.be/qaRfaAzmBEs)**: A look at what's changed since launch, including MyDocuments, model switching, and chat sharing.\n- **[Everyday I AI video series](https://www.youtube.com/playlist?list=PLZoL-14Q0aIkY5gnibNuZZh3X0ikY6VGA)**: Short, practical prompting tips that work across TritonGPT and other AI tools.\n- **[AI Foundations course (UC Learning)](https://go.ucsd.edu/3FvH9Hf)**: A self-paced intro to AI concepts and UC policy.\n\n---\n\n## TritonAI News\n\n- **[UC San Diego Launches First Course for New AI Major (April 28)](https://today.ucsd.edu/story/students-get-an-intro-to-ai-in-first-ai-major-class-at-uc-san-diego)**: The university launched its first course for the new AI major this spring. Students are getting hands-on experience with machine learning and neural networks. The program aims to build a pipeline of AI talent for research and industry.\n\n---\n\n*Want to share feedback on this newsletter? Reply to this email.*\n"
+    },
     {
       "isoDate": "2026-05-04",
       "displayDate": "Monday, May 4",
