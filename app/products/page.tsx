@@ -219,14 +219,67 @@ export default function Products() {
             className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d"
           >
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-emerald-950 to-slate-900 flex items-center justify-center p-12">
-                <Image
-                  src="/tritonai-embedded-app-builder.png"
-                  alt="TritonAI Embedded App Builder"
-                  width={1600}
-                  height={900}
-                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                />
+              <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-emerald-950 to-slate-900 flex items-center justify-center p-10">
+                <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto rounded-lg group-hover:scale-105 transition-transform duration-500">
+                  {/* Background panel */}
+                  <rect width="480" height="320" rx="12" fill="#0f1f1a" />
+                  {/* Top bar */}
+                  <rect width="480" height="36" rx="0" fill="#162620" />
+                  <circle cx="18" cy="18" r="6" fill="#ef4444" opacity="0.7" />
+                  <circle cx="36" cy="18" r="6" fill="#f59e0b" opacity="0.7" />
+                  <circle cx="54" cy="18" r="6" fill="#22c55e" opacity="0.7" />
+                  <text x="240" y="23" textAnchor="middle" fill="#6ee7b7" fontSize="11" fontFamily="monospace" opacity="0.8">TritonAI Embedded App Builder</text>
+                  {/* Left sidebar */}
+                  <rect x="0" y="36" width="110" height="284" fill="#111f1a" />
+                  <text x="55" y="60" textAnchor="middle" fill="#6ee7b7" fontSize="9" fontFamily="monospace" fontWeight="bold">BLOCKS</text>
+                  {/* Sidebar blocks */}
+                  {[{label:"ServiceNow",y:74},{label:"Canvas Query",y:104},{label:"LLM Response",y:134},{label:"Data Filter",y:164},{label:"Email Notify",y:194}].map((b,i) => (
+                    <g key={i}>
+                      <rect x="8" y={b.y} width="94" height="22" rx="4" fill="#1e3a30" stroke="#064e3b" strokeWidth="1" />
+                      <text x="55" y={b.y+15} textAnchor="middle" fill="#a7f3d0" fontSize="8.5" fontFamily="monospace">{b.label}</text>
+                    </g>
+                  ))}
+                  {/* Main canvas area */}
+                  <rect x="118" y="44" width="354" height="268" rx="8" fill="#0d1f18" stroke="#064e3b" strokeWidth="1" />
+                  <text x="295" y="62" textAnchor="middle" fill="#34d399" fontSize="9" fontFamily="monospace" opacity="0.6">WORKFLOW CANVAS</text>
+                  {/* Node 1 - Input */}
+                  <rect x="138" y="80" width="90" height="44" rx="6" fill="#065f46" stroke="#34d399" strokeWidth="1.5" />
+                  <text x="183" y="98" textAnchor="middle" fill="#ffffff" fontSize="8" fontFamily="monospace" fontWeight="bold">USER REQUEST</text>
+                  <text x="183" y="112" textAnchor="middle" fill="#a7f3d0" fontSize="7" fontFamily="monospace">ServiceNow Trigger</text>
+                  {/* Arrow 1 */}
+                  <line x1="228" y1="102" x2="258" y2="102" stroke="#34d399" strokeWidth="1.5" markerEnd="url(#arrow)" />
+                  {/* Node 2 - LLM */}
+                  <rect x="258" y="80" width="90" height="44" rx="6" fill="#064e3b" stroke="#6ee7b7" strokeWidth="1.5" />
+                  <text x="303" y="98" textAnchor="middle" fill="#ffffff" fontSize="8" fontFamily="monospace" fontWeight="bold">LLM AGENT</text>
+                  <text x="303" y="112" textAnchor="middle" fill="#a7f3d0" fontSize="7" fontFamily="monospace">TritonAI Gateway</text>
+                  {/* Arrow 2 */}
+                  <line x1="348" y1="102" x2="378" y2="102" stroke="#34d399" strokeWidth="1.5" markerEnd="url(#arrow)" />
+                  {/* Node 3 - Output */}
+                  <rect x="378" y="80" width="82" height="44" rx="6" fill="#065f46" stroke="#34d399" strokeWidth="1.5" />
+                  <text x="419" y="98" textAnchor="middle" fill="#ffffff" fontSize="8" fontFamily="monospace" fontWeight="bold">RESPONSE</text>
+                  <text x="419" y="112" textAnchor="middle" fill="#a7f3d0" fontSize="7" fontFamily="monospace">Canvas Embed</text>
+                  {/* Second row nodes */}
+                  <rect x="198" y="162" width="90" height="44" rx="6" fill="#1e3a30" stroke="#059669" strokeWidth="1" />
+                  <text x="243" y="180" textAnchor="middle" fill="#ffffff" fontSize="8" fontFamily="monospace" fontWeight="bold">DATA FILTER</text>
+                  <text x="243" y="194" textAnchor="middle" fill="#a7f3d0" fontSize="7" fontFamily="monospace">P2 Approved</text>
+                  <rect x="318" y="162" width="90" height="44" rx="6" fill="#1e3a30" stroke="#059669" strokeWidth="1" />
+                  <text x="363" y="180" textAnchor="middle" fill="#ffffff" fontSize="8" fontFamily="monospace" fontWeight="bold">NOTIFY</text>
+                  <text x="363" y="194" textAnchor="middle" fill="#a7f3d0" fontSize="7" fontFamily="monospace">Email + Slack</text>
+                  {/* Connecting lines row 2 */}
+                  <line x1="303" y1="124" x2="303" y2="152" stroke="#34d399" strokeWidth="1" opacity="0.5" />
+                  <line x1="303" y1="152" x2="243" y2="162" stroke="#34d399" strokeWidth="1" opacity="0.5" />
+                  <line x1="303" y1="152" x2="363" y2="162" stroke="#34d399" strokeWidth="1" opacity="0.5" />
+                  {/* Status bar */}
+                  <rect x="118" y="240" width="354" height="30" rx="4" fill="#0a1a13" />
+                  <circle cx="138" cy="255" r="5" fill="#22c55e" />
+                  <text x="150" y="259" fill="#6ee7b7" fontSize="8" fontFamily="monospace">Connected · tritonai-api.ucsd.edu · SSO Active · Audit Logging ON</text>
+                  {/* Arrow marker */}
+                  <defs>
+                    <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                      <path d="M0,0 L0,6 L6,3 z" fill="#34d399" />
+                    </marker>
+                  </defs>
+                </svg>
               </div>
               <div className="p-12 flex flex-col justify-center">
                 <div className="inline-block px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold rounded-full mb-4 w-fit border border-emerald-200">
