@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'Constellation Research',
+    title: 'Business Transformation 150™ 2026–2027',
+    url: 'https://www.constellationr.com/communities/business-transformation-150/2026-2027',
+    date: '2026-05-12',
+    category: 'speaking'
+  },
+  {
     publication: 'CIO.com',
     title: 'How poor data foundations can undermine AI success',
     url: 'https://www.cio.com/article/4158048/how-poor-data-foundations-can-undermine-ai-success.html',
