@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import { mediaItems, MediaItem } from '@/lib/mediaData';
 
-type CategoryFilter = 'all' | 'article' | 'interview' | 'whitepaper' | 'speaking';
+type CategoryFilter = 'all' | 'article' | 'interview' | 'whitepaper' | 'speaking' | 'award';
 
 export default function MediaContent() {
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all');
@@ -53,6 +53,7 @@ export default function MediaContent() {
     { value: 'interview', label: 'Interviews', count: sortedItems.filter(i => i.category === 'interview').length },
     { value: 'whitepaper', label: 'Whitepapers', count: sortedItems.filter(i => i.category === 'whitepaper').length },
     { value: 'speaking', label: 'Speaking', count: sortedItems.filter(i => i.category === 'speaking').length },
+    { value: 'award', label: 'Awards', count: sortedItems.filter(i => i.category === 'award').length },
   ];
 
   return (

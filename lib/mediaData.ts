@@ -3,7 +3,7 @@ export interface MediaItem {
   title: string;
   url: string;
   date: string;
-  category: 'article' | 'interview' | 'whitepaper' | 'speaking';
+  category: 'article' | 'interview' | 'whitepaper' | 'speaking' | 'award';
 }
 
 export const mediaItems: MediaItem[] = [
@@ -12,7 +12,7 @@ export const mediaItems: MediaItem[] = [
     title: 'Business Transformation 150™ 2026–2027',
     url: 'https://www.constellationr.com/communities/business-transformation-150/2026-2027',
     date: '2026-05-12',
-    category: 'speaking'
+    category: 'award'
   },
   {
     publication: 'CIO.com',
