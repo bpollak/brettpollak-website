@@ -60,6 +60,16 @@ function parseIsoFromFilename(filename) {
   return match ? match[1] : null;
 }
 
+function heroImagePathForIsoDate(isoDate) {
+  return `/images/ucsd-ai-news/ucsd-ai-news-${isoDate}.png`;
+}
+
+function heroImageExists(publicDir, isoDate) {
+  const rel = heroImagePathForIsoDate(isoDate);
+  const abs = path.join(publicDir, rel.replace(/^\//, ''));
+  return fs.existsSync(abs) ? rel : null;
+}
+
 function countSectionBullets(markdown, sectionHeading) {
   const lines = markdown.split('\n');
   const startIdx = lines.findIndex((line) => line.trim() === sectionHeading);
@@ -79,6 +89,7 @@ function countSectionBullets(markdown, sectionHeading) {
 
 const sourceDir = getArg('source-dir', '/Users/brettpollak/.openclaw/workspace/docs');
 const outputPath = getArg('output', path.resolve(process.cwd(), 'lib/ucsdAiNewsletterData.ts'));
+const publicDir = getArg('public-dir', path.resolve(process.cwd(), 'public'));
 const todayArg = getArg('today', null);
 const today = todayArg ? new Date(`${todayArg}T12:00:00`) : new Date();
 
@@ -119,6 +130,7 @@ for (const filename of files) {
     toolUpdatesCount,
     tritonAiNewsCount,
     upcomingTrainingsCount,
+    heroImage: heroImageExists(publicDir, isoDate),
     raw,
   });
 }
@@ -156,6 +168,7 @@ const fileContent = `export type UcsdAiNewsletterEdition = {
   toolUpdatesCount: number;
   tritonAiNewsCount: number;
   upcomingTrainingsCount: number;
+  heroImage: string | null;
   raw: string;
 };
 

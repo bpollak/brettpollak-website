@@ -68,15 +68,41 @@ export default function Home() {
       "name": "University of California San Diego"
     },
     "knowsAbout": [
-      "Artificial Intelligence",
-      "Digital Transformation",
+      "AI in Higher Education",
+      "Institutional AI Deployment",
+      "Vertical AI",
+      "Agentic AI Workflows",
+      "AI Governance",
       "Data Governance",
+      "Citizen Developer Programs",
+      "AI Infrastructure",
+      "Digital Transformation",
+      "TritonGPT",
+      "TritonAI",
+      "LiteLLM",
+      "AI Agent Orchestration",
       "Higher Education Technology",
-      "AI Implementation",
-      "Technology Leadership"
+      "Technology Leadership",
+      "AI Keynote Speaking",
+      "AI Interviews and Publications"
+    ],
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "Technology Executive",
+        "occupationLocation": { "@type": "City", "name": "San Diego, CA" }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Keynote Speaker",
+        "description": "Keynote speaker on AI in higher education, agentic workflows, institutional AI governance, and vertical AI deployment.",
+        "occupationLocation": { "@type": "Country", "name": "United States" }
+      }
     ],
     "sameAs": [
-      "https://www.linkedin.com/in/brettpollak/"
+      "https://www.linkedin.com/in/brettpollak/",
+      "https://educause.edu",
+      "https://brettcpollak.com/speaking"
     ]
   };
 

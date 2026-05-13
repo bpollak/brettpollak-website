@@ -3,20 +3,43 @@ import type { Metadata } from 'next';
 import MediaContent from './MediaContent';
 
 export const metadata: Metadata = {
-  title: "Writing & Conversations | Brett Pollak",
-  description: "Articles, interviews, and case studies about AI, digital services, and institutional change in higher education.",
+  title: "Press, Publications & Interviews | Brett Pollak — AI in Higher Education",
+  description: "Brett Pollak's published articles, interviews, speaking engagements, and whitepapers on AI in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, and more.",
+  keywords: [
+    "Brett Pollak articles",
+    "Brett Pollak interviews",
+    "Brett Pollak publications",
+    "AI in higher education articles",
+    "TritonAI press",
+    "TritonGPT coverage",
+    "AI governance publications",
+    "agentic AI higher education",
+    "institutional AI press",
+    "Forbes AI higher education",
+    "CIO.com AI university",
+    "EDUCAUSE AI",
+  ],
   alternates: {
     canonical: "https://brettcpollak.com/media",
   },
   openGraph: {
-    title: "Writing & Conversations | Brett Pollak",
-    description: "Articles, interviews, and case studies about AI, digital services, and institutional change in higher education.",
+    title: "Press, Publications & Interviews | Brett Pollak — AI in Higher Education",
+    description: "Brett Pollak's published articles, interviews, and speaking record on AI in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, and more.",
     url: "https://brettcpollak.com/media",
+    images: [
+      {
+        url: "/brett-pollak-headshot-sit-center.png",
+        width: 500,
+        height: 650,
+        alt: "Brett Pollak — AI in Higher Education",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "Writing & Conversations | Brett Pollak",
-    description: "Articles, interviews, and case studies about AI, digital services, and institutional change in higher education.",
+    card: "summary_large_image",
+    title: "Press & Publications | Brett Pollak — AI in Higher Education",
+    description: "Articles, interviews, and speaking engagements on AI in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, and more.",
+    images: ["/brett-pollak-headshot-sit-center.png"],
   },
 };
 

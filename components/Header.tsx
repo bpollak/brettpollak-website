@@ -10,8 +10,9 @@ type NavLink = { href: string; label: string };
 const PRIMARY_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/tritongpt', label: 'TritonAI' },
-  { href: '/products', label: 'Products' },
+  { href: '/speaking', label: 'Speaking' },
   { href: '/media', label: 'Media' },
+  { href: '/products', label: 'Products' },
 ];
 
 // AI project pages grouped under a single "AI" dropdown on desktop.
