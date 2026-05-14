@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-13T17:19:59.612Z",
+  "generatedAt": "2026-05-14T13:36:14.415Z",
   "weekOf": "2026-05-11",
   "weekEnding": "2026-05-17",
   "weekLabel": "Week of May 11–17, 2026",
-  "publishedThrough": "May 13, 2026",
-  "digestCount": 3,
-  "headlineCount": 19,
+  "publishedThrough": "May 14, 2026",
+  "digestCount": 4,
+  "headlineCount": 24,
   "days": [
     {
       "isoDate": "2026-05-11",
@@ -68,6 +68,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "What Parameter Golf taught us about AI-assisted research"
       ],
       "raw": "# AI Intelligence Briefing - May 13, 2026\n*Curated from knowledge graph (201 nodes, 244 edges) · All articles published within the last 7 days*\n\n• **How enterprises are scaling AI** — OpenAI's guide on moving from early experiments to compounding impact through trust, governance, and workflow design. Directly relevant to TritonAI's maturation from pilot to production-scale deployment.\n  🔗 Graph: ai-governance, agentic-ai, ai-adoption\n  📅 Published: 2026-05-11\n  📰 https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai\n\n• **OpenAI launches DeployCo to help businesses build around intelligence** — New enterprise deployment company focused on bringing frontier AI into production with measurable business impact. Mirrors the vertical AI approach Brett has championed with TritonGPT.\n  🔗 Graph: openai, agentic-ai, vertical-ai\n  📅 Published: 2026-05-11\n  📰 https://openai.com/index/openai-launches-the-deployment-company\n\n• **Running Codex safely at OpenAI** — Deep dive on sandboxing, approvals, network policies, and agent-native telemetry for compliant coding agent adoption. Essential reading for UC San Diego's Developer API Program governance.\n  🔗 Graph: codex, ai-security, developer-api-program\n  📅 Published: 2026-05-08\n  📰 https://openai.com/index/running-codex-safely\n\n• **How ChatGPT adoption broadened in early 2026** — Q1 data shows fastest growth among users over 35 and balanced gender usage, signaling mainstream AI adoption. Comparable patterns likely emerging in TritonGPT's campus user base.\n  🔗 Graph: ai-adoption, higher-ed-ai, openai\n  📅 Published: 2026-05-11\n  📰 https://openai.com/signals/research/2026q1-update\n\n• **Advancing voice intelligence with new models in the API** — New realtime voice models that can reason, translate, and transcribe—opening possibilities for campus services accessibility and multilingual support in higher ed.\n  🔗 Graph: openai, ai-strategy-topic, higher-ed-ai\n  📅 Published: 2026-05-07\n  📰 https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api\n\n• **What Parameter Golf taught us about AI-assisted research** — 1,000+ participants explored ML research with AI agents under constraints. Higher ed research teams can learn from these patterns for own AI-assisted research workflows.\n  🔗 Graph: ai-strategy-topic, higher-ed-ai, openai\n  📅 Published: 2026-05-12\n  📰 https://openai.com/index/what-parameter-golf-taught-us\n\n💡 Signal: OpenAI is pivoting sharply toward enterprise infrastructure—DeployCo launch, scaling frameworks, and safety tooling suggest the market is moving from experimentation to operationalization, validating TritonAI's vertical-AI-first approach.\n"
+    },
+    {
+      "isoDate": "2026-05-14",
+      "displayDate": "Thursday, May 14",
+      "sourceFile": "ai-news-digest-2026-05-14.md",
+      "headlines": [
+        "Anthropic now has more business customers than OpenAI, according to Ramp data",
+        "Half of Campus Tech Leaders Question AI's ROI",
+        "AI-Generated Slides: Are They Good? Can Students Tell?",
+        "Coursera, Udemy Complete Their Merger",
+        "How to Interpret Agent Behavior"
+      ],
+      "raw": "# AI Intelligence Briefing - May 14, 2026\n*Curated from knowledge graph (201 nodes, 244 edges) · All articles published within the last 7 days*\n\n• **Anthropic now has more business customers than OpenAI, according to Ramp data** — A survey of fintech firm Ramp's clients shows 34.4% of participating businesses now pay for Anthropic services, surpassing OpenAI's 32.3%. This marks a notable shift in enterprise AI adoption patterns, with Claude gaining traction in business contexts.\n  🔗 Graph: Anthropic, Claude, Enterprise Adoption\n  📅 Published: 2026-05-13\n  📰 <https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/>\n\n• **Half of Campus Tech Leaders Question AI's ROI** — Despite three years of generative AI hype and education-specific products flooding the market, a new survey finds 50% of campus technology leaders are skeptical about AI's return on investment. The finding comes as universities face mounting pressure to adopt AI tools despite mixed evidence on learning outcomes.\n  🔗 Graph: Higher Ed AI, AI Adoption, UC San Diego\n  📅 Published: 2026-05-12\n  📰 <https://www.insidehighered.com/news/tech-innovation/artificial-intelligence/2026/05/12/half-campus-tech-leaders-question-ais-roi>\n\n• **AI-Generated Slides: Are They Good? Can Students Tell?** — New research examines student and instructor perceptions of AI-generated lecture slides from tools including NotebookLM, Claude, and M365 Copilot. Findings reveal critical insights for educators deploying generative AI in curriculum development.\n  🔗 Graph: Claude, Higher Ed AI, AI Adoption\n  📅 Published: 2026-05-14\n  📰 <https://arxiv.org/abs/2605.13532>\n\n• **Coursera, Udemy Complete Their Merger** — The two major online learning platforms have finalized their merger, consolidating significant market share in the ed-tech sector. The deal reflects ongoing consolidation in digital education as platforms race to integrate AI capabilities.\n  🔗 Graph: Higher Ed AI, AI Adoption\n  📅 Published: 2026-05-14\n  📰 <https://www.insidehighered.com/news/quick-takes/2026/05/14/coursera-udemy-complete-their-merger>\n\n• **How to Interpret Agent Behavior** — As autonomous agents like Claude Code and Codex operate for hours or days, understanding their runtime behavior has become critical. This work examines how to extract interpretable understanding from unstructured agent reasoning trajectories and execution traces.\n  🔗 Graph: Agentic AI, Claude Code, TritonAI\n  📅 Published: 2026-05-14\n  📰 <https://arxiv.org/abs/2605.13625>\n\n💡 Signal: Enterprise AI adoption is shifting toward Claude in business contexts while higher ed leaders grow cautious about ROI. The Coursera-Udemy merger signals continued ed-tech consolidation as platforms struggle to differentiate in an AI-saturated market. For TritonAI, these trends underscore the importance of demonstrating clear, measurable value rather than chasing feature parity with commercial offerings.\n"
     }
   ]
 };
