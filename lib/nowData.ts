@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-05-10",
+  lastUpdated: "2026-05-17",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,17 +37,22 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "Focused on moving AI from experimentation to durable institutional capability at UC San Diego. The work is less about individual tools and more about governance, safety, and making AI reliably useful at scale.",
+        "TritonGPT is moving from UC San Diego's flagship to a multi-campus platform — Baylor University is evaluating adoption, and we're seeing expansion interest beyond our existing partnerships. The infrastructure is proven; now it's about scaling the deployment model and helping peer institutions adopt the vertical AI approach.",
     },
     {
-      label: "Agentic AI",
+      label: "Governed AI enablement",
       body:
-        "Exploring how AI agents can take on structured, high-stakes university workflows — not just answering questions, but acting on behalf of the institution within clear guardrails.",
+        "Rolling out the Citizen Developer Program — campus staff, researchers, and faculty building AI-powered apps through TritonAI with guardrails, metering, and oversight. Moving from sandbox proposal to 'both and' consensus (desktop + enterprise tier) with formal approval phase underway.",
     },
     {
-      label: "AI and data in higher education",
+      label: "AI agents in production",
       body:
-        "Helping campus and health sciences leadership understand what AI can and can't do today — and building the data foundation that makes future AI work trustworthy.",
+        "Shifting from exploration to implementation. AWS Bedrock agents for observability, recruitment intelligence agents for hiring workflows, and enterprise data agents that bridge natural language to structured queries. Governance and guardrails are built in, not added later.",
+    },
+    {
+      label: "Data and observability foundation",
+      body:
+        "Completed Databricks POC and approved observability team restructure. OpenTelemetry standardization across Splunk and Databricks; FinOps visibility finally getting integrated into financial operations. The infrastructure Brett's team owns now spans AI, analytics, and cost accountability.",
     },
   ],
 };
