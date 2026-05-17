@@ -7,7 +7,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 45+ automated jobs running 100% on UCSD-hosted open-weight models, a 222-node knowledge graph, 219 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 55+ automated jobs running 100% on UCSD-hosted open-weight models, a 250-node knowledge graph, 247 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -46,17 +46,17 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-slate-500 mb-10">
-          Last updated: May 10, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: May 17, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Automated jobs</div>
-            <div className="text-2xl font-bold text-slate-900">45+ cron jobs</div>
+            <div className="text-2xl font-bold text-slate-900">55+ cron jobs</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
-            <div className="text-2xl font-bold text-slate-900">222 nodes · 219 pages</div>
+            <div className="text-2xl font-bold text-slate-900">250 nodes · 247 pages</div>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
             <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Context loading</div>
@@ -123,7 +123,7 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 45+ automated jobs
+            This page documents how I built that knowledge layer for myself: 55+ automated jobs
             running on UCSD-hosted open-weight models, a 201-node knowledge graph, 190 wiki pages,
             and a three-layer memory system. It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -226,7 +226,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            45+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            55+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -286,7 +286,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">222 nodes · 265 edges</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">250 nodes · 298 edges</div>
               <p className="text-sm text-slate-700 leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -298,7 +298,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">219 narrative pages</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">247 narrative pages</div>
               <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
@@ -804,11 +804,21 @@ export default function AiAgentArchitecturePage() {
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              May 17, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Architecture stats refreshed – growth across graph, wiki, and crons</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Updated graph to 250 nodes and 298 edges, wiki expanded to 247 pages, and enabled cron jobs increased to 56 (rounded to 55+). Added new project pages: gartner-eoi-2026, biobib-formatter, citizen-developer-program.
+            </p>
+          </li>
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               May 10, 2026
             </div>
             <div className="text-slate-900 font-semibold mb-1">Architecture stats refreshed</div>
             <p className="text-sm text-slate-600 leading-6">
-              Updated graph to 222 nodes and 265 edges, wiki expanded to 219 narrative pages, and enabled cron jobs remain at 48 (rounded to 45+). No new cron jobs added this week.
+              Updated graph to 222 nodes and 265 edges, wiki expanded to 219 narrative pages, and enabled cron jobs remain at 56 (rounded to 55+). No new cron jobs added this week.
             </p>
           </li>
           <li className="relative">
