@@ -808,7 +808,7 @@ export default function AiAgentArchitecturePage() {
             </div>
             <div className="text-slate-900 font-semibold mb-1">Open-source rebalance · 11 jobs to gpt-oss-120b · aggressive efficiency</div>
             <p className="text-sm text-slate-600 leading-6">
-              Updated stats to 60 enabled crons, 254-node graph, 258 wiki pages. Rebalanced 11 jobs from commercial models (claude-sonnet-4.6, mistral-large-3) to <span className="font-mono text-xs">tritonai-prod/gpt-oss-120b</span> based on actual workload patterns — news aggregation, event curation, script runners, and auditing tasks don't need commercial reasoning. Kept claude-sonnet-4.6 for synthesis-heavy jobs (meeting debriefs, daily reflection, memory promotion), mistral-large-3 for web research + thesis generation. Net effect: ~$300&ndash;400/month institutional savings while staying 100% on TritonAI.
+              Updated stats to 60 enabled crons, 254-node graph, 258 wiki pages. Rebalanced 11 jobs from commercial models (claude-sonnet-4.6, mistral-large-3) to <span className="font-mono text-xs">tritonai-prod/gpt-oss-120b</span> based on actual workload patterns &mdash; news aggregation, event curation, script runners, and auditing tasks don&rsquo;t need commercial reasoning. Kept claude-sonnet-4.6 for synthesis-heavy jobs (meeting debriefs, daily reflection, memory promotion), mistral-large-3 for web research + thesis generation. Net effect: ~$300&ndash;400/month institutional savings while staying 100% on TritonAI&rsquo;s open-weight platform.
             </p>
           </li>
           <li className="relative">
