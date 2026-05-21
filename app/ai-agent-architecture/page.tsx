@@ -744,6 +744,65 @@ export default function AiAgentArchitecturePage() {
             handle a team member leaving, and how do you prevent context from leaking between
             people.
           </p>
+
+          <div className="my-6 border-l-4 border-emerald-600 bg-emerald-50/60 pl-5 py-4 rounded-r-lg">
+            <div className="text-xs uppercase tracking-[0.18em] text-emerald-800 font-semibold mb-2">
+              Pilot in progress &mdash; TritonAI Team Knowledge Vault
+            </div>
+            <p className="text-slate-800 leading-7 mb-3">
+              The team tier is no longer hypothetical. The first instance launched May&nbsp;18,
+              2026: a 3-person shared Obsidian vault for the TritonAI core team &mdash; Brett
+              Pollak, Shawn Munro, and Jeremy Wiles &mdash; sitting in a private GitHub repo
+              and auto-syncing every 10 minutes via the Obsidian Git plugin. The vault has six
+              shared sections: <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">people/</code>{' '}
+              (professional profiles, no 1:1 notes),{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">projects/</code>{' '}
+              (live status),{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">decisions/</code>{' '}
+              (ADRs),{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">tech-stack/</code>{' '}
+              (vendor evaluations),{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">runbooks/</code>{' '}
+              (how-we-do-things), and{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">proposals/</code>{' '}
+              (the only place agents are allowed to write).
+            </p>
+            <p className="text-slate-800 leading-7 mb-3">
+              <strong>Two contributor modes coexist.</strong> Type&nbsp;A (manual) edits pages
+              directly in Obsidian; auto-sync handles the rest &mdash; that&rsquo;s how Shawn
+              and Jeremy work today. Type&nbsp;B (agent-assisted) is how I work: my agent reads
+              evening-wrap, meeting debriefs, and opportunity-scan output, drafts updates into{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">proposals/YYYY-MM-DD-{'{topic}'}.md</code>,
+              and a human (me, or the owner of the page) reviews each one &mdash; about
+              30&nbsp;seconds &mdash; before committing into the canonical page. <em>No
+              automation writes directly to shared pages.</em> Four cron jobs run the rhythm:
+              nightly ingest at 8&nbsp;PM weeknights folds team-vault changes into the personal
+              knowledge graph, a proposals generator drafts new entries the same hour, a
+              proposals monitor surfaces them at 9&nbsp;AM, and a Monday-morning staleness
+              check flags any page untouched for 14+ days.
+            </p>
+            <p className="text-slate-800 leading-7 mb-3">
+              <strong>What we&rsquo;ve seen in week one.</strong> 25+ assets updated in the
+              first 48 hours &mdash; people cards, decision docs, project pages, runbooks,
+              tech-stack entries. Not a write-once-and-die artifact: all three of us are
+              editing continuously, and the nightly ingest means a decision logged in the
+              vault is in my agent&rsquo;s context by the next morning. The Monday briefing
+              now opens with a team-diff section. Pilot duration is four weeks; a structured
+              retrospective is scheduled for June&nbsp;15 to decide whether to expand to the
+              full WTS team next.
+            </p>
+            <p className="text-slate-800 leading-7">
+              <strong>The strategic reason this matters.</strong> If this works at three
+              people, the same pattern &mdash; shared Obsidian vault, GitHub backing,
+              proposals-first agent writes, ~10&nbsp;minutes of human review per week per
+              steward &mdash; should plausibly scale through WTS (a dozen+ people) to ITS
+              leadership and onward. Each tier becomes &ldquo;Layer 2&rdquo; (triggered) for
+              the tier above. If a UCSD campus offering ever ships, this is the architectural
+              shape we&rsquo;d propose: every team gets a vault, every team member gets an
+              agent that reads it, no team&rsquo;s vault is visible to another without explicit
+              cross-vault permission.
+            </p>
+          </div>
           <p>
             <strong className="text-slate-900">Department &mdash; anonymized aggregates only.</strong>{' '}
             At WTS or Academic Technology Services, the useful view is patterns, not records.
@@ -767,9 +826,10 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p>
             <strong className="text-slate-900">Proven vs. speculative:</strong> the personal
-            layer works; I use it daily. Team, department, and campus layers are design
-            exercises, not shipped code. The pattern is there; the architecture is a starting
-            point, not a finished product.
+            layer works; I use it daily. The team layer is now also shipped &mdash; live for
+            three people since May&nbsp;18 with a structured retrospective set for June&nbsp;15.
+            Department and campus layers are still design exercises, not shipped code. The
+            pattern is there; the architecture is a starting point, not a finished product.
           </p>
           <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
             The real question isn&rsquo;t &ldquo;can we do this?&rdquo; &mdash; it&rsquo;s
