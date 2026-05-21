@@ -769,17 +769,19 @@ export default function AiAgentArchitecturePage() {
             </p>
             <p className="text-slate-800 leading-7 mb-3">
               <strong>Two contributor modes coexist.</strong> Type&nbsp;A (manual) edits pages
-              directly in Obsidian; auto-sync handles the rest &mdash; that&rsquo;s how Shawn
-              and Jeremy work today. Type&nbsp;B (agent-assisted) is how I work: my agent reads
+              directly in Obsidian; auto-sync handles the rest &mdash; that&rsquo;s how Jeremy
+              works today. Type&nbsp;B (agent-assisted) is how Shawn and I work: an agent reads
               evening-wrap, meeting debriefs, and opportunity-scan output, drafts updates into{' '}
               <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">proposals/YYYY-MM-DD-{'{topic}'}.md</code>,
-              and a human (me, or the owner of the page) reviews each one &mdash; about
+              and a human (the owner of the page) reviews each one &mdash; about
               30&nbsp;seconds &mdash; before committing into the canonical page. <em>No
-              automation writes directly to shared pages.</em> Four cron jobs run the rhythm:
-              nightly ingest at 8&nbsp;PM weeknights folds team-vault changes into the personal
-              knowledge graph, a proposals generator drafts new entries the same hour, a
-              proposals monitor surfaces them at 9&nbsp;AM, and a Monday-morning staleness
-              check flags any page untouched for 14+ days.
+              automation writes directly to shared pages.</em> Having both modes live in the
+              same vault from week one is a deliberate test &mdash; we want to see whether
+              manual and agent-assisted contributors can coexist without one mode crowding out
+              the other. Four cron jobs run the rhythm: nightly ingest at 8&nbsp;PM weeknights
+              folds team-vault changes into the personal knowledge graph, a proposals generator
+              drafts new entries the same hour, a proposals monitor surfaces them at 9&nbsp;AM,
+              and a Monday-morning staleness check flags any page untouched for 14+ days.
             </p>
             <p className="text-slate-800 leading-7 mb-3">
               <strong>What we&rsquo;ve seen in week one.</strong> 25+ assets updated in the
