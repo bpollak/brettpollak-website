@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-21T17:20:10.525Z",
+  "generatedAt": "2026-05-22T13:36:05.785Z",
   "weekOf": "2026-05-18",
   "weekEnding": "2026-05-24",
   "weekLabel": "Week of May 18–24, 2026",
-  "publishedThrough": "May 21, 2026",
-  "digestCount": 4,
-  "headlineCount": 24,
+  "publishedThrough": "May 22, 2026",
+  "digestCount": 5,
+  "headlineCount": 29,
   "days": [
     {
       "isoDate": "2026-05-18",
@@ -81,6 +81,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Formal Skill: Programmable Runtime Skills for Efficient and Accurate LLM Agents"
       ],
       "raw": "# AI Intelligence Briefing - Thursday, May 21st, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **AgentNLQ: A General-Purpose Agent for Natural Language to SQL** — A multi-agent method for converting natural language to SQL that achieves higher accuracy than existing LLM approaches. Directly relevant to Brett's Enterprise Data Agent pattern—natural language queries to structured enterprise data.\n  🔗 Graph: Enterprise Data Agent, Agentic AI, LLM agents\n  📅 Published: 2026-05-21\n  📰 https://arxiv.org/abs/2605.19010\n\n• **Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production** — Production-scale microservice architecture for document classification, OCR, and structured field extraction via LLMs. Mirrors the AI Contract Reviewer's operational pipeline.\n  🔗 Graph: AI Contract Reviewer, Document AI, Production systems\n  📅 Published: 2026-05-21\n  📰 https://arxiv.org/abs/2605.18818\n\n• **Entry-level productivity expectations have increased due to AI, report says** — Nearly a third of HR professionals report hiring fewer early-career workers and using AI to fill gaps, signaling a shift in workforce composition at higher-ed institutions.\n  🔗 Graph: Higher Ed AI, AI Adoption, Workforce impact\n  📅 Published: 2026-05-21\n  📰 https://www.highereddive.com/news/entry-level-productivity-expectations-increased-ai/820776/\n\n• **POLAR-Bench: A Policy-aware adversarial Benchmark** — A diagnostic benchmark measuring privacy-utility trade-offs in LLM agents handling private data. Addresses a critical concern for campus AI systems: defining what private user data may and must not be shared.\n  🔗 Graph: Agentic AI, AI Governance, AI Security\n  📅 Published: 2026-05-21\n  📰 https://arxiv.org/abs/2605.19127\n\n• **Why Are Students Opening Up to AI Instead of People?** — Exploration of whether AI is filling critical gaps in student mental health support or deepening isolation on college campuses. Raises governance questions around AI-mediated student relationships.\n  🔗 Graph: Higher Ed AI, Student Success, AI Ethics\n  📅 Published: 2026-05-21\n  📰 https://www.insidehighered.com/news/student-success/health-wellness/2026/05/21/why-are-students-opening-ai-instead-people\n\n• **Formal Skill: Programmable Runtime Skills for Efficient and Accurate LLM Agents** — Introduces formal, programmable skill definitions for LLM agents with policy enforcement and workflow state management. Foundational architecture for reliable, production-grade agent systems.\n  🔗 Graph: Agentic AI, Agent Architecture, Production systems\n  📅 Published: 2026-05-21\n  📰 https://arxiv.org/abs/2605.19604\n\n💡 Signal: Agentic AI patterns (multi-agent delegation, formal skills, privacy-constrained data access) are maturing from research into production systems. Higher ed faces a dual challenge: capturing workforce gains from AI productivity while maintaining human support structures for student welfare. Enterprise governance frameworks—privacy, skill composition, policy enforcement—are becoming table stakes.\n"
+    },
+    {
+      "isoDate": "2026-05-22",
+      "displayDate": "Friday, May 22",
+      "sourceFile": "ai-news-digest-2026-05-22.md",
+      "headlines": [
+        "Ban for Authors Submitting AI Content ‘Welcome but Unenforceable’",
+        "3 Takeaways on AI and Entry-Level Jobs",
+        "SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation",
+        "AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows",
+        "Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs"
+      ],
+      "raw": "# AI Intelligence Briefing - May 22, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Ban for Authors Submitting AI Content ‘Welcome but Unenforceable’** — Research integrity experts commend arXiv’s crackdown on bogus AI-written citations but warn it may be impossible to police at scale.\n  🔗 Graph: agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/faculty/books-publishing/2026/05/22/ban-authors-who-submit-ai-content-welcome-unenforceable\n\n• **3 Takeaways on AI and Entry-Level Jobs** — Institutions including the University of Virginia and the State University of New York are launching AI initiatives to prepare students for a changing early-career job market.\n  🔗 Graph: higher-ed-ai, ai-adoption\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/student-success/life-after-college/2026/05/22/3-takeaways-ai-and-entry-level-jobs\n\n• **SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation** — A new research paper addressing the challenges of deploying LLMs in dynamic, real-world settings with concept drift.\n  🔗 Graph: agentic-ai\n  📅 Published: 2026-05-22\n  📰 https://arxiv.org/abs/2605.20189\n\n• **AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows** — Proposing a framework to compose reusable skills and tools into executable multi-agent workflows in open-ended scientific settings.\n  🔗 Graph: agentic-ai\n  📅 Published: 2026-05-22\n  📰 https://arxiv.org/abs/2605.20425\n\n• **Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs** — Addressing the gap in enterprise settings where analytics pipelines rely on governed APIs rather than raw databases.\n  🔗 Graph: enterprise-data-agent, ai-governance\n  📅 Published: 2026-05-22\n  📰 https://arxiv.org/abs/2605.21027\n\n💡 Signal: The intersection of agentic AI and institutional governance is accelerating, with significant research emerging on multi-agent interoperability and the necessity of governed API access for enterprise-grade autonomy.\n"
     }
   ]
 };
