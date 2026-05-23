@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-22T13:36:05.785Z",
+  "generatedAt": "2026-05-23T13:35:31.347Z",
   "weekOf": "2026-05-18",
   "weekEnding": "2026-05-24",
   "weekLabel": "Week of May 18–24, 2026",
-  "publishedThrough": "May 22, 2026",
-  "digestCount": 5,
-  "headlineCount": 29,
+  "publishedThrough": "May 23, 2026",
+  "digestCount": 6,
+  "headlineCount": 35,
   "days": [
     {
       "isoDate": "2026-05-18",
@@ -94,6 +94,20 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs"
       ],
       "raw": "# AI Intelligence Briefing - May 22, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Ban for Authors Submitting AI Content ‘Welcome but Unenforceable’** — Research integrity experts commend arXiv’s crackdown on bogus AI-written citations but warn it may be impossible to police at scale.\n  🔗 Graph: agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/faculty/books-publishing/2026/05/22/ban-authors-who-submit-ai-content-welcome-unenforceable\n\n• **3 Takeaways on AI and Entry-Level Jobs** — Institutions including the University of Virginia and the State University of New York are launching AI initiatives to prepare students for a changing early-career job market.\n  🔗 Graph: higher-ed-ai, ai-adoption\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/student-success/life-after-college/2026/05/22/3-takeaways-ai-and-entry-level-jobs\n\n• **SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation** — A new research paper addressing the challenges of deploying LLMs in dynamic, real-world settings with concept drift.\n  🔗 Graph: agentic-ai\n  📅 Published: 2026-05-22\n  📰 https://arxiv.org/abs/2605.20189\n\n• **AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows** — Proposing a framework to compose reusable skills and tools into executable multi-agent workflows in open-ended scientific settings.\n  🔗 Graph: agentic-ai\n  📅 Published: 2026-05-22\n  📰 https://arxiv.org/abs/2605.20425\n\n• **Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs** — Addressing the gap in enterprise settings where analytics pipelines rely on governed APIs rather than raw databases.\n  🔗 Graph: enterprise-data-agent, ai-governance\n  📅 Published: 2026-05-22\n  📰 https://arxiv.org/abs/2605.21027\n\n💡 Signal: The intersection of agentic AI and institutional governance is accelerating, with significant research emerging on multi-agent interoperability and the necessity of governed API access for enterprise-grade autonomy.\n"
+    },
+    {
+      "isoDate": "2026-05-23",
+      "displayDate": "Saturday, May 23",
+      "sourceFile": "ai-news-digest-2026-05-23.md",
+      "headlines": [
+        "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
+        "Google Unveils Android XR Smart Glasses, Powered by Gemini AI",
+        "IBM Announces New AI-Powered Cybersecurity Tools",
+        "OpenAI named a Leader in enterprise coding agents by Gartner",
+        "3 Takeaways on AI and Entry-Level Jobs",
+        "Microsoft Releases Open Source AI Safety Tools for Agent Development"
+      ],
+      "raw": "# AI Intelligence Briefing - Saturday, May 23, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models** — NVIDIA's Nemotron-Labs research demonstrates progress in high-speed text generation using diffusion-based language models.\n  🔗 Graph: huggingface, nvidia\n  📅 Published: 2026-05-23\n  📰 https://huggingface.co/blog/nvidia/nemotron-labs-diffusion\n\n• **Google Unveils Android XR Smart Glasses, Powered by Gemini AI** — Google is entering the smart-glasses market with Android XR, leveraging Gemini for conversational computing and improved user interaction.\n  🔗 Graph: google, gemini\n  📅 Published: 2026-05-22\n  📰 https://campustechnology.com/articles/2026/05/22/google-unveils-android-xr-smart-glasses-powered-by-gemini-ai.aspx\n\n• **IBM Announces New AI-Powered Cybersecurity Tools** — IBM has expanded its AI security portfolio to better defend against automated cyber threats in the enterprise.\n  🔗 Graph: ibm\n  📅 Published: 2026-05-22\n  📰 https://campustechnology.com/articles/2026/05/22/ibm-announces-new-ai-powered-cybersecurity-tools.aspx\n\n• **OpenAI named a Leader in enterprise coding agents by Gartner** — OpenAI's Codex was recognized by Gartner as a leader in the 2026 Magic Quadrant for Enterprise AI Coding Agents.\n  🔗 Graph: openai, gartner\n  📅 Published: 2026-05-22\n  📰 https://openai.com/index/gartner-2026-agentic-coding-leader\n\n• **3 Takeaways on AI and Entry-Level Jobs** — New insights into how institutions are using AI initiatives to prepare students for a changing early-career job market.\n  🔗 Graph: higher-ed-ai\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/student-success/life-after-college/2026/05/22/3-takeaways-ai-and-entry-level-jobs\n\n• **Microsoft Releases Open Source AI Safety Tools for Agent Development** — Microsoft introduced RAMPART and Clarity to help developers test and secure AI agents.\n  🔗 Graph: microsoft, agentic-ai\n  📅 Published: 2026-05-20\n  📰 https://campustechnology.com/articles/2026/05/20/microsoft-releases-open-source-ai-safety-tools-for-agent-development.aspx\n\n💡 Signal: The intelligence briefing highlights a clear convergence of AI into specialized verticals—from security and smart wearables to higher education career readiness—with a strong emphasis on agentic safety and governance."
     }
   ]
 };
