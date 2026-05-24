@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-23T17:20:01.206Z",
+  "generatedAt": "2026-05-24T13:35:36.004Z",
   "weekOf": "2026-05-18",
   "weekEnding": "2026-05-24",
   "weekLabel": "Week of May 18–24, 2026",
-  "publishedThrough": "May 23, 2026",
-  "digestCount": 6,
-  "headlineCount": 35,
+  "publishedThrough": "May 24, 2026",
+  "digestCount": 7,
+  "headlineCount": 42,
   "days": [
     {
       "isoDate": "2026-05-18",
@@ -108,6 +108,21 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Microsoft Releases Open Source AI Safety Tools for Agent Development"
       ],
       "raw": "# AI Intelligence Briefing - Saturday, May 23, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models** — NVIDIA's Nemotron-Labs research demonstrates progress in high-speed text generation using diffusion-based language models.\n  🔗 Graph: huggingface, nvidia\n  📅 Published: 2026-05-23\n  📰 https://huggingface.co/blog/nvidia/nemotron-labs-diffusion\n\n• **Google Unveils Android XR Smart Glasses, Powered by Gemini AI** — Google is entering the smart-glasses market with Android XR, leveraging Gemini for conversational computing and improved user interaction.\n  🔗 Graph: google, gemini\n  📅 Published: 2026-05-22\n  📰 https://campustechnology.com/articles/2026/05/22/google-unveils-android-xr-smart-glasses-powered-by-gemini-ai.aspx\n\n• **IBM Announces New AI-Powered Cybersecurity Tools** — IBM has expanded its AI security portfolio to better defend against automated cyber threats in the enterprise.\n  🔗 Graph: ibm\n  📅 Published: 2026-05-22\n  📰 https://campustechnology.com/articles/2026/05/22/ibm-announces-new-ai-powered-cybersecurity-tools.aspx\n\n• **OpenAI named a Leader in enterprise coding agents by Gartner** — OpenAI's Codex was recognized by Gartner as a leader in the 2026 Magic Quadrant for Enterprise AI Coding Agents.\n  🔗 Graph: openai, gartner\n  📅 Published: 2026-05-22\n  📰 https://openai.com/index/gartner-2026-agentic-coding-leader\n\n• **3 Takeaways on AI and Entry-Level Jobs** — New insights into how institutions are using AI initiatives to prepare students for a changing early-career job market.\n  🔗 Graph: higher-ed-ai\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/student-success/life-after-college/2026/05/22/3-takeaways-ai-and-entry-level-jobs\n\n• **Microsoft Releases Open Source AI Safety Tools for Agent Development** — Microsoft introduced RAMPART and Clarity to help developers test and secure AI agents.\n  🔗 Graph: microsoft, agentic-ai\n  📅 Published: 2026-05-20\n  📰 https://campustechnology.com/articles/2026/05/20/microsoft-releases-open-source-ai-safety-tools-for-agent-development.aspx\n\n💡 Signal: The intelligence briefing highlights a clear convergence of AI into specialized verticals—from security and smart wearables to higher education career readiness—with a strong emphasis on agentic safety and governance."
+    },
+    {
+      "isoDate": "2026-05-24",
+      "displayDate": "Sunday, May 24",
+      "sourceFile": "ai-news-digest-2026-05-24.md",
+      "headlines": [
+        "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
+        "Google Unveils Android XR Smart Glasses, Powered by Gemini AI",
+        "IBM Announces New AI-Powered Cybersecurity Tools",
+        "3 Takeaways on AI and Entry-Level Jobs",
+        "Building an AI Center of Excellence for Higher Education",
+        "Microsoft Releases Open Source AI Safety Tools for Agent Development",
+        "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments"
+      ],
+      "raw": "# AI Intelligence Briefing - May 24th, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models** — NVIDIA's new Nemotron-Labs diffusion models aim to drastically increase text generation speeds by treating language modeling as a diffusion process.\n  🔗 Graph: Hugging Face\n  📅 Published: 2026-05-23\n  📰 https://huggingface.co/blog/nvidia/nemotron-labs-diffusion\n\n• **Google Unveils Android XR Smart Glasses, Powered by Gemini AI** — Google is re-entering the smart glasses market with a new wearable platform driven by Gemini, focusing on conversational AI and augmented reality.\n  🔗 Graph: Google, Gemini\n  📅 Published: 2026-05-22\n  📰 https://campustechnology.com/articles/2026/05/22/google-unveils-android-xr-smart-glasses-powered-by-gemini-ai.aspx\n\n• **IBM Announces New AI-Powered Cybersecurity Tools** — IBM has expanded its security portfolio to include new AI-driven tools designed to defend enterprises against increasingly automated cyber threats.\n  🔗 Graph: IBM\n  📅 Published: 2026-05-22\n  📰 https://campustechnology.com/articles/2026/05/22/ibm-announces-new-ai-powered-cybersecurity-tools.aspx\n\n• **3 Takeaways on AI and Entry-Level Jobs** — New research shows how institutions are using AI initiatives to prepare students for a rapidly changing job market where entry-level roles are being redefined.\n  🔗 Graph: Higher Ed AI\n  📅 Published: 2026-05-22\n  📰 https://www.insidehighered.com/news/student-success/life-after-college/2026/05/22/3-takeaways-ai-and-entry-level-jobs\n\n• **Building an AI Center of Excellence for Higher Education** — A new strategic model is emerging in higher education to help institutions coordinate fragmented AI experimentation into centralized, effective governance.\n  🔗 Graph: Higher Ed AI, AI Governance\n  📅 Published: 2026-05-20\n  📰 https://edtechmagazine.com/higher/article/2026/05/building-ai-center-excellence-higher-education-perfcon\n\n• **Microsoft Releases Open Source AI Safety Tools for Agent Development** — Microsoft has launched RAMPART and Clarity, two new open-source projects designed to help developers build and test the safety of AI agents.\n  🔗 Graph: Microsoft, Agentic AI\n  📅 Published: 2026-05-20\n  📰 https://campustechnology.com/articles/2026/05/20/microsoft-releases-open-source-ai-safety-tools-for-agent-development.aspx\n\n• **OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments** — A new partnership between OpenAI and Dell aims to enable secure, on-premises deployment of Codex for enterprise coding agents.\n  🔗 Graph: OpenAI, Codex\n  📅 Published: 2026-05-18\n  📰 https://openai.com/index/dell-codex-enterprise-partnership\n\n💡 Signal: The intersection of agentic AI and enterprise governance is the primary theme this week, with major vendors like Microsoft and IBM releasing tools to manage the risks of autonomous systems, while higher education is racing to build structural \"Centers of Excellence\" to coordinate adoption.\n"
     }
   ]
 };
