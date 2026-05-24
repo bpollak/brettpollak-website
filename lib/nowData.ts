@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-05-17",
+  lastUpdated: "2026-05-24",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,22 +37,22 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is moving from UC San Diego's flagship to a multi-campus platform — Baylor University is evaluating adoption, and we're seeing expansion interest beyond our existing partnerships. The infrastructure is proven; now it's about scaling the deployment model and helping peer institutions adopt the vertical AI approach.",
+        "TritonGPT is scaling from a flagship service to a multi-campus platform, with Baylor University currently in evaluation. We're focused on building the deployment models that allow peer institutions to adopt this vertical AI approach safely.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "Rolling out the Citizen Developer Program — campus staff, researchers, and faculty building AI-powered apps through TritonAI with guardrails, metering, and oversight. Moving from sandbox proposal to 'both and' consensus (desktop + enterprise tier) with formal approval phase underway.",
+        "Rolling out the Citizen Developer Program with a focus on decoupled environments—using T3 Code as the primary desktop experience to bridge the gap between sandbox experimentation and enterprise-grade deployment.",
     },
     {
       label: "AI agents in production",
       body:
-        "Shifting from exploration to implementation. AWS Bedrock agents for observability, recruitment intelligence agents for hiring workflows, and enterprise data agents that bridge natural language to structured queries. Governance and guardrails are built in, not added later.",
+        "Moving beyond exploration into active deployment. This includes the rolling launch of TritonGPT mobile apps on iOS and Android, alongside enterprise data agents that bridge natural language to structured queries.",
     },
     {
-      label: "Data and observability foundation",
+      label: "Data product architecture",
       body:
-        "Completed Databricks POC and approved observability team restructure. OpenTelemetry standardization across Splunk and Databricks; FinOps visibility finally getting integrated into financial operations. The infrastructure Brett's team owns now spans AI, analytics, and cost accountability.",
+        "Shifting from Databricks migration to a true 'data product' mindset. We are implementing a data mesh model where domain teams define their own governed data products and contracts, rather than performing a simple lift-and-shift.",
     },
   ],
 };
