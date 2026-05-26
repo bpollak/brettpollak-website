@@ -37,12 +37,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is scaling from a flagship service to a multi-campus platform, with Baylor University currently in evaluation. We're focused on building the deployment models that allow peer institutions to adopt this vertical AI approach safely.",
+        "TritonGPT is scaling from a flagship service to a multi-campus platform, with several peer institutions currently in evaluation. We're focused on building the deployment models that allow peer institutions to adopt this vertical AI approach safely.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "Rolling out the Citizen Developer Program with a focus on decoupled environments—using T3 Code as the primary desktop experience to bridge the gap between sandbox experimentation and enterprise-grade deployment.",
+        "Rolling out the Citizen Developer Program with a focus on decoupled environments—bridge the gap between sandbox experimentation and enterprise-grade deployment using AI-powered desktop and cloud tools.",
     },
     {
       label: "AI agents in production",
@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data product architecture",
       body:
-        "Shifting from Databricks migration to a true 'data product' mindset. We are implementing a data mesh model where domain teams define their own governed data products and contracts, rather than performing a simple lift-and-shift.",
+        "Shifting from platform migration to a true 'data product' mindset. We are implementing a data mesh model where domain teams define their own governed data products and contracts, rather than performing a simple lift-and-shift.",
     },
   ],
 };
