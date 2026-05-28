@@ -85,7 +85,7 @@ export default function ThreeLayerDiagram() {
           weekly-synthesis
         </text>
         <text x="360" y="398" textAnchor="middle" className="fill-slate-700" style={{ fontSize: '10px', fontStyle: 'italic' }}>
-          105 pages · pulled in when conversation mentions the topic
+          259 pages · pulled in when conversation mentions the topic
         </text>
 
         {/* Layer 3 content labels */}
@@ -109,7 +109,7 @@ export default function ThreeLayerDiagram() {
       <figcaption className="sr-only">
         The agent loads context in three priority tiers. Layer 1 is a small fixed set of files
         (identity, user profile, long-term memory, patterns, today, yesterday) loaded on every
-        session start. Layer 2 is 105 wiki pages pulled in conditionally when the conversation
+        session start. Layer 2 is 259 wiki pages pulled in conditionally when the conversation
         mentions a person, technology, decision, or trend. Layer 3 is deep-dive content like
         specific dated memory files or raw transcripts, loaded only when the human explicitly asks.
       </figcaption>

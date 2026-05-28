@@ -39,8 +39,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '163 nodes · 195 edges' },
-  { label: 'Wiki', note: '105 curated pages' },
+  { label: 'Knowledge Graph', note: '301 nodes · 346 edges' },
+  { label: 'Wiki', note: '259 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -297,7 +297,7 @@ export default function HeroPipelineDiagram() {
             textAnchor="middle"
             style={{ fontSize: '11px', fill: '#64748b', fontStyle: 'italic' }}
           >
-            30+ cron jobs turn raw signals into durable knowledge
+            64 cron jobs turn raw signals into durable knowledge
           </text>
         </g>
       </svg>

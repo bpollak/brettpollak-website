@@ -7,7 +7,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 60+ automated jobs running on UC San Diego’s TritonAI gateway — predominantly open-weight models hosted at SDSC, with a small proprietary escalation tier for monitors where false negatives carry real cost. 287-node knowledge graph, 265 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 64+ automated jobs running on UC San Diego’s TritonAI gateway — predominantly open-weight models hosted at SDSC, with a small proprietary escalation tier for monitors where false negatives carry real cost. 301-node knowledge graph, 259 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -123,9 +123,9 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 63 automated jobs
+            This page documents how I built that knowledge layer for myself: 64 automated jobs
             routed through UC San Diego&rsquo;s TritonAI gateway &mdash; predominantly open-weight
-            models hosted at SDSC &mdash; a 287-node knowledge graph, 265 wiki pages, and a
+            models hosted at SDSC &mdash; a 301-node knowledge graph, 259 wiki pages, and a
             three-layer memory system. It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
             understands their work world.
@@ -358,7 +358,7 @@ export default function AiAgentArchitecturePage() {
             model class that fits its work shape.
           </p>
           <p>
-            As of May 21, 2026, <strong>all 63 enabled jobs run through{' '}
+            As of May 27, 2026, <strong>all 64 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
@@ -366,9 +366,9 @@ export default function AiAgentArchitecturePage() {
               TritonAI
             </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway, with on-prem
             inference at the San Diego Supercomputer Center for the open-weight tier and
-            hyperscaler-proxied capacity for the larger frontier models. <strong>97% of jobs
-            run on open-weight models</strong>; the remaining 2 monitor jobs escalate to Claude
-            Sonnet 4.6 because false negatives there carry real cost. Six model variants split
+            hyperscaler-proxied capacity for the larger frontier models. <strong>~94% of jobs
+            run on open-weight models</strong>; the remaining 3 monitor jobs escalate to Claude
+            Sonnet 4.6 because false negatives there carry real cost. Seven model variants split
             the load:
           </p>
         </div>
@@ -390,7 +390,7 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gemma-4-26b</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
                 <td className="px-4 py-3 text-slate-700">Daily briefings, meeting debriefs, wiki/page refreshes, multimodal extraction</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">20</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">17</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Fast monitor &amp; sync</td>
@@ -404,7 +404,7 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gpt-oss-120b</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · OpenAI gpt-oss 120B (open weight)</td>
                 <td className="px-4 py-3 text-slate-700">Opportunity scans, signal synthesis, blockage radar, LinkedIn candidate ID, TritonGPT intel</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">14</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">16</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Long-form &amp; deep reasoning</td>
@@ -418,7 +418,14 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">claude-sonnet-4-6</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
                 <td className="px-4 py-3 text-slate-700">Provider quota monitor, important-email triage &mdash; jobs where a missed signal has real downstream cost</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">2</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Complex reasoning</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-sonnet</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
+                <td className="px-4 py-3 text-slate-700">Granola meeting debrief &mdash; deep commitment extraction from transcripts</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Code maintenance</td>
@@ -445,14 +452,15 @@ export default function AiAgentArchitecturePage() {
             load-bearing in the architecture.
           </p>
           <p>
-            <strong className="text-slate-900">Why two jobs on proprietary Claude Sonnet:</strong>{' '}
-            after the May 21 TritonAI catalog refresh, two cron jobs had their cost-of-a-miss
-            re-examined &mdash; <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
-            (catches outages and quota exhaustion before they cascade) and{' '}
+            <strong className="text-slate-900">Why three jobs on proprietary Claude Sonnet:</strong>{' '}
+            three cron jobs escalate to Claude Sonnet 4.6 because false negatives there carry
+            real cost: <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
+            (catches outages and quota exhaustion before they cascade),{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gmail-important-emails</code>{' '}
-            (surfaces actionable messages buried in volume). The cost of a missed signal on
-            either is much higher than the marginal cloud-tier spend, so they explicitly escalate
-            to Claude Sonnet 4.6. Everything else stays on the open-weight tier.
+            (surfaces actionable messages buried in volume), and{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">granola-meeting-debrief</code>{' '}
+            (deep commitment extraction from transcripts where extraction quality has direct
+            downstream value). Everything else stays on the open-weight tier.
           </p>
           <p>
             <strong className="text-slate-900">Why no cross-provider canary anymore:</strong> the
