@@ -10,20 +10,27 @@ export const mediaItems: MediaItem[] = [
   {
     publication: 'UC AI Council Webinar Series',
     title: 'Mitigating Risk through Awareness: A Framework for AI Literacy',
-    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
+    url: 'https://ucop.zoom.us/webinar/register/WN_DxGMOcL1RdG-bcyOmfOC1Q',
     date: '2026-06-03',
     category: 'speaking'
   },
   {
     publication: 'UC AI Council Webinar Series',
     title: 'The AI Roadmap — Driving from Idea to Innovation',
-    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
+    url: 'https://ucop.zoom.us/webinar/register/WN_8LWHt6d-SayHX66A3WHwNA',
     date: '2026-05-21',
     category: 'speaking'
   },
   {
     publication: 'UCNet',
-    title: 'Attend the first events in a new UC AI Council webinar series',
+    title: 'The AI Roadmap — Driving from Idea to Innovation (UC AI Council Webinar)',
+    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
+    date: '2026-05-14',
+    category: 'article'
+  },
+  {
+    publication: 'UCNet',
+    title: 'Mitigating Risk through Awareness: A Framework for AI Literacy (UC AI Council Webinar)',
     url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
     date: '2026-05-14',
     category: 'article'
