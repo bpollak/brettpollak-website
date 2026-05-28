@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-27T17:20:06.317Z",
+  "generatedAt": "2026-05-28T13:35:22.749Z",
   "weekOf": "2026-05-25",
   "weekEnding": "2026-05-31",
   "weekLabel": "Week of May 25–31, 2026",
-  "publishedThrough": "May 27, 2026",
-  "digestCount": 3,
-  "headlineCount": 17,
+  "publishedThrough": "May 28, 2026",
+  "digestCount": 4,
+  "headlineCount": 22,
   "days": [
     {
       "isoDate": "2026-05-25",
@@ -66,6 +66,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems"
       ],
       "raw": "# AI Intelligence Briefing - May 27, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Making the Invisible Visible: Redesigning an Onboarding Workflow for International Students** — Universities are overhauling enrollment processes with AI-driven automation, improving compliance and staff efficiency.\n  🔗 Graph: tritonai, agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-27\n  📰 https://er.educause.edu/articles/2026/5/making-the-invisible-visible-redesigning-an-onboarding-workflow-for-international-students\n\n• **Higher Education Network Infrastructure in the Age of AI** — AI workloads strain campus networks, prompting a push for smarter infrastructure management.\n  🔗 Graph: tritonai, agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-26\n  📰 https://edtechmagazine.com/higher/article/2026/05/higher-education-network-infrastructure-age-ai\n\n• **Before Deploying AI in Admissions, Ask Why** — A new framework urges institutions to align AI adoption with clear admissions goals.\n  🔗 Graph: tritonai, agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-27\n  📰 https://www.insidehighered.com/news/tech-innovation/artificial-intelligence/2026/05/27/deploying-ai-admissions-ask-why\n\n• **OpenAI, Grupo Folha and Grupo UOL announce strategic content partnership** — OpenAI expands trusted news integration, a move relevant for responsible AI content distribution.\n  🔗 Graph: tritonai, agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-25\n  📰 https://openai.com/index/grupo-folha-grupo-uol-partnership\n\n• **Can LLMs Introspect? A Reality Check** — Researchers question whether large language models truly understand their internal states, impacting agentic AI reliability.\n  🔗 Graph: tritonai, agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-27\n  📰 https://arxiv.org/abs/2605.26242\n\n• **Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems** — Study highlights the need for lifecycle engineering of AI agents to maintain performance over time.\n  🔗 Graph: tritonai, agentic-ai, higher-ed-ai\n  📅 Published: 2026-05-27\n  📰 https://arxiv.org/abs/2605.26302\n\n💡 Signal: Higher education institutions accelerate AI adoption while grappling with governance and infrastructure challenges; agentic AI research pushes deeper understanding of model introspection and lifecycle."
+    },
+    {
+      "isoDate": "2026-05-28",
+      "displayDate": "Thursday, May 28",
+      "sourceFile": "ai-news-digest-2026-05-28.md",
+      "headlines": [
+        "Google Moves AI Agents into the Mainstream",
+        "3 Things to Know About Trump’s Higher Education Grant Competitions",
+        "ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM",
+        "Cisco and OpenAI redefine enterprise engineering with Codex",
+        "Identifying and Understanding Human Values in Text: A Tailorable LLM‑based Architecture"
+      ],
+      "raw": "# AI Intelligence Briefing - Saturday, May 28, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google Moves AI Agents into the Mainstream** — Google announced a push to integrate AI agents across its product suite, signaling broader enterprise adoption of agentic AI.\n  🔗 Graph: Agentic AI, Google, TritonAI\n  📅 Published: 2026-05-27\n  📰 https://campustechnology.com/articles/2026/05/27/google-moves-ai-agents-into-the-mainstream.aspx\n\n• **3 Things to Know About Trump’s Higher Education Grant Competitions** — New federal grant rules could reshape funding streams for public universities, affecting long‑term AI research budgets.\n  🔗 Graph: Higher Ed AI, UC San Diego, AI Governance\n  📅 Published: 2026-05-28\n  📰 https://www.insidehighered.com/news/government/student-aid-policy/2026/05/28/3-things-know-about-trumps-higher-ed-grant\n\n• **ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM** — Early benchmarking shows current frontier models still struggle with complex enterprise IT automation, underscoring the need for TritonAI’s agentic improvements.\n  🔗 Graph: Agentic AI, IBM, TritonAI\n  📅 Published: 2026-05-27\n  📰 https://huggingface.co/blog/ibm-research/itbench-aa\n\n• **Cisco and OpenAI redefine enterprise engineering with Codex** — The partnership showcases Codex‑powered AI tooling for large‑scale network automation, directly relevant to TritonAI’s infrastructure roadmap.\n  🔗 Graph: Codex, Cisco, OpenAI\n  📅 Published: 2026-05-27\n  📰 https://openai.com/index/cisco\n\n• **Identifying and Understanding Human Values in Text: A Tailorable LLM‑based Architecture** — New research proposes a modular LLM approach to embed human values, aligning with TritonAI’s AI governance agenda.\n  🔗 Graph: AI Governance, LLM, TritonAI\n  📅 Published: 2026-05-28\n  📰 https://arxiv.org/abs/2605.27373\n\n💡 Signal: Enterprise‑focused AI agents are gaining momentum across both vendor roadmaps (Google, Cisco/OpenAI) and academic research (agentic benchmarks, value‑aligned LLMs), reinforcing Brett’s strategic push on agentic AI, AI governance, and higher‑ed adoption.\n"
     }
   ]
 };
