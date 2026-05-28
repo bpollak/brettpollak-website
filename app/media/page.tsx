@@ -4,7 +4,7 @@ import MediaContent from './MediaContent';
 
 export const metadata: Metadata = {
   title: "Press, Publications & Interviews | Brett Pollak — AI in Higher Education",
-  description: "Brett Pollak's published articles, interviews, speaking engagements, and whitepapers on AI in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, and more.",
+  description: "Brett Pollak's published articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, NACUBO, and more.",
   keywords: [
     "Brett Pollak articles",
     "Brett Pollak interviews",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Press, Publications & Interviews | Brett Pollak — AI in Higher Education",
-    description: "Brett Pollak's published articles, interviews, and speaking record on AI in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, and more.",
+    description: "Brett Pollak's articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education.",
     url: "https://brettcpollak.com/media",
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Press & Publications | Brett Pollak — AI in Higher Education",
-    description: "Articles, interviews, and speaking engagements on AI in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, and more.",
+    description: "Articles, interviews, speaking engagements, whitepapers, and awards on AI in higher education — Brett Pollak.",
     images: ["/brett-pollak-headshot-sit-center.png"],
   },
 };
@@ -113,7 +113,7 @@ export default function Media() {
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Writing & Conversations</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
           <p className="text-xl sm:text-2xl text-slate-600 max-w-3xl leading-relaxed">
-            Articles, interviews, and case studies from recent conversations about AI and institutional change in higher education
+            Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education
           </p>
         </div>
 
