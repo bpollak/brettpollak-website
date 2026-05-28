@@ -21,20 +21,7 @@ export const mediaItems: MediaItem[] = [
     date: '2026-05-21',
     category: 'speaking'
   },
-  {
-    publication: 'UCNet',
-    title: 'The AI Roadmap — Driving from Idea to Innovation (UC AI Council Webinar)',
-    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
-    date: '2026-05-14',
-    category: 'article'
-  },
-  {
-    publication: 'UCNet',
-    title: 'Mitigating Risk through Awareness: A Framework for AI Literacy (UC AI Council Webinar)',
-    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
-    date: '2026-05-14',
-    category: 'article'
-  },
+
   {
     publication: 'NACUBO 2026 Annual Meeting',
     title: 'The AI Investment Decision: Building, Buy, or Shared Services?',
