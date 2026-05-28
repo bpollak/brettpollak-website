@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
-  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion, BioBib Formatter, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
+  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
@@ -268,8 +268,66 @@ export default function Products() {
           </a>
         </div>
 
-        {/* Dissertation Formatting Agent */}
+        {/* AI Use Case Meeting */}
         <div className="mb-16 animate-slide-up delay-500">
+          <a
+            href="https://ai-use-case-meeting.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d"
+          >
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-amber-950 to-slate-900 flex items-center justify-center p-12">
+                <Image
+                  src="/ai-use-case-meeting.png"
+                  alt="AI Use Case Meeting"
+                  width={1280}
+                  height={800}
+                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-12 flex flex-col justify-center">
+                <div className="inline-block px-3 py-1 bg-amber-50 text-amber-800 text-xs font-bold rounded-full mb-4 w-fit border border-amber-200">
+                  CAMPUS COMMUNITY
+                </div>
+                <h2 className="text-4xl font-bold text-slate-900 mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:via-amber-900 group-hover:to-slate-800 group-hover:bg-clip-text transition-all">
+                  AI Use Case Meeting
+                </h2>
+                <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                  A biweekly forum where UC San Diego staff, faculty, and researchers share how they&apos;ve implemented AI in their daily work — tools, workflows, prompts, and real outcomes. Open to all, no registration needed to attend. Hosted by ITS / TritonAI.
+                </p>
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">Key Features</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Biweekly Friday Sessions</span><span className="text-slate-600">Every other Friday, 10–11 AM via Zoom — drop in as you are</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Real Implementations</span><span className="text-slate-600">Staff, faculty, and researchers share actual tools, workflows, and outcomes</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Presenter-Friendly</span><span className="text-slate-600">5–60 minute slots, no slides required, screen share or just talk</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Session Archive</span><span className="text-slate-600">Past sessions and recordings available to catch up on what was shared</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="inline-flex items-center gap-2 text-slate-800 font-bold text-lg group-hover:gap-3 transition-all">
+                  Visit AI Use Case Meeting
+                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* Dissertation Formatting Agent */}
+        <div className="mb-16 animate-slide-up delay-600">
           <a
             href="https://dissertation-formatter.vercel.app"
             target="_blank"
