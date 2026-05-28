@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'NACUBO 2026 Annual Meeting',
+    title: 'The AI Investment Decision: Building, Buy, or Shared Services?',
+    url: 'https://www.nacubo.org/Events/2026/NACUBO-2026-Annual-Meeting-Online',
+    date: '2026-07-20',
+    category: 'speaking'
+  },
+  {
     publication: 'TechTalk Summits',
     title: 'Technology Executive Summit | San Diego, CA',
     url: 'https://techtalksummits.com/event/exclusive/cxo-roundtable-series/technology-executive-dinner-san-diego-ca',
