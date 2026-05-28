@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
-  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
+  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion, BioBib Formatter, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
@@ -210,8 +210,66 @@ export default function Products() {
           </a>
         </div>
 
-        {/* Dissertation Formatting Agent */}
+        {/* BioBib Formatter */}
         <div className="mb-16 animate-slide-up delay-400">
+          <a
+            href="https://biobib-formatter.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 card-3d"
+          >
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative h-auto overflow-hidden bg-gradient-to-br from-slate-800 via-teal-950 to-slate-900 flex items-center justify-center p-12">
+                <Image
+                  src="/biobib-formatter.png"
+                  alt="BioBib Formatter"
+                  width={1280}
+                  height={800}
+                  className="w-full h-auto rounded-lg shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-12 flex flex-col justify-center">
+                <div className="inline-block px-3 py-1 bg-teal-50 text-teal-800 text-xs font-bold rounded-full mb-4 w-fit border border-teal-200">
+                  ACADEMIC WORKFLOW
+                </div>
+                <h2 className="text-4xl font-bold text-slate-900 mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:via-teal-900 group-hover:to-slate-800 group-hover:bg-clip-text transition-all">
+                  BioBib Formatter
+                </h2>
+                <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                  Turns a faculty CV into a draft UCSD Academic Biography and Bibliography document. Breaks CVs into 20 review parts, processes through UCSD TritonAI with model routing, and produces a downloadable Word file with section summaries and review notes.
+                </p>
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">Key Features</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">20-Part Section Review</span><span className="text-slate-600">CV split into manageable review tasks with progress tracking</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">UCSD TritonAI-Powered</span><span className="text-slate-600">Routed model review matching section type to best-fit provider</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">BioBib-Compliant Output</span><span className="text-slate-600">Downloads as formatted Word doc with tables, subsections, and bibliography</span></div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <div><span className="font-semibold text-slate-900 block">Conversion Recovery</span><span className="text-slate-600">Survives page refreshes and tab closes with saved recovery links</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="inline-flex items-center gap-2 text-slate-800 font-bold text-lg group-hover:gap-3 transition-all">
+                  Try BioBib Formatter
+                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* Dissertation Formatting Agent */}
+        <div className="mb-16 animate-slide-up delay-500">
           <a
             href="https://dissertation-formatter.vercel.app"
             target="_blank"
