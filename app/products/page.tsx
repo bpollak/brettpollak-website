@@ -294,26 +294,26 @@ export default function Products() {
                   AI Use Case Meeting
                 </h2>
                 <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                  A biweekly forum where UC San Diego staff, faculty, and researchers share how they&apos;ve implemented AI in their daily work — tools, workflows, prompts, and real outcomes. Open to all, no registration needed to attend. Hosted by ITS / TritonAI.
+                  A full-stack session management platform that schedules, tracks, and archives a biweekly AI knowledge-sharing forum at UC San Diego. Handles presenter submissions, agenda generation, calendar sync, and MediaSpace recording integration through an admin dashboard.
                 </p>
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">Key Features</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">Key Capabilities</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <div><span className="font-semibold text-slate-900 block">Biweekly Friday Sessions</span><span className="text-slate-600">Every other Friday, 10–11 AM via Zoom — drop in as you are</span></div>
+                      <div><span className="font-semibold text-slate-900 block">Automated Session Scheduling</span><span className="text-slate-600">Generates biweekly agendas with time-slot allocation, presenter topics, and Zoom distribution</span></div>
                     </div>
                     <div className="flex items-start gap-3">
                       <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <div><span className="font-semibold text-slate-900 block">Real Implementations</span><span className="text-slate-600">Staff, faculty, and researchers share actual tools, workflows, and outcomes</span></div>
+                      <div><span className="font-semibold text-slate-900 block">Presenter Submission Workflow</span><span className="text-slate-600">Self-service signup with topic, duration, and time-slot assignment — no admin intervention needed</span></div>
                     </div>
                     <div className="flex items-start gap-3">
                       <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <div><span className="font-semibold text-slate-900 block">Presenter-Friendly</span><span className="text-slate-600">5–60 minute slots, no slides required, screen share or just talk</span></div>
+                      <div><span className="font-semibold text-slate-900 block">MediaSpace Recording Archive</span><span className="text-slate-600">Linked recording playback for past sessions, searchable by date and presenter</span></div>
                     </div>
                     <div className="flex items-start gap-3">
                       <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <div><span className="font-semibold text-slate-900 block">Session Archive</span><span className="text-slate-600">Past sessions and recordings available to catch up on what was shared</span></div>
+                      <div><span className="font-semibold text-slate-900 block">Admin Dashboard</span><span className="text-slate-600">Manage sessions, approve submissions, update agendas, embed recordings — full CRUD</span></div>
                     </div>
                   </div>
                 </div>
