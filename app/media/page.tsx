@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import MediaContent from './MediaContent';
 
 export const metadata: Metadata = {
-  title: "Press, Publications & Interviews | Brett Pollak — AI in Higher Education",
+  title: "Media & Appearances | Brett Pollak — AI in Higher Education",
   description: "Brett Pollak's published articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, NACUBO, and more.",
   keywords: [
     "Brett Pollak articles",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "https://brettcpollak.com/media",
   },
   openGraph: {
-    title: "Press, Publications & Interviews | Brett Pollak — AI in Higher Education",
+    title: "Media & Appearances | Brett Pollak — AI in Higher Education",
     description: "Brett Pollak's articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education.",
     url: "https://brettcpollak.com/media",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Press & Publications | Brett Pollak — AI in Higher Education",
+    title: "Media & Appearances | Brett Pollak — AI in Higher Education",
     description: "Articles, interviews, speaking engagements, whitepapers, and awards on AI in higher education — Brett Pollak.",
     images: ["/brett-pollak-headshot-sit-center.png"],
   },
@@ -89,7 +89,7 @@ export default function Media() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Writing & Conversations",
+        "name": "Media & Appearances",
         "item": "https://brettcpollak.com/media"
       }
     ]
@@ -108,9 +108,9 @@ export default function Media() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-12">
           <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            WRITING & CONVERSATIONS
+            MEDIA & APPEARANCES
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Writing & Conversations</h1>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Media & Appearances</h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
           <p className="text-xl sm:text-2xl text-slate-600 max-w-3xl leading-relaxed">
             Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education
