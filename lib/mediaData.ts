@@ -8,6 +8,27 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'UC AI Council Webinar Series',
+    title: 'Mitigating Risk through Awareness: A Framework for AI Literacy',
+    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
+    date: '2026-06-03',
+    category: 'speaking'
+  },
+  {
+    publication: 'UC AI Council Webinar Series',
+    title: 'The AI Roadmap — Driving from Idea to Innovation',
+    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
+    date: '2026-05-21',
+    category: 'speaking'
+  },
+  {
+    publication: 'UCNet',
+    title: 'Attend the first events in a new UC AI Council webinar series',
+    url: 'https://ucnet.universityofcalifornia.edu/employee-news/attend-the-first-event-in-a-new-uc-ai-council-webinar-series/',
+    date: '2026-05-14',
+    category: 'article'
+  },
+  {
     publication: 'NACUBO 2026 Annual Meeting',
     title: 'The AI Investment Decision: Building, Buy, or Shared Services?',
     url: 'https://www.nacubo.org/Events/2026/NACUBO-2026-Annual-Meeting-Online',
