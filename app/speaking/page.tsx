@@ -81,9 +81,15 @@ const SPEAKING_TOPICS = [
   },
 ];
 
-const PAST_ENGAGEMENTS = mediaItems
+const NOW = new Date();
+const TODAY_ISO = `${NOW.getFullYear()}-${String(NOW.getMonth() + 1).padStart(2, '0')}-${String(NOW.getDate()).padStart(2, '0')}`;
+
+const ALL_SPEAKING = mediaItems
   .filter(i => i.category === 'speaking')
   .sort((a, b) => b.date.localeCompare(a.date));
+
+const UPCOMING_ENGAGEMENTS = ALL_SPEAKING.filter(i => i.date >= TODAY_ISO);
+const PAST_ENGAGEMENTS = ALL_SPEAKING.filter(i => i.date < TODAY_ISO);
 
 export default function SpeakingPage() {
   const speakerSchema = {
@@ -123,7 +129,8 @@ export default function SpeakingPage() {
     ],
   };
 
-  const eventSchemas = PAST_ENGAGEMENTS.map(e => ({
+  const ALL_EVENTS = [...UPCOMING_ENGAGEMENTS, ...PAST_ENGAGEMENTS];
+  const eventSchemas = ALL_EVENTS.map(e => ({
     '@context': 'https://schema.org',
     '@type': 'Event',
     name: e.title,
@@ -202,6 +209,44 @@ export default function SpeakingPage() {
             ))}
           </div>
         </section>
+
+        {/* Upcoming Engagements */}
+        {UPCOMING_ENGAGEMENTS.length > 0 && (
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">Upcoming Engagements</h2>
+            <p className="text-slate-500 mb-10">Scheduled events and upcoming talks.</p>
+            <div className="space-y-4">
+              {UPCOMING_ENGAGEMENTS.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-6 bg-gradient-to-r from-blue-50 to-white rounded-xl px-7 py-5 border border-blue-200 shadow-sm hover:shadow-md transition-shadow group"
+                >
+                  <div className="flex flex-col items-center min-w-[70px]">
+                    <div className="text-sm text-blue-700 font-mono pt-0.5 whitespace-nowrap">
+                      {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}
+                    </div>
+                    <div className="text-xs text-blue-500 font-semibold">
+                      {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', timeZone: 'UTC' })}
+                    </div>
+                    <div className="mt-1 px-2 py-0.5 bg-blue-100 text-blue-800 text-[10px] font-bold rounded-full uppercase tracking-wider">
+                      Upcoming
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">{item.publication}</div>
+                    <div className="text-slate-900 font-medium group-hover:text-blue-800 transition-colors">{item.title}</div>
+                  </div>
+                  <svg className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Past Engagements */}
         {PAST_ENGAGEMENTS.length > 0 && (

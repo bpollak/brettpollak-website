@@ -8,6 +8,13 @@ export interface MediaItem {
 
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'TechTalk Summits',
+    title: 'Technology Executive Summit | San Diego, CA',
+    url: 'https://techtalksummits.com/event/exclusive/cxo-roundtable-series/technology-executive-dinner-san-diego-ca',
+    date: '2026-06-04',
+    category: 'speaking'
+  },
+  {
     publication: 'Constellation Research',
     title: 'Business Transformation 150™ 2026–2027',
     url: 'https://www.constellationr.com/communities/business-transformation-150/2026-2027',
