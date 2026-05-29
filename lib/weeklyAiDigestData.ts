@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-28T13:35:22.749Z",
+  "generatedAt": "2026-05-29T13:35:33.770Z",
   "weekOf": "2026-05-25",
   "weekEnding": "2026-05-31",
   "weekLabel": "Week of May 25–31, 2026",
-  "publishedThrough": "May 28, 2026",
-  "digestCount": 4,
-  "headlineCount": 22,
+  "publishedThrough": "May 29, 2026",
+  "digestCount": 5,
+  "headlineCount": 27,
   "days": [
     {
       "isoDate": "2026-05-25",
@@ -79,6 +79,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Identifying and Understanding Human Values in Text: A Tailorable LLM‑based Architecture"
       ],
       "raw": "# AI Intelligence Briefing - Saturday, May 28, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google Moves AI Agents into the Mainstream** — Google announced a push to integrate AI agents across its product suite, signaling broader enterprise adoption of agentic AI.\n  🔗 Graph: Agentic AI, Google, TritonAI\n  📅 Published: 2026-05-27\n  📰 https://campustechnology.com/articles/2026/05/27/google-moves-ai-agents-into-the-mainstream.aspx\n\n• **3 Things to Know About Trump’s Higher Education Grant Competitions** — New federal grant rules could reshape funding streams for public universities, affecting long‑term AI research budgets.\n  🔗 Graph: Higher Ed AI, UC San Diego, AI Governance\n  📅 Published: 2026-05-28\n  📰 https://www.insidehighered.com/news/government/student-aid-policy/2026/05/28/3-things-know-about-trumps-higher-ed-grant\n\n• **ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM** — Early benchmarking shows current frontier models still struggle with complex enterprise IT automation, underscoring the need for TritonAI’s agentic improvements.\n  🔗 Graph: Agentic AI, IBM, TritonAI\n  📅 Published: 2026-05-27\n  📰 https://huggingface.co/blog/ibm-research/itbench-aa\n\n• **Cisco and OpenAI redefine enterprise engineering with Codex** — The partnership showcases Codex‑powered AI tooling for large‑scale network automation, directly relevant to TritonAI’s infrastructure roadmap.\n  🔗 Graph: Codex, Cisco, OpenAI\n  📅 Published: 2026-05-27\n  📰 https://openai.com/index/cisco\n\n• **Identifying and Understanding Human Values in Text: A Tailorable LLM‑based Architecture** — New research proposes a modular LLM approach to embed human values, aligning with TritonAI’s AI governance agenda.\n  🔗 Graph: AI Governance, LLM, TritonAI\n  📅 Published: 2026-05-28\n  📰 https://arxiv.org/abs/2605.27373\n\n💡 Signal: Enterprise‑focused AI agents are gaining momentum across both vendor roadmaps (Google, Cisco/OpenAI) and academic research (agentic benchmarks, value‑aligned LLMs), reinforcing Brett’s strategic push on agentic AI, AI governance, and higher‑ed adoption.\n"
+    },
+    {
+      "isoDate": "2026-05-29",
+      "displayDate": "Friday, May 29",
+      "sourceFile": "ai-news-digest-2026-05-29.md",
+      "headlines": [
+        "Google Moves AI Agents into the Mainstream",
+        "ACTUAL Intelligence: Practitioner Perspectives on Centering the Human in the Age of AI",
+        "The Canvas Breach: Reframing Higher Ed’s SaaS Risk Exposure",
+        "OpenAI’s Frontier Governance Framework",
+        "Why I Created the National AI Equity Lab"
+      ],
+      "raw": "# AI Intelligence Briefing - May 29, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google Moves AI Agents into the Mainstream** — Google’s push to embed AI agents across its product suite signals a mainstream turn for agentic AI, directly relevant to Brett’s focus on agentic capabilities.\n  🔗 Graph: agentic-ai, google, gemini\n  📅 Published: 2026-05-27\n  📰 https://campustechnology.com/articles/2026/05/27/google-moves-ai-agents-into-the-mainstream.aspx\n\n• **ACTUAL Intelligence: Practitioner Perspectives on Centering the Human in the Age of AI** — Highlights the need for human‑centric AI policies in higher education, aligning with AI governance priorities.\n  🔗 Graph: ai-governance, higher-ed-ai, eduCAUSE\n  📅 Published: 2026-05-28\n  📰 https://er.educause.edu/articles/2026/5/actual-intelligence-practitioner-perspectives-on-centering-the-human-in-the-age-of-ai\n\n• **The Canvas Breach: Reframing Higher Ed’s SaaS Risk Exposure** — A major data breach at Canvas underscores security challenges for campus SaaS tools, a key concern for enterprise monitoring.\n  🔗 Graph: ai-security, higher-ed-ai, canvas-lms\n  📅 Published: 2026-05-28\n  📰 https://edtechmagazine.com/higher/article/2026/05/canvas-breach-reframing-higher-eds-saas-risk-exposure\n\n• **OpenAI’s Frontier Governance Framework** — OpenAI outlines its safety and governance practices, offering a benchmark for UCSD’s AI governance efforts.\n  🔗 Graph: ai-governance, openai, gpt-4\n  📅 Published: 2026-05-28\n  📰 https://openai.com/index/openai-frontier-governance-framework\n\n• **Why I Created the National AI Equity Lab** — Discusses equity in AI deployment, informing AI governance and inclusion strategies on campus.\n  🔗 Graph: ai-governance, higher-ed-ai, equity\n  📅 Published: 2026-05-29\n  📰 https://www.insidehighered.com/opinion/columns/resident-scholar/2026/05/29/why-i-created-national-ai-equity-lab\n\n💡 Signal: Campus AI governance, security, and agentic capabilities are accelerating, with major vendors and higher‑ed institutions racing to embed responsible AI.\n"
     }
   ]
 };
