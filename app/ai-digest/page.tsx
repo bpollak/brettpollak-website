@@ -28,35 +28,34 @@ export default function AiDigestPage() {
   const daysNewestFirst = [...days].sort((a, b) => b.isoDate.localeCompare(a.isoDate));
 
   return (
-    <main className="min-h-screen bg-paper" id="main-content">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/40" id="main-content">
       <section className="max-w-6xl mx-auto px-6 pt-24 pb-12">
-        <div className="eyebrow mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-800 text-sm font-semibold rounded-full mb-8">
           AI DIGEST
         </div>
-        <h1 className="display-title display-title--xl mb-6">
+        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent tracking-tight pb-1 mb-6">
           This Week in AI Digest
         </h1>
-        <div className="divider-accent w-24 mb-8"></div>
-        <p className="text-xl text-muted leading-relaxed max-w-3xl mb-10">
+        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-10">
           A rolling weekly archive of curated daily AI briefings focused on major developments, product launches, enterprise shifts, and higher education implications. This page updates as new digests are published and automatically resets to a new week every Monday.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
-          <div className="card-hard p-6">
-            <div className="stat-label text-muted mb-3">Current window</div>
-            <div className="stat-number text-3xl md:text-4xl">{weekLabel}</div>
+          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Current window</div>
+            <div className="text-2xl font-bold text-slate-900">{weekLabel}</div>
           </div>
-          <div className="card-hard p-6">
-            <div className="stat-label text-muted mb-3">Daily digests posted</div>
-            <div className="stat-number text-3xl md:text-4xl">{digestCount}</div>
+          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Daily digests posted</div>
+            <div className="text-2xl font-bold text-slate-900">{digestCount}</div>
           </div>
-          <div className="card-hard p-6">
-            <div className="stat-label text-muted mb-3">Headlines included</div>
-            <div className="stat-number text-3xl md:text-4xl">{headlineCount}</div>
+          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Headlines included</div>
+            <div className="text-2xl font-bold text-slate-900">{headlineCount}</div>
           </div>
         </div>
 
-        <div className="border-2 border-ink bg-paper-2 px-5 py-4 text-sm text-ink">
+        <div className="rounded-2xl border border-amber-200 bg-amber-50/80 px-5 py-4 text-sm text-amber-900">
           Published through <span className="font-semibold">{publishedThrough}</span>. Days without an available digest are omitted rather than backfilled.
         </div>
 
@@ -70,22 +69,22 @@ export default function AiDigestPage() {
           {daysNewestFirst.map((day) => (
             <article
               key={day.isoDate}
-              className="card-hard overflow-hidden"
+              className="rounded-3xl border border-slate-200 bg-white/95 shadow-sm overflow-hidden"
             >
-              <div className="px-8 py-6 border-b-2 border-ink section-dark">
+              <div className="px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-slate-900 to-blue-900">
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold text-paper">{day.displayDate}</h2>
-                    <p className="text-paper/70 text-sm mt-1 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">Source: {day.sourceFile}</p>
+                    <h2 className="text-2xl font-bold text-white">{day.displayDate}</h2>
+                    <p className="text-blue-100 text-sm mt-1">Source: {day.sourceFile}</p>
                   </div>
-                  <div className="inline-flex w-fit items-center bg-accent px-4 py-2 text-sm font-semibold text-ink border-2 border-paper">
+                  <div className="inline-flex w-fit items-center rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white border border-white/15">
                     {day.headlines.length} article{day.headlines.length === 1 ? '' : 's'}
                   </div>
                 </div>
               </div>
               <div className="px-8 py-7">
                 <div
-                  className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-ink prose-h2:text-ink prose-h3:text-ink prose-h2:mb-4 prose-h3:mb-3 prose-hr:border-ink/20 prose-hr:my-8 [&_ul>li]:mb-8 [&_ol>li]:mb-8 [&_a]:font-semibold [&_a]:text-ink [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-accent [&_a]:transition-colors hover:[&_a]:text-accent hover:[&_a]:decoration-accent"
+                  className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-h2:mb-4 prose-h3:mb-3 prose-hr:border-slate-200 prose-hr:my-8 [&_ul>li]:mb-8 [&_ol>li]:mb-8 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:transition-colors hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900"
                   dangerouslySetInnerHTML={{ __html: renderMarkdown(sanitizePublicDigest(linkDigestHeadlines(day.raw))) }}
                 />
               </div>

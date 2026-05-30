@@ -2,15 +2,15 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-paper border-t-2 border-ink mt-24 relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-1.5 bg-accent"></div>
+    <footer className="bg-slate-50 border-t border-slate-200 mt-24 relative overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-slate-900 via-blue-900 to-amber-500 opacity-20"></div>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="md:col-span-1">
-            <div className="text-3xl uppercase text-ink mb-4 font-[family-name:var(--font-montserrat)]" style={{ letterSpacing: '-0.01em' }}>
+            <div className="text-xl font-bold text-slate-900 mb-4">
               Brett Pollak
             </div>
-            <p className="text-muted leading-relaxed mb-6">
+            <p className="text-slate-600 leading-relaxed mb-6">
               Technology executive specializing in AI implementation, digital transformation, and data governance in higher education.
             </p>
             {/* Social Links */}
@@ -19,7 +19,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/brettpollak/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 bg-ink hover:bg-accent text-paper hover:text-ink border-2 border-ink flex items-center justify-center transition-colors duration-300"
+                className="w-10 h-10 bg-slate-200 hover:bg-blue-600 text-slate-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300"
                 aria-label="LinkedIn Profile"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -29,55 +29,55 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-ink uppercase tracking-[0.15em] mb-4 font-[family-name:var(--font-geist-mono)]">Navigation</h3>
+            <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-muted hover:text-accent transition-colors">
+                <Link href="/about" className="text-slate-600 hover:text-blue-700 transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/tritongpt" className="text-muted hover:text-accent transition-colors">
+                <Link href="/tritongpt" className="text-slate-600 hover:text-blue-700 transition-colors">
                   TritonAI
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-muted hover:text-accent transition-colors">
+                <Link href="/products" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/media" className="text-muted hover:text-accent transition-colors">
+                <Link href="/media" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Media & Publications
                 </Link>
               </li>
               <li>
-                <Link href="/ai-digest" className="text-muted hover:text-accent transition-colors">
+                <Link href="/ai-digest" className="text-slate-600 hover:text-blue-700 transition-colors">
                   AI Digest
                 </Link>
               </li>
               <li>
-                <Link href="/podcasts" className="text-muted hover:text-accent transition-colors">
+                <Link href="/podcasts" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Podcasts
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted hover:text-accent transition-colors">
+                <Link href="/contact" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-ink uppercase tracking-[0.15em] mb-4 font-[family-name:var(--font-geist-mono)]">Featured Work</h3>
+            <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Featured Work</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/tritongpt" className="text-muted hover:text-accent transition-colors">
+                <Link href="/tritongpt" className="text-slate-600 hover:text-blue-700 transition-colors">
                   TritonAI Overview
                 </Link>
               </li>
               <li>
-                <a href="https://resolutioncompanion.com/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors inline-flex items-center gap-1">
+                <a href="https://resolutioncompanion.com/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-blue-700 transition-colors inline-flex items-center gap-1">
                   Resolution Companion
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -85,20 +85,20 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/media" className="text-muted hover:text-accent transition-colors">
+                <Link href="/media" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Publications & Press
                 </Link>
               </li>
               <li>
-                <Link href="/ai-digest" className="text-muted hover:text-accent transition-colors">
+                <Link href="/ai-digest" className="text-slate-600 hover:text-blue-700 transition-colors">
                   Weekly AI Digest
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="border-t-2 border-ink pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-muted text-sm font-[family-name:var(--font-geist-mono)]">
+        <div className="border-t border-slate-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-slate-500 text-sm">
             &copy; {new Date().getFullYear()} Brett Pollak. All rights reserved.
           </p>
         </div>
