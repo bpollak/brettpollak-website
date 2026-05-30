@@ -94,9 +94,9 @@ function Item({
   variant: 'source' | 'knowledge' | 'action';
 }) {
   const styles = {
-    source: { fill: '#dbeafe', stroke: '#3b82f6', labelFill: '#1e3a8a', noteFill: '#1d4ed8' },
-    knowledge: { fill: '#fde68a', stroke: '#d97706', labelFill: '#78350f', noteFill: '#92400e' },
-    action: { fill: '#a7f3d0', stroke: '#059669', labelFill: '#064e3b', noteFill: '#047857' },
+    source: { fill: '#efe9df', stroke: '#14110f', labelFill: '#14110f', noteFill: '#6b635b' },
+    knowledge: { fill: '#ff4d1c', stroke: '#14110f', labelFill: '#14110f', noteFill: '#14110f' },
+    action: { fill: '#f7f4ee', stroke: '#14110f', labelFill: '#14110f', noteFill: '#6b635b' },
   }[variant];
 
   return (
@@ -106,8 +106,8 @@ function Item({
         y={y}
         width={ITEM_W}
         height={ITEM_H}
-        rx={12}
-        ry={12}
+        rx={0}
+        ry={0}
         fill={styles.fill}
         stroke={styles.stroke}
         strokeWidth="2.5"
@@ -165,12 +165,12 @@ export default function HeroPipelineDiagram() {
         <defs>
           {/* Subtle gradients */}
           <linearGradient id="source-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#2563eb" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0.95" />
+            <stop offset="0%" stopColor="#14110f" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#ff4d1c" stopOpacity="0.9" />
           </linearGradient>
           <linearGradient id="action-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#047857" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#059669" stopOpacity="0.55" />
+            <stop offset="0%" stopColor="#ff4d1c" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#14110f" stopOpacity="0.35" />
           </linearGradient>
         </defs>
 
@@ -179,7 +179,7 @@ export default function HeroPipelineDiagram() {
           x={LEFT_CX}
           y={32}
           textAnchor="middle"
-          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#1e40af', textTransform: 'uppercase' }}
+          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#14110f', textTransform: 'uppercase' }}
         >
           Data Sources
         </text>
@@ -187,7 +187,7 @@ export default function HeroPipelineDiagram() {
           x={MID_CX}
           y={32}
           textAnchor="middle"
-          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#92400e', textTransform: 'uppercase' }}
+          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#ff4d1c', textTransform: 'uppercase' }}
         >
           Knowledge &amp; Memory
         </text>
@@ -195,7 +195,7 @@ export default function HeroPipelineDiagram() {
           x={RIGHT_CX}
           y={32}
           textAnchor="middle"
-          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#065f46', textTransform: 'uppercase' }}
+          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#14110f', textTransform: 'uppercase' }}
         >
           Agent Actions
         </text>
@@ -277,17 +277,17 @@ export default function HeroPipelineDiagram() {
             y={VB_H - 60}
             width={600}
             height={38}
-            rx={19}
-            ry={19}
-            fill="#f8fafc"
-            stroke="#cbd5e1"
-            strokeWidth="1.5"
+            rx={0}
+            ry={0}
+            fill="#efe9df"
+            stroke="#14110f"
+            strokeWidth="2"
           />
           <text
             x={MID_CX}
             y={VB_H - 42}
             textAnchor="middle"
-            style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.15em', fill: '#64748b', textTransform: 'uppercase' }}
+            style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.15em', fill: '#14110f', textTransform: 'uppercase' }}
           >
             Synthesis
           </text>
@@ -295,7 +295,7 @@ export default function HeroPipelineDiagram() {
             x={MID_CX}
             y={VB_H - 26}
             textAnchor="middle"
-            style={{ fontSize: '11px', fill: '#64748b', fontStyle: 'italic' }}
+            style={{ fontSize: '11px', fill: '#6b635b', fontStyle: 'italic' }}
           >
             64 cron jobs turn raw signals into durable knowledge
           </text>

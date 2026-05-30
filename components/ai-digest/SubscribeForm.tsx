@@ -45,16 +45,16 @@ export default function SubscribeForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-8">
-      <h2 className="text-xl font-bold text-slate-900 mb-2">
+    <div className="card-hard p-8">
+      <h2 className="text-xl font-bold text-ink mb-2">
         Get the digest in your inbox
       </h2>
-      <p className="text-slate-600 text-sm mb-6">
+      <p className="text-muted text-sm mb-6">
         A curated AI briefing delivered every morning — real sources, no hallucinated links.
       </p>
 
       {formState === 'success' ? (
-        <div className="rounded-xl bg-blue-50 border border-blue-100 px-5 py-4 text-sm font-medium text-blue-800">
+        <div className="border-2 border-ink bg-paper-2 px-5 py-4 text-sm font-medium text-ink">
           You&rsquo;re subscribed! Check your inbox to confirm.
         </div>
       ) : (
@@ -71,13 +71,13 @@ export default function SubscribeForm() {
             onChange={(e) => setEmail(e.target.value)}
             disabled={formState === 'submitting'}
             aria-describedby={formState === 'error' ? 'subscribe-error' : undefined}
-            className="flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-60"
+            className="flex-1 border-2 border-ink rounded-none bg-paper px-4 py-3 text-sm text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-ink disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={formState === 'submitting'}
             aria-busy={formState === 'submitting'}
-            className="rounded-xl bg-gradient-to-r from-slate-900 to-blue-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-slate-800 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-60 transition-all"
+            className="btn-bold px-6 py-3 text-sm uppercase tracking-wide focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink disabled:opacity-60"
           >
             {formState === 'submitting' ? 'Subscribing…' : 'Subscribe'}
           </button>
@@ -85,7 +85,7 @@ export default function SubscribeForm() {
       )}
 
       {formState === 'error' && (
-        <p id="subscribe-error" role="alert" className="mt-3 text-sm text-red-600">
+        <p id="subscribe-error" role="alert" className="mt-3 text-sm text-accent">
           {errorMessage}
         </p>
       )}
