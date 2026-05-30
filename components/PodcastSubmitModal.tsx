@@ -141,22 +141,22 @@ export default function PodcastSubmitModal({
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-paper border-2 border-ink shadow-hard max-w-lg w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="sticky top-0 bg-white rounded-t-2xl border-b border-slate-100 px-6 py-4 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-paper border-b-2 border-ink px-6 py-4 flex items-center justify-between z-10">
           <div>
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-xl font-bold text-ink">
               Share a Podcast
             </h2>
-            <p className="text-sm text-slate-500 mt-0.5">
+            <p className="text-sm text-muted mt-0.5">
               Start typing to search or fill in manually
             </p>
           </div>
           <button
             onClick={handleClose}
-            className="p-2 hover:bg-slate-100 rounded-full transition-colors"
+            className="p-2 hover:bg-accent border-2 border-ink transition-colors"
           >
-            <svg className="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -164,18 +164,18 @@ export default function PodcastSubmitModal({
 
         {success ? (
           <div className="p-8 text-center">
-            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-accent border-2 border-ink flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">Submission Received</h3>
-            <p className="text-slate-600 mb-6">
+            <h3 className="text-xl font-bold text-ink mb-2">Submission Received</h3>
+            <p className="text-muted mb-6">
               Thanks for sharing your recommendation. It&apos;s now pending moderator review.
             </p>
             <button
               onClick={handleClose}
-              className="px-6 py-2.5 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-colors"
+              className="btn-bold px-6 py-3 uppercase tracking-wide"
             >
               Done
             </button>
@@ -184,8 +184,8 @@ export default function PodcastSubmitModal({
           <form onSubmit={handleSubmit} className="p-6 space-y-5">
             {/* Podcast Name with iTunes Search */}
             <div className="relative" ref={resultsRef}>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-                Podcast Name <span className="text-rose-500">*</span>
+              <label className="block text-sm font-semibold text-ink mb-1.5">
+                Podcast Name <span className="text-accent">*</span>
               </label>
               <div className="relative">
                 <input
@@ -194,44 +194,44 @@ export default function PodcastSubmitModal({
                   onChange={(e) => handleNameChange(e.target.value)}
                   onFocus={() => searchResults.length > 0 && setShowResults(true)}
                   placeholder="Start typing to search..."
-                  className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 border-2 border-ink rounded-none bg-paper text-ink placeholder-muted focus:ring-2 focus:ring-ink focus:outline-none transition-colors"
                   required
                 />
                 {searching && (
                   <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                    <div className="w-5 h-5 border-2 border-slate-300 border-t-blue-500 rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-ink/30 border-t-accent rounded-full animate-spin" />
                   </div>
                 )}
               </div>
 
               {/* Search Results Dropdown */}
               {showResults && searchResults.length > 0 && (
-                <div className="absolute top-full left-0 right-0 mt-1 bg-white border-2 border-slate-200 rounded-xl shadow-xl z-20 overflow-hidden">
+                <div className="absolute top-full left-0 right-0 mt-1 bg-paper border-2 border-ink shadow-hard z-20 overflow-hidden">
                   {searchResults.map((result, i) => (
                     <button
                       key={`${result.trackName}-${i}`}
                       type="button"
                       onClick={() => selectResult(result)}
-                      className="w-full flex items-center gap-3 p-3 hover:bg-slate-50 transition-colors text-left border-b border-slate-100 last:border-0"
+                      className="w-full flex items-center gap-3 p-3 hover:bg-accent transition-colors text-left border-b-2 border-ink last:border-0"
                     >
                       {result.artworkUrl600 ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={result.artworkUrl600}
                           alt={result.trackName}
-                          className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
+                          className="w-12 h-12 border-2 border-ink object-cover flex-shrink-0"
                         />
                       ) : (
-                        <div className="w-12 h-12 rounded-lg bg-slate-200 flex-shrink-0" />
+                        <div className="w-12 h-12 border-2 border-ink bg-paper-2 flex-shrink-0" />
                       )}
                       <div className="min-w-0">
-                        <div className="font-semibold text-sm text-slate-900 truncate">
+                        <div className="font-semibold text-sm text-ink truncate">
                           {result.trackName}
                         </div>
-                        <div className="text-xs text-slate-500 truncate">
+                        <div className="text-xs text-muted truncate">
                           {result.artistName}
                         </div>
-                        <div className="text-[10px] text-slate-400 uppercase tracking-wide mt-0.5">
+                        <div className="text-[10px] text-muted uppercase tracking-wide mt-0.5 font-[family-name:var(--font-geist-mono)]">
                           {result.primaryGenreName}
                         </div>
                       </div>
@@ -243,21 +243,21 @@ export default function PodcastSubmitModal({
 
             {/* Cover image preview */}
             {coverImage && (
-              <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl">
+              <div className="flex items-center gap-3 p-3 bg-paper-2 border-2 border-ink">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={coverImage}
                   alt="Cover preview"
-                  className="w-16 h-16 rounded-lg object-cover"
+                  className="w-16 h-16 border-2 border-ink object-cover"
                 />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-slate-700 truncate">{name}</p>
-                  <p className="text-xs text-emerald-600 font-medium">Artwork found</p>
+                  <p className="text-sm font-medium text-ink truncate">{name}</p>
+                  <p className="text-xs text-accent font-medium">Artwork found</p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setCoverImage(null)}
-                  className="p-1 hover:bg-slate-200 rounded-full text-slate-400 hover:text-slate-600 transition-colors"
+                  className="p-1 hover:bg-accent border-2 border-ink text-ink transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -268,28 +268,28 @@ export default function PodcastSubmitModal({
 
             {/* Hosts */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-                Host(s) <span className="text-rose-500">*</span>
+              <label className="block text-sm font-semibold text-ink mb-1.5">
+                Host(s) <span className="text-accent">*</span>
               </label>
               <input
                 type="text"
                 value={hosts}
                 onChange={(e) => setHosts(e.target.value)}
                 placeholder="e.g. Kevin Roose & Casey Newton"
-                className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-2.5 border-2 border-ink rounded-none bg-paper text-ink placeholder-muted focus:ring-2 focus:ring-ink focus:outline-none transition-colors"
                 required
               />
             </div>
 
             {/* Category */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label className="block text-sm font-semibold text-ink mb-1.5">
                 Category
               </label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 bg-white focus:border-blue-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-2.5 border-2 border-ink rounded-none bg-paper text-ink focus:ring-2 focus:ring-ink focus:outline-none transition-colors"
               >
                 {CATEGORIES.map((cat) => (
                   <option key={cat} value={cat}>
@@ -301,8 +301,8 @@ export default function PodcastSubmitModal({
 
             {/* Summary */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-                Why do you recommend it? <span className="text-rose-500">*</span>
+              <label className="block text-sm font-semibold text-ink mb-1.5">
+                Why do you recommend it? <span className="text-accent">*</span>
               </label>
               <textarea
                 value={summary}
@@ -310,46 +310,46 @@ export default function PodcastSubmitModal({
                 placeholder="What makes this podcast great..."
                 rows={3}
                 maxLength={300}
-                className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors resize-none"
+                className="w-full px-4 py-2.5 border-2 border-ink rounded-none bg-paper text-ink placeholder-muted focus:ring-2 focus:ring-ink focus:outline-none transition-colors resize-none"
                 required
               />
-              <p className="text-xs text-slate-400 mt-1 text-right">
+              <p className="text-xs text-muted mt-1 text-right">
                 {summary.length}/300
               </p>
             </div>
 
             {/* Listen URL */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-                Podcast Link <span className="text-rose-500">*</span>
+              <label className="block text-sm font-semibold text-ink mb-1.5">
+                Podcast Link <span className="text-accent">*</span>
               </label>
               <input
                 type="url"
                 value={listenUrl}
                 onChange={(e) => setListenUrl(e.target.value)}
                 placeholder="https://..."
-                className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-2.5 border-2 border-ink rounded-none bg-paper text-ink placeholder-muted focus:ring-2 focus:ring-ink focus:outline-none transition-colors"
                 required
               />
             </div>
 
             {/* Your Name */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
-                Your Name <span className="text-slate-400 font-normal">(optional)</span>
+              <label className="block text-sm font-semibold text-ink mb-1.5">
+                Your Name <span className="text-muted font-normal">(optional)</span>
               </label>
               <input
                 type="text"
                 value={submittedBy}
                 onChange={(e) => setSubmittedBy(e.target.value)}
                 placeholder="Anonymous"
-                className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
+                className="w-full px-4 py-2.5 border-2 border-ink rounded-none bg-paper text-ink placeholder-muted focus:ring-2 focus:ring-ink focus:outline-none transition-colors"
               />
             </div>
 
             {/* Error */}
             {error && (
-              <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-sm text-rose-700">
+              <div className="p-3 bg-paper-2 border-2 border-accent text-sm text-ink">
                 {error}
               </div>
             )}
@@ -358,11 +358,11 @@ export default function PodcastSubmitModal({
             <button
               type="submit"
               disabled={submitting}
-              className="w-full py-3 bg-gradient-to-r from-slate-800 to-blue-900 text-white rounded-xl font-bold text-sm hover:from-slate-900 hover:to-blue-950 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl active:scale-[0.98]"
+              className="btn-bold w-full py-3 uppercase tracking-wide text-sm disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? (
                 <span className="flex items-center justify-center gap-2">
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-ink/30 border-t-ink rounded-full animate-spin" />
                   Submitting...
                 </span>
               ) : (
