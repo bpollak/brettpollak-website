@@ -1,14 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #111827;
-  --font-montserrat: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Bold / Expressive palette — ink-on-paper + one electric accent */
+  --paper: #f7f4ee;        /* warm off-white background */
+  --paper-2: #efe9df;      /* slightly deeper paper for layering */
+  --ink: #14110f;          /* near-black; also used for hard borders */
+  --ink-2: #2a241f;        /* softer ink for elevated dark surfaces */
+  --accent: #ff4d1c;       /* electric vermilion — the signature color */
+  --accent-2: #1a3aff;     /* rare secondary contrast moments */
+  --muted: #6b635b;        /* secondary text */
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+
+  /* Oversized type scale */
+  --text-display: clamp(3rem, 12vw, 11rem);
+  --text-stat: clamp(3.5rem, 9vw, 8rem);
+  --text-h2: clamp(2.25rem, 6vw, 5rem);
+
+  --radius: 2px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,7 +38,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -31,7 +53,172 @@ html {
   scroll-behavior: smooth;
 }
 
-/* TritonGPT Custom Animations */
+/* ============================================================
+   BOLD / EXPRESSIVE DESIGN SYSTEM — reusable utility classes
+   ============================================================ */
+
+/* Oversized display heading (replaces gradient-clipped titles) */
+.display-title {
+  font-family: var(--font-montserrat), 'Arial Narrow', sans-serif;
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.display-title--xl {
+  font-size: var(--text-display);
+  line-height: 0.85;
+}
+
+.display-title--lg {
+  font-size: var(--text-h2);
+}
+
+/* Mono eyebrow label (replaces uppercase pill badges) */
+.eyebrow {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  background: var(--accent);
+  flex: none;
+}
+
+.eyebrow--accent {
+  color: var(--accent);
+}
+
+/* Solid accent divider (replaces gradient rule) */
+.divider-accent {
+  width: 5rem;
+  height: 0.4rem;
+  background: var(--accent);
+  border-radius: 0;
+}
+
+/* Hard offset shadow — the signature interaction */
+.shadow-hard {
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
+
+.shadow-hard-accent {
+  box-shadow: 6px 6px 0 0 var(--accent);
+}
+
+/* Hard-edged card */
+.card-hard {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 0 var(--ink);
+  transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-hard:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 0 var(--ink);
+  }
+  /* Keep embeds stable/clickable when cards are hovered. */
+  .card-hard:has(iframe):hover,
+  .card-hard:has(video):hover {
+    transform: none;
+    box-shadow: 6px 6px 0 0 var(--ink);
+  }
+}
+
+/* Bold CTA buttons */
+.btn-bold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--accent);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  font-weight: 700;
+  box-shadow: 6px 6px 0 0 var(--ink);
+  transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-bold-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  font-weight: 700;
+  box-shadow: 6px 6px 0 0 var(--ink);
+  transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-bold:hover,
+  .btn-bold-outline:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 0 var(--ink);
+  }
+  .btn-bold-outline:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+
+/* Inverted (dark) section */
+.section-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Oversized stat blocks */
+.stat-number {
+  font-family: var(--font-montserrat), 'Arial Narrow', sans-serif;
+  font-weight: 400;
+  font-size: var(--text-stat);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Mono label, generic */
+.mono-label {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) scale(1);
@@ -176,6 +363,18 @@ html {
   animation: bounce-subtle 2s ease-in-out infinite;
 }
 
+/* Scroll-reveal (CSS-only, view-timeline). Degrades gracefully:
+   browsers without support simply show content. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    animation: slide-up 0.7s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
 /* Stagger delays for sequential animations */
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
@@ -186,15 +385,15 @@ html {
 .delay-700 { animation-delay: 0.7s; }
 .delay-800 { animation-delay: 0.8s; }
 
-/* 3D card effects */
+/* 3D card effects (retuned: stronger lift, paired with hard edges) */
 .card-3d {
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .card-3d:hover {
-    transform: translateY(-8px) rotateX(2deg);
+    transform: translateY(-10px);
   }
 
   /* Keep embeds stable/clickable on desktop when cards are hovered. */
@@ -217,4 +416,18 @@ html {
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

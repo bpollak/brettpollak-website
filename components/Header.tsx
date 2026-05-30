@@ -66,8 +66,8 @@ export default function Header() {
   useEffect(() => { setAiMenuOpen(false); }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-slate-50/90 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
-      <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-slate-900 via-blue-900 to-amber-500 opacity-50"></div>
+    <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur-xl border-b-2 border-ink">
+      <div className="absolute inset-x-0 bottom-0 h-0.5 bg-accent"></div>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Skip to main content link for accessibility */}
         <a
@@ -79,8 +79,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 sm:h-20 gap-4">
           <Link
             href="/"
-            className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent hover:from-slate-800 hover:via-blue-800 hover:to-amber-600 transition-all font-[family-name:var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 rounded whitespace-nowrap flex-none"
-            style={{ letterSpacing: '-0.005em' }}
+            className="text-2xl sm:text-3xl uppercase text-ink hover:text-accent transition-colors font-[family-name:var(--font-montserrat)] focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 whitespace-nowrap flex-none"
+            style={{ letterSpacing: '-0.01em' }}
           >
             Brett Pollak
           </Link>
@@ -91,10 +91,10 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`px-3 lg:px-4 py-2 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 whitespace-nowrap ${
+                className={`px-3 lg:px-4 py-2 text-sm font-semibold uppercase tracking-wide transition-colors border-b-2 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 whitespace-nowrap ${
                   isActive(href)
-                    ? 'text-slate-900 bg-slate-200/50 font-semibold'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? 'text-ink border-accent'
+                    : 'text-ink/60 border-transparent hover:text-ink hover:border-ink'
                 }`}
               >
                 {label}
@@ -108,10 +108,10 @@ export default function Header() {
                 onClick={() => setAiMenuOpen((v) => !v)}
                 aria-haspopup="true"
                 aria-expanded={aiMenuOpen}
-                className={`px-3 lg:px-4 py-2 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 whitespace-nowrap inline-flex items-center gap-1 ${
+                className={`px-3 lg:px-4 py-2 text-sm font-semibold uppercase tracking-wide transition-colors border-b-2 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 whitespace-nowrap inline-flex items-center gap-1 ${
                   isActiveInGroup(AI_LINKS)
-                    ? 'text-slate-900 bg-slate-200/50 font-semibold'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? 'text-ink border-accent'
+                    : 'text-ink/60 border-transparent hover:text-ink hover:border-ink'
                 }`}
               >
                 AI
@@ -129,9 +129,9 @@ export default function Header() {
               {aiMenuOpen && (
                 <div
                   role="menu"
-                  className="absolute right-0 mt-2 w-56 rounded-xl bg-white border border-slate-200 shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
+                  className="absolute right-0 mt-2 w-56 bg-paper border-2 border-ink shadow-hard overflow-hidden z-50"
                 >
-                  <div className="px-3 py-2 text-xs uppercase tracking-[0.15em] text-slate-400 font-semibold border-b border-slate-100">
+                  <div className="px-3 py-2 text-xs uppercase tracking-[0.15em] text-muted font-semibold border-b-2 border-ink font-[family-name:var(--font-geist-mono)]">
                     AI Projects
                   </div>
                   {AI_LINKS.map(({ href, label }) => (
@@ -140,10 +140,10 @@ export default function Header() {
                       href={href}
                       role="menuitem"
                       onClick={() => setAiMenuOpen(false)}
-                      className={`block px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap ${
+                      className={`block px-4 py-2.5 text-sm font-semibold transition-colors whitespace-nowrap ${
                         isActive(href)
-                          ? 'text-slate-900 bg-slate-100 font-semibold'
-                          : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+                          ? 'text-ink bg-accent'
+                          : 'text-ink/70 hover:text-ink hover:bg-paper-2'
                       }`}
                     >
                       {label}
@@ -157,10 +157,10 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`px-3 lg:px-4 py-2 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 whitespace-nowrap ${
+                className={`px-3 lg:px-4 py-2 text-sm font-semibold uppercase tracking-wide transition-colors border-b-2 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 whitespace-nowrap ${
                   isActive(href)
-                    ? 'text-slate-900 bg-slate-200/50 font-semibold'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? 'text-ink border-accent'
+                    : 'text-ink/60 border-transparent hover:text-ink hover:border-ink'
                 }`}
               >
                 {label}
@@ -171,7 +171,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+            className="md:hidden p-2 text-ink hover:bg-paper-2 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -195,17 +195,17 @@ export default function Header() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200">
-            <div className="flex flex-col space-y-2">
+          <div className="md:hidden py-4 border-t-2 border-ink">
+            <div className="flex flex-col space-y-1">
               {PRIMARY_LINKS.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 ${
+                  className={`px-4 py-3 font-semibold uppercase tracking-wide transition-colors border-l-4 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 ${
                     isActive(href)
-                      ? 'text-slate-900 bg-slate-100'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      ? 'text-ink border-accent bg-paper-2'
+                      : 'text-ink/60 border-transparent hover:text-ink hover:bg-paper-2'
                   }`}
                 >
                   {label}
@@ -213,7 +213,7 @@ export default function Header() {
               ))}
 
               {/* AI subsection — flat list with a subheader */}
-              <div className="pt-3 pb-1 px-4 text-xs uppercase tracking-[0.15em] text-slate-400 font-semibold">
+              <div className="pt-3 pb-1 px-4 text-xs uppercase tracking-[0.15em] text-muted font-semibold font-[family-name:var(--font-geist-mono)]">
                 AI Projects
               </div>
               {AI_LINKS.map(({ href, label }) => (
@@ -221,17 +221,17 @@ export default function Header() {
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 ${
+                  className={`px-4 py-3 font-semibold uppercase tracking-wide transition-colors border-l-4 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 ${
                     isActive(href)
-                      ? 'text-slate-900 bg-slate-100'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      ? 'text-ink border-accent bg-paper-2'
+                      : 'text-ink/60 border-transparent hover:text-ink hover:bg-paper-2'
                   }`}
                 >
                   {label}
                 </Link>
               ))}
 
-              <div className="pt-3 pb-1 px-4 text-xs uppercase tracking-[0.15em] text-slate-400 font-semibold">
+              <div className="pt-3 pb-1 px-4 text-xs uppercase tracking-[0.15em] text-muted font-semibold font-[family-name:var(--font-geist-mono)]">
                 Connect
               </div>
               {SECONDARY_LINKS.map(({ href, label }) => (
@@ -239,10 +239,10 @@ export default function Header() {
                   key={href}
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 ${
+                  className={`px-4 py-3 font-semibold uppercase tracking-wide transition-colors border-l-4 focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 ${
                     isActive(href)
-                      ? 'text-slate-900 bg-slate-100'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                      ? 'text-ink border-accent bg-paper-2'
+                      : 'text-ink/60 border-transparent hover:text-ink hover:bg-paper-2'
                   }`}
                 >
                   {label}
