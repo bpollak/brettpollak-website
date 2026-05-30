@@ -15,40 +15,40 @@ import PodcastSubmitModal from '@/components/PodcastSubmitModal';
 
 const COLOR_CYCLE = [
   {
-    border: '',
-    badge: 'bg-paper-2 text-ink',
-    hoverBg: '',
-    accent: '',
+    border: 'hover:border-blue-700',
+    badge: 'bg-blue-50 text-blue-900',
+    hoverBg: 'hover:bg-blue-50/30',
+    accent: 'from-blue-800 to-indigo-700',
   },
   {
-    border: '',
-    badge: 'bg-paper-2 text-ink',
-    hoverBg: '',
-    accent: '',
+    border: 'hover:border-amber-500',
+    badge: 'bg-amber-50 text-amber-800',
+    hoverBg: 'hover:bg-amber-50/30',
+    accent: 'from-amber-500 to-orange-600',
   },
   {
-    border: '',
-    badge: 'bg-paper-2 text-ink',
-    hoverBg: '',
-    accent: '',
+    border: 'hover:border-rose-700',
+    badge: 'bg-rose-50 text-rose-900',
+    hoverBg: 'hover:bg-rose-50/30',
+    accent: 'from-rose-800 to-red-900',
   },
   {
-    border: '',
-    badge: 'bg-paper-2 text-ink',
-    hoverBg: '',
-    accent: '',
+    border: 'hover:border-cyan-600',
+    badge: 'bg-cyan-50 text-cyan-800',
+    hoverBg: 'hover:bg-cyan-50/30',
+    accent: 'from-cyan-600 to-blue-600',
   },
   {
-    border: '',
-    badge: 'bg-paper-2 text-ink',
-    hoverBg: '',
-    accent: '',
+    border: 'hover:border-indigo-600',
+    badge: 'bg-indigo-50 text-indigo-900',
+    hoverBg: 'hover:bg-indigo-50/30',
+    accent: 'from-indigo-700 to-violet-800',
   },
   {
-    border: '',
-    badge: 'bg-paper-2 text-ink',
-    hoverBg: '',
-    accent: '',
+    border: 'hover:border-slate-600',
+    badge: 'bg-slate-100 text-slate-800',
+    hoverBg: 'hover:bg-slate-50/50',
+    accent: 'from-slate-700 to-slate-900',
   },
 ];
 
@@ -245,18 +245,18 @@ export default function PodcastsContent() {
           <button
             key={value}
             onClick={() => setActiveFilter(value)}
-            className={`px-5 py-2.5 border-2 border-ink uppercase tracking-wide font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink ${
+            className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 ${
               activeFilter === value
-                ? 'bg-ink text-paper'
-                : 'bg-paper text-ink hover:bg-accent'
+                ? 'bg-gradient-to-r from-slate-800 to-blue-900 text-white shadow-lg'
+                : 'bg-white text-slate-600 border-2 border-slate-200 hover:border-slate-400 hover:text-slate-900'
             }`}
           >
             {label}
             <span
-              className={`ml-2 px-2 py-0.5 text-xs ${
+              className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
                 activeFilter === value
-                  ? 'bg-paper/20 text-paper'
-                  : 'bg-ink/10 text-ink'
+                  ? 'bg-white/20 text-white'
+                  : 'bg-slate-100 text-slate-500'
               }`}
             >
               {count}
@@ -268,7 +268,7 @@ export default function PodcastsContent() {
         {firebaseEnabled && (
           <button
             onClick={() => setModalOpen(true)}
-            className="btn-bold ml-auto px-5 py-2.5 uppercase tracking-wide flex items-center gap-2"
+            className="ml-auto px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center gap-2 hover:shadow-xl active:scale-95"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -281,8 +281,8 @@ export default function PodcastsContent() {
       {/* Loading state */}
       {loading && firebaseEnabled && (
         <div className="flex justify-center py-16">
-          <div className="flex items-center gap-3 text-muted">
-            <div className="w-6 h-6 border-2 border-ink/30 border-t-accent rounded-full animate-spin" />
+          <div className="flex items-center gap-3 text-slate-500">
+            <div className="w-6 h-6 border-2 border-slate-300 border-t-blue-500 rounded-full animate-spin" />
             Loading podcasts...
           </div>
         </div>
@@ -308,13 +308,13 @@ export default function PodcastsContent() {
       {/* Empty state */}
       {!loading && filteredPodcasts.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-muted text-lg">
+          <p className="text-slate-500 text-lg">
             No podcasts found in this category.
           </p>
           {firebaseEnabled && (
             <button
               onClick={() => setModalOpen(true)}
-              className="mt-4 text-ink font-bold uppercase tracking-wide hover:text-accent transition-colors"
+              className="mt-4 text-blue-600 font-semibold hover:text-blue-800 transition-colors"
             >
               Be the first to share one!
             </button>

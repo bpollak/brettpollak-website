@@ -1,14 +1,14 @@
 'use client';
 
-const BACKGROUNDS = [
-  'bg-ink',
-  'bg-accent',
-  'bg-ink-2',
-  'bg-ink',
-  'bg-accent',
-  'bg-ink-2',
-  'bg-ink',
-  'bg-accent',
+const GRADIENTS = [
+  'from-blue-600 via-indigo-700 to-violet-800',
+  'from-amber-500 via-orange-600 to-red-700',
+  'from-emerald-500 via-teal-600 to-cyan-700',
+  'from-rose-500 via-pink-600 to-fuchsia-700',
+  'from-slate-600 via-gray-700 to-zinc-800',
+  'from-cyan-500 via-blue-600 to-indigo-700',
+  'from-violet-500 via-purple-600 to-indigo-700',
+  'from-orange-500 via-amber-600 to-yellow-700',
 ];
 
 function hashString(str: string): number {
@@ -30,23 +30,23 @@ function getInitials(name: string): string {
 }
 
 export default function GeneratedThumbnail({ name }: { name: string }) {
-  const background = BACKGROUNDS[hashString(name) % BACKGROUNDS.length];
+  const gradient = GRADIENTS[hashString(name) % GRADIENTS.length];
   const initials = getInitials(name);
 
   return (
     <div
-      className={`absolute inset-0 ${background} flex flex-col items-center justify-center p-6`}
+      className={`absolute inset-0 bg-gradient-to-br ${gradient} flex flex-col items-center justify-center p-6`}
     >
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-4 left-4 w-16 h-16 border-2 border-paper" />
-        <div className="absolute bottom-8 right-6 w-24 h-24 border-2 border-paper" />
-        <div className="absolute top-1/3 right-4 w-8 h-8 border-2 border-paper" />
+        <div className="absolute top-4 left-4 w-16 h-16 border-2 border-white rounded-full" />
+        <div className="absolute bottom-8 right-6 w-24 h-24 border-2 border-white rounded-full" />
+        <div className="absolute top-1/3 right-4 w-8 h-8 border-2 border-white rounded-full" />
       </div>
 
       {/* Microphone icon */}
       <svg
-        className="w-10 h-10 text-paper/30 mb-3"
+        className="w-10 h-10 text-white/30 mb-3"
         fill="currentColor"
         viewBox="0 0 24 24"
       >
@@ -55,12 +55,12 @@ export default function GeneratedThumbnail({ name }: { name: string }) {
       </svg>
 
       {/* Initials */}
-      <div className="text-paper text-4xl font-black tracking-wider">
+      <div className="text-white text-4xl font-black tracking-wider drop-shadow-lg">
         {initials}
       </div>
 
       {/* Podcast name */}
-      <div className="text-paper/70 text-xs font-semibold mt-2 text-center leading-tight max-w-[80%] line-clamp-2 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
+      <div className="text-white/70 text-xs font-semibold mt-2 text-center leading-tight max-w-[80%] line-clamp-2">
         {name}
       </div>
     </div>

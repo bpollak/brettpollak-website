@@ -29,45 +29,44 @@ export const metadata: Metadata = {
 
 export default function AiAgentArchitecturePage() {
   return (
-    <main className="min-h-screen bg-paper" id="main-content">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/40" id="main-content">
       {/* ======================================================================
           SECTION 1 — HERO
           ====================================================================== */}
       <section className="max-w-6xl mx-auto px-6 pt-24 pb-12">
-        <div className="eyebrow mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-800 text-sm font-semibold rounded-full mb-8">
           PERSONAL AI ARCHITECTURE
         </div>
-        <h1 className="display-title display-title--xl mb-6">
+        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent tracking-tight pb-1 mb-6">
           Building a Personal AI That Actually Knows You
         </h1>
-        <div className="divider-accent w-24 mb-8"></div>
-        <p className="text-xl text-muted leading-relaxed max-w-3xl mb-6">
+        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-6">
           Generic AI is generic. Useful AI knows your people, projects, decisions, and trends.
           Here&rsquo;s how I built one that does &mdash; and how the pattern could scale across
           UC San Diego.
         </p>
-        <p className="text-sm text-muted mb-10 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
+        <p className="text-sm text-slate-500 mb-10">
           Last updated: May 21, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
-          <div className="card-hard p-6">
-            <div className="stat-label text-muted mb-3">Automated jobs</div>
-            <div className="stat-number text-3xl md:text-4xl">63 cron jobs</div>
+          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Automated jobs</div>
+            <div className="text-2xl font-bold text-slate-900">63 cron jobs</div>
           </div>
-          <div className="card-hard p-6">
-            <div className="stat-label text-muted mb-3">Durable memory</div>
-            <div className="stat-number text-3xl md:text-4xl">287 nodes · 265 pages</div>
+          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
+            <div className="text-2xl font-bold text-slate-900">287 nodes · 265 pages</div>
           </div>
-          <div className="card-hard p-6">
-            <div className="stat-label text-muted mb-3">Context loading</div>
-            <div className="stat-number text-3xl md:text-4xl">3 memory layers</div>
+          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Context loading</div>
+            <div className="text-2xl font-bold text-slate-900">3 memory layers</div>
           </div>
         </div>
 
         <HeroPipelineDiagram />
 
-        <p className="text-sm text-muted italic max-w-3xl">
+        <p className="text-sm text-slate-500 italic max-w-3xl">
           The pipeline in one glance: raw signals flow left to right through accumulation and
           synthesis crons into the durable knowledge layer &mdash; where the agent pulls them
           back out at the moment of conversation.
@@ -77,14 +76,14 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 2 — THE PROBLEM
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Problem
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           Why generic AI isn&rsquo;t enough
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5">
           <p>
             Ask any stock chatbot &ldquo;who should I follow up with this week?&rdquo; and you get
             generic productivity advice. Ask one that actually knows you &mdash; who&rsquo;s been
@@ -105,7 +104,7 @@ export default function AiAgentArchitecturePage() {
             The hard problem isn&rsquo;t connecting data sources. It&rsquo;s building a knowledge
             layer on top of them &mdash; a system that:
           </p>
-          <ul className="space-y-2 pl-5 list-disc marker:text-accent">
+          <ul className="space-y-2 pl-5 list-disc marker:text-blue-700">
             <li>
               <strong>Captures</strong> raw signals consistently (meetings, emails, news, campus trends)
             </li>
@@ -131,23 +130,23 @@ export default function AiAgentArchitecturePage() {
             thousands of staff at UC San Diego, giving every person a personal AI that
             understands their work world.
           </p>
-          <div className="my-8 border-l-4 border-accent bg-paper-2 pl-5 py-4">
-            <div className="eyebrow eyebrow--accent mb-2">
+          <div className="my-8 border-l-4 border-blue-600 bg-blue-50/60 pl-5 py-4 rounded-r-lg">
+            <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
               Why this matters now
             </div>
-            <p className="text-ink leading-7 mb-3">
+            <p className="text-slate-800 leading-7 mb-3">
               Every major research lab is converging on the same thing: a single app that turns
               chat into an agent, and uses <em>your context</em> &mdash; your memory, your files,
               your history &mdash; as the lock-in. Switch vendors and you lose it.
             </p>
-            <p className="text-ink leading-7">
+            <p className="text-slate-800 leading-7">
               The approach on this page flips that. Knowledge lives in <em>my</em> filesystem, in
               open formats, under my control. Any model can plug into it; any model can be
               swapped out. The context layer is the moat &mdash; and it doesn&rsquo;t belong to
               the vendor.
             </p>
           </div>
-          <p className="text-ink font-semibold">
+          <p className="text-slate-900 font-semibold">
             The question isn&rsquo;t &ldquo;can AI do this?&rdquo; &mdash; it&rsquo;s &ldquo;how do
             you build the knowledge layer without handing your institutional memory to a
             vendor?&rdquo; This is my answer.
@@ -158,14 +157,14 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 3 — THREE LAYERS
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Architecture
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           Three layers of context loading
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
             A personal AI faces a brutal constraint: context windows are finite, institutional
             knowledge is not. You can&rsquo;t load everything &mdash; but loading nothing gives
@@ -176,35 +175,35 @@ export default function AiAgentArchitecturePage() {
 
         <ThreeLayerDiagram />
 
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Layer 1 &mdash; Always Loaded.</strong> A small
+            <strong className="text-slate-900">Layer 1 &mdash; Always Loaded.</strong> A small
             fixed set of files the agent reads on every interaction: identity, user profile,
             curated long-term memory, observed work patterns, today&rsquo;s and yesterday&rsquo;s
             memory. ~15&#8239;KB total, cheap to load, enough for the AI to respond as itself
             with 48-hour awareness. Without it, every conversation starts from zero.
           </p>
           <p>
-            <strong className="text-ink">Layer 2 &mdash; Loaded on Trigger.</strong> When
+            <strong className="text-slate-900">Layer 2 &mdash; Loaded on Trigger.</strong> When
             the conversation mentions a person, technology, decision, project, or trend, the
             agent proactively reads the matching wiki page. Mention a colleague and it reads{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">wiki/people/{'{person-id}'}.md</code>.
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/people/{'{person-id}'}.md</code>.
             Mention a vendor and it reads{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">wiki/tech-stack/{'{tool-id}'}.md</code>.
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">wiki/decisions/</code>.
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/decisions/</code>.
             This is the biggest unlock: 190 wiki pages that would otherwise sit unused become a
             live reference library, pulled in silently the moment they&rsquo;re relevant. It
             feels like the AI &ldquo;just knows,&rdquo; not like it&rsquo;s doing a lookup.
           </p>
           <p>
-            <strong className="text-ink">Layer 3 &mdash; Loaded on Explicit Request.</strong>{' '}
+            <strong className="text-slate-900">Layer 3 &mdash; Loaded on Explicit Request.</strong>{' '}
             Deep-dive content &mdash; dated memory files, full transcripts, the raw knowledge
             graph &mdash; loaded only when you ask. &ldquo;What happened in Tuesday&rsquo;s
             meeting?&rdquo; pulls the specific file. &ldquo;Show me my full graph&rdquo; loads
             and analyzes the JSON. Rare but critical fallbacks.
           </p>
-          <p className="text-ink font-semibold border-l-4 border-accent pl-5 py-3 bg-paper-2">
+          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
             The key insight: context is a budget, not a pantry. You don&rsquo;t load
             everything; you load the right things at the right time.
           </p>
@@ -219,14 +218,14 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 4 — DAILY RHYTHM
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Pipeline
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           The daily rhythm that builds the knowledge layer
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
             63 cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
@@ -235,9 +234,9 @@ export default function AiAgentArchitecturePage() {
 
         <DailyRhythmClock />
 
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Morning accumulation (6&ndash;9 AM).</strong>{' '}
+            <strong className="text-slate-900">Morning accumulation (6&ndash;9 AM).</strong>{' '}
             Data-gathering crons. Calendar briefing pulls today&rsquo;s events. AI news digest
             runs web searches scored against the knowledge graph, so the &ldquo;news&rdquo; is
             actually relevant. Opportunity scan reads the graph and hunts for campus AI projects
@@ -247,24 +246,24 @@ export default function AiAgentArchitecturePage() {
             have one yet.
           </p>
           <p>
-            <strong className="text-ink">Evening synthesis (5:30&ndash;7:35 PM).</strong>{' '}
+            <strong className="text-slate-900">Evening synthesis (5:30&ndash;7:35 PM).</strong>{' '}
             Evening wrap triages emails and drafts replies. Granola meeting debrief extracts
             commitments, sentiment, and undercurrents from today&rsquo;s transcripts. Daily
             reflection synthesizes everything into a narrative debrief. Context promotion moves
             the day&rsquo;s signals into long-term memory.
           </p>
           <p>
-            <strong className="text-ink">Night consolidation (3:00 AM).</strong> A dreaming
+            <strong className="text-slate-900">Night consolidation (3:00 AM).</strong> A dreaming
             cron consolidates short-term memories into long-term, the way sleep does for humans.
           </p>
           <p>
-            <strong className="text-ink">Weekly synthesis (Sunday 6 PM).</strong> Reads 7
+            <strong className="text-slate-900">Weekly synthesis (Sunday 6 PM).</strong> Reads 7
             days of opportunity scans and pain signals, extracts cross-day trends, and promotes
             the strongest patterns to long-term memory. That&rsquo;s how &ldquo;VPN failed
             Monday&rdquo; + &ldquo;VPN failed Wednesday&rdquo; + &ldquo;VPN failed Friday&rdquo;
             becomes &ldquo;VPN is systemically broken this week.&rdquo;
           </p>
-          <p className="text-ink font-semibold">
+          <p className="text-slate-900 font-semibold">
             The rhythm is what turns a pile of raw files into institutional knowledge.
           </p>
         </div>
@@ -273,35 +272,35 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 5 — GRAPH + WIKI
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Durable Layer
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           Knowledge graph + wiki: brain stem and cortex
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5">
           <p>Two durable stores anchor everything:</p>
 
           <div className="grid md:grid-cols-2 gap-5 my-6">
-            <div className="card-hard p-6">
-              <div className="eyebrow eyebrow--accent mb-2">
+            <div className="rounded-2xl border border-blue-200 bg-blue-50/60 p-6">
+              <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">287 nodes · 331 edges</div>
-              <p className="text-sm text-muted leading-6">
+              <div className="text-2xl font-bold text-slate-900 mb-2">287 nodes · 331 edges</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
                 Every node has a weight and a meetingCount. Fast, shallow, relational &mdash;
                 good at answering &ldquo;who works on X.&rdquo;
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="eyebrow eyebrow--accent mb-2">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
+              <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">265 narrative pages</div>
-              <p className="text-sm text-muted leading-6">
+              <div className="text-2xl font-bold text-slate-900 mb-2">265 narrative pages</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
                 &ldquo;why did we choose X.&rdquo;
@@ -310,7 +309,7 @@ export default function AiAgentArchitecturePage() {
           </div>
 
           <p>
-            <strong className="text-ink">Reconciliation:</strong> when a graph node crosses
+            <strong className="text-slate-900">Reconciliation:</strong> when a graph node crosses
             a weight threshold, a wiki page is auto-created as a stub and enriched over time by
             meetings and manual edits. The wiki-ingest cron runs at 9 AM daily, creating up to 5
             new people pages and 5 new tech-stack pages per run &mdash; so even entities that
@@ -318,7 +317,7 @@ export default function AiAgentArchitecturePage() {
             promoted as meeting history accumulates.
           </p>
           <p>
-            <strong className="text-ink">Dedup:</strong> the graph pulls from multiple
+            <strong className="text-slate-900">Dedup:</strong> the graph pulls from multiple
             sources (transcripts, calendar, manual edits), so duplicates creep in &mdash; the
             same person under &ldquo;First Last&rdquo; and &ldquo;Last, First,&rdquo; or a vendor
             under slight spelling variations. A periodic dedup pass merges them at the graph
@@ -333,7 +332,7 @@ export default function AiAgentArchitecturePage() {
             longer just what you touch directly; it&rsquo;s what your org has written down and
             what your team is talking about right now.
           </p>
-          <p className="text-ink font-semibold border-l-4 border-accent pl-5 py-3 bg-paper-2">
+          <p className="text-slate-900 font-semibold border-l-4 border-amber-500 pl-5 py-2 bg-amber-50/50 rounded-r-lg">
             The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
             &mdash; slow, rich, narrative. Together they&rsquo;re a cheap institutional memory
             system.
@@ -344,14 +343,14 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 5.5 — MODEL ALLOCATION
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Inference Layer
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           Model allocation: matching jobs to capabilities
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
             Different jobs need different models. A 30-second token-refresh check shouldn&rsquo;t
             run on the same model that drafts a weekly newsletter, and a deep architectural
@@ -362,7 +361,7 @@ export default function AiAgentArchitecturePage() {
             As of May 27, 2026, <strong>all 64 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
-              className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent"
+              className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
             >
               TritonAI
             </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway, with on-prem
@@ -374,97 +373,97 @@ export default function AiAgentArchitecturePage() {
           </p>
         </div>
 
-        <div className="overflow-x-auto my-8 card-hard">
+        <div className="overflow-x-auto my-8 rounded-2xl border border-slate-200 bg-white/90 shadow-sm">
           <table className="min-w-full text-sm">
             <thead>
-              <tr className="bg-paper-2 border-b-2 border-ink">
-                <th className="px-4 py-3 text-left font-semibold text-ink">Tier</th>
-                <th className="px-4 py-3 text-left font-semibold text-ink">Model</th>
-                <th className="px-4 py-3 text-left font-semibold text-ink">Hosting</th>
-                <th className="px-4 py-3 text-left font-semibold text-ink">Use</th>
-                <th className="px-4 py-3 text-right font-semibold text-ink">Jobs</th>
+              <tr className="bg-slate-50 border-b border-slate-200">
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Tier</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Model</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Hosting</th>
+                <th className="px-4 py-3 text-left font-semibold text-slate-900">Use</th>
+                <th className="px-4 py-3 text-right font-semibold text-slate-900">Jobs</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-ink/15">
+            <tbody className="divide-y divide-slate-100">
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Briefings &amp; summarization</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">api-gemma-4-26b</td>
-                <td className="px-4 py-3 text-muted">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
-                <td className="px-4 py-3 text-muted">Daily briefings, meeting debriefs, wiki/page refreshes, multimodal extraction</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">17</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Briefings &amp; summarization</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gemma-4-26b</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
+                <td className="px-4 py-3 text-slate-700">Daily briefings, meeting debriefs, wiki/page refreshes, multimodal extraction</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">17</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Fast monitor &amp; sync</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">api-mistral-small-3.2-2506</td>
-                <td className="px-4 py-3 text-muted">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
-                <td className="px-4 py-3 text-muted">Health checks, syncs, threshold alerts, shell-runner parsing, token refresh</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">18</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Fast monitor &amp; sync</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">api-mistral-small-3.2-2506</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Health checks, syncs, threshold alerts, shell-runner parsing, token refresh</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">18</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Heavy synthesis</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">api-gpt-oss-120b</td>
-                <td className="px-4 py-3 text-muted">TritonAI on-prem · OpenAI gpt-oss 120B (open weight)</td>
-                <td className="px-4 py-3 text-muted">Opportunity scans, signal synthesis, blockage radar, LinkedIn candidate ID, TritonGPT intel</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">16</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Heavy synthesis</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gpt-oss-120b</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · OpenAI gpt-oss 120B (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Opportunity scans, signal synthesis, blockage radar, LinkedIn candidate ID, TritonGPT intel</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">16</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Long-form &amp; deep reasoning</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">mistral-large-3-675b</td>
-                <td className="px-4 py-3 text-muted">TritonAI · Mistral Large 3 675B (open weight, cloud-proxied)</td>
-                <td className="px-4 py-3 text-muted">Weekly AI deep-dive, architecture &amp; harness reviews, newsletter, LinkedIn drafts, vision tracker</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">7</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Long-form &amp; deep reasoning</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">mistral-large-3-675b</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Large 3 675B (open weight, cloud-proxied)</td>
+                <td className="px-4 py-3 text-slate-700">Weekly AI deep-dive, architecture &amp; harness reviews, newsletter, LinkedIn drafts, vision tracker</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">7</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Monitor escalation</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">claude-sonnet-4-6</td>
-                <td className="px-4 py-3 text-muted">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
-                <td className="px-4 py-3 text-muted">Provider quota monitor, important-email triage &mdash; jobs where a missed signal has real downstream cost</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">3</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Monitor escalation</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">claude-sonnet-4-6</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
+                <td className="px-4 py-3 text-slate-700">Provider quota monitor, important-email triage &mdash; jobs where a missed signal has real downstream cost</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Complex reasoning</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">tritonai-sonnet</td>
-                <td className="px-4 py-3 text-muted">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
-                <td className="px-4 py-3 text-muted">Granola meeting debrief &mdash; deep commitment extraction from transcripts</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">1</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Complex reasoning</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-sonnet</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
+                <td className="px-4 py-3 text-slate-700">Granola meeting debrief &mdash; deep commitment extraction from transcripts</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Code maintenance</td>
-                <td className="px-4 py-3 font-mono text-xs text-muted">deepseek-v4-flash-max</td>
-                <td className="px-4 py-3 text-muted">TritonAI on-prem · DeepSeek V4 Flash Max (open weight, code-specialized)</td>
-                <td className="px-4 py-3 text-muted">Overnight code maintenance for Mission Control (build, test, lint)</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">1</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Code maintenance</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">deepseek-v4-flash-max</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · DeepSeek V4 Flash Max (open weight, code-specialized)</td>
+                <td className="px-4 py-3 text-slate-700">Overnight code maintenance for Mission Control (build, test, lint)</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Why predominantly open-weight on TritonAI:</strong>{' '}
+            <strong className="text-slate-900">Why predominantly open-weight on TritonAI:</strong>{' '}
             the gateway runs on-prem at the San Diego Supercomputer Center, the open-weight tier
             is served on UCSD compute, and the institutional virtual-key budget covers
             cron-driven workloads with no personal-tier API charges. Open weights also remove the
             &ldquo;model rugpull&rdquo; risk &mdash; when OpenAI deprecated{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">gpt-5.4-mini</code>{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gpt-5.4-mini</code>{' '}
             in late April it broke six of my crons in a single morning, and when TritonAI itself
             retired Kimi K2.5, Claude Haiku 4.5, and Nemotron 3 Super in May it broke 17 more.
             The fix in both cases was a one-line alias change because no specific model is
             load-bearing in the architecture.
           </p>
           <p>
-            <strong className="text-ink">Why three jobs on proprietary Claude Sonnet:</strong>{' '}
+            <strong className="text-slate-900">Why three jobs on proprietary Claude Sonnet:</strong>{' '}
             three cron jobs escalate to Claude Sonnet 4.6 because false negatives there carry
-            real cost: <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">provider-quota-monitor</code>{' '}
+            real cost: <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
             (catches outages and quota exhaustion before they cascade),{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">gmail-important-emails</code>{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gmail-important-emails</code>{' '}
             (surfaces actionable messages buried in volume), and{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">granola-meeting-debrief</code>{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">granola-meeting-debrief</code>{' '}
             (deep commitment extraction from transcripts where extraction quality has direct
             downstream value). Everything else stays on the open-weight tier.
           </p>
           <p>
-            <strong className="text-ink">Why no cross-provider canary anymore:</strong> the
+            <strong className="text-slate-900">Why no cross-provider canary anymore:</strong> the
             old architecture kept one job on OpenAI Codex specifically to detect TritonAI-wide
             problems from outside. That worked until Codex itself hit a weekly cap and silently
             broke the canary. The lesson: the canary&rsquo;s job is just to alert, and TritonAI
@@ -472,18 +471,18 @@ export default function AiAgentArchitecturePage() {
             real, but it&rsquo;s now an explicit institutional bet rather than a hedged compromise.
           </p>
           <p>
-            <strong className="text-ink">How models get matched:</strong> each cron declares
+            <strong className="text-slate-900">How models get matched:</strong> each cron declares
             an explicit provider/model path (e.g.{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">tritonai/api-gpt-oss-120b</code>);
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">tritonai/api-gpt-oss-120b</code>);
             the gateway routes accordingly. Rebalancing &mdash; e.g., moving a job to a different
             model &mdash; is a one-line config change, not a code change. A dedicated{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">tritonai-key-access-monitor</code>{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">tritonai-key-access-monitor</code>{' '}
             cron now runs Monday and Thursday evenings to probe TritonAI&rsquo;s{' '}
-            <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">/v1/models</code>{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">/v1/models</code>{' '}
             endpoint for both keys, diff against the previous snapshot, and Telegram any change
             that would break a routing rule before a cron fires against it.
           </p>
-          <p className="text-ink font-semibold border-l-4 border-accent pl-5 py-3 bg-paper-2">
+          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
             Provider lock-in is the moat AI vendors want. Open weights on institutional infra,
             wired through a gateway, with active monitoring of the model catalog &mdash; that&rsquo;s
             how the moat stays from forming around your automation.
@@ -494,14 +493,14 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 6 — OUTCOMES & VALUE
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           Outcomes &amp; Value
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           What this actually does
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl mb-10">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl mb-10">
           <p>
             Building this was the hard part. Using it is where it pays off. What the ecosystem
             delivers today, the value it generates, and what else becomes possible once the
@@ -511,57 +510,57 @@ export default function AiAgentArchitecturePage() {
 
         {/* --- What it does today --- */}
         <div className="mb-12">
-          <h3 className="eyebrow eyebrow--accent mb-5 pb-3 border-b-2 border-ink">
+          <h3 className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-5 pb-2 border-b border-slate-200">
             What it does today
           </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Daily briefings, delivered automatically</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Daily briefings, delivered automatically</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Calendar + email summary at 6:25 AM. AI news digest filtered through my
                 priorities at 6:35. Opportunity scan of higher-ed AI projects at 7:00. Campus
                 pain signals from forums and status pages at 7:30. All waiting before I open a
                 laptop.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Meeting intelligence after every meeting</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Meeting intelligence after every meeting</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Transcripts processed for commitments (who promised what), sentiment (how people
                 felt), participation patterns (who dominated, who stayed quiet), and
                 undercurrents (what was implied but not said). Searchable across a 14-month
                 corpus.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Weekly trend synthesis</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Weekly trend synthesis</div>
+              <p className="text-sm text-slate-700 leading-6">
                 A Sunday cron reads 7 days of signals and extracts patterns: which opportunities
                 recurred, which pain points became systemic, which themes faded. The strongest
                 get promoted to long-term memory.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Real-time conversational context</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Real-time conversational context</div>
+              <p className="text-sm text-slate-700 leading-6">
                 When I message the agent on Telegram, it loads long-term memory, work patterns,
                 the last 48 hours, and pulls in wiki pages for any person, technology, or
                 decision I mention. Feels like it just knows.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Auto-published public artifacts</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Auto-published public artifacts</div>
+              <p className="text-sm text-slate-700 leading-6">
                 The weekly UCSD AI newsletter auto-generates and publishes to{' '}
-                <a href="/ucsd-ai-news" className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent">/ucsd-ai-news</a>.
+                <a href="/ucsd-ai-news" className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600">/ucsd-ai-news</a>.
                 The personal AI digest auto-publishes daily to{' '}
-                <a href="/ai-digest" className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent">/ai-digest</a>.
+                <a href="/ai-digest" className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600">/ai-digest</a>.
                 The knowledge framework documents itself &mdash; you&rsquo;re reading that output right now.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Cross-session continuity</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Cross-session continuity</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Decisions made in conversation write back to the wiki. Observed patterns write
                 to a patterns file. The framework is bidirectional &mdash; read for context,
                 write for continuity. Future sessions inherit what present sessions learn.
@@ -572,17 +571,17 @@ export default function AiAgentArchitecturePage() {
 
         {/* --- The value delivered --- */}
         <div className="mb-12">
-          <h3 className="eyebrow eyebrow--accent mb-5 pb-3 border-b-2 border-ink">
+          <h3 className="text-xs uppercase tracking-[0.18em] text-emerald-800 font-semibold mb-5 pb-2 border-b border-slate-200">
             The value delivered
           </h3>
           <ul className="space-y-5 max-w-3xl">
             <li className="flex gap-4 items-start">
-              <span className="flex-none mt-1 w-8 h-8 bg-accent border-2 border-ink text-ink font-bold flex items-center justify-center text-sm">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
                 1
               </span>
               <div>
-                <div className="text-ink font-semibold mb-1">Time saved: 2&ndash;3 hours per week</div>
-                <p className="text-sm text-muted leading-6">
+                <div className="text-slate-900 font-semibold mb-1">Time saved: 2&ndash;3 hours per week</div>
+                <p className="text-sm text-slate-700 leading-6">
                   Research, meeting prep, email triage, news scanning, and follow-up tracking
                   used to eat several hours a week. The crons do the gathering; I do the
                   judgment. That time gets reclaimed for actual decisions.
@@ -590,12 +589,12 @@ export default function AiAgentArchitecturePage() {
               </div>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="flex-none mt-1 w-8 h-8 bg-accent border-2 border-ink text-ink font-bold flex items-center justify-center text-sm">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
                 2
               </span>
               <div>
-                <div className="text-ink font-semibold mb-1">Pattern recognition I&rsquo;d otherwise miss</div>
-                <p className="text-sm text-muted leading-6">
+                <div className="text-slate-900 font-semibold mb-1">Pattern recognition I&rsquo;d otherwise miss</div>
+                <p className="text-sm text-slate-700 leading-6">
                   Daily reports don&rsquo;t tell you the VPN failed 5 of 7 days last week. The
                   weekly synthesis does. The graph shows who I actually meet with most &mdash;
                   not who I think I meet with most. Data surfaces patterns intuition can&rsquo;t.
@@ -603,12 +602,12 @@ export default function AiAgentArchitecturePage() {
               </div>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="flex-none mt-1 w-8 h-8 bg-accent border-2 border-ink text-ink font-bold flex items-center justify-center text-sm">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
                 3
               </span>
               <div>
-                <div className="text-ink font-semibold mb-1">Institutional memory, not just personal memory</div>
-                <p className="text-sm text-muted leading-6">
+                <div className="text-slate-900 font-semibold mb-1">Institutional memory, not just personal memory</div>
+                <p className="text-sm text-slate-700 leading-6">
                   Decisions, architectural choices, vendor evaluations, and their reasoning are
                   preserved. &ldquo;Why did we pick this over that?&rdquo; has an answer. So
                   does &ldquo;when did we last discuss X?&rdquo; Memory persists across
@@ -617,12 +616,12 @@ export default function AiAgentArchitecturePage() {
               </div>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="flex-none mt-1 w-8 h-8 bg-accent border-2 border-ink text-ink font-bold flex items-center justify-center text-sm">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
                 4
               </span>
               <div>
-                <div className="text-ink font-semibold mb-1">Never starting from zero</div>
-                <p className="text-sm text-muted leading-6">
+                <div className="text-slate-900 font-semibold mb-1">Never starting from zero</div>
+                <p className="text-sm text-slate-700 leading-6">
                   Every conversation begins with 48 hours of recent context, curated long-term
                   memory, and triggered wiki lookups. I don&rsquo;t re-explain my world each
                   time I ask a question, and the agent doesn&rsquo;t need reminding who the key
@@ -631,12 +630,12 @@ export default function AiAgentArchitecturePage() {
               </div>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="flex-none mt-1 w-8 h-8 bg-accent border-2 border-ink text-ink font-bold flex items-center justify-center text-sm">
+              <span className="flex-none mt-1 w-8 h-8 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
                 5
               </span>
               <div>
-                <div className="text-ink font-semibold mb-1">Opportunities surfaced proactively</div>
-                <p className="text-sm text-muted leading-6">
+                <div className="text-slate-900 font-semibold mb-1">Opportunities surfaced proactively</div>
+                <p className="text-sm text-slate-700 leading-6">
                   The opportunity scanner and AI news digest find campus projects, industry
                   developments, and trends matching my priorities. 60 seconds to review each
                   morning. Without this pipeline, I&rsquo;d miss them or spend an hour hunting.
@@ -648,54 +647,54 @@ export default function AiAgentArchitecturePage() {
 
         {/* --- What else becomes possible --- */}
         <div>
-          <h3 className="eyebrow eyebrow--accent mb-5 pb-3 border-b-2 border-ink">
+          <h3 className="text-xs uppercase tracking-[0.18em] text-amber-800 font-semibold mb-5 pb-2 border-b border-slate-200">
             What else becomes possible
           </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Meeting prep automation</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Meeting prep automation</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Before every meeting, auto-compile attendee wiki pages, recent interactions,
                 open commitments, relevant decisions, and a one-page prep doc. No more walking
                 in cold.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Proactive nudges</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Proactive nudges</div>
+              <p className="text-sm text-slate-700 leading-6">
                 The agent notices patterns without being asked. &ldquo;This problem has come up
                 three weeks in a row &mdash; here are the options you&rsquo;ve already explored.&rdquo;
                 &ldquo;This person has asked about the same thing five times &mdash; worth a
                 1:1?&rdquo;
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Draft-first communications</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Draft-first communications</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Emails, memos, and responses drafted in my voice using my actual context. Not
                 generic AI writing &mdash; contextual writing grounded in what I&rsquo;ve said
                 and decided before. Review beats drafting from scratch.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Decision archaeology</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Decision archaeology</div>
+              <p className="text-sm text-slate-700 leading-6">
                 &ldquo;Why did we pick this architecture two years ago?&rdquo; &mdash; immediate
                 answer with the full reasoning, the voices that disagreed, and the tradeoffs
                 considered. No more Slack/email archaeology.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Self-monitoring system health</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Self-monitoring system health</div>
+              <p className="text-sm text-slate-700 leading-6">
                 The agent notices when data sources go stale, crons degrade, or the knowledge
                 layer has gaps. Self-monitoring becomes self-repairing &mdash; the system
                 maintains itself instead of waiting for a human to notice.
               </p>
             </div>
-            <div className="card-hard p-6">
-              <div className="text-ink font-bold text-lg mb-2">Domain-aware research</div>
-              <p className="text-sm text-muted leading-6">
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+              <div className="text-slate-900 font-bold text-lg mb-2">Domain-aware research</div>
+              <p className="text-sm text-slate-700 leading-6">
                 Instead of &ldquo;search the web,&rdquo; the agent does &ldquo;search filtered
                 through what I care about, scored against my graph, synthesized with what I
                 already know.&rdquo; Research becomes targeted, not exhaustive.
@@ -709,23 +708,23 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 7 — SCALING VISION
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           The Vision
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           Scaling to UC San Diego
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
             Everything above is one person&rsquo;s implementation. The interesting question:
             what if every UCSD staff member had one?
           </p>
-          <div className="my-6 border-l-4 border-accent bg-paper-2 pl-5 py-4">
-            <div className="eyebrow eyebrow--accent mb-2">
+          <div className="my-6 border-l-4 border-blue-700 bg-blue-50 pl-5 py-4 rounded-r-lg">
+            <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
               Privacy is the precondition
             </div>
-            <p className="text-ink leading-7">
+            <p className="text-slate-800 leading-7">
               This only scales if privacy scales with it. Personal data never leaves the personal
               agent. Each tier above is opt-in, anonymized, or aggregate-only &mdash; never
               individual records flowing upward. Without that guarantee at every level, nothing
@@ -736,9 +735,9 @@ export default function AiAgentArchitecturePage() {
 
         <ScalingPyramid />
 
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 max-w-3xl">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Personal &mdash; the foundation.</strong> Every
+            <strong className="text-slate-900">Personal &mdash; the foundation.</strong> Every
             staff member gets their own agent, memory, wiki, and crons. Data never leaves their
             agent. This is proven &mdash; it works for one person, and the architecture is
             replicable. The hard part isn&rsquo;t the technology; it&rsquo;s the deployment
@@ -746,7 +745,7 @@ export default function AiAgentArchitecturePage() {
             &ldquo;this is yours, private by default.&rdquo;
           </p>
           <p>
-            <strong className="text-ink">Team &mdash; opt-in sharing, not opt-out.</strong>{' '}
+            <strong className="text-slate-900">Team &mdash; opt-in sharing, not opt-out.</strong>{' '}
             Team members choose what to share. The team wiki is visible to all members; 1:1s and
             personal notes stay private. Nothing crosses the boundary automatically. This is
             where governance gets interesting: who decides what&rsquo;s shared, how do you
@@ -754,34 +753,34 @@ export default function AiAgentArchitecturePage() {
             people.
           </p>
 
-          <div className="my-6 border-l-4 border-accent bg-paper-2 pl-5 py-4">
-            <div className="eyebrow eyebrow--accent mb-2">
+          <div className="my-6 border-l-4 border-emerald-600 bg-emerald-50/60 pl-5 py-4 rounded-r-lg">
+            <div className="text-xs uppercase tracking-[0.18em] text-emerald-800 font-semibold mb-2">
               Pilot in progress &mdash; TritonAI Team Knowledge Vault
             </div>
-            <p className="text-ink leading-7 mb-3">
+            <p className="text-slate-800 leading-7 mb-3">
               The team tier is no longer hypothetical. The first instance launched May&nbsp;18,
               2026: a 3-person shared Obsidian vault for the TritonAI core team &mdash; Brett
               Pollak, Shawn Munro, and Jeremy Wiles &mdash; sitting in a private GitHub repo
               and auto-syncing every 10 minutes via the Obsidian Git plugin. The vault has six
-              shared sections: <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">people/</code>{' '}
+              shared sections: <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">people/</code>{' '}
               (professional profiles, no 1:1 notes),{' '}
-              <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">projects/</code>{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">projects/</code>{' '}
               (live status),{' '}
-              <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">decisions/</code>{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">decisions/</code>{' '}
               (ADRs),{' '}
-              <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">tech-stack/</code>{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">tech-stack/</code>{' '}
               (vendor evaluations),{' '}
-              <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">runbooks/</code>{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">runbooks/</code>{' '}
               (how-we-do-things), and{' '}
-              <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">proposals/</code>{' '}
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">proposals/</code>{' '}
               (the only place agents are allowed to write).
             </p>
-            <p className="text-ink leading-7 mb-3">
+            <p className="text-slate-800 leading-7 mb-3">
               <strong>Two contributor modes coexist.</strong> Type&nbsp;A (manual) edits pages
               directly in Obsidian; auto-sync handles the rest &mdash; that&rsquo;s how Jeremy
               works today. Type&nbsp;B (agent-assisted) is how Shawn and I work: an agent reads
               evening-wrap, meeting debriefs, and opportunity-scan output, drafts updates into{' '}
-              <code className="text-[0.9em] bg-paper-2 border border-ink px-1.5 py-0.5">proposals/YYYY-MM-DD-{'{topic}'}.md</code>,
+              <code className="text-[0.9em] bg-emerald-100/60 px-1.5 py-0.5 rounded">proposals/YYYY-MM-DD-{'{topic}'}.md</code>,
               and a human (the owner of the page) reviews each one &mdash; about
               30&nbsp;seconds &mdash; before committing into the canonical page. <em>No
               automation writes directly to shared pages.</em> Having both modes live in the
@@ -792,7 +791,7 @@ export default function AiAgentArchitecturePage() {
               drafts new entries the same hour, a proposals monitor surfaces them at 9&nbsp;AM,
               and a Monday-morning staleness check flags any page untouched for 14+ days.
             </p>
-            <p className="text-ink leading-7 mb-3">
+            <p className="text-slate-800 leading-7 mb-3">
               <strong>What we&rsquo;ve seen in week one.</strong> 25+ assets updated in the
               first 48 hours &mdash; people cards, decision docs, project pages, runbooks,
               tech-stack entries. Not a write-once-and-die artifact: all three of us are
@@ -802,7 +801,7 @@ export default function AiAgentArchitecturePage() {
               retrospective is scheduled for June&nbsp;15 to decide whether to expand to the
               full WTS team next.
             </p>
-            <p className="text-ink leading-7">
+            <p className="text-slate-800 leading-7">
               <strong>The strategic reason this matters.</strong> If this works at three
               people, the same pattern &mdash; shared Obsidian vault, GitHub backing,
               proposals-first agent writes, ~10&nbsp;minutes of human review per week per
@@ -815,7 +814,7 @@ export default function AiAgentArchitecturePage() {
             </p>
           </div>
           <p>
-            <strong className="text-ink">Department &mdash; anonymized aggregates only.</strong>{' '}
+            <strong className="text-slate-900">Department &mdash; anonymized aggregates only.</strong>{' '}
             At WTS or Academic Technology Services, the useful view is patterns, not records.
             &ldquo;Trending pain points this week&rdquo; or &ldquo;which vendors are we all
             evaluating&rdquo; &mdash; no individual data, just signals that emerge from many
@@ -823,7 +822,7 @@ export default function AiAgentArchitecturePage() {
             before aggregation; the dashboard never shows who said what.
           </p>
           <p>
-            <strong className="text-ink">Campus &mdash; statistical patterns only.</strong>{' '}
+            <strong className="text-slate-900">Campus &mdash; statistical patterns only.</strong>{' '}
             TritonAI provides campus-wide AI services. The missing piece is connective tissue:
             aggregate department patterns up to institutional insights. Which departments
             struggle with the same vendor, which AI use cases are converging, what decisions
@@ -836,13 +835,13 @@ export default function AiAgentArchitecturePage() {
             comfortable with the model before anything scales beyond the personal tier.
           </p>
           <p>
-            <strong className="text-ink">Proven vs. speculative:</strong> the personal
+            <strong className="text-slate-900">Proven vs. speculative:</strong> the personal
             layer works; I use it daily. The team layer is now also shipped &mdash; live for
             three people since May&nbsp;18 with a structured retrospective set for June&nbsp;15.
             Department and campus layers are still design exercises, not shipped code. The
             pattern is there; the architecture is a starting point, not a finished product.
           </p>
-          <p className="text-ink font-semibold border-l-4 border-accent pl-5 py-3 bg-paper-2">
+          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
             The real question isn&rsquo;t &ldquo;can we do this?&rdquo; &mdash; it&rsquo;s
             &ldquo;what would it take to do it responsibly, at scale, in a way a 30,000-employee
             university can actually adopt without violating anyone&rsquo;s privacy along the
@@ -856,21 +855,21 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 7 — EVOLUTION / CHANGELOG
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t-2 border-ink">
-        <div className="eyebrow mb-4">
+      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-3">
           Evolution
         </div>
-        <h2 className="display-title display-title--lg mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
           This architecture isn&rsquo;t done
         </h2>
-        <div className="text-muted text-[1.06rem] leading-8 space-y-5 mb-8">
+        <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 mb-8">
           <p>
             It&rsquo;s a living system, updated continuously. Some of what&rsquo;s on this page
             will be obsolete in six months &mdash; that&rsquo;s the point. Every change is in
             the git history of my{' '}
             <a
               href="https://github.com/bpollak/mission-control"
-              className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent"
+              className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
             >
               mission-control repo
             </a>
@@ -878,14 +877,14 @@ export default function AiAgentArchitecturePage() {
           </p>
         </div>
 
-        <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-ink pl-8">
+        <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               May 21, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">TritonAI catalog refresh · key rotation · 57 jobs re-routed · catalog-change monitor added</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">TritonAI catalog refresh · key rotation · 57 jobs re-routed · catalog-change monitor added</div>
+            <p className="text-sm text-slate-600 leading-6">
               TritonAI rotated personal API keys and shipped a server-side catalog refresh that
               retired several models the cron fleet had been routing to &mdash;{' '}
               <span className="font-mono text-xs">moonshotai.kimi-k2.5</span>,{' '}
@@ -926,42 +925,42 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-600 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               May 19, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Open-source rebalance · 11 jobs to gpt-oss-120b · aggressive efficiency</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Open-source rebalance · 11 jobs to gpt-oss-120b · aggressive efficiency</div>
+            <p className="text-sm text-slate-600 leading-6">
               Rebalanced 11 jobs from commercial models (claude-sonnet-4.6, mistral-large-3) to <span className="font-mono text-xs">tritonai-prod/gpt-oss-120b</span> based on actual workload patterns &mdash; news aggregation, event curation, script runners, and auditing tasks don&rsquo;t need commercial reasoning. Kept claude-sonnet-4.6 for synthesis-heavy jobs (meeting debriefs, daily reflection, memory promotion), mistral-large-3 for web research + thesis generation. Net effect: ~$300&ndash;400/month institutional savings while staying on TritonAI&rsquo;s open-weight platform. <em>(Superseded by the May 21 entry above; meeting debriefs, daily reflection, and memory promotion have since moved off claude-sonnet.)</em>
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               May 17, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Architecture stats refreshed – growth across graph, wiki, and crons</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Architecture stats refreshed – growth across graph, wiki, and crons</div>
+            <p className="text-sm text-slate-600 leading-6">
               Updated graph to 250 nodes and 298 edges, wiki expanded to 247 pages, and enabled cron jobs increased to 56 (rounded to 55+). Added new project pages: gartner-eoi-2026, biobib-formatter, citizen-developer-program.
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               May 10, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Architecture stats refreshed</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Architecture stats refreshed</div>
+            <p className="text-sm text-slate-600 leading-6">
               Updated graph to 222 nodes and 265 edges, wiki expanded to 219 narrative pages, and enabled cron jobs remain at 56 (rounded to 55+). No new cron jobs added this week.
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               May 9, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">100% local open-weight achieved · 31-job migration · Telegram routing fix</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">100% local open-weight achieved · 31-job migration · Telegram routing fix</div>
+            <p className="text-sm text-slate-600 leading-6">
               Bulk-migrated 31 cron jobs onto TritonAI&rsquo;s locally-hosted open-weight catalog.
               Every proxied closed-weight model retired in one pass: 14 jobs off{' '}
               <span className="font-mono text-xs">tritonai-haiku</span> (Claude Haiku 4.5 via
@@ -987,12 +986,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 30, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Codex deprecation handled · all-TritonAI achieved · cron tuning</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Codex deprecation handled · all-TritonAI achieved · cron tuning</div>
+            <p className="text-sm text-slate-600 leading-6">
               OpenAI Codex deprecated <span className="font-mono text-xs">gpt-5.4-mini</span> on
               the OAuth route mid-morning, breaking 6 cron jobs that depended on it. Migrated 10
               affected jobs to TritonAI in a single bulk patch &mdash; 9 to TritonAI open-weight
@@ -1006,12 +1005,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 29, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">OpenRouter dependency dropped · OpenClaw upgraded to 2026.4.27</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">OpenRouter dependency dropped · OpenClaw upgraded to 2026.4.27</div>
+            <p className="text-sm text-slate-600 leading-6">
               Migrated 9 remaining OpenRouter-paid jobs onto TritonAI (light monitors to{' '}
               <span className="font-mono text-xs">tritonai-haiku</span>; weekly deep-dive to{' '}
               <span className="font-mono text-xs">tritonai-opus</span> &mdash; Claude Opus 4.7 on
@@ -1024,12 +1023,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 28, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">31-job migration to TritonAI open-weight models</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">31-job migration to TritonAI open-weight models</div>
+            <p className="text-sm text-slate-600 leading-6">
               UCSD raised the TritonAI virtual-key budget. Migrated 31 cron jobs from a mixed
               OpenRouter / Codex / Google fleet onto TritonAI&rsquo;s open-weight catalog: Kimi
               K2.5 for synthesis-heavy work (briefings, opportunity scan), Mistral Large 3 for
@@ -1044,22 +1043,22 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 26, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Graph stability + steady wiki growth</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Graph stability + steady wiki growth</div>
+            <p className="text-sm text-slate-600 leading-6">
               Knowledge layer wiki coverage expanded from 185 to 189 narrative pages, bringing greater depth to the durable layer. Enabled automated jobs grew to 46 (from 40+), adding more coverage to the daily pipeline.
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 24, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Citizen developer framework + accessibility audit + new monitoring crons</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Citizen developer framework + accessibility audit + new monitoring crons</div>
+            <p className="text-sm text-slate-600 leading-6">
               Knowledge layer crossed 179 graph nodes and 185 wiki pages (up from 163/111 nine
               days earlier &mdash; a +67% jump in wiki coverage as graph-to-wiki reconciliation
               caught up with accumulated entities). Two new crons: a daily{' '}
@@ -1074,12 +1073,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 15, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Hybrid AI digest sourcing</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Hybrid AI digest sourcing</div>
+            <p className="text-sm text-slate-600 leading-6">
               Replaced flaky generic web search with a hybrid pipeline: 14 curated RSS feeds
               (AI labs, arXiv, higher-ed tech publications) pulled fresh at 6&nbsp;AM, plus
               site-scoped searches across major outlets (NYT, Bloomberg, WSJ, Wired, Ars
@@ -1089,12 +1088,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 14, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Team chat ingestion + weekly deep-dive</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Team chat ingestion + weekly deep-dive</div>
+            <p className="text-sm text-slate-600 leading-6">
               Added Microsoft Teams channel sync via MS Graph delegated scopes &mdash; scoped
               to high-signal channels, noise-filtered, chmod-600 on disk. New Sunday 2&nbsp;PM
               deep-research cron picks one significant AI development each week and produces a
@@ -1102,12 +1101,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 12, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Confluence integration (hybrid)</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Confluence integration (hybrid)</div>
+            <p className="text-sm text-slate-600 leading-6">
               Added the institutional Confluence wiki as a sixth data source. A nightly 4&nbsp;AM
               cron mirrors 2,500+ pages from nine UCSD ITS spaces (AI Hub, WTS, BIA, Service
               Desk KB, Endpoint Management, Hybrid Cloud, Enterprise Architecture, Build &amp;
@@ -1117,12 +1116,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-600 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 12, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Knowledge promotion pipeline fixes</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Knowledge promotion pipeline fixes</div>
+            <p className="text-sm text-slate-600 leading-6">
               Repaired broken daily-reflection and context-promotion crons (timeouts bumped to
               600s). Deduped 46 reversed-name person nodes (183&nbsp;&rarr;&nbsp;163). Added
               weekly-signal-synthesis cron for cross-day trends. Enhanced wiki-ingest with
@@ -1131,12 +1130,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               April 11, 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Model migration off Anthropic + Ollama</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Model migration off Anthropic + Ollama</div>
+            <p className="text-sm text-slate-600 leading-6">
               Migrated all 32 cron jobs off Anthropic Claude and local Ollama (quota and timeout
               issues). New allocation: Tier A (OpenAI gpt-5.4) for code and reasoning, Tier B
               (Google gemini-3.1-pro) for analysis, Tier C (gpt-5.4-mini) for fast monitors.
@@ -1145,12 +1144,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-accent border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-accent font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-400 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               Earlier 2026
             </div>
-            <div className="text-ink font-semibold mb-1">Graph + wiki established</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Graph + wiki established</div>
+            <p className="text-sm text-slate-600 leading-6">
               Built the initial knowledge graph from a 577-meeting transcript corpus (Feb
               2025&ndash;Apr 2026). Set up daily crons for calendar briefings, AI news,
               opportunity scanning, and meeting debriefs. Added the wiki structure with
@@ -1158,12 +1157,12 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
           <li className="relative">
-            <span className="absolute -left-8 top-1.5 w-4 h-4 bg-ink border-2 border-paper" aria-hidden="true" />
-            <div className="mono-label text-xs text-muted font-semibold mb-1">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold mb-1">
               Future
             </div>
-            <div className="text-ink font-semibold mb-1">Team-level agents and beyond</div>
-            <p className="text-sm text-muted leading-6">
+            <div className="text-slate-900 font-semibold mb-1">Team-level agents and beyond</div>
+            <p className="text-sm text-slate-600 leading-6">
               Team-level context sharing with privacy boundaries. Department-level anonymized
               trend aggregation. Campus-level institutional insights. Signal feedback loops so
               agents learn from human corrections. Mostly design work, not code yet.
@@ -1175,16 +1174,16 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           FOOTER — meta / links / attribution
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 pb-24 pt-8 border-t-2 border-ink space-y-5">
-        <div className="card-hard p-5">
-          <div className="eyebrow eyebrow--accent mb-2">
+      <section className="max-w-6xl mx-auto px-6 pb-24 pt-8 border-t border-slate-200 space-y-5">
+        <div className="rounded-2xl border border-slate-200 bg-white/90 p-5">
+          <div className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-2">
             Built on
           </div>
-          <p className="text-sm text-muted leading-7">
+          <p className="text-sm text-slate-700 leading-7">
             The foundation of this ecosystem is{' '}
             <a
               href="https://openclaw.ai"
-              className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent"
+              className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
             >
               OpenClaw
             </a>
@@ -1197,20 +1196,20 @@ export default function AiAgentArchitecturePage() {
             as the starting point, none of this would have shipped.
           </p>
         </div>
-        <p className="text-sm text-muted leading-7">
+        <p className="text-sm text-slate-500 leading-7">
           This page is hand-maintained, not auto-generated. Metrics are as-of snapshots &mdash;
           the number of nodes, pages, and crons changes as the system evolves. For the live state,
           see{' '}
           <a
             href="https://github.com/bpollak/mission-control"
-            className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent"
+            className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
           >
             github.com/bpollak/mission-control
           </a>
           . Questions, ideas, or corrections? Get in touch via the{' '}
           <a
             href="/contact"
-            className="font-semibold text-ink underline decoration-2 underline-offset-4 decoration-accent hover:text-accent"
+            className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
           >
             contact page
           </a>

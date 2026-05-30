@@ -364,7 +364,7 @@ export default function ModerationConsole() {
 
   if (!firebaseEnabled) {
     return (
-      <div className="bg-paper border-2 border-accent p-6 text-ink">
+      <div className="bg-white border border-rose-200 rounded-2xl p-6 text-rose-800">
         Firebase is not configured. Moderation console is unavailable.
       </div>
     );
@@ -372,8 +372,8 @@ export default function ModerationConsole() {
 
   if (!authReady) {
     return (
-      <div className="card-hard p-8 flex items-center gap-3 text-muted">
-        <div className="w-5 h-5 border-2 border-ink/30 border-t-accent rounded-full animate-spin" />
+      <div className="bg-white border border-slate-200 rounded-2xl p-8 flex items-center gap-3 text-slate-600">
+        <div className="w-5 h-5 border-2 border-slate-300 border-t-slate-900 rounded-full animate-spin" />
         Loading moderation console...
       </div>
     );
@@ -381,19 +381,19 @@ export default function ModerationConsole() {
 
   if (!user) {
     return (
-      <div className="card-hard p-8">
-        <h2 className="text-2xl font-bold text-ink mb-2">Podcast Moderation</h2>
-        <p className="text-muted mb-6">
+      <div className="bg-white border border-slate-200 rounded-2xl p-8">
+        <h2 className="text-2xl font-bold text-slate-900 mb-2">Podcast Moderation</h2>
+        <p className="text-slate-600 mb-6">
           Sign in with Google to review submissions and control what is published on the podcast page.
         </p>
         <button
           onClick={() => void handleSignIn()}
-          className="btn-bold px-5 py-2.5 uppercase tracking-wide"
+          className="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors"
         >
           Sign in with Google
         </button>
         {authError && (
-          <p className="mt-4 text-sm text-ink bg-paper-2 border-2 border-accent px-3 py-2">
+          <p className="mt-4 text-sm text-rose-700 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2">
             {authError}
           </p>
         )}
@@ -403,17 +403,17 @@ export default function ModerationConsole() {
 
   if (!isAdmin) {
     return (
-      <div className="card-hard p-8">
-        <h2 className="text-2xl font-bold text-ink mb-2">Access Restricted</h2>
-        <p className="text-ink mb-2">
+      <div className="bg-white border border-amber-200 rounded-2xl p-8">
+        <h2 className="text-2xl font-bold text-slate-900 mb-2">Access Restricted</h2>
+        <p className="text-slate-700 mb-2">
           Signed in as <span className="font-semibold">{user.email}</span>.
         </p>
-        <p className="text-muted mb-6">
+        <p className="text-slate-600 mb-6">
           This account is not on the moderation allowlist.
         </p>
         <button
           onClick={() => void handleSignOut()}
-          className="btn-bold-outline px-5 py-2.5 uppercase tracking-wide"
+          className="px-5 py-2.5 rounded-full border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition-colors"
         >
           Sign out
         </button>
@@ -423,11 +423,11 @@ export default function ModerationConsole() {
 
   return (
     <div className="space-y-6">
-      <div className="card-hard p-6">
+      <div className="bg-white border border-slate-200 rounded-2xl p-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-ink">Podcast Moderation</h2>
-            <p className="text-sm text-muted mt-1">
+            <h2 className="text-2xl font-bold text-slate-900">Podcast Moderation</h2>
+            <p className="text-sm text-slate-600 mt-1">
               Signed in as {adminEmail}
             </p>
           </div>
@@ -435,13 +435,13 @@ export default function ModerationConsole() {
             <button
               onClick={() => void loadModerationData()}
               disabled={loadingData || busyAction !== null}
-              className="btn-bold-outline px-4 py-2 uppercase tracking-wide text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 rounded-full border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Refresh
             </button>
             <button
               onClick={() => void handleSignOut()}
-              className="btn-bold-outline px-4 py-2 uppercase tracking-wide text-sm"
+              className="px-4 py-2 rounded-full border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition-colors"
             >
               Sign out
             </button>
@@ -453,18 +453,18 @@ export default function ModerationConsole() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 border-2 border-ink uppercase tracking-wide font-[family-name:var(--font-geist-mono)] text-sm transition-colors ${
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
                 activeTab === tab.id
-                  ? 'bg-ink text-paper'
-                  : 'bg-paper text-ink hover:bg-accent'
+                  ? 'bg-slate-900 text-white'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
               {tab.label}
               <span
-                className={`ml-2 px-2 py-0.5 text-xs ${
+                className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
                   activeTab === tab.id
-                    ? 'bg-paper/20 text-paper'
-                    : 'bg-ink/10 text-ink'
+                    ? 'bg-white/20 text-white'
+                    : 'bg-white text-slate-500'
                 }`}
               >
                 {tab.count}
@@ -474,27 +474,27 @@ export default function ModerationConsole() {
         </div>
 
         {actionMessage && (
-          <p className="mt-4 text-sm text-ink bg-paper-2 border-2 border-ink px-3 py-2">
+          <p className="mt-4 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
             {actionMessage}
           </p>
         )}
 
         {actionError && (
-          <p className="mt-4 text-sm text-ink bg-paper-2 border-2 border-accent px-3 py-2">
+          <p className="mt-4 text-sm text-rose-700 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2">
             {actionError}
           </p>
         )}
 
         {dataError && (
-          <p className="mt-4 text-sm text-ink bg-paper-2 border-2 border-accent px-3 py-2">
+          <p className="mt-4 text-sm text-rose-700 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2">
             {dataError}
           </p>
         )}
       </div>
 
       {loadingData && (
-        <div className="card-hard p-6 flex items-center gap-3 text-muted">
-          <div className="w-5 h-5 border-2 border-ink/30 border-t-accent rounded-full animate-spin" />
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 flex items-center gap-3 text-slate-600">
+          <div className="w-5 h-5 border-2 border-slate-300 border-t-slate-900 rounded-full animate-spin" />
           Loading moderation data...
         </div>
       )}
@@ -503,7 +503,7 @@ export default function ModerationConsole() {
         <div className="space-y-6">
           <div className="space-y-4">
             {pendingSubmissions.length === 0 && (
-              <div className="card-hard p-6 text-muted">
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 text-slate-600">
                 No pending submissions.
               </div>
             )}
@@ -511,44 +511,44 @@ export default function ModerationConsole() {
             {pendingSubmissions.map((submission) => (
               <article
                 key={submission.id}
-                className={`card-hard p-5 ${
+                className={`bg-white border rounded-2xl p-5 transition-colors ${
                   selectedSubmissionId === submission.id
-                    ? 'border-accent'
-                    : ''
+                    ? 'border-blue-500 ring-1 ring-blue-200'
+                    : 'border-slate-200'
                 }`}
               >
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                   <div>
-                    <h3 className="text-lg font-bold text-ink">{submission.name}</h3>
-                    <p className="text-sm text-muted">{submission.hosts}</p>
+                    <h3 className="text-lg font-bold text-slate-900">{submission.name}</h3>
+                    <p className="text-sm text-slate-600">{submission.hosts}</p>
                   </div>
                   <button
                     onClick={() => setSelectedSubmissionId(submission.id)}
-                    className="btn-bold px-4 py-2 uppercase tracking-wide text-sm"
+                    className="px-4 py-2 rounded-full bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800 transition-colors"
                   >
                     {selectedSubmissionId === submission.id ? 'Reviewing' : 'Review'}
                   </button>
                 </div>
 
-                <div className="flex flex-wrap gap-2 text-xs mb-3 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
-                  <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-ink font-semibold">
+                <div className="flex flex-wrap gap-2 text-xs mb-3">
+                  <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">
                     {submission.category}
                   </span>
-                  <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                  <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                     Submitted by {submission.submittedBy}
                   </span>
-                  <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                  <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                     {formatTimestamp(submission.submittedAt)}
                   </span>
                 </div>
 
-                <p className="text-sm text-ink leading-relaxed mb-3">{submission.summary}</p>
+                <p className="text-sm text-slate-700 leading-relaxed mb-3">{submission.summary}</p>
 
                 <a
                   href={submission.listenUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold text-ink underline underline-offset-2 decoration-accent decoration-2 hover:text-accent transition-colors"
+                  className="text-sm font-semibold text-blue-700 hover:text-blue-900"
                 >
                   Open podcast link
                 </a>
@@ -557,36 +557,36 @@ export default function ModerationConsole() {
           </div>
 
           {selectedSubmission && reviewDraft && (
-            <section className="card-hard p-6">
-              <h3 className="text-xl font-bold text-ink mb-1">Review Submission</h3>
-              <p className="text-sm text-muted mb-5">
+            <section className="bg-white border border-slate-200 rounded-2xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-1">Review Submission</h3>
+              <p className="text-sm text-slate-600 mb-5">
                 Edit any fields before approving and publishing.
               </p>
 
               <form className="space-y-4" onSubmit={handleApprove}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-ink mb-1.5">Podcast Name</label>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Podcast Name</label>
                     <input
                       type="text"
                       value={reviewDraft.name}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, name: event.target.value } : prev))
                       }
-                      className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-ink mb-1.5">Host(s)</label>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Host(s)</label>
                     <input
                       type="text"
                       value={reviewDraft.hosts}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, hosts: event.target.value } : prev))
                       }
-                      className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm"
                       required
                     />
                   </div>
@@ -594,67 +594,67 @@ export default function ModerationConsole() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-ink mb-1.5">Category</label>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Category</label>
                     <input
                       type="text"
                       value={reviewDraft.category}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, category: event.target.value } : prev))
                       }
-                      className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-ink mb-1.5">Submitted By</label>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Submitted By</label>
                     <input
                       type="text"
                       value={reviewDraft.submittedBy}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, submittedBy: event.target.value } : prev))
                       }
-                      className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-ink mb-1.5">Summary</label>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Summary</label>
                   <textarea
                     value={reviewDraft.summary}
                     onChange={(event) =>
                       setReviewDraft((prev) => (prev ? { ...prev, summary: event.target.value } : prev))
                     }
                     rows={4}
-                    className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none resize-none"
+                    className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm resize-none"
                     required
                   />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-ink mb-1.5">Podcast Link</label>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Podcast Link</label>
                     <input
                       type="url"
                       value={reviewDraft.listenUrl}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, listenUrl: event.target.value } : prev))
                       }
-                      className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-ink mb-1.5">Cover Image URL (optional)</label>
+                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Cover Image URL (optional)</label>
                     <input
                       type="url"
                       value={reviewDraft.coverImage}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, coverImage: event.target.value } : prev))
                       }
-                      className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm"
                     />
                   </div>
                 </div>
@@ -663,7 +663,7 @@ export default function ModerationConsole() {
                   <button
                     type="submit"
                     disabled={busyAction === 'reject'}
-                    className="btn-bold px-5 py-2.5 uppercase tracking-wide text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-5 py-2.5 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {busyAction === 'approve' && busyId === selectedSubmission.id
                       ? 'Approving...'
@@ -672,22 +672,22 @@ export default function ModerationConsole() {
                   <button
                     type="button"
                     onClick={() => setSelectedSubmissionId(null)}
-                    className="btn-bold-outline px-5 py-2.5 uppercase tracking-wide text-sm"
+                    className="px-5 py-2.5 rounded-full border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition-colors"
                   >
                     Cancel
                   </button>
                 </div>
               </form>
 
-              <div className="mt-6 pt-6 border-t-2 border-ink">
-                <label className="block text-sm font-semibold text-ink mb-1.5">
-                  Rejection Reason <span className="text-accent">*</span>
+              <div className="mt-6 pt-6 border-t border-slate-200">
+                <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                  Rejection Reason <span className="text-rose-600">*</span>
                 </label>
                 <textarea
                   value={rejectionReason}
                   onChange={(event) => setRejectionReason(event.target.value)}
                   rows={3}
-                  className="w-full px-3 py-2.5 border-2 border-ink rounded-none bg-paper text-ink text-sm focus:ring-2 focus:ring-ink focus:outline-none resize-none"
+                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm resize-none"
                   placeholder="Required for rejected submissions"
                   required
                 />
@@ -695,7 +695,7 @@ export default function ModerationConsole() {
                   type="button"
                   onClick={() => void handleReject()}
                   disabled={busyAction === 'approve'}
-                  className="btn-bold-outline mt-3 px-5 py-2.5 uppercase tracking-wide text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="mt-3 px-5 py-2.5 rounded-full bg-rose-600 text-white font-semibold hover:bg-rose-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {busyAction === 'reject' && busyId === selectedSubmission.id
                     ? 'Rejecting...'
@@ -710,26 +710,26 @@ export default function ModerationConsole() {
       {activeTab === 'approved' && !loadingData && (
         <div className="space-y-4">
           {approvedSubmissions.length === 0 && (
-            <div className="card-hard p-6 text-muted">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 text-slate-600">
               No approved submissions yet.
             </div>
           )}
 
           {approvedSubmissions.map((submission) => (
-            <article key={submission.id} className="card-hard p-5">
-              <h3 className="text-lg font-bold text-ink">{submission.name}</h3>
-              <p className="text-sm text-muted mb-2">{submission.hosts}</p>
-              <div className="flex flex-wrap gap-2 text-xs mb-3 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
-                <span className="px-2 py-1 bg-accent border-2 border-ink text-ink font-semibold">Approved</span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+            <article key={submission.id} className="bg-white border border-slate-200 rounded-2xl p-5">
+              <h3 className="text-lg font-bold text-slate-900">{submission.name}</h3>
+              <p className="text-sm text-slate-600 mb-2">{submission.hosts}</p>
+              <div className="flex flex-wrap gap-2 text-xs mb-3">
+                <span className="px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 font-semibold">Approved</span>
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   Moderated by {submission.moderatedBy ?? 'Unknown'}
                 </span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   {formatTimestamp(submission.moderatedAt)}
                 </span>
               </div>
               {submission.publishedPodcastId && (
-                <p className="text-xs text-muted">Published Podcast ID: {submission.publishedPodcastId}</p>
+                <p className="text-xs text-slate-500">Published Podcast ID: {submission.publishedPodcastId}</p>
               )}
             </article>
           ))}
@@ -739,25 +739,25 @@ export default function ModerationConsole() {
       {activeTab === 'rejected' && !loadingData && (
         <div className="space-y-4">
           {rejectedSubmissions.length === 0 && (
-            <div className="card-hard p-6 text-muted">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 text-slate-600">
               No rejected submissions.
             </div>
           )}
 
           {rejectedSubmissions.map((submission) => (
-            <article key={submission.id} className="card-hard p-5">
-              <h3 className="text-lg font-bold text-ink">{submission.name}</h3>
-              <p className="text-sm text-muted mb-2">{submission.hosts}</p>
-              <div className="flex flex-wrap gap-2 text-xs mb-3 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
-                <span className="px-2 py-1 bg-paper-2 border-2 border-accent text-ink font-semibold">Rejected</span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+            <article key={submission.id} className="bg-white border border-slate-200 rounded-2xl p-5">
+              <h3 className="text-lg font-bold text-slate-900">{submission.name}</h3>
+              <p className="text-sm text-slate-600 mb-2">{submission.hosts}</p>
+              <div className="flex flex-wrap gap-2 text-xs mb-3">
+                <span className="px-2 py-1 rounded-full bg-rose-50 text-rose-700 font-semibold">Rejected</span>
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   Moderated by {submission.moderatedBy ?? 'Unknown'}
                 </span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   {formatTimestamp(submission.moderatedAt)}
                 </span>
               </div>
-              <p className="text-sm text-ink">
+              <p className="text-sm text-slate-700">
                 <span className="font-semibold">Reason:</span>{' '}
                 {submission.rejectionReason ?? 'No reason stored.'}
               </p>
@@ -769,52 +769,52 @@ export default function ModerationConsole() {
       {activeTab === 'published' && !loadingData && (
         <div className="space-y-4">
           {publishedCommunityPodcasts.length === 0 && (
-            <div className="card-hard p-6 text-muted">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 text-slate-600">
               No community submissions are currently published.
             </div>
           )}
 
           {publishedCommunityPodcasts.map((podcast) => (
-            <article key={podcast.id} className="card-hard p-5">
+            <article key={podcast.id} className="bg-white border border-slate-200 rounded-2xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                 <div>
-                  <h3 className="text-lg font-bold text-ink">{podcast.name}</h3>
-                  <p className="text-sm text-muted">{podcast.hosts}</p>
+                  <h3 className="text-lg font-bold text-slate-900">{podcast.name}</h3>
+                  <p className="text-sm text-slate-600">{podcast.hosts}</p>
                 </div>
                 <button
                   onClick={() => void handleRemoveFromPage(podcast)}
                   disabled={busyAction === 'remove' && busyId === podcast.id}
-                  className="btn-bold-outline px-4 py-2 uppercase tracking-wide text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 rounded-full bg-rose-600 text-white text-sm font-semibold hover:bg-rose-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {busyAction === 'remove' && busyId === podcast.id ? 'Removing...' : 'Remove from Page'}
                 </button>
               </div>
 
-              <div className="flex flex-wrap gap-2 text-xs mb-3 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-ink font-semibold">
+              <div className="flex flex-wrap gap-2 text-xs mb-3">
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">
                   {podcast.category}
                 </span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   Upvotes: {podcast.upvotes}
                 </span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   Published: {formatTimestamp(podcast.publishedAt ?? podcast.createdAt)}
                 </span>
               </div>
 
-              <p className="text-sm text-ink mb-3 leading-relaxed">{podcast.summary}</p>
+              <p className="text-sm text-slate-700 mb-3 leading-relaxed">{podcast.summary}</p>
 
               <div className="flex flex-wrap gap-4 text-sm">
                 <a
                   href={podcast.listenUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-ink underline underline-offset-2 decoration-accent decoration-2 hover:text-accent transition-colors"
+                  className="font-semibold text-blue-700 hover:text-blue-900"
                 >
                   Open podcast link
                 </a>
                 {podcast.sourceSubmissionId && (
-                  <span className="text-muted">Submission ID: {podcast.sourceSubmissionId}</span>
+                  <span className="text-slate-500">Submission ID: {podcast.sourceSubmissionId}</span>
                 )}
               </div>
             </article>
@@ -825,21 +825,21 @@ export default function ModerationConsole() {
       {activeTab === 'removed' && !loadingData && (
         <div className="space-y-4">
           {removedSubmissions.length === 0 && (
-            <div className="card-hard p-6 text-muted">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 text-slate-600">
               No removed submissions.
             </div>
           )}
 
           {removedSubmissions.map((submission) => (
-            <article key={submission.id} className="card-hard p-5">
-              <h3 className="text-lg font-bold text-ink">{submission.name}</h3>
-              <p className="text-sm text-muted mb-2">{submission.hosts}</p>
-              <div className="flex flex-wrap gap-2 text-xs mb-3 font-[family-name:var(--font-geist-mono)] uppercase tracking-wide">
-                <span className="px-2 py-1 bg-ink text-paper border-2 border-ink font-semibold">Removed</span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+            <article key={submission.id} className="bg-white border border-slate-200 rounded-2xl p-5">
+              <h3 className="text-lg font-bold text-slate-900">{submission.name}</h3>
+              <p className="text-sm text-slate-600 mb-2">{submission.hosts}</p>
+              <div className="flex flex-wrap gap-2 text-xs mb-3">
+                <span className="px-2 py-1 rounded-full bg-slate-200 text-slate-700 font-semibold">Removed</span>
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   Moderated by {submission.moderatedBy ?? 'Unknown'}
                 </span>
-                <span className="px-2 py-1 bg-paper-2 border-2 border-ink text-muted">
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600">
                   {formatTimestamp(submission.moderatedAt)}
                 </span>
               </div>

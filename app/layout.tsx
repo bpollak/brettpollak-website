@@ -1,35 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-
-// Self-hosted fonts (next/font/local) — no build-time network dependency.
-// Display face for oversized headers (single weight 400).
-const displayFont = localFont({
-  src: "./fonts/Anton-Regular.woff2",
-  weight: "400",
-  variable: "--font-montserrat",
-  display: "swap",
-});
-
-// Body face (variable weight).
-const bodyFont = localFont({
-  src: "./fonts/Inter-Variable.woff2",
-  weight: "100 900",
-  variable: "--font-geist-sans",
-  display: "swap",
-});
-
-// Mono face for eyebrows, labels, and stats (variable weight).
-const monoFont = localFont({
-  src: "./fonts/JetBrainsMono-Variable.woff2",
-  weight: "100 800",
-  variable: "--font-geist-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://brettcpollak.com'),
@@ -94,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable}`}>
+    <html lang="en">
       <body className="antialiased">
         <GoogleAnalytics />
         <Header />

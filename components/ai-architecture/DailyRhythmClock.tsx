@@ -61,9 +61,9 @@ function polar(cx: number, cy: number, r: number, angle: number) {
 }
 
 const ROLE_COLOR: Record<Cron['role'], string> = {
-  accumulation: '#14110f', // ink
-  synthesis: '#ff4d1c', // accent (vermilion)
-  publication: '#1a3aff', // accent-2 (rare secondary contrast)
+  accumulation: '#2563eb', // blue-600
+  synthesis: '#059669', // emerald-600
+  publication: '#d97706', // amber-600
 };
 
 export default function DailyRhythmClock() {
@@ -82,8 +82,8 @@ export default function DailyRhythmClock() {
         </desc>
 
         {/* Outer ring */}
-        <circle cx={CX} cy={CY} r={R_RING} fill="#efe9df" stroke="#14110f" strokeWidth="2" />
-        <circle cx={CX} cy={CY} r={R_RING - 40} fill="none" stroke="#14110f" strokeWidth="1" strokeOpacity="0.25" />
+        <circle cx={CX} cy={CY} r={R_RING} fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1.5" />
+        <circle cx={CX} cy={CY} r={R_RING - 40} fill="none" stroke="#e2e8f0" strokeWidth="1" />
 
         {/* Hour ticks (every 3 hours) */}
         {[0, 3, 6, 9, 12, 15, 18, 21].map((h) => {
@@ -94,8 +94,8 @@ export default function DailyRhythmClock() {
           const displayHour = h === 0 ? '12a' : h === 12 ? '12p' : h < 12 ? `${h}a` : `${h - 12}p`;
           return (
             <g key={`tick-${h}`}>
-              <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#14110f" strokeWidth="1.5" />
-              <text x={labelP.x} y={labelP.y + 4} textAnchor="middle" className="fill-muted" style={{ fontSize: '12px', fontWeight: 600 }}>
+              <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#94a3b8" strokeWidth="1.5" />
+              <text x={labelP.x} y={labelP.y + 4} textAnchor="middle" className="fill-slate-500" style={{ fontSize: '12px', fontWeight: 600 }}>
                 {displayHour}
               </text>
             </g>
@@ -103,27 +103,27 @@ export default function DailyRhythmClock() {
         })}
 
         {/* Quadrant labels (inner) */}
-        <text x={CX} y={CY - 80} textAnchor="middle" className="fill-muted" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX} y={CY - 80} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Night
         </text>
-        <text x={CX + 85} y={CY + 5} textAnchor="middle" className="fill-muted" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX + 85} y={CY + 5} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Morning
         </text>
-        <text x={CX} y={CY + 95} textAnchor="middle" className="fill-muted" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX} y={CY + 95} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Afternoon
         </text>
-        <text x={CX - 85} y={CY + 5} textAnchor="middle" className="fill-muted" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX - 85} y={CY + 5} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Evening
         </text>
 
         {/* Center label */}
-        <text x={CX} y={CY - 18} textAnchor="middle" className="fill-ink" style={{ fontSize: '22px', fontWeight: 700 }}>
+        <text x={CX} y={CY - 18} textAnchor="middle" className="fill-slate-900" style={{ fontSize: '22px', fontWeight: 700 }}>
           24h
         </text>
-        <text x={CX} y={CY + 4} textAnchor="middle" className="fill-muted" style={{ fontSize: '12px' }}>
+        <text x={CX} y={CY + 4} textAnchor="middle" className="fill-slate-600" style={{ fontSize: '12px' }}>
           knowledge rhythm
         </text>
-        <text x={CX} y={CY + 24} textAnchor="middle" className="fill-muted" style={{ fontSize: '11px', fontStyle: 'italic' }}>
+        <text x={CX} y={CY + 24} textAnchor="middle" className="fill-slate-500" style={{ fontSize: '11px', fontStyle: 'italic' }}>
           America/Los_Angeles
         </text>
 
@@ -147,12 +147,12 @@ export default function DailyRhythmClock() {
                 strokeWidth="1"
                 strokeOpacity="0.4"
               />
-              <circle cx={dotP.x} cy={dotP.y} r="6" fill={color} stroke="#f7f4ee" strokeWidth="2" />
+              <circle cx={dotP.x} cy={dotP.y} r="6" fill={color} stroke="white" strokeWidth="2" />
               <text
                 x={labelP.x}
                 y={labelP.y - 2}
                 textAnchor={anchor}
-                style={{ fontSize: '12px', fontWeight: 700, fill: '#14110f' }}
+                style={{ fontSize: '12px', fontWeight: 700, fill: '#0f172a' }}
               >
                 {hhmm} · {cron.label}
               </text>
@@ -161,7 +161,7 @@ export default function DailyRhythmClock() {
                   x={labelP.x}
                   y={labelP.y + 13}
                   textAnchor={anchor}
-                  style={{ fontSize: '10px', fill: '#6b635b', fontStyle: 'italic' }}
+                  style={{ fontSize: '10px', fill: '#64748b', fontStyle: 'italic' }}
                 >
                   {cron.note}
                 </text>
@@ -173,15 +173,15 @@ export default function DailyRhythmClock() {
         {/* Legend — centered below the clock */}
         <g transform="translate(430, 780)">
           <circle cx="0" cy="0" r="7" fill={ROLE_COLOR.accumulation} />
-          <text x="14" y="5" style={{ fontSize: '13px', fill: '#14110f', fontWeight: 600 }}>
+          <text x="14" y="5" style={{ fontSize: '13px', fill: '#334155', fontWeight: 600 }}>
             Accumulation
           </text>
           <circle cx="160" cy="0" r="7" fill={ROLE_COLOR.synthesis} />
-          <text x="174" y="5" style={{ fontSize: '13px', fill: '#14110f', fontWeight: 600 }}>
+          <text x="174" y="5" style={{ fontSize: '13px', fill: '#334155', fontWeight: 600 }}>
             Synthesis
           </text>
           <circle cx="290" cy="0" r="7" fill={ROLE_COLOR.publication} />
-          <text x="304" y="5" style={{ fontSize: '13px', fill: '#14110f', fontWeight: 600 }}>
+          <text x="304" y="5" style={{ fontSize: '13px', fill: '#334155', fontWeight: 600 }}>
             Publication
           </text>
         </g>
