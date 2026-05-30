@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-29T17:20:01.582Z",
+  "generatedAt": "2026-05-30T13:35:30.039Z",
   "weekOf": "2026-05-25",
   "weekEnding": "2026-05-31",
   "weekLabel": "Week of May 25–31, 2026",
-  "publishedThrough": "May 29, 2026",
-  "digestCount": 5,
-  "headlineCount": 27,
+  "publishedThrough": "May 30, 2026",
+  "digestCount": 6,
+  "headlineCount": 32,
   "days": [
     {
       "isoDate": "2026-05-25",
@@ -92,6 +92,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Why I Created the National AI Equity Lab"
       ],
       "raw": "# AI Intelligence Briefing - May 29, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google Moves AI Agents into the Mainstream** — Google’s push to embed AI agents across its product suite signals a mainstream turn for agentic AI, directly relevant to Brett’s focus on agentic capabilities.\n  🔗 Graph: agentic-ai, google, gemini\n  📅 Published: 2026-05-27\n  📰 https://campustechnology.com/articles/2026/05/27/google-moves-ai-agents-into-the-mainstream.aspx\n\n• **ACTUAL Intelligence: Practitioner Perspectives on Centering the Human in the Age of AI** — Highlights the need for human‑centric AI policies in higher education, aligning with AI governance priorities.\n  🔗 Graph: ai-governance, higher-ed-ai, eduCAUSE\n  📅 Published: 2026-05-28\n  📰 https://er.educause.edu/articles/2026/5/actual-intelligence-practitioner-perspectives-on-centering-the-human-in-the-age-of-ai\n\n• **The Canvas Breach: Reframing Higher Ed’s SaaS Risk Exposure** — A major data breach at Canvas underscores security challenges for campus SaaS tools, a key concern for enterprise monitoring.\n  🔗 Graph: ai-security, higher-ed-ai, canvas-lms\n  📅 Published: 2026-05-28\n  📰 https://edtechmagazine.com/higher/article/2026/05/canvas-breach-reframing-higher-eds-saas-risk-exposure\n\n• **OpenAI’s Frontier Governance Framework** — OpenAI outlines its safety and governance practices, offering a benchmark for UCSD’s AI governance efforts.\n  🔗 Graph: ai-governance, openai, gpt-4\n  📅 Published: 2026-05-28\n  📰 https://openai.com/index/openai-frontier-governance-framework\n\n• **Why I Created the National AI Equity Lab** — Discusses equity in AI deployment, informing AI governance and inclusion strategies on campus.\n  🔗 Graph: ai-governance, higher-ed-ai, equity\n  📅 Published: 2026-05-29\n  📰 https://www.insidehighered.com/opinion/columns/resident-scholar/2026/05/29/why-i-created-national-ai-equity-lab\n\n💡 Signal: Campus AI governance, security, and agentic capabilities are accelerating, with major vendors and higher‑ed institutions racing to embed responsible AI.\n"
+    },
+    {
+      "isoDate": "2026-05-30",
+      "displayDate": "Saturday, May 30",
+      "sourceFile": "ai-news-digest-2026-05-30.md",
+      "headlines": [
+        "Google Moves AI Agents into the Mainstream",
+        "9 demos of Gemini Omni and Gemini 3.5 in action",
+        "OpenAI’s Frontier Governance Framework",
+        "Why I Created the National AI Equity Lab",
+        "Higher Ed IT Plays an Essential Role in Reducing Workday Friction"
+      ],
+      "raw": "# AI Intelligence Briefing - Saturday, May 30, 2026\n*Curated from knowledge graph (122 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google Moves AI Agents into the Mainstream** — At its recent I/O developer conference, Google presented artificial intelligence agents as a core product strategy across Search, assistants, and productivity tools.\n  🔗 Graph: Google, Agentic AI, AI Governance\n  📅 Published: 2026-05-27\n  📰 https://campustechnology.com/articles/2026/05/27/google-moves-ai-agents-into-the-mainstream.aspx\n\n• **9 demos of Gemini Omni and Gemini 3.5 in action** — Watch nine videos showcasing Google’s Gemini Omni and Gemini 3.5 models announced at I/O 2026, highlighting multimodal capabilities.\n  🔗 Graph: Google, Gemini, Agentic AI\n  📅 Published: 2026-05-29\n  📰 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/\n\n• **OpenAI’s Frontier Governance Framework** — OpenAI outlines its safety, security, and risk practices, aligning with emerging EU and California regulations for frontier AI systems.\n  🔗 Graph: OpenAI, AI Governance, AI Compliance & Governance\n  📅 Published: 2026-05-28\n  📰 https://openai.com/index/openai-frontier-governance-framework\n\n• **Why I Created the National AI Equity Lab** — An Inside Higher Ed opinion piece on building an AI equity lab to ensure AI does not widen societal inequities.\n  🔗 Graph: AI Governance, Higher Ed AI, Brett Pollak\n  📅 Published: 2026-05-29\n  📰 https://www.insidehighered.com/opinion/columns/resident-scholar/2026/05/29/why-i-created-national-ai-equity-lab\n\n• **Higher Ed IT Plays an Essential Role in Reducing Workday Friction** — EdTech Magazine discusses how higher‑education IT teams are crucial for supporting AI solutions and streamlining workflows.\n  🔗 Graph: Higher Ed AI, AI Adoption, Brett Pollak\n  📅 Published: 2026-05-29\n  📰 https://edtechmagazine.com/higher/article/2026/05/higher-ed-it-plays-essential-role-reducing-workday-friction\n\n💡 Signal: Campus technology leaders are rapidly embedding AI agents and multimodal models, while higher‑education voices push governance and equity frameworks to guide responsible adoption."
     }
   ]
 };
