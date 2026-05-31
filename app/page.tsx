@@ -203,9 +203,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
-              <p className="rule-label mb-8">Higher education AI practice</p>
+              <p className="rule-label mb-8">Higher education technology practice</p>
               <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[0.96] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
-                Building institutional AI with the institution still in view.
+                Building technology that keeps the institution, and its people, in view.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
                 I work with colleagues at UC San Diego on practical AI systems through{' '}
