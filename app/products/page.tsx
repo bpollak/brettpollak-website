@@ -172,8 +172,7 @@ export default function Products() {
               rel="noopener noreferrer"
               className="group block border-b border-[#d9dfd3] py-10 last:border-b-0 transition-colors hover:bg-[#fffef9]"
             >
-              <article className="grid gap-8 lg:grid-cols-[0.24fr_0.42fr_0.72fr] lg:items-center">
-                <div className="font-mono text-sm text-[#6b746b]">0{index + 1}</div>
+              <article className="grid gap-8 lg:grid-cols-[0.42fr_0.72fr] lg:items-center">
                 <div className={`border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`}>
                   <Image
                     src={product.image}

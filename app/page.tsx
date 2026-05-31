@@ -115,20 +115,23 @@ function HomePracticeMark() {
   return (
     <svg
       aria-hidden="true"
-      className="h-24 w-32 shrink-0"
+      className="diagram h-24 w-32 shrink-0"
       viewBox="0 0 160 120"
       fill="none"
     >
-      <path d="M20 92h120" stroke="#d9dfd3" strokeWidth="2" />
-      <path d="M35 92V48l45-22 45 22v44" stroke="#17201b" strokeWidth="3" strokeLinejoin="round" />
-      <path d="M53 92V61h54v31" stroke="#1f5a8a" strokeWidth="3" strokeLinejoin="round" />
-      <path d="M80 26v66" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="5 5" />
-      <path d="M49 62c17 0 18-24 31-24s14 24 31 24" stroke="#c97712" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="49" cy="62" r="6" fill="#1f5a8a" />
-      <circle cx="80" cy="38" r="6" fill="#366c5a" />
-      <circle cx="111" cy="62" r="6" fill="#c97712" />
-      <path d="M58 78h44" stroke="#17201b" strokeWidth="3" strokeLinecap="round" />
-      <path d="M58 88h44" stroke="#17201b" strokeWidth="3" strokeLinecap="round" />
+      <path d="M20 100h120" stroke="#d9dfd3" strokeWidth="2" />
+      <path d="M30 84v16M80 56v44M130 32v68" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="4 5" />
+      <path
+        className="flow-path"
+        d="M30 84 80 56 130 32"
+        stroke="#485248"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="30" cy="84" r="7" fill="#1f5a8a" />
+      <circle cx="80" cy="56" r="7" fill="#c97712" />
+      <circle cx="130" cy="32" r="7" fill="#366c5a" />
     </svg>
   );
 }
