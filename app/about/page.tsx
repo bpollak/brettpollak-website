@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     url: "https://brettcpollak.com/about",
     images: [
       {
-        url: "/brettpollak-headshot-lean.png",
-        width: 300,
-        height: 400,
-        alt: "Brett Pollak",
+        url: "/brett-pollak-about.jpg",
+        width: 850,
+        height: 1280,
+        alt: "Brett Pollak seated outdoors on the UC San Diego campus",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Brett Pollak | Work in Higher Education and AI",
     description: "Background and current work on AI, digital services, and institutional change in higher education.",
-    images: ["/brettpollak-headshot-lean.png"],
+    images: ["/brett-pollak-about.jpg"],
   },
 };
 
@@ -48,10 +48,10 @@ export default function About() {
           <div className="md:col-span-2 relative">
             <div className="relative border border-[#d9dfd3] bg-[#fffef9] p-3 shadow-[12px_12px_0_rgba(201,119,18,0.16)]">
               <Image
-                src="/brettpollak-headshot-lean.webp"
-                alt="Brett Pollak"
-                width={300}
-                height={400}
+                src="/brett-pollak-about.jpg"
+                alt="Brett Pollak seated outdoors on the UC San Diego campus"
+                width={850}
+                height={1280}
                 className="w-full"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
