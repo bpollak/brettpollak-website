@@ -55,11 +55,12 @@ export default function Products() {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-auto overflow-hidden">
                 <Image
-                  src="/resolution-companion.png"
+                  src="/resolution-companion.webp"
                   alt="Resolution Companion App"
                   width={400}
                   height={800}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(min-width: 768px) 50vw, 100vw"
                 />
               </div>
               <div className="p-12 flex flex-col justify-center">

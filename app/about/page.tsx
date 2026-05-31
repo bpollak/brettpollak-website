@@ -49,11 +49,12 @@ export default function About() {
             <div className="hidden md:block absolute -inset-3 bg-gradient-to-tl from-slate-50 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
-                src="/brettpollak-headshot-lean.png"
+                src="/brettpollak-headshot-lean.webp"
                 alt="Brett Pollak"
                 width={300}
                 height={400}
                 className="w-full rounded-xl shadow-2xl ring-4 ring-white/50"
+                sizes="(min-width: 768px) 40vw, 100vw"
               />
             </div>
           </div>

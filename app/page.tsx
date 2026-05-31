@@ -184,7 +184,7 @@ export default function Home() {
             <div className="hidden md:block absolute -inset-3 bg-gradient-to-tr from-slate-50 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
             <div className="relative">
               <Image
-                src="/brett-pollak-headshot-sit-center.png"
+                src="/brett-pollak-headshot-sit-center.webp"
                 alt="Brett Pollak"
                 width={500}
                 height={753}
@@ -192,6 +192,7 @@ export default function Home() {
                 placeholder="blur"
                 blurDataURL={heroBlurDataURL}
                 priority
+                sizes="(min-width: 768px) 42vw, 100vw"
               />
             </div>
           </div>
