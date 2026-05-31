@@ -459,3 +459,98 @@ html {
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
 }
+
+/* ============================================================
+   Living System Map — motion system
+   (scroll-reveal + flowing dotted signal lines)
+   Progressive enhancement: content is fully visible without JS,
+   and all motion is suppressed under prefers-reduced-motion.
+   ============================================================ */
+
+/* Scroll-reveal: the Reveal component adds .reveal on mount (so no-JS users
+   keep visible content), then .is-visible once the block enters the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Diagram fade-in once it scrolls into view. Only the JS-"armed" diagram is
+   hidden first, so without JS the diagram renders fully visible. */
+.diagram.armed {
+  opacity: 0;
+  transition: opacity 0.7s ease-out;
+}
+
+.diagram.armed.is-visible {
+  opacity: 1;
+}
+
+/* Flowing dotted signal lines. Direction reads from the gentle drift of the
+   dots along each path (start -> end) plus the left -> core -> right layout,
+   so no arrowheads are needed and every connector looks consistent. */
+.flow-path {
+  stroke-dasharray: 1 12;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flow-path {
+    animation: flow-move 2.6s linear infinite;
+  }
+  .flow-path.flow-delay-1 {
+    animation-delay: 0.5s;
+  }
+  .flow-path.flow-delay-2 {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes flow-move {
+  to {
+    /* exactly one dash + gap period, for a seamless loop */
+    stroke-dashoffset: -13;
+  }
+}
+
+/* Gentle hover lift for interactive cards / diagrams */
+.lift {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Respect reduced-motion: settle everything to its final, visible state. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .diagram.armed {
+    opacity: 1 !important;
+  }
+
+  .flow-path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

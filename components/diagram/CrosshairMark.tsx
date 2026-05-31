@@ -1,37 +1,46 @@
 import { TONE_HEX, PAPER, LINE, INK, type Tone } from './tones';
 
-interface CrosshairMarkProps {
+interface CoreChipProps {
   cx: number;
   cy: number;
-  r?: number;
   tone?: Tone;
-  label?: string;
+  label: string;
+  width?: number;
+  height?: number;
 }
 
 /**
- * The signature center mark: a paper disc with a dashed signal ring and a
- * crosshair, optionally captioned beneath. Pure SVG fragment.
+ * The central "core" of a system map: a solid chip whose label sits on its own
+ * opaque background. Drawn AFTER the connectors so nothing can run under the
+ * text — connectors terminate at the chip's edge, keeping the label legible.
+ * A small tone accent bar ties it to the node language.
  */
-export default function CrosshairMark({ cx, cy, r = 34, tone = 'gold', label }: CrosshairMarkProps) {
+export default function CrosshairMark({
+  cx,
+  cy,
+  tone = 'gold',
+  label,
+  width = 156,
+  height = 60,
+}: CoreChipProps) {
   const hex = TONE_HEX[tone];
+  const x = cx - width / 2;
+  const y = cy - height / 2;
   return (
     <g>
-      <circle cx={cx} cy={cy} r={r} fill={PAPER} stroke={LINE} strokeWidth={1.5} />
-      <circle cx={cx} cy={cy} r={r * 0.58} fill="none" stroke={hex} strokeWidth={1.5} strokeDasharray="3 4" />
-      <path d={`M${cx} ${cy - 14}v28M${cx - 14} ${cy}h28`} stroke={INK} strokeWidth={1.5} />
-      {label ? (
-        <text
-          x={cx}
-          y={cy + r + 22}
-          textAnchor="middle"
-          fontFamily="var(--font-interface)"
-          fontSize={14}
-          fontWeight={700}
-          fill={INK}
-        >
-          {label}
-        </text>
-      ) : null}
+      <rect x={x} y={y} width={width} height={height} rx={12} fill={PAPER} stroke={LINE} strokeWidth={1.5} />
+      <rect x={x} y={y} width={width} height={4} rx={2} fill={hex} />
+      <text
+        x={cx}
+        y={cy + 6}
+        textAnchor="middle"
+        fontFamily="var(--font-interface)"
+        fontSize={16}
+        fontWeight={700}
+        fill={INK}
+      >
+        {label}
+      </text>
     </g>
   );
 }

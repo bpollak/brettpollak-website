@@ -3,61 +3,43 @@ import { TONE_HEX, type Tone } from './tones';
 interface SignalPathProps {
   d: string;
   tone?: Tone;
-  /** Static dotted connector (the established "signal" look). */
+  /** Static dotted connector (no motion). */
   dashed?: boolean;
-  /** Solid line that draws itself in once when the diagram scrolls into view. */
-  trace?: boolean;
-  /** Stagger the draw-in: 1, 2, or 3. */
-  traceDelay?: 1 | 2 | 3;
-  markerId?: string;
+  /** Flowing dotted connector — dots drift along the path direction. */
+  flow?: boolean;
+  /** Desync flowing lines from each other: 1 or 2. */
+  flowDelay?: 1 | 2;
   strokeWidth?: number;
 }
 
 /**
- * A connector between nodes. Either a static dotted "signal" line or a solid
- * line that traces itself in (via stroke-dashoffset on a normalized pathLength).
+ * A connector between nodes. Direction is conveyed by the *flow* of the dots
+ * (and the left→core→right layout), not by an arrowhead — which keeps every
+ * connector visually consistent regardless of its curve.
  */
 export default function SignalPath({
   d,
   tone = 'ink',
   dashed = false,
-  trace = false,
-  traceDelay,
-  markerId,
-  strokeWidth = 2,
+  flow = true,
+  flowDelay,
+  strokeWidth = 3,
 }: SignalPathProps) {
   const hex = TONE_HEX[tone];
-  const marker = markerId ? `url(#${markerId})` : undefined;
-
-  if (dashed) {
-    return (
-      <path
-        d={d}
-        fill="none"
-        stroke={hex}
-        strokeWidth={strokeWidth}
-        strokeDasharray="1 11"
-        strokeLinecap="round"
-        markerEnd={marker}
-        opacity={0.85}
-      />
-    );
-  }
-
-  const traceClass = trace
-    ? `trace-path${traceDelay ? ` trace-delay-${traceDelay}` : ''}`
+  const flowClass = flow
+    ? `flow-path${flowDelay ? ` flow-delay-${flowDelay}` : ''}`
     : undefined;
 
   return (
     <path
-      className={traceClass}
+      className={flowClass}
       d={d}
       fill="none"
       stroke={hex}
       strokeWidth={strokeWidth}
       strokeLinecap="round"
-      pathLength={trace ? 1 : undefined}
-      markerEnd={marker}
+      strokeDasharray={dashed && !flow ? '1 12' : undefined}
+      opacity={0.9}
     />
   );
 }
