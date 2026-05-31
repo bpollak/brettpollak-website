@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-05-31T06:32:31.222Z",
+  "generatedAt": "2026-05-31T13:35:56.106Z",
   "weekOf": "2026-05-25",
   "weekEnding": "2026-05-31",
   "weekLabel": "Week of May 25–31, 2026",
-  "publishedThrough": "May 30, 2026",
-  "digestCount": 6,
-  "headlineCount": 32,
+  "publishedThrough": "May 31, 2026",
+  "digestCount": 7,
+  "headlineCount": 39,
   "days": [
     {
       "isoDate": "2026-05-25",
@@ -105,6 +105,21 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Higher Ed IT Plays an Essential Role in Reducing Workday Friction"
       ],
       "raw": "# AI Intelligence Briefing - Saturday, May 30, 2026\n*Curated from knowledge graph (122 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Google Moves AI Agents into the Mainstream** — At its recent I/O developer conference, Google presented artificial intelligence agents as a core product strategy across Search, assistants, and productivity tools.\n  🔗 Graph: Google, Agentic AI, AI Governance\n  📅 Published: 2026-05-27\n  📰 https://campustechnology.com/articles/2026/05/27/google-moves-ai-agents-into-the-mainstream.aspx\n\n• **9 demos of Gemini Omni and Gemini 3.5 in action** — Watch nine videos showcasing Google’s Gemini Omni and Gemini 3.5 models announced at I/O 2026, highlighting multimodal capabilities.\n  🔗 Graph: Google, Gemini, Agentic AI\n  📅 Published: 2026-05-29\n  📰 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/\n\n• **OpenAI’s Frontier Governance Framework** — OpenAI outlines its safety, security, and risk practices, aligning with emerging EU and California regulations for frontier AI systems.\n  🔗 Graph: OpenAI, AI Governance, AI Compliance & Governance\n  📅 Published: 2026-05-28\n  📰 https://openai.com/index/openai-frontier-governance-framework\n\n• **Why I Created the National AI Equity Lab** — An Inside Higher Ed opinion piece on building an AI equity lab to ensure AI does not widen societal inequities.\n  🔗 Graph: AI Governance, Higher Ed AI, Brett Pollak\n  📅 Published: 2026-05-29\n  📰 https://www.insidehighered.com/opinion/columns/resident-scholar/2026/05/29/why-i-created-national-ai-equity-lab\n\n• **Higher Ed IT Plays an Essential Role in Reducing Workday Friction** — EdTech Magazine discusses how higher‑education IT teams are crucial for supporting AI solutions and streamlining workflows.\n  🔗 Graph: Higher Ed AI, AI Adoption, Brett Pollak\n  📅 Published: 2026-05-29\n  📰 https://edtechmagazine.com/higher/article/2026/05/higher-ed-it-plays-essential-role-reducing-workday-friction\n\n💡 Signal: Campus technology leaders are rapidly embedding AI agents and multimodal models, while higher‑education voices push governance and equity frameworks to guide responsible adoption."
+    },
+    {
+      "isoDate": "2026-05-31",
+      "displayDate": "Sunday, May 31",
+      "sourceFile": "ai-news-digest-2026-05-31.md",
+      "headlines": [
+        "The Wrong Battle: Why Your Institution's AI Policy Is Probably Solving the Wrong Problem",
+        "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
+        "Take our I/O 2026 quiz, vibe coded in Google AI Studio.",
+        "AI isn’t eliminating gender gaps. It’s reorganizing them",
+        "Boston Children’s uses AI to unlock new diagnoses",
+        "MUFG aims to become AI‑native with OpenAI",
+        "A shared playbook for trustworthy third‑party evaluations"
+      ],
+      "raw": "# AI Intelligence Briefing - Sunday, May 31, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **The Wrong Battle: Why Your Institution's AI Policy Is Probably Solving the Wrong Problem** — Campus Technology argues that many AI policies focus on detection rather than broader institutional goals, urging leaders to rethink strategy.\n  🔗 Graph: AI Governance, Higher Ed AI, Brett Pollak\n  📅 Published: 2026-05-28\n  📰 https://campustechnology.com/articles/2026/05/28/the-wrong-battle-why-your-institutions-ai-policy-is-probably-solving-the-wrong-problem.aspx\n\n• **Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler** — Hugging Face walks developers through performance profiling tools, helping AI engineers optimize models for production.\n  🔗 Graph: OpenAI, AI Adoption, Higher Ed AI\n  📅 Published: 2026-05-29\n  📰 https://huggingface.co/blog/torch-profiler\n\n• **Take our I/O 2026 quiz, vibe coded in Google AI Studio.** — Google showcases a playful AI‑generated quiz built with Gemini, highlighting the growing accessibility of generative AI for developers.\n  🔗 Graph: Google, Gemini, Agentic AI\n  📅 Published: 2026-05-29\n  📰 https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/\n\n• **AI isn’t eliminating gender gaps. It’s reorganizing them** — University Business examines how AI tools are reshaping workplace dynamics, with women bearing disproportionate adjustment costs.\n  🔗 Graph: AI Governance, Higher Ed AI, Brett Pollak\n  📅 Published: 2026-05-29\n  📰 https://universitybusiness.com/ai-isnt-eliminating-gender-gaps-its-reorganizing-them/\n\n• **Boston Children’s uses AI to unlock new diagnoses** — OpenAI details how the hospital leverages GPT‑4 to streamline rare‑disease detection, improving patient outcomes.\n  🔗 Graph: OpenAI, AI Adoption, Brett Pollak\n  📅 Published: 2026-05-29\n  📰 https://openai.com/index/boston-childrens-hospital\n\n• **MUFG aims to become AI‑native with OpenAI** — OpenAI reports on MUFG’s rollout of ChatGPT Enterprise to automate finance workflows, a win‑win for enterprise AI adoption.\n  🔗 Graph: OpenAI, AI Governance, Brett Pollak\n  📅 Published: 2026-05-28\n  📰 https://openai.com/index/mufg\n\n• **A shared playbook for trustworthy third‑party evaluations** — OpenAI publishes guidelines for independent AI audits, reinforcing safety standards that align with UC San Diego’s governance roadmap.\n  🔗 Graph: OpenAI, AI Governance, AI Compliance & Governance\n  📅 Published: 2026-05-29\n  📰 https://openai.com/index/trustworthy-third-party-evaluations-foundations\n\n💡 Signal: Campus leaders are debating policy focus while the broader tech ecosystem pushes AI agents, model profiling tools, and governance frameworks, underscoring a rapid shift toward responsible, production‑ready AI across education and industry."
     }
   ]
 };
