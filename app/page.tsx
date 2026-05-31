@@ -272,7 +272,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-[#d9dfd3] bg-[#fffef9]">
+      <section className="border-b border-[#d9dfd3] tint-blue">
         <div className="max-w-7xl mx-auto px-6 py-14">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
             <div>
@@ -314,7 +314,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#17201b] text-white">
+      <section className="bg-[#17201b] text-white accent-strip" data-tone="gold">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
             <div>
@@ -345,26 +345,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
-          <div>
-            <p className="rule-label mb-4">Site index</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
-              Routes into the work.
-            </h2>
-          </div>
-          <div className="border-y border-[#d9dfd3]">
-            {routes.map((route) => (
-              <Link
-                key={route.href}
-                href={route.href}
-                className="index-row grid gap-2 py-5 sm:grid-cols-[13rem_1fr_auto] sm:items-center"
-              >
-                <span className="text-xl font-medium text-[#17201b]">{route.label}</span>
-                <span className="text-[#485248]">{route.note}</span>
-                <span className="font-mono text-xs text-[#1f5a8a]">open</span>
-              </Link>
-            ))}
+      <section className="tint-green">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
+            <div>
+              <p className="rule-label mb-4">Site index</p>
+              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
+                Routes into the work.
+              </h2>
+            </div>
+            <div className="border-y border-[#d9dfd3]">
+              {routes.map((route) => (
+                <Link
+                  key={route.href}
+                  href={route.href}
+                  className="index-row grid gap-2 py-5 sm:grid-cols-[13rem_1fr_auto] sm:items-center"
+                >
+                  <span className="text-xl font-medium text-[#17201b]">{route.label}</span>
+                  <span className="text-[#485248]">{route.note}</span>
+                  <span className="font-mono text-xs text-[#1f5a8a]">open</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

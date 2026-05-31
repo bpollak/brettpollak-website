@@ -140,11 +140,20 @@ const products = [
   },
 ];
 
+const frameColors = [
+  "bg-[#1f5a8a]",
+  "bg-[#366c5a]",
+  "bg-[#b8503f]",
+  "bg-[#c97712]",
+  "bg-[#17201b]",
+  "bg-[#5b4a86]",
+];
+
 export default function Products() {
   return (
     <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-        <div className="mb-12 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end animate-fade-in">
+        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#edf5f7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end animate-fade-in">
           <div>
             <p className="rule-label mb-5">Product laboratory</p>
             <h1 className="text-6xl md:text-7xl leading-none font-medium text-[#17201b]">Built Work</h1>
@@ -165,7 +174,7 @@ export default function Products() {
             >
               <article className="grid gap-8 lg:grid-cols-[0.24fr_0.42fr_0.72fr] lg:items-center">
                 <div className="font-mono text-sm text-[#6b746b]">0{index + 1}</div>
-                <div className="border border-[#d9dfd3] bg-[#17201b] p-4">
+                <div className={`border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`}>
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
