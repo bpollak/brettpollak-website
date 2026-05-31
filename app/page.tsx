@@ -205,7 +205,7 @@ export default function Home() {
             <div>
               <p className="rule-label mb-8">Higher education technology practice</p>
               <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
-                Helping institutions turn emerging technology into trusted daily practice.
+                Making AI useful in higher education.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
                 I work with colleagues at UC San Diego on practical AI and digital systems through{' '}
