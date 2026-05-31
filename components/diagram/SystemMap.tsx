@@ -71,6 +71,9 @@ export default function SystemMap({
   const [armed, setArmed] = useState(false);
 
   useEffect(() => {
+    // Arm the draw-on state only once JS is running, so the diagram renders
+    // fully without JS and only animates as an enhancement.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setArmed(true);
   }, []);
 

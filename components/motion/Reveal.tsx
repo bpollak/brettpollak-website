@@ -26,7 +26,6 @@ export default function Reveal({ children, className = '', delayMs = 0 }: Reveal
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
       // No observation possible / motion suppressed: leave content fully visible.
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShown(true);
       return;
     }
