@@ -35,39 +35,39 @@ export default function TritonGPTContent() {
   const metricsRef = useRef<HTMLElement>(null);
   const programOfferingStyles = [
     {
-      card: "bg-gradient-to-br from-blue-50 to-white border-blue-200 hover:border-blue-300 border-t-blue-600",
-      iconWrap: "bg-blue-100/70 text-blue-800 group-hover:bg-blue-100",
+      card: "border-l-[#1f5a8a]",
+      iconWrap: "bg-[#edf4f7] text-[#1f5a8a]",
       cta: "text-blue-800",
     },
     {
-      card: "bg-gradient-to-br from-amber-50 to-white border-amber-200 hover:border-amber-300 border-t-amber-600",
-      iconWrap: "bg-amber-100/70 text-amber-800 group-hover:bg-amber-100",
-      cta: "text-amber-800",
+      card: "border-l-[#c97712]",
+      iconWrap: "bg-[#fff5e7] text-[#9b5a06]",
+      cta: "text-[#9b5a06]",
     },
     {
-      card: "bg-gradient-to-br from-emerald-50 to-white border-emerald-200 hover:border-emerald-300 border-t-emerald-600",
-      iconWrap: "bg-emerald-100/70 text-emerald-800 group-hover:bg-emerald-100",
-      cta: "text-emerald-800",
+      card: "border-l-[#466b54]",
+      iconWrap: "bg-[#eef5ee] text-[#466b54]",
+      cta: "text-[#466b54]",
     },
     {
-      card: "bg-gradient-to-br from-rose-50 to-white border-rose-200 hover:border-rose-300 border-t-rose-600",
-      iconWrap: "bg-rose-100/70 text-rose-800 group-hover:bg-rose-100",
-      cta: "text-rose-800",
+      card: "border-l-[#b85642]",
+      iconWrap: "bg-[#fff0ed] text-[#b85642]",
+      cta: "text-[#b85642]",
     },
     {
-      card: "bg-gradient-to-br from-violet-50 to-white border-violet-200 hover:border-violet-300 border-t-violet-600",
-      iconWrap: "bg-violet-100/70 text-violet-800 group-hover:bg-violet-100",
-      cta: "text-violet-800",
+      card: "border-l-[#17201b]",
+      iconWrap: "bg-[#eef0eb] text-[#17201b]",
+      cta: "text-[#17201b]",
     },
     {
-      card: "bg-gradient-to-br from-cyan-50 to-white border-cyan-200 hover:border-cyan-300 border-t-cyan-600",
-      iconWrap: "bg-cyan-100/70 text-cyan-900 group-hover:bg-cyan-100",
-      cta: "text-cyan-900",
+      card: "border-l-[#1f5a8a]",
+      iconWrap: "bg-[#edf4f7] text-[#1f5a8a]",
+      cta: "text-[#1f5a8a]",
     },
     {
-      card: "bg-gradient-to-br from-lime-50 to-white border-lime-200 hover:border-lime-300 border-t-lime-700",
-      iconWrap: "bg-lime-100/70 text-lime-900 group-hover:bg-lime-100",
-      cta: "text-lime-900",
+      card: "border-l-[#c97712]",
+      iconWrap: "bg-[#fff5e7] text-[#9b5a06]",
+      cta: "text-[#9b5a06]",
     },
   ];
 
@@ -89,63 +89,56 @@ export default function TritonGPTContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
+    <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-amber-950/20 text-white overflow-hidden animate-gradient-shift">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-
-        {/* Enhanced Gradient Background Effect (Blue to Tan/Gold) */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/70 via-blue-800/30 to-amber-500/50 opacity-90"></div>
-        <div className="absolute top-0 right-0 w-[1200px] h-[1200px] bg-gradient-to-bl from-amber-400/40 via-amber-200/10 to-transparent rounded-full blur-3xl opacity-60 animate-pulse-glow"></div>
-        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-blue-600/30 to-transparent rounded-full blur-3xl opacity-40 animate-pulse-glow" style={{ animationDelay: '4s' }}></div>
-
-        <div className="relative max-w-7xl mx-auto px-6 py-24">
-          <div className="animate-slide-in-left inline-block px-4 py-1.5 bg-amber-500/30 text-amber-100 text-sm font-semibold rounded-full mb-6 backdrop-blur-sm border border-amber-400/40">
-            PROGRAM OVERVIEW
-          </div>
-          <h1 className="animate-slide-up text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-sm">
-            TritonAI
-          </h1>
-          <p className="animate-slide-up delay-100 text-2xl md:text-3xl text-blue-50 mb-6 leading-relaxed font-light">
-            A shared AI ecosystem for service, instruction, and everyday campus work
-          </p>
-          <p className="animate-slide-up delay-150 max-w-4xl text-lg md:text-xl text-blue-100/90 mb-8 leading-relaxed">
-            TritonAI brings together TritonGPT, embedded assistants, developer APIs, reusable tools, and emerging agent workflows so
-            campus teams can build on governed infrastructure instead of starting from scratch.
-          </p>
-          <div className="animate-fade-in delay-200 flex flex-wrap gap-4 text-sm text-blue-100">
-            <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
-              <svg className="w-5 h-5 animate-bounce-subtle" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-              Last Updated February 2026
+      <section className="paper-grid border-b border-[#d9dfd3]">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-end">
+            <div>
+              <p className="rule-label mb-6">Program overview</p>
+              <h1 className="text-6xl md:text-8xl leading-none font-medium text-[#17201b]">TritonAI</h1>
+              <p className="mt-8 text-2xl md:text-3xl leading-10 text-[#485248]">
+                A shared AI ecosystem for service, instruction, development, and everyday campus work.
+              </p>
             </div>
-            <div className="flex items-center gap-2 backdrop-blur-sm bg-white/10 px-3 py-2 rounded-lg hover:bg-white/20 transition-all">
-              <svg className="w-5 h-5 animate-bounce-subtle" style={{ animationDelay: '0.2s' }} fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-              </svg>
-              University of California, San Diego
+            <div className="border-y border-[#d9dfd3] py-6">
+              <p className="text-lg leading-8 text-[#485248]">
+                TritonAI brings together TritonGPT, embedded assistants, developer APIs, reusable tools, and emerging agent workflows so campus teams can build on governed infrastructure instead of starting from scratch.
+              </p>
+              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                <div className="system-node p-4">
+                  <p className="font-mono text-xs text-[#c97712]">UPDATED</p>
+                  <p className="mt-2 font-semibold">February 2026</p>
+                </div>
+                <div className="system-node p-4">
+                  <p className="font-mono text-xs text-[#c97712]">CONTEXT</p>
+                  <p className="mt-2 font-semibold">University of California, San Diego</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Executive Summary with Presentation Link */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="card-3d bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-10 border-l-4 border-blue-800 shadow-lg relative overflow-hidden group">
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer"></div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
-          <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+          <div>
+            <p className="rule-label mb-4">Executive summary</p>
+            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">A platform program, not a single chatbot.</h2>
+          </div>
+          <div className="field-note p-8">
+            <p className="text-xl text-[#485248] leading-9 mb-7">
             <span className="font-bold text-blue-800">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It brings together secure infrastructure, task-specific assistants, embedded experiences, developer access, and shared tools into one campus ecosystem.
           </p>
-          <p className="text-xl text-gray-700 leading-relaxed relative z-10 mb-8">
+            <p className="text-xl text-[#485248] leading-9 mb-8">
             <span className="font-bold text-blue-800">TritonGPT</span> is the platform layer at the center of that work: a secure, SDSC-hosted environment that supports more than <span className="font-bold">73,000 students, staff, and faculty</span> without per-token costs. From that foundation, TritonAI is expanding into instructional tools, public-facing support, model access for developers, and the building blocks for agentic workflows.
           </p>
           <a
             href="https://ucsd-presentation.vercel.app/#slide=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white px-6 py-4 rounded-xl font-semibold hover:from-blue-800 hover:to-blue-900 transition-all shadow-md hover:shadow-xl hover:scale-105 group/link"
+              className="inline-flex items-center gap-3 rounded-sm bg-[#17201b] text-white px-6 py-4 font-semibold transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -155,14 +148,33 @@ export default function TritonGPTContent() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 pb-16">
+        <div className="grid gap-3 md:grid-cols-4">
+          {[
+            ['01', 'Knowledge', 'Curated campus context and source material'],
+            ['02', 'Model Access', 'Local and commercial models through governed routes'],
+            ['03', 'Workflow', 'Assistants, tools, skills, and connectors'],
+            ['04', 'Feedback', 'Adoption signals, support, and iteration'],
+          ].map(([number, title, body]) => (
+            <div key={title} className="system-node p-5">
+              <p className="font-mono text-xs text-[#c97712]">{number}</p>
+              <h3 className="mt-5 text-lg font-semibold text-[#17201b]">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[#485248]">{body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* TritonAI Program Offerings */}
       <section className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">What TritonAI Includes</h2>
-          <p className="text-lg text-gray-600">
+        <div className="mb-10 max-w-4xl">
+          <p className="rule-label mb-4">Program parts</p>
+          <h2 className="text-3xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">What TritonAI Includes</h2>
+          <p className="text-lg leading-8 text-[#485248]">
             TritonAI includes the shared pieces needed to support campus adoption: a governed platform, embedded experiences, instructional tools,
             developer access, reusable skills, and a path toward agent workflows.
           </p>
@@ -246,15 +258,15 @@ export default function TritonGPTContent() {
                 href={offering.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`card-3d rounded-xl p-7 shadow-lg border border-t-4 hover:shadow-2xl transition-all group ${style.card}`}
+                className={`group border border-l-4 border-[#d9dfd3] bg-[#fffef9] p-7 transition-colors hover:bg-white ${style.card}`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${style.iconWrap}`}>
+                  <div className={`w-10 h-10 flex items-center justify-center flex-shrink-0 ${style.iconWrap}`}>
                     {offering.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">{offering.title}</h3>
-                    <p className="mt-2 text-sm text-gray-600 leading-relaxed">{offering.description}</p>
+                    <h3 className="text-lg font-semibold text-[#17201b]">{offering.title}</h3>
+                    <p className="mt-2 text-sm text-[#485248] leading-6">{offering.description}</p>
                     <p className={`mt-4 text-sm font-semibold inline-flex items-center gap-2 ${style.cta}`}>
                       Learn more
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -270,64 +282,43 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Key Metrics */}
-      <section className="bg-white py-20" ref={metricsRef}>
+      <section className="bg-[#fffef9] py-20 border-y border-[#d9dfd3]" ref={metricsRef}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Early Signals from TritonAI</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+          <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end animate-fade-in">
+            <div>
+              <p className="rule-label mb-4">Measured signals</p>
+              <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b]">Early Signals from TritonAI</h2>
+            </div>
+            <p className="text-lg leading-8 text-[#485248] max-w-3xl">
               A few measures that show how the work is affecting administrative workflows, public support, and learning.
             </p>
-            <div className="w-20 h-1 bg-blue-800 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-400/0 to-blue-400/0 group-hover:from-slate-400/10 group-hover:to-blue-400/10 transition-all duration-500"></div>
-              <div className="relative z-10">
-                <div className="text-5xl font-bold text-slate-800 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={91} isVisible={metricsVisible} />%
+          <div className="grid border-y border-[#d9dfd3] md:grid-cols-4">
+            {[
+              ['91%', 91, '%', 'Faster Contract Review', '120 minutes to 11 minutes on average'],
+              ['83%', 83, '%', 'Faster Job Description Drafting', '30 minutes to 5 minutes on average'],
+              ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling'],
+              ['81%', 81, '%', 'Student Learning Impact', 'Reported the tutor helped them understand concepts'],
+            ].map(([fallback, end, suffix, label, detail], index) => (
+              <div key={label} className="border-b border-[#d9dfd3] p-7 md:border-b-0 md:border-r md:last:border-r-0">
+                <p className="font-mono text-xs text-[#c97712]">0{index + 1}</p>
+                <div className="mt-5 text-5xl font-semibold leading-none text-[#17201b]">
+                  {fallback === '$500K' ? '$' : ''}
+                  <AnimatedNumber end={Number(end)} suffix={suffix === 'K' ? 'K' : String(suffix)} isVisible={metricsVisible} />
                 </div>
-                <div className="text-slate-700 font-medium">Faster Contract Review</div>
-                <div className="text-sm text-slate-500 mt-2">120 minutes to 11 minutes on average</div>
+                <div className="mt-5 font-semibold text-[#17201b]">{label}</div>
+                <div className="mt-2 text-sm leading-6 text-[#485248]">{detail}</div>
               </div>
-            </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-100">
-              <div className="absolute inset-0 bg-gradient-to-br from-rose-400/0 to-pink-400/0 group-hover:from-rose-400/10 group-hover:to-pink-400/10 transition-all duration-500"></div>
-              <div className="relative z-10">
-                <div className="text-5xl font-bold text-rose-700 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={83} isVisible={metricsVisible} />%
-                </div>
-                <div className="text-rose-700 font-medium">Faster Job Description Drafting</div>
-                <div className="text-sm text-rose-500 mt-2">30 minutes to 5 minutes on average</div>
-              </div>
-            </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-orange-400/0 group-hover:from-amber-400/10 group-hover:to-orange-400/10 transition-all duration-500"></div>
-              <div className="relative z-10">
-                <div className="text-5xl font-bold text-amber-600 mb-2 transition-all duration-300 group-hover:scale-110">
-                  $<AnimatedNumber end={500} isVisible={metricsVisible} />K
-                </div>
-                <div className="text-amber-700 font-medium">Projected Annual Savings</div>
-                <div className="text-sm text-amber-600 mt-2">From replacing third-party public support tooling</div>
-              </div>
-            </div>
-            <div className="card-3d text-center p-8 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden delay-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 to-teal-400/0 group-hover:from-cyan-400/10 group-hover:to-teal-400/10 transition-all duration-500"></div>
-              <div className="relative z-10">
-                <div className="text-5xl font-bold text-cyan-700 mb-2 transition-all duration-300 group-hover:scale-110">
-                  <AnimatedNumber end={81} isVisible={metricsVisible} />%
-                </div>
-                <div className="text-teal-700 font-medium">Student Learning Impact</div>
-                <div className="text-sm text-teal-600 mt-2">Reported the tutor helped them understand concepts</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Strategic Vision */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">How TritonAI Is Taking Shape</h2>
-        <p className="text-lg text-gray-600 max-w-4xl mb-10">
+        <p className="rule-label mb-4">Operating principles</p>
+        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">How TritonAI Is Taking Shape</h2>
+        <p className="text-lg leading-8 text-[#485248] max-w-4xl mb-10">
           TritonAI is being built around a few practical principles: governed infrastructure for sensitive work, shared access instead of isolated pilots,
           tools designed around specific campus pain points, and an architecture that can evolve from assistants toward supervised agency.
         </p>
@@ -365,20 +356,21 @@ export default function TritonGPTContent() {
                 'The next step is moving from answering questions to completing supervised multi-step work. APIs, reusable skills, connectors, and observability are the pieces that make that shift practical.',
             },
           ].map((principle) => (
-            <div key={principle.title} className="card-3d bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{principle.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{principle.description}</p>
+            <div key={principle.title} className="field-note p-8">
+              <h3 className="text-xl font-semibold text-[#17201b] mb-3">{principle.title}</h3>
+              <p className="text-[#485248] leading-7">{principle.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* TritonGPT Demo Videos */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-[#eef2ea] py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">TritonAI in Action</h2>
-            <p className="text-xl text-gray-600">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
+          <div className="mb-12 max-w-4xl">
+            <p className="rule-label mb-4">Recorded work</p>
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">TritonAI in Action</h2>
+            <p className="text-xl leading-8 text-[#485248]">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
           </div>
           <div className="grid grid-cols-1 gap-8">
             {[
@@ -407,11 +399,11 @@ export default function TritonGPTContent() {
             ].map((video) => (
               <div
                 key={video.src}
-                className="card-3d bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
+                className="overflow-hidden border border-[#d9dfd3] bg-[#fffef9]"
               >
-                <div className="p-6 border-b border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900">{video.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{video.description}</p>
+                <div className="p-6 border-b border-[#d9dfd3]">
+                  <h3 className="text-xl font-semibold text-[#17201b]">{video.title}</h3>
+                  <p className="mt-2 text-sm text-[#485248] leading-6">{video.description}</p>
                 </div>
                 <div className="relative">
                   <video
@@ -436,11 +428,12 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Use Cases */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-[#f7f9f5] py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Examples Across the TritonAI Portfolio</h2>
-            <p className="text-lg text-gray-600">
+            <p className="rule-label mb-4">Assistant index</p>
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">Examples Across the TritonAI Portfolio</h2>
+            <p className="text-lg leading-8 text-[#485248]">
               These are not generic chatbots. They are focused tools built around specific service, instructional, research, and administrative workflows where grounded context and institutional trust matter.
             </p>
           </div>
@@ -624,42 +617,29 @@ export default function TritonGPTContent() {
                 )
               }
             ].map((assistant, index) => {
-              const colors = [
-                { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
-                { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
-                { border: 'hover:border-sky-500', bg: 'bg-sky-50', iconBg: 'group-hover:bg-sky-600', text: 'text-sky-600', groupText: 'group-hover:text-sky-600', quoteBorder: 'border-sky-100' },
-                { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
-                { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600', quoteBorder: 'border-cyan-100' },
-                { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600', quoteBorder: 'border-blue-100' },
-                { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600', quoteBorder: 'border-indigo-100' },
-                { border: 'hover:border-sky-500', bg: 'bg-sky-50', iconBg: 'group-hover:bg-sky-600', text: 'text-sky-600', groupText: 'group-hover:text-sky-600', quoteBorder: 'border-sky-100' },
-                { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600', quoteBorder: 'border-amber-100' },
-              ];
-              const color = colors[index % colors.length];
-
               return (
                 <div 
                   key={index} 
-                  className={`card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all group flex flex-col ${color.border}`}
+                  className="system-node p-7"
                 >
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${color.bg} ${color.iconBg}`}>
-                    <div className={`${color.text} group-hover:text-white transition-colors`}>
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-[#eef2ea] text-[#1f5a8a]">
                       {assistant.icon}
                     </div>
+                    <p className="font-mono text-xs text-[#c97712]">{String(index + 1).padStart(2, '0')}</p>
                   </div>
-                  <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
+                  <h4 className="text-xl font-semibold text-[#17201b] mb-3">
                     {assistant.name}
                   </h4>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                  <p className="text-sm text-[#485248] mb-4 leading-6 flex-1">
                     {assistant.desc}
                   </p>
                   {assistant.metric && (
                     <div className="mt-auto">
-                      <p className={`text-sm font-semibold mb-1 ${color.text}`}>{assistant.metric}</p>
-                      {assistant.stats && <p className="text-xs text-gray-500">{assistant.stats}</p>}
+                      <p className="text-sm font-semibold mb-1 text-[#1f5a8a]">{assistant.metric}</p>
+                      {assistant.stats && <p className="text-xs text-[#6b746b]">{assistant.stats}</p>}
                     </div>
                   )}
-
                 </div>
               );
             })}
@@ -668,40 +648,39 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Recognition & Awards */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-24 overflow-hidden">
-        <div className="absolute top-10 right-10 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-30 animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Recognition & Awards</h2>
+      <section className="bg-[#eef2ea] py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="rule-label mb-4">External recognition</p>
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-12">Recognition & Awards</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <a 
               href="https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group block"
+              className="group block border border-[#d9dfd3] bg-[#fffef9] p-8 transition-colors hover:bg-white"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-[#fff5e7] text-[#c97712]">
+                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-amber-600 transition-colors">CIO 100 Award</h3>
-              <p className="text-gray-600 text-center">2025 - Recognized as top global IT innovation</p>
+              <h3 className="text-2xl font-semibold text-[#17201b] mb-2 transition-colors group-hover:text-[#1f5a8a]">CIO 100 Award</h3>
+              <p className="text-[#485248]">2025 - Recognized as top global IT innovation</p>
             </a>
             <a 
               href="https://www.gartner.com/en/about/awards/eye-on-innovation"
               target="_blank"
               rel="noopener noreferrer"
-              className="card-3d bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group block"
+              className="group block border border-[#d9dfd3] bg-[#fffef9] p-8 transition-colors hover:bg-white"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-[#edf4f7] text-[#1f5a8a]">
+                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                   <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center group-hover:text-purple-600 transition-colors">Gartner Eye on Innovation</h3>
-              <p className="text-gray-600 text-center">Finalist for transformational impact in education</p>
+              <h3 className="text-2xl font-semibold text-[#17201b] mb-2 transition-colors group-hover:text-[#1f5a8a]">Gartner Eye on Innovation</h3>
+              <p className="text-[#485248]">Finalist for transformational impact in education</p>
             </a>
           </div>
         </div>
@@ -709,8 +688,9 @@ export default function TritonGPTContent() {
 
       {/* Future Roadmap */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Where TritonAI Is Going Next</h2>
-        <p className="text-lg text-gray-600 max-w-4xl mb-12">
+        <p className="rule-label mb-4">Roadmap</p>
+        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">Where TritonAI Is Going Next</h2>
+        <p className="text-lg leading-8 text-[#485248] max-w-4xl mb-12">
           The next phase expands beyond chat into a broader tools hub: model access for developers, more embedded campus experiences,
           workflow orchestration, observability, and new support for academic and administrative use cases.
         </p>
@@ -759,31 +739,19 @@ export default function TritonGPTContent() {
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
           ].map((item, index) => {
-            const colors = [
-              { border: 'hover:border-blue-500', bg: 'bg-blue-50', iconBg: 'group-hover:bg-blue-600', text: 'text-blue-600', groupText: 'group-hover:text-blue-600' },
-              { border: 'hover:border-purple-500', bg: 'bg-purple-50', iconBg: 'group-hover:bg-purple-600', text: 'text-purple-600', groupText: 'group-hover:text-purple-600' },
-              { border: 'hover:border-emerald-500', bg: 'bg-emerald-50', iconBg: 'group-hover:bg-emerald-600', text: 'text-emerald-600', groupText: 'group-hover:text-emerald-600' },
-              { border: 'hover:border-rose-500', bg: 'bg-rose-50', iconBg: 'group-hover:bg-rose-600', text: 'text-rose-600', groupText: 'group-hover:text-rose-600' },
-              { border: 'hover:border-cyan-500', bg: 'bg-cyan-50', iconBg: 'group-hover:bg-cyan-600', text: 'text-cyan-600', groupText: 'group-hover:text-cyan-600' },
-              { border: 'hover:border-indigo-500', bg: 'bg-indigo-50', iconBg: 'group-hover:bg-indigo-600', text: 'text-indigo-600', groupText: 'group-hover:text-indigo-600' },
-              { border: 'hover:border-amber-500', bg: 'bg-amber-50', iconBg: 'group-hover:bg-amber-600', text: 'text-amber-600', groupText: 'group-hover:text-amber-600' },
-            ];
-            const color = colors[index % colors.length];
-
             return (
               <div 
                 key={index} 
-                className={`card-3d bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-all group flex flex-col ${color.border}`}
+                className="system-node p-7"
               >
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-all duration-300 ${color.bg} ${color.iconBg}`}>
-                  <div className={`${color.text} group-hover:text-white transition-colors`}>
-                    {item.icon}
-                  </div>
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-[#eef2ea] text-[#1f5a8a]">{item.icon}</div>
+                  <p className="font-mono text-xs text-[#c97712]">{String(index + 1).padStart(2, '0')}</p>
                 </div>
-                <h4 className={`text-xl font-bold text-gray-900 mb-3 transition-colors ${color.groupText}`}>
+                <h4 className="text-xl font-semibold text-[#17201b] mb-3">
                   {item.title}
                 </h4>
-                <p className="text-sm text-gray-600 mb-4 leading-relaxed flex-1">
+                <p className="text-sm text-[#485248] mb-4 leading-6 flex-1">
                   {item.desc}
                 </p>
               </div>
@@ -793,31 +761,29 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Conclusion */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-20 overflow-hidden animate-gradient-shift">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-amber-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/20 to-transparent rounded-full blur-3xl opacity-20 animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
-
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-8 animate-fade-in">What We&apos;re Learning Through TritonAI</h2>
-          <p className="text-2xl text-blue-100 leading-relaxed mb-8 animate-slide-up">
+      <section className="bg-[#17201b] text-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="rule-label mb-4 text-[#d9dfd3]">Program lesson</p>
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-8 animate-fade-in">What We&apos;re Learning Through TritonAI</h2>
+          <p className="text-2xl text-[#d9dfd3] leading-10 mb-8 animate-slide-up">
             The clearest lesson so far is that institutional AI works best when it is treated as shared infrastructure rather than a collection of disconnected demos. Secure hosting matters, but so do good knowledge sources, reusable connectors, governance, and close partnership with the people doing the work.
           </p>
-          <div className="card-3d inline-block px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <p className="text-blue-100 italic">TritonAI is one way of learning how shared institutional AI can become practical, trusted, and reusable.</p>
+          <div className="border-l-4 border-[#c97712] bg-white/5 px-6 py-4">
+            <p className="text-[#eef2ea] italic">TritonAI is one way of learning how shared institutional AI can become practical, trusted, and reusable.</p>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Want to Compare Notes?</h2>
-          <p className="text-xl text-gray-600 mb-8">
+      <section className="bg-[#f7f9f5] py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-medium text-[#17201b] mb-6">Want to Compare Notes?</h2>
+          <p className="text-xl leading-8 text-[#485248] mb-8">
             If you&apos;re building something similar in higher education, I&apos;d be glad to compare notes and hear what your institution is learning.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-gray-50 text-rose-600 px-10 py-4 font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl rounded-lg group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-600"
+            className="inline-flex items-center gap-2 rounded-sm bg-[#17201b] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
           >
             Start a Conversation
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

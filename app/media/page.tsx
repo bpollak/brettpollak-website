@@ -96,7 +96,7 @@ export default function Media() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
+    <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
@@ -106,14 +106,13 @@ export default function Media() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12">
-          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            MEDIA & APPEARANCES
+        <div className="mb-12 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div>
+            <p className="rule-label mb-5">Media and appearances</p>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl leading-none font-medium text-[#17201b]">Publication Index</h1>
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight pb-1">Media & Appearances</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
-          <p className="text-xl sm:text-2xl text-slate-600 max-w-3xl leading-relaxed">
-            Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education
+          <p className="text-xl sm:text-2xl text-[#485248] max-w-3xl leading-9">
+            Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education.
           </p>
         </div>
 
