@@ -201,7 +201,7 @@ export default function Home() {
 
       <section className="paper-grid border-b border-[#d9dfd3]">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-end">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
               <p className="rule-label mb-8">Higher education AI practice</p>
               <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[0.96] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
