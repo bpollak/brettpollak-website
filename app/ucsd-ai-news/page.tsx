@@ -41,10 +41,10 @@ export default function UcsdAiNewsPage() {
       <section className="page-hero">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
         <p className="rule-label mb-6">UC San Diego AI Weekly</p>
-        <h1 className="page-title mb-6">
+        <h1 className="page-title mb-6 max-w-[20rem] sm:max-w-none">
           UC San Diego AI Weekly Update
         </h1>
-        <p className="page-intro mb-8">
+        <p className="page-intro mb-8 max-w-full break-words">
           A weekly roundup of what&rsquo;s new with UC San Diego&rsquo;s supported AI services. Each edition
           covers release notes from your supported tools, updates from TritonAI, and trainings
           coming up in the next two weeks.
@@ -55,7 +55,7 @@ export default function UcsdAiNewsPage() {
           className="group block max-w-3xl mb-12 editorial-panel p-5 sm:p-6 transition-colors hover:border-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-blue-900/30 focus:ring-offset-2"
           data-tone="blue"
         >
-          <div className="flex items-start gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
             <div className="flex-none rounded-xl bg-white/80 border border-blue-200/60 p-3 shadow-sm group-hover:border-blue-300 transition-colors">
               <svg
                 className="w-6 h-6 text-blue-800"
@@ -72,15 +72,15 @@ export default function UcsdAiNewsPage() {
                 />
               </svg>
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 max-w-full">
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-1.5">
                 Official UCSD AI Platform
               </div>
-              <p className="text-base text-slate-700 leading-relaxed">
+              <p className="text-base text-slate-700 leading-relaxed max-w-full break-words">
                 This newsletter is curated for UCSD staff. For the full TritonAI platform &mdash;
-                supported tools, trainings, documentation, and support &mdash; visit{' '}
-                <span className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 group-hover:text-blue-950 group-hover:decoration-blue-900 transition-colors whitespace-nowrap">
-                  tritonai.ucsd.edu
+                supported tools, trainings, documentation, and support &mdash;{' '}
+                <span className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 group-hover:text-blue-950 group-hover:decoration-blue-900 transition-colors break-words">
+                  visit the TritonAI platform
                   <span className="inline-block ml-1 transition-transform group-hover:translate-x-0.5">&rarr;</span>
                 </span>
               </p>
@@ -93,7 +93,7 @@ export default function UcsdAiNewsPage() {
           className="group block max-w-3xl mb-6 editorial-panel p-5 sm:p-6 transition-colors hover:border-[#366c5a] focus:outline-none focus:ring-2 focus:ring-emerald-900/30 focus:ring-offset-2"
           data-tone="green"
         >
-          <div className="flex items-start gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
             <div className="flex-none rounded-xl bg-white/80 border border-emerald-200/60 p-3 shadow-sm group-hover:border-emerald-300 transition-colors">
               <svg
                 className="w-6 h-6 text-emerald-700"
@@ -110,14 +110,14 @@ export default function UcsdAiNewsPage() {
                 />
               </svg>
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 max-w-full">
               <div className="text-xs uppercase tracking-[0.18em] text-emerald-700 font-semibold mb-1.5">
                 TritonGPT Release Notes
               </div>
-              <p className="text-base text-slate-700 leading-relaxed">
-                See what&rsquo;s new in TritonGPT &mdash; feature releases, updates, and fixes &mdash; at{' '}
-                <span className="font-semibold text-emerald-700 underline decoration-2 underline-offset-4 decoration-emerald-500 group-hover:text-emerald-900 group-hover:decoration-emerald-700 transition-colors whitespace-nowrap">
-                  tritonai.ucsd.edu/tritongpt/release-notes
+              <p className="text-base text-slate-700 leading-relaxed max-w-full break-words">
+                See what&rsquo;s new in TritonGPT &mdash; feature releases, updates, and fixes &mdash;{' '}
+                <span className="font-semibold text-emerald-700 underline decoration-2 underline-offset-4 decoration-emerald-500 group-hover:text-emerald-900 group-hover:decoration-emerald-700 transition-colors break-words">
+                  view the release notes
                   <span className="inline-block ml-1 transition-transform group-hover:translate-x-0.5">&rarr;</span>
                 </span>
               </p>
