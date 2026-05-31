@@ -75,20 +75,29 @@ export default function MediaContent() {
 
   return (
     <div>
-      <div className="mb-10 border-y border-[#d9dfd3] py-4">
-        <div className="flex flex-wrap gap-x-5 gap-y-3">
+      <div className="mb-10 border border-[#d9dfd3] bg-white/80 p-4 shadow-[8px_8px_0_rgba(54,108,90,0.08)]">
+        <div className="mb-4 grid gap-2 border-b border-[#d9dfd3] pb-4 sm:grid-cols-[1fr_auto] sm:items-end">
+          <div>
+            <p className="rule-label mb-2">Archive controls</p>
+            <p className="text-sm leading-6 text-[#485248]">Filter the public record by format, then follow each item back to its original source.</p>
+          </div>
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#1f5a8a]">
+            {filteredItems.length} visible
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
           {filterButtons.map(({ value, label, count }) => (
             <button
               key={value}
               onClick={() => setActiveFilter(value)}
-              className={`rounded-sm border-b-2 px-1 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
+              className={`rounded-sm border px-3 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
                 activeFilter === value
-                  ? 'border-[#c97712] text-[#17201b]'
-                  : 'border-transparent text-[#485248] hover:border-[#9eb7aa] hover:text-[#17201b]'
+                  ? 'border-[#17201b] bg-[#17201b] text-white'
+                  : 'border-[#d9dfd3] bg-[#fffef9] text-[#485248] hover:border-[#9eb7aa] hover:text-[#17201b]'
               }`}
             >
               {label}
-              <span className="ml-2 font-mono text-xs text-[#7a8479]">{count}</span>
+              <span className={`ml-2 font-mono text-xs ${activeFilter === value ? 'text-white/65' : 'text-[#7a8479]'}`}>{count}</span>
             </button>
           ))}
         </div>

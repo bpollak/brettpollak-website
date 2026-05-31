@@ -46,35 +46,35 @@ const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPC
 
 const questions = [
   'How should IT prepare the institution for a shift from applications people use to agents that work on their behalf?',
+  'How do we decide which AI experiments should be retired, repeated, or scaled?',
   'How does IT govern agentic systems that can act across tools, data, and workflows?',
-  'What personal context should AI systems unlock, and how do we preserve trust while using it?',
 ];
 
 const systemLayers = [
-  { label: 'Campus Need', value: 'service, instruction, operations' },
-  { label: 'Shared Layer', value: 'TritonAI, APIs, tools, governance' },
-  { label: 'Practice', value: 'assistants, workflows, field notes' },
-  { label: 'Learning Loop', value: 'adoption, evidence, iteration' },
+  { label: 'Experiment', value: 'small bets, prototypes, local workflows' },
+  { label: 'Evidence', value: 'usage, feedback, risk, fit' },
+  { label: 'Durable Layer', value: 'platforms, APIs, governance, patterns' },
+  { label: 'Scale', value: 'shared services, adoption, support' },
 ];
 
 const fieldNotes = [
   {
     tone: 'blue',
-    label: 'Implementation Pattern',
-    title: 'Infrastructure first, use cases second',
-    body: 'The durable work is building a governed platform that lets many teams solve local problems without starting from zero each time.',
+    label: 'Experiment Pattern',
+    title: 'Experiments need an exit ramp',
+    body: 'Most prototypes should teach something and disappear. The useful ones need a path into shared infrastructure, support, and governance.',
   },
   {
     tone: 'gold',
-    label: 'Campus Signal',
-    title: 'Adoption is an operating model',
-    body: 'Training, support, feedback, and clear ownership matter as much as the model behind an assistant.',
+    label: 'Decision Signal',
+    title: 'Evidence decides what survives',
+    body: 'The work is separating enthusiasm from durable value: who used it, what changed, what risks appeared, and what should scale.',
   },
   {
     tone: 'green',
     label: 'Architecture Note',
-    title: 'Institutional context is the product',
-    body: 'The value comes from connecting AI to trusted campus knowledge, policy, workflow, and data stewardship.',
+    title: 'Scale is a design constraint',
+    body: 'A durable pattern has to survive outside the pilot team: documentation, ownership, funding, privacy, and repeatable operations.',
   },
 ];
 
@@ -109,6 +109,88 @@ const routes = [
   { href: '/products', label: 'Products', note: 'Built tools and experiments' },
   { href: '/now', label: 'Now', note: 'Current focus areas' },
 ];
+
+function HomePracticeMark() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="h-24 w-32 shrink-0"
+      viewBox="0 0 160 120"
+      fill="none"
+    >
+      <path d="M20 92h120" stroke="#d9dfd3" strokeWidth="2" />
+      <path d="M35 92V48l45-22 45 22v44" stroke="#17201b" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M53 92V61h54v31" stroke="#1f5a8a" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M80 26v66" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="5 5" />
+      <path d="M49 62c17 0 18-24 31-24s14 24 31 24" stroke="#c97712" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="49" cy="62" r="6" fill="#1f5a8a" />
+      <circle cx="80" cy="38" r="6" fill="#366c5a" />
+      <circle cx="111" cy="62" r="6" fill="#c97712" />
+      <path d="M58 78h44" stroke="#17201b" strokeWidth="3" strokeLinecap="round" />
+      <path d="M58 88h44" stroke="#17201b" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function OperatingLoopDiagram() {
+  return (
+    <svg
+      role="img"
+      aria-labelledby="operating-loop-title operating-loop-desc"
+      viewBox="0 0 720 260"
+      className="h-auto w-full"
+      fill="none"
+    >
+      <title id="operating-loop-title">Experiment to scale operating loop</title>
+      <desc id="operating-loop-desc">
+        A loop moving experiments through evidence, durable patterns, and scalable services.
+      </desc>
+      <defs>
+        <marker id="home-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+          <path d="M0 0l10 5-10 5z" fill="#485248" />
+        </marker>
+      </defs>
+      <rect x="1" y="1" width="718" height="258" rx="18" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
+      {[
+        'M276 79h168',
+        'M550 108v42',
+        'M452 187H276',
+        'M170 158v-42',
+      ].map((path) => (
+        <path
+          key={path}
+          d={path}
+          stroke="#485248"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          markerEnd="url(#home-arrow)"
+          strokeDasharray="1 11"
+        />
+      ))}
+      {[
+        { x: 72, y: 50, label: 'Experiment', sub: 'learn fast', color: '#1f5a8a' },
+        { x: 452, y: 50, label: 'Evidence', sub: 'decide what survives', color: '#366c5a' },
+        { x: 452, y: 158, label: 'Durable', sub: 'make repeatable', color: '#c97712' },
+        { x: 72, y: 158, label: 'Scale', sub: 'shared practice', color: '#c05643' },
+      ].map((node) => (
+        <g key={node.label}>
+          <rect x={node.x} y={node.y} width="196" height="58" rx="8" fill="white" stroke="#d9dfd3" strokeWidth="2" />
+          <rect x={node.x} y={node.y} width="7" height="58" rx="3.5" fill={node.color} />
+          <text x={node.x + 24} y={node.y + 27} fill="#17201b" fontSize="17" fontWeight="700">
+            {node.label}
+          </text>
+          <text x={node.x + 24} y={node.y + 46} fill="#485248" fontSize="12" fontWeight="600">
+            {node.sub}
+          </text>
+        </g>
+      ))}
+      <circle cx="360" cy="130" r="36" fill="#17201b" />
+      <path d="M342 130h36M360 112v36" stroke="#f2b84b" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="360" cy="130" r="50" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="4 7" />
+    </svg>
+  );
+}
 
 export default function Home() {
   const personSchema = {
@@ -212,7 +294,9 @@ export default function Home() {
                 <Link href="/tritongpt" className="font-semibold text-[#1f5a8a] underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
-                . This site collects the field notes, architecture, talks, and product experiments that come from that work.
+                . This site collects the field notes, architecture, talks, and product experiments
+                behind the question of what should be temporary, what should become durable, and
+                what should scale.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
@@ -225,8 +309,18 @@ export default function Home() {
                   href="/media"
                   className="inline-flex items-center justify-center rounded-sm border border-[#9eb7aa] px-6 py-3 text-sm font-semibold text-[#17201b] transition-colors hover:border-[#1f5a8a] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
                 >
-                  Browse writing
+                  Browse media
                 </Link>
+              </div>
+              <div className="mt-12 flex max-w-2xl flex-col gap-5 border border-[#d9dfd3] bg-white/75 p-5 shadow-[8px_8px_0_rgba(54,108,90,0.08)] sm:flex-row sm:items-center">
+                <HomePracticeMark />
+                <div>
+                  <p className="rule-label mb-3">Operating idea</p>
+                  <p className="text-base leading-7 text-[#485248]">
+                    Run experiments deliberately, keep what proves durable, and move the surviving
+                    patterns into shared infrastructure, governance, and scalable practice.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -284,10 +378,14 @@ export default function Home() {
             <div>
               <p className="rule-label mb-4">System map</p>
               <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
-                The shape of the work is platform, practice, and feedback.
+                Useful AI moves from experiment to evidence to scale.
               </h2>
             </div>
-            <div className="grid sm:grid-cols-4 gap-3">
+            <div>
+              <div className="mb-5 border border-[#d9dfd3] bg-white/70 p-3 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
+                <OperatingLoopDiagram />
+              </div>
+              <div className="grid sm:grid-cols-4 gap-3">
               {systemLayers.map((layer, index) => (
                 <div key={layer.label} className="system-node p-4 min-h-36">
                   <div className="font-mono text-xs text-[#c97712] mb-5">0{index + 1}</div>
@@ -295,6 +393,7 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-6 text-[#485248]">{layer.value}</p>
                 </div>
               ))}
+              </div>
             </div>
           </div>
         </div>
@@ -305,7 +404,7 @@ export default function Home() {
           <div>
             <p className="rule-label mb-4">Field notes</p>
             <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
-              Reusable patterns from real campus work.
+              What survives the experiment becomes the pattern.
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
