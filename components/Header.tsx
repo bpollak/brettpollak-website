@@ -79,9 +79,17 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 sm:h-20 gap-4">
           <Link
             href="/"
-            className="text-xl sm:text-2xl font-semibold text-[#17201b] transition-colors font-[family-name:var(--font-display)] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 rounded-sm whitespace-nowrap flex-none"
+            className="group inline-flex items-center gap-2.5 text-xl sm:text-2xl font-semibold text-[#17201b] transition-colors font-[family-name:var(--font-display)] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 rounded-sm whitespace-nowrap flex-none"
           >
-            Brett Pollak
+            <span
+              aria-hidden="true"
+              className="flex h-6 sm:h-7 w-[5px] flex-col overflow-hidden rounded-full"
+            >
+              <span className="flex-1 bg-[#b8503f]" />
+              <span className="flex-1 bg-[#c97712]" />
+              <span className="flex-1 bg-[#366c5a]" />
+            </span>
+            <span>Brett Pollak</span>
           </Link>
 
           {/* Desktop Navigation */}

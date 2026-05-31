@@ -145,27 +145,21 @@ function OperatingLoopDiagram() {
       <desc id="operating-loop-desc">
         A loop moving experiments through evidence, durable patterns, and scalable services.
       </desc>
-      <defs>
-        <marker id="home-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-          <path d="M0 0l10 5-10 5z" fill="#485248" />
-        </marker>
-      </defs>
       <rect x="1" y="1" width="718" height="258" rx="18" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
       {[
         'M276 79h168',
         'M550 108v42',
         'M452 187H276',
         'M170 158v-42',
-      ].map((path) => (
+      ].map((path, index) => (
         <path
           key={path}
+          className={`flow-path${index % 2 ? ' flow-delay-1' : ''}`}
           d={path}
+          fill="none"
           stroke="#485248"
           strokeWidth="3"
           strokeLinecap="round"
-          strokeLinejoin="round"
-          markerEnd="url(#home-arrow)"
-          strokeDasharray="1 11"
         />
       ))}
       {[
