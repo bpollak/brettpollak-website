@@ -29,13 +29,7 @@ export const mediaItems: MediaItem[] = [
     date: '2026-07-20',
     category: 'speaking'
   },
-  {
-    publication: 'TechTalk Summits',
-    title: 'Technology Executive Summit | San Diego, CA',
-    url: 'https://techtalksummits.com/event/exclusive/cxo-roundtable-series/technology-executive-dinner-san-diego-ca',
-    date: '2026-06-04',
-    category: 'speaking'
-  },
+  // Removed invalid TechTalk Summits entry (URL returned 404). Verify correct URL before re-adding.
   {
     publication: 'Constellation Research',
     title: 'Business Transformation 150™ 2026–2027',
@@ -66,7 +60,7 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'Ithaka S+R',
-    title: 'Human Values and AI Adoption in the Research Enterprise',
+    title: "Human Values and AI Adoption in the Research Enterprise",
     url: 'https://sr.ithaka.org/blog/human-values-and-ai-adoption-in-the-research-enterprise/',
     date: '2026-01-15',
     category: 'article'
@@ -87,15 +81,15 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'Forbes',
-    title: 'Why Faculty Hold The Keys To Higher Ed\'s AI Digital Transformation',
-    url: 'https://www.forbes.com/sites/avivalegatt/2025/08/10/why-faculty-hold-the-keys-to-higher-eds-ai-digital-transformation/',
+    title: "Why Faculty Hold The Keys To Higher Ed's AI Digital Transformation",
+    url: "https://www.forbes.com/sites/avivalegatt/2025/08/10/why-faculty-hold-the-keys-to-higher-ed-s-ai-digital-transformation/",
     date: '2025-08-10',
     category: 'article'
   },
   {
-    publication: 'CIO.com',
-    title: 'Unpacking UC San Diego\'s use of LLMs to boost access to knowledge',
-    url: 'https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html',
+    publication: "CIO.com",
+    title: "Unpacking UC San Diego's use of LLMs to boost access to knowledge",
+    url: "https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html",
     date: '2025-08-08',
     category: 'interview'
   },
@@ -115,7 +109,7 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'Internet2 Community Blog',
-    title: 'Unlocking Institutional Insights: Discover UC San Diego\'s TritonGPT Journey',
+    title: "Unlocking Institutional Insights: Discover UC San Diego's TritonGPT Journey",
     url: 'https://internet2.edu/discover-uc-san-diegos-tritongpt-journey/',
     date: '2025-04-03',
     category: 'article'
@@ -143,8 +137,8 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'SDSU News',
-    title: 'SDSU, UC San Diego and SD Community College District\'s Equitable AI Alliance',
-    url: 'https://aaai.sdsu.edu/initiatives/equitable-ai-alliance',
+    title: "SDSU, UC San Diego and SD Community College District's Equitable AI Alliance",
+    url: "https://aaai.sdsu.edu/initiatives/equitable-ai-alliance",
     date: '2024-11-25',
     category: 'article'
   },
@@ -178,7 +172,7 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'IdeaScale Blog',
-    title: 'All About UC San Diego\'s In-House AI Assistant, Triton GPT',
+    title: "All About UC San Diego's In-House AI Assistant, Triton GPT",
     url: 'https://ideascale.com/blog/triton-gpt/',
     date: '2024-06-04',
     category: 'article'
@@ -213,7 +207,7 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'ScienceSprings',
-    title: 'From The University of California-San Diego: Say Hello to TritonGPT',
+    title: "From The University of California-San Diego: Say Hello to TritonGPT",
     url: 'https://sciencesprings.wordpress.com/2024/03/19/from-the-university-of-california-san-diego-say-hello-to-tritongpt/',
     date: '2024-03-19',
     category: 'article'
@@ -227,22 +221,22 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'DigitalKoans',
-    title: 'How Can Universities Create AI Tools for their Communities? An Interview with the Creators of UC San Diego\'s TritonGPT',
-    url: 'https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/',
+    title: "How Can Universities Create AI Tools for Their Communities? An Interview with the Creators of UC San Diego's TritonGPT",
+    url: "https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/",
     date: '2023-12-08',
     category: 'interview'
   },
   {
     publication: 'Ithaka S+R',
-    title: 'How Can Universities Create AI Tools for Their Communities?',
-    url: 'https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/',
+    title: "How Can Universities Create AI Tools for Their Communities?",
+    url: "https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/",
     date: '2023-12-07',
     category: 'interview'
   },
   {
     publication: 'Scientific Route',
     title: 'Empowering University Communities: TritonGPT at UC San Diego',
-    url: 'https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/',
+    url: "https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/",
     date: '2023-12-06',
     category: 'article'
   },
@@ -276,14 +270,14 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'LinkedIn',
-    title: 'Musings about UC San Diego\'s Return to Learn program; COVID testing pilot for students',
+    title: "Musings about UC San Diego's Return to Learn program; COVID testing pilot for students",
     url: 'https://www.linkedin.com/pulse/musings-uc-san-diegos-return-learn-program-covid-testing-brett-pollak',
     date: '2020-06-24',
     category: 'article'
   },
   {
     publication: 'LinkedIn',
-    title: 'UC San Diego Mobile App updated with real time parking availability and notification center',
+    title: "UC San Diego Mobile App updated with real time parking availability and notification center",
     url: 'https://www.linkedin.com/pulse/uc-san-diego-mobile-app-updated-real-time-parking-center-brett-pollak',
     date: '2018-11-10',
     category: 'article'
