@@ -14,6 +14,14 @@ const categoryLabels: Record<CategoryFilter, string> = {
   award: 'Awards',
 };
 
+const categoryStyles: Record<MediaItem['category'], string> = {
+  article: 'border-[#9db8c8] bg-[#edf5f7] text-[#1f5a8a]',
+  interview: 'border-[#dfbf8b] bg-[#fff5e7] text-[#9b5a06]',
+  whitepaper: 'border-[#a9c2ae] bg-[#eef5ee] text-[#366c5a]',
+  speaking: 'border-[#e6ad9f] bg-[#fff0ed] text-[#b8503f]',
+  award: 'border-[#b7add4] bg-[#f2eff9] text-[#5b4a86]',
+};
+
 function formatDate(dateString: string) {
   const [year, month, day] = dateString.split('-').map(Number);
   const localDate = new Date(year, month - 1, day);
@@ -119,7 +127,7 @@ export default function MediaContent() {
                     className="index-row grid gap-3 py-5 md:grid-cols-[8.5rem_8rem_1fr_10rem_auto] md:items-start"
                   >
                     <span className="font-mono text-xs uppercase text-[#7a8479]">{formatDate(item.date)}</span>
-                    <span className="w-fit rounded-sm border border-[#d9dfd3] px-2 py-1 text-xs font-semibold uppercase text-[#485248]">
+                    <span className={`w-fit rounded-sm border px-2 py-1 text-xs font-semibold uppercase ${categoryStyles[item.category]}`}>
                       {item.category}
                     </span>
                     <span className="text-lg font-medium leading-7 text-[#17201b]">{item.title}</span>

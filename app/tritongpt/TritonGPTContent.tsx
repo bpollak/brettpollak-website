@@ -295,14 +295,14 @@ export default function TritonGPTContent() {
           </div>
           <div className="grid border-y border-[#d9dfd3] md:grid-cols-4">
             {[
-              ['91%', 91, '%', 'Faster Contract Review', '120 minutes to 11 minutes on average'],
-              ['83%', 83, '%', 'Faster Job Description Drafting', '30 minutes to 5 minutes on average'],
-              ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling'],
-              ['81%', 81, '%', 'Student Learning Impact', 'Reported the tutor helped them understand concepts'],
-            ].map(([fallback, end, suffix, label, detail], index) => (
+              ['91%', 91, '%', 'Faster Contract Review', '120 minutes to 11 minutes on average', 'text-[#1f5a8a]'],
+              ['83%', 83, '%', 'Faster Job Description Drafting', '30 minutes to 5 minutes on average', 'text-[#b8503f]'],
+              ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling', 'text-[#c97712]'],
+              ['81%', 81, '%', 'Student Learning Impact', 'Reported the tutor helped them understand concepts', 'text-[#366c5a]'],
+            ].map(([fallback, end, suffix, label, detail, colorClass], index) => (
               <div key={label} className="border-b border-[#d9dfd3] p-7 md:border-b-0 md:border-r md:last:border-r-0">
                 <p className="font-mono text-xs text-[#c97712]">0{index + 1}</p>
-                <div className="mt-5 text-5xl font-semibold leading-none text-[#17201b]">
+                <div className={`mt-5 text-5xl font-semibold leading-none ${colorClass}`}>
                   {fallback === '$500K' ? '$' : ''}
                   <AnimatedNumber end={Number(end)} suffix={suffix === 'K' ? 'K' : String(suffix)} isVisible={metricsVisible} />
                 </div>

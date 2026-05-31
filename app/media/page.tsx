@@ -106,7 +106,7 @@ export default function Media() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12 grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#fff5e7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <p className="rule-label mb-5">Media and appearances</p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl leading-none font-medium text-[#17201b]">Publication Index</h1>
