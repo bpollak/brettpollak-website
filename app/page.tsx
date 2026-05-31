@@ -204,7 +204,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-end">
             <div>
               <p className="rule-label mb-8">Higher education AI practice</p>
-              <h1 className="text-6xl md:text-7xl xl:text-8xl leading-[0.96] font-medium text-[#17201b] max-w-4xl">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[0.96] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
                 Building institutional AI with the institution still in view.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
@@ -230,22 +230,28 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-[0.88fr_1.12fr] gap-5 items-end">
-              <div className="relative border border-[#d9dfd3] bg-[#fffef9] p-3">
+            <div className="space-y-5 lg:self-stretch">
+              <div className="home-portrait-panel">
                 <Image
-                  src="/brett-pollak-headshot-sit-center.webp"
+                  src="/brettpollak-headshot-lean.webp"
                   alt="Brett Pollak"
-                  width={500}
-                  height={753}
-                  className="w-full grayscale-[15%]"
+                  fill
+                  className="z-0 object-cover object-[center_36%]"
                   placeholder="blur"
                   blurDataURL={heroBlurDataURL}
                   priority
-                  sizes="(min-width: 1024px) 23vw, (min-width: 640px) 45vw, 100vw"
+                  sizes="(min-width: 1280px) 520px, (min-width: 1024px) 44vw, 100vw"
                 />
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#17201b]/70 via-[#17201b]/10 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 z-20 p-5 md:p-6 text-white">
+                  <p className="rule-label mb-3 text-white/70">UC San Diego field work</p>
+                  <p className="max-w-sm text-xl md:text-2xl leading-8 font-medium">
+                    Building AI systems close to the people, policies, and workflows they need to serve.
+                  </p>
+                </div>
               </div>
 
-              <div className="space-y-5">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-[1.05fr_0.95fr] gap-5">
                 <div className="border border-[#d9dfd3] bg-[#fffef9] p-5">
                   <p className="rule-label mb-4">Working questions</p>
                   <ol className="space-y-4 text-sm leading-6 text-[#485248]">

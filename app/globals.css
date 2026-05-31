@@ -205,6 +205,41 @@ html {
   background-size: 28px 28px;
 }
 
+.home-portrait-panel {
+  position: relative;
+  min-height: 440px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line), var(--signal-blue) 22%);
+  background: color-mix(in srgb, var(--paper-strong) 82%, var(--signal-blue) 18%);
+  box-shadow:
+    12px 12px 0 color-mix(in srgb, var(--signal-gold) 32%, transparent),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.home-portrait-panel::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 254, 249, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 254, 249, 0.1) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.home-portrait-panel::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 1rem auto auto 1rem;
+  width: 72px;
+  height: 6px;
+  background: var(--signal-coral);
+  box-shadow: 84px 0 0 var(--signal-gold), 168px 0 0 var(--signal-green);
+}
+
 .field-note {
   border: 1px solid var(--line);
   border-left: 4px solid var(--signal-blue);
