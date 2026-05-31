@@ -408,10 +408,12 @@ export default function TritonGPTContent() {
                 <div className="relative">
                   <video
                     className="w-full aspect-video bg-black"
+                    autoPlay
+                    loop
                     muted
                     playsInline
                     controls
-                    preload="none"
+                    preload="metadata"
                     poster={video.poster}
                     aria-label={`${video.title} demo video`}
                   >
