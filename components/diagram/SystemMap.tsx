@@ -5,7 +5,7 @@ import DiagramFrame from './DiagramFrame';
 import DiagramNode from './DiagramNode';
 import SignalPath from './SignalPath';
 import CrosshairMark from './CrosshairMark';
-import { TONE_HEX, type Tone } from './tones';
+import { type Tone } from './tones';
 
 export interface SystemMapNode {
   x: number;
@@ -23,16 +23,17 @@ export interface SystemMapEdge {
   d: string;
   tone?: Tone;
   dashed?: boolean;
-  trace?: boolean;
-  traceDelay?: 1 | 2 | 3;
+  flow?: boolean;
+  flowDelay?: 1 | 2;
 }
 
-export interface SystemMapCrosshair {
+export interface SystemMapCore {
   cx: number;
   cy: number;
-  r?: number;
   tone?: Tone;
-  label?: string;
+  label: string;
+  width?: number;
+  height?: number;
 }
 
 interface SystemMapProps {
@@ -42,15 +43,15 @@ interface SystemMapProps {
   height: number;
   nodes: SystemMapNode[];
   edges?: SystemMapEdge[];
-  crosshair?: SystemMapCrosshair;
+  core?: SystemMapCore;
   className?: string;
   figureClassName?: string;
 }
 
 /**
  * Data-driven "living system map": a framed SVG of labeled nodes connected by
- * signal paths, with an optional crosshair core. Edges that opt into `trace`
- * draw themselves in once the diagram scrolls into view.
+ * flowing dotted signal lines, with an optional labeled core chip. Direction is
+ * carried by the flow of the dots and the layout — no arrowheads.
  */
 export default function SystemMap({
   title,
@@ -59,7 +60,7 @@ export default function SystemMap({
   height,
   nodes,
   edges = [],
-  crosshair,
+  core,
   className,
   figureClassName,
 }: SystemMapProps) {
@@ -68,9 +69,9 @@ export default function SystemMap({
   const descId = `${id}-desc`;
   const ref = useRef<HTMLElement | null>(null);
 
-  // Drive the draw-on animation through DOM classList (not React state) so the
-  // diagram renders fully without JS and only "arms" + traces in as an
-  // enhancement. Reduced motion leaves it static and complete.
+  // Reveal the figure once it scrolls into view (drives a soft fade-in via
+  // classList — no React state, so it renders fully without JS and stays static
+  // under reduced motion).
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -80,7 +81,6 @@ export default function SystemMap({
     ) {
       return;
     }
-    el.classList.add('armed');
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -96,7 +96,6 @@ export default function SystemMap({
     return () => observer.disconnect();
   }, []);
 
-  const edgeTones = Array.from(new Set(edges.map((edge) => edge.tone ?? 'ink')));
   const figureClasses = ['diagram', figureClassName].filter(Boolean).join(' ');
 
   return (
@@ -110,21 +109,6 @@ export default function SystemMap({
       >
         <title id={titleId}>{title}</title>
         <desc id={descId}>{desc}</desc>
-        <defs>
-          {edgeTones.map((tone) => (
-            <marker
-              key={tone}
-              id={`${id}-arrow-${tone}`}
-              markerWidth="10"
-              markerHeight="10"
-              refX="8"
-              refY="5"
-              orient="auto"
-            >
-              <path d="M0 0l10 5-10 5z" fill={TONE_HEX[tone as Tone]} />
-            </marker>
-          ))}
-        </defs>
         <DiagramFrame width={width} height={height} />
         {edges.map((edge) => (
           <SignalPath
@@ -132,16 +116,16 @@ export default function SystemMap({
             d={edge.d}
             tone={edge.tone}
             dashed={edge.dashed}
-            trace={edge.trace}
-            traceDelay={edge.traceDelay}
-            markerId={`${id}-arrow-${edge.tone ?? 'ink'}`}
+            flow={edge.flow ?? true}
+            flowDelay={edge.flowDelay}
           />
         ))}
         {nodes.map((node) => (
           <DiagramNode key={`${node.label}-${node.x}-${node.y}`} {...node} />
         ))}
-        {crosshair ? <CrosshairMark {...crosshair} /> : null}
+        {core ? <CrosshairMark {...core} /> : null}
       </svg>
     </figure>
   );
 }
+
