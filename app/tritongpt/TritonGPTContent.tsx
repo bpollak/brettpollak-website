@@ -120,7 +120,7 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
-      {/* Executive Summary with Presentation Link */}
+      {/* Executive Summary */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
@@ -134,20 +134,6 @@ export default function TritonGPTContent() {
             <p className="text-xl text-[#485248] leading-9 mb-8">
             <span className="font-bold text-blue-800">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
           </p>
-          <a
-            href="https://ucsd-presentation.vercel.app/#slide=1"
-            target="_blank"
-            rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-sm bg-[#17201b] text-white px-6 py-4 font-semibold transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <span>View TritonAI Slide Deck</span>
-            <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
           </div>
         </div>
       </section>

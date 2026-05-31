@@ -220,7 +220,7 @@ export default function SpeakingPage() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-6 bg-gradient-to-r from-blue-50 to-white rounded-xl px-7 py-5 border border-blue-200 shadow-sm hover:shadow-md transition-shadow group"
+                  className="flex items-start gap-6 bg-white rounded-xl px-7 py-5 border border-slate-200 shadow-sm hover:shadow-md transition-shadow group"
                 >
                   <div className="flex flex-col items-center min-w-[70px]">
                     <div className="text-sm text-blue-700 font-mono pt-0.5 whitespace-nowrap">

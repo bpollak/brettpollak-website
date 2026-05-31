@@ -130,7 +130,7 @@ export default function AiAgentArchitecturePage() {
             thousands of staff at UC San Diego, giving every person a personal AI that
             understands their work world.
           </p>
-          <div className="my-8 border-l-4 border-blue-600 bg-blue-50/60 pl-5 py-4 rounded-r-lg">
+          <div className="my-8 border border-slate-200 border-l-4 border-l-blue-600 bg-white pl-5 py-4 rounded-r-lg shadow-sm">
             <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
               Why this matters now
             </div>
@@ -203,7 +203,7 @@ export default function AiAgentArchitecturePage() {
             meeting?&rdquo; pulls the specific file. &ldquo;Show me my full graph&rdquo; loads
             and analyzes the JSON. Rare but critical fallbacks.
           </p>
-          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
+          <p className="text-slate-900 font-semibold border border-slate-200 border-l-4 border-l-blue-600 pl-5 py-2 bg-white rounded-r-lg shadow-sm">
             The key insight: context is a budget, not a pantry. You don&rsquo;t load
             everything; you load the right things at the right time.
           </p>
@@ -283,7 +283,7 @@ export default function AiAgentArchitecturePage() {
           <p>Two durable stores anchor everything:</p>
 
           <div className="grid md:grid-cols-2 gap-5 my-6">
-            <div className="rounded-2xl border border-blue-200 bg-blue-50/60 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
@@ -295,7 +295,7 @@ export default function AiAgentArchitecturePage() {
                 good at answering &ldquo;who works on X.&rdquo;
               </p>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
@@ -332,7 +332,7 @@ export default function AiAgentArchitecturePage() {
             longer just what you touch directly; it&rsquo;s what your org has written down and
             what your team is talking about right now.
           </p>
-          <p className="text-slate-900 font-semibold border-l-4 border-amber-500 pl-5 py-2 bg-amber-50/50 rounded-r-lg">
+          <p className="text-slate-900 font-semibold border border-slate-200 border-l-4 border-l-amber-500 pl-5 py-2 bg-white rounded-r-lg shadow-sm">
             The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
             &mdash; slow, rich, narrative. Together they&rsquo;re a cheap institutional memory
             system.
@@ -482,7 +482,7 @@ export default function AiAgentArchitecturePage() {
             endpoint for both keys, diff against the previous snapshot, and Telegram any change
             that would break a routing rule before a cron fires against it.
           </p>
-          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
+          <p className="text-slate-900 font-semibold border border-slate-200 border-l-4 border-l-blue-600 pl-5 py-2 bg-white rounded-r-lg shadow-sm">
             Provider lock-in is the moat AI vendors want. Open weights on institutional infra,
             wired through a gateway, with active monitoring of the model catalog &mdash; that&rsquo;s
             how the moat stays from forming around your automation.
@@ -651,7 +651,7 @@ export default function AiAgentArchitecturePage() {
             What else becomes possible
           </h3>
           <div className="grid md:grid-cols-2 gap-5">
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-slate-900 font-bold text-lg mb-2">Meeting prep automation</div>
               <p className="text-sm text-slate-700 leading-6">
                 Before every meeting, auto-compile attendee wiki pages, recent interactions,
@@ -659,7 +659,7 @@ export default function AiAgentArchitecturePage() {
                 in cold.
               </p>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-slate-900 font-bold text-lg mb-2">Proactive nudges</div>
               <p className="text-sm text-slate-700 leading-6">
                 The agent notices patterns without being asked. &ldquo;This problem has come up
@@ -668,7 +668,7 @@ export default function AiAgentArchitecturePage() {
                 1:1?&rdquo;
               </p>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-slate-900 font-bold text-lg mb-2">Draft-first communications</div>
               <p className="text-sm text-slate-700 leading-6">
                 Emails, memos, and responses drafted in my voice using my actual context. Not
@@ -676,7 +676,7 @@ export default function AiAgentArchitecturePage() {
                 and decided before. Review beats drafting from scratch.
               </p>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-slate-900 font-bold text-lg mb-2">Decision archaeology</div>
               <p className="text-sm text-slate-700 leading-6">
                 &ldquo;Why did we pick this architecture two years ago?&rdquo; &mdash; immediate
@@ -684,7 +684,7 @@ export default function AiAgentArchitecturePage() {
                 considered. No more Slack/email archaeology.
               </p>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-slate-900 font-bold text-lg mb-2">Self-monitoring system health</div>
               <p className="text-sm text-slate-700 leading-6">
                 The agent notices when data sources go stale, crons degrade, or the knowledge
@@ -692,7 +692,7 @@ export default function AiAgentArchitecturePage() {
                 maintains itself instead of waiting for a human to notice.
               </p>
             </div>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/40 p-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-slate-900 font-bold text-lg mb-2">Domain-aware research</div>
               <p className="text-sm text-slate-700 leading-6">
                 Instead of &ldquo;search the web,&rdquo; the agent does &ldquo;search filtered
@@ -720,7 +720,7 @@ export default function AiAgentArchitecturePage() {
             Everything above is one person&rsquo;s implementation. The interesting question:
             what if every UCSD staff member had one?
           </p>
-          <div className="my-6 border-l-4 border-blue-700 bg-blue-50 pl-5 py-4 rounded-r-lg">
+          <div className="my-6 border border-slate-200 border-l-4 border-l-blue-700 bg-white pl-5 py-4 rounded-r-lg shadow-sm">
             <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
               Privacy is the precondition
             </div>
@@ -841,7 +841,7 @@ export default function AiAgentArchitecturePage() {
             Department and campus layers are still design exercises, not shipped code. The
             pattern is there; the architecture is a starting point, not a finished product.
           </p>
-          <p className="text-slate-900 font-semibold border-l-4 border-blue-600 pl-5 py-2 bg-blue-50/50 rounded-r-lg">
+          <p className="text-slate-900 font-semibold border border-slate-200 border-l-4 border-l-blue-600 pl-5 py-2 bg-white rounded-r-lg shadow-sm">
             The real question isn&rsquo;t &ldquo;can we do this?&rdquo; &mdash; it&rsquo;s
             &ldquo;what would it take to do it responsibly, at scale, in a way a 30,000-employee
             university can actually adopt without violating anyone&rsquo;s privacy along the

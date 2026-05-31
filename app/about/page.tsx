@@ -75,23 +75,23 @@ export default function About() {
         <div className="mb-20 editorial-panel p-8 md:p-12">
           <h2 className="text-4xl font-medium text-[#17201b] mb-12">Recent Work</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Supporting campus access to institutional knowledge and reducing friction in workflows such as contract review for Procurement</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Working with colleagues across service desk, infrastructure, analytics, web, and collaboration services</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Recognition</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Named to the Constellation Research Business Transformation 150™ (2026–2027) and recognized through campus and industry channels for work connected to TritonAI and related initiatives</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Cross-Institution Sharing</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Lessons from TritonGPT have been shared with peer institutions exploring similar AI questions</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Daily Context</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Supporting hybrid-cloud infrastructure and digital services for a campus community of more than 73,000 people</p>
             </div>
@@ -227,7 +227,7 @@ export default function About() {
         <div className="border-t border-slate-200 pt-16">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">Talks, Writing, and Shared Learning</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-6 rounded-xl border border-slate-100">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
               <h3 className="text-lg font-bold text-slate-900 mb-4">Conference Presentations</h3>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
@@ -235,12 +235,6 @@ export default function About() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">EDUCAUSE:</span> AI implementation, governance, and data strategy</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span><span className="font-semibold">AXIES 2025:</span> Keynote on EDUCAUSE Top 10 (Sapporo)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -263,7 +257,7 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-100">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Published Work</h3>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
