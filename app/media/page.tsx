@@ -57,29 +57,43 @@ function MediaSignalMark() {
         A stylized archive showing public writing, speaking, interviews, whitepapers, and recognition.
       </desc>
       <rect x="1" y="1" width="518" height="318" rx="18" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
-      <path d="M68 72h384M68 124h384M68 176h384M68 228h384" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="4 9" />
+      {/* dotted connectors route to the core chip edges without crossing labels */}
       {[
-        { x: 84, y: 54, w: 178, color: '#1f5a8a', label: 'Articles' },
-        { x: 294, y: 106, w: 126, color: '#c97712', label: 'Interviews' },
-        { x: 104, y: 158, w: 210, color: '#366c5a', label: 'Speaking' },
-        { x: 250, y: 210, w: 156, color: '#c05643', label: 'Recognition' },
+        'M170 88 C236 88 232 150 256 150',
+        'M170 130 C226 130 232 156 256 156',
+        'M350 190 C300 190 288 162 264 162',
+        'M350 232 C296 232 288 168 264 168',
+      ].map((d) => (
+        <path
+          key={d}
+          className="flow-path"
+          d={d}
+          stroke="#485248"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      ))}
+      {[
+        { x: 60, y: 70, color: '#1f5a8a', label: 'Articles' },
+        { x: 60, y: 112, color: '#366c5a', label: 'Speaking' },
+        { x: 340, y: 172, color: '#c97712', label: 'Interviews' },
+        { x: 340, y: 214, color: '#c05643', label: 'Recognition' },
       ].map((item) => (
         <g key={item.label}>
-          <rect x={item.x} y={item.y} width={item.w} height="36" rx="7" fill="white" stroke="#d9dfd3" strokeWidth="2" />
+          <rect x={item.x} y={item.y} width="120" height="36" rx="7" fill="white" stroke="#d9dfd3" strokeWidth="2" />
           <rect x={item.x} y={item.y} width="7" height="36" rx="3.5" fill={item.color} />
           <text x={item.x + 22} y={item.y + 23} fill="#17201b" fontSize="13" fontWeight="700">
             {item.label}
           </text>
         </g>
       ))}
-      <circle cx="260" cy="160" r="46" fill="#17201b" />
-      <path d="M239 160h42M260 139v42" stroke="#f2b84b" strokeWidth="6" strokeLinecap="round" />
-      <circle cx="260" cy="160" r="64" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="5 8" />
-      <path d="M262 72c58 6 95 24 112 54M259 248c-62-5-103-25-123-60" stroke="#485248" strokeWidth="3" strokeLinecap="round" strokeDasharray="1 10" />
-      <circle cx="84" cy="72" r="7" fill="#1f5a8a" />
-      <circle cx="420" cy="124" r="7" fill="#c97712" />
-      <circle cx="104" cy="176" r="7" fill="#366c5a" />
-      <circle cx="406" cy="228" r="7" fill="#c05643" />
+      {/* opaque core chip, drawn last so no connector crosses its text */}
+      <circle cx="260" cy="159" r="62" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="5 8" />
+      <rect x="220" y="141" width="80" height="36" rx="8" fill="#17201b" />
+      <text x="260" y="164" fill="#f2b84b" fontSize="13" fontWeight="700" textAnchor="middle">
+        Index
+      </text>
     </svg>
   );
 }

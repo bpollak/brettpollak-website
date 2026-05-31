@@ -167,14 +167,17 @@ function OperatingLoopDiagram() {
         />
       ))}
       {[
-        { x: 72, y: 50, label: 'Experiment', sub: 'learn fast', color: '#1f5a8a' },
-        { x: 452, y: 50, label: 'Evidence', sub: 'decide what survives', color: '#366c5a' },
-        { x: 452, y: 158, label: 'Durable', sub: 'make repeatable', color: '#c97712' },
-        { x: 72, y: 158, label: 'Scale', sub: 'shared practice', color: '#c05643' },
+        { x: 72, y: 50, num: '01', label: 'Experiment', sub: 'learn fast', color: '#1f5a8a' },
+        { x: 452, y: 50, num: '02', label: 'Evidence', sub: 'decide what survives', color: '#366c5a' },
+        { x: 452, y: 158, num: '03', label: 'Durable', sub: 'make repeatable', color: '#c97712' },
+        { x: 72, y: 158, num: '04', label: 'Scale', sub: 'shared practice', color: '#c05643' },
       ].map((node) => (
         <g key={node.label}>
           <rect x={node.x} y={node.y} width="196" height="58" rx="8" fill="white" stroke="#d9dfd3" strokeWidth="2" />
           <rect x={node.x} y={node.y} width="7" height="58" rx="3.5" fill={node.color} />
+          <text x={node.x + 196 - 16} y={node.y + 22} fill="#c97712" fontSize="12" fontWeight="700" textAnchor="end" fontFamily="monospace">
+            {node.num}
+          </text>
           <text x={node.x + 24} y={node.y + 27} fill="#17201b" fontSize="17" fontWeight="700">
             {node.label}
           </text>
