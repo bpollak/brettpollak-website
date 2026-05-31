@@ -45,7 +45,7 @@ export default function SubscribeForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-8">
+    <div className="editorial-panel p-8" data-tone="green">
       <h2 className="text-xl font-bold text-slate-900 mb-2">
         Get the digest in your inbox
       </h2>
@@ -71,13 +71,13 @@ export default function SubscribeForm() {
             onChange={(e) => setEmail(e.target.value)}
             disabled={formState === 'submitting'}
             aria-describedby={formState === 'error' ? 'subscribe-error' : undefined}
-            className="flex-1 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-60"
+            className="flex-1 rounded-sm border border-[#d9dfd3] bg-[#fffef9] px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={formState === 'submitting'}
             aria-busy={formState === 'submitting'}
-            className="rounded-xl bg-gradient-to-r from-slate-900 to-blue-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-slate-800 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-60 transition-all"
+            className="rounded-sm bg-[#17201b] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-60 transition-colors"
           >
             {formState === 'submitting' ? 'Subscribing…' : 'Subscribe'}
           </button>

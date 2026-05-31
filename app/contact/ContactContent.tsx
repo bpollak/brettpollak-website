@@ -2,34 +2,34 @@ import ContactForm from '@/components/ContactForm';
 
 export default function ContactContent() {
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            CONNECT
-          </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight">Connect</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 to-blue-800 mb-8"></div>
-          <p className="text-2xl text-slate-600 mb-6 max-w-3xl leading-relaxed">
+    <div className="page-shell" id="main-content">
+      <section className="page-hero">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+          <p className="rule-label mb-6">Connect</p>
+          <h1 className="page-title mb-6">Connect</h1>
+          <p className="page-intro mb-6">
             I&apos;m glad to connect with people across higher education who are thinking through similar questions around AI, governance, digital services, and change.
           </p>
-          <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
+          <p className="max-w-3xl text-xl leading-relaxed text-[#485248]">
             If you&apos;re building something, comparing approaches, or want to share what your institution is learning, feel free to reach out.
           </p>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
         {/* Contact Form Section */}
         <div className="mb-16">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Contact Form */}
-            <div className="flex animate-slide-in-left">
+            <div className="flex">
               <div className="flex-1">
                 <ContactForm />
               </div>
             </div>
 
             {/* Conversation Topics */}
-            <div className="bg-white p-10 rounded-xl border-l-4 border-blue-800 shadow-lg flex flex-col animate-slide-in-right card-3d">
+            <div className="editorial-panel p-8 md:p-10 border-l-4 border-l-[#1f5a8a] flex flex-col card-3d">
               <h3 className="text-3xl font-bold text-slate-900 mb-6">What I&apos;d Love to Talk About</h3>
 
               <div className="mb-8">
@@ -102,7 +102,7 @@ export default function ContactContent() {
         </div>
 
         {/* Current Role */}
-        <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 rounded-2xl p-12 text-white shadow-xl">
+        <div className="editorial-panel editorial-dark p-8 md:p-12">
           <h3 className="text-3xl font-bold mb-6">Current Role</h3>
           <p className="text-2xl font-semibold mb-3 text-amber-400">
             Executive Director, Workplace Technology & Infrastructure Services

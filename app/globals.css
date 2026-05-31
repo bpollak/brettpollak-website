@@ -278,6 +278,72 @@ html {
   color: rgba(255, 255, 255, 0.64);
 }
 
+.page-shell {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.page-hero {
+  border-bottom: 1px solid var(--line);
+  background-color: color-mix(in srgb, var(--paper) 94%, var(--signal-blue) 6%);
+  background-image:
+    linear-gradient(rgba(31, 90, 138, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54, 108, 90, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.page-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(3.25rem, 7vw, 6.5rem);
+  line-height: 0.96;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.page-intro {
+  max-width: 48rem;
+  color: color-mix(in srgb, var(--ink), transparent 28%);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.58;
+}
+
+.editorial-panel {
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  box-shadow: 0 1px 0 rgba(23, 32, 27, 0.05);
+}
+
+.editorial-panel[data-tone="blue"] {
+  border-color: color-mix(in srgb, var(--line), var(--signal-blue) 34%);
+  background:
+    linear-gradient(135deg, rgba(31, 90, 138, 0.1), transparent 48%),
+    var(--paper-strong);
+}
+
+.editorial-panel[data-tone="gold"] {
+  border-color: color-mix(in srgb, var(--line), var(--signal-gold) 34%);
+  background:
+    linear-gradient(135deg, rgba(201, 119, 18, 0.12), transparent 48%),
+    var(--paper-strong);
+}
+
+.editorial-panel[data-tone="green"] {
+  border-color: color-mix(in srgb, var(--line), var(--signal-green) 34%);
+  background:
+    linear-gradient(135deg, rgba(54, 108, 90, 0.11), transparent 48%),
+    var(--paper-strong);
+}
+
+.editorial-dark {
+  background:
+    linear-gradient(135deg, rgba(31, 90, 138, 0.22), transparent 50%),
+    #17201b;
+  color: white;
+  border-color: color-mix(in srgb, var(--ink), white 18%);
+}
+
 .field-note {
   border: 1px solid var(--line);
   border-left: 4px solid var(--signal-blue);

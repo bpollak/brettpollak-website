@@ -153,7 +153,7 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#edf5f7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end animate-fade-in">
+        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#edf5f7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <p className="rule-label mb-5">Product laboratory</p>
             <h1 className="text-6xl md:text-7xl leading-none font-medium text-[#17201b]">Built Work</h1>

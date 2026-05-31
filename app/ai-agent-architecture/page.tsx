@@ -29,38 +29,37 @@ export const metadata: Metadata = {
 
 export default function AiAgentArchitecturePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/40" id="main-content">
+    <main className="page-shell" id="main-content">
       {/* ======================================================================
           SECTION 1 — HERO
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 pt-24 pb-12">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 text-blue-800 text-sm font-semibold rounded-full mb-8">
-          PERSONAL AI ARCHITECTURE
-        </div>
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent tracking-tight pb-1 mb-6">
+      <section className="page-hero">
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <p className="rule-label mb-6">Personal AI Architecture</p>
+        <h1 className="page-title mb-6">
           Building a Personal AI That Actually Knows You
         </h1>
-        <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mb-6">
+        <p className="page-intro mb-6">
           Generic AI is generic. Useful AI knows your people, projects, decisions, and trends.
           Here&rsquo;s how I built one that does &mdash; and how the pattern could scale across
           UC San Diego.
         </p>
-        <p className="text-sm text-slate-500 mb-10">
+        <p className="text-sm text-[#485248] mb-10">
           Last updated: May 21, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
-          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
-            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Automated jobs</div>
-            <div className="text-2xl font-bold text-slate-900">63 cron jobs</div>
+          <div className="editorial-panel p-6" data-tone="blue">
+            <div className="rule-label mb-2">Automated jobs</div>
+            <div className="text-2xl font-semibold text-[#17201b]">63 cron jobs</div>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
-            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Durable memory</div>
-            <div className="text-2xl font-bold text-slate-900">287 nodes · 265 pages</div>
+          <div className="editorial-panel p-6" data-tone="green">
+            <div className="rule-label mb-2">Durable memory</div>
+            <div className="text-2xl font-semibold text-[#17201b]">287 nodes · 265 pages</div>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6">
-            <div className="text-sm uppercase tracking-[0.18em] text-slate-400 font-semibold mb-2">Context loading</div>
-            <div className="text-2xl font-bold text-slate-900">3 memory layers</div>
+          <div className="editorial-panel p-6" data-tone="gold">
+            <div className="rule-label mb-2">Context loading</div>
+            <div className="text-2xl font-semibold text-[#17201b]">3 memory layers</div>
           </div>
         </div>
 
@@ -71,6 +70,7 @@ export default function AiAgentArchitecturePage() {
           synthesis crons into the durable knowledge layer &mdash; where the agent pulls them
           back out at the moment of conversation.
         </p>
+        </div>
       </section>
 
       {/* ======================================================================

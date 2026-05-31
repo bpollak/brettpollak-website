@@ -7,7 +7,7 @@ export default function LinkedInContent() {
   const [widgetLoaded, setWidgetLoaded] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
+    <div className="page-shell" id="main-content">
       {/* Hide SociableKit's Follow button */}
       <style jsx global>{`
         .sk-ww-linkedin-profile-post a[href*="linkedin.com"][target="_blank"] {
@@ -21,18 +21,15 @@ export default function LinkedInContent() {
         onLoad={() => setWidgetLoaded(true)}
       />
 
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="mb-8">
-          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            SOCIAL
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight">LinkedIn</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
+      <section className="page-hero">
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+          <p className="rule-label mb-6">Social</p>
+          <h1 className="page-title mb-6">LinkedIn</h1>
+          <p className="page-intro">Recent notes and updates from my LinkedIn profile.</p>
         </div>
-        <p className="text-xl text-slate-600 mb-16 max-w-3xl">
-          Recent notes and updates from my LinkedIn profile
-        </p>
+      </section>
 
+      <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="mb-12 relative min-h-[400px]">
           {/* Loading placeholder */}
           {!widgetLoaded && (
@@ -53,7 +50,7 @@ export default function LinkedInContent() {
             href="https://www.linkedin.com/in/brettpollak/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-slate-900 to-blue-900 text-white px-10 py-4 font-bold rounded-lg hover:from-slate-800 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+            className="inline-flex items-center gap-3 bg-[#17201b] text-white px-10 py-4 font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>

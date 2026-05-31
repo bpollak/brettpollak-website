@@ -153,7 +153,7 @@ export default function SpeakingPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
+    <div className="page-shell" id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakerSchema) }}
@@ -166,22 +166,20 @@ export default function SpeakingPage() {
         />
       ))}
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
-
-        {/* Hero */}
-        <div className="mb-16 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            KEYNOTES · PANELS · CONFERENCE SESSIONS
-          </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight">
+      <section className="page-hero">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+          <p className="rule-label mb-6">Keynotes · Panels · Conference Sessions</p>
+          <h1 className="page-title mb-6">
             Speaking
           </h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700 mb-8"></div>
-          <p className="text-xl text-slate-600 max-w-2xl leading-relaxed">
+          <p className="page-intro">
             I speak about what we&apos;ve actually built and learned at UC San Diego — not frameworks, not predictions.
             Real deployments, real outcomes, real friction. If that&apos;s useful for your audience, let&apos;s talk.
           </p>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
         {/* Speaking Topics */}
         <section className="mb-20">
@@ -191,7 +189,7 @@ export default function SpeakingPage() {
             {SPEAKING_TOPICS.map((topic, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                className="editorial-panel p-8 transition-colors hover:border-[#1f5a8a]"
               >
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{topic.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-5">{topic.description}</p>
@@ -279,7 +277,7 @@ export default function SpeakingPage() {
         )}
 
         {/* What to Expect */}
-        <section className="mb-20 bg-white rounded-2xl p-10 border border-slate-100 shadow-sm">
+        <section className="mb-20 editorial-panel p-8 md:p-10">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">What to Expect</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -306,7 +304,7 @@ export default function SpeakingPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center py-12 bg-gradient-to-br from-slate-900 to-blue-900 rounded-2xl px-8">
+        <section className="text-center py-12 editorial-panel editorial-dark px-8">
           <h2 className="text-3xl font-bold text-white mb-4">Interested in having me speak?</h2>
           <p className="text-slate-300 mb-8 max-w-xl mx-auto">
             I speak at higher ed technology conferences, AI summits, and institutional leadership events.
@@ -314,7 +312,7 @@ export default function SpeakingPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-4 bg-amber-400 text-slate-900 font-bold rounded-xl hover:bg-amber-300 transition-colors"
+            className="inline-block px-8 py-4 bg-[#f2b84b] text-[#17201b] font-bold rounded-sm hover:bg-[#ffd274] transition-colors"
           >
             Get in Touch
           </Link>

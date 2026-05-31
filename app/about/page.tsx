@@ -30,37 +30,35 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
-            BACKGROUND
-          </div>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 bg-clip-text text-transparent mb-6 tracking-tight">About</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-slate-800 via-blue-800 to-slate-700"></div>
+    <div className="page-shell" id="main-content">
+      <section className="page-hero">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+          <p className="rule-label mb-6">Background</p>
+          <h1 className="page-title mb-6">About</h1>
+          <p className="page-intro">
+            Work rooted in practice, people, curiosity, and the institutional systems that make technology useful.
+          </p>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
         {/* Main Bio Section */}
         <div className="grid md:grid-cols-5 gap-16 mb-20">
-          <div className="md:col-span-2 relative animate-slide-in-left">
-            <div className="hidden md:block absolute -inset-6 bg-gradient-to-br from-slate-200 via-blue-100 to-slate-200 rounded-2xl transform -rotate-3 opacity-40 blur-2xl"></div>
-            <div className="hidden md:block absolute -inset-5 bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 rounded-2xl transform -rotate-2 opacity-40 blur-xl"></div>
-            <div className="hidden md:block absolute -inset-4 bg-gradient-to-br from-slate-100 to-white rounded-2xl transform rotate-1 shadow-2xl"></div>
-            <div className="hidden md:block absolute -inset-3 bg-gradient-to-tl from-slate-50 to-blue-50 rounded-2xl transform -rotate-1 opacity-70"></div>
-            <div className="relative">
+          <div className="md:col-span-2 relative">
+            <div className="relative border border-[#d9dfd3] bg-[#fffef9] p-3 shadow-[12px_12px_0_rgba(201,119,18,0.16)]">
               <Image
                 src="/brettpollak-headshot-lean.webp"
                 alt="Brett Pollak"
                 width={300}
                 height={400}
-                className="w-full rounded-xl shadow-2xl ring-4 ring-white/50"
+                className="w-full"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
             </div>
           </div>
-          <div className="md:col-span-3 space-y-6 animate-slide-in-right">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent">Work Rooted in Practice, People, and Curiosity</h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-slate-900 to-blue-800"></div>
+          <div className="md:col-span-3 space-y-6">
+            <h2 className="text-4xl font-medium leading-tight text-[#17201b]">Work Rooted in Practice, People, and Curiosity</h2>
             <p className="text-xl text-slate-600 leading-relaxed">
               My career started in web and digital services, where I learned early that new tools only matter when they fit the real work people are trying to do.
             </p>
@@ -74,26 +72,26 @@ export default function About() {
         </div>
 
         {/* Recent Work */}
-        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-slate-800 bg-clip-text text-transparent mb-12">Recent Work</h2>
+        <div className="mb-20 editorial-panel p-8 md:p-12">
+          <h2 className="text-4xl font-medium text-[#17201b] mb-12">Recent Work</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100 card-3d">
+            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Supporting campus access to institutional knowledge and reducing friction in workflows such as contract review for Procurement</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-800 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-200 card-3d">
+            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Working with colleagues across service desk, infrastructure, analytics, web, and collaboration services</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-rose-700 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-300 card-3d">
+            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Recognition</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Work connected to TritonGPT and related initiatives has received campus and industry recognition</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-indigo-600 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-400 card-3d">
+            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Cross-Institution Sharing</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Lessons from TritonGPT have been shared with peer institutions exploring similar AI questions</p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 animate-slide-up delay-500 card-3d">
+            <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Daily Context</h3>
               <p className="text-lg text-slate-600 leading-relaxed">Supporting hybrid-cloud infrastructure and digital services for a campus community of more than 73,000 people</p>
             </div>
@@ -132,7 +130,7 @@ export default function About() {
         </div>
 
         {/* Professional Background */}
-        <div className="mb-20 bg-white rounded-2xl p-12 shadow-lg">
+        <div className="mb-20 editorial-panel p-8 md:p-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-12">Career Journey</h2>
           <div className="space-y-12 max-w-4xl">
             {/* UC San Diego */}

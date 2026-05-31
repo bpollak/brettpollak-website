@@ -284,7 +284,7 @@ export default function TritonGPTContent() {
       {/* Key Metrics */}
       <section className="bg-[#fffef9] py-20 border-y border-[#d9dfd3]" ref={metricsRef}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end animate-fade-in">
+          <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
               <p className="rule-label mb-4">Measured signals</p>
               <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b]">Early Signals from TritonAI</h2>
@@ -766,8 +766,8 @@ export default function TritonGPTContent() {
       <section className="bg-[#17201b] text-white py-20">
         <div className="max-w-5xl mx-auto px-6">
           <p className="rule-label mb-4 text-[#d9dfd3]">Program lesson</p>
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-8 animate-fade-in">What We&apos;re Learning Through TritonAI</h2>
-          <p className="text-2xl text-[#d9dfd3] leading-10 mb-8 animate-slide-up">
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-8">What We&apos;re Learning Through TritonAI</h2>
+          <p className="text-2xl text-[#d9dfd3] leading-10 mb-8">
             The clearest lesson so far is that institutional AI works best when it is treated as shared infrastructure rather than a collection of disconnected demos. Secure hosting matters, but so do good knowledge sources, reusable connectors, governance, and close partnership with the people doing the work.
           </p>
           <div className="border-l-4 border-[#c97712] bg-white/5 px-6 py-4">
