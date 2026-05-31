@@ -34,7 +34,7 @@ export default function CountUp({
       typeof IntersectionObserver === 'undefined' ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
-      setDisplay(value);
+      // Initial state already renders the final value, so nothing to animate.
       return;
     }
 

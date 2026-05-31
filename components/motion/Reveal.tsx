@@ -25,11 +25,15 @@ export default function Reveal({ children, className = '', delayMs = 0 }: Reveal
       typeof IntersectionObserver === 'undefined' ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
+      // No observation possible / motion suppressed: leave content fully visible.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShown(true);
       return;
     }
     const rect = el.getBoundingClientRect();
     const alreadyInView = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+    // Arm the hidden state only now that JS is running (no-JS users see content).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setArmed(true);
     if (alreadyInView) {
       const raf = requestAnimationFrame(() => setShown(true));

@@ -28,6 +28,8 @@ export function useInView<T extends Element>(
       typeof IntersectionObserver === 'undefined' ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
+      // No observation possible / motion suppressed: settle to the final state.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setInView(true);
       return;
     }
