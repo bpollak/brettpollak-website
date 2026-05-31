@@ -63,7 +63,7 @@ export default function About() {
               My career started in web and digital services, where I learned early that new tools only matter when they fit the real work people are trying to do.
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
-              At UC San Diego, I&apos;ve spent more than 17 years working with colleagues across web, cloud, data, and workplace technology. Projects like TritonGPT have reinforced that implementation is as much about trust, governance, and listening as it is about architecture.
+              At UC San Diego, I&apos;ve spent more than 18 years working with colleagues across web, cloud, data, and workplace technology. Projects like TritonGPT have reinforced that implementation is as much about trust, governance, and listening as it is about architecture.
             </p>
             <p className="text-xl text-slate-600 leading-relaxed">
               This site is a place to share what we&apos;ve learned so far and connect with others in higher education who are working through similar questions. I&apos;m especially interested in hearing how other institutions are approaching adoption, policy, and practical use cases.
@@ -85,7 +85,7 @@ export default function About() {
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Recognition</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Work connected to TritonGPT and related initiatives has received campus and industry recognition</p>
+              <p className="text-lg text-slate-600 leading-relaxed">Named to the Constellation Research Business Transformation 150™ (2026–2027) and recognized through campus and industry channels for work connected to TritonAI and related initiatives</p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Cross-Institution Sharing</h3>
@@ -145,12 +145,12 @@ export default function About() {
               <div className="space-y-8">
                 {/* Executive Director */}
                 <div className="relative">
-                  <h4 className="text-xl font-bold text-slate-800 text-blue-700">Executive Director, Workplace Technology & Infrastructure Services (WTIS)</h4>
+                  <h4 className="text-xl font-bold text-slate-800 text-blue-700">Executive Director, Workplace Technology & Infrastructure Services</h4>
                   <p className="text-sm text-slate-500 font-semibold mb-3">Oct 2024 – Present</p>
                   <p className="text-slate-600 leading-relaxed">
                     Working with teams across Data Warehouse, Analytics, Predictive Technologies, Email, Service Desk,
                     Field Support, Endpoint Management, Enterprise Content Management, Web Technologies, and Integrated
-                    Collaboration Services. Part of the team behind the **TritonAI program**, which includes TritonGPT and other institutional AI efforts at UC San Diego.
+                    Collaboration Services. Part of the team behind the TritonAI program, which includes TritonGPT and other institutional AI efforts at UC San Diego.
                   </p>
                 </div>
 
@@ -234,7 +234,7 @@ export default function About() {
                   <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span><span className="font-semibold">EDUCAUSE:</span> Data governance and AI implementation</span>
+                  <span><span className="font-semibold">EDUCAUSE:</span> AI implementation, governance, and data strategy</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -246,13 +246,19 @@ export default function About() {
                   <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span><span className="font-semibold">ASU GSV Summit:</span> AI in higher education</span>
+                  <span><span className="font-semibold">ASU+GSV Summit 2026:</span> Shared AI at Scale — Developed by Universities for Universities</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span><span className="font-semibold">High Ed Web & EduWeb:</span> Mobile design and UX</span>
+                  <span><span className="font-semibold">NACUBO 2026:</span> The AI Investment Decision: Build, Buy, or Shared Services?</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span><span className="font-semibold">High Ed Web &amp; EduWeb:</span> Mobile design and UX</span>
                 </li>
               </ul>
             </div>
@@ -264,25 +270,25 @@ export default function About() {
                   <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>EDUCAUSE Review case studies</span>
+                  <span>EDUCAUSE Review — &ldquo;Ushering in a New Era of AI-Driven Data Insights at UC San Diego&rdquo; (Feb 2025)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>The Journal of Higher Education Web Professionals</span>
+                  <span>CIO.com — &ldquo;How poor data foundations can undermine AI success&rdquo; (Apr 2026)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Eduniverse articles</span>
+                  <span>Ithaka S+R, The Journal of Higher Education Web Professionals, Eduniverse, and others</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Featured in Forbes, CIO.com, EdTech Magazine (30+ publications)</span>
+                  <span>Featured in Forbes, CIO.com, EdTech Magazine, and 30+ other outlets</span>
                 </li>
               </ul>
             </div>
