@@ -103,12 +103,12 @@ export default function TritonGPTContent() {
             </div>
             <div className="border-y border-[#d9dfd3] py-6">
               <p className="text-lg leading-8 text-[#485248]">
-                TritonAI brings together TritonGPT, embedded assistants, developer APIs, reusable tools, and emerging agent workflows so campus teams can build on governed infrastructure instead of starting from scratch.
+                TritonAI brings together TritonGPT, live campus data tools, a growing model hub, developer APIs, embedded assistants, reusable workflows, and the early scaffolding for supervised agents so campus teams can build on governed infrastructure instead of starting from scratch.
               </p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <div className="system-node p-4">
                   <p className="font-mono text-xs text-[#c97712]">UPDATED</p>
-                  <p className="mt-2 font-semibold">February 2026</p>
+                  <p className="mt-2 font-semibold">May 2026</p>
                 </div>
                 <div className="system-node p-4">
                   <p className="font-mono text-xs text-[#c97712]">CONTEXT</p>
@@ -129,10 +129,10 @@ export default function TritonGPTContent() {
           </div>
           <div className="field-note p-8">
             <p className="text-xl text-[#485248] leading-9 mb-7">
-            <span className="font-bold text-blue-800">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It brings together secure infrastructure, task-specific assistants, embedded experiences, developer access, and shared tools into one campus ecosystem.
+            <span className="font-bold text-blue-800">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It now spans secure infrastructure, task-specific assistants, live campus-aware tools, instructional pilots, developer access, and shared workflows in one governed campus ecosystem.
           </p>
             <p className="text-xl text-[#485248] leading-9 mb-8">
-            <span className="font-bold text-blue-800">TritonGPT</span> is the platform layer at the center of that work: a secure, SDSC-hosted environment that supports more than <span className="font-bold">73,000 students, staff, and faculty</span> without per-token costs. From that foundation, TritonAI is expanding into instructional tools, public-facing support, model access for developers, and the building blocks for agentic workflows.
+            <span className="font-bold text-blue-800">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
           </p>
           <a
             href="https://ucsd-presentation.vercel.app/#slide=1"
@@ -155,10 +155,10 @@ export default function TritonGPTContent() {
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="grid gap-3 md:grid-cols-4">
           {[
-            ['01', 'Knowledge', 'Curated campus context and source material'],
-            ['02', 'Model Access', 'Local and commercial models through governed routes'],
-            ['03', 'Workflow', 'Assistants, tools, skills, and connectors'],
-            ['04', 'Feedback', 'Adoption signals, support, and iteration'],
+            ['01', 'Knowledge', 'Curated campus context, uploaded documents, and live data tools'],
+            ['02', 'Model Access', 'Self-hosted and approved cloud models through governed routes'],
+            ['03', 'Developer Surface', 'APIs, credits, keys, endpoints, and usage reporting'],
+            ['04', 'Workflow', 'Assistants, embedded support, tools, and reusable agent scaffolding'],
           ].map(([number, title, body]) => (
             <div key={title} className="system-node p-5">
               <p className="font-mono text-xs text-[#c97712]">{number}</p>
@@ -176,7 +176,7 @@ export default function TritonGPTContent() {
           <h2 className="text-3xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">What TritonAI Includes</h2>
           <p className="text-lg leading-8 text-[#485248]">
             TritonAI includes the shared pieces needed to support campus adoption: a governed platform, embedded experiences, instructional tools,
-            developer access, reusable skills, and a path toward agent workflows.
+            live data integrations, developer access, reusable skills, and a path toward supervised agent workflows.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "TritonGPT Platform",
 	              description:
-	                "A secure, SDSC-hosted foundation for campus AI with assistants built around specific university workflows.",
+	                "A secure, SDSC-hosted foundation for campus AI with assistants built around specific university workflows and campus-aware context.",
 	              href: "https://tritonai.ucsd.edu/tritongpt/index.html",
 	              icon: (
 	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +196,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Embedded Website Support",
 	              description:
-	                "Embeddable AI support for campus websites so visitors can ask questions in context without needing a login.",
+	                "Embeddable AI support for campus websites, now paired with live campus data patterns such as parking availability and location busyness.",
               href: "https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html",
               icon: (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -230,7 +230,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Developer APIs",
 	              description:
-	                "A governed gateway to approved models so campus developers can build, test, and scale applications responsibly.",
+	                "A governed gateway to self-hosted and approved cloud models, with starter credits, usage reporting, and recharge paths for projects that scale.",
 	              href: "https://tritonai.ucsd.edu/developer-apis/start.html",
 	              icon: (
 	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,7 +241,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Tools, Skills, and MCP",
 	              description:
-	                "A growing toolkit of reusable tools, MCP-based connectors, and shared skills for common campus tasks and workflows.",
+	                "A growing toolkit of reusable tools, MCP-based connectors, shared skills, and workflow patterns for common campus tasks.",
 	              href: "https://tritonai.ucsd.edu/tools/index.html",
 	              icon: (
 	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -297,8 +297,8 @@ export default function TritonGPTContent() {
             {[
               ['91%', 91, '%', 'Faster Contract Review', '120 minutes to 11 minutes on average', 'text-[#1f5a8a]'],
               ['83%', 83, '%', 'Faster Job Description Drafting', '30 minutes to 5 minutes on average', 'text-[#b8503f]'],
-              ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling', 'text-[#c97712]'],
-              ['81%', 81, '%', 'Student Learning Impact', 'Reported the tutor helped them understand concepts', 'text-[#366c5a]'],
+              ['17', 17, '', 'Model Hub Breadth', 'Self-hosted and approved cloud models available through TritonAI', 'text-[#c97712]'],
+              ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling', 'text-[#366c5a]'],
             ].map(([fallback, end, suffix, label, detail, colorClass], index) => (
               <div key={label} className="border-b border-[#d9dfd3] p-7 md:border-b-0 md:border-r md:last:border-r-0">
                 <p className="font-mono text-xs text-[#c97712]">0{index + 1}</p>
@@ -320,7 +320,7 @@ export default function TritonGPTContent() {
         <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">How TritonAI Is Taking Shape</h2>
         <p className="text-lg leading-8 text-[#485248] max-w-4xl mb-10">
           TritonAI is being built around a few practical principles: governed infrastructure for sensitive work, shared access instead of isolated pilots,
-          tools designed around specific campus pain points, and an architecture that can evolve from assistants toward supervised agency.
+          tools designed around specific campus pain points, model choice without fragmented governance, and an architecture that can evolve from assistants toward supervised agency.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -328,7 +328,7 @@ export default function TritonGPTContent() {
             {
               title: 'Trust Is Infrastructure',
               description:
-                'Sensitive work in HR, finance, legal, and student support needs governed infrastructure. TritonAI uses on-prem resources when data must stay on campus and approved hosted services when agreements provide the right security and scale.',
+                'Sensitive work in HR, finance, legal, student support, and institutional operations needs governed infrastructure. TritonAI separates local/self-hosted capacity from approved cloud routes so projects can match model choice to data sensitivity, cost, and task complexity.',
             },
             {
               title: 'Make AI a Shared Utility',
@@ -338,22 +338,22 @@ export default function TritonGPTContent() {
             {
               title: 'Solve Specific Pain Points',
               description:
-                'The strongest early use cases have been concrete ones: contract review, public support, search, scheduling, and instructional support. Focused tools create trust faster than generic chat.',
+                'The strongest use cases have been concrete ones: contract review, public support, search, scheduling, performance review alignment, transcript workflows, and instructional support. Focused tools create trust faster than generic chat.',
             },
             {
               title: 'Meet People in the Workflow',
               description:
-                'TritonAI is showing up in Blink, public websites, teaching tools, mobile experiences, and departmental applications. Adoption improves when AI appears where work is already happening.',
+                'TritonAI is showing up in Blink, public websites, teaching tools, mobile experiences, developer projects, and departmental applications. Adoption improves when AI appears where work is already happening.',
             },
             {
               title: 'Stay Model-Agnostic',
               description:
-                'The architecture is built around gateways, connectors, and governance rather than a single provider. That keeps campus teams flexible as models and commercial terms change.',
+                'The architecture is built around gateways, canonical model routes, connectors, usage reporting, and governance rather than a single provider. That keeps campus teams flexible as models, prices, and commercial terms change.',
             },
             {
               title: 'Prepare for Agency',
               description:
-                'The next step is moving from answering questions to completing supervised multi-step work. APIs, reusable skills, connectors, and observability are the pieces that make that shift practical.',
+                'The next step is moving from answering questions to completing supervised multi-step work. APIs, reusable skills, connectors, model observability, and access monitoring are the pieces that make that shift practical.',
             },
           ].map((principle) => (
             <div key={principle.title} className="field-note p-8">
@@ -575,7 +575,7 @@ export default function TritonGPTContent() {
               },
               {
                 name: "Performance Review Evaluator",
-                desc: "Helps supervisors align performance ratings with written comments.",
+                desc: "Helps supervisors and HR teams assess whether performance ratings are supported by written comments, with stricter review of rating/comment alignment.",
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -693,8 +693,8 @@ export default function TritonGPTContent() {
         <p className="rule-label mb-4">Roadmap</p>
         <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">Where TritonAI Is Going Next</h2>
         <p className="text-lg leading-8 text-[#485248] max-w-4xl mb-12">
-          The next phase expands beyond chat into a broader tools hub: model access for developers, more embedded campus experiences,
-          workflow orchestration, observability, and new support for academic and administrative use cases.
+          The next phase expands beyond chat into a broader tools hub: richer model access for developers, more embedded campus experiences,
+          workflow orchestration, observability, live data integrations, and new support for academic and administrative use cases.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {[
@@ -711,8 +711,8 @@ export default function TritonGPTContent() {
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" /></svg>
             },
             {
-              title: "Campus Model APIs",
-              desc: "Direct access to local and commercial models through one governed gateway.",
+              title: "Developer API Expansion",
+              desc: "Self-hosted model credits, approved cloud routes, usage reporting, and clearer paths from prototype to funded campus application.",
               color: "pink",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" /></svg>
             },
@@ -723,8 +723,8 @@ export default function TritonGPTContent() {
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
             },
             {
-              title: "IT Observability Pilot",
-              desc: "AI-assisted detection and response for system anomalies and operations signals.",
+              title: "Model and Service Observability",
+              desc: "Catalog monitoring, access checks, usage signals, and AI-assisted detection for service anomalies and operational risk.",
               color: "emerald",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
             },
@@ -736,7 +736,7 @@ export default function TritonGPTContent() {
             },
             {
               title: "Agent Builder and Workflow Tools",
-              desc: "Low-code orchestration, reusable skills, and connectors for supervised agent workflows.",
+              desc: "Low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows.",
               color: "rose",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
@@ -768,7 +768,7 @@ export default function TritonGPTContent() {
           <p className="rule-label mb-4 text-[#d9dfd3]">Program lesson</p>
           <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-8">What We&apos;re Learning Through TritonAI</h2>
           <p className="text-2xl text-[#d9dfd3] leading-10 mb-8">
-            The clearest lesson so far is that institutional AI works best when it is treated as shared infrastructure rather than a collection of disconnected demos. Secure hosting matters, but so do good knowledge sources, reusable connectors, governance, and close partnership with the people doing the work.
+            The clearest lesson so far is that institutional AI works best when it is treated as shared infrastructure rather than a collection of disconnected demos. Secure hosting matters, but so do model choice, good knowledge sources, live tools, reusable connectors, governance, and close partnership with the people doing the work.
           </p>
           <div className="border-l-4 border-[#c97712] bg-white/5 px-6 py-4">
             <p className="text-[#eef2ea] italic">TritonAI is one way of learning how shared institutional AI can become practical, trusted, and reusable.</p>
