@@ -66,20 +66,38 @@ export default function SystemMap({
   const id = useId();
   const titleId = `${id}-title`;
   const descId = `${id}-desc`;
-  const { ref, inView } = useInView<HTMLElement>();
-  const [armed, setArmed] = useState(false);
+  const ref = useRef<HTMLElement | null>(null);
 
+  // Drive the draw-on animation through DOM classList (not React state) so the
+  // diagram renders fully without JS and only "arms" + traces in as an
+  // enhancement. Reduced motion leaves it static and complete.
   useEffect(() => {
-    // Arm the draw-on state only once JS is running, so the diagram renders
-    // fully without JS and only animates as an enhancement.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setArmed(true);
+    const el = ref.current;
+    if (!el) return;
+    if (
+      typeof IntersectionObserver === 'undefined' ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      return;
+    }
+    el.classList.add('armed');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            el.classList.add('is-visible');
+            observer.disconnect();
+          }
+        }
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -10% 0px' },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   const edgeTones = Array.from(new Set(edges.map((edge) => edge.tone ?? 'ink')));
-  const figureClasses = ['diagram', armed ? 'armed' : '', inView ? 'is-visible' : '', figureClassName]
-    .filter(Boolean)
-    .join(' ');
+  const figureClasses = ['diagram', figureClassName].filter(Boolean).join(' ');
 
   return (
     <figure ref={ref} className={figureClasses}>
