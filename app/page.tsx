@@ -286,12 +286,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
-              <p className="rule-label mb-8">Higher education technology practice</p>
+              <p className="rule-label mb-8">Higher education technology leadership</p>
               <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
-                Making AI useful in higher education.
+                Building useful technology in higher education.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
-                I work with colleagues at UC San Diego on practical AI and digital systems through{' '}
+                I lead technology, infrastructure, and digital workplace teams at UC San Diego,
+                turning emerging tools into dependable services people actually use. Right now that
+                work centers on practical AI through{' '}
                 <Link href="/tritongpt" className="font-semibold text-[#1f5a8a] underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
