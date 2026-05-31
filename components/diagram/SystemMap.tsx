@@ -81,6 +81,8 @@ export default function SystemMap({
     ) {
       return;
     }
+    // Arm the fade-in only now that JS is running (no-JS users keep it visible).
+    el.classList.add('armed');
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
