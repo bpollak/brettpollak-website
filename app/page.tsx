@@ -205,10 +205,10 @@ export default function Home() {
             <div>
               <p className="rule-label mb-8">Higher education technology practice</p>
               <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[0.96] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
-                Building technology that keeps the institution, and its people, in view.
+                Helping institutions turn emerging technology into trusted daily practice.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
-                I work with colleagues at UC San Diego on practical AI systems through{' '}
+                I work with colleagues at UC San Diego on practical AI and digital systems through{' '}
                 <Link href="/tritongpt" className="font-semibold text-[#1f5a8a] underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
@@ -246,13 +246,13 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 z-20 p-5 md:p-6 text-white">
                   <p className="rule-label mb-3 text-white/70">UC San Diego field work</p>
                   <p className="max-w-sm text-xl md:text-2xl leading-8 font-medium">
-                    Building AI systems close to the people, policies, and workflows they need to serve.
+                    Moving from promising tools to dependable services, shared practice, and campus trust.
                   </p>
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-[1.05fr_0.95fr] gap-5">
-                <div className="border border-[#d9dfd3] bg-[#fffef9] p-5">
+                <div className="home-support-card p-5" data-tone="gold">
                   <p className="rule-label mb-4">Working questions</p>
                   <ol className="space-y-4 text-sm leading-6 text-[#485248]">
                     {questions.map((question, index) => (
@@ -263,7 +263,7 @@ export default function Home() {
                     ))}
                   </ol>
                 </div>
-                <div className="border border-[#d9dfd3] bg-[#17201b] p-5 text-white">
+                <div className="home-support-card home-support-card-dark p-5 text-white" data-tone="green">
                   <p className="rule-label mb-4 text-white/60">Current focus</p>
                   <p className="text-lg leading-7">
                     <span className="font-semibold">{currentNow.items[0].label}:</span> {currentNow.items[0].body}

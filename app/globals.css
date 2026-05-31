@@ -240,6 +240,44 @@ html {
   box-shadow: 84px 0 0 var(--signal-gold), 168px 0 0 var(--signal-green);
 }
 
+.home-support-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line), var(--signal-gold) 24%);
+  background:
+    linear-gradient(135deg, rgba(201, 119, 18, 0.12), transparent 52%),
+    var(--paper-strong);
+  box-shadow: 0 1px 0 rgba(23, 32, 27, 0.05);
+}
+
+.home-support-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--signal-gold);
+}
+
+.home-support-card[data-tone="green"] {
+  border-color: color-mix(in srgb, var(--line), var(--signal-green) 42%);
+}
+
+.home-support-card[data-tone="green"]::before {
+  background: var(--signal-green);
+}
+
+.home-support-card-dark {
+  background:
+    linear-gradient(135deg, rgba(54, 108, 90, 0.45), transparent 58%),
+    #17201b;
+  border-color: color-mix(in srgb, var(--signal-green), white 20%);
+}
+
+.home-portrait-panel .rule-label,
+.home-support-card-dark .rule-label {
+  color: rgba(255, 255, 255, 0.64);
+}
+
 .field-note {
   border: 1px solid var(--line);
   border-left: 4px solid var(--signal-blue);
