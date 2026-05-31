@@ -6,6 +6,67 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://brettcpollak.com/#website",
+      "url": "https://brettcpollak.com/",
+      "name": "Brett Pollak",
+      "description":
+        "Field notes on institutional AI, platform governance, digital services, and higher education technology practice.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://brettcpollak.com/#person"
+      },
+      "about": [
+        { "@id": "https://brettcpollak.com/#person" },
+        { "@id": "https://brettcpollak.com/#tritonai" }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/brettpollak/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://brettcpollak.com/#person",
+      "name": "Brett Pollak",
+      "url": "https://brettcpollak.com/",
+      "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
+      "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+      "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": "University of California San Diego",
+        "url": "https://ucsd.edu/"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/brettpollak/"
+      ],
+      "knowsAbout": [
+        "AI in higher education",
+        "Institutional AI",
+        "TritonAI",
+        "TritonGPT",
+        "Agentic AI workflows",
+        "AI governance",
+        "Data governance",
+        "Higher education technology",
+        "Digital transformation",
+        "Cloud and web services"
+      ]
+    },
+    {
+      "@type": "Thing",
+      "@id": "https://brettcpollak.com/#tritonai",
+      "name": "TritonAI",
+      "url": "https://brettcpollak.com/tritongpt",
+      "description":
+        "UC San Diego's shared AI infrastructure and practice ecosystem, including TritonGPT, developer APIs, embedded assistants, governance, and agent-ready workflows."
+    }
+  ]
+};
+
 const interfaceFont = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -84,6 +145,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${interfaceFont.variable} ${displayFont.variable} antialiased`}>
         <GoogleAnalytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
         <Header />
         {children}
         <Footer />

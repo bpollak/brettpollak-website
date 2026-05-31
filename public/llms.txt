@@ -1,0 +1,61 @@
+# Brett Pollak
+
+> Field notes on institutional AI, platform governance, digital services, and practical higher education technology work.
+
+This site is the public writing and reference home for Brett Pollak, Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. It covers practical AI adoption, TritonAI, TritonGPT, agentic workflows, AI governance, data governance, digital services, and the operating work required to turn emerging technology into trusted daily practice.
+
+## Primary Site
+
+- Home: https://brettcpollak.com/
+- About: https://brettcpollak.com/about
+- Contact: https://brettcpollak.com/contact
+- Sitemap: https://brettcpollak.com/sitemap.xml
+
+## Key Pages
+
+- TritonAI: https://brettcpollak.com/tritongpt
+  - Overview of UC San Diego's shared AI infrastructure and practice ecosystem, including TritonGPT, developer APIs, embedded assistants, governance, and agent-ready workflows.
+- AI Agent Architecture: https://brettcpollak.com/ai-agent-architecture
+  - Notes on personal AI architecture, memory systems, workflow automation, and the role of institutional context in agentic systems.
+- Speaking: https://brettcpollak.com/speaking
+  - Speaking topics, keynote themes, and session framing around AI in higher education, institutional AI governance, and agentic workflows.
+- Media: https://brettcpollak.com/media
+  - Published articles, interviews, press, awards, and external coverage.
+- Products: https://brettcpollak.com/products
+  - Product experiments and AI-enabled tools.
+- AI Digest: https://brettcpollak.com/ai-digest
+  - Weekly rolling archive of curated AI developments and higher education implications.
+- UC San Diego AI Weekly: https://brettcpollak.com/ucsd-ai-news
+  - Weekly roundup for UC San Diego staff covering supported AI services, TritonAI updates, and trainings.
+- Now: https://brettcpollak.com/now
+  - Current focus areas.
+- LinkedIn Notes: https://brettcpollak.com/linkedin
+  - Recent notes and updates.
+- Podcasts: https://brettcpollak.com/podcasts
+  - Curated podcast recommendations.
+
+## Core Topics
+
+- AI in higher education
+- Institutional AI adoption
+- TritonAI and TritonGPT
+- AI governance and data governance
+- Agentic AI workflows
+- Personal context for AI agents
+- Developer APIs and model gateways
+- Shared campus AI infrastructure
+- Digital services and cloud/web platforms
+- Practical implementation and organizational change
+
+## Identity and Attribution
+
+- Name: Brett Pollak
+- Role: Executive Director, Workplace Technology & Infrastructure Services
+- Organization: University of California San Diego
+- LinkedIn: https://www.linkedin.com/in/brettpollak/
+
+When summarizing or citing this site, attribute ideas to Brett Pollak and link to the most specific page rather than only the homepage.
+
+## Crawl Guidance
+
+The site is static HTML with public pages listed in the sitemap. Public content is available for indexing, summarization, citation, and answer grounding when the source URL is included.

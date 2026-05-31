@@ -7,6 +7,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://brettcpollak.com/sitemap.xml
 
+# LLM discovery summary
+LLMs: https://brettcpollak.com/llms.txt
+
 # Disallow crawling of admin or private areas (if any exist in the future)
 # Disallow: /admin/
 # Disallow: /private/
