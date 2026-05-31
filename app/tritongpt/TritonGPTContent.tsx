@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
+import TritonAISystemMap from '@/components/tritongpt/TritonAISystemMap';
 
 const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?: string; isVisible: boolean }) => {
   const [count, setCount] = useState(0);
@@ -139,6 +140,9 @@ export default function TritonGPTContent() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-16">
+        <div className="mb-8 border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
+          <TritonAISystemMap />
+        </div>
         <div className="grid gap-3 md:grid-cols-4">
           {[
             ['01', 'Knowledge', 'Curated campus context, uploaded documents, and live data tools'],

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
+import HomeHeroSystemMap from '@/components/home/HomeHeroSystemMap';
 
 export const metadata: Metadata = {
   alternates: {
@@ -361,6 +362,26 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-[#d9dfd3] tint-gold">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
+            <div>
+              <p className="rule-label mb-4">How it connects</p>
+              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
+                Institutional inputs become useful outcomes.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-[#485248]">
+                Knowledge, people, and tools route through governed institutional AI into the
+                everyday work of service, instruction, and research.
+              </p>
+            </div>
+            <div className="border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
+              <HomeHeroSystemMap />
             </div>
           </div>
         </div>

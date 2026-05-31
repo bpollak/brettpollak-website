@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { mediaItems } from '@/lib/mediaData';
+import SpeakingTopicsMap from '@/components/speaking/SpeakingTopicsMap';
 
 export const metadata: Metadata = {
   title: 'Speaking | Brett Pollak — AI in Higher Education',
@@ -185,6 +186,9 @@ export default function SpeakingPage() {
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-slate-900 mb-2">Topics</h2>
           <p className="text-slate-500 mb-10">Keynote and breakout session topics I cover regularly. All are grounded in production deployments at UC San Diego.</p>
+          <div className="mb-10 border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
+            <SpeakingTopicsMap />
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
             {SPEAKING_TOPICS.map((topic, i) => (
               <div
