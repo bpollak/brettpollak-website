@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useId, useState } from 'react';
-import { useInView } from '../motion/useInView';
+import { useEffect, useId, useRef } from 'react';
 import DiagramFrame from './DiagramFrame';
 import DiagramNode from './DiagramNode';
 import SignalPath from './SignalPath';

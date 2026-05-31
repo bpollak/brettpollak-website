@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 
 interface RevealProps {
   children: ReactNode;
@@ -10,13 +10,13 @@ interface RevealProps {
 
 /**
  * Wraps a block so it fades/rises into view as it enters the viewport.
- * Content is rendered visible by default and only "armed" (hidden, ready to
+ *
+ * The reveal mechanics run through DOM classList rather than React state:
+ * content is rendered visible by default and only "armed" (hidden, ready to
  * animate) once JS runs — so no-JS and reduced-motion users never lose content.
  */
 export default function Reveal({ children, className = '', delayMs = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [armed, setArmed] = useState(false);
-  const [shown, setShown] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -25,24 +25,23 @@ export default function Reveal({ children, className = '', delayMs = 0 }: Reveal
       typeof IntersectionObserver === 'undefined' ||
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
-      // No observation possible / motion suppressed: leave content fully visible.
-      setShown(true);
-      return;
+      return; // leave content fully visible, no animation
     }
+
+    el.classList.add('reveal');
+    const reveal = () => el.classList.add('is-visible');
+
     const rect = el.getBoundingClientRect();
-    const alreadyInView = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
-    // Arm the hidden state only now that JS is running (no-JS users see content).
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setArmed(true);
-    if (alreadyInView) {
-      const raf = requestAnimationFrame(() => setShown(true));
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+      const raf = requestAnimationFrame(reveal);
       return () => cancelAnimationFrame(raf);
     }
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            setShown(true);
+            reveal();
             observer.disconnect();
           }
         }
@@ -53,14 +52,10 @@ export default function Reveal({ children, className = '', delayMs = 0 }: Reveal
     return () => observer.disconnect();
   }, []);
 
-  const classes = [armed ? 'reveal' : '', shown ? 'is-visible' : '', className]
-    .filter(Boolean)
-    .join(' ');
-
   return (
     <div
       ref={ref}
-      className={classes || undefined}
+      className={className || undefined}
       style={delayMs ? { transitionDelay: `${delayMs}ms` } : undefined}
     >
       {children}
