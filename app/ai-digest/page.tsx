@@ -93,7 +93,7 @@ export default function AiDigestPage() {
               </div>
               <div className="px-8 py-7">
                 <div
-                  className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-h2:mb-4 prose-h3:mb-3 prose-hr:border-slate-200 prose-hr:my-8 [&_ul>li]:mb-8 [&_ol>li]:mb-8 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:transition-colors hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900"
+                  className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-h2:mb-4 prose-h3:mb-3 prose-hr:border-slate-200 prose-hr:my-8 [&_ul>li]:mb-8 [&_ol>li]:mb-8 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:transition-colors [&_a:hover]:text-blue-950 [&_a:hover]:decoration-blue-900"
                   dangerouslySetInnerHTML={{ __html: renderMarkdown(sanitizePublicDigest(linkDigestHeadlines(day.raw))) }}
                 />
               </div>

@@ -206,7 +206,7 @@ export default function UcsdAiNewsPage() {
                         [&_a]:font-semibold [&_a]:text-blue-800
                         [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600
                         [&_a]:transition-colors
-                        hover:[&_a]:text-blue-950 hover:[&_a]:decoration-blue-900
+                        [&_a:hover]:text-blue-950 [&_a:hover]:decoration-blue-900
                         [&_em]:text-slate-500 [&_em]:text-[0.95rem]"
                       dangerouslySetInnerHTML={{
                         __html: renderMarkdown(edition.raw),
