@@ -168,7 +168,7 @@ export default function Media() {
           <div className="space-y-8">
             <div>
               <p className="rule-label mb-5">Media and appearances</p>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl leading-none font-medium text-[#17201b]">Publication Index</h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl leading-none font-medium text-[#17201b]">Publication Index</h1>
             </div>
             <p className="text-xl sm:text-2xl text-[#485248] max-w-3xl leading-9">
               Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education.

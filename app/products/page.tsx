@@ -156,7 +156,7 @@ export default function Products() {
         <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#edf5f7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <p className="rule-label mb-5">Product laboratory</p>
-            <h1 className="text-6xl md:text-7xl leading-none font-medium text-[#17201b]">Built Work</h1>
+            <h1 className="text-5xl md:text-6xl leading-none font-medium text-[#17201b]">Built Work</h1>
           </div>
           <p className="text-2xl text-[#485248] mb-6 max-w-3xl leading-9">
             AI-powered products and prototypes that solve real problems, from personal productivity to institutional transformation.

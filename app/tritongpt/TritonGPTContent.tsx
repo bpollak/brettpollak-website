@@ -97,7 +97,7 @@ export default function TritonGPTContent() {
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-end">
             <div>
               <p className="rule-label mb-6">Program overview</p>
-              <h1 className="text-6xl md:text-8xl leading-none font-medium text-[#17201b]">TritonAI</h1>
+              <h1 className="text-5xl md:text-7xl leading-none font-medium text-[#17201b]">TritonAI</h1>
               <p className="mt-8 text-2xl md:text-3xl leading-10 text-[#485248]">
                 A shared AI ecosystem for service, instruction, development, and everyday campus work.
               </p>

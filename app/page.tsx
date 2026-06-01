@@ -287,8 +287,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
               <p className="rule-label mb-8">Higher education technology leadership</p>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
-                Building useful technology in higher education.
+              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
+                Making technology useful in higher education.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
                 I lead technology, infrastructure, and digital workplace teams at UC San Diego,
