@@ -18,12 +18,21 @@ export const metadata: Metadata = {
     url: 'https://brettcpollak.com/ai-agent-architecture',
     siteName: 'Brett Pollak',
     type: 'article',
+    images: [
+      {
+        url: '/ai-architecture-linkedin.png',
+        width: 1200,
+        height: 675,
+        alt: 'AI agent architecture for personal memory and institutional context',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Agent Architecture | Brett Pollak',
     description:
       'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego.',
+    images: ['/ai-architecture-linkedin.png'],
   },
 };
 

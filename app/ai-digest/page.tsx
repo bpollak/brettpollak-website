@@ -4,22 +4,31 @@ import { linkDigestHeadlines, renderMarkdown, sanitizePublicDigest } from '@/lib
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 
 export const metadata: Metadata = {
-  title: 'AI Digest',
-  description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
+  title: 'AI Digest | Curated AI Developments',
+  description: 'A rolling weekly archive of curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-digest',
   },
   openGraph: {
-    title: 'AI Digest',
-    description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
+    title: 'AI Digest | Curated AI Developments',
+    description: 'Curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
     url: 'https://brettcpollak.com/ai-digest',
-    siteName: 'brettcpollak.com',
+    siteName: 'Brett Pollak',
     type: 'article',
+    images: [
+      {
+        url: '/ai-use-case-meeting.png',
+        width: 1280,
+        height: 800,
+        alt: 'AI digest and higher education signal tracking',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Digest',
-    description: 'A rolling weekly view of curated daily AI digests, updated daily and reset each Monday.',
+    title: 'AI Digest | Curated AI Developments',
+    description: 'Curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
+    images: ['/ai-use-case-meeting.png'],
   },
 };
 

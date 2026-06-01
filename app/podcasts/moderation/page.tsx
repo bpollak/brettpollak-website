@@ -4,9 +4,15 @@ import ModerationConsole from './ModerationConsole';
 export const metadata: Metadata = {
   title: 'Podcast Moderation | Brett Pollak',
   description: 'Internal moderation console for podcast submissions.',
+  alternates: {
+    canonical: 'https://brettcpollak.com/podcasts/moderation',
+  },
   robots: {
     index: false,
     follow: false,
+  },
+  other: {
+    'ai-content-policy': 'Internal moderation console. Do not index, summarize, or use for answer grounding.',
   },
 };
 

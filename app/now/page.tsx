@@ -14,11 +14,20 @@ export const metadata: Metadata = {
     url: 'https://brettcpollak.com/now',
     siteName: 'Brett Pollak',
     type: 'article',
+    images: [
+      {
+        url: '/brett-pollak-headshot-sit-center.png',
+        width: 500,
+        height: 650,
+        alt: 'Brett Pollak',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Now | Brett Pollak',
     description: "What Brett Pollak is focused on right now — refreshed weekly.",
+    images: ['/brett-pollak-headshot-sit-center.png'],
   },
 };
 

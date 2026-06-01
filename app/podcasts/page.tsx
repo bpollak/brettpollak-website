@@ -11,11 +11,21 @@ export const metadata: Metadata = {
     title: "Podcast Discovery | Brett Pollak",
     description: "Discover and share your favorite podcasts on AI, technology, economics, and more.",
     url: "https://brettcpollak.com/podcasts",
+    siteName: "Brett Pollak",
+    images: [
+      {
+        url: "/images/podcasts/ai-daily-brief.webp",
+        width: 1200,
+        height: 1200,
+        alt: "Podcast discovery recommendations for AI, technology, and economics",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Podcast Discovery | Brett Pollak",
     description: "Discover and share your favorite podcasts on AI, technology, economics, and more.",
+    images: ["/images/podcasts/ai-daily-brief.webp"],
   },
 };
 

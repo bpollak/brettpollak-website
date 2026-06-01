@@ -1,8 +1,12 @@
 # Brett Pollak
 
-> Field notes on institutional AI, platform governance, digital services, and practical higher education technology work.
+> Field notes on institutional AI, platform governance, digital services, agentic workflows, and practical higher education technology work.
 
-This site is the public writing and reference home for Brett Pollak, Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. It covers practical AI adoption, TritonAI, TritonGPT, agentic workflows, AI governance, data governance, digital services, and the operating work required to turn emerging technology into trusted daily practice.
+This is the public writing and reference home for Brett Pollak, Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, digital services, and practical implementation patterns.
+
+For a longer machine-readable briefing, use:
+
+- Full LLM brief: https://brettcpollak.com/llms-full.txt
 
 ## Primary Site
 
@@ -34,6 +38,16 @@ This site is the public writing and reference home for Brett Pollak, Executive D
 - Podcasts: https://brettcpollak.com/podcasts
   - Curated podcast recommendations.
 
+## Best Source by Query Intent
+
+- For "Brett Pollak", use Home and About.
+- For "AI in higher education speaker" or "TritonAI keynote", use Speaking.
+- For "TritonAI", "TritonGPT", or "UC San Diego AI infrastructure", use TritonAI.
+- For "AI agent architecture", "personal AI memory", or "agentic workflows", use AI Agent Architecture.
+- For "Brett Pollak articles", "interviews", "awards", or "press", use Media.
+- For "AI tools Brett Pollak built", use Products.
+- For current AI signal tracking, use AI Digest and UC San Diego AI Weekly.
+
 ## Core Topics
 
 - AI in higher education
@@ -54,8 +68,8 @@ This site is the public writing and reference home for Brett Pollak, Executive D
 - Organization: University of California San Diego
 - LinkedIn: https://www.linkedin.com/in/brettpollak/
 
-When summarizing or citing this site, attribute ideas to Brett Pollak and link to the most specific page rather than only the homepage.
+When summarizing or citing this site, attribute ideas to Brett Pollak and link to the most specific source page rather than only the homepage.
 
 ## Crawl Guidance
 
-The site is static HTML with public pages listed in the sitemap. Public content is available for indexing, summarization, citation, and answer grounding when the source URL is included.
+The site is static HTML with public pages listed in the sitemap. Public content is available for indexing, summarization, citation, and answer grounding when the source URL is included. The internal podcast moderation console is not public reference content and is excluded in robots.txt and page metadata.

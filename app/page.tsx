@@ -249,9 +249,7 @@ export default function Home() {
       }
     ],
     "sameAs": [
-      "https://www.linkedin.com/in/brettpollak/",
-      "https://educause.edu",
-      "https://brettcpollak.com/speaking"
+      "https://www.linkedin.com/in/brettpollak/"
     ]
   };
 

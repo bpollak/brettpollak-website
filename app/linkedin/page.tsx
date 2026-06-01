@@ -11,11 +11,21 @@ export const metadata: Metadata = {
     title: "LinkedIn Notes | Brett Pollak",
     description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
     url: "https://brettcpollak.com/linkedin",
+    siteName: "Brett Pollak",
+    images: [
+      {
+        url: "/brett-pollak-headshot-sit-center.png",
+        width: 500,
+        height: 650,
+        alt: "Brett Pollak",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "LinkedIn Notes | Brett Pollak",
     description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
+    images: ["/brett-pollak-headshot-sit-center.png"],
   },
 };
 

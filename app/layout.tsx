@@ -6,23 +6,65 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
+const siteUrl = "https://brettcpollak.com";
+const siteDescription =
+  "Brett Pollak builds and governs institutional AI at UC San Diego. Field notes, talks, and practical architecture for AI in higher education, TritonAI, TritonGPT, agentic workflows, and AI governance.";
+const siteImage = `${siteUrl}/brett-pollak-headshot-sit-center.png`;
+
 const siteSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://brettcpollak.com/#website",
-      "url": "https://brettcpollak.com/",
+      "@id": `${siteUrl}/#website`,
+      "url": `${siteUrl}/`,
       "name": "Brett Pollak",
-      "description":
-        "Field notes on institutional AI, platform governance, digital services, and higher education technology practice.",
+      "alternateName": "Brett C. Pollak",
+      "description": siteDescription,
       "inLanguage": "en-US",
       "publisher": {
-        "@id": "https://brettcpollak.com/#person"
+        "@id": `${siteUrl}/#person`
       },
       "about": [
-        { "@id": "https://brettcpollak.com/#person" },
-        { "@id": "https://brettcpollak.com/#tritonai" }
+        { "@id": `${siteUrl}/#person` },
+        { "@id": `${siteUrl}/#tritonai` }
+      ],
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/tritongpt#webpage`,
+          "url": `${siteUrl}/tritongpt`,
+          "name": "TritonAI",
+          "description": "Shared AI infrastructure in higher education, including TritonGPT, developer APIs, embedded assistants, and agent-ready workflows."
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/speaking#webpage`,
+          "url": `${siteUrl}/speaking`,
+          "name": "Speaking",
+          "description": "Keynotes, panels, and conference sessions on AI in higher education, institutional AI governance, and agentic workflows."
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/media#webpage`,
+          "url": `${siteUrl}/media`,
+          "name": "Media and Appearances",
+          "description": "Published articles, interviews, awards, whitepapers, and external coverage."
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/ai-agent-architecture#webpage`,
+          "url": `${siteUrl}/ai-agent-architecture`,
+          "name": "AI Agent Architecture",
+          "description": "A practical personal AI architecture using memory, automation, model routing, and institutional context."
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/products#webpage`,
+          "url": `${siteUrl}/products`,
+          "name": "Products and Innovation",
+          "description": "AI-enabled tools and experiments built by Brett Pollak."
+        }
       ],
       "sameAs": [
         "https://www.linkedin.com/in/brettpollak/"
@@ -30,10 +72,11 @@ const siteSchema = {
     },
     {
       "@type": "Person",
-      "@id": "https://brettcpollak.com/#person",
+      "@id": `${siteUrl}/#person`,
       "name": "Brett Pollak",
-      "url": "https://brettcpollak.com/",
-      "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
+      "url": `${siteUrl}/`,
+      "image": siteImage,
+      "description": "Technology executive at UC San Diego focused on institutional AI, digital services, AI governance, and practical higher education technology adoption.",
       "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
       "worksFor": {
         "@type": "EducationalOrganization",
@@ -57,12 +100,18 @@ const siteSchema = {
       ]
     },
     {
-      "@type": "Thing",
-      "@id": "https://brettcpollak.com/#tritonai",
+      "@type": "Organization",
+      "@id": `${siteUrl}/#tritonai`,
       "name": "TritonAI",
-      "url": "https://brettcpollak.com/tritongpt",
+      "alternateName": "TritonAI Program at UC San Diego",
+      "url": `${siteUrl}/tritongpt`,
       "description":
-        "UC San Diego's shared AI infrastructure and practice ecosystem, including TritonGPT, developer APIs, embedded assistants, governance, and agent-ready workflows."
+        "UC San Diego's shared AI infrastructure and practice ecosystem, including TritonGPT, developer APIs, embedded assistants, governance, and agent-ready workflows.",
+      "parentOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "University of California San Diego",
+        "url": "https://ucsd.edu/"
+      }
     }
   ]
 };
@@ -80,12 +129,16 @@ const displayFont = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://brettcpollak.com'),
+  metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
   },
-  title: "Brett Pollak | AI in Higher Education — Speaker, Author, Executive",
-  description: "Brett Pollak builds and governs institutional AI at UC San Diego. Keynote speaker on AI in higher education, agentic workflows, and vertical AI deployment. Creator of TritonAI and TritonGPT.",
+  title: "Brett Pollak | AI in Higher Education",
+  description: siteDescription,
+  applicationName: "Brett Pollak",
+  creator: "Brett Pollak",
+  publisher: "Brett Pollak",
+  category: "Technology",
   keywords: [
     "Brett Pollak",
     "AI in Higher Education",
@@ -106,6 +159,17 @@ export const metadata: Metadata = {
     "technology leadership",
   ],
   authors: [{ name: "Brett Pollak" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -115,24 +179,29 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Brett Pollak | AI in Higher Education",
-    description: "Notes and conversations about building useful, responsible AI in higher education, informed by work at UC San Diego and TritonGPT.",
-    url: "https://brettcpollak.com",
+    description: siteDescription,
+    url: siteUrl,
     siteName: "Brett Pollak",
     type: "profile",
+    locale: "en_US",
     images: [
       {
-        url: "/brett-pollak-headshot-sit-center.png",
+        url: siteImage,
         width: 500,
         height: 650,
-        alt: "Brett Pollak - Technology Executive",
+        alt: "Brett Pollak, technology executive focused on AI in higher education",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Brett Pollak | AI in Higher Education",
-    description: "Notes and conversations about building useful, responsible AI in higher education, informed by work at UC San Diego and TritonGPT.",
-    images: ["/brett-pollak-headshot-sit-center.png"],
+    description: siteDescription,
+    images: [siteImage],
+  },
+  other: {
+    "llms.txt": `${siteUrl}/llms.txt`,
+    "ai-content-policy": "Public pages may be indexed, summarized, cited, and used for answer grounding when attribution includes the source URL.",
   },
 };
 

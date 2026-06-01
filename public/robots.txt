@@ -1,15 +1,28 @@
 # Robots.txt for Brett Pollak Website
-# Allow all search engines to crawl the site
+# Public pages are intentionally available for search, AI search, summarization,
+# citation, and answer grounding. The internal moderation console is excluded.
 
 User-agent: *
 Allow: /
+Disallow: /podcasts/moderation
 
-# Sitemap location
+# AI search, retrieval, and model-discovery crawlers.
+# These explicit groups document intent; the wildcard rule above also allows
+# standards-compliant crawlers unless a more specific rule applies.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Bingbot
+Allow: /
+Disallow: /podcasts/moderation
+
+# Sitemap and LLM-readable discovery files
 Sitemap: https://brettcpollak.com/sitemap.xml
-
-# LLM discovery summary
 LLMs: https://brettcpollak.com/llms.txt
-
-# Disallow crawling of admin or private areas (if any exist in the future)
-# Disallow: /admin/
-# Disallow: /private/
+LLMs-Full: https://brettcpollak.com/llms-full.txt
