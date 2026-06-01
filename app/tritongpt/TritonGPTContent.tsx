@@ -271,6 +271,71 @@ export default function TritonGPTContent() {
         </div>
       </section>
 
+      {/* TritonGPT Demo Videos */}
+      <section className="bg-[#eef2ea] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12 max-w-4xl">
+            <p className="rule-label mb-4">Recorded work</p>
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">TritonAI in Action</h2>
+            <p className="text-xl leading-8 text-[#485248]">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
+          </div>
+          <div className="grid grid-cols-1 gap-8">
+            {[
+              {
+                title: "Job Description Helper",
+                description: "Helps HR and hiring managers draft clear, compliant job descriptions in minutes.",
+                src: "https://tritongpt-deck.vercel.app/media/media4.mov",
+              },
+              {
+                title: "Fund Manager Coach",
+                description: "Guides grant and fund managers on compliance, allowable expenses, and spending restrictions.",
+                src: "https://tritongpt-deck.vercel.app/media/media3.mov",
+              },
+              {
+                title: "UC San Diego Assistant",
+                description: "Answers campus policy and service questions using curated departmental knowledge and institutional resources.",
+                src: "https://tritongpt-deck.vercel.app/media/media1.mov",
+                poster: "https://tritongpt-deck.vercel.app/media/image36.png",
+              },
+              {
+                title: "Contract Reviewer",
+                description: "Auto-redlines third-party NDAs/contracts against UC San Diego and UC Terms & Conditions and Legal Position.",
+                src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
+                poster: "https://tritongpt-deck.vercel.app/media/image47.png",
+              },
+            ].map((video) => (
+              <div
+                key={video.src}
+                className="overflow-hidden border border-[#d9dfd3] bg-[#fffef9]"
+              >
+                <div className="p-6 border-b border-[#d9dfd3]">
+                  <h3 className="text-xl font-semibold text-[#17201b]">{video.title}</h3>
+                  <p className="mt-2 text-sm text-[#485248] leading-6">{video.description}</p>
+                </div>
+                <div className="relative">
+                  <video
+                    className="w-full aspect-video bg-black"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    preload="metadata"
+                    poster={video.poster}
+                    aria-label={`${video.title} demo video`}
+                  >
+                    <source
+                      src={video.src}
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Key Metrics */}
       <section className="bg-[#fffef9] py-20 border-y border-[#d9dfd3]" ref={metricsRef}>
         <div className="max-w-7xl mx-auto px-6">
@@ -351,71 +416,6 @@ export default function TritonGPTContent() {
               <p className="text-[#485248] leading-7">{principle.description}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* TritonGPT Demo Videos */}
-      <section className="bg-[#eef2ea] py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-12 max-w-4xl">
-            <p className="rule-label mb-4">Recorded work</p>
-            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">TritonAI in Action</h2>
-            <p className="text-xl leading-8 text-[#485248]">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
-          </div>
-          <div className="grid grid-cols-1 gap-8">
-            {[
-              {
-                title: "Job Description Helper",
-                description: "Helps HR and hiring managers draft clear, compliant job descriptions in minutes.",
-                src: "https://tritongpt-deck.vercel.app/media/media4.mov",
-              },
-              {
-                title: "Fund Manager Coach",
-                description: "Guides grant and fund managers on compliance, allowable expenses, and spending restrictions.",
-                src: "https://tritongpt-deck.vercel.app/media/media3.mov",
-              },
-              {
-                title: "UC San Diego Assistant",
-                description: "Answers campus policy and service questions using curated departmental knowledge and institutional resources.",
-                src: "https://tritongpt-deck.vercel.app/media/media1.mov",
-                poster: "https://tritongpt-deck.vercel.app/media/image36.png",
-              },
-              {
-                title: "Contract Reviewer",
-                description: "Auto-redlines third-party NDAs/contracts against UC San Diego and UC Terms & Conditions and Legal Position.",
-                src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
-                poster: "https://tritongpt-deck.vercel.app/media/image47.png",
-              },
-            ].map((video) => (
-              <div
-                key={video.src}
-                className="overflow-hidden border border-[#d9dfd3] bg-[#fffef9]"
-              >
-                <div className="p-6 border-b border-[#d9dfd3]">
-                  <h3 className="text-xl font-semibold text-[#17201b]">{video.title}</h3>
-                  <p className="mt-2 text-sm text-[#485248] leading-6">{video.description}</p>
-                </div>
-                <div className="relative">
-                  <video
-                    className="w-full aspect-video bg-black"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    controls
-                    preload="metadata"
-                    poster={video.poster}
-                    aria-label={`${video.title} demo video`}
-                  >
-                    <source
-                      src={video.src}
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
