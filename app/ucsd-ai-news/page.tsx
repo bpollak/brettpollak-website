@@ -44,122 +44,68 @@ export const metadata: Metadata = {
 export default function UcsdAiNewsPage() {
   const { weekLabel, publishedThrough, editionCount, itemCount, editions } = ucsdAiNewsletterData;
   const editionsNewestFirst = [...editions].sort((a, b) => b.isoDate.localeCompare(a.isoDate));
+  const latestStatus = editionCount > 0
+    ? `Published through ${publishedThrough}. New editions publish every Monday morning.`
+    : 'The first edition publishes Monday morning. Check back soon or bookmark this page.';
 
   return (
     <main className="page-shell" id="main-content">
       <section className="page-hero">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
-        <p className="rule-label mb-6">UC San Diego AI Weekly</p>
-        <h1 className="page-title mb-6 max-w-[20rem] sm:max-w-none">
-          UC San Diego AI Weekly Update
-        </h1>
-        <p className="page-intro mb-8 max-w-full break-words">
-          A weekly roundup of what&rsquo;s new with UC San Diego&rsquo;s supported AI services. Each edition
-          covers release notes from your supported tools, updates from TritonAI, and trainings
-          coming up in the next two weeks.
-        </p>
-
-        <a
-          href="https://tritonai.ucsd.edu/"
-          className="group block max-w-3xl mb-12 editorial-panel p-5 sm:p-6 transition-colors hover:border-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-blue-900/30 focus:ring-offset-2"
-          data-tone="blue"
-        >
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-            <div className="flex-none rounded-xl bg-white/80 border border-blue-200/60 p-3 shadow-sm group-hover:border-blue-300 transition-colors">
-              <svg
-                className="w-6 h-6 text-blue-800"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </div>
-            <div className="flex-1 min-w-0 max-w-full">
-              <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-1.5">
-                Official UCSD AI Platform
-              </div>
-              <p className="text-base text-slate-700 leading-relaxed max-w-full break-words">
-                This newsletter is curated for UCSD staff. For the full TritonAI platform &mdash;
-                supported tools, trainings, documentation, and support &mdash;{' '}
-                <span className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 group-hover:text-blue-950 group-hover:decoration-blue-900 transition-colors break-words">
-                  visit the TritonAI platform
-                  <span className="inline-block ml-1 transition-transform group-hover:translate-x-0.5">&rarr;</span>
-                </span>
+          <div className="grid gap-12 lg:grid-cols-[1fr_19rem] lg:items-start">
+            <div>
+              <p className="rule-label mb-6">UC San Diego AI Weekly</p>
+              <h1 className="page-title mb-6 max-w-[20rem] sm:max-w-none">
+                UC San Diego AI Weekly Update
+              </h1>
+              <p className="page-intro mb-8 max-w-4xl break-words">
+                A weekly roundup of what&rsquo;s new with UC San Diego&rsquo;s supported AI services.
+                Each edition covers release notes from your supported tools, updates from TritonAI,
+                and trainings coming up in the next two weeks.
               </p>
-            </div>
-          </div>
-        </a>
 
-        <a
-          href="https://tritonai.ucsd.edu/tritongpt/release-notes/"
-          className="group block max-w-3xl mb-6 editorial-panel p-5 sm:p-6 transition-colors hover:border-[#366c5a] focus:outline-none focus:ring-2 focus:ring-emerald-900/30 focus:ring-offset-2"
-          data-tone="green"
-        >
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-            <div className="flex-none rounded-xl bg-white/80 border border-emerald-200/60 p-3 shadow-sm group-hover:border-emerald-300 transition-colors">
-              <svg
-                className="w-6 h-6 text-emerald-700"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
-                />
-              </svg>
-            </div>
-            <div className="flex-1 min-w-0 max-w-full">
-              <div className="text-xs uppercase tracking-[0.18em] text-emerald-700 font-semibold mb-1.5">
-                TritonGPT Release Notes
+              <div className="flex flex-col gap-3 border-y border-[#d9dfd3] py-5 text-sm sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+                <a
+                  href="https://tritonai.ucsd.edu/"
+                  className="group inline-flex w-fit items-center gap-2 font-semibold text-[#1f5a8a] underline decoration-2 underline-offset-4 decoration-[#1f5a8a]/35 transition-colors hover:text-blue-950 hover:decoration-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-900/30 focus:ring-offset-2"
+                >
+                  Visit TritonAI platform
+                  <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  href="https://tritonai.ucsd.edu/tritongpt/release-notes/"
+                  className="group inline-flex w-fit items-center gap-2 font-semibold text-[#366c5a] underline decoration-2 underline-offset-4 decoration-[#366c5a]/35 transition-colors hover:text-emerald-900 hover:decoration-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-900/30 focus:ring-offset-2"
+                >
+                  View TritonGPT release notes
+                  <span className="transition-transform group-hover:translate-x-0.5" aria-hidden="true">&rarr;</span>
+                </a>
               </div>
-              <p className="text-base text-slate-700 leading-relaxed max-w-full break-words">
-                See what&rsquo;s new in TritonGPT &mdash; feature releases, updates, and fixes &mdash;{' '}
-                <span className="font-semibold text-emerald-700 underline decoration-2 underline-offset-4 decoration-emerald-500 group-hover:text-emerald-900 group-hover:decoration-emerald-700 transition-colors break-words">
-                  view the release notes
-                  <span className="inline-block ml-1 transition-transform group-hover:translate-x-0.5">&rarr;</span>
-                </span>
-              </p>
             </div>
-          </div>
-        </a>
 
-        <div className="grid sm:grid-cols-3 gap-4 mb-10">
-          <div className="editorial-panel p-6" data-tone="blue">
-            <div className="rule-label mb-2">Latest edition</div>
-            <div className="text-2xl font-semibold text-[#17201b]">{weekLabel}</div>
+            <aside className="border-y border-[#d9dfd3] py-6 lg:mt-3" aria-label="Archive summary">
+              <p className="rule-label mb-5">Latest edition</p>
+              <div className="font-[family-name:var(--font-display)] text-4xl font-medium leading-tight text-[#17201b]">
+                {weekLabel}
+              </div>
+              <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-[#d9dfd3] pt-5">
+                <div>
+                  <div className="font-mono text-2xl text-[#17201b]">{editionCount}</div>
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#7a8479]">
+                    Editions
+                  </div>
+                </div>
+                <div>
+                  <div className="font-mono text-2xl text-[#17201b]">{itemCount}</div>
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#7a8479]">
+                    Items
+                  </div>
+                </div>
+              </div>
+              <p className="mt-6 border-t border-[#d9dfd3] pt-5 text-sm leading-6 text-[#485248]">
+                {latestStatus}
+              </p>
+            </aside>
           </div>
-          <div className="editorial-panel p-6" data-tone="green">
-            <div className="rule-label mb-2">Editions in archive</div>
-            <div className="text-2xl font-semibold text-[#17201b]">{editionCount}</div>
-          </div>
-          <div className="editorial-panel p-6" data-tone="gold">
-            <div className="rule-label mb-2">Items included</div>
-            <div className="text-2xl font-semibold text-[#17201b]">{itemCount}</div>
-          </div>
-        </div>
-
-        {editionCount > 0 ? (
-          <div className="editorial-panel px-5 py-4 text-sm text-[#7a4b0d]" data-tone="gold">
-            Published through <span className="font-semibold">{publishedThrough}</span>. New editions
-            publish every Monday morning.
-          </div>
-        ) : (
-          <div className="editorial-panel px-5 py-4 text-sm text-[#485248]">
-            The first edition publishes Monday morning. Check back soon — or bookmark this page to
-            see it automatically.
-          </div>
-        )}
         </div>
       </section>
 
