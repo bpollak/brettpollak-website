@@ -182,36 +182,6 @@ export default function SpeakingPage() {
 
       <div className="max-w-7xl mx-auto px-6 py-16">
 
-        {/* Speaking Topics */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">Topics</h2>
-          <p className="text-slate-500 mb-10">Keynote and breakout session topics I cover regularly. All are grounded in production deployments at UC San Diego.</p>
-          <div className="mb-10 border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
-            <SpeakingTopicsMap />
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {SPEAKING_TOPICS.map((topic, i) => (
-              <div
-                key={i}
-                className="editorial-panel p-8 transition-colors hover:border-[#1f5a8a]"
-              >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{topic.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-5">{topic.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {topic.signals.map((s, si) => (
-                    <span
-                      key={si}
-                      className="px-3 py-1 bg-blue-50 text-blue-800 text-xs font-medium rounded-full border border-blue-100"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Upcoming Engagements */}
         {UPCOMING_ENGAGEMENTS.length > 0 && (
           <section className="mb-20">
@@ -253,8 +223,8 @@ export default function SpeakingPage() {
         {/* Past Engagements */}
         {PAST_ENGAGEMENTS.length > 0 && (
           <section className="mb-20">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Past Engagements</h2>
-            <p className="text-slate-500 mb-10">Conferences, summits, and panels.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">Recent Engagements</h2>
+            <p className="text-slate-500 mb-10">Recent conferences, summits, and panels.</p>
             <div className="space-y-4">
               {PAST_ENGAGEMENTS.map((item, i) => (
                 <a
@@ -279,6 +249,36 @@ export default function SpeakingPage() {
             </div>
           </section>
         )}
+
+        {/* Speaking Topics */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-slate-900 mb-2">Topics</h2>
+          <p className="text-slate-500 mb-10">Keynote and breakout session topics I cover regularly. All are grounded in production deployments at UC San Diego.</p>
+          <div className="mb-10 border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
+            <SpeakingTopicsMap />
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {SPEAKING_TOPICS.map((topic, i) => (
+              <div
+                key={i}
+                className="editorial-panel p-8 transition-colors hover:border-[#1f5a8a]"
+              >
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{topic.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-5">{topic.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {topic.signals.map((s, si) => (
+                    <span
+                      key={si}
+                      className="px-3 py-1 bg-blue-50 text-blue-800 text-xs font-medium rounded-full border border-blue-100"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* What to Expect */}
         <section className="mb-20 editorial-panel p-8 md:p-10">
