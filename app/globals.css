@@ -309,6 +309,21 @@ html {
   line-height: 1.58;
 }
 
+.ucsd-news-hero {
+  background-color: color-mix(in srgb, var(--paper) 97%, var(--signal-blue) 3%);
+  background-image:
+    linear-gradient(rgba(31, 90, 138, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54, 108, 90, 0.024) 1px, transparent 1px);
+}
+
+.ucsd-news-hero .page-intro {
+  color: color-mix(in srgb, var(--ink), transparent 16%);
+}
+
+.ucsd-news-hero .rule-label {
+  color: color-mix(in srgb, var(--ink), transparent 26%);
+}
+
 .editorial-panel {
   border: 1px solid var(--line);
   background: var(--paper-strong);

@@ -50,7 +50,7 @@ export default function UcsdAiNewsPage() {
 
   return (
     <main className="page-shell" id="main-content">
-      <section className="page-hero">
+      <section className="page-hero ucsd-news-hero">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="grid gap-12 lg:grid-cols-[1fr_19rem] lg:items-start">
             <div>
@@ -90,18 +90,18 @@ export default function UcsdAiNewsPage() {
               <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-[#d9dfd3] pt-5">
                 <div>
                   <div className="font-mono text-2xl text-[#17201b]">{editionCount}</div>
-                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#7a8479]">
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#5f6a61]">
                     Editions
                   </div>
                 </div>
                 <div>
                   <div className="font-mono text-2xl text-[#17201b]">{itemCount}</div>
-                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#7a8479]">
+                  <div className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#5f6a61]">
                     Items
                   </div>
                 </div>
               </div>
-              <p className="mt-6 border-t border-[#d9dfd3] pt-5 text-sm leading-6 text-[#485248]">
+              <p className="mt-6 border-t border-[#d9dfd3] pt-5 text-sm leading-6 text-[#36423a]">
                 {latestStatus}
               </p>
             </aside>
