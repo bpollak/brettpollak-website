@@ -533,6 +533,27 @@ html {
   }
 }
 
+/* Data-chart bars grow from their left edge on load (Media archive chart). */
+.grow-bar {
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .grow-bar {
+    animation: grow-bar 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes grow-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* Gentle hover lift for interactive cards / diagrams */
 .lift {
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -567,5 +588,10 @@ html {
   .flow-path {
     animation: none !important;
     stroke-dashoffset: 0 !important;
+  }
+
+  .grow-bar {
+    animation: none !important;
+    transform: none !important;
   }
 }

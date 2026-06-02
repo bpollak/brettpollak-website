@@ -1,4 +1,4 @@
-import { mediaItems } from '@/lib/mediaData';
+import { mediaItems, type MediaItem } from '@/lib/mediaData';
 import type { Metadata } from 'next';
 import MediaContent from './MediaContent';
 
@@ -43,32 +43,110 @@ export const metadata: Metadata = {
   },
 };
 
-function MediaCornerMark() {
+const FORMAT_META: { key: MediaItem['category']; label: string; color: string }[] = [
+  { key: 'article', label: 'Articles', color: '#1f5a8a' },
+  { key: 'speaking', label: 'Speaking', color: '#b8503f' },
+  { key: 'whitepaper', label: 'Whitepapers', color: '#366c5a' },
+  { key: 'interview', label: 'Interviews', color: '#c97712' },
+  { key: 'award', label: 'Awards', color: '#5b4a86' },
+];
+
+// Data-driven archive graphic: format breakdown (bars) + activity-by-year
+// timeline (columns), computed from mediaItems so it stays accurate as the
+// record grows. Nothing here is hand-tuned — add an item to mediaData and the
+// chart recomputes on the next build.
+function MediaArchiveChart() {
+  const total = mediaItems.length;
+
+  const formats = FORMAT_META.map((meta) => ({
+    ...meta,
+    count: mediaItems.filter((item) => item.category === meta.key).length,
+  })).filter((f) => f.count > 0);
+  const maxFormat = Math.max(...formats.map((f) => f.count), 1);
+
+  const years = mediaItems.map((item) => Number(item.date.slice(0, 4)));
+  const firstYear = Math.min(...years);
+  const lastYear = Math.max(...years);
+  const yearSpan: { year: number; count: number }[] = [];
+  for (let y = firstYear; y <= lastYear; y += 1) {
+    yearSpan.push({ year: y, count: years.filter((v) => v === y).length });
+  }
+  const maxYear = Math.max(...yearSpan.map((y) => y.count), 1);
+
+  // layout
+  const W = 520;
+  const barX = 132;
+  const barMaxW = 312;
+  const barTop = 78;
+  const barStep = 34;
+  const colTop = 250;
+  const colBottom = 320;
+  const colArea = colBottom - colTop;
+  const colGap = 4;
+  const colW = (444 - (yearSpan.length - 1) * colGap) / yearSpan.length;
+
   return (
     <svg
-      aria-hidden="true"
-      viewBox="0 0 180 130"
+      role="img"
+      aria-labelledby="media-chart-title media-chart-desc"
+      viewBox="0 0 520 348"
       className="h-auto w-full"
       fill="none"
     >
-      <rect x="28" y="20" width="78" height="90" rx="7" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
-      <rect x="38" y="34" width="48" height="5" rx="2.5" fill="#1f5a8a" />
-      <rect x="38" y="50" width="58" height="4" rx="2" fill="#9eb7aa" />
-      <rect x="38" y="64" width="44" height="4" rx="2" fill="#9eb7aa" />
-      <rect x="38" y="78" width="52" height="4" rx="2" fill="#d9dfd3" />
-      <path d="M108 55 C123 55 130 66 139 75" stroke="#485248" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 8" />
-      <path d="M108 86 C122 86 129 79 139 72" stroke="#485248" strokeWidth="2" strokeLinecap="round" strokeDasharray="2 8" />
-      <circle cx="141" cy="55" r="15" fill="#f7f9f5" stroke="#d9dfd3" strokeWidth="2" />
-      <path d="M141 47 v12" stroke="#366c5a" strokeWidth="4" strokeLinecap="round" />
-      <path d="M133 59 c2 7 14 7 16 0" stroke="#366c5a" strokeWidth="3" strokeLinecap="round" />
-      <path d="M141 66 v8" stroke="#366c5a" strokeWidth="3" strokeLinecap="round" />
-      <path d="M134 74 h14" stroke="#366c5a" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="143" cy="92" r="14" fill="#fff5e7" stroke="#dfbf8b" strokeWidth="2" />
-      <path
-        d="M143 82.5 l2.7 5.4 6 .9 -4.3 4.2 1 5.9 -5.4-2.8 -5.4 2.8 1-5.9 -4.3-4.2 6-.9z"
-        fill="#c97712"
-      />
-      <path d="M129 103 l-4 12 10 -5 8 7 4 -14" stroke="#c05643" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <title id="media-chart-title">Publication record by format and year</title>
+      <desc id="media-chart-desc">
+        {`${total} indexed items from ${firstYear} to ${lastYear}: `}
+        {formats.map((f) => `${f.count} ${f.label.toLowerCase()}`).join(', ')}.
+      </desc>
+      <rect x="1" y="1" width={W - 2} height="346" rx="16" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
+
+      {/* header */}
+      <text x="28" y="38" fill="#7a8479" fontSize="11" fontWeight="700" letterSpacing="2">
+        THE RECORD BY FORMAT
+      </text>
+      <line x1="28" y1="52" x2={W - 28} y2="52" stroke="#d9dfd3" strokeWidth="1.5" />
+
+      {/* format bars */}
+      {formats.map((f, i) => {
+        const y = barTop + i * barStep;
+        const w = Math.max(6, Math.round((barMaxW * f.count) / maxFormat));
+        return (
+          <g key={f.key}>
+            <text x={barX - 12} y={y + 15} textAnchor="end" fill="#17201b" fontSize="12.5" fontWeight="600">
+              {f.label}
+            </text>
+            <rect x={barX} y={y} width={barMaxW} height="20" rx="4" fill="#eef1ec" />
+            <rect className="grow-bar" x={barX} y={y} width={w} height="20" rx="4" fill={f.color} />
+            <text x={barX + w + 9} y={y + 15} fill="#17201b" fontSize="12.5" fontWeight="700" fontFamily="monospace">
+              {f.count}
+            </text>
+          </g>
+        );
+      })}
+
+      {/* timeline header */}
+      <text x="28" y={colTop - 24} fill="#7a8479" fontSize="11" fontWeight="700" letterSpacing="2">
+        ACTIVITY BY YEAR
+      </text>
+      <line x1="28" y1={colTop - 12} x2={W - 28} y2={colTop - 12} stroke="#d9dfd3" strokeWidth="1.5" />
+
+      {/* year columns */}
+      <line x1="38" y1={colBottom} x2={W - 38} y2={colBottom} stroke="#d9dfd3" strokeWidth="1.5" />
+      {yearSpan.map((yr, i) => {
+        const h = Math.max(3, Math.round((colArea * yr.count) / maxYear));
+        const x = 38 + i * (colW + colGap);
+        const isEdge = yr.year === firstYear || yr.year === lastYear;
+        return (
+          <g key={yr.year}>
+            <rect x={x} y={colBottom - h} width={colW} height={h} rx="2" fill={isEdge ? '#17201b' : '#9eb7aa'} />
+            {isEdge && (
+              <text x={x + colW / 2} y={colBottom + 16} textAnchor="middle" fill="#7a8479" fontSize="10" fontWeight="600" fontFamily="monospace">
+                {`'${String(yr.year).slice(2)}`}
+              </text>
+            )}
+          </g>
+        );
+      })}
     </svg>
   );
 }
@@ -139,10 +217,7 @@ export default function Media() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="relative mb-12 overflow-hidden border-y border-[#d9dfd3] bg-white/75 p-6 shadow-[10px_10px_0_rgba(31,90,138,0.08)]">
-          <div className="pointer-events-none absolute right-6 top-6 hidden w-40 opacity-90 lg:block xl:w-48">
-            <MediaCornerMark />
-          </div>
+        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-white/75 p-6 shadow-[10px_10px_0_rgba(31,90,138,0.08)] lg:grid-cols-[0.84fr_1.16fr] lg:items-center">
           <div className="space-y-8">
             <div>
               <p className="rule-label mb-5">Media and appearances</p>
@@ -163,6 +238,9 @@ export default function Media() {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="diagram border border-[#d9dfd3] bg-[#f7f9f5] p-3">
+            <MediaArchiveChart />
           </div>
         </div>
 

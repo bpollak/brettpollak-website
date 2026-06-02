@@ -2,10 +2,17 @@ export interface MediaItem {
   publication: string;
   title: string;
   url: string;
-  date: string;
+  date: string; // ISO 'YYYY-MM-DD' — used for sorting AND the year-by-year chart
   category: 'article' | 'interview' | 'whitepaper' | 'speaking' | 'award';
 }
 
+// This array is the single source of truth for the /media page. To update the
+// page, add or edit entries here — nothing else needs to change. The hero stats
+// (indexed items, talks, coverage span) and the "record by format / activity by
+// year" graphic (MediaArchiveChart in app/media/page.tsx) are all computed from
+// this data at build time, so they stay accurate automatically on the next
+// deploy. Keep `date` as a real ISO date and `category` to one of the five
+// allowed values, or the chart math will be off.
 export const mediaItems: MediaItem[] = [
   {
     publication: 'UC AI Council Webinar Series',
