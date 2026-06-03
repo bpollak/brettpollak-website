@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-06-02T17:20:17.236Z",
+  "generatedAt": "2026-06-03T13:35:29.115Z",
   "weekOf": "2026-06-01",
   "weekEnding": "2026-06-07",
   "weekLabel": "Week of June 1–7, 2026",
-  "publishedThrough": "June 2, 2026",
-  "digestCount": 2,
-  "headlineCount": 10,
+  "publishedThrough": "June 3, 2026",
+  "digestCount": 3,
+  "headlineCount": 16,
   "days": [
     {
       "isoDate": "2026-06-01",
@@ -51,6 +51,20 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic"
       ],
       "raw": "# AI Intelligence Briefing - June 2, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **How we used Gemini to build Google I/O 2026** — Google showcased how its Gemini models powered the production of I/O 2026, highlighting the maturity of generative AI in large‑scale events.\n  🔗 Graph: google, gemini, agentic-ai\n  📅 Published: 2026-06-01\n  📰 https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/\n\n• **OpenAI frontier models and Codex are now available on AWS** — OpenAI released its latest frontier models and Codex on Amazon Web Services, expanding enterprise access to cutting‑edge AI.\n  🔗 Graph: openai, codex, ai-governance\n  📅 Published: 2026-06-01\n  📰 https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws\n\n• **Turnitin Adds Customizable AI Assistance to Support Different Assignments, Grade Levels** — Turnitin introduces configurable AI settings, letting instructors tailor AI help per assignment, a move aligning with higher‑education AI adoption trends.\n  🔗 Graph: higher-ed-ai, ai-adoption, data-analytics\n  📅 Published: 2026-06-01\n  📰 https://campustechnology.com/articles/2026/06/01/turnitin-adds-customizable-ai-assistance-to-support-different-assignments-grade-levels.aspx\n\n• **Data Literacy Is Key to AI ROI for Higher Education** — A case study shows how data‑literacy programs boost AI return on investment at Morgan State University, underscoring the role of analytics in campus AI strategies.\n  🔗 Graph: higher-ed-ai, data-analytics, ai-governance\n  📅 Published: 2026-06-01\n  📰 https://edtechmagazine.com/higher/article/2026/06/data-literacy-key-ai-roi-higher-education-perfcon\n\n• **Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic** — Hugging Face argues that robust agentic architectures are essential for enterprise‑scale AI, a perspective resonating with TritonAI’s roadmap.\n  🔗 Graph: agentic-ai, ai-adoption, litellm-enterprise\n  📅 Published: 2026-06-01\n  📰 https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption\n\n💡 Signal: AI governance, agentic architectures, and higher‑education data initiatives dominate the week, reinforcing Brett’s focus on scalable, policy‑aware AI deployment across UC San Diego.\n"
+    },
+    {
+      "isoDate": "2026-06-03",
+      "displayDate": "Wednesday, June 3",
+      "sourceFile": "ai-news-digest-2026-06-03.md",
+      "headlines": [
+        "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
+        "Direct Preference Optimization Beyond Chatbots",
+        "How we used Gemini to build Google I/O 2026",
+        "Turnitin Adds Customizable AI Assistance to Support Different Assignments, Grade Levels",
+        "Data Literacy Is Key to AI ROI for Higher Education",
+        "OpenAI frontier models and Codex are now generally available on AWS"
+      ],
+      "raw": "# AI Intelligence Briefing - June 3, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic** — Explores how agentic AI can drive enterprise-scale deployments, directly aligning with Brett’s focus on agentic AI and TritonAI’s roadmap.\n  🔗 Graph: [Agentic AI], [LiteLLM Enterprise], [TritonAI]\n  📅 Published: 2026-06-03\n  📰 https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption\n\n• **Direct Preference Optimization Beyond Chatbots** — Details advances in preference optimization that improve AI alignment, a key area for TritonAI’s next-gen models.\n  🔗 Graph: [Agentic AI], [Claude], [TritonGPT]\n  📅 Published: 2026-06-03\n  📰 https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots\n\n• **How we used Gemini to build Google I/O 2026** — Showcases Gemini’s capabilities in large‑scale event production, highlighting technology Brett’s team may integrate via the LiteLLM gateway.\n  🔗 Graph: [Gemini], [Google], [TritonAI]\n  📅 Published: 2026-06-01\n  📰 https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/\n\n• **Turnitin Adds Customizable AI Assistance to Support Different Assignments, Grade Levels** — Turnitin’s new AI assistant reflects the growing demand for higher‑ed AI tools, echoing Brett’s AI adoption initiatives.\n  🔗 Graph: [Higher Ed AI], [TritonAI], [Data Analytics]\n  📅 Published: 2026-06-01\n  📰 https://campustechnology.com/articles/2026/06/01/turnitin-adds-customizable-ai-assistance-to-support-different-assignments-grade-levels.aspx\n\n• **Data Literacy Is Key to AI ROI for Higher Education** — Highlights the importance of data literacy, tying into Brett’s data‑analytics governance priorities.\n  🔗 Graph: [Data Analytics], [Higher Ed AI], [TritonAI]\n  📅 Published: 2026-06-01\n  📰 https://edtechmagazine.com/higher/article/2026/06/data-literacy-key-ai-roi-higher-education-perfcon\n\n• **OpenAI frontier models and Codex are now generally available on AWS** — Announces broader access to OpenAI’s models and Codex, relevant for TritonAI’s developer API program.\n  🔗 Graph: [OpenAI], [Codex], [Amazon Web Services]\n  📅 Published: 2026-06-01\n  📰 https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws\n"
     }
   ]
 };
