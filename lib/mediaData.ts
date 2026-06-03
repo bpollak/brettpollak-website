@@ -15,6 +15,13 @@ export interface MediaItem {
 // allowed values, or the chart math will be off.
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'TechTalk Summits',
+    title: 'From AI Pilots to Enterprise Platforms: Building Secure, Governed AI at Scale',
+    url: 'https://techtalksummits.com/event/exclusive/cxo-roundtable-series/technology-executive-dinner-san-diego-ca',
+    date: '2026-06-04',
+    category: 'speaking'
+  },
+  {
     publication: 'UC AI Council Webinar Series',
     title: 'Mitigating Risk through Awareness: A Framework for AI Literacy',
     url: 'https://ucop.zoom.us/webinar/register/WN_DxGMOcL1RdG-bcyOmfOC1Q',
