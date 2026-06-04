@@ -73,23 +73,27 @@ function MediaArchiveChart() {
   }
   const maxYear = Math.max(...yearSpan.map((y) => y.count), 1);
 
-  // layout
+  // layout — derive the timeline position from the format bars so the two
+  // sections never overlap, no matter how many format rows are present.
   const W = 520;
   const barX = 132;
   const barMaxW = 312;
   const barTop = 78;
   const barStep = 34;
-  const colTop = 250;
-  const colBottom = 320;
-  const colArea = colBottom - colTop;
+  const barH = 20;
+  const formatsEnd = barTop + (formats.length - 1) * barStep + barH;
+  const colTop = formatsEnd + 54;
+  const colArea = 70;
+  const colBottom = colTop + colArea;
   const colGap = 4;
   const colW = (444 - (yearSpan.length - 1) * colGap) / yearSpan.length;
+  const svgH = colBottom + 28;
 
   return (
     <svg
       role="img"
       aria-labelledby="media-chart-title media-chart-desc"
-      viewBox="0 0 520 348"
+      viewBox={`0 0 ${W} ${svgH}`}
       className="h-auto w-full"
       fill="none"
     >
@@ -98,7 +102,7 @@ function MediaArchiveChart() {
         {`${total} indexed items from ${firstYear} to ${lastYear}: `}
         {formats.map((f) => `${f.count} ${f.label.toLowerCase()}`).join(', ')}.
       </desc>
-      <rect x="1" y="1" width={W - 2} height="346" rx="16" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
+      <rect x="1" y="1" width={W - 2} height={svgH - 2} rx="16" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
 
       {/* header */}
       <text x="28" y="38" fill="#7a8479" fontSize="11" fontWeight="700" letterSpacing="2">
