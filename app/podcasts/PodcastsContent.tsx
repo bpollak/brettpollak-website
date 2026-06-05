@@ -77,16 +77,11 @@ function saveUpvotedId(id: string) {
 export default function PodcastsContent() {
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all');
   const [modalOpen, setModalOpen] = useState(false);
-  const [upvotedIds, setUpvotedIds] = useState<Set<string>>(new Set());
+  const [upvotedIds, setUpvotedIds] = useState<Set<string>>(() => getUpvotedIds());
   const [firestorePodcasts, setFirestorePodcasts] = useState<CommunityPodcast[]>([]);
   const [loading, setLoading] = useState(true);
 
   const firebaseEnabled = isFirebaseConfigured();
-
-  // Load upvoted IDs from localStorage on mount
-  useEffect(() => {
-    setUpvotedIds(getUpvotedIds());
-  }, []);
 
   // Load podcasts from Firestore (or fall back to static data)
   useEffect(() => {

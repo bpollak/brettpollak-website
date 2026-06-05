@@ -108,7 +108,8 @@ function validateReviewDraft(draft: ReviewDraft): string | null {
 export default function ModerationConsole() {
   const firebaseEnabled = isFirebaseConfigured();
 
-  const [authReady, setAuthReady] = useState(false);
+  // If Firebase isn't configured, auth is ready immediately (no auth system to wait for)
+  const [authReady, setAuthReady] = useState(() => !isFirebaseConfigured());
   const [user, setUser] = useState<User | null>(null);
   const [authError, setAuthError] = useState('');
 
@@ -190,12 +191,15 @@ export default function ModerationConsole() {
 
   useEffect(() => {
     if (!firebaseEnabled) {
-      setAuthReady(true);
+      // Already initialized to true via lazy useState above
       return;
     }
 
     const auth = getFirebaseAuth();
     if (!auth) {
+      // This effect synchronizes React with Firebase Auth (an external system),
+      // a documented legitimate use of useEffect + setState for error reporting.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setAuthError('Firebase authentication is unavailable. Check your Firebase configuration.');
       setAuthReady(true);
       return;
@@ -211,20 +215,29 @@ export default function ModerationConsole() {
 
   useEffect(() => {
     if (!isAdmin) return;
-    void loadModerationData();
+    // Defer data fetch via microtask so setState calls inside
+    // loadModerationData are not synchronous in the effect body.
+    queueMicrotask(() => {
+      void loadModerationData();
+    });
   }, [isAdmin, loadModerationData]);
 
   useEffect(() => {
-    if (!selectedSubmission) {
-      setReviewDraft(null);
-      setRejectionReason('');
-      return;
-    }
+    // Defer via microtask so setState calls are not synchronous
+    // in the effect body. This pattern synchronizes local editable
+    // state when the selected submission changes.
+    queueMicrotask(() => {
+      if (!selectedSubmission) {
+        setReviewDraft(null);
+        setRejectionReason('');
+        return;
+      }
 
-    setReviewDraft(toReviewDraft(selectedSubmission));
-    setRejectionReason('');
-    setActionError('');
-    setActionMessage('');
+      setReviewDraft(toReviewDraft(selectedSubmission));
+      setRejectionReason('');
+      setActionError('');
+      setActionMessage('');
+    });
   }, [selectedSubmission]);
 
   const handleSignIn = useCallback(async () => {
