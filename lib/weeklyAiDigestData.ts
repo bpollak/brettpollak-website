@@ -18,13 +18,13 @@ export type WeeklyDigestData = {
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {
-  "generatedAt": "2026-06-05T17:20:24.589Z",
+  "generatedAt": "2026-06-06T13:35:24.728Z",
   "weekOf": "2026-06-01",
   "weekEnding": "2026-06-07",
   "weekLabel": "Week of June 1–7, 2026",
-  "publishedThrough": "June 5, 2026",
-  "digestCount": 5,
-  "headlineCount": 28,
+  "publishedThrough": "June 6, 2026",
+  "digestCount": 6,
+  "headlineCount": 33,
   "days": [
     {
       "isoDate": "2026-06-01",
@@ -93,6 +93,19 @@ export const weeklyAiDigestData: WeeklyDigestData = {
         "Cybersecurity ROI in Higher Education: How To Win the Budget Conversation"
       ],
       "raw": "# AI Intelligence Briefing - Friday, June 05, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **Dreaming: Better memory for a more helpful ChatGPT** — OpenAI unveils a new memory system that lets ChatGPT retain user preferences across sessions, boosting continuity for enterprise assistants like TritonGPT.\n  🔗 Graph: openai, gpt-4\n  📅 Published: 2026-06-04\n  📰 https://openai.com/index/chatgpt-memory-dreaming\n\n• **Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI** — Hugging Face details how Nvidia’s Nemotron model adds flexible safety controls, relevant for AI governance and agentic AI deployments on campus.\n  🔗 Graph: agentic-ai, ai-governance\n  📅 Published: 2026-06-04\n  📰 https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety\n\n• **Staged Factorial Screening for Budget-Constrained Micro-Pretraining** — An arXiv paper proposes efficient experimental designs for low‑budget LLM pretraining, aligning with TritonAI’s cost‑optimization goals.\n  🔗 Graph: agentic-ai, ai-adoption\n  📅 Published: 2026-06-05\n  📰 https://arxiv.org/abs/2606.05186\n\n• **AI Budgets in Education Show No Sign of Decline** — Campus Technology reports that 98% of education institutions plan to maintain or increase AI infrastructure spending, underscoring continued adoption in higher‑ed.\n  🔗 Graph: higher-ed-ai, ai-adoption\n  📅 Published: 2026-06-01\n  📰 https://campustechnology.com/articles/2026/06/01/ai-budgets-in-education-show-no-sign-of-decline.aspx\n\n• **Cybersecurity ROI in Higher Education: How To Win the Budget Conversation** — EdTech Magazine explains how security investments can be framed as revenue‑protecting, a key concern for campus IT leaders.\n  🔗 Graph: ai-security, higher-ed-ai\n  📅 Published: 2026-06-04\n  📰 https://edtechmagazine.com/higher/article/2026/06/cybersecurity-roi-higher-education-how-win-budget-conversation-perfcon\n\n💡 Signal: Enterprise AI safety, cost‑effective LLM training, and sustained higher‑ed investment dominate the week, reinforcing Brett’s priorities around AI governance, agentic AI, and budget‑aware scaling.\n"
+    },
+    {
+      "isoDate": "2026-06-06",
+      "displayDate": "Saturday, June 6",
+      "sourceFile": "ai-news-digest-2026-06-06.md",
+      "headlines": [
+        "A blueprint for democratic governance of frontier AI",
+        "OpenAI public policy agenda",
+        "Microsoft Positions Windows as an Operating Environment for AI Agents",
+        "Data Literacy Is Key to AI ROI for Higher Education",
+        "Auburn Board Takes Full Curricular Control, Dissolves Faculty Senate"
+      ],
+      "raw": "# AI Intelligence Briefing - June 6, 2026\n*Curated from knowledge graph (125 nodes, 145 edges) · All articles published within the last 7 days*\n\n• **A blueprint for democratic governance of frontier AI** — OpenAI outlines a federal framework for AI safety, governance, and national security, directly relevant to Brett’s AI governance priorities.\n  🔗 Graph: AI Governance, OpenAI, AI Security\n  📅 Published: 2026-06-03\n  📰 https://openai.com/index/frontier-safety-blueprint\n\n• **OpenAI public policy agenda** — Details OpenAI’s stance on AI safety, youth protection, and workforce transition, aligning with Brett’s AI policy and governance work.\n  🔗 Graph: OpenAI, AI Governance, AI Cabinet Meeting\n  📅 Published: 2026-06-03\n  📰 https://openapi.com/index/public-policy-agenda\n\n• **Microsoft Positions Windows as an Operating Environment for AI Agents** — Microsoft frames Windows as a platform for AI agents, a key development for Brett’s agentic AI initiatives and LiteLLM gateway integration.\n  🔗 Graph: Microsoft, Agentic AI, Azure OpenAI\n  📅 Published: 2026-06-03\n  📰 https://campustechnology.com/articles/2026/06/03/microsoft-positions-windows-as-an-operating-environment-for-ai-agents.aspx\n\n• **Data Literacy Is Key to AI ROI for Higher Education** — Highlights how data literacy drives AI returns in universities, reinforcing Brett’s higher‑ed AI and data‑analytics strategy.\n  🔗 Graph: Higher Ed AI, Data Analytics, Palo Alto Networks\n  📅 Published: 2026-06-05\n  📰 https://edtechmagazine.com/higher/article/2026/06/data-literacy-key-ai-roi-higher-education-perfcon\n\n• **Auburn Board Takes Full Curricular Control, Dissolves Faculty Senate** — Signals shifts in higher‑ed governance that could impact AI adoption strategies across campuses.\n  🔗 Graph: Higher Ed AI, AI Governance, Brett Pollak\n  📅 Published: 2026-06-05\n  📰 https://www.insidehighered.com/news/governance/trustees-regents/2026/06/05/auburn-board-takes-full-curricular-control-dissolves-senate\n\n💡 Signal: AI governance frameworks and higher‑ed data initiatives dominate the week, while major platform moves toward agentic AI signal growing enterprise integration opportunities.\n"
     }
   ]
 };
