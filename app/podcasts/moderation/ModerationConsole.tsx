@@ -199,7 +199,7 @@ export default function ModerationConsole() {
     if (!auth) {
       // This effect synchronizes React with Firebase Auth (an external system),
       // a documented legitimate use of useEffect + setState for error reporting.
-      // eslint-disable-next-line react-hooks/set-state-in-effect
+
       setAuthError('Firebase authentication is unavailable. Check your Firebase configuration.');
       setAuthReady(true);
       return;
