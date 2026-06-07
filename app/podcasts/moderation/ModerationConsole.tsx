@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState, startTransition } from 'react';
 import type { User } from 'firebase/auth';
 import {
   GoogleAuthProvider,
@@ -197,11 +197,11 @@ export default function ModerationConsole() {
 
     const auth = getFirebaseAuth();
     if (!auth) {
-      // This effect synchronizes React with Firebase Auth (an external system),
-      // a documented legitimate use of useEffect + setState for error reporting.
-
-      setAuthError('Firebase authentication is unavailable. Check your Firebase configuration.');
-      setAuthReady(true);
+      // Defer non-urgent state update to avoid cascading renders.
+      startTransition(() => {
+        setAuthError('Firebase authentication is unavailable. Check your Firebase configuration.');
+        setAuthReady(true);
+      });
       return;
     }
 
