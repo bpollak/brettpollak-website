@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Brett Pollak | Work in Higher Education and AI",
   // Updated description to reflect Brett's preferred professional title
-  description: "Chief Technology Officer (CTO) at UC San Diego – background and current work on AI, digital services, and institutional change in higher education.",
+  description: "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego – background and current work on AI, digital services, and institutional change in higher education.",
   alternates: {
     canonical: "https://brettcpollak.com/about",
   },
@@ -38,7 +38,7 @@ export default function About() {
           <h1 className="page-title mb-6">About</h1>
           <p className="page-intro">
             Work rooted in practice, people, curiosity, and the institutional systems that make technology useful.
-            I serve as the Chief Technology Officer (CTO) for UC San Diego, leading workplace technology and infrastructure services.
+            I serve as the Executive Director, Workplace Technology & Infrastructure Services for UC San Diego, leading workplace technology and infrastructure services.
           </p>
         </div>
       </section>
