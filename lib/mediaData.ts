@@ -337,5 +337,78 @@ export const mediaItems: MediaItem[] = [
     url: 'https://ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/ucsd_webtoolbox.docx',
     date: '2011-07-15',
     category: 'article'
+  },
+
+  // --- 2025 additions (from Brett) ---
+  {
+    publication: 'EdTech Magazine',
+    title: 'Effective AI Requires Effective Data Governance',
+    url: 'https://edtechmagazine.com/higher/article/2025/05/effective-ai-requires-effective-data-governance',
+    date: '2025-05-20',
+    category: 'article'
+  },
+  {
+    publication: 'Everyday I AI (YouTube)',
+    title: 'Everyday I AI, Ep. 36: Hiring Flow Pt. 2 — Job Posting, Advertising & Interview Questions',
+    url: 'https://www.youtube.com/watch?v=QcS-TfZ_5n0',
+    date: '2025-05-06',
+    category: 'interview'
+  },
+  {
+    publication: 'Everyday I AI (YouTube)',
+    title: 'Everyday I AI, Ep. 35: Hiring Flow Pt. 1 — Job Descriptions',
+    url: 'https://www.youtube.com/watch?v=tHsWa4vBkU0',
+    date: '2025-04-30',
+    category: 'interview'
+  },
+
+  // --- 2024 additions ---
+  {
+    publication: 'EDUCAUSE Annual Conference 2024',
+    title: 'EDUCAUSE Annual Conference 2024 (Common Solutions Collaborative workshops)',
+    url: 'https://members.educause.edu/brett-pollak',
+    date: '2024-10-22',
+    category: 'speaking'
+  },
+  {
+    publication: 'UC Berkeley CTO',
+    title: 'TritonGPT Presentation & Demo, UC Berkeley AI Community',
+    url: 'https://cto.berkeley.edu/ai/videos/uc-san-diego-tritongpt-demo',
+    date: '2024-03-21',
+    category: 'speaking'
+  },
+
+  // --- 2015 additions ---
+  {
+    publication: 'EDUCAUSE / ECAR',
+    title: 'Mobile Apps in Higher Education: Developing an Institutional Governance Strategy',
+    url: 'https://library.educause.edu/resources/2015/12/mobile-apps-in-higher-education-developing-an-institutional-governance-strategy',
+    date: '2015-12-18',
+    category: 'whitepaper'
+  },
+  {
+    publication: 'EDUCAUSE Review',
+    title: 'Responsive Web Design in Higher Ed',
+    url: 'https://er.educause.edu/articles/2015/11/responsive-web-design-in-higher-ed',
+    date: '2015-11-01',
+    category: 'article'
+  },
+
+  // --- 2014 addition ---
+  {
+    publication: 'EDUCAUSE / ECAR',
+    title: 'Understanding Responsive Web Design in Higher Education (ECAR-MSAD Working Group)',
+    url: 'https://library.educause.edu/resources/2014/9/understanding-responsive-web-design-in-higher-education',
+    date: '2014-09-09',
+    category: 'whitepaper'
+  },
+
+  // --- 2013 addition ---
+  {
+    publication: 'EDUCAUSE',
+    title: 'EDUCAUSE Annual Conference 2013',
+    url: 'https://members.educause.edu/brett-pollak',
+    date: '2013-10-15',
+    category: 'speaking'
   }
 ];
