@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL, latestDigestDate } from '@/lib/seoDates';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 import { linkDigestHeadlines, renderMarkdown, sanitizePublicDigest } from '@/lib/markdown';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
   description: 'A rolling weekly archive of curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-digest',
+    types: {
+      'application/rss+xml': '/ai-digest/feed.xml',
+    },
   },
   openGraph: {
     title: 'AI Digest | Curated AI Developments',
@@ -36,8 +40,27 @@ export default function AiDigestPage() {
   const { weekLabel, publishedThrough, digestCount, headlineCount, days } = weeklyAiDigestData;
   const daysNewestFirst = [...days].sort((a, b) => b.isoDate.localeCompare(a.isoDate));
 
+  const digestSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${SITE_URL}/ai-digest#article`,
+    headline: `This Week in AI Digest — ${weekLabel}`,
+    description:
+      'A rolling weekly archive of curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
+    url: `${SITE_URL}/ai-digest`,
+    author: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@id": `${SITE_URL}/#person` },
+    datePublished: weeklyAiDigestData.weekOf,
+    dateModified: latestDigestDate,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  };
+
   return (
     <main className="page-shell" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(digestSchema) }}
+      />
       <section className="page-hero">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
         <p className="rule-label mb-6">AI Digest</p>

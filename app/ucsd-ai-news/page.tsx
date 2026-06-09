@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL, earliestNewsletterDate, latestNewsletterDate } from '@/lib/seoDates';
 import { ucsdAiNewsletterData } from '@/lib/ucsdAiNewsletterData';
 import { renderMarkdown } from '@/lib/markdown';
 
@@ -15,6 +16,9 @@ export const metadata: Metadata = {
     'A weekly roundup of what’s new with UC San Diego’s supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
   alternates: {
     canonical: 'https://brettcpollak.com/ucsd-ai-news',
+    types: {
+      'application/rss+xml': '/ucsd-ai-news/feed.xml',
+    },
   },
   openGraph: {
     title: 'UC San Diego AI Weekly Update | Brett Pollak',
@@ -48,8 +52,27 @@ export default function UcsdAiNewsPage() {
     ? `Published through ${publishedThrough}. New editions publish every Monday morning.`
     : 'The first edition publishes Monday morning. Check back soon or bookmark this page.';
 
+  const newsletterSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${SITE_URL}/ucsd-ai-news#article`,
+    headline: `UC San Diego AI Weekly Update — ${weekLabel}`,
+    description:
+      "A weekly roundup of what's new with UC San Diego's supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.",
+    url: `${SITE_URL}/ucsd-ai-news`,
+    author: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@id": `${SITE_URL}/#person` },
+    datePublished: earliestNewsletterDate,
+    dateModified: latestNewsletterDate,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+  };
+
   return (
     <main className="page-shell" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(newsletterSchema) }}
+      />
       <section className="page-hero ucsd-news-hero">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
           <div className="grid gap-12 lg:grid-cols-[1fr_19rem] lg:items-start">

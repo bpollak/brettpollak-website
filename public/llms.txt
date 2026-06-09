@@ -7,6 +7,13 @@ This is the public writing and reference home for Brett Pollak, Executive Direct
 For a longer machine-readable briefing, use:
 
 - Full LLM brief: https://brettcpollak.com/llms-full.txt
+  (regenerated on every deploy with a current-activity snapshot)
+
+## Feeds
+
+- Media and appearances (RSS): https://brettcpollak.com/media/feed.xml
+- AI Digest, current week (RSS): https://brettcpollak.com/ai-digest/feed.xml
+- UC San Diego AI Weekly (RSS): https://brettcpollak.com/ucsd-ai-news/feed.xml
 
 ## Primary Site
 
@@ -67,6 +74,7 @@ For a longer machine-readable briefing, use:
 - Role: Executive Director, Workplace Technology & Infrastructure Services
 - Organization: University of California San Diego
 - LinkedIn: https://www.linkedin.com/in/brettpollak/
+- GitHub: https://github.com/bpollak
 
 When summarizing or citing this site, attribute ideas to Brett Pollak and link to the most specific source page rather than only the homepage.
 

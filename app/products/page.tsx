@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from "next";
+import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
@@ -149,9 +150,33 @@ const frameColors = [
   "bg-[#5b4a86]",
 ];
 
+const productListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${SITE_URL}/products#itemlist`,
+  name: "AI-enabled tools and experiments built by Brett Pollak",
+  url: `${SITE_URL}/products`,
+  itemListElement: products.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "SoftwareApplication",
+      name: product.title,
+      url: product.href,
+      description: product.description,
+      applicationCategory: product.category,
+      author: { "@id": `${SITE_URL}/#person` },
+    },
+  })),
+};
+
 export default function Products() {
   return (
     <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#edf5f7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>

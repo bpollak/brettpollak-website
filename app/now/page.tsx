@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/brett-pollak-headshot-sit-center.png',
-        width: 500,
-        height: 650,
+        url: '/brett-pollak-og-card.png',
+        width: 1200,
+        height: 630,
         alt: 'Brett Pollak',
       },
     ],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Now | Brett Pollak',
     description: "What Brett Pollak is focused on right now — refreshed weekly.",
-    images: ['/brett-pollak-headshot-sit-center.png'],
+    images: ['/brett-pollak-og-card.png'],
   },
 };
 
