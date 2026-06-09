@@ -1,7 +1,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Image from 'next/image';
 import { mediaItems, MediaItem } from '@/lib/mediaData';
+import mediaIconManifest from '@/lib/mediaIconManifest.json';
 
 type CategoryFilter = 'all' | 'article' | 'interview' | 'whitepaper' | 'speaking' | 'award';
 
@@ -21,6 +23,42 @@ const categoryStyles: Record<MediaItem['category'], string> = {
   speaking: 'border-[#e6ad9f] bg-[#fff0ed] text-[#b8503f]',
   award: 'border-[#b7add4] bg-[#f2eff9] text-[#5b4a86]',
 };
+
+// Solid accent color per category (matches the chart palette in page.tsx),
+// used for the hover rail on each index row.
+const categoryAccents: Record<MediaItem['category'], string> = {
+  article: '#1f5a8a',
+  interview: '#c97712',
+  whitepaper: '#366c5a',
+  speaking: '#b8503f',
+  award: '#5b4a86',
+};
+
+// Favicon of the linked publication, fetched ahead of time by
+// scripts/fetch-media-icons.mjs into public/media-icons/. Domains without a
+// fetched icon (or '#' records) fall back to the monogram tile below.
+function iconForUrl(url: string): string | null {
+  if (!url.startsWith('http')) return null;
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '');
+    const file = (mediaIconManifest as Record<string, string>)[host];
+    return file ? `/media-icons/${file}` : null;
+  } catch {
+    return null;
+  }
+}
+
+// 1–2 letter monogram for the publication tile, e.g. "Campus Technology"
+// -> "CT". Awards get a star instead (see the row markup).
+function publicationInitials(name: string): string {
+  const tokens = name.split(/[\s:&,\-–—./]+/);
+  // Prefer alphabetic words so "NACUBO 2026 Annual Meeting" -> "NA", not "N2"
+  const alpha = tokens.filter((w) => /^[A-Za-z]/.test(w));
+  const words = alpha.length > 0 ? alpha : tokens.filter((w) => /^[A-Za-z0-9]/.test(w));
+  if (words.length === 0) return name.slice(0, 2).toUpperCase();
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return (words[0][0] + words[1][0]).toUpperCase();
+}
 
 function formatDate(dateString: string) {
   const [year, month, day] = dateString.split('-').map(Number);
@@ -127,23 +165,59 @@ export default function MediaContent() {
               </div>
 
               <div className="border-y border-[#d9dfd3]">
-                {itemsByYear[Number(year)].map((item) => (
+                {itemsByYear[Number(year)].map((item) => {
+                  const icon = iconForUrl(item.url);
+                  return (
                   <a
                     key={`${item.date}-${item.title}`}
                     href={item.url}
                     target={item.url === '#' ? undefined : '_blank'}
                     rel={item.url === '#' ? undefined : 'noopener noreferrer'}
-                    className="index-row grid gap-3 py-5 md:grid-cols-[8.5rem_8rem_1fr_10rem_auto] md:items-start"
+                    className="index-row group relative flex items-start gap-4 py-5 pl-4 pr-2 md:gap-5"
                   >
-                    <span className="font-mono text-xs uppercase text-[#7a8479]">{formatDate(item.date)}</span>
-                    <span className={`w-fit rounded-sm border px-2 py-1 text-xs font-semibold uppercase ${categoryStyles[item.category]}`}>
-                      {item.category}
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-y-2 left-0 w-[3px] opacity-30 transition-opacity duration-150 group-hover:opacity-100"
+                      style={{ background: categoryAccents[item.category] }}
+                    />
+                    <span
+                      aria-hidden="true"
+                      className={`mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border ${categoryStyles[item.category]}`}
+                    >
+                      {icon ? (
+                        <Image src={icon} alt="" width={28} height={28} className="h-7 w-7" unoptimized />
+                      ) : (
+                        <span className="font-mono text-sm font-bold">
+                          {item.category === 'award' ? '★' : publicationInitials(item.publication)}
+                        </span>
+                      )}
                     </span>
-                    <span className="text-lg font-medium leading-7 text-[#17201b]">{item.title}</span>
-                    <span className="text-sm leading-6 text-[#485248]">{item.publication}</span>
-                    <span className="font-mono text-xs text-[#1f5a8a]">{item.url === '#' ? 'record' : 'open'}</span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-lg font-medium leading-7 text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
+                        {item.title}
+                      </span>
+                      <span className="mt-1 block font-mono text-xs uppercase tracking-[0.08em] text-[#7a8479]">
+                        <span className="whitespace-nowrap">{formatDate(item.date)}</span>
+                        <span className="mx-2 text-[#d9dfd3]">/</span>
+                        <span className="text-[#485248] normal-case tracking-normal font-sans text-sm font-medium">{item.publication}</span>
+                      </span>
+                    </span>
+                    <span className="flex shrink-0 flex-col items-end gap-2">
+                      <span className={`rounded-sm border px-2 py-1 text-xs font-semibold uppercase ${categoryStyles[item.category]}`}>
+                        {item.category}
+                      </span>
+                      <span className="hidden font-mono text-xs text-[#1f5a8a] sm:inline-flex sm:items-center sm:gap-1">
+                        {item.url === '#' ? 'record' : 'open'}
+                        {item.url !== '#' && (
+                          <span aria-hidden="true" className="transition-transform duration-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                            &#8599;
+                          </span>
+                        )}
+                      </span>
+                    </span>
                   </a>
-                ))}
+                  );
+                })}
               </div>
             </section>
           ))}
