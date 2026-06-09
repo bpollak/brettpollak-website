@@ -1,7 +1,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Image from 'next/image';
 import { mediaItems, MediaItem } from '@/lib/mediaData';
+import mediaIconManifest from '@/lib/mediaIconManifest.json';
 
 type CategoryFilter = 'all' | 'article' | 'interview' | 'whitepaper' | 'speaking' | 'award';
 
@@ -31,6 +33,20 @@ const categoryAccents: Record<MediaItem['category'], string> = {
   speaking: '#b8503f',
   award: '#5b4a86',
 };
+
+// Favicon of the linked publication, fetched ahead of time by
+// scripts/fetch-media-icons.mjs into public/media-icons/. Domains without a
+// fetched icon (or '#' records) fall back to the monogram tile below.
+function iconForUrl(url: string): string | null {
+  if (!url.startsWith('http')) return null;
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '');
+    const file = (mediaIconManifest as Record<string, string>)[host];
+    return file ? `/media-icons/${file}` : null;
+  } catch {
+    return null;
+  }
+}
 
 // 1–2 letter monogram for the publication tile, e.g. "Campus Technology"
 // -> "CT". Awards get a star instead (see the row markup).
@@ -149,7 +165,9 @@ export default function MediaContent() {
               </div>
 
               <div className="border-y border-[#d9dfd3]">
-                {itemsByYear[Number(year)].map((item) => (
+                {itemsByYear[Number(year)].map((item) => {
+                  const icon = iconForUrl(item.url);
+                  return (
                   <a
                     key={`${item.date}-${item.title}`}
                     href={item.url}
@@ -164,9 +182,15 @@ export default function MediaContent() {
                     />
                     <span
                       aria-hidden="true"
-                      className={`mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border font-mono text-sm font-bold ${categoryStyles[item.category]}`}
+                      className={`mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border ${categoryStyles[item.category]}`}
                     >
-                      {item.category === 'award' ? '★' : publicationInitials(item.publication)}
+                      {icon ? (
+                        <Image src={icon} alt="" width={28} height={28} className="h-7 w-7" unoptimized />
+                      ) : (
+                        <span className="font-mono text-sm font-bold">
+                          {item.category === 'award' ? '★' : publicationInitials(item.publication)}
+                        </span>
+                      )}
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block text-lg font-medium leading-7 text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
@@ -192,7 +216,8 @@ export default function MediaContent() {
                       </span>
                     </span>
                   </a>
-                ))}
+                  );
+                })}
               </div>
             </section>
           ))}

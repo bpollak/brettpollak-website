@@ -27,6 +27,12 @@ array and let the page derive everything.
   the colored chips). Adding a brand-new category means also adding it to
   `FORMAT_META` in `app/media/page.tsx` and `categoryStyles`/`categoryLabels`
   in `MediaContent.tsx`.
+- **Publication icons:** each row shows the favicon of the linked domain,
+  served from `public/media-icons/` via `lib/mediaIconManifest.json` (both
+  committed). If a new item links to a domain not yet in the manifest, run
+  `node scripts/fetch-media-icons.mjs` and commit the new icon + manifest.
+  This is optional — unknown domains gracefully fall back to a category-colored
+  monogram tile, so skipping it never breaks the page.
 
 ### Other generated/archive pages
 
