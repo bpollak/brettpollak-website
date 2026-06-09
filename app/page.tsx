@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     type: 'profile',
     images: [
       {
-        url: '/brett-pollak-headshot-sit-center.png',
-        width: 500,
-        height: 650,
+        url: '/brett-pollak-og-card.png',
+        width: 1200,
+        height: 630,
         alt: 'Brett Pollak, Executive Director, Workplace Technology and Infrastructure Services at UC San Diego',
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Brett Pollak | AI in Higher Education',
     description:
       'Building and learning from institutional AI in higher education, TritonAI, citizen-developer enablement, and the architecture behind it.',
-    images: ['/brett-pollak-headshot-sit-center.png'],
+    images: ['/brett-pollak-og-card.png'],
   },
 };
 
@@ -259,7 +259,11 @@ export default function Home() {
       }
     ],
     "sameAs": [
-      "https://www.linkedin.com/in/brettpollak/"
+      "https://www.linkedin.com/in/brettpollak/",
+      "https://github.com/bpollak",
+      "https://members.educause.edu/brett-pollak",
+      "https://asugsvsummit.com/speakers/brett-pollak",
+      "https://www.slideshare.net/bpollak"
     ]
   };
 

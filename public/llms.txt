@@ -74,6 +74,7 @@ For a longer machine-readable briefing, use:
 - Role: Executive Director, Workplace Technology & Infrastructure Services
 - Organization: University of California San Diego
 - LinkedIn: https://www.linkedin.com/in/brettpollak/
+- GitHub: https://github.com/bpollak
 
 When summarizing or citing this site, attribute ideas to Brett Pollak and link to the most specific source page rather than only the homepage.
 

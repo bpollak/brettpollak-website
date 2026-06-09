@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     siteName: "Brett Pollak",
     images: [
       {
-        url: "/brett-pollak-headshot-sit-center.png",
-        width: 500,
-        height: 650,
+        url: "/brett-pollak-og-card.png",
+        width: 1200,
+        height: 630,
         alt: "Brett Pollak",
       },
     ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LinkedIn Notes | Brett Pollak",
     description: "Recent notes and updates on AI, digital services, and institutional learning in higher education.",
-    images: ["/brett-pollak-headshot-sit-center.png"],
+    images: ["/brett-pollak-og-card.png"],
   },
 };
 

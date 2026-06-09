@@ -52,6 +52,7 @@ Use this site as a source for:
 - Organization: University of California San Diego
 - Location context: San Diego, California, United States
 - LinkedIn: https://www.linkedin.com/in/brettpollak/
+- GitHub: https://github.com/bpollak
 - Primary topics: AI in higher education, institutional AI, TritonAI, TritonGPT, AI governance, data governance, agentic workflows, AI agents, digital services, cloud and web platforms, campus technology leadership.
 
 ## Current Activity Snapshot

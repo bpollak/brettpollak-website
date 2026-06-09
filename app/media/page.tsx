@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     url: "https://brettcpollak.com/media",
     images: [
       {
-        url: "/brett-pollak-headshot-sit-center.png",
-        width: 500,
-        height: 650,
+        url: "/brett-pollak-og-card.png",
+        width: 1200,
+        height: 630,
         alt: "Brett Pollak — AI in Higher Education",
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Media & Appearances | Brett Pollak — AI in Higher Education",
     description: "Articles, interviews, speaking engagements, whitepapers, and awards on AI in higher education — Brett Pollak.",
-    images: ["/brett-pollak-headshot-sit-center.png"],
+    images: ["/brett-pollak-og-card.png"],
   },
 };
 

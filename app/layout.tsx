@@ -10,6 +10,20 @@ const siteUrl = "https://brettcpollak.com";
 const siteDescription =
   "Brett Pollak builds and governs institutional AI at UC San Diego. Field notes, talks, and practical architecture for AI in higher education, TritonAI, TritonGPT, agentic workflows, and AI governance.";
 const siteImage = `${siteUrl}/brett-pollak-headshot-sit-center.png`;
+// 1200x630 share card (scripts/generate-og-card.mjs) — link previews crop
+// portrait images, so the Person schema keeps the headshot while OG/Twitter
+// use the landscape card.
+const siteCardImage = `${siteUrl}/brett-pollak-og-card.png`;
+
+// Public profiles that corroborate the Person entity for knowledge-graph
+// reconciliation. Only verified profiles belong here.
+const sameAsProfiles = [
+  "https://www.linkedin.com/in/brettpollak/",
+  "https://github.com/bpollak",
+  "https://members.educause.edu/brett-pollak",
+  "https://asugsvsummit.com/speakers/brett-pollak",
+  "https://www.slideshare.net/bpollak",
+];
 
 const siteSchema = {
   "@context": "https://schema.org",
@@ -66,9 +80,7 @@ const siteSchema = {
           "description": "AI-enabled tools and experiments built by Brett Pollak."
         }
       ],
-      "sameAs": [
-        "https://www.linkedin.com/in/brettpollak/"
-      ]
+      "sameAs": sameAsProfiles
     },
     {
       "@type": "Person",
@@ -83,9 +95,7 @@ const siteSchema = {
         "name": "University of California San Diego",
         "url": "https://ucsd.edu/"
       },
-      "sameAs": [
-        "https://www.linkedin.com/in/brettpollak/"
-      ],
+      "sameAs": sameAsProfiles,
       "knowsAbout": [
         "AI in higher education",
         "Institutional AI",
@@ -193,9 +203,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: siteImage,
-        width: 500,
-        height: 650,
+        url: siteCardImage,
+        width: 1200,
+        height: 630,
         alt: "Brett Pollak, technology executive focused on AI in higher education",
       },
     ],
@@ -204,7 +214,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brett Pollak | AI in Higher Education",
     description: siteDescription,
-    images: [siteImage],
+    images: [siteCardImage],
   },
   other: {
     "llms.txt": `${siteUrl}/llms.txt`,
