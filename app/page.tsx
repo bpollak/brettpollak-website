@@ -7,6 +7,16 @@ import HomeHeroSystemMap from '@/components/home/HomeHeroSystemMap';
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://brettcpollak.com/',
+    // Repeated here because this page's `alternates` replaces the root
+    // layout's in Next's metadata merge — without it the home page loses
+    // the site-wide feed autodiscovery links.
+    types: {
+      'application/rss+xml': [
+        { url: '/media/feed.xml', title: 'Media & Appearances — Brett Pollak' },
+        { url: '/ai-digest/feed.xml', title: 'AI Digest — Brett Pollak' },
+        { url: '/ucsd-ai-news/feed.xml', title: 'UC San Diego AI Weekly Update' },
+      ],
+    },
   },
   openGraph: {
     title: 'Brett Pollak | AI in Higher Education',

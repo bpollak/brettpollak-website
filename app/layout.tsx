@@ -132,6 +132,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
+    types: {
+      'application/rss+xml': [
+        { url: '/media/feed.xml', title: 'Media & Appearances — Brett Pollak' },
+        { url: '/ai-digest/feed.xml', title: 'AI Digest — Brett Pollak' },
+        { url: '/ucsd-ai-news/feed.xml', title: 'UC San Diego AI Weekly Update' },
+      ],
+    },
   },
   title: "Brett Pollak | AI in Higher Education",
   description: siteDescription,

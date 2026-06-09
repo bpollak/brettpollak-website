@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from "next";
+import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "About Brett Pollak | Work in Higher Education and AI",
@@ -29,9 +30,26 @@ export const metadata: Metadata = {
   },
 };
 
+const profilePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/about#webpage`,
+  url: `${SITE_URL}/about`,
+  name: "About Brett Pollak",
+  description:
+    "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego – background and current work on AI, digital services, and institutional change in higher education.",
+  dateModified: staticPageDates["/about"],
+  mainEntity: { "@id": `${SITE_URL}/#person` },
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+};
+
 export default function About() {
   return (
     <div className="page-shell" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+      />
       <section className="page-hero">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
           <p className="rule-label mb-6">Background</p>

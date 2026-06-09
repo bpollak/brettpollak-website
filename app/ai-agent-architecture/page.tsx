@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL, pagePublishDates, staticPageDates } from '@/lib/seoDates';
 import HeroPipelineDiagram from '@/components/ai-architecture/HeroPipelineDiagram';
 import ThreeLayerDiagram from '@/components/ai-architecture/ThreeLayerDiagram';
 import DailyRhythmClock from '@/components/ai-architecture/DailyRhythmClock';
@@ -36,9 +37,29 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${SITE_URL}/ai-agent-architecture#article`,
+  headline: "Building a Personal AI That Actually Knows You",
+  description:
+    "How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego.",
+  url: `${SITE_URL}/ai-agent-architecture`,
+  image: `${SITE_URL}/ai-architecture-linkedin.png`,
+  author: { "@id": `${SITE_URL}/#person` },
+  publisher: { "@id": `${SITE_URL}/#person` },
+  datePublished: pagePublishDates["/ai-agent-architecture"],
+  dateModified: staticPageDates["/ai-agent-architecture"],
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+};
+
 export default function AiAgentArchitecturePage() {
   return (
     <main className="page-shell" id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* ======================================================================
           SECTION 1 — HERO
           ====================================================================== */}

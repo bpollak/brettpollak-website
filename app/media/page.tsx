@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://brettcpollak.com/media",
+    types: {
+      "application/rss+xml": "/media/feed.xml",
+    },
   },
   openGraph: {
     title: "Media & Appearances | Brett Pollak — AI in Higher Education",
