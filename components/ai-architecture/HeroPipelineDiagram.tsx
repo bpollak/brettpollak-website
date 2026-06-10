@@ -39,8 +39,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '301 nodes · 346 edges' },
-  { label: 'Wiki', note: '259 curated pages' },
+  { label: 'Knowledge Graph', note: '385 nodes · 430 edges' },
+  { label: 'Wiki', note: '267 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -114,18 +114,18 @@ function Item({
       />
       <text
         x={x}
-        y={y + 26}
+        y={y + 27}
         textAnchor="middle"
-        style={{ fontSize: '15px', fontWeight: 700, fill: styles.labelFill }}
+        style={{ fontSize: '18px', fontWeight: 700, fill: styles.labelFill }}
       >
         {label}
       </text>
       {note && (
         <text
           x={x}
-          y={y + 45}
+          y={y + 48}
           textAnchor="middle"
-          style={{ fontSize: '11px', fill: styles.noteFill, fontStyle: 'italic' }}
+          style={{ fontSize: '13px', fill: styles.noteFill, fontStyle: 'italic' }}
         >
           {note}
         </text>
@@ -179,7 +179,7 @@ export default function HeroPipelineDiagram() {
           x={LEFT_CX}
           y={32}
           textAnchor="middle"
-          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#1e40af', textTransform: 'uppercase' }}
+          style={{ fontSize: '16px', fontWeight: 700, letterSpacing: '0.15em', fill: '#1e40af', textTransform: 'uppercase' }}
         >
           Data Sources
         </text>
@@ -187,7 +187,7 @@ export default function HeroPipelineDiagram() {
           x={MID_CX}
           y={32}
           textAnchor="middle"
-          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#92400e', textTransform: 'uppercase' }}
+          style={{ fontSize: '16px', fontWeight: 700, letterSpacing: '0.15em', fill: '#92400e', textTransform: 'uppercase' }}
         >
           Knowledge &amp; Memory
         </text>
@@ -195,7 +195,7 @@ export default function HeroPipelineDiagram() {
           x={RIGHT_CX}
           y={32}
           textAnchor="middle"
-          style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.18em', fill: '#065f46', textTransform: 'uppercase' }}
+          style={{ fontSize: '16px', fontWeight: 700, letterSpacing: '0.15em', fill: '#065f46', textTransform: 'uppercase' }}
         >
           Agent Actions
         </text>
@@ -287,17 +287,17 @@ export default function HeroPipelineDiagram() {
             x={MID_CX}
             y={VB_H - 42}
             textAnchor="middle"
-            style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.15em', fill: '#64748b', textTransform: 'uppercase' }}
+            style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.15em', fill: '#64748b', textTransform: 'uppercase' }}
           >
             Synthesis
           </text>
           <text
             x={MID_CX}
-            y={VB_H - 26}
+            y={VB_H - 25}
             textAnchor="middle"
-            style={{ fontSize: '11px', fill: '#64748b', fontStyle: 'italic' }}
+            style={{ fontSize: '13px', fill: '#64748b', fontStyle: 'italic' }}
           >
-            64 cron jobs turn raw signals into durable knowledge
+            70+ cron jobs turn raw signals into durable knowledge
           </text>
         </g>
       </svg>
@@ -305,7 +305,7 @@ export default function HeroPipelineDiagram() {
         Knowledge flow visualization: data sources (calendar, email, meetings, web, campus signals,
         conversations) feed into a durable knowledge layer (graph, wiki, memory, patterns) which
         the agent uses to drive actions (briefings, meeting intelligence, real-time answers,
-        published artifacts, proactive nudges). A synthesis band at the bottom represents the 30+
+        published artifacts, proactive nudges). A synthesis band at the bottom represents the 70+
         cron jobs that do the transformation work.
       </figcaption>
     </figure>

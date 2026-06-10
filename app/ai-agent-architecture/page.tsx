@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ automated jobs running on UC San Diego’s TritonAI gateway — predominantly open-weight models hosted at SDSC, with a small proprietary escalation tier for monitors where false negatives carry real cost. 385-node knowledge graph, 267 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 70+ automated jobs running on UC San Diego’s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 385-node knowledge graph, 267 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -75,13 +75,13 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-[#485248] mb-10">
-          Last updated: June 7, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: June 9, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-[#17201b]">65+ cron jobs</div>
+            <div className="text-2xl font-semibold text-[#17201b]">70+ cron jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
@@ -388,7 +388,7 @@ export default function AiAgentArchitecturePage() {
             model class that fits its work shape.
           </p>
           <p>
-            As of May 27, 2026, <strong>all 64 enabled jobs run through{' '}
+            As of June 9, 2026, <strong>all 73 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
@@ -396,9 +396,9 @@ export default function AiAgentArchitecturePage() {
               TritonAI
             </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway, with on-prem
             inference at the San Diego Supercomputer Center for the open-weight tier and
-            hyperscaler-proxied capacity for the larger frontier models. <strong>~94% of jobs
-            run on open-weight models</strong>; the remaining 3 monitor jobs escalate to Claude
-            Sonnet 4.6 because false negatives there carry real cost. Seven model variants split
+            hyperscaler-proxied capacity for the larger frontier models. <strong>~99% of jobs
+            run on open-weight models</strong>; a single monitor job escalates to Claude
+            Sonnet 4.6 because false negatives there carry real cost. Six model variants split
             the load:
           </p>
         </div>
@@ -419,49 +419,42 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-semibold text-slate-900">Briefings &amp; summarization</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gemma-4-26b</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
-                <td className="px-4 py-3 text-slate-700">Daily briefings, meeting debriefs, wiki/page refreshes, multimodal extraction</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">17</td>
+                <td className="px-4 py-3 text-slate-700">Daily reflection, morning open-items brief, events radar, key-access monitoring</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">5</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Fast monitor &amp; sync</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-mistral-small-3.2-2506</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
-                <td className="px-4 py-3 text-slate-700">Health checks, syncs, threshold alerts, shell-runner parsing, token refresh</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">18</td>
+                <td className="px-4 py-3 text-slate-700">Content syncs (Confluence, Drive, AI feeds), website digest &mdash; narration-tolerant jobs only; sentinel-style checks moved to gpt-oss</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">6</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Heavy synthesis</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gpt-oss-120b</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · OpenAI gpt-oss 120B (open weight)</td>
-                <td className="px-4 py-3 text-slate-700">Opportunity scans, signal synthesis, blockage radar, LinkedIn candidate ID, TritonGPT intel</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">16</td>
+                <td className="px-4 py-3 text-slate-700">The workhorse tier: opportunity scans, briefings, page refreshes, meeting debriefs, sentinel health checks, TritonGPT intel</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">47</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Long-form &amp; deep reasoning</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">mistral-large-3-675b</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Large 3 675B (open weight, cloud-proxied)</td>
-                <td className="px-4 py-3 text-slate-700">Weekly AI deep-dive, architecture &amp; harness reviews, newsletter, LinkedIn drafts, vision tracker</td>
+                <td className="px-4 py-3 text-slate-700">Architecture &amp; harness reviews, newsletter, LinkedIn drafts, vision tracker, relationship health</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">6</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Tool discipline &amp; code</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">deepseek-v4-flash-max</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · DeepSeek V4 Flash Max (open weight, strong tool-calling)</td>
+                <td className="px-4 py-3 text-slate-700">Overnight code maintenance, Gmail triage, file-editing page refreshes, commitment scans</td>
                 <td className="px-4 py-3 text-right font-semibold text-slate-900">7</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-slate-900">Monitor escalation</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">claude-sonnet-4-6</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
-                <td className="px-4 py-3 text-slate-700">Provider quota monitor, important-email triage &mdash; jobs where a missed signal has real downstream cost</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">3</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Complex reasoning</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">tritonai-sonnet</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
-                <td className="px-4 py-3 text-slate-700">Granola meeting debrief &mdash; deep commitment extraction from transcripts</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Code maintenance</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">deepseek-v4-flash-max</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · DeepSeek V4 Flash Max (open weight, code-specialized)</td>
-                <td className="px-4 py-3 text-slate-700">Overnight code maintenance for Mission Control (build, test, lint)</td>
+                <td className="px-4 py-3 text-slate-700">Blockage radar &mdash; the one job kept on a proprietary model, with local fallbacks</td>
                 <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
               </tr>
             </tbody>
@@ -482,15 +475,19 @@ export default function AiAgentArchitecturePage() {
             load-bearing in the architecture.
           </p>
           <p>
-            <strong className="text-slate-900">Why three jobs on proprietary Claude Sonnet:</strong>{' '}
-            three cron jobs escalate to Claude Sonnet 4.6 because false negatives there carry
-            real cost: <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
-            (catches outages and quota exhaustion before they cascade),{' '}
+            <strong className="text-slate-900">Why one job on proprietary Claude Sonnet:</strong>{' '}
+            only <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">blockage-radar</code>{' '}
+            still escalates to Claude Sonnet 4.6 &mdash; cross-source stall detection where a
+            missed signal carries real cost and the open-weight tier hadn&rsquo;t yet proven
+            reliable. The other former escalations came home on June 9:{' '}
+            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
+            moved to gpt-oss 120B (a status check has no business depending on the proxied path
+            it monitors), and{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gmail-important-emails</code>{' '}
-            (surfaces actionable messages buried in volume), and{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">granola-meeting-debrief</code>{' '}
-            (deep commitment extraction from transcripts where extraction quality has direct
-            downstream value). Everything else stays on the open-weight tier.
+            moved to DeepSeek after a verified live run produced an equally well-prioritized
+            digest &mdash; the heavy lifting there is a read-only IMAP script, and the model&rsquo;s
+            job is ranking and formatting, which local handles. Everything else stays on the
+            open-weight tier.
           </p>
           <p>
             <strong className="text-slate-900">Why no cross-provider canary anymore:</strong> the
@@ -908,6 +905,41 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              June 9, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Router outage fixed &middot; fleet rebalanced to ~99% open-weight &middot; Gmail triage localized</div>
+            <p className="text-sm text-slate-600 leading-6">
+              The OpenClaw 2026.6 upgrade silently moved cron job storage into the
+              gateway&rsquo;s internal store, which broke the model-router&rsquo;s state digest
+              &mdash; it had been failing every 2-hour cycle since June 3 with no decisions and
+              no alerts. Patched the digest to read merged state from the gateway, verified the
+              52-test suite plus a live cycle, and the router is back on duty. The same
+              storage migration explained why one earlier fleet edit never took effect
+              (<span className="font-mono text-xs">email-task-scanner</span> was still running a
+              model known to decorate sentinel outputs &mdash; now corrected through the gateway
+              API). Rebalanced the fleet: five heartbeat-sentinel jobs moved off{' '}
+              <span className="font-mono text-xs">api-mistral-small-3.2-2506</span> to{' '}
+              <span className="font-mono text-xs">api-gpt-oss-120b</span>, two file-editing
+              weekly jobs with repeat apply-patch failures moved to{' '}
+              <span className="font-mono text-xs">deepseek-v4-flash-max</span>, and both{' '}
+              <span className="font-mono text-xs">provider-quota-monitor</span> and{' '}
+              <span className="font-mono text-xs">gmail-important-emails</span> came off
+              proprietary Claude Sonnet to local models (the Gmail swap verified with a live
+              run before committing to it). Every single-model job gained a local fallback
+              chain, and the default fallback order is now local-first:{' '}
+              <span className="font-mono text-xs">deepseek-v4-flash-max &rarr; api-gpt-oss-120b
+              &rarr; claude-sonnet-4-6</span>. New distribution across 73 enabled jobs: 47 on{' '}
+              <span className="font-mono text-xs">api-gpt-oss-120b</span>, 7 on{' '}
+              <span className="font-mono text-xs">deepseek-v4-flash-max</span>, 6 each on{' '}
+              <span className="font-mono text-xs">api-mistral-small-3.2-2506</span> and{' '}
+              <span className="font-mono text-xs">mistral-large-3-675b</span>, 5 on{' '}
+              <span className="font-mono text-xs">api-gemma-4-26b</span>, and exactly 1 on
+              proprietary <span className="font-mono text-xs">claude-sonnet-4-6</span>.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">

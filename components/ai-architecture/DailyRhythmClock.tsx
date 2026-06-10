@@ -44,7 +44,7 @@ const CRONS: Cron[] = [
 const CX = 600;
 const CY = 380;
 const R_RING = 240;
-const R_LABEL = 278;
+const R_LABEL = 302;
 const R_TICK_OUT = 250;
 const R_TICK_IN = 230;
 
@@ -95,7 +95,7 @@ export default function DailyRhythmClock() {
           return (
             <g key={`tick-${h}`}>
               <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#94a3b8" strokeWidth="1.5" />
-              <text x={labelP.x} y={labelP.y + 4} textAnchor="middle" className="fill-slate-500" style={{ fontSize: '12px', fontWeight: 600 }}>
+              <text x={labelP.x} y={labelP.y + 4} textAnchor="middle" className="fill-slate-500" style={{ fontSize: '14px', fontWeight: 600 }}>
                 {displayHour}
               </text>
             </g>
@@ -103,16 +103,16 @@ export default function DailyRhythmClock() {
         })}
 
         {/* Quadrant labels (inner) */}
-        <text x={CX} y={CY - 80} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX} y={CY - 80} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Night
         </text>
-        <text x={CX + 85} y={CY + 5} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX + 118} y={CY + 5} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Morning
         </text>
-        <text x={CX} y={CY + 95} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX} y={CY + 95} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Afternoon
         </text>
-        <text x={CX - 85} y={CY + 5} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
+        <text x={CX - 118} y={CY + 5} textAnchor="middle" className="fill-slate-400" style={{ fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600 }}>
           Evening
         </text>
 
@@ -120,10 +120,10 @@ export default function DailyRhythmClock() {
         <text x={CX} y={CY - 18} textAnchor="middle" className="fill-slate-900" style={{ fontSize: '22px', fontWeight: 700 }}>
           24h
         </text>
-        <text x={CX} y={CY + 4} textAnchor="middle" className="fill-slate-600" style={{ fontSize: '12px' }}>
+        <text x={CX} y={CY + 6} textAnchor="middle" className="fill-slate-600" style={{ fontSize: '14px' }}>
           knowledge rhythm
         </text>
-        <text x={CX} y={CY + 24} textAnchor="middle" className="fill-slate-500" style={{ fontSize: '11px', fontStyle: 'italic' }}>
+        <text x={CX} y={CY + 27} textAnchor="middle" className="fill-slate-500" style={{ fontSize: '13px', fontStyle: 'italic' }}>
           America/Los_Angeles
         </text>
 
@@ -152,16 +152,16 @@ export default function DailyRhythmClock() {
                 x={labelP.x}
                 y={labelP.y - 2}
                 textAnchor={anchor}
-                style={{ fontSize: '12px', fontWeight: 700, fill: '#0f172a' }}
+                style={{ fontSize: '15px', fontWeight: 700, fill: '#0f172a' }}
               >
                 {hhmm} · {cron.label}
               </text>
               {cron.note && (
                 <text
                   x={labelP.x}
-                  y={labelP.y + 13}
+                  y={labelP.y + 15}
                   textAnchor={anchor}
-                  style={{ fontSize: '10px', fill: '#64748b', fontStyle: 'italic' }}
+                  style={{ fontSize: '12px', fill: '#64748b', fontStyle: 'italic' }}
                 >
                   {cron.note}
                 </text>
@@ -173,15 +173,15 @@ export default function DailyRhythmClock() {
         {/* Legend — centered below the clock */}
         <g transform="translate(430, 780)">
           <circle cx="0" cy="0" r="7" fill={ROLE_COLOR.accumulation} />
-          <text x="14" y="5" style={{ fontSize: '13px', fill: '#334155', fontWeight: 600 }}>
+          <text x="14" y="5" style={{ fontSize: '15px', fill: '#334155', fontWeight: 600 }}>
             Accumulation
           </text>
           <circle cx="160" cy="0" r="7" fill={ROLE_COLOR.synthesis} />
-          <text x="174" y="5" style={{ fontSize: '13px', fill: '#334155', fontWeight: 600 }}>
+          <text x="174" y="5" style={{ fontSize: '15px', fill: '#334155', fontWeight: 600 }}>
             Synthesis
           </text>
           <circle cx="290" cy="0" r="7" fill={ROLE_COLOR.publication} />
-          <text x="304" y="5" style={{ fontSize: '13px', fill: '#334155', fontWeight: 600 }}>
+          <text x="304" y="5" style={{ fontSize: '15px', fill: '#334155', fontWeight: 600 }}>
             Publication
           </text>
         </g>

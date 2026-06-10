@@ -7,7 +7,9 @@
  * - Layer 3 (outer): Loaded on explicit request — deep-dive content only when asked
  *
  * Pure SVG with concentric circles. Labels sit outside each ring.
- * On mobile, the SVG scales down via viewBox; content remains readable at 375px.
+ * Font sizes are set for legibility after viewBox scaling: at a 360px-wide
+ * mobile container the 720-unit viewBox renders at ~0.5x, so nothing here
+ * may be smaller than 12px (≈6px rendered) and labels target 14px+.
  */
 
 export default function ThreeLayerDiagram() {
@@ -43,65 +45,65 @@ export default function ThreeLayerDiagram() {
 
         {/* Layer 3 — outer ring */}
         <circle cx="360" cy="260" r="240" fill="url(#l3-grad)" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-        <text x="360" y="48" textAnchor="middle" className="fill-slate-600" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+        <text x="360" y="48" textAnchor="middle" className="fill-slate-600" style={{ fontSize: '16px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
           Layer 3 · Explicit Request Only
         </text>
 
         {/* Layer 2 — middle ring */}
         <circle cx="360" cy="260" r="170" fill="url(#l2-grad)" stroke="#60a5fa" strokeWidth="2" />
-        <text x="360" y="118" textAnchor="middle" className="fill-blue-700" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+        <text x="360" y="118" textAnchor="middle" className="fill-blue-700" style={{ fontSize: '16px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
           Layer 2 · Loaded on Trigger
         </text>
 
         {/* Layer 1 — center, solid */}
         <circle cx="360" cy="260" r="100" fill="url(#l1-grad)" />
-        <text x="360" y="218" textAnchor="middle" className="fill-blue-100" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+        <text x="360" y="214" textAnchor="middle" className="fill-blue-100" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
           Layer 1
         </text>
-        <text x="360" y="242" textAnchor="middle" className="fill-white" style={{ fontSize: '18px', fontWeight: 700 }}>
+        <text x="360" y="240" textAnchor="middle" className="fill-white" style={{ fontSize: '21px', fontWeight: 700 }}>
           Always Loaded
         </text>
-        <text x="360" y="265" textAnchor="middle" className="fill-blue-200" style={{ fontSize: '11px' }}>
+        <text x="360" y="264" textAnchor="middle" className="fill-blue-200" style={{ fontSize: '13px' }}>
           IDENTITY · USER · MEMORY
         </text>
-        <text x="360" y="281" textAnchor="middle" className="fill-blue-200" style={{ fontSize: '11px' }}>
+        <text x="360" y="283" textAnchor="middle" className="fill-blue-200" style={{ fontSize: '13px' }}>
           PATTERNS · today · yesterday
         </text>
-        <text x="360" y="303" textAnchor="middle" className="fill-blue-300" style={{ fontSize: '10px', fontStyle: 'italic' }}>
+        <text x="360" y="305" textAnchor="middle" className="fill-blue-300" style={{ fontSize: '12px', fontStyle: 'italic' }}>
           ~15 KB · loaded every turn
         </text>
 
         {/* Layer 2 content labels (arranged around the middle ring) */}
-        <text x="230" y="160" className="fill-slate-800" style={{ fontSize: '11px', fontWeight: 600 }}>
+        <text x="218" y="160" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
           wiki/people/
         </text>
-        <text x="478" y="160" className="fill-slate-800" style={{ fontSize: '11px', fontWeight: 600 }}>
+        <text x="470" y="160" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
           wiki/tech-stack/
         </text>
-        <text x="198" y="360" className="fill-slate-800" style={{ fontSize: '11px', fontWeight: 600 }}>
+        <text x="186" y="362" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
           wiki/decisions/
         </text>
-        <text x="478" y="360" className="fill-slate-800" style={{ fontSize: '11px', fontWeight: 600 }}>
+        <text x="470" y="362" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
           weekly-synthesis
         </text>
-        <text x="360" y="398" textAnchor="middle" className="fill-slate-700" style={{ fontSize: '10px', fontStyle: 'italic' }}>
-          259 pages · pulled in when conversation mentions the topic
+        <text x="360" y="400" textAnchor="middle" className="fill-slate-700" style={{ fontSize: '13px', fontStyle: 'italic' }}>
+          267 pages · pulled in when conversation mentions the topic
         </text>
 
         {/* Layer 3 content labels */}
-        <text x="80" y="254" className="fill-slate-500" style={{ fontSize: '10px' }}>
+        <text x="36" y="252" className="fill-slate-500" style={{ fontSize: '13px' }}>
           specific memory/
         </text>
-        <text x="80" y="270" className="fill-slate-500" style={{ fontSize: '10px' }}>
+        <text x="36" y="271" className="fill-slate-500" style={{ fontSize: '13px' }}>
           dated files
         </text>
-        <text x="570" y="254" className="fill-slate-500" style={{ fontSize: '10px' }}>
+        <text x="568" y="252" className="fill-slate-500" style={{ fontSize: '13px' }}>
           raw transcripts
         </text>
-        <text x="570" y="270" className="fill-slate-500" style={{ fontSize: '10px' }}>
+        <text x="568" y="271" className="fill-slate-500" style={{ fontSize: '13px' }}>
           full graph JSON
         </text>
-        <text x="360" y="490" textAnchor="middle" className="fill-slate-500" style={{ fontSize: '10px', fontStyle: 'italic' }}>
+        <text x="360" y="492" textAnchor="middle" className="fill-slate-500" style={{ fontSize: '13px', fontStyle: 'italic' }}>
           Loaded only when the human explicitly asks &mdash; &ldquo;read the architecture doc,&rdquo; &ldquo;check the knowledge graph&rdquo;
         </text>
       </svg>
@@ -109,7 +111,7 @@ export default function ThreeLayerDiagram() {
       <figcaption className="sr-only">
         The agent loads context in three priority tiers. Layer 1 is a small fixed set of files
         (identity, user profile, long-term memory, patterns, today, yesterday) loaded on every
-        session start. Layer 2 is 259 wiki pages pulled in conditionally when the conversation
+        session start. Layer 2 is 267 wiki pages pulled in conditionally when the conversation
         mentions a person, technology, decision, or trend. Layer 3 is deep-dive content like
         specific dated memory files or raw transcripts, loaded only when the human explicitly asks.
       </figcaption>

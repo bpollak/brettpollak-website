@@ -88,17 +88,17 @@ export default function ScalingPyramid() {
 
         {/* Privacy axis on the left */}
         <g>
-          <text x="20" y="90" className="fill-blue-700" style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 800 }}>
+          <text x="20" y="90" className="fill-blue-700" style={{ fontSize: '14px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 800 }}>
             Privacy
           </text>
-          <text x="20" y="108" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
+          <text x="20" y="110" className="fill-slate-600" style={{ fontSize: '13px', fontWeight: 600 }}>
             aggregate only
           </text>
           <line x1="80" y1="130" x2="80" y2="470" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4 4" />
           <g transform="translate(74, 250)">
             <polygon points="0,-8 8,0 0,8 -8,0" fill="#64748b" />
           </g>
-          <text x="20" y="490" className="fill-slate-600" style={{ fontSize: '11px', fontWeight: 600 }}>
+          <text x="20" y="524" className="fill-slate-600" style={{ fontSize: '13px', fontWeight: 600 }}>
             individual private
           </text>
         </g>
@@ -120,15 +120,15 @@ export default function ScalingPyramid() {
                 x={CX}
                 y={yTop + tier.height / 2 - 4}
                 textAnchor="middle"
-                style={{ fontSize: '20px', fontWeight: 800, fill: tier.textFill }}
+                style={{ fontSize: '22px', fontWeight: 800, fill: tier.textFill }}
               >
                 {tier.label}
               </text>
               <text
                 x={CX}
-                y={yTop + tier.height / 2 + 16}
+                y={yTop + tier.height / 2 + 18}
                 textAnchor="middle"
-                style={{ fontSize: '11px', fill: tier.textFill, opacity: 0.9 }}
+                style={{ fontSize: '13px', fill: tier.textFill, opacity: 0.9 }}
               >
                 {tier.sub}
               </text>
@@ -150,13 +150,13 @@ export default function ScalingPyramid() {
                 stroke="#cbd5e1"
                 strokeWidth="1.5"
               />
-              <text x="680" y={yCenter - 16} className="fill-slate-900" style={{ fontSize: '13px', fontWeight: 800 }}>
+              <text x="680" y={yCenter - 18} className="fill-slate-900" style={{ fontSize: '15px', fontWeight: 800 }}>
                 {tier.detail}
               </text>
-              <text x="680" y={yCenter + 1} style={{ fontSize: '11px', fontWeight: 600, fill: '#1e40af' }}>
+              <text x="680" y={yCenter + 2} style={{ fontSize: '13px', fontWeight: 600, fill: '#1e40af' }}>
                 🔒 {tier.privacy}
               </text>
-              <text x="680" y={yCenter + 18} className="fill-slate-500" style={{ fontSize: '10px', fontStyle: 'italic' }}>
+              <text x="680" y={yCenter + 21} className="fill-slate-500" style={{ fontSize: '12px', fontStyle: 'italic' }}>
                 {tier.status}
               </text>
             </g>
@@ -164,7 +164,7 @@ export default function ScalingPyramid() {
         })}
 
         {/* Foundation label */}
-        <text x={CX} y="540" textAnchor="middle" className="fill-slate-600" style={{ fontSize: '12px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 700 }}>
+        <text x={CX} y="540" textAnchor="middle" className="fill-slate-600" style={{ fontSize: '14px', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700 }}>
           Foundation: one agent per person · privacy by default
         </text>
       </svg>
