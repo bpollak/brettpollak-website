@@ -1,11 +1,11 @@
 /**
- * /now page data — what Brett is focused on right now.
+ * /now page data - what Brett is focused on right now.
  *
  * Auto-refreshed weekly by the OpenClaw `now-page-weekly-refresh` cron job
  * (Sundays ~11:33am PT). The cron only updates this file when it detects
  * meaningful drift; otherwise the file is unchanged.
  *
- * Manual edits welcome — the cron compares against current state and only
+ * Manual edits welcome - the cron compares against current state and only
  * pushes changes that the prompt has reasoned about, so a human edit will
  * stick until something materially changes.
  */
@@ -13,7 +13,7 @@
 export type NowItem = {
   /** Section heading, e.g., "Work focus" */
   label: string;
-  /** 1–3 sentences. Plain prose, written like you'd tell a friend. */
+  /** 1-3 sentences. Plain prose, written like you'd tell a friend. */
   body: string;
 };
 
@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-05-24",
+  lastUpdated: "2026-06-14",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,22 +37,27 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is scaling from a flagship service to a multi-campus platform, with several peer institutions currently in evaluation. We're focused on building the deployment models that allow peer institutions to adopt this vertical AI approach safely.",
+        "TritonGPT continues scaling to a multi‑campus platform, with peer institutions moving into pilot phases. We're refining deployment models for safe, institution‑wide adoption.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "Rolling out the Citizen Developer Program with a focus on decoupled environments—bridge the gap between sandbox experimentation and enterprise-grade deployment using AI-powered desktop and cloud tools.",
+        "The Citizen Developer Program is now delivering prototype workflows built on TritonGPT, avoiding external platforms. We’re bridging sandbox experimentation to enterprise‑grade deployment using AI‑powered tools.",
     },
     {
       label: "AI agents in production",
       body:
-        "Moving beyond exploration into active deployment. This includes the rolling launch of TritonGPT mobile apps on iOS and Android, alongside enterprise data agents that bridge natural language to structured queries.",
+        "We’re beta‑testing TritonGPT mobile apps on iOS and Android, and expanding enterprise data agents that translate natural language to structured queries.",
     },
     {
       label: "Data product architecture",
       body:
-        "Shifting from platform migration to a true 'data product' mindset. We are implementing a data mesh model where domain teams define their own governed data products and contracts, rather than performing a simple lift-and-shift.",
+        "Advancing a data‑mesh approach where domain teams define governed data products and contracts, moving beyond simple lift‑and‑shift migrations.",
+    },
+    {
+      label: "AI‑powered email automation",
+      body:
+        "Deployed the inbox‑draft‑reply skill, automating threaded draft replies in Outlook based on recent email context, with voice‑matched and human‑ized language.",
     },
   ],
 };
