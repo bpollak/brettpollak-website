@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 70+ automated jobs running on UC San Diego’s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 385-node knowledge graph, 267 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 69+ automated jobs running on UC San Diego’s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 541-node knowledge graph, 325 wiki pages, and a three-layer memory system.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -81,11 +81,11 @@ export default function AiAgentArchitecturePage() {
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-[#17201b]">70+ cron jobs</div>
+            <div className="text-2xl font-semibold text-[#17201b]">65+ cron jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-[#17201b]">385 nodes · 267 pages</div>
+            <div className="text-2xl font-semibold text-[#17201b]">541 nodes · 325 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -153,9 +153,9 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 65+ automated jobs
+            This page documents how I built that knowledge layer for myself: 69+ automated jobs
             routed through UC San Diego&rsquo;s TritonAI gateway &mdash; predominantly open-weight
-            models hosted at SDSC &mdash; a 385-node knowledge graph, 267 wiki pages, and a
+            models hosted at SDSC &mdash; a 541-node knowledge graph, 325 wiki pages, and a
             three-layer memory system. It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
             understands their work world.
@@ -905,6 +905,16 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              June 14, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Weekly architecture metrics update</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Graph grew to 541 nodes and 592 edges (up +156 nodes, +162 edges). Wiki expanded to 325 pages (+58). Enabled cron jobs rose to 69 (rounded 65+). Added new project pages for recent initiatives.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
