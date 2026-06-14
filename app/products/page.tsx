@@ -5,7 +5,7 @@ import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
-  description: "Explore AI-driven products built by Brett Pollak, including Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
+  description: "Explore AI-driven products built by Brett Pollak, including Is This AI?, Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
@@ -31,6 +31,24 @@ export const metadata: Metadata = {
 };
 
 const products = [
+  {
+    category: "Media authenticity",
+    title: "Is This AI?",
+    href: "https://bpollak.github.io/is-this-ai/",
+    image: "/is-this-ai.svg",
+    imageAlt: "Is This AI media authenticity checker interface",
+    width: 1600,
+    height: 900,
+    description:
+      "A lightweight media provenance triage app for uploaded images, uploaded videos, and media links. It separates deterministic watermark or provenance checks from heuristic AI-likelihood scoring so uncertain results are labeled honestly.",
+    features: [
+      "Image and video upload flow",
+      "Media link scoring",
+      "Watermark and provenance status",
+      "Transparent evidence breakdown",
+    ],
+    cta: "Try Is This AI?",
+  },
   {
     category: "AI-powered habit building",
     title: "Resolution Companion",

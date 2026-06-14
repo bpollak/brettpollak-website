@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Is This AI media authenticity checker</title>
+  <desc id="desc">A stylized interface showing upload, link analysis, score, watermark status, and evidence signals.</desc>
+  <rect width="1600" height="900" fill="#f5f6f3"/>
+  <path d="M0 120H1600M0 240H1600M0 360H1600M0 480H1600M0 600H1600M0 720H1600M0 840H1600" stroke="#d9ded8" stroke-width="2"/>
+  <path d="M160 0V900M320 0V900M480 0V900M640 0V900M800 0V900M960 0V900M1120 0V900M1280 0V900M1440 0V900" stroke="#d9ded8" stroke-width="2"/>
+  <rect x="110" y="78" width="1380" height="744" rx="18" fill="#ffffff" stroke="#d9ded8" stroke-width="3"/>
+  <rect x="150" y="128" width="660" height="72" rx="12" fill="#eef1ec" stroke="#d9ded8" stroke-width="2"/>
+  <rect x="160" y="138" width="318" height="52" rx="9" fill="#ffffff"/>
+  <text x="250" y="172" fill="#202124" font-family="Arial, sans-serif" font-size="25" font-weight="700">Upload</text>
+  <text x="590" y="172" fill="#6b706c" font-family="Arial, sans-serif" font-size="25" font-weight="700">Link</text>
+  <rect x="150" y="226" width="660" height="372" rx="14" fill="#171918"/>
+  <rect x="184" y="260" width="592" height="304" rx="12" fill="#252a28" stroke="#59615c" stroke-width="2"/>
+  <rect x="226" y="308" width="228" height="180" rx="10" fill="#56615a"/>
+  <circle cx="302" cy="366" r="43" fill="#dbe6df" opacity="0.45"/>
+  <path d="M235 488L334 416L410 476L455 445L455 488H235Z" fill="#dbe6df" opacity="0.48"/>
+  <rect x="507" y="308" width="228" height="180" rx="10" fill="#31413d"/>
+  <path d="M578 356L671 398L578 441V356Z" fill="#49d5b9"/>
+  <line x1="480" y1="278" x2="480" y2="546" stroke="#49d5b9" stroke-width="5"/>
+  <rect x="150" y="626" width="660" height="116" rx="14" fill="#fbfcfa" stroke="#d9ded8" stroke-width="2"/>
+  <circle cx="206" cy="684" r="28" fill="#006a6a"/>
+  <path d="M193 684H219M206 671V697" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <text x="258" y="676" fill="#202124" font-family="Arial, sans-serif" font-size="28" font-weight="700">Drop media or choose a file</text>
+  <text x="258" y="713" fill="#6b706c" font-family="Arial, sans-serif" font-size="22">Images and short videos sampled locally</text>
+  <text x="890" y="164" fill="#006a6a" font-family="Arial, sans-serif" font-size="20" font-weight="700">CURRENT ANSWER</text>
+  <text x="890" y="222" fill="#202124" font-family="Arial, sans-serif" font-size="58" font-weight="700">Possibly AI</text>
+  <rect x="890" y="270" width="498" height="26" rx="13" fill="#d9ded8"/>
+  <rect x="890" y="270" width="330" height="26" rx="13" fill="#e0a22f"/>
+  <circle cx="1220" cy="283" r="20" fill="#202124" stroke="#ffffff" stroke-width="6"/>
+  <text x="890" y="348" fill="#6b706c" font-family="Arial, sans-serif" font-size="24" font-weight="700">AI likelihood</text>
+  <text x="1306" y="356" fill="#202124" font-family="Arial, sans-serif" font-size="52" font-weight="700">66%</text>
+  <g>
+    <rect x="890" y="402" width="154" height="116" rx="12" fill="#fbfcfa" stroke="#d9ded8" stroke-width="2"/>
+    <text x="914" y="456" fill="#6b706c" font-family="Arial, sans-serif" font-size="18" font-weight="700">WATERMARK</text>
+    <text x="914" y="490" fill="#202124" font-family="Arial, sans-serif" font-size="22" font-weight="700">Not found</text>
+  </g>
+  <g>
+    <rect x="1062" y="402" width="154" height="116" rx="12" fill="#fbfcfa" stroke="#d9ded8" stroke-width="2"/>
+    <text x="1086" y="456" fill="#6b706c" font-family="Arial, sans-serif" font-size="18" font-weight="700">PROVENANCE</text>
+    <text x="1086" y="490" fill="#202124" font-family="Arial, sans-serif" font-size="22" font-weight="700">Missing</text>
+  </g>
+  <g>
+    <rect x="1234" y="402" width="154" height="116" rx="12" fill="#fbfcfa" stroke="#d9ded8" stroke-width="2"/>
+    <text x="1258" y="456" fill="#6b706c" font-family="Arial, sans-serif" font-size="18" font-weight="700">CONFIDENCE</text>
+    <text x="1258" y="490" fill="#202124" font-family="Arial, sans-serif" font-size="22" font-weight="700">Low</text>
+  </g>
+  <rect x="890" y="552" width="498" height="72" rx="12" fill="#eef4f2"/>
+  <text x="916" y="596" fill="#31433f" font-family="Arial, sans-serif" font-size="23">Score is heuristic unless provenance is verified.</text>
+  <rect x="890" y="650" width="498" height="62" rx="12" fill="#ffffff" stroke="#d9ded8" stroke-width="2"/>
+  <rect x="890" y="650" width="8" height="62" rx="4" fill="#b3261e"/>
+  <text x="916" y="688" fill="#202124" font-family="Arial, sans-serif" font-size="24" font-weight="700">Stylized texture raises likelihood</text>
+  <rect x="890" y="730" width="498" height="62" rx="12" fill="#ffffff" stroke="#d9ded8" stroke-width="2"/>
+  <rect x="890" y="730" width="8" height="62" rx="4" fill="#0b8063"/>
+  <text x="916" y="768" fill="#202124" font-family="Arial, sans-serif" font-size="24" font-weight="700">Camera detail lowers likelihood</text>
+</svg>
