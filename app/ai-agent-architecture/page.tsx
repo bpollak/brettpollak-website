@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 69+ automated jobs running on UC San Diego’s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 541-node knowledge graph, 325 wiki pages, and a three-layer memory system.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 72+ automated jobs running on UC San Diego\u2019s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 541-node knowledge graph, 325 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -75,13 +75,13 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-[#485248] mb-10">
-          Last updated: June 9, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: June 17, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-[#17201b]">65+ cron jobs</div>
+            <div className="text-2xl font-semibold text-[#17201b]">72+ cron jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
@@ -153,10 +153,11 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 69+ automated jobs
+            This page documents how I built that knowledge layer for myself: 72+ automated jobs
             routed through UC San Diego&rsquo;s TritonAI gateway &mdash; predominantly open-weight
-            models hosted at SDSC &mdash; a 541-node knowledge graph, 325 wiki pages, and a
-            three-layer memory system. It&rsquo;s also a design pattern that could scale to
+            models hosted at SDSC &mdash; a 541-node knowledge graph, 325 wiki pages, a
+            three-layer memory system, and an MCP bridge that opens it to programming agents.
+ It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
             understands their work world.
           </p>
@@ -257,7 +258,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            65+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            72+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -725,6 +726,16 @@ export default function AiAgentArchitecturePage() {
                 Instead of &ldquo;search the web,&rdquo; the agent does &ldquo;search filtered
                 through what I care about, scored against my graph, synthesized with what I
                 already know.&rdquo; Research becomes targeted, not exhaustive.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="text-slate-900 font-bold text-lg mb-2">Programming agents with institutional memory</div>
+              <p className="text-sm text-slate-700 leading-6">
+                The TritonAI Code coding agent now has live MCP access to the same wiki,
+                knowledge graph, and memory logs that my personal agent uses &mdash; via an
+                authenticated SSE bridge running on my home network. When it needs context on
+                a person, project, or decision, it queries the memory system directly instead
+                of guessing. The knowledge layer isn&rsquo;t locked to one agent anymore.
               </p>
             </div>
           </div>
