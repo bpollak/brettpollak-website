@@ -1,11 +1,11 @@
 /**
- * /now page data - what Brett is focused on right now.
+ * /now page data — what Brett is focused on right now.
  *
  * Auto-refreshed weekly by the OpenClaw `now-page-weekly-refresh` cron job
  * (Sundays ~11:33am PT). The cron only updates this file when it detects
  * meaningful drift; otherwise the file is unchanged.
  *
- * Manual edits welcome - the cron compares against current state and only
+ * Manual edits welcome — the cron compares against current state and only
  * pushes changes that the prompt has reasoned about, so a human edit will
  * stick until something materially changes.
  */
@@ -13,7 +13,7 @@
 export type NowItem = {
   /** Section heading, e.g., "Work focus" */
   label: string;
-  /** 1-3 sentences. Plain prose, written like you'd tell a friend. */
+  /** 1–3 sentences. Plain prose, written like you'd tell a friend. */
   body: string;
 };
 
@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-06-14",
+  lastUpdated: "2026-06-17",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -42,12 +42,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Governed AI enablement",
       body:
-        "The Citizen Developer Program is now delivering prototype workflows built on TritonGPT, avoiding external platforms. We’re bridging sandbox experimentation to enterprise‑grade deployment using AI‑powered tools.",
+        "The Citizen Developer Program is now delivering prototype workflows built on TritonGPT, avoiding external platforms. We're bridging sandbox experimentation to enterprise‑grade deployment using AI‑powered tools.",
     },
     {
       label: "AI agents in production",
       body:
-        "We’re beta‑testing TritonGPT mobile apps on iOS and Android, and expanding enterprise data agents that translate natural language to structured queries.",
+        "The UC San Diego Assistant is now live on the flagship university mobile app, bringing AI-powered institutional knowledge directly to students, faculty, and staff. Enterprise data agents continue to bridge natural language to structured queries.",
     },
     {
       label: "Data product architecture",
