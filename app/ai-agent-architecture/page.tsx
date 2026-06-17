@@ -1299,25 +1299,7 @@ export default function AiAgentArchitecturePage() {
             as the starting point, none of this would have shipped.
           </p>
         </div>
-        <p className="text-sm text-slate-500 leading-7">
-          This page is hand-maintained, not auto-generated. Metrics are as-of snapshots &mdash;
-          the number of nodes, pages, and crons changes as the system evolves. For the live state,
-          see{' '}
-          <a
-            href="https://github.com/bpollak/mission-control"
-            className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
-          >
-            github.com/bpollak/mission-control
-          </a>
-          . Questions, ideas, or corrections? Get in touch via the{' '}
-          <a
-            href="/contact"
-            className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
-          >
-            contact page
-          </a>
-          .
-        </p>
+
       </section>
     </main>
   );
