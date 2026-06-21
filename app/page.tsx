@@ -224,7 +224,7 @@ export default function Home() {
     },
     "alumniOf": {
       "@type": "EducationalOrganization",
-      "name": "University of California San Diego"
+      "name": "University of San Diego"
     },
     "knowsAbout": [
       "AI in Higher Education",
