@@ -97,6 +97,17 @@ export default function ContactContent() {
                   </li>
                 </ul>
               </div>
+
+              {/* Online / Social */}
+              <div className="border-t border-slate-200 pt-8">
+                <h4 className="text-xl font-bold text-slate-900 mb-4">Online</h4>
+                <p className="text-slate-600 leading-relaxed">
+                  I share ongoing thoughts and updates on{" "}
+                  <a href="https://www.linkedin.com/in/brettpollak/" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900 transition-colors">
+                    LinkedIn
+                  </a>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
