@@ -97,11 +97,11 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Supporting campus access to institutional knowledge and reducing friction in workflows such as contract review for Procurement</p>
+              <p className="text-lg text-slate-600 leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app, and reducing friction in workflows such as contract review for Procurement</p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Working with colleagues across service desk, infrastructure, analytics, web, and collaboration services</p>
+              <p className="text-lg text-slate-600 leading-relaxed">Leading teams that deliver service desk, hybrid-cloud infrastructure, data analytics, web platforms, and enterprise collaboration services across the university</p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Recognition</h3>
