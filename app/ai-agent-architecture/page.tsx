@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 72+ automated jobs running on UC San Diego\u2019s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 541-node knowledge graph, 325 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ automated jobs running on UC San Diego\u2019s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 566-node knowledge graph, 377 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -75,17 +75,17 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-[#485248] mb-10">
-          Last updated: June 17, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: June 21, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-[#17201b]">72+ cron jobs</div>
+            <div className="text-2xl font-semibold text-[#17201b]">65+ cron jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-[#17201b]">541 nodes · 325 pages</div>
+            <div className="text-2xl font-semibold text-[#17201b]">566 nodes · 377 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -153,9 +153,9 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 72+ automated jobs
+            This page documents how I built that knowledge layer for myself: 65+ automated jobs
             routed through UC San Diego&rsquo;s TritonAI gateway &mdash; predominantly open-weight
-            models hosted at SDSC &mdash; a 541-node knowledge graph, 325 wiki pages, a
+            models hosted at SDSC &mdash; a 566-node knowledge graph, 377 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
  It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -258,7 +258,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            72+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            65+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -318,7 +318,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">385 nodes · 430 edges</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">566 nodes · 617 edges</div>
               <p className="text-sm text-slate-700 leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -330,7 +330,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">267 narrative pages</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">377 narrative pages</div>
               <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
@@ -389,7 +389,7 @@ export default function AiAgentArchitecturePage() {
             model class that fits its work shape.
           </p>
           <p>
-            As of June 9, 2026, <strong>all 73 enabled jobs run through{' '}
+            As of June 9, 2026, <strong>all 69 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
@@ -916,6 +916,16 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              June 21, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Graph and wiki accelerated growth — knowledge graph +25 nodes, wiki +52 pages</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Knowledge graph expanded to 566 nodes and 617 edges (up +25 each). Wiki grew to 377 pages (+52), driven by 8 new people pages, 2 new project pages (tritonai-harness, canvas-onyx-integration), and 15+ decisions spanning TritonAI social layer architecture, Onyx contract renewal, AI Tutor Canvas tool naming, iMessage integration, and the FY27 budget win for ITS. Enabled cron jobs steady at 69.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
