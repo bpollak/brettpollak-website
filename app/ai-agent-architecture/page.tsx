@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ automated jobs running on UC San Diego\u2019s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 566-node knowledge graph, 377 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ automated jobs running on UC San Diego\u2019s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 597-node knowledge graph, 458 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -75,7 +75,7 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-[#485248] mb-10">
-          Last updated: June 21, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: June 28, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
@@ -85,7 +85,7 @@ export default function AiAgentArchitecturePage() {
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-[#17201b]">566 nodes · 377 pages</div>
+            <div className="text-2xl font-semibold text-[#17201b]">597 nodes · 458 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -155,7 +155,7 @@ export default function AiAgentArchitecturePage() {
           <p>
             This page documents how I built that knowledge layer for myself: 65+ automated jobs
             routed through UC San Diego&rsquo;s TritonAI gateway &mdash; predominantly open-weight
-            models hosted at SDSC &mdash; a 566-node knowledge graph, 377 wiki pages, a
+            models hosted at SDSC &mdash; a 597-node knowledge graph, 458 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
  It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -223,7 +223,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            This is the biggest unlock: 263 wiki pages that would otherwise sit unused become a
+            This is the biggest unlock: 458 wiki pages that would otherwise sit unused become a
             live reference library, pulled in silently the moment they&rsquo;re relevant. It
             feels like the AI &ldquo;just knows,&rdquo; not like it&rsquo;s doing a lookup.
           </p>
@@ -318,7 +318,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-blue-800 font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">566 nodes · 617 edges</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">597 nodes · 638 edges</div>
               <p className="text-sm text-slate-700 leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -330,7 +330,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-amber-900 font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-slate-900 mb-2">377 narrative pages</div>
+              <div className="text-2xl font-bold text-slate-900 mb-2">458 narrative pages</div>
               <p className="text-sm text-slate-700 leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
@@ -916,7 +916,17 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
-          <li className="relative">
+                    <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              June 28, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">Wiki growth accelerated — +81 pages, graph +31 nodes</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Knowledge graph expanded to 597 nodes and 638 edges (up +31 nodes, +21 edges). Wiki surged to 458 pages (+81), driven by new project pages (GrantIQ, Student Scheduling Assistant, TA Matching Algorithm, TritonAI Harness) and 15+ decisions added. No new cron jobs added; enabled jobs steady at 69.
+            </p>
+          </li>
+                    <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
               June 21, 2026
