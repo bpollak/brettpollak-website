@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data product architecture",
       body:
-        "Advancing a data‑mesh approach where domain teams define governed data products and contracts. Databricks adoption is underway as a modernization target, and we're shifting from first‑come‑first‑serve to tiered GPU allocation on our on‑prem clusters.",
+        "Advancing a data‑mesh approach where domain teams define governed data products and contracts. Evaluating Databricks as a modernization target, and shifting from first‑come‑first‑serve to tiered GPU allocation on our on‑prem clusters.",
     },
     {
       label: "AI‑powered email automation",
