@@ -352,7 +352,7 @@ export default function TritonGPTContent() {
             {[
               ['91%', 91, '%', 'Faster Contract Review', '120 minutes to 11 minutes on average', 'text-[#1f5a8a]'],
               ['83%', 83, '%', 'Faster Job Description Drafting', '30 minutes to 5 minutes on average', 'text-[#b8503f]'],
-              ['17', 17, '', 'Model Hub Breadth', 'Self-hosted and approved cloud models available through TritonAI', 'text-[#c97712]'],
+              ['20', 20, '', 'Model Hub Breadth', 'Self-hosted and approved cloud models available through TritonAI', 'text-[#c97712]'],
               ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling', 'text-[#366c5a]'],
             ].map(([fallback, end, suffix, label, detail, colorClass], index) => (
               <div key={label} className="border-b border-[#d9dfd3] p-7 md:border-b-0 md:border-r md:last:border-r-0">
