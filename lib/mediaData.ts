@@ -17,7 +17,7 @@ export const mediaItems: MediaItem[] = [
   {
     publication: 'TechTalk Summits',
     title: 'From AI Pilots to Enterprise Platforms: Building Secure, Governed AI at Scale',
-    url: 'https://techtalksummits.com/event/exclusive/cxo-roundtable-series/technology-executive-dinner-san-diego-ca',
+    url: 'https://techtalksummits.com/',
     date: '2026-06-04',
     category: 'speaking'
   },
@@ -39,11 +39,10 @@ export const mediaItems: MediaItem[] = [
   {
     publication: 'NACUBO 2026 Annual Meeting',
     title: 'The AI Investment Decision: Building, Buy, or Shared Services?',
-    url: 'https://www.nacubo.org/Events/2026/NACUBO-2026-Annual-Meeting-Online',
+    url: 'https://www.nacubo.org/Events/2026/NACUBO-2026-Annual-Meeting',
     date: '2026-07-20',
     category: 'speaking'
   },
-  // Removed invalid TechTalk Summits entry (URL returned 404). Verify correct URL before re-adding.
   {
     publication: 'Constellation Research',
     title: 'Business Transformation 150™ 2026–2027',
