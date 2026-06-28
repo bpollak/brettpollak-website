@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-06-17",
+  lastUpdated: "2026-06-28",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,27 +37,27 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT continues scaling to a multi‑campus platform, with peer institutions moving into pilot phases. We're refining deployment models for safe, institution‑wide adoption.",
+        "TritonGPT continues scaling as a multi‑campus platform — BearGPT is live at UC Berkeley, and UC ANR is in pilot. We're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat interfaces.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The Citizen Developer Program is now delivering prototype workflows built on TritonGPT, avoiding external platforms. We're bridging sandbox experimentation to enterprise‑grade deployment using AI‑powered tools.",
+        "The TritonAI Harness — our campus agentic development platform — reached V1 feature‑complete on Mac this month, becoming the execution layer where staff build governed, tool‑using AI workers. The Citizen Developer Program now has a real platform to graduate sandbox experiments into production tools.",
     },
     {
       label: "AI agents in production",
       body:
-        "The UC San Diego Assistant is now live on the flagship university mobile app, bringing AI-powered institutional knowledge directly to students, faculty, and staff. Enterprise data agents continue to bridge natural language to structured queries.",
+        "The UC San Diego Assistant is live on the flagship mobile app, and the Student Scheduling Assistant launches July 9, bringing AI‑powered course planning to 20,000–40,000 students. Enterprise data agents continue bridging natural language to structured queries.",
     },
     {
       label: "Data product architecture",
       body:
-        "Advancing a data‑mesh approach where domain teams define governed data products and contracts, moving beyond simple lift‑and‑shift migrations.",
+        "Advancing a data‑mesh approach where domain teams define governed data products and contracts. Databricks adoption is underway as a modernization target, and we're shifting from first‑come‑first‑serve to tiered GPU allocation on our on‑prem clusters.",
     },
     {
       label: "AI‑powered email automation",
       body:
-        "Deployed the inbox‑draft‑reply skill, automating threaded draft replies in Outlook based on recent email context, with voice‑matched and human‑ized language.",
+        "The inbox‑draft‑reply skill automates threaded draft replies in Outlook based on recent email context, with voice‑matched and human‑ized language. Running daily as part of the personal agent workflow.",
     },
   ],
 };
