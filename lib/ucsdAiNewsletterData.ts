@@ -21,14 +21,24 @@ export type UcsdAiNewsletterData = {
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
-  "generatedAt": "2026-06-22T13:46:46.644Z",
-  "weekLabel": "Week of June 22–28, 2026",
-  "weekOf": "2026-06-22",
-  "weekEnding": "2026-06-28",
-  "publishedThrough": "June 22, 2026",
-  "editionCount": 12,
-  "itemCount": 106,
+  "generatedAt": "2026-06-29T12:02:15.975Z",
+  "weekLabel": "Week of June 29 – July 5, 2026",
+  "weekOf": "2026-06-29",
+  "weekEnding": "2026-07-05",
+  "publishedThrough": "June 29, 2026",
+  "editionCount": 13,
+  "itemCount": 115,
   "editions": [
+    {
+      "isoDate": "2026-06-29",
+      "displayDate": "Monday, June 29",
+      "sourceFile": "ucsd-ai-newsletter-2026-06-29.md",
+      "toolUpdatesCount": 5,
+      "tritonAiNewsCount": 1,
+      "upcomingTrainingsCount": 3,
+      "heroImage": null,
+      "raw": "# UC San Diego AI Weekly Update\n\nJune 29, 2026\n\n---\n\n## What's New in Your AI Tools\n\n### Zoom AI Companion\n\n- **[AI Companion name retired, features stay as \"AI\"] — Zoom's June 2026 update drops the \"AI Companion\" branding, but don't worry — Meeting Summaries, Chat Compose, Scheduling Assistance, and Smart Recording all remain under a simpler \"AI\" label. New this week: an AI catch-up prompt automatically offers late-joiners a summary of what they missed. Also new: Zoom Slides, Sheets, and Paper are now accessible from the Zoom mobile app navigation bar (view-only for Slides, editable for Sheets and Paper). And admins can now automatically disable AI features when certain restricted users join a meeting.\n\n### Microsoft Copilot with Data Protection\n\n- **[Anthropic's Claude now available in Copilot Chat](https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes)** — You can now select Claude as a model option in Copilot Chat for complex analysis, document understanding, and structured content generation. This gives you more flexibility to choose the AI model that best fits each task — Claude tends to excel at longer documents, detailed analysis, and multi-step planning. Available on all platforms (Android, Windows, iOS, Mac, Web).\n\n### Copilot for Microsoft 365\n\n- **[Learning Agent is now generally available](https://techcommunity.microsoft.com/blog/microsoft365copilotblog/learning-agent-now-generally-available-%E2%80%94-personalized-ai-upskilling-for-every-em/4524571)** — Microsoft's Learning Agent brings personalized AI upskilling directly into your workflow. It recommends tips and training based on your role, daily tasks, and work patterns — right inside Copilot, Teams, Word, Excel, and PowerPoint. No more digging through course catalogs. Each day starts with an AI Tip of the Day tuned to what you actually do.\n\n### Google Gemini & NotebookLM\n\n- **[Gemini Enterprise adds Confluence Data Center connector](https://docs.cloud.google.com/gemini/enterprise/docs/release-notes)** — You can now connect your Confluence Data Center instance directly to Gemini Enterprise. This means Gemini can search and reference your Confluence knowledge base when answering questions, summarizing content, or drafting responses. No more switching between tools to find that policy page or project doc. Also new this week: Agent Registry with governance for custom MCP servers and agents, plus observability dashboards for tracking agent performance.\n\n### TritonAI Developer API\n\n- **[Cohere transcription model added to model hub](https://tritonai-api.ucsd.edu/public/model_hub)** — A new self-hosted Cohere audio transcription model (`api-cohere-transcribe`) is now available through the TritonAI API. This adds native audio transcription capability to the platform, running on UCSD's own infrastructure. Developers can integrate speech-to-text into their applications without sending audio data to external services.\n\n---\n\n## Coming Up: Trainings & Workshops\n\n- **Catch up on past webinars** — Missed a session? Webinar #6 (\"One Year of Innovation with TritonGPT\") and Webinar #5 (\"Lean Six Sigma vs. Artificial Intelligence\") are available to watch on demand, along with slide decks. Visit the [AI Webinars page](https://tritonai.ucsd.edu/training-resources/webinars.html) to access recordings.\n\n- **Self-paced learning** — Enroll in [Module 1 - AI Foundations](https://go.ucsd.edu/3FvH9Hf) on UC Learning for an introduction to AI concepts, UC policies, and practical applications in higher education.\n\n- **Everyday I AI video series** — Short, practical videos on using generative AI tools effectively. Watch the [full playlist on YouTube](https://www.youtube.com/playlist?list=PLZoL-14Q0aIkY5gnibNuZZh3X0ikY6VGA).\n\n---\n\n## TritonAI News\n\n- **New model on the platform: Cohere transcription** — The TritonAI API model hub added a self-hosted Cohere audio transcription model this week. It's available now for any UCSD developer building speech-to-text into their applications.\n"
+    },
     {
       "isoDate": "2026-06-22",
       "displayDate": "Monday, June 22",
