@@ -140,6 +140,26 @@ const products = [
     cta: "Visit AI Use Case Meeting",
   },
   {
+    category: "College recruiting",
+    title: "Cason Pollak — Track & Field Recruiting Profile",
+    href: "https://cason-recruiting-site.vercel.app/",
+    image: "/cason-recruiting.png",
+    imageAlt: "Cason Pollak recruiting profile homepage showing hero section with athlete photo, personal bests, and navigation",
+    width: 1280,
+    height: 800,
+    description:
+      "A collegiate athletic recruiting profile built for Cason Pollak (C/O 2027), a track & field athlete from Del Norte HS. Combines personal bests, race film, season progression charts, a conference points projector tool, and a college fit matrix across six target programs into a single polished landing page for coach outreach.",
+    features: [
+      "Personal bests & athletic résumé",
+      "Race film with meet-by-meet context",
+      "Season progression charts (100m, HJ, LJ, 4x100)",
+      "Conference Points Projector tool",
+      "College Fit Matrix (6 target programs)",
+      "Academic profile (4.02 W GPA)",
+    ],
+    cta: "Visit Recruiting Profile",
+  },
+  {
     category: "Academic workflow",
     title: "Dissertation Formatting Agent",
     href: "https://dissertation-formatter.vercel.app",
@@ -166,6 +186,7 @@ const frameColors = [
   "bg-[#c97712]",
   "bg-[#17201b]",
   "bg-[#5b4a86]",
+  "bg-[#2e6b6b]",
 ];
 
 const productListSchema = {
