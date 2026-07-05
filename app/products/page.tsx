@@ -142,7 +142,7 @@ const products = [
   {
     category: "College recruiting",
     title: "Cason Pollak — Track & Field Recruiting Profile",
-    href: "https://cason-recruiting-site.vercel.app/",
+    href: "https://casonpollak.com/",
     image: "/cason-recruiting.png",
     imageAlt: "Cason Pollak recruiting profile homepage showing hero section with athlete photo, personal bests, and navigation",
     width: 1280,
