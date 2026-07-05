@@ -70,7 +70,7 @@ const products = [
   {
     category: "Media authenticity",
     title: "Is This AI?",
-    href: "https://bpollak.github.io/is-this-ai/",
+    href: "https://isthisai.brettcpollak.com/",
     image: "/is-this-ai.svg",
     imageAlt: "Is This AI media authenticity checker interface",
     width: 1600,
@@ -80,7 +80,7 @@ const products = [
     features: [
       "Image and video upload flow",
       "Media link scoring",
-      "Watermark and provenance status",
+      "C2PA and generator metadata scan",
       "Transparent evidence breakdown",
     ],
     cta: "Try Is This AI?",
