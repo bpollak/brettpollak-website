@@ -97,7 +97,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app, and reducing friction in workflows such as contract review for Procurement</p>
+              <p className="text-lg text-slate-600 leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app, expanding into student-facing AI services like course scheduling assistance, and reducing friction in workflows such as contract review for Procurement</p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>
@@ -109,7 +109,7 @@ export default function About() {
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Cross-Institution Sharing</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Lessons from TritonGPT have been shared with peer institutions exploring similar AI questions</p>
+              <p className="text-lg text-slate-600 leading-relaxed">The TritonAI platform now serves multiple institutions — BearGPT is live at UC Berkeley with additional universities adapting the deployment model for their own campuses</p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Daily Context</h3>
@@ -256,6 +256,12 @@ export default function About() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">ASU+GSV Summit 2026:</span> Shared AI at Scale — Developed by Universities for Universities</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span><span className="font-semibold">TechTalk Summits (2026):</span> From AI Pilots to Enterprise Platforms — Building Secure, Governed AI at Scale</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
