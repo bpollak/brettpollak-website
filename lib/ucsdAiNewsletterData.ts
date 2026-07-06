@@ -21,14 +21,24 @@ export type UcsdAiNewsletterData = {
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
-  "generatedAt": "2026-06-29T12:02:15.975Z",
-  "weekLabel": "Week of June 29 – July 5, 2026",
-  "weekOf": "2026-06-29",
-  "weekEnding": "2026-07-05",
-  "publishedThrough": "June 29, 2026",
-  "editionCount": 13,
-  "itemCount": 115,
+  "generatedAt": "2026-07-06T12:01:49.675Z",
+  "weekLabel": "Week of July 6–12, 2026",
+  "weekOf": "2026-07-06",
+  "weekEnding": "2026-07-12",
+  "publishedThrough": "July 6, 2026",
+  "editionCount": 14,
+  "itemCount": 119,
   "editions": [
+    {
+      "isoDate": "2026-07-06",
+      "displayDate": "Monday, July 6",
+      "sourceFile": "ucsd-ai-newsletter-2026-07-06.md",
+      "toolUpdatesCount": 2,
+      "tritonAiNewsCount": 0,
+      "upcomingTrainingsCount": 2,
+      "heroImage": null,
+      "raw": "# UC San Diego AI Weekly Update\n\n**July 6, 2026**\n\n---\n\n## What's New in Your AI Tools\n\n### Copilot for Microsoft 365\n\n- **[Claude Sonnet 5 now available in Microsoft 365 Copilot](https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic%E2%80%99s-claude-sonnet-5-in-microsoft-365-copilot/4532188)** — Anthropic's Claude Sonnet 5 is rolling out as a new model option inside Microsoft 365 Copilot. If you work in Word, Excel, PowerPoint, or Outlook, you can now choose Sonnet 5 alongside existing models to match the AI approach to your document or task. No extra setup needed—it appears automatically in the model picker.\n\n### Google Gemini & NotebookLM\n\n- **[Gemini Spark arrives on Mac](https://gemini.google/release-notes/)** — Google launched Gemini Spark, a personal AI agent for macOS that works autonomously on your behalf. It can organize folders, build documents from your local files, and run multi-step workflows across Google Workspace—think of it as an assistant that doesn't just answer questions but actually does work. Available now in the Gemini macOS app for Google AI Ultra subscribers.\n\n### TritonAI Developer API\n\nNo notable changes to the TritonAI model hub this week.\n\n---\n\n## Coming Up: Trainings & Workshops\n\nNo new live webinars are scheduled for the next two weeks, but you can catch up on previous sessions:\n\n- **[AI Webinar #6 — One Year of Innovation with TritonGPT: Past, Present, and Future](https://youtu.be/qaRfaAzmBEs)** — Covers TritonGPT's launch journey, new features like My Documents and model switching, and strategies for staying engaged with AI tools. [View the slide deck](https://stage-tritonai.ucsd.edu/_files/AI---TGPT-Webinar-6---Anniversary.pdf).\n\n- **Self-paced courses** are always available: [AI Foundations (UC Learning)](https://go.ucsd.edu/3FvH9Hf) and the [Everyday I AI video series](https://www.youtube.com/playlist?list=PLZoL-14Q0aIkY5gnibNuZZh3X0ikY6VGA).\n\n---\n\n## TritonAI News\n\n**SDSC helps prepare AI tourism assistant for World Cup crowds** — UC San Diego's San Diego Supercomputer Center worked with Mexico City's innovation agency to load-test Xoli, an AI-powered tourism assistant designed to help visitors navigate the city during the FIFA World Cup. SDSC researchers demonstrated how to distribute AI model requests across multiple GPUs, ensuring the system can handle the surge of simultaneous users expected during the event. The same scalable AI infrastructure techniques apply to education, healthcare, and government services.\n\n*[Read the full story](https://today.ucsd.edu/story/uc-san-diego-helps-prepare-ai-tourism-assistant-for-world-cup-crowds)*\n\n---\n\n*Have questions or want to suggest a topic? Email [tritonai@ucsd.edu](mailto:tritonai@ucsd.edu).*\n"
+    },
     {
       "isoDate": "2026-06-29",
       "displayDate": "Monday, June 29",
