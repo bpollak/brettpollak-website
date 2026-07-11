@@ -52,20 +52,21 @@ const products = [
   {
     category: "AI-powered habit building",
     title: "Resolution Companion",
-    href: "https://resolutioncompanion.com/",
+    href: "https://apps.apple.com/us/app/resolution-companion-ai/id6757996708",
     image: "/resolution-companion.webp",
     imageAlt: "Resolution Companion App",
     width: 400,
     height: 800,
     description:
-      "An AI-powered mobile app that helps users build lasting habits through identity-based personal growth. Define your ideal self and make daily choices aligned with that persona, supported by AI coaching and progress tracking.",
+      "Now live in the App Store, Resolution Companion is an AI-powered mobile app that helps users build lasting habits through identity-based personal growth. Define your ideal self and make daily choices aligned with that persona, supported by AI coaching and progress tracking.",
     features: [
+      "Live in the App Store",
       "AI-guided persona definition",
       "Momentum calendar",
       "Identity-first habit system",
       "120-second kickstart activities",
     ],
-    cta: "Visit Resolution Companion",
+    cta: "Download Resolution Companion",
   },
   {
     category: "Media authenticity",
