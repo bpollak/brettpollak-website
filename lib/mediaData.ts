@@ -65,6 +65,13 @@ export const mediaItems: MediaItem[] = [
     category: 'speaking'
   },
   {
+    publication: 'Ithaka S+R',
+    title: 'AI Adoption in Research Administration at Emerging Research Institutions',
+    url: 'https://sr.ithaka.org/publications/ai-adoption-in-research-administration-at-emerging-research-institutions',
+    date: '2026-03-30',
+    category: 'whitepaper'
+  },
+  {
     publication: 'CCW Emerging Tech Exchange',
     title: 'CCW Emerging Tech Exchange - San Diego',
     url: 'https://www.ccwexchangefebruary.com/agenda/session/1819201',
