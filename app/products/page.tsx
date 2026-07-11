@@ -32,6 +32,27 @@ export const metadata: Metadata = {
 
 const products = [
   {
+    category: "AI-powered habit building",
+    title: "Resolution Companion",
+    href: "https://resolutioncompanion.com/",
+    secondaryHref: "https://apps.apple.com/us/app/resolution-companion-ai/id6757996708",
+    image: "/resolution-companion.webp",
+    imageAlt: "Resolution Companion landing page screenshots",
+    width: 900,
+    height: 1280,
+    description:
+      "Now live in the App Store, Resolution Companion is an AI-powered mobile app that helps users build lasting habits through identity-based personal growth. Define your ideal self and make daily choices aligned with that persona, supported by AI coaching and progress tracking.",
+    features: [
+      "Live in the App Store",
+      "AI-guided persona definition",
+      "Momentum calendar",
+      "Identity-first habit system",
+      "120-second kickstart activities",
+    ],
+    cta: "Learn More",
+    secondaryCta: "Download for iOS",
+  },
+  {
     category: "AI agent system",
     title: "Henry — Personal AI Operating System",
     href: "https://bpollak.github.io/openclaw-ai-usecase-deck/",
@@ -48,25 +69,6 @@ const products = [
       "Persistent executive operating layer",
     ],
     cta: "View the Full Use Case Deck",
-  },
-  {
-    category: "AI-powered habit building",
-    title: "Resolution Companion",
-    href: "https://apps.apple.com/us/app/resolution-companion-ai/id6757996708",
-    image: "/resolution-companion.webp",
-    imageAlt: "Resolution Companion App",
-    width: 400,
-    height: 800,
-    description:
-      "Now live in the App Store, Resolution Companion is an AI-powered mobile app that helps users build lasting habits through identity-based personal growth. Define your ideal self and make daily choices aligned with that persona, supported by AI coaching and progress tracking.",
-    features: [
-      "Live in the App Store",
-      "AI-guided persona definition",
-      "Momentum calendar",
-      "Identity-first habit system",
-      "120-second kickstart activities",
-    ],
-    cta: "Download Resolution Companion",
   },
   {
     category: "Media authenticity",
@@ -230,47 +232,67 @@ export default function Products() {
 
         <div className="border-y border-[#d9dfd3]">
           {products.map((product, index) => (
-            <a
+            <article
               key={product.title}
-              href={product.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border-b border-[#d9dfd3] py-10 last:border-b-0 transition-colors hover:bg-[#fffef9]"
+              className="group grid gap-8 border-b border-[#d9dfd3] py-10 last:border-b-0 transition-colors hover:bg-[#fffef9] lg:grid-cols-[0.42fr_0.72fr] lg:items-center"
             >
-              <article className="grid gap-8 lg:grid-cols-[0.42fr_0.72fr] lg:items-center">
-                <div className={`border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`}>
-                  <Image
-                    src={product.image}
-                    alt={product.imageAlt}
-                    width={product.width}
-                    height={product.height}
-                    className="h-auto w-full border border-white/15 object-cover"
-                    sizes="(min-width: 1024px) 28vw, 100vw"
-                  />
+              <a
+                href={product.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`}
+              >
+                <Image
+                  src={product.image}
+                  alt={product.imageAlt}
+                  width={product.width}
+                  height={product.height}
+                  className="h-auto w-full border border-white/15 object-cover"
+                  sizes="(min-width: 1024px) 28vw, 100vw"
+                />
+              </a>
+              <div>
+                <p className="rule-label mb-4 text-[#c97712]">{product.category}</p>
+                <h2 className="text-3xl md:text-5xl leading-tight font-medium text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
+                  {product.title}
+                </h2>
+                <p className="mt-5 text-lg leading-8 text-[#485248]">{product.description}</p>
+                <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                  {product.features.map((feature) => (
+                    <div key={feature} className="flex items-start gap-3 border-t border-[#d9dfd3] pt-3">
+                      <span className="mt-2 h-2 w-2 flex-shrink-0 bg-[#c97712]" aria-hidden="true" />
+                      <span className="text-sm font-semibold leading-6 text-[#17201b]">{feature}</span>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <p className="rule-label mb-4 text-[#c97712]">{product.category}</p>
-                  <h2 className="text-3xl md:text-5xl leading-tight font-medium text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
-                    {product.title}
-                  </h2>
-                  <p className="mt-5 text-lg leading-8 text-[#485248]">{product.description}</p>
-                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                    {product.features.map((feature) => (
-                      <div key={feature} className="flex items-start gap-3 border-t border-[#d9dfd3] pt-3">
-                        <span className="mt-2 h-2 w-2 flex-shrink-0 bg-[#c97712]" aria-hidden="true" />
-                        <span className="text-sm font-semibold leading-6 text-[#17201b]">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8 inline-flex items-center gap-2 font-semibold text-[#1f5a8a]">
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <a
+                    href={product.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-semibold text-[#1f5a8a]"
+                  >
                     {product.cta}
                     <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </div>
+                  </a>
+                  {'secondaryHref' in product && product.secondaryHref ? (
+                    <a
+                      href={product.secondaryHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-sm bg-[#17201b] px-5 py-2.5 font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
+                    >
+                      {product.secondaryCta}
+                      <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  ) : null}
                 </div>
-              </article>
-            </a>
+              </div>
+            </article>
           ))}
         </div>
 
