@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-06-28",
+  lastUpdated: "2026-07-12",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -42,12 +42,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness — our campus agentic development platform — reached V1 feature‑complete on Mac this month, becoming the execution layer where staff build governed, tool‑using AI workers. The Citizen Developer Program now has a real platform to graduate sandbox experiments into production tools.",
+        "The TritonAI Harness — our campus agentic development platform — reached V1 feature‑complete on Mac in June and is now being shared for broader evaluation across campus. It's the execution layer where staff build governed, tool‑using AI workers, and the Citizen Developer Program has a real platform to graduate sandbox experiments into production tools.",
     },
     {
       label: "AI agents in production",
       body:
-        "The UC San Diego Assistant is live on the flagship mobile app, and the Student Scheduling Assistant launches July 9, bringing AI‑powered course planning to 20,000–40,000 students. Enterprise data agents continue bridging natural language to structured queries.",
+        "The UC San Diego Assistant is live on the flagship mobile app, and the Student Scheduling Assistant launched July 9, bringing AI‑powered course planning to 20,000–40,000 students in its first wave. Enterprise data agents continue bridging natural language to structured queries.",
     },
     {
       label: "Data product architecture",
