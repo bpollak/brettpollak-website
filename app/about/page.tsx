@@ -56,7 +56,7 @@ export default function About() {
           <h1 className="page-title mb-6">About</h1>
           <p className="page-intro">
             Work rooted in practice, people, curiosity, and the institutional systems that make technology useful.
-            I serve as the Executive Director, Workplace Technology & Infrastructure Services for UC San Diego, leading workplace technology and infrastructure services.
+            I serve as the Executive Director, Workplace Technology & Infrastructure Services for UC San Diego, leading teams that deliver hybrid-cloud infrastructure, data analytics, enterprise collaboration, and digital services across the university.
           </p>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">TritonGPT in Practice</h3>
-              <p className="text-lg text-slate-600 leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app, expanding into student-facing AI services like course scheduling assistance, and reducing friction in workflows such as contract review for Procurement</p>
+              <p className="text-lg text-slate-600 leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app, now live with student-facing AI services including course scheduling assistance, and reducing friction in workflows such as contract review for Procurement</p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-slate-200 border-l-4 border-l-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Campus Technology Work</h3>
