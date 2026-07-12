@@ -109,7 +109,7 @@ export default function TritonGPTContent() {
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <div className="system-node p-4">
                   <p className="font-mono text-xs text-[#c97712]">UPDATED</p>
-                  <p className="mt-2 font-semibold">June 2026</p>
+                  <p className="mt-2 font-semibold">July 2026</p>
                 </div>
                 <div className="system-node p-4">
                   <p className="font-mono text-xs text-[#c97712]">CONTEXT</p>
