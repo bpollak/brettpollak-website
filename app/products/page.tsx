@@ -75,20 +75,21 @@ const products = [
   {
     category: "College recruiting",
     title: "Cason Recruiting CRM",
-    href: "https://crm.casonpollak.com/",
+    href: "/products/cason-recruiting-crm",
+    internal: true,
     image: "/crm-recruiting.png",
     imageAlt: "Cason Recruiting CRM sign-in page with the tagline \"Recruiting, organized\" and a Class of 2027 panel",
     width: 1280,
     height: 800,
     description:
-      "The private operations backend behind Cason's public recruiting profile — a complementary but separate family workspace for running the outreach itself. Every target school, coach contact, conversation, questionnaire, and next step lives in one secure, Google-authenticated place, keeping the recruiting process organized from first email to commitment.",
+      "The private operations backend behind Cason's public recruiting profile — a complementary but separate family workspace for running the outreach itself. Every target school, coach contact, conversation, questionnaire, and next step lives in one secure, Google-authenticated place, keeping the recruiting process organized from first email to commitment. Because it is invite-only, here is a walkthrough of what it does.",
     features: [
       "Private, family-only access (Google sign-in)",
       "School & coach outreach pipeline",
       "Conversation & questionnaire tracking",
       "Next-step task management",
     ],
-    cta: "Visit the Recruiting CRM",
+    cta: "See how it works",
   },
   {
     category: "AI agent system",
@@ -249,26 +250,47 @@ export default function Products() {
         </div>
 
         <div className="border-y border-[#d9dfd3]">
-          {products.map((product, index) => (
+          {products.map((product, index) => {
+            const isInternal = "internal" in product && product.internal === true;
+            const frameClass = `block border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`;
+            const thumbnail = (
+              <Image
+                src={product.image}
+                alt={product.imageAlt}
+                width={product.width}
+                height={product.height}
+                className="h-auto w-full border border-white/15 object-cover"
+                sizes="(min-width: 1024px) 28vw, 100vw"
+              />
+            );
+            const ctaLabel = (
+              <>
+                {product.cta}
+                <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </>
+            );
+            const ctaClass = "inline-flex items-center gap-2 font-semibold text-[#1f5a8a]";
+            return (
             <article
               key={product.title}
               className="group grid gap-8 border-b border-[#d9dfd3] py-10 last:border-b-0 transition-colors hover:bg-[#fffef9] lg:grid-cols-[0.42fr_0.72fr] lg:items-center"
             >
-              <a
-                href={product.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`}
-              >
-                <Image
-                  src={product.image}
-                  alt={product.imageAlt}
-                  width={product.width}
-                  height={product.height}
-                  className="h-auto w-full border border-white/15 object-cover"
-                  sizes="(min-width: 1024px) 28vw, 100vw"
-                />
-              </a>
+              {isInternal ? (
+                <Link href={product.href} className={frameClass}>
+                  {thumbnail}
+                </Link>
+              ) : (
+                <a
+                  href={product.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={frameClass}
+                >
+                  {thumbnail}
+                </a>
+              )}
               <div>
                 <p className="rule-label mb-4 text-[#c97712]">{product.category}</p>
                 <h2 className="text-3xl md:text-5xl leading-tight font-medium text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
@@ -284,17 +306,20 @@ export default function Products() {
                   ))}
                 </div>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <a
-                    href={product.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-semibold text-[#1f5a8a]"
-                  >
-                    {product.cta}
-                    <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
+                  {isInternal ? (
+                    <Link href={product.href} className={ctaClass}>
+                      {ctaLabel}
+                    </Link>
+                  ) : (
+                    <a
+                      href={product.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={ctaClass}
+                    >
+                      {ctaLabel}
+                    </a>
+                  )}
                   {'secondaryHref' in product && product.secondaryHref ? (
                     <a
                       href={product.secondaryHref}
@@ -311,7 +336,8 @@ export default function Products() {
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-14 border border-dashed border-[#9fa89d] bg-[#fffef9] p-8 md:p-10">

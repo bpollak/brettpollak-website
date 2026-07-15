@@ -34,6 +34,8 @@ For a longer machine-readable briefing, use:
   - Published articles, interviews, press, awards, and external coverage.
 - Products: https://brettcpollak.com/products
   - Product experiments and AI-enabled tools.
+  - Cason Recruiting CRM (walkthrough): https://brettcpollak.com/products/cason-recruiting-crm
+    - What a private, family-only college-recruiting workspace does (pipeline, coach and conversation logs, questionnaires, tasks), illustrated with sample data. The tool itself is invite-only.
 - AI Digest: https://brettcpollak.com/ai-digest
   - Weekly rolling archive of curated AI developments and higher education implications.
 - UC San Diego AI Weekly: https://brettcpollak.com/ucsd-ai-news

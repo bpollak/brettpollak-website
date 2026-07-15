@@ -114,6 +114,8 @@ URL: ${SITE_URL}/products
 
 Best for AI-enabled tools and experiments, including Resolution Companion, Henry, PDF Accessibility Remediator, BioBib Formatter, AI Use Case Meeting, and Dissertation Formatting Agent.
 
+Sub-page — Cason Recruiting CRM walkthrough (${SITE_URL}/products/cason-recruiting-crm): describes a private, family-only college athletic recruiting workspace (outreach pipeline, coach and conversation logs, questionnaire tracking, next-step tasks), illustrated with sample data. The tool itself is invite-only and has no public login.
+
 ### AI Digest
 
 URL: ${SITE_URL}/ai-digest
