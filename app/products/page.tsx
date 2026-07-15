@@ -53,6 +53,44 @@ const products = [
     secondaryCta: "Download for iOS",
   },
   {
+    category: "College recruiting",
+    title: "Cason Pollak — Track & Field Recruiting Profile",
+    href: "https://casonpollak.com/",
+    image: "/cason-recruiting.png",
+    imageAlt: "Cason Pollak recruiting profile homepage showing hero section with athlete photo, personal bests, and navigation",
+    width: 1280,
+    height: 800,
+    description:
+      "A collegiate athletic recruiting profile built for Cason Pollak (C/O 2027), a track & field athlete from Del Norte HS. Combines personal bests, race film, season progression charts, a conference points projector tool, and a college fit matrix across six target programs into a single polished landing page for coach outreach.",
+    features: [
+      "Personal bests & athletic résumé",
+      "Race film with meet-by-meet context",
+      "Season progression charts (100m, HJ, LJ, 4x100)",
+      "Conference Points Projector tool",
+      "College Fit Matrix (6 target programs)",
+      "Academic profile (4.02 W GPA)",
+    ],
+    cta: "Visit Recruiting Profile",
+  },
+  {
+    category: "College recruiting",
+    title: "Cason Recruiting CRM",
+    href: "https://crm.casonpollak.com/",
+    image: "/crm-recruiting.png",
+    imageAlt: "Cason Recruiting CRM sign-in page with the tagline \"Recruiting, organized\" and a Class of 2027 panel",
+    width: 1280,
+    height: 800,
+    description:
+      "The private operations backend behind Cason's public recruiting profile — a complementary but separate family workspace for running the outreach itself. Every target school, coach contact, conversation, questionnaire, and next step lives in one secure, Google-authenticated place, keeping the recruiting process organized from first email to commitment.",
+    features: [
+      "Private, family-only access (Google sign-in)",
+      "School & coach outreach pipeline",
+      "Conversation & questionnaire tracking",
+      "Next-step task management",
+    ],
+    cta: "Visit the Recruiting CRM",
+  },
+  {
     category: "AI agent system",
     title: "Henry — Personal AI Operating System",
     href: "https://bpollak.github.io/openclaw-ai-usecase-deck/",
@@ -159,26 +197,6 @@ const products = [
       "Admin dashboard",
     ],
     cta: "Visit AI Use Case Meeting",
-  },
-  {
-    category: "College recruiting",
-    title: "Cason Pollak — Track & Field Recruiting Profile",
-    href: "https://casonpollak.com/",
-    image: "/cason-recruiting.png",
-    imageAlt: "Cason Pollak recruiting profile homepage showing hero section with athlete photo, personal bests, and navigation",
-    width: 1280,
-    height: 800,
-    description:
-      "A collegiate athletic recruiting profile built for Cason Pollak (C/O 2027), a track & field athlete from Del Norte HS. Combines personal bests, race film, season progression charts, a conference points projector tool, and a college fit matrix across six target programs into a single polished landing page for coach outreach.",
-    features: [
-      "Personal bests & athletic résumé",
-      "Race film with meet-by-meet context",
-      "Season progression charts (100m, HJ, LJ, 4x100)",
-      "Conference Points Projector tool",
-      "College Fit Matrix (6 target programs)",
-      "Academic profile (4.02 W GPA)",
-    ],
-    cta: "Visit Recruiting Profile",
   },
 ];
 
