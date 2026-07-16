@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="title description">
+  <title id="title">Personal AI architecture powered by on-prem open-weight models</title>
+  <desc id="description">Ninety enabled jobs transform personal and institutional signals into durable knowledge. Eighty-one inherit the on-prem GLM 5.2 default, nine use DeepSeek for lightweight batch work, and no automation route uses a proprietary model.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f8fafc"/>
@@ -31,7 +33,7 @@
   <text x="600" y="128" text-anchor="middle" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="46" font-weight="800" fill="url(#titleGrad)" letter-spacing="-1">Building a Personal AI That Actually Knows You</text>
 
   <!-- Subtitle -->
-  <text x="600" y="166" text-anchor="middle" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="23" font-weight="500" fill="#475569">70+ automated jobs · open-weight models on-prem · model-swappable by design</text>
+  <text x="600" y="166" text-anchor="middle" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="21" font-weight="500" fill="#475569">90 enabled jobs · GLM 5.2 on-prem default · zero proprietary automation routes</text>
 
   <!-- Column headers -->
   <text x="200" y="218" text-anchor="middle" font-family="Inter, sans-serif" font-size="19" font-weight="700" letter-spacing="2.5" fill="#1e40af">DATA SOURCES</text>
@@ -102,6 +104,6 @@
   <!-- Synthesis footer -->
   <g transform="translate(600, 622)">
     <rect x="-380" y="-26" width="760" height="52" rx="26" ry="26" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
-    <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="21" font-weight="600" fill="#475569">Automated synthesis turns raw signals into durable knowledge</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#475569">81 inherit GLM 5.2 · 9 use DeepSeek for lightweight batch work</text>
   </g>
 </svg>
