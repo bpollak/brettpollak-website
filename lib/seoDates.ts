@@ -25,7 +25,7 @@ export const staticPageDates: Record<string, string> = {
   "/speaking": "2026-06-02",
   "/products": "2026-07-14",
   "/products/cason-recruiting-crm": "2026-07-14",
-  "/ai-agent-architecture": "2026-06-07",
+  "/ai-agent-architecture": "2026-07-15",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-05-31",
   "/contact": "2026-06-01",

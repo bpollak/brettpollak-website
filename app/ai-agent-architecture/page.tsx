@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture | Brett Pollak',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ automated jobs running on UC San Diego\u2019s TritonAI gateway — ~99% on open-weight models hosted at SDSC, with a single proprietary escalation for high-stakes monitoring. 636-node knowledge graph, 544 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
+    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 90 enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 636-node knowledge graph, 544 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -75,13 +75,13 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-[#485248] mb-10">
-          Last updated: July 12, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: July 15, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-[#17201b]">65+ cron jobs</div>
+            <div className="text-2xl font-semibold text-[#17201b]">90 enabled jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
@@ -153,9 +153,9 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 65+ automated jobs
-            routed through UC San Diego&rsquo;s TritonAI gateway &mdash; predominantly open-weight
-            models hosted at SDSC &mdash; a 636-node knowledge graph, 544 wiki pages, a
+            This page documents how I built that knowledge layer for myself: 90 enabled automated
+            jobs routed through UC San Diego&rsquo;s TritonAI gateway &mdash; entirely on open-weight
+            models, with the primary inference path hosted on-prem &mdash; a 636-node knowledge graph, 544 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
  It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -258,7 +258,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            65+ cron jobs build the knowledge layer on a predictable daily rhythm. A typical
+            90 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -383,24 +383,23 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            Different jobs need different models. A 30-second token-refresh check shouldn&rsquo;t
-            run on the same model that drafts a weekly newsletter, and a deep architectural
-            review needs reasoning depth a light monitor would waste. Each cron is routed to a
-            model class that fits its work shape.
+            The inference layer is now deliberately simple: one capable default for reasoning,
+            tools, and long-horizon synthesis, plus a faster model for the small set of lightweight
+            recurring jobs that benefit from it. Vision and bounded plugin fallback paths stay
+            local too.
           </p>
           <p>
-            As of June 9, 2026, <strong>all 69 enabled jobs run through{' '}
+            As of July 15, 2026, <strong>all 90 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
             >
               TritonAI
-            </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway, with on-prem
-            inference at the San Diego Supercomputer Center for the open-weight tier and
-            hyperscaler-proxied capacity for the larger frontier models. <strong>~99% of jobs
-            run on open-weight models</strong>; a single monitor job escalates to Claude
-            Sonnet 4.6 because false negatives there carry real cost. Six model variants split
-            the load:
+            </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway. <strong>Every enabled
+            route uses an open-weight model, and no scheduled job has a proprietary-model
+            override.</strong> GLM 5.2 is the main agent, utility, active-memory, router, and
+            default scheduled-work model. Eighty-one jobs inherit that default; nine lightweight
+            jobs explicitly use DeepSeek V4 Flash Max.
           </p>
         </div>
 
@@ -412,51 +411,37 @@ export default function AiAgentArchitecturePage() {
                 <th className="px-4 py-3 text-left font-semibold text-slate-900">Model</th>
                 <th className="px-4 py-3 text-left font-semibold text-slate-900">Hosting</th>
                 <th className="px-4 py-3 text-left font-semibold text-slate-900">Use</th>
-                <th className="px-4 py-3 text-right font-semibold text-slate-900">Jobs</th>
+                <th className="px-4 py-3 text-right font-semibold text-slate-900">Scheduled jobs</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Briefings &amp; summarization</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Primary reasoning &amp; agentic work</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">api-glm-5.2</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Z.ai GLM 5.2 (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Main chat, tools, briefings, long-horizon synthesis, utility inference, active memory, and router decisions</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">81</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Fast scheduled batch work</td>
+                <td className="px-4 py-3 font-mono text-xs text-slate-700">deepseek-v4-flash-max</td>
+                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · DeepSeek V4 Flash Max (open weight)</td>
+                <td className="px-4 py-3 text-slate-700">Lightweight monitors, ingestion, and recurring batch jobs where speed matters more than deep reasoning</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">9</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-slate-900">Vision</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gemma-4-26b</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
-                <td className="px-4 py-3 text-slate-700">Daily reflection, morning open-items brief, events radar, key-access monitoring</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">5</td>
+                <td className="px-4 py-3 text-slate-700">Logbook image analysis and explicit multimodal work</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">On demand</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Fast monitor &amp; sync</td>
+                <td className="px-4 py-3 font-semibold text-slate-900">Bounded plugin fallback</td>
                 <td className="px-4 py-3 font-mono text-xs text-slate-700">api-mistral-small-3.2-2506</td>
                 <td className="px-4 py-3 text-slate-700">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
-                <td className="px-4 py-3 text-slate-700">Content syncs (Confluence, Drive, AI feeds), website digest &mdash; narration-tolerant jobs only; sentinel-style checks moved to gpt-oss</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">6</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Heavy synthesis</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">api-gpt-oss-120b</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · OpenAI gpt-oss 120B (open weight)</td>
-                <td className="px-4 py-3 text-slate-700">The workhorse tier: opportunity scans, briefings, page refreshes, meeting debriefs, sentinel health checks, TritonGPT intel</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">47</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Long-form &amp; deep reasoning</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">mistral-large-3-675b</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Mistral Large 3 675B (open weight, cloud-proxied)</td>
-                <td className="px-4 py-3 text-slate-700">Architecture &amp; harness reviews, newsletter, LinkedIn drafts, vision tracker, relationship health</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">6</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Tool discipline &amp; code</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">deepseek-v4-flash-max</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI on-prem · DeepSeek V4 Flash Max (open weight, strong tool-calling)</td>
-                <td className="px-4 py-3 text-slate-700">Overnight code maintenance, Gmail triage, file-editing page refreshes, commitment scans</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">7</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-slate-900">Monitor escalation</td>
-                <td className="px-4 py-3 font-mono text-xs text-slate-700">claude-sonnet-4-6</td>
-                <td className="px-4 py-3 text-slate-700">TritonAI · Anthropic Claude Sonnet 4.6 (proprietary, cloud-proxied)</td>
-                <td className="px-4 py-3 text-slate-700">Blockage radar &mdash; the one job kept on a proprietary model, with local fallbacks</td>
-                <td className="px-4 py-3 text-right font-semibold text-slate-900">1</td>
+                <td className="px-4 py-3 text-slate-700">Active-memory fallback only; it is not a hidden main-agent cloud escape hatch</td>
+                <td className="px-4 py-3 text-right font-semibold text-slate-900">Fallback only</td>
               </tr>
             </tbody>
           </table>
@@ -464,56 +449,49 @@ export default function AiAgentArchitecturePage() {
 
         <div className="text-slate-700 text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-slate-900">Why predominantly open-weight on TritonAI:</strong>{' '}
-            the gateway runs on-prem at the San Diego Supercomputer Center, the open-weight tier
-            is served on UCSD compute, and the institutional virtual-key budget covers
-            cron-driven workloads with no personal-tier API charges. Open weights also remove the
-            &ldquo;model rugpull&rdquo; risk &mdash; when OpenAI deprecated{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gpt-5.4-mini</code>{' '}
-            in late April it broke six of my crons in a single morning, and when TritonAI itself
-            retired Kimi K2.5, Claude Haiku 4.5, and Nemotron 3 Super in May it broke 17 more.
-            The fix in both cases was a one-line alias change because no specific model is
-            load-bearing in the architecture.
+            <strong className="text-slate-900">Why GLM 5.2 is the default:</strong>{' '}
+            its tool use, reasoning controls, and long-horizon behavior let one model cover work
+            that previously needed several capability tiers. The current TritonAI virtual key
+            advertises a 320K context envelope and 32K maximum output, so the local configuration
+            uses those deployment limits rather than assuming the model&rsquo;s theoretical maximum.
+            Ambiguous router decisions increase reasoning effort from medium to high on the same
+            GLM route instead of escalating to a proprietary model.{' '}
+            <a
+              href="https://z.ai/blog/glm-5.2"
+              className="font-semibold text-blue-800 underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-blue-950"
+            >
+              Z.ai describes GLM 5.2
+            </a>{' '}
+            as an open model designed for long-horizon agentic work.
           </p>
           <p>
-            <strong className="text-slate-900">Why one job on proprietary Claude Sonnet:</strong>{' '}
-            only <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">blockage-radar</code>{' '}
-            still escalates to Claude Sonnet 4.6 &mdash; cross-source stall detection where a
-            missed signal carries real cost and the open-weight tier hadn&rsquo;t yet proven
-            reliable. The other former escalations came home on June 9:{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">provider-quota-monitor</code>{' '}
-            moved to gpt-oss 120B (a status check has no business depending on the proxied path
-            it monitors), and{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">gmail-important-emails</code>{' '}
-            moved to DeepSeek after a verified live run produced an equally well-prioritized
-            digest &mdash; the heavy lifting there is a read-only IMAP script, and the model&rsquo;s
-            job is ranking and formatting, which local handles. Everything else stays on the
-            open-weight tier.
+            <strong className="text-slate-900">Why only two scheduled paths:</strong> 81 jobs
+            inherit GLM 5.2 instead of pinning a model, so improvements to the default propagate
+            without editing the fleet. Nine lightweight jobs remain explicitly on DeepSeek V4
+            Flash Max. Gemma handles vision on demand, while Mistral Small is a narrow
+            active-memory fallback. That keeps specialization where it earns its complexity.
           </p>
           <p>
-            <strong className="text-slate-900">Why no cross-provider canary anymore:</strong> the
-            old architecture kept one job on OpenAI Codex specifically to detect TritonAI-wide
-            problems from outside. That worked until Codex itself hit a weekly cap and silently
-            broke the canary. The lesson: the canary&rsquo;s job is just to alert, and TritonAI
-            already has rich health endpoints that do that more reliably. Concentration risk is
-            real, but it&rsquo;s now an explicit institutional bet rather than a hedged compromise.
+            <strong className="text-slate-900">Strict fallback is a privacy boundary:</strong>{' '}
+            the main-agent fallback list is empty. If GLM or the gateway fails, OpenClaw surfaces
+            the failure instead of silently sending private context to a cloud provider. Cloud
+            models remain available only as explicit, human-selected emergency tools. Memory
+            embeddings stay local through Ollama and <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">nomic-embed-text</code>.
           </p>
           <p>
-            <strong className="text-slate-900">How models get matched:</strong> each cron declares
-            an explicit provider/model path (e.g.{' '}
-            <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">tritonai/api-gpt-oss-120b</code>);
-            the gateway routes accordingly. Rebalancing &mdash; e.g., moving a job to a different
-            model &mdash; is a one-line config change, not a code change. A dedicated{' '}
+            <strong className="text-slate-900">How routing stays healthy:</strong> the autonomous
+            router runs every two hours, reads live SQLite-backed cron state through the OpenClaw
+            CLI, and uses GLM 5.2 itself to evaluate changes. It may target only approved on-prem
+            aliases and is biased toward no-op decisions. A dedicated{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">tritonai-key-access-monitor</code>{' '}
-            cron now runs Monday and Thursday evenings to probe TritonAI&rsquo;s{' '}
+            job probes TritonAI&rsquo;s{' '}
             <code className="text-[0.9em] bg-slate-100 px-1.5 py-0.5 rounded">/v1/models</code>{' '}
-            endpoint for both keys, diff against the previous snapshot, and Telegram any change
-            that would break a routing rule before a cron fires against it.
+            catalog and catches identifier or access changes before a job fires against them.
           </p>
           <p className="text-slate-900 font-semibold border border-slate-200 border-l-4 border-l-blue-600 pl-5 py-2 bg-white rounded-r-lg shadow-sm">
             Provider lock-in is the moat AI vendors want. Open weights on institutional infra,
-            wired through a gateway, with active monitoring of the model catalog &mdash; that&rsquo;s
-            how the moat stays from forming around your automation.
+            wired through a gateway with strict fallback and active catalog monitoring &mdash;
+            that&rsquo;s how the moat stays from forming around your automation.
           </p>
         </div>
       </section>
@@ -916,6 +894,24 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-slate-200 pl-8">
+          <li className="relative">
+            <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
+            <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">
+              July 15, 2026
+            </div>
+            <div className="text-slate-900 font-semibold mb-1">GLM 5.2 became the on-prem default &middot; proprietary automation routes retired</div>
+            <p className="text-sm text-slate-600 leading-6">
+              Corrected the TritonAI catalog identifier from{' '}
+              <span className="font-mono text-xs">glm-5.2</span> to{' '}
+              <span className="font-mono text-xs">api-glm-5.2</span> and made GLM 5.2 the main
+              agent, utility, active-memory, router, and default cron model. Repaired the
+              two-hour router after OpenClaw&rsquo;s cron state moved to SQLite, replacing its
+              Claude CLI decision path with direct on-prem GLM inference. The live fleet is now
+              90 enabled jobs: 81 inherit GLM 5.2 and nine lightweight jobs use DeepSeek V4
+              Flash Max. No scheduled job has a proprietary override, the main fallback list is
+              empty, vision uses on-prem Gemma 4, and local model and cron canaries passed.
+            </p>
+          </li>
           <li className="relative">
             <span className="absolute -left-8 top-1.5 w-4 h-4 rounded-full bg-blue-700 border-2 border-white shadow" aria-hidden="true" />
             <div className="text-xs uppercase tracking-[0.15em] text-blue-800 font-semibold mb-1">

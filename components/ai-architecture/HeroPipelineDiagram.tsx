@@ -39,8 +39,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '385 nodes · 430 edges' },
-  { label: 'Wiki', note: '267 curated pages' },
+  { label: 'Knowledge Graph', note: '636 nodes · 680 edges' },
+  { label: 'Wiki', note: '544 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -297,7 +297,7 @@ export default function HeroPipelineDiagram() {
             textAnchor="middle"
             style={{ fontSize: '13px', fill: '#64748b', fontStyle: 'italic' }}
           >
-            70+ cron jobs turn raw signals into durable knowledge
+            90 enabled jobs turn raw signals into durable knowledge
           </text>
         </g>
       </svg>
@@ -305,8 +305,8 @@ export default function HeroPipelineDiagram() {
         Knowledge flow visualization: data sources (calendar, email, meetings, web, campus signals,
         conversations) feed into a durable knowledge layer (graph, wiki, memory, patterns) which
         the agent uses to drive actions (briefings, meeting intelligence, real-time answers,
-        published artifacts, proactive nudges). A synthesis band at the bottom represents the 70+
-        cron jobs that do the transformation work.
+        published artifacts, proactive nudges). A synthesis band at the bottom represents the 90
+        enabled jobs that do the transformation work.
       </figcaption>
     </figure>
   );
