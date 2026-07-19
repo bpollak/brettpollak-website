@@ -135,6 +135,9 @@ export default function TritonGPTContent() {
             <p className="text-xl text-[#485248] leading-9 mb-8">
             <span className="font-bold text-blue-800">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
           </p>
+            <p className="text-xl text-[#485248] leading-9">
+              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, <span className="font-bold">San Diego State University (SDSU-GPT)</span>, UC Agriculture and Natural Resources, and Fairleigh Dickinson University.
+            </p>
           </div>
         </div>
       </section>
