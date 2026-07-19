@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-07-12",
+  lastUpdated: "2026-07-19",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,27 +37,27 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT continues scaling as a multi‑campus platform — BearGPT is live at UC Berkeley, and UC ANR is in pilot. We're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat interfaces.",
+        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. BearGPT is live at UC Berkeley, UC ANR is in pilot, and we're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness — our campus agentic development platform — reached V1 feature‑complete on Mac in June and is now being shared for broader evaluation across campus. It's the execution layer where staff build governed, tool‑using AI workers, and the Citizen Developer Program has a real platform to graduate sandbox experiments into production tools.",
+        "The TritonAI Harness — our campus agentic development platform — reached V1 feature‑complete on Mac in June and is now being shared for broader evaluation. The Citizen Developer Program has a real platform for graduating sandbox experiments into production tools, and agentic app conversions are underway starting with HR systems like performance management.",
     },
     {
       label: "AI agents in production",
       body:
-        "The UC San Diego Assistant is live on the flagship mobile app, and the Student Scheduling Assistant launched July 9, bringing AI‑powered course planning to 20,000–40,000 students in its first wave. Enterprise data agents continue bridging natural language to structured queries.",
+        "The Student Scheduling Assistant launched July 9, serving 20,000–40,000 students in waves, with Class Planner go‑live on July 20. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries.",
     },
     {
-      label: "Data product architecture",
+      label: "Data platform modernization",
       body:
-        "Advancing a data‑mesh approach where domain teams define governed data products and contracts. Evaluating Databricks as a modernization target, and shifting from first‑come‑first‑serve to tiered GPU allocation on our on‑prem clusters.",
+        "All‑in on Databricks as the migration target from SAP HANA, driven by HANA's 2027 paywall. RFI with migration partners underway, targeting a November recommendation. On the observability side, architecture is locked: OpenTelemetry collectors feed an open‑format data lake that vendor tools consume from — UCSD owns its telemetry data. Splunk stays for SecOps; OpenSearch for everything else.",
     },
     {
-      label: "AI‑powered email automation",
+      label: "Expanding AI collaboration across higher ed",
       body:
-        "The inbox‑draft‑reply skill automates threaded draft replies in Outlook based on recent email context, with voice‑matched and human‑ized language. Running daily as part of the personal agent workflow.",
+        "Active conversations with peer health systems and California's community college system about extending UCSD's AI infrastructure model beyond our campus. Early‑stage but strategically aligned with positioning UC San Diego as an inference and AI services hub for the UC system and beyond.",
     },
   ],
 };
