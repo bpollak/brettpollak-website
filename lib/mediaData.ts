@@ -179,15 +179,15 @@ export const mediaItems: MediaItem[] = [
   {
     publication: 'Internet2',
     title: 'TritonGPT: The Future of AI-Powered Support at UC San Diego',
-    url: 'https://internet2.edu/news/page/9/',
+    url: 'https://www.youtube.com/watch?v=ObM_S_01bX4',
     date: '2024-06-20',
     category: 'article'
   },
   {
     publication: 'UC San Diego',
     title: 'TritonGPT Webinar: Democratizing GPT for Higher Education',
-    url: 'https://uctechnews.ucop.edu/tritongpt-webinar-recap-democratizing-ai-for-uc-san-diego-and-the-broader-higher-education-community/',
-    date: '2024-06-13',
+    url: 'https://uctechnews.ucop.edu/event-tritongpt-uc-san-diegos-ai-powered-support-tool-register-now/',
+    date: '2024-09-05',
     category: 'speaking'
   },
   {
@@ -240,25 +240,11 @@ export const mediaItems: MediaItem[] = [
     category: 'article'
   },
   {
-    publication: 'DigitalKoans',
-    title: "How Can Universities Create AI Tools for Their Communities? An Interview with the Creators of UC San Diego's TritonGPT",
-    url: "https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/",
-    date: '2023-12-08',
-    category: 'interview'
-  },
-  {
     publication: 'Ithaka S+R',
     title: "How Can Universities Create AI Tools for Their Communities?",
     url: "https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/",
     date: '2023-12-07',
     category: 'interview'
-  },
-  {
-    publication: 'Scientific Route',
-    title: 'Empowering University Communities: TritonGPT at UC San Diego',
-    url: "https://sr.ithaka.org/blog/how-can-universities-create-ai-tools-for-their-communities/",
-    date: '2023-12-06',
-    category: 'article'
   },
   {
     publication: 'EDUCAUSE Webinar',
@@ -416,5 +402,49 @@ export const mediaItems: MediaItem[] = [
     url: 'https://members.educause.edu/brett-pollak',
     date: '2013-10-15',
     category: 'speaking'
+  },
+
+  // --- Media audit additions (July 19, 2026) ---
+  {
+    publication: 'Higher Ed AI Playbook',
+    title: 'Adoption Without Authority: What 50,000 Students and Faculty Just Revealed',
+    url: 'https://higheredaiplaybook.substack.com/p/adoption-without-authority-what-50000',
+    date: '2026-07-13',
+    category: 'article'
+  },
+  {
+    publication: 'The Daily Californian',
+    title: 'UC Berkeley chatbot BearGPT violated worker rights, GSI union alleges',
+    url: 'https://www.dailycal.org/news/campus/uc-berkeley-chatbot-beargpt-violated-worker-rights-gsi-union-alleges/article_67f64b7b-a584-4b44-82e9-15b92e0f3f43.html',
+    date: '2025-01-20',
+    category: 'article'
+  },
+  {
+    publication: 'The Daily Californian',
+    title: 'UAW members ratify contracts with UC, bringing end to threat of large-scale strike',
+    url: 'https://www.dailycal.org/news/uc/uaw-members-ratify-contracts-with-uc-bringing-end-to-threat-of-large-scale-strike/article_59908f03-331f-4bf2-b177-b2b8e686dabe.html',
+    date: '2026-03-01',
+    category: 'article'
+  },
+  {
+    publication: 'UC Berkeley AI Hub',
+    title: 'BearGPT Enterprise Assistants (Official Deployment Page)',
+    url: 'https://ai.berkeley.edu/beargpt',
+    date: '2025-06-01',
+    category: 'article'
+  },
+  {
+    publication: 'EAB',
+    title: 'How to craft an AI acceptable use policy to protect your campus today',
+    url: 'https://eab.com/resources/blog/strategy-blog/craft-ai-acceptable-use-policy-protect-campus/',
+    date: '2024-05-01',
+    category: 'article'
+  },
+  {
+    publication: 'UAW Local 4811',
+    title: '2025 Unfair Labor Practice Charges (BearGPT)',
+    url: 'https://www.uaw4811.org/2025-ulps',
+    date: '2025-01-15',
+    category: 'article'
   }
 ];
