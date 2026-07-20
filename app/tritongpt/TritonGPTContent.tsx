@@ -301,8 +301,8 @@ export default function TritonGPTContent() {
                 poster: "https://tritongpt-deck.vercel.app/media/image36.png",
               },
               {
-                title: "Contract Reviewer",
-                description: "Auto-redlines third-party NDAs/contracts against UC San Diego and UC Terms & Conditions and Legal Position.",
+                title: "Contract Reviewer (In Production)",
+                description: "Automated NDA and contract review via monitored inbox + portal. Auto-redlines third-party contracts against UC San Diego and UC Terms & Conditions and Legal Position.",
                 src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
                 poster: "https://tritongpt-deck.vercel.app/media/image47.png",
               },
@@ -466,8 +466,8 @@ export default function TritonGPTContent() {
                 )
               },
               {
-                name: "Contract Reviewer",
-                desc: "Accelerates NDA and Terms & Conditions review **for the UC San Diego Procurement team**, aligning vendor contracts with UC Legal Position and university template terms. Highlights potential issues for specialist focus.",
+                name: "Contract Reviewer (In Production)",
+                desc: "Automates NDA and contract review for the UC San Diego Procurement team via a monitored inbox and portal. Cleans formatting, extracts clauses, applies UC San Diego rulesets, and produces annotated redlines aligned with UC Legal Position and university template terms.",
                 metric: "91% time savings for NDAs/T&Cs",
                 stats: "120 min → 11 min average",
                 icon: (
@@ -603,11 +603,20 @@ export default function TritonGPTContent() {
                 )
               },
               {
-                name: "UC San Diego Class Scheduling Assistant",
-                desc: "Helps students build optimized schedules based on subject codes and availability.",
+                name: "Student Scheduling Assistant (In Production)",
+                desc: "AI-powered scheduling assistant launched July 2026, serving 20K-40K students in waves. Lets students build optimized schedules through natural-language conversations based on subject codes, availability, and prerequisites.",
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Transcript Matching (In Production)",
+                desc: "OCR and transcript verification workflows for enrollment-related review. Matches student transcripts against program requirements automatically, reducing manual review time for admissions and records teams.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 )
               }
@@ -691,12 +700,6 @@ export default function TritonGPTContent() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            {
-              title: "Transcript Verification",
-              desc: "OCR and transcript matching workflows for enrollment-related review.",
-              color: "blue",
-              icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>
-            },
             {
               title: "Instructional AI Expansion",
               desc: "More course pilots, faculty tooling, and simpler assistant creation for instructors.",
