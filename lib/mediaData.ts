@@ -413,6 +413,13 @@ export const mediaItems: MediaItem[] = [
     category: 'article'
   },
   {
+    publication: 'Higher Ed AI Playbook',
+    title: 'Live Interview: Inside TritonGPT — Build the Control Layer, Buy the Horsepower',
+    url: 'https://higheredaiplaybook.substack.com/p/adoption-without-authority-what-50000',
+    date: '2026-07-30',
+    category: 'interview'
+  },
+  {
     publication: 'The Daily Californian',
     title: 'UC Berkeley chatbot BearGPT violated worker rights, GSI union alleges',
     url: 'https://www.dailycal.org/news/campus/uc-berkeley-chatbot-beargpt-violated-worker-rights-gsi-union-alleges/article_67f64b7b-a584-4b44-82e9-15b92e0f3f43.html',
