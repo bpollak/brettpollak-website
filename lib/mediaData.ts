@@ -15,6 +15,13 @@ export interface MediaItem {
 // allowed values, or the chart math will be off.
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'Inside Higher Ed',
+    title: 'A Call to Meet the Moment at NACUBO',
+    url: 'https://www.insidehighered.com/news/business/financial-health/2026/07/23/call-meet-moment-nacubo',
+    date: '2026-07-23',
+    category: 'article'
+  },
+  {
     publication: 'TechTalk Summits',
     title: 'From AI Pilots to Enterprise Platforms: Building Secure, Governed AI at Scale',
     url: 'https://techtalksummits.com/',
