@@ -116,6 +116,8 @@ Best for AI-enabled tools and experiments, including Resolution Companion, Henry
 
 Sub-page — Cason Recruiting CRM walkthrough (${SITE_URL}/products/cason-recruiting-crm): describes a private, family-only college athletic recruiting workspace (outreach pipeline, coach and conversation logs, questionnaire tracking, next-step tasks), illustrated with sample data. The tool itself is invite-only and has no public login.
 
+Sub-page — Scholarship Agent walkthrough (${SITE_URL}/products/cason-scholarship-agent): describes a private, family-only scholarship CRM with an autonomous background agent (daily discovery across a sponsor registry, evidence-backed eligibility screening that quotes the source page, application pipeline, inbox-driven status updates, and profile-grounded essay drafts that are never auto-submitted), illustrated with sample data. The tool itself is invite-only and has no public login.
+
 ### AI Digest
 
 URL: ${SITE_URL}/ai-digest

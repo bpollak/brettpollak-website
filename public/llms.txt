@@ -36,6 +36,8 @@ For a longer machine-readable briefing, use:
   - Product experiments and AI-enabled tools.
   - Cason Recruiting CRM (walkthrough): https://brettcpollak.com/products/cason-recruiting-crm
     - What a private, family-only college-recruiting workspace does (pipeline, coach and conversation logs, questionnaires, tasks), illustrated with sample data. The tool itself is invite-only.
+  - Scholarship Agent (walkthrough): https://brettcpollak.com/products/cason-scholarship-agent
+    - What a private, family-only scholarship CRM does (daily autonomous discovery, evidence-backed eligibility screening, application pipeline, inbox-driven status updates, profile-grounded essay drafts), illustrated with sample data. The tool itself is invite-only.
 - AI Digest: https://brettcpollak.com/ai-digest
   - Weekly rolling archive of curated AI developments and higher education implications.
 - UC San Diego AI Weekly: https://brettcpollak.com/ucsd-ai-news

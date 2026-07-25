@@ -49,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: `${SITE_URL}/products/cason-scholarship-agent`,
+      lastModified: isoToDate(staticPageDates["/products/cason-scholarship-agent"]),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: `${SITE_URL}/speaking`,
       lastModified: isoToDate(staticPageDates["/speaking"]),
       changeFrequency: "monthly",

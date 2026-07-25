@@ -92,6 +92,26 @@ const products = [
     cta: "See how it works",
   },
   {
+    category: "College funding",
+    title: "Scholarship Agent",
+    href: "/products/cason-scholarship-agent",
+    internal: true,
+    image: "/scholarship-agent.png",
+    imageAlt: "Scholarship Agent sign-in page showing passkey and Google sign-in options",
+    width: 1520,
+    height: 1040,
+    description:
+      "A private family workspace with an autonomous agent behind it. It sweeps a registry of sponsors and foundations daily, reads each program's own page, and screens eligibility against a stored student profile — keeping a requirement only when it can quote the page text that proves it. The result is a short list of things that genuinely need a human decision, instead of a folder of tabs. Because it is invite-only, here is a walkthrough of what it does.",
+    features: [
+      "Private, family-only access (passkey or Google)",
+      "Daily autonomous discovery across 65 sources",
+      "Evidence-backed eligibility screening",
+      "Inbox-driven status updates",
+      "Profile-grounded essay drafts, never auto-submitted",
+    ],
+    cta: "See how it works",
+  },
+  {
     category: "AI agent system",
     title: "Henry — Personal AI Operating System",
     href: "https://bpollak.github.io/openclaw-ai-usecase-deck/",
