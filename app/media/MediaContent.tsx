@@ -20,7 +20,7 @@ const categoryStyles: Record<MediaItem['category'], string> = {
   article: 'border-[#9db8c8] bg-wash-blue text-signal-blue',
   interview: 'border-[#dfbf8b] bg-wash-gold text-signal-gold-ink',
   whitepaper: 'border-[#a9c2ae] bg-wash-green text-signal-green',
-  speaking: 'border-[#e6ad9f] bg-wash-coral text-signal-coral',
+  speaking: 'border-[#e6ad9f] bg-wash-coral text-signal-coral-ink',
   award: 'border-[#b7add4] bg-[#f2eff9] text-[#5b4a86]',
 };
 

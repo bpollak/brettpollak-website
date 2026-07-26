@@ -79,7 +79,7 @@ const pipeline = [
   },
   {
     stage: "Needs a decision",
-    tone: "#c97712",
+    tone: "#9b5a06",
     cards: [
       { name: "Valley Community Fund", note: "$2,500 · closes Oct 4" },
       { name: "Northline STEM Award", note: "$5,000 · closes Nov 1" },
@@ -119,7 +119,7 @@ const requirements = [
   {
     label: "Connection required: lodge membership",
     verdict: "Ask first",
-    tone: "#c97712",
+    tone: "#9b5a06",
     proof: "“open to children and grandchildren of members in good standing”",
   },
 ];
@@ -132,7 +132,7 @@ const tasks = [
 
 const signals = [
   { from: "Summit Merit Award", subject: "We received your application", read: "Moved to submitted", tone: "#366c5a" },
-  { from: "Northline STEM Award", subject: "Request for transcript", read: "Created a task", tone: "#c97712" },
+  { from: "Northline STEM Award", subject: "Request for transcript", read: "Created a task", tone: "#9b5a06" },
   { from: "Valley Community Fund", subject: "Finalist interview invitation", read: "Flagged as a strong signal", tone: "#1f5a8a" },
 ];
 

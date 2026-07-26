@@ -6,17 +6,28 @@ User-agent: *
 Allow: /
 Disallow: /podcasts/moderation
 
-# AI search, retrieval, and model-discovery crawlers.
-# These explicit groups document intent; the wildcard rule above also allows
-# standards-compliant crawlers unless a more specific rule applies.
+# AI search, retrieval, and citation crawlers — the ones that surface this site
+# in AI answers. These explicit groups document intent; the wildcard rule above
+# also allows standards-compliant crawlers unless a more specific rule applies.
+#
+# Cloudflare sits in front of this origin and PREPENDS its own managed block to
+# the served robots.txt, which disallows AI *training* crawlers (Amazonbot,
+# Applebot-Extended, Bytespider, CCBot, ClaudeBot, Google-Extended, GPTBot,
+# meta-externalagent) and sets Content-Signal to search=yes,ai-train=no,use=reference.
+# Fetch https://brettcpollak.com/robots.txt to see the combined result — the
+# managed block is not in this file and cannot be removed from here.
+#
+# So GPTBot, ClaudeBot, and Google-Extended are deliberately NOT listed below,
+# even though earlier versions of this file allowed them. Naming a user-agent in
+# both a disallow group and an allow group leaves the outcome to each crawler's
+# parser rather than stating a policy, and the edge block wins in practice.
+# The training-crawler policy is changed in Cloudflare (AI Crawl Control), not
+# here; if it is ever relaxed, add those agents back and set ai-train=yes to match.
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
-User-agent: GPTBot
-User-agent: ClaudeBot
 User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: PerplexityBot
-User-agent: Google-Extended
 User-agent: Applebot
 User-agent: Bingbot
 Allow: /

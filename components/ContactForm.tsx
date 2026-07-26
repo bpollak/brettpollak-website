@@ -87,7 +87,7 @@ export default function ContactForm() {
 
       {status === 'error' && (
         <div className="mb-6 p-4 bg-wash-coral border border-line rounded-lg" role="alert" aria-live="assertive">
-          <p className="text-signal-coral font-medium">{errorMessage}</p>
+          <p className="text-signal-coral-ink font-medium">{errorMessage}</p>
         </div>
       )}
 

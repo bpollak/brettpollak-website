@@ -157,8 +157,8 @@ export default function PodcastCard({
               }
               className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
                 hasUpvoted
-                  ? 'bg-wash-coral text-signal-coral cursor-default'
-                  : 'bg-paper text-muted hover:bg-wash-coral hover:text-signal-coral active:scale-95'
+                  ? 'bg-wash-coral text-signal-coral-ink cursor-default'
+                  : 'bg-paper text-muted hover:bg-wash-coral hover:text-signal-coral-ink active:scale-95'
               }`}
             >
               <svg aria-hidden="true"

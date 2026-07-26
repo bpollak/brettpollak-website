@@ -85,7 +85,7 @@ export default function SubscribeForm() {
       )}
 
       {formState === 'error' && (
-        <p id="subscribe-error" role="alert" className="mt-3 text-sm text-signal-coral">
+        <p id="subscribe-error" role="alert" className="mt-3 text-sm text-signal-coral-ink">
           {errorMessage}
         </p>
       )}

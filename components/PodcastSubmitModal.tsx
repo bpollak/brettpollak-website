@@ -248,7 +248,7 @@ export default function PodcastSubmitModal({
             {/* Podcast Name with iTunes Search */}
             <div className="relative" ref={resultsRef}>
               <label htmlFor="podcast-name" className="block text-sm font-semibold text-body mb-1.5">
-                Podcast Name <span className="text-signal-coral">*</span>
+                Podcast Name <span className="text-signal-coral-ink">*</span>
               </label>
               <div className="relative">
                 <input
@@ -334,7 +334,7 @@ export default function PodcastSubmitModal({
             {/* Hosts */}
             <div>
               <label htmlFor="podcast-hosts" className="block text-sm font-semibold text-body mb-1.5">
-                Host(s) <span className="text-signal-coral">*</span>
+                Host(s) <span className="text-signal-coral-ink">*</span>
               </label>
               <input
                 type="text"
@@ -369,7 +369,7 @@ export default function PodcastSubmitModal({
             {/* Summary */}
             <div>
               <label htmlFor="podcast-summary" className="block text-sm font-semibold text-body mb-1.5">
-                Why do you recommend it? <span className="text-signal-coral">*</span>
+                Why do you recommend it? <span className="text-signal-coral-ink">*</span>
               </label>
               <textarea
                 value={summary}
@@ -389,7 +389,7 @@ export default function PodcastSubmitModal({
             {/* Listen URL */}
             <div>
               <label htmlFor="podcast-listen-url" className="block text-sm font-semibold text-body mb-1.5">
-                Podcast Link <span className="text-signal-coral">*</span>
+                Podcast Link <span className="text-signal-coral-ink">*</span>
               </label>
               <input
                 type="url"
@@ -419,7 +419,7 @@ export default function PodcastSubmitModal({
 
             {/* Error */}
             {error && (
-              <div role="alert" className="p-3 bg-wash-coral border border-line rounded-xl text-sm text-signal-coral">
+              <div role="alert" className="p-3 bg-wash-coral border border-line rounded-xl text-sm text-signal-coral-ink">
                 {error}
               </div>
             )}

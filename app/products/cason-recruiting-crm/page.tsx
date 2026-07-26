@@ -84,7 +84,7 @@ const pipeline = [
   },
   {
     stage: "Visit / camp",
-    tone: "#c97712",
+    tone: "#9b5a06",
     cards: [{ school: "Summit University", note: "ID camp · Jul 26" }],
   },
   {
@@ -104,7 +104,7 @@ const contacts = [
 const questionnaires = [
   { school: "Northern Tech", status: "Submitted", tone: "#366c5a" },
   { school: "Valley University", status: "Submitted", tone: "#366c5a" },
-  { school: "Summit University", status: "In progress", tone: "#c97712" },
+  { school: "Summit University", status: "In progress", tone: "#9b5a06" },
   { school: "Lakeside State", status: "Not started", tone: "#485248" },
   { school: "Coastal State", status: "Not started", tone: "#485248" },
 ];
@@ -286,7 +286,7 @@ export default function CasonRecruitingCrmPage() {
                       <td className="py-3 pr-3 font-semibold text-ink">{c.school}</td>
                       <td className="py-3 pr-3 text-body">
                         <div>{c.coach}</div>
-                        <div className="text-xs text-[#8a938a]">{c.role}</div>
+                        <div className="text-xs text-muted">{c.role}</div>
                       </td>
                       <td className="py-3 pr-3 text-body">{c.touch}</td>
                       <td className="py-3 text-signal-blue font-semibold">{c.next}</td>
@@ -325,7 +325,7 @@ export default function CasonRecruitingCrmPage() {
                 {timeline.map((t) => (
                   <li key={t.date} className="relative">
                     <span className="absolute -left-[1.6rem] top-1 h-2.5 w-2.5 rounded-full bg-[#1f5a8a]" aria-hidden="true" />
-                    <div className="text-xs font-semibold uppercase tracking-wide text-[#8a938a]">{t.date}</div>
+                    <div className="text-xs font-semibold uppercase tracking-wide text-muted">{t.date}</div>
                     <div className="mt-1 text-sm leading-6 text-body">{t.text}</div>
                   </li>
                 ))}
