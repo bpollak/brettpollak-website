@@ -2,6 +2,17 @@
 
 import { useState } from 'react';
 
+/**
+ * A Web3Forms access key is a public client-side endpoint identifier, not a
+ * secret — it ships in the bundle on every static build regardless of where it
+ * comes from. The literal is kept as a fallback so the contact form cannot
+ * silently break when the build environment has no override configured; set
+ * NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY (wired through in .github/workflows/deploy.yml)
+ * to point the form at a different Web3Forms inbox.
+ */
+const WEB3FORMS_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '98628ac2-b0b6-4edc-8753-59822ba57b21';
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,17 +35,7 @@ export default function ContactForm() {
     setStatus('loading');
     setErrorMessage('');
 
-    // Check for access key
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '98628ac2-b0b6-4edc-8753-59822ba57b21';
-    if (!accessKey) {
-      console.error('Web3Forms Access Key is missing!');
-      setStatus('error');
-      setErrorMessage('Configuration error: Missing API Key. Please contact the administrator.');
-      return;
-    }
-
     try {
-      // Using Web3Forms - you'll need to get your access key from https://web3forms.com
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -42,7 +43,7 @@ export default function ContactForm() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: accessKey,
+          access_key: WEB3FORMS_ACCESS_KEY,
           name: formData.name,
           email: formData.email,
           subject: formData.subject,

@@ -14,19 +14,25 @@ export const SITE_URL = "https://brettcpollak.com";
  * Bump the matching entry whenever a page's content changes substantively
  * (copy, sections, data points) — not for pure styling/refactor commits.
  *
+ * "The page file" includes a sibling *Content.tsx component where one exists:
+ * /tritongpt, /podcasts, /contact, and /linkedin keep most of their copy
+ * there, not in page.tsx. Editing TritonGPTContent.tsx is a /tritongpt content
+ * change and needs the same bump — that gap is how /tritongpt's entry drifted
+ * seven weeks behind its own copy.
+ *
  * Do NOT add data-driven routes here (/media, /ai-digest, /ucsd-ai-news,
  * /now): their dates are derived from the data modules below and update
  * automatically when the OpenClaw content crons refresh the data files.
  */
 export const staticPageDates: Record<string, string> = {
   "/": "2026-06-01",
-  "/about": "2026-07-12",
-  "/tritongpt": "2026-06-07",
+  "/about": "2026-07-19",
+  "/tritongpt": "2026-07-25",
   "/speaking": "2026-06-02",
   "/products": "2026-07-25",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-07-15",
+  "/ai-agent-architecture": "2026-07-19",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-05-31",
   "/contact": "2026-06-01",
