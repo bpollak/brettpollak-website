@@ -6,8 +6,17 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, '../public');
+// High-resolution originals that are not themselves served. Kept outside
+// public/ so they never ship in the static export.
+const assetsDir = path.join(__dirname, '../assets');
 
-// Images to optimize with their target specifications
+// Images to optimize with their target specifications.
+//
+// WARNING: every entry whose output name matches its input name rewrites that
+// file in place, re-encoding an already-lossy image. Running this script
+// repeatedly compounds that generation loss, so run it when a source image
+// actually changes — not as a routine build step. Entries sourced from
+// assets/ (see `inputDir`) are safe to re-run because the original is pristine.
 const optimizations = [
   // Headshots - optimize to reasonable size
   {
@@ -18,43 +27,19 @@ const optimizations = [
     ]
   },
   {
-    input: 'brettpollak-headshot-lean-stand.png',
-    outputs: [
-      { name: 'brettpollak-headshot-lean-stand.png', width: 800, quality: 85 },
-      { name: 'brettpollak-headshot-lean-stand.webp', width: 800, quality: 85 }
-    ]
-  },
-  {
-    input: 'brett-pollak-headshot-sit.png',
-    outputs: [
-      { name: 'brett-pollak-headshot-sit.png', width: 800, quality: 85 },
-      { name: 'brett-pollak-headshot-sit.webp', width: 800, quality: 85 }
-    ]
-  },
-  {
     input: 'brett-pollak-headshot-sit-center.png',
     outputs: [
-      { name: 'brett-pollak-headshot-sit-center.png', width: 800, quality: 85 },
-      // WebP already exists, just optimize PNG
+      { name: 'brett-pollak-headshot-sit-center.png', width: 800, quality: 85 }
     ]
   },
+  // Favicons - always derived from the untouched high-res original in assets/.
+  // Reading the source from public/ would mean re-downscaling the previous run's
+  // output, which is how favicon.png ended up at a non-square 180x183. Icons are
+  // squared explicitly so the Apple touch icon is not stretched on iOS.
   {
-    input: 'brett-pollak-headshot-sit-center2.png',
-    outputs: [
-      { name: 'brett-pollak-headshot-sit-center2.png', width: 800, quality: 85 },
-      { name: 'brett-pollak-headshot-sit-center2.webp', width: 800, quality: 85 }
-    ]
-  },
-  {
-    input: 'brett-pollak-headshot-stand2.png',
-    outputs: [
-      { name: 'brett-pollak-headshot-stand2.png', width: 800, quality: 85 },
-      { name: 'brett-pollak-headshot-stand2.webp', width: 800, quality: 85 }
-    ]
-  },
-  // Favicon - create multiple sizes
-  {
-    input: 'favicon.png',
+    input: 'favicon-source.png',
+    inputDir: assetsDir,
+    square: true,
     outputs: [
       { name: 'favicon.png', width: 180, quality: 90 }, // For Apple touch icon
       { name: 'favicon-32x32.png', width: 32, quality: 90 },
@@ -70,24 +55,9 @@ const optimizations = [
     ]
   },
   {
-    input: 'tritonGPT-header.png',
-    outputs: [
-      { name: 'tritonGPT-header.png', width: 1200, quality: 85 },
-      { name: 'tritonGPT-header.webp', width: 1200, quality: 85 }
-    ]
-  },
-  {
     input: 'tritongpt-uc-san-diego-assistant.png',
     outputs: [
-      { name: 'tritongpt-uc-san-diego-assistant.png', width: 1200, quality: 85 },
-      { name: 'tritongpt-uc-san-diego-assistant.webp', width: 1200, quality: 85 }
-    ]
-  },
-  {
-    input: 'screen-progress-2.png',
-    outputs: [
-      { name: 'screen-progress-2.png', width: 800, quality: 85 },
-      { name: 'screen-progress-2.webp', width: 800, quality: 85 }
+      { name: 'tritongpt-uc-san-diego-assistant.png', width: 1200, quality: 85 }
     ]
   }
 ];
@@ -96,7 +66,7 @@ async function optimizeImages() {
   console.log('Starting image optimization...\n');
 
   for (const optimization of optimizations) {
-    const inputPath = path.join(publicDir, optimization.input);
+    const inputPath = path.join(optimization.inputDir ?? publicDir, optimization.input);
 
     // Check if input file exists
     if (!fs.existsSync(inputPath)) {
@@ -115,10 +85,16 @@ async function optimizeImages() {
       const isWebP = output.name.endsWith('.webp');
 
       try {
-        let pipeline = sharp(inputPath).resize(output.width, null, {
-          withoutEnlargement: true,
-          fit: 'inside'
-        });
+        let pipeline = optimization.square
+          ? sharp(inputPath).resize(output.width, output.width, {
+              withoutEnlargement: true,
+              fit: 'cover',
+              position: 'centre'
+            })
+          : sharp(inputPath).resize(output.width, null, {
+              withoutEnlargement: true,
+              fit: 'inside'
+            });
 
         if (isWebP) {
           pipeline = pipeline.webp({ quality: output.quality });

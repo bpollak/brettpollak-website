@@ -70,6 +70,10 @@ Manual steps that DO apply:
   speaking, products, ai-agent-architecture, podcasts, linkedin, contact):
   bump that page's entry in `staticPageDates` in `lib/seoDates.ts` so the
   sitemap `<lastmod>` stays honest. Skip the bump for pure styling/refactors.
+  **This includes the sibling `*Content.tsx` component where one exists** —
+  `/tritongpt`, `/podcasts`, `/contact`, and `/linkedin` keep most of their
+  copy in `TritonGPTContent.tsx`, `PodcastsContent.tsx`, etc. Editing those is
+  a content change to that route and needs the same bump.
 - **Adding a brand-new public page**: add it to `app/sitemap.ts` +
   `staticPageDates`, list it in `public/llms.txt` and the page list in
   `app/llms-full.txt/route.ts`, and give it metadata with a canonical URL

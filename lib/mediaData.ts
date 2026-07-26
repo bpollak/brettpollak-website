@@ -290,13 +290,6 @@ export const mediaItems: MediaItem[] = [
   },
   {
     publication: 'LinkedIn',
-    title: "UC San Diego Mobile App updated with real time parking availability and notification center",
-    url: 'https://www.linkedin.com/pulse/uc-san-diego-mobile-app-updated-real-time-parking-center-brett-pollak',
-    date: '2018-11-10',
-    category: 'article'
-  },
-  {
-    publication: 'LinkedIn',
     title: 'Good things ahead for UC San Diego with Student Activity Hub',
     url: 'https://www.linkedin.com/pulse/good-things-ahead-uc-san-diego-student-activity-hub-brett-pollak',
     date: '2018-09-30',
@@ -372,7 +365,9 @@ export const mediaItems: MediaItem[] = [
   {
     publication: 'UC Berkeley CTO',
     title: 'TritonGPT Presentation & Demo, UC Berkeley AI Community',
-    url: 'https://cto.berkeley.edu/ai/videos/uc-san-diego-tritongpt-demo',
+    // cto.berkeley.edu no longer resolves (the host is gone, not just the page),
+    // so this points at the Internet Archive capture. Swap back if Berkeley rehosts.
+    url: 'https://web.archive.org/web/20250512032728/https://cto.berkeley.edu/ai/videos/uc-san-diego-tritongpt-demo',
     date: '2024-03-21',
     category: 'speaking'
   },

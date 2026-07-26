@@ -3,10 +3,47 @@
  * Intentionally mirrors Mission Control formatting so digest content stays identical.
  */
 
+/**
+ * Digest and newsletter content aggregates headlines and URLs from external
+ * sources, and the rendered output is injected with dangerouslySetInnerHTML.
+ * Everything is escaped before any markup is added, and link targets are
+ * restricted to http(s)/mailto, so a hostile headline cannot smuggle in markup
+ * or a javascript: URL.
+ */
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/**
+ * Reverse escapeHtml so a link target can be protocol-checked as written, and
+ * drop control characters that could otherwise hide a protocol from the test
+ * (for example "java\nscript:").
+ */
+function safeHref(escapedUrl: string): string | null {
+  const decoded = escapedUrl
+    .replace(/&quot;/g, '"')
+    .replace(/&gt;/g, '>')
+    .replace(/&lt;/g, '<')
+    .replace(/&amp;/g, '&')
+    .replace(/[\u0000-\u001f\u007f]/g, '')
+    .trim();
+
+  return /^(?:https?:\/\/|mailto:)/i.test(decoded) ? escapedUrl.trim() : null;
+}
+
 /** Convert inline markdown to HTML: bold, italic, markdown links, and bare URLs */
 export function inlineFormat(text: string): string {
-  return text
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+  return escapeHtml(text)
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label: string, url: string) => {
+      const href = safeHref(url);
+      return href
+        ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`
+        : label;
+    })
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
     .replace(/(?<!href="|">)(https?:\/\/[^\s<)"]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');

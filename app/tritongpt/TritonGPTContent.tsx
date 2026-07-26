@@ -1,39 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState, useRef } from 'react';
+import CountUp from '@/components/motion/CountUp';
 import TritonAISystemMap from '@/components/tritongpt/TritonAISystemMap';
 
-const AnimatedNumber = ({ end, suffix = '', isVisible }: { end: number; suffix?: string; isVisible: boolean }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    const duration = 2000;
-    const steps = 60;
-    const increment = end / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [end, isVisible]);
-
-  return <span>{count}{suffix}</span>;
-};
-
 export default function TritonGPTContent() {
-  const [metricsVisible, setMetricsVisible] = useState(false);
-  const metricsRef = useRef<HTMLElement>(null);
   const programOfferingStyles = [
     {
       card: "border-l-[#1f5a8a]",
@@ -71,23 +42,6 @@ export default function TritonGPTContent() {
       cta: "text-[#9b5a06]",
     },
   ];
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setMetricsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (metricsRef.current) {
-      observer.observe(metricsRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
@@ -351,7 +305,7 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Key Metrics */}
-      <section className="bg-[#fffef9] py-20 border-y border-[#d9dfd3]" ref={metricsRef}>
+      <section className="bg-[#fffef9] py-20 border-y border-[#d9dfd3]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
@@ -364,17 +318,19 @@ export default function TritonGPTContent() {
           </div>
           <div className="grid border-y border-[#d9dfd3] md:grid-cols-4">
             {[
-              ['91%', 91, '%', 'Faster Contract Review', '120 minutes to 11 minutes on average', 'text-[#1f5a8a]'],
-              ['83%', 83, '%', 'Faster Job Description Drafting', '30 minutes to 5 minutes on average', 'text-[#b8503f]'],
-              ['20', 20, '', 'Model Hub Breadth', 'Self-hosted and approved cloud models available through TritonAI', 'text-[#c97712]'],
-              ['$500K', 500, 'K', 'Projected Annual Savings', 'From replacing third-party public support tooling', 'text-[#366c5a]'],
-            ].map(([fallback, end, suffix, label, detail, colorClass], index) => (
+              { value: 91, prefix: '', suffix: '%', label: 'Faster Contract Review', detail: '120 minutes to 11 minutes on average', colorClass: 'text-[#1f5a8a]' },
+              { value: 83, prefix: '', suffix: '%', label: 'Faster Job Description Drafting', detail: '30 minutes to 5 minutes on average', colorClass: 'text-[#b8503f]' },
+              { value: 20, prefix: '', suffix: '', label: 'Model Hub Breadth', detail: 'Self-hosted and approved cloud models available through TritonAI', colorClass: 'text-[#9b5a06]' },
+              { value: 500, prefix: '$', suffix: 'K', label: 'Projected Annual Savings', detail: 'From replacing third-party public support tooling', colorClass: 'text-[#366c5a]' },
+            ].map(({ value, prefix, suffix, label, detail, colorClass }, index) => (
               <div key={label} className="border-b border-[#d9dfd3] p-7 md:border-b-0 md:border-r md:last:border-r-0">
-                <p className="font-mono text-xs text-[#c97712]">0{index + 1}</p>
-                <div className={`mt-5 text-5xl font-semibold leading-none ${colorClass}`}>
-                  {fallback === '$500K' ? '$' : ''}
-                  <AnimatedNumber end={Number(end)} suffix={suffix === 'K' ? 'K' : String(suffix)} isVisible={metricsVisible} />
-                </div>
+                <p className="font-mono text-xs text-[#9b5a06]">0{index + 1}</p>
+                <CountUp
+                  value={value}
+                  prefix={prefix}
+                  suffix={suffix}
+                  className={`mt-5 block text-5xl font-semibold leading-none ${colorClass}`}
+                />
                 <div className="mt-5 font-semibold text-[#17201b]">{label}</div>
                 <div className="mt-2 text-sm leading-6 text-[#485248]">{detail}</div>
               </div>
