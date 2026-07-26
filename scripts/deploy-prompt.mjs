@@ -30,7 +30,7 @@ if (!summary.readyToPrompt) {
 }
 
 if (state.outgoingCommits.length > 0) {
-  console.log('\nCommits queued for Vercel deployment:');
+  console.log('\nCommits queued for the GitHub Pages deploy:');
   for (const line of state.outgoingCommits) {
     console.log(`  ${line}`);
   }
@@ -39,7 +39,7 @@ if (state.outgoingCommits.length > 0) {
 const rl = createInterface({ input: stdin, output: stdout });
 
 try {
-  const answer = await rl.question('\nPush local `main` to `origin/main` and trigger Vercel? [y/N] ');
+  const answer = await rl.question('\nPush local `main` to `origin/main` and trigger the GitHub Pages deploy? [y/N] ');
   const normalized = answer.trim().toLowerCase();
 
   if (normalized !== 'y' && normalized !== 'yes') {
@@ -48,7 +48,7 @@ try {
   }
 
   await runGit(['push', 'origin', 'main']);
-  console.log('Pushed `main` to `origin/main`. Vercel should pick up the new deployment.');
+  console.log('Pushed `main` to `origin/main`. The Deploy to GitHub Pages workflow will publish it.');
 } finally {
   rl.close();
 }
