@@ -60,7 +60,7 @@ const healthTimer = setInterval(() => {
 
     readyLogged = true;
     console.log(`\nLocal preview ready: ${browserUrl}`);
-    console.log('Deployment queue is active. I will surface when changes are only local versus ready to push to GitHub main for Vercel.');
+    console.log('Deployment queue is active. I will surface when changes are only local versus ready to push to `main` for the GitHub Pages deploy.');
 
     if (shouldOpen) {
       openBrowser(browserUrl);

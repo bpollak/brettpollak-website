@@ -8,7 +8,7 @@ type NavLink = { href: string; label: string };
 type NavGroup = { heading: string; links: NavLink[] };
 
 // The six routes that carry the site's core narrative and its call to action.
-// Everything else lives behind the "More" dropdown so the bar stays scannable.
+// Everything else lives behind the "Writing" dropdown so the bar stays scannable.
 const PRIMARY_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/tritongpt', label: 'TritonAI' },
@@ -18,9 +18,9 @@ const PRIMARY_LINKS: NavLink[] = [
   { href: '/contact', label: 'Contact' },
 ];
 
-// Grouped under a single "More" dropdown on desktop; the same groups render as
+// Grouped under a single "Writing" dropdown on desktop; the same groups render as
 // flat labelled subsections within the mobile menu.
-const MORE_GROUPS: NavGroup[] = [
+const WRITING_GROUPS: NavGroup[] = [
   {
     heading: 'AI Projects',
     links: [
@@ -39,28 +39,28 @@ const MORE_GROUPS: NavGroup[] = [
   },
 ];
 
-const MORE_LINKS: NavLink[] = MORE_GROUPS.flatMap((group) => group.links);
+const WRITING_LINKS: NavLink[] = WRITING_GROUPS.flatMap((group) => group.links);
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
-  const moreMenuRef = useRef<HTMLDivElement>(null);
+  const [writingMenuOpen, setWritingMenuOpen] = useState(false);
+  const writingMenuRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => pathname === path;
   const isActiveInGroup = (links: NavLink[]) => links.some((l) => pathname === l.href);
 
-  // Close the More dropdown when clicking outside or pressing Escape
+  // Close the Writing dropdown when clicking outside or pressing Escape
   useEffect(() => {
-    if (!moreMenuOpen) return;
+    if (!writingMenuOpen) return;
 
     function handleClick(e: MouseEvent) {
-      if (moreMenuRef.current && !moreMenuRef.current.contains(e.target as Node)) {
-        setMoreMenuOpen(false);
+      if (writingMenuRef.current && !writingMenuRef.current.contains(e.target as Node)) {
+        setWritingMenuOpen(false);
       }
     }
     function handleKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') setMoreMenuOpen(false);
+      if (e.key === 'Escape') setWritingMenuOpen(false);
     }
 
     document.addEventListener('mousedown', handleClick);
@@ -69,13 +69,13 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClick);
       document.removeEventListener('keydown', handleKey);
     };
-  }, [moreMenuOpen]);
+  }, [writingMenuOpen]);
 
-  // Close the More menu when navigating (pathname change).
+  // Close the Writing menu when navigating (pathname change).
   // This is a legitimate menu-close-on-route-change pattern; the React 19
   // lint rule is too strict for this specific use case.
   // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => { setMoreMenuOpen(false); }, [pathname]);
+  useEffect(() => { setWritingMenuOpen(false); }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 bg-[#f7f9f5]/92 backdrop-blur-xl border-b border-line">
@@ -120,22 +120,22 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* "More" dropdown */}
-            <div className="relative" ref={moreMenuRef}>
+            {/* "Writing" dropdown */}
+            <div className="relative" ref={writingMenuRef}>
               <button
                 type="button"
-                onClick={() => setMoreMenuOpen((v) => !v)}
+                onClick={() => setWritingMenuOpen((v) => !v)}
                 aria-haspopup="true"
-                aria-expanded={moreMenuOpen}
+                aria-expanded={writingMenuOpen}
                 className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap inline-flex items-center gap-1 border-b-2 ${
-                  isActiveInGroup(MORE_LINKS)
+                  isActiveInGroup(WRITING_LINKS)
                     ? 'text-ink border-[#c97712] font-semibold'
                     : 'text-body border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
                 }`}
               >
-                More
+                Writing
                 <svg
-                  className={`w-3.5 h-3.5 transition-transform ${moreMenuOpen ? 'rotate-180' : ''}`}
+                  className={`w-3.5 h-3.5 transition-transform ${writingMenuOpen ? 'rotate-180' : ''}`}
                   fill="none"
                   viewBox="0 0 20 20"
                   stroke="currentColor"
@@ -145,12 +145,12 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 8l5 5 5-5" />
                 </svg>
               </button>
-              {moreMenuOpen && (
+              {writingMenuOpen && (
                 <div
                   role="menu"
                   className="absolute right-0 mt-2 w-60 rounded-sm bg-paper-strong border border-line shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
                 >
-                  {MORE_GROUPS.map((group) => (
+                  {WRITING_GROUPS.map((group) => (
                     <div key={group.heading} className="border-b border-line last:border-b-0">
                       <div className="px-3 py-2 rule-label">{group.heading}</div>
                       {group.links.map(({ href, label }) => (
@@ -158,7 +158,7 @@ export default function Header() {
                           key={href}
                           href={href}
                           role="menuitem"
-                          onClick={() => setMoreMenuOpen(false)}
+                          onClick={() => setWritingMenuOpen(false)}
                           className={`block px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap ${
                             isActive(href)
                               ? 'text-ink bg-[#eef3ea] font-semibold'
@@ -220,7 +220,7 @@ export default function Header() {
               ))}
 
               {/* Same groups as the desktop dropdown, flattened with subheaders */}
-              {MORE_GROUPS.map((group) => (
+              {WRITING_GROUPS.map((group) => (
                 <div key={group.heading} className="contents">
                   <div className="pt-3 pb-1 px-4 rule-label">{group.heading}</div>
                   {group.links.map(({ href, label }) => (

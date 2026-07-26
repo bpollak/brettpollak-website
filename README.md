@@ -49,7 +49,7 @@ If your default shell Node version is unsupported but Homebrew `node@20` is inst
 
 While the dev server is running, it also keeps a lightweight deployment queue visible in the terminal:
 
-- If files have changed locally, it tells you those changes are live on localhost but not ready for GitHub/Vercel yet.
+- If files have changed locally, it tells you those changes are live on localhost but not yet pushed to GitHub.
 - If local `main` is ahead of `origin/main` with no uncommitted changes, it tells you the repo is ready to push and points you to the push prompt.
 
 The repo is pinned to Node 20.x LTS. CI and deploy also use Node 20. If you run newer Node majors locally and see lint/typecheck/build hang, switch first:
@@ -68,8 +68,8 @@ npm run dev:open
 - `npm run dev:open`: Same as above, but opens the preview in your default browser
 - `npm run doctor:local`: Check for broken local Next.js runtime files before localhost startup
 - `npm run clean`: Remove generated local build artifacts (`.next/` and `out/`)
-- `npm run deploy:status`: Show whether changes are only local, uncommitted, or ready to push to GitHub main for Vercel
-- `npm run deploy:prompt`: Ask whether to push local `main` to `origin/main` and trigger Vercel
+- `npm run deploy:status`: Show whether changes are only local, uncommitted, or ready to push to `main` for deployment
+- `npm run deploy:prompt`: Ask whether to push local `main` to `origin/main`, which triggers the GitHub Pages deploy
 - `npm run typecheck`: Run TypeScript without emitting files
 - `npm run lint`: Run ESLint against the active app code
 - `npm run check`: Run lint and typecheck together
@@ -94,7 +94,7 @@ npm ci
 npm run verify
 ```
 
-## GitHub and Vercel Push Flow
+## Push and Deploy Flow
 
 The deploy queue is intentionally conservative:
 
@@ -102,7 +102,7 @@ The deploy queue is intentionally conservative:
 2. If your working tree is dirty, the queue tells you the changes are local only.
 3. Once you commit those changes on `main` and local `main` is ahead of `origin/main`, the queue marks the repo as ready.
 4. Run `npm run deploy:prompt` and confirm the push.
-5. The script pushes `main` to `origin/main`, which is the handoff point for Vercel to pick up the deployment.
+5. The script pushes `main` to `origin/main`. That push is what triggers `.github/workflows/deploy.yml`, which builds the site and publishes `out/` to GitHub Pages.
 
 The push prompt will not push if:
 
@@ -203,16 +203,32 @@ Notes:
 firebase functions:log --only notifyNewPodcastSubmission
 ```
 
-### GitHub Pages Deployment
+### Hosting: GitHub Pages
 
-The site is configured for automatic deployment to GitHub Pages:
+**`brettcpollak.com` is hosted on GitHub Pages, behind Cloudflare.** That is the
+only thing that publishes this site — merging to `main` is what ships.
 
-1. Push your code to GitHub
-2. Go to repository Settings > Pages
-3. Set Source to "GitHub Actions"
-4. Push to the main branch to trigger deployment
+Pages is configured with Source = "GitHub Actions". On every push to `main`,
+`.github/workflows/deploy.yml` runs `npm run build` and publishes the exported
+`out/` directory via `upload-pages-artifact` + `deploy-pages`.
 
-**Note**: Update the `basePath` and `assetPrefix` in `next.config.ts` to match your repository name.
+Because Pages serves static files only:
+
+- `next.config.ts` sets `output: 'export'` — no SSR, no API routes, and
+  `images.unoptimized` is required.
+- `npm run postbuild` runs `scripts/emit-directory-aliases.mjs` so trailing-slash
+  URLs (`/speaking/`) resolve instead of 404ing. Keep it wired to `build`.
+- `public/.nojekyll` must stay, or Pages runs Jekyll and strips the `_next/`
+  asset directory.
+- `out/404.html` is what Pages serves for unmatched paths.
+
+**Do not set `basePath` or `assetPrefix`.** The site is served from the apex of a
+custom domain, not from a `/repo-name/` subpath; setting either would break every
+absolute asset URL. (Earlier revisions of this README advised setting them —
+that advice applied to a project-page setup this repo does not use.)
+
+A Vercel project is also connected and builds pull-request previews. Those
+previews are not production and do not serve the custom domain.
 
 ## Customization
 

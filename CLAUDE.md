@@ -1,7 +1,36 @@
 # Project notes for Claude / contributors
 
-Personal site for Brett Pollak. Next.js (App Router) + Tailwind, deployed via
-GitHub Pages on push to `main`.
+Personal site for Brett Pollak. Next.js (App Router) + Tailwind.
+
+## Hosting: GitHub Pages (this is the production host)
+
+**`brettcpollak.com` is served by GitHub Pages, fronted by Cloudflare.** Nothing
+else publishes this site. Treat that as the fact to reason from.
+
+- **How a deploy happens:** push to `main` → `.github/workflows/deploy.yml`
+  runs `npm run build` → uploads `out/` via `actions/upload-pages-artifact` →
+  `actions/deploy-pages` publishes it. There is no other trigger; merging a PR
+  is what ships.
+- **`next.config.ts` sets `output: 'export'`** because Pages serves static files
+  only. No SSR, no API routes, no Next image optimization at request time — that
+  is why `images.unoptimized` is set and why route handlers are
+  `dynamic = "force-static"`.
+- **`npm run postbuild`** runs `scripts/emit-directory-aliases.mjs`, which writes
+  each page to `<route>/index.html` as well as the flat `<route>.html` Next
+  emits, so trailing-slash URLs do not 404 on Pages. Keep it wired to `build`.
+- **`public/404.html`** — Pages serves `out/404.html` for unmatched paths, so
+  `app/not-found.tsx` must keep exporting to that exact filename.
+- **`public/.nojekyll`** must stay: without it Pages runs the content through
+  Jekyll and drops `_next/` (underscore-prefixed) asset directories.
+- **Cloudflare sits in front and modifies responses.** It prepends a managed
+  block to `robots.txt` (see the comments in `public/robots.txt`). Anything that
+  looks wrong in the *served* headers or `robots.txt` but is absent from this
+  repo is a Cloudflare dashboard setting, not a code change.
+
+A Vercel project is also connected to this repo and builds previews on pull
+requests. **Those previews are not production and do not serve the custom
+domain** — do not treat a green Vercel deployment as "it shipped", and do not
+reintroduce Vercel-specific config.
 
 ## Data-driven pages — update the data, not the markup
 

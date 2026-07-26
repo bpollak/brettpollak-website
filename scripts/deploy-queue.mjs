@@ -92,7 +92,7 @@ export function getQueueSummary(state) {
     return {
       key: `dirty:${state.localChanges.join('|')}`,
       readyToPrompt: false,
-      message: 'Local changes are live on localhost. Deployment queue is waiting for you to review and commit them before pushing to GitHub main for Vercel.',
+      message: 'Local changes are live on localhost. Deployment queue is waiting for you to review and commit them before pushing to `main` to deploy.',
     };
   }
 
@@ -100,7 +100,7 @@ export function getQueueSummary(state) {
     return {
       key: `branch:${state.branch}`,
       readyToPrompt: false,
-      message: `Deployment queue is paused because you are on \`${state.branch}\`. Merge or switch to \`main\` before pushing to GitHub main for Vercel.`,
+      message: `Deployment queue is paused because you are on \`${state.branch}\`. Merge or switch to \`main\` before deploying to GitHub Pages.`,
     };
   }
 
@@ -116,7 +116,7 @@ export function getQueueSummary(state) {
     return {
       key: `ahead:${state.ahead}`,
       readyToPrompt: true,
-      message: `Deployment queue ready: local \`main\` is ahead of \`origin/main\` by ${state.ahead} commit(s). Run \`npm run deploy:prompt\` to confirm a push for Vercel.`,
+      message: `Deployment queue ready: local \`main\` is ahead of \`origin/main\` by ${state.ahead} commit(s). Run \`npm run deploy:prompt\` to confirm a push, which deploys to GitHub Pages.`,
     };
   }
 
