@@ -22,7 +22,12 @@
      2.4:1 and 4.49:1 respectively. */
   --body-text: #485248;
   --muted-text: #5f6b5f;
+  /* Text-safe variants of the graphic signal colours. Each is checked against
+     the wash tint it sits on, not just the page background: as chip text on
+     --wash-coral, --signal-coral lands at 4.45:1 and --signal-gold at 3.09:1.
+     A browser axe-core pass caught both; static maths against paper alone did not. */
   --signal-gold-ink: #9b5a06;
+  --signal-coral-ink: #ad4a39;
 
   /* Text tones for the dark (ink) panels. Both clear AA comfortably on --ink,
      and --signal-gold-lift is the gold that reads on dark, where the darker
@@ -51,6 +56,7 @@
   --color-signal-gold-ink: var(--signal-gold-ink);
   --color-signal-green: var(--signal-green);
   --color-signal-coral: var(--signal-coral);
+  --color-signal-coral-ink: var(--signal-coral-ink);
   --color-wash-blue: var(--wash-blue);
   --color-wash-gold: var(--wash-gold);
   --color-wash-green: var(--wash-green);

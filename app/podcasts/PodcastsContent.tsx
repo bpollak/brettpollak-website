@@ -31,7 +31,7 @@ const COLOR_CYCLE = [
   },
   {
     border: 'hover:border-signal-coral',
-    badge: 'bg-wash-coral text-signal-coral',
+    badge: 'bg-wash-coral text-signal-coral-ink',
     hoverBg: 'hover:bg-wash-coral/30',
     accent: 'from-signal-coral to-ink',
   },
