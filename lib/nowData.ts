@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-07-19",
+  lastUpdated: "2026-07-26",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,27 +37,27 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. BearGPT is live at UC Berkeley, UC ANR is in pilot, and we're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
+        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. BearGPT is live at UC Berkeley, UC ANR renewal is in flight, and we're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness — our campus agentic development platform — reached V1 feature‑complete on Mac in June and is now being shared for broader evaluation. The Citizen Developer Program has a real platform for graduating sandbox experiments into production tools, and agentic app conversions are underway starting with HR systems like performance management.",
+        "The TritonAI Harness is in beta distribution — 22.5 billion tokens, 119 merged PRs, and 1,139 AI reviews in the first two and a half weeks. Microsoft Graph plugin is live in draft-only mode, OIA pen-tested it clean, and the team presented to 212 attendees at our AI Use Case Office Hours. Working on a privacy and data explainer before broader rollout.",
     },
     {
       label: "AI agents in production",
       body:
-        "The Student Scheduling Assistant launched July 9, serving 20,000–40,000 students in waves, with Class Planner go‑live on July 20. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries.",
+        "The Student Scheduling Assistant launched July 9 and Class Planner went live July 20, but TSS is crashing under launch-load concurrency. We built a stopgap caching app so students can still plan when TSS is down, and a weekend sprint shipped package-level deep links for the next 8,000-student wave. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries.",
     },
     {
       label: "Data platform modernization",
       body:
-        "All‑in on Databricks as the migration target from SAP HANA, driven by HANA's 2027 paywall. RFI with migration partners underway, targeting a November recommendation. On the observability side, architecture is locked: OpenTelemetry collectors feed an open‑format data lake that vendor tools consume from — UCSD owns its telemetry data. Splunk stays for SecOps; OpenSearch for everything else.",
+        "Databricks remains the migration target from SAP HANA (2027 paywall), but the POC is currently blocked on vendor-side driver readiness — keeping pressure on the vendor while maintaining a parallel SAP baseline. On the observability side, architecture is locked: OpenTelemetry collectors feed an open-format data lake that vendor tools consume from — UCSD owns its telemetry data. Splunk stays for SecOps; OpenSearch for everything else.",
     },
     {
-      label: "Expanding AI collaboration across higher ed",
+      label: "On-prem AI infrastructure and expansion",
       body:
-        "Active conversations with peer health systems and California's community college system about extending UCSD's AI infrastructure model beyond our campus. Early‑stage but strategically aligned with positioning UC San Diego as an inference and AI services hub for the UC system and beyond.",
+        "Aligning with HSDSC on a shared GPU strategy — keeping GPU workloads at SDSC, retrofitting TPCF for non-GPU compute, with RTX 6000 Blackwell as the primary hardware target and hardware refresh due FY28. The bigger picture: positioning UCSD as an inference and AI services provider for the UC system and beyond, with active conversations spanning CENIC, California's community colleges, and peer institutions.",
     },
   ],
 };
