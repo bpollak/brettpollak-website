@@ -74,15 +74,15 @@ export default function AiDigestPage() {
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Current window</div>
-            <div className="text-2xl font-semibold text-[#17201b]">{weekLabel}</div>
+            <div className="text-2xl font-semibold text-ink">{weekLabel}</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Daily digests posted</div>
-            <div className="text-2xl font-semibold text-[#17201b]">{digestCount}</div>
+            <div className="text-2xl font-semibold text-ink">{digestCount}</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Headlines included</div>
-            <div className="text-2xl font-semibold text-[#17201b]">{headlineCount}</div>
+            <div className="text-2xl font-semibold text-ink">{headlineCount}</div>
           </div>
         </div>
 
@@ -107,7 +107,7 @@ export default function AiDigestPage() {
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
                     <h2 className="text-2xl font-semibold text-white">{day.displayDate}</h2>
-                    <p className="text-blue-100 text-sm mt-1">Source: {day.sourceFile}</p>
+                    <p className="text-wash-blue text-sm mt-1">Source: {day.sourceFile}</p>
                   </div>
                   <div className="inline-flex w-fit items-center bg-white/10 px-4 py-2 text-sm font-semibold text-white border border-white/15">
                     {day.headlines.length} article{day.headlines.length === 1 ? '' : 's'}
@@ -116,7 +116,7 @@ export default function AiDigestPage() {
               </div>
               <div className="px-8 py-7">
                 <div
-                  className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-slate-900 prose-h2:text-slate-900 prose-h3:text-slate-900 prose-h2:mb-4 prose-h3:mb-3 prose-hr:border-slate-200 prose-hr:my-8 [&_ul>li]:mb-8 [&_ol>li]:mb-8 [&_a]:font-semibold [&_a]:text-blue-800 [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:transition-colors [&_a:hover]:text-blue-950 [&_a:hover]:decoration-blue-900"
+                  className="prose prose-slate max-w-none prose-p:text-[1.06rem] prose-p:leading-9 prose-p:my-5 prose-li:text-[1.06rem] prose-li:leading-9 prose-li:my-4 prose-ul:my-6 prose-ol:my-6 prose-strong:text-ink prose-h2:text-ink prose-h3:text-ink prose-h2:mb-4 prose-h3:mb-3 prose-hr:border-line prose-hr:my-8 [&_ul>li]:mb-8 [&_ol>li]:mb-8 [&_a]:font-semibold [&_a]:text-signal-blue [&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4 [&_a]:decoration-blue-600 [&_a]:transition-colors [&_a:hover]:text-ink [&_a:hover]:decoration-blue-900"
                   dangerouslySetInnerHTML={{ __html: renderMarkdown(sanitizePublicDigest(linkDigestHeadlines(day.raw))) }}
                 />
               </div>

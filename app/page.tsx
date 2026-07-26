@@ -284,7 +284,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content" tabIndex={-1}>
+    <main className="min-h-screen bg-paper text-ink" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -294,19 +294,19 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(tritonAISchema) }}
       />
 
-      <section className="paper-grid border-b border-[#d9dfd3]">
+      <section className="paper-grid border-b border-line">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
               <p className="rule-label mb-8">Higher education technology leadership</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-[#17201b] max-w-[20rem] sm:max-w-4xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-ink max-w-[20rem] sm:max-w-4xl">
                 Making technology useful in higher education.
               </h1>
-              <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-[#485248]">
+              <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-body">
                 I lead technology, infrastructure, and digital workplace teams at UC San Diego,
                 turning emerging tools into dependable services people actually use. Right now that
                 work centers on practical AI through{' '}
-                <Link href="/tritongpt" className="font-semibold text-[#1f5a8a] underline underline-offset-4 decoration-[#1f5a8a]/30">
+                <Link href="/tritongpt" className="font-semibold text-signal-blue underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
                 . This site collects the field notes, architecture, talks, and product experiments
@@ -322,16 +322,16 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/media"
-                  className="inline-flex items-center justify-center rounded-sm border border-[#9eb7aa] px-6 py-3 text-sm font-semibold text-[#17201b] transition-colors hover:border-[#1f5a8a] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
+                  className="inline-flex items-center justify-center rounded-sm border border-[#9eb7aa] px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-[#1f5a8a] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
                 >
                   Browse media
                 </Link>
               </div>
-              <div className="mt-12 flex max-w-2xl flex-col gap-5 border border-[#d9dfd3] bg-white/75 p-5 shadow-[8px_8px_0_rgba(54,108,90,0.08)] sm:flex-row sm:items-center">
+              <div className="mt-12 flex max-w-2xl flex-col gap-5 border border-line bg-white/75 p-5 shadow-[8px_8px_0_rgba(54,108,90,0.08)] sm:flex-row sm:items-center">
                 <HomePracticeMark />
                 <div>
                   <p className="rule-label mb-3">Operating idea</p>
-                  <p className="text-base leading-7 text-[#485248]">
+                  <p className="text-base leading-7 text-body">
                     Run experiments deliberately, keep what proves durable, and move the surviving
                     patterns into shared infrastructure, governance, and scalable practice.
                   </p>
@@ -363,10 +363,10 @@ export default function Home() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-[1.05fr_0.95fr] gap-5">
                 <div className="home-support-card p-5" data-tone="gold">
                   <p className="rule-label mb-4">Working questions</p>
-                  <ol className="space-y-4 text-sm leading-6 text-[#485248]">
+                  <ol className="space-y-4 text-sm leading-6 text-body">
                     {questions.map((question, index) => (
                       <li key={question} className="grid grid-cols-[2.25rem_1fr] gap-3">
-                        <span className="font-mono text-xs text-[#c97712]">0{index + 1}</span>
+                        <span className="font-mono text-xs text-signal-gold-ink">0{index + 1}</span>
                         <span>{question}</span>
                       </li>
                     ))}
@@ -387,45 +387,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-b border-[#d9dfd3] tint-gold">
+      <section className="border-b border-line tint-gold">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
             <div>
               <p className="rule-label mb-4">How it connects</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
+              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
                 Institutional inputs become useful outcomes.
               </h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-[#485248]">
+              <p className="mt-6 max-w-xl text-lg leading-8 text-body">
                 Knowledge, people, and tools route through governed institutional AI into the
                 everyday work of service, instruction, and research.
               </p>
             </div>
-            <div className="border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
+            <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
               <HomeHeroSystemMap />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-[#d9dfd3] tint-blue">
+      <section className="border-b border-line tint-blue">
         <div className="max-w-7xl mx-auto px-6 py-14">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
             <div>
               <p className="rule-label mb-4">System map</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
+              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
                 Useful AI moves from experiment to evidence to scale.
               </h2>
             </div>
             <div>
-              <div className="mb-5 border border-[#d9dfd3] bg-white/70 p-3 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
+              <div className="mb-5 border border-line bg-white/70 p-3 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
                 <OperatingLoopDiagram />
               </div>
               <div className="grid sm:grid-cols-4 gap-3">
               {systemLayers.map((layer, index) => (
                 <div key={layer.label} className="system-node p-4 min-h-36">
-                  <div className="font-mono text-xs text-[#c97712] mb-5">0{index + 1}</div>
-                  <h3 className="font-semibold text-[#17201b]">{layer.label}</h3>
-                  <p className="mt-2 text-sm leading-6 text-[#485248]">{layer.value}</p>
+                  <div className="font-mono text-xs text-signal-gold-ink mb-5">0{index + 1}</div>
+                  <h3 className="font-semibold text-ink">{layer.label}</h3>
+                  <p className="mt-2 text-sm leading-6 text-body">{layer.value}</p>
                 </div>
               ))}
               </div>
@@ -438,7 +438,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
           <div>
             <p className="rule-label mb-4">Field notes</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
+            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
               What survives the experiment becomes the pattern.
             </h2>
           </div>
@@ -446,8 +446,8 @@ export default function Home() {
             {fieldNotes.map((note) => (
               <article key={note.title} className="field-note p-6" data-tone={note.tone}>
                 <p className="rule-label mb-5">{note.label}</p>
-                <h3 className="text-2xl leading-8 font-medium text-[#17201b]">{note.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-[#485248]">{note.body}</p>
+                <h3 className="text-2xl leading-8 font-medium text-ink">{note.title}</h3>
+                <p className="mt-5 text-sm leading-7 text-body">{note.body}</p>
               </article>
             ))}
           </div>
@@ -490,20 +490,20 @@ export default function Home() {
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
             <div>
               <p className="rule-label mb-4">Site index</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">
+              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
                 Routes into the work.
               </h2>
             </div>
-            <div className="border-y border-[#d9dfd3]">
+            <div className="border-y border-line">
               {routes.map((route) => (
                 <Link
                   key={route.href}
                   href={route.href}
                   className="index-row grid gap-2 py-5 sm:grid-cols-[13rem_1fr_auto] sm:items-center"
                 >
-                  <span className="text-xl font-medium text-[#17201b]">{route.label}</span>
-                  <span className="text-[#485248]">{route.note}</span>
-                  <span className="font-mono text-xs text-[#1f5a8a]">open</span>
+                  <span className="text-xl font-medium text-ink">{route.label}</span>
+                  <span className="text-body">{route.note}</span>
+                  <span className="font-mono text-xs text-signal-blue">open</span>
                 </Link>
               ))}
             </div>

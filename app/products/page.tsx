@@ -253,26 +253,26 @@ const productListSchema = {
 
 export default function Products() {
   return (
-    <main className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content" tabIndex={-1}>
+    <main className="min-h-screen bg-paper text-ink" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-[#edf5f7] p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+        <div className="mb-12 grid gap-8 border-y border-line bg-wash-blue p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <p className="rule-label mb-5">Product laboratory</p>
-            <h1 className="text-5xl md:text-6xl leading-none font-medium text-[#17201b]">Built Work</h1>
+            <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Built Work</h1>
           </div>
-          <p className="text-2xl text-[#485248] mb-6 max-w-3xl leading-9">
+          <p className="text-2xl text-body mb-6 max-w-3xl leading-9">
             AI-powered products and prototypes that solve real problems, from personal productivity to institutional transformation.
           </p>
         </div>
 
-        <div className="border-y border-[#d9dfd3]">
+        <div className="border-y border-line">
           {products.map((product, index) => {
             const isInternal = "internal" in product && product.internal === true;
-            const frameClass = `block border border-[#d9dfd3] p-4 ${frameColors[index % frameColors.length]}`;
+            const frameClass = `block border border-line p-4 ${frameColors[index % frameColors.length]}`;
             const thumbnail = (
               <Image
                 src={product.image}
@@ -291,11 +291,11 @@ export default function Products() {
                 </svg>
               </>
             );
-            const ctaClass = "inline-flex items-center gap-2 font-semibold text-[#1f5a8a]";
+            const ctaClass = "inline-flex items-center gap-2 font-semibold text-signal-blue";
             return (
             <article
               key={product.title}
-              className="group grid gap-8 border-b border-[#d9dfd3] py-10 last:border-b-0 transition-colors hover:bg-[#fffef9] lg:grid-cols-[0.42fr_0.72fr] lg:items-center"
+              className="group grid gap-8 border-b border-line py-10 last:border-b-0 transition-colors hover:bg-[#fffef9] lg:grid-cols-[0.42fr_0.72fr] lg:items-center"
             >
               {isInternal ? (
                 <Link href={product.href} className={frameClass}>
@@ -312,16 +312,16 @@ export default function Products() {
                 </a>
               )}
               <div>
-                <p className="rule-label mb-4 text-[#c97712]">{product.category}</p>
-                <h2 className="text-3xl md:text-5xl leading-tight font-medium text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
+                <p className="rule-label mb-4 text-signal-gold-ink">{product.category}</p>
+                <h2 className="text-3xl md:text-5xl leading-tight font-medium text-ink transition-colors group-hover:text-[#1f5a8a]">
                   {product.title}
                 </h2>
-                <p className="mt-5 text-lg leading-8 text-[#485248]">{product.description}</p>
+                <p className="mt-5 text-lg leading-8 text-body">{product.description}</p>
                 <div className="mt-7 grid gap-3 sm:grid-cols-2">
                   {product.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3 border-t border-[#d9dfd3] pt-3">
+                    <div key={feature} className="flex items-start gap-3 border-t border-line pt-3">
                       <span className="mt-2 h-2 w-2 flex-shrink-0 bg-[#c97712]" aria-hidden="true" />
-                      <span className="text-sm font-semibold leading-6 text-[#17201b]">{feature}</span>
+                      <span className="text-sm font-semibold leading-6 text-ink">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -360,14 +360,14 @@ export default function Products() {
           })}
         </div>
 
-        <div className="mt-14 border border-dashed border-[#9fa89d] bg-[#fffef9] p-8 md:p-10">
+        <div className="mt-14 border border-dashed border-[#9fa89d] bg-paper-strong p-8 md:p-10">
           <div className="grid gap-8 md:grid-cols-[0.55fr_1fr] md:items-center">
             <div>
               <p className="rule-label mb-4">In progress</p>
-              <h3 className="text-3xl md:text-4xl leading-tight font-medium text-[#17201b]">More built work is moving through the lab.</h3>
+              <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink">More built work is moving through the lab.</h3>
             </div>
             <div>
-              <p className="text-lg leading-8 text-[#485248]">
+              <p className="text-lg leading-8 text-body">
                 I am continuing to develop new software products across education, productivity, and enterprise domains, with updates shared as the tools become concrete enough to inspect.
               </p>
               <Link

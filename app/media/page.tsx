@@ -214,7 +214,7 @@ export default function Media() {
   };
 
   return (
-    <main className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content" tabIndex={-1}>
+    <main className="min-h-screen bg-paper text-ink" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
@@ -224,13 +224,13 @@ export default function Media() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="mb-12 grid gap-8 border-y border-[#d9dfd3] bg-white/75 p-6 shadow-[10px_10px_0_rgba(31,90,138,0.08)] lg:grid-cols-[0.84fr_1.16fr] lg:items-center">
+        <div className="mb-12 grid gap-8 border-y border-line bg-white/75 p-6 shadow-[10px_10px_0_rgba(31,90,138,0.08)] lg:grid-cols-[0.84fr_1.16fr] lg:items-center">
           <div className="space-y-8">
             <div>
               <p className="rule-label mb-5">Media and appearances</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl leading-none font-medium text-[#17201b]">Publication Index</h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl leading-none font-medium text-ink">Publication Index</h1>
             </div>
-            <p className="text-xl sm:text-2xl text-[#485248] max-w-3xl leading-9">
+            <p className="text-xl sm:text-2xl text-body max-w-3xl leading-9">
               Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education.
             </p>
             <div className="grid gap-3 sm:grid-cols-3">
@@ -239,14 +239,14 @@ export default function Media() {
                 { label: 'Talks and sessions', value: speakingCount },
                 { label: 'Coverage span', value: `${firstYear}-${latestYear}` },
               ].map((stat) => (
-                <div key={stat.label} className="border border-[#d9dfd3] bg-[#fffef9] p-4">
-                  <p className="font-mono text-2xl text-[#17201b]">{stat.value}</p>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#7a8479]">{stat.label}</p>
+                <div key={stat.label} className="border border-line bg-paper-strong p-4">
+                  <p className="font-mono text-2xl text-ink">{stat.value}</p>
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted">{stat.label}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="diagram border border-[#d9dfd3] bg-[#f7f9f5] p-3">
+          <div className="diagram border border-line bg-paper p-3">
             <MediaArchiveChart />
           </div>
         </div>

@@ -33,10 +33,10 @@ export default function LinkedInContent() {
         <div className="mb-12 relative min-h-[400px]">
           {/* Loading placeholder */}
           {!widgetLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white rounded-xl border border-slate-200">
+            <div className="absolute inset-0 flex items-center justify-center bg-white rounded-xl border border-line">
               <div className="text-center">
-                <div className="w-12 h-12 border-4 border-slate-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-slate-500">Loading LinkedIn posts...</p>
+                <div className="w-12 h-12 border-4 border-line border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-muted">Loading LinkedIn posts...</p>
               </div>
             </div>
           )}
@@ -45,12 +45,12 @@ export default function LinkedInContent() {
         </div>
 
         {/* LinkedIn Link */}
-        <div className="border-t border-slate-200 pt-12 text-center">
+        <div className="border-t border-line pt-12 text-center">
           <a
             href="https://www.linkedin.com/in/brettpollak/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#17201b] text-white px-10 py-4 font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+            className="inline-flex items-center gap-3 bg-[#17201b] text-white px-10 py-4 font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-signal-gold"
           >
             <svg aria-hidden="true" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>

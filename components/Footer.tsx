@@ -35,15 +35,15 @@ const FOOTER_GROUPS: FooterGroup[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#fffef9] border-t border-[#d9dfd3] mt-24 relative overflow-hidden">
+    <footer className="bg-paper-strong border-t border-line mt-24 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-[#17201b]/12"></div>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="md:col-span-1">
-            <div className="text-2xl font-semibold text-[#17201b] mb-4 font-[family-name:var(--font-display)]">
+            <div className="text-2xl font-semibold text-ink mb-4 font-[family-name:var(--font-display)]">
               Brett Pollak
             </div>
-            <p className="text-[#485248] leading-relaxed mb-6">
+            <p className="text-body leading-relaxed mb-6">
               Field notes on institutional AI, platform governance, digital services, and the practical work of higher education transformation.
             </p>
             {/* Social Links */}
@@ -52,7 +52,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/brettpollak/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 border border-[#d9dfd3] bg-[#f7f9f5] hover:bg-[#17201b] text-[#485248] hover:text-white rounded-sm flex items-center justify-center transition-colors"
+                className="w-10 h-10 border border-line bg-paper hover:bg-[#17201b] text-body hover:text-white rounded-sm flex items-center justify-center transition-colors"
                 aria-label="LinkedIn Profile"
               >
                 <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#485248] hover:text-[#1f5a8a] transition-colors inline-flex items-center gap-1"
+                        className="text-body hover:text-[#1f5a8a] transition-colors inline-flex items-center gap-1"
                       >
                         {link.label}
                         <svg aria-hidden="true" className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ export default function Footer() {
                         </svg>
                       </a>
                     ) : (
-                      <Link href={link.href} className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
+                      <Link href={link.href} className="text-body hover:text-[#1f5a8a] transition-colors">
                         {link.label}
                       </Link>
                     )}
@@ -90,8 +90,8 @@ export default function Footer() {
             </nav>
           ))}
         </div>
-        <div className="border-t border-[#d9dfd3] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[#7a8479] text-sm">
+        <div className="border-t border-line pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-muted text-sm">
             &copy; {new Date().getFullYear()} Brett Pollak. All rights reserved.
           </p>
         </div>

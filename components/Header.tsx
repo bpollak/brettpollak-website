@@ -78,7 +78,7 @@ export default function Header() {
   useEffect(() => { setMoreMenuOpen(false); }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#f7f9f5]/92 backdrop-blur-xl border-b border-[#d9dfd3]">
+    <header className="sticky top-0 z-50 bg-[#f7f9f5]/92 backdrop-blur-xl border-b border-line">
       <div className="absolute inset-x-0 bottom-0 h-px bg-[#17201b]/10"></div>
       <nav aria-label="Main" className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Skip to main content link for accessibility */}
@@ -91,7 +91,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 sm:h-20 gap-4">
           <Link
             href="/"
-            className="group inline-flex items-center gap-2.5 text-xl sm:text-2xl font-semibold text-[#17201b] transition-colors font-[family-name:var(--font-display)] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 rounded-sm whitespace-nowrap flex-none"
+            className="group inline-flex items-center gap-2.5 text-xl sm:text-2xl font-semibold text-ink transition-colors font-[family-name:var(--font-display)] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 rounded-sm whitespace-nowrap flex-none"
           >
             <span
               aria-hidden="true"
@@ -112,8 +112,8 @@ export default function Header() {
                 href={href}
                 className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap border-b-2 ${
                   isActive(href)
-                    ? 'text-[#17201b] border-[#c97712] font-semibold'
-                    : 'text-[#485248] border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
+                    ? 'text-ink border-[#c97712] font-semibold'
+                    : 'text-body border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
                 }`}
               >
                 {label}
@@ -129,8 +129,8 @@ export default function Header() {
                 aria-expanded={moreMenuOpen}
                 className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap inline-flex items-center gap-1 border-b-2 ${
                   isActiveInGroup(MORE_LINKS)
-                    ? 'text-[#17201b] border-[#c97712] font-semibold'
-                    : 'text-[#485248] border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
+                    ? 'text-ink border-[#c97712] font-semibold'
+                    : 'text-body border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
                 }`}
               >
                 More
@@ -148,10 +148,10 @@ export default function Header() {
               {moreMenuOpen && (
                 <div
                   role="menu"
-                  className="absolute right-0 mt-2 w-60 rounded-sm bg-[#fffef9] border border-[#d9dfd3] shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
+                  className="absolute right-0 mt-2 w-60 rounded-sm bg-paper-strong border border-line shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
                 >
                   {MORE_GROUPS.map((group) => (
-                    <div key={group.heading} className="border-b border-[#d9dfd3] last:border-b-0">
+                    <div key={group.heading} className="border-b border-line last:border-b-0">
                       <div className="px-3 py-2 rule-label">{group.heading}</div>
                       {group.links.map(({ href, label }) => (
                         <Link
@@ -161,8 +161,8 @@ export default function Header() {
                           onClick={() => setMoreMenuOpen(false)}
                           className={`block px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap ${
                             isActive(href)
-                              ? 'text-[#17201b] bg-[#eef3ea] font-semibold'
-                              : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
+                              ? 'text-ink bg-[#eef3ea] font-semibold'
+                              : 'text-body hover:text-[#17201b] hover:bg-[#f1f5ee]'
                           }`}
                         >
                           {label}
@@ -178,7 +178,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-sm text-[#17201b] hover:bg-[#eef3ea] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
+            className="md:hidden p-2 rounded-sm text-ink hover:bg-[#eef3ea] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -202,7 +202,7 @@ export default function Header() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[#d9dfd3]">
+          <div className="md:hidden py-4 border-t border-line">
             <div className="flex flex-col space-y-2">
               {PRIMARY_LINKS.map(({ href, label }) => (
                 <Link
@@ -211,8 +211,8 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
                     isActive(href)
-                      ? 'text-[#17201b] bg-[#eef3ea]'
-                      : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
+                      ? 'text-ink bg-[#eef3ea]'
+                      : 'text-body hover:text-[#17201b] hover:bg-[#f1f5ee]'
                   }`}
                 >
                   {label}
@@ -230,8 +230,8 @@ export default function Header() {
                       onClick={() => setMobileMenuOpen(false)}
                       className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
                         isActive(href)
-                          ? 'text-[#17201b] bg-[#eef3ea]'
-                          : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
+                          ? 'text-ink bg-[#eef3ea]'
+                          : 'text-body hover:text-[#17201b] hover:bg-[#f1f5ee]'
                       }`}
                     >
                       {label}
