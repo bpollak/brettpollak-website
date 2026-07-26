@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PreviewPage() {
   return (
-    <div className="page-shell" id="main-content">
+    <main className="page-shell" id="main-content" tabIndex={-1}>
       {/* Header */}
       <section className="border-b border-[color:var(--line)] page-hero">
         <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
@@ -112,6 +112,6 @@ export default function PreviewPage() {
           </Reveal>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

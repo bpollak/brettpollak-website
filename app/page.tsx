@@ -284,7 +284,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
+    <main className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -510,6 +510,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

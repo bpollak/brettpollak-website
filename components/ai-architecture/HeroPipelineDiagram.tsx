@@ -144,16 +144,16 @@ export default function HeroPipelineDiagram() {
   return (
     <figure
       className="w-full my-10"
-      role="img"
-      aria-labelledby="knowledge-flow-title"
     >
       <svg
+        role="img"
+        aria-labelledby="knowledge-flow-title knowledge-flow-desc"
         viewBox={`0 0 ${VB_W} ${VB_H}`}
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="knowledge-flow-title">Knowledge flow: data sources to knowledge layer to agent actions</title>
-        <desc>
+        <desc id="knowledge-flow-desc">
           Three-column flow diagram. Left column shows the data sources feeding the system
           (calendar, email, meetings, web, campus signals, conversations). Middle column shows the
           four durable knowledge layers (graph, wiki, long-term memory, patterns). Right column

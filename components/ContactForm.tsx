@@ -72,11 +72,11 @@ export default function ContactForm() {
     <div className="editorial-panel p-8 h-full flex flex-col">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 bg-[#edf5f7] border border-[#9eb7aa] flex items-center justify-center">
-          <svg className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg aria-hidden="true" className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-slate-900">Send a Message</h3>
+        <h2 className="text-2xl font-bold text-slate-900">Send a Message</h2>
       </div>
 
       {status === 'success' && (

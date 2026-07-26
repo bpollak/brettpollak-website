@@ -579,9 +579,10 @@ export default function ModerationConsole() {
               <form className="space-y-4" onSubmit={handleApprove}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Podcast Name</label>
+                    <label htmlFor="review-name" className="block text-sm font-semibold text-slate-700 mb-1.5">Podcast Name</label>
                     <input
                       type="text"
+                      id="review-name"
                       value={reviewDraft.name}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, name: event.target.value } : prev))
@@ -592,9 +593,10 @@ export default function ModerationConsole() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Host(s)</label>
+                    <label htmlFor="review-hosts" className="block text-sm font-semibold text-slate-700 mb-1.5">Host(s)</label>
                     <input
                       type="text"
+                      id="review-hosts"
                       value={reviewDraft.hosts}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, hosts: event.target.value } : prev))
@@ -607,9 +609,10 @@ export default function ModerationConsole() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Category</label>
+                    <label htmlFor="review-category" className="block text-sm font-semibold text-slate-700 mb-1.5">Category</label>
                     <input
                       type="text"
+                      id="review-category"
                       value={reviewDraft.category}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, category: event.target.value } : prev))
@@ -620,9 +623,10 @@ export default function ModerationConsole() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Submitted By</label>
+                    <label htmlFor="review-submitted-by" className="block text-sm font-semibold text-slate-700 mb-1.5">Submitted By</label>
                     <input
                       type="text"
+                      id="review-submitted-by"
                       value={reviewDraft.submittedBy}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, submittedBy: event.target.value } : prev))
@@ -633,9 +637,10 @@ export default function ModerationConsole() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Summary</label>
+                  <label htmlFor="review-summary" className="block text-sm font-semibold text-slate-700 mb-1.5">Summary</label>
                   <textarea
-                    value={reviewDraft.summary}
+                    id="review-summary"
+                      value={reviewDraft.summary}
                     onChange={(event) =>
                       setReviewDraft((prev) => (prev ? { ...prev, summary: event.target.value } : prev))
                     }
@@ -647,9 +652,10 @@ export default function ModerationConsole() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Podcast Link</label>
+                    <label htmlFor="review-listen-url" className="block text-sm font-semibold text-slate-700 mb-1.5">Podcast Link</label>
                     <input
                       type="url"
+                      id="review-listen-url"
                       value={reviewDraft.listenUrl}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, listenUrl: event.target.value } : prev))
@@ -660,9 +666,10 @@ export default function ModerationConsole() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-1.5">Cover Image URL (optional)</label>
+                    <label htmlFor="review-cover-image" className="block text-sm font-semibold text-slate-700 mb-1.5">Cover Image URL (optional)</label>
                     <input
                       type="url"
+                      id="review-cover-image"
                       value={reviewDraft.coverImage}
                       onChange={(event) =>
                         setReviewDraft((prev) => (prev ? { ...prev, coverImage: event.target.value } : prev))
@@ -693,10 +700,11 @@ export default function ModerationConsole() {
               </form>
 
               <div className="mt-6 pt-6 border-t border-slate-200">
-                <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                <label htmlFor="review-rejection-reason" className="block text-sm font-semibold text-slate-700 mb-1.5">
                   Rejection Reason <span className="text-rose-600">*</span>
                 </label>
                 <textarea
+                  id="review-rejection-reason"
                   value={rejectionReason}
                   onChange={(event) => setRejectionReason(event.target.value)}
                   rows={3}

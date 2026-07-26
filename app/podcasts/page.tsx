@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function Podcasts() {
   return (
-    <div className="page-shell" id="main-content">
+    <main className="page-shell" id="main-content" tabIndex={-1}>
       <section className="page-hero">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
           <p className="rule-label mb-6">Podcast Discovery</p>
@@ -45,6 +45,6 @@ export default function Podcasts() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <PodcastsContent />
       </div>
-    </div>
+    </main>
   );
 }

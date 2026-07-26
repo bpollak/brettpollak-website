@@ -38,7 +38,7 @@ export default function BackToTop() {
       className="fixed bottom-8 right-8 z-40 p-3 bg-slate-900 text-white rounded-full shadow-lg hover:bg-slate-800 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 transform hover:-translate-y-1"
       aria-label="Back to top"
     >
-      <svg
+      <svg aria-hidden="true"
         className="w-6 h-6"
         fill="none"
         stroke="currentColor"

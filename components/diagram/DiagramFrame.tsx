@@ -8,7 +8,7 @@ interface DiagramFrameProps {
 
 /**
  * The paper-strong rounded frame that sits behind every system-map diagram.
- * Render as the first child inside an <svg>.
+ * Render as the first child inside an <svg aria-hidden="true">.
  */
 export default function DiagramFrame({ width, height, rx = 18 }: DiagramFrameProps) {
   return (

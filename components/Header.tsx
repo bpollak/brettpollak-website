@@ -182,7 +182,7 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
-            <svg
+            <svg aria-hidden="true"
               className="w-6 h-6"
               fill="none"
               strokeLinecap="round"
