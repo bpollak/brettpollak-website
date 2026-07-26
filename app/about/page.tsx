@@ -109,7 +109,7 @@ export default function About() {
             </div>
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">Cross-Institution Sharing</h3>
-              <p className="text-lg text-body leading-relaxed">The TritonAI platform has been adopted by peer institutions including BearGPT at UC Berkeley, UC Agriculture and Natural Resources, and Fairleigh Dickinson University — with additional campuses exploring the deployment model</p>
+              <p className="text-lg text-body leading-relaxed">The TritonAI platform has been adopted by peer institutions including BearGPT at UC Berkeley, UC Agriculture and Natural Resources, Fairleigh Dickinson University, and UC Merced — with additional campuses exploring the deployment model</p>
             </div>
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">Daily Context</h3>
