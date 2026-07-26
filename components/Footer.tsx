@@ -1,5 +1,38 @@
 import Link from 'next/link';
 
+type FooterLink = { href: string; label: string; external?: boolean };
+type FooterGroup = { heading: string; links: FooterLink[] };
+
+/**
+ * Two columns with no overlap. The previous "Featured Work" column repeated
+ * three of its four links from "Navigation" under different labels, and the
+ * footer omitted /speaking entirely — the highest-priority route in the sitemap.
+ */
+const FOOTER_GROUPS: FooterGroup[] = [
+  {
+    heading: 'The Work',
+    links: [
+      { href: '/about', label: 'About' },
+      { href: '/tritongpt', label: 'TritonAI' },
+      { href: '/speaking', label: 'Speaking' },
+      { href: '/media', label: 'Media & Publications' },
+      { href: '/products', label: 'Products' },
+      { href: 'https://resolutioncompanion.com/', label: 'Resolution Companion', external: true },
+    ],
+  },
+  {
+    heading: 'Notes & Elsewhere',
+    links: [
+      { href: '/ai-digest', label: 'AI Digest' },
+      { href: '/ai-agent-architecture', label: 'Agent Architecture' },
+      { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
+      { href: '/podcasts', label: 'Podcasts' },
+      { href: '/now', label: 'Now' },
+      { href: '/contact', label: 'Contact' },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#fffef9] border-t border-[#d9dfd3] mt-24 relative overflow-hidden">
@@ -28,74 +61,34 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div>
-            <h3 className="rule-label mb-4">Navigation</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/tritongpt" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  TritonAI
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/media" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  Media & Publications
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-digest" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  AI Digest
-                </Link>
-              </li>
-              <li>
-                <Link href="/podcasts" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  Podcasts
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="rule-label mb-4">Featured Work</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/tritongpt" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  TritonAI Overview
-                </Link>
-              </li>
-              <li>
-                <a href="https://resolutioncompanion.com/" target="_blank" rel="noopener noreferrer" className="text-[#485248] hover:text-[#1f5a8a] transition-colors inline-flex items-center gap-1">
-                  Resolution Companion
-                  <svg aria-hidden="true" className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <Link href="/media" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  Publications & Press
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-digest" className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
-                  Weekly AI Digest
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {FOOTER_GROUPS.map((group) => (
+            <nav key={group.heading} aria-label={group.heading}>
+              <p className="rule-label mb-4">{group.heading}</p>
+              <ul className="space-y-3">
+                {group.links.map((link) => (
+                  <li key={link.href}>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#485248] hover:text-[#1f5a8a] transition-colors inline-flex items-center gap-1"
+                      >
+                        {link.label}
+                        <svg aria-hidden="true" className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="text-[#485248] hover:text-[#1f5a8a] transition-colors">
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
         <div className="border-t border-[#d9dfd3] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-[#7a8479] text-sm">

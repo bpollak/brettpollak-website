@@ -5,50 +5,62 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 type NavLink = { href: string; label: string };
+type NavGroup = { heading: string; links: NavLink[] };
 
-// Primary nav items — everything EXCEPT the AI projects (which go in the dropdown)
+// The six routes that carry the site's core narrative and its call to action.
+// Everything else lives behind the "More" dropdown so the bar stays scannable.
 const PRIMARY_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/tritongpt', label: 'TritonAI' },
   { href: '/speaking', label: 'Speaking' },
   { href: '/media', label: 'Media' },
   { href: '/products', label: 'Products' },
-];
-
-// AI project pages grouped under a single "AI" dropdown on desktop.
-// On mobile, these render as a flat subsection within the main menu.
-const AI_LINKS: NavLink[] = [
-  { href: '/ai-digest', label: 'AI Digest' },
-  { href: '/ai-agent-architecture', label: 'Agent Architecture' },
-  { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
-];
-
-const SECONDARY_LINKS: NavLink[] = [
-  { href: '/podcasts', label: 'Podcasts' },
-  { href: '/linkedin', label: 'LinkedIn' },
   { href: '/contact', label: 'Contact' },
 ];
+
+// Grouped under a single "More" dropdown on desktop; the same groups render as
+// flat labelled subsections within the mobile menu.
+const MORE_GROUPS: NavGroup[] = [
+  {
+    heading: 'AI Projects',
+    links: [
+      { href: '/ai-digest', label: 'AI Digest' },
+      { href: '/ai-agent-architecture', label: 'Agent Architecture' },
+      { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
+    ],
+  },
+  {
+    heading: 'Elsewhere',
+    links: [
+      { href: '/podcasts', label: 'Podcasts' },
+      { href: '/now', label: 'Now' },
+      { href: '/linkedin', label: 'LinkedIn' },
+    ],
+  },
+];
+
+const MORE_LINKS: NavLink[] = MORE_GROUPS.flatMap((group) => group.links);
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aiMenuOpen, setAiMenuOpen] = useState(false);
-  const aiMenuRef = useRef<HTMLDivElement>(null);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
 
   const isActive = (path: string) => pathname === path;
   const isActiveInGroup = (links: NavLink[]) => links.some((l) => pathname === l.href);
 
-  // Close AI dropdown when clicking outside or pressing Escape
+  // Close the More dropdown when clicking outside or pressing Escape
   useEffect(() => {
-    if (!aiMenuOpen) return;
+    if (!moreMenuOpen) return;
 
     function handleClick(e: MouseEvent) {
-      if (aiMenuRef.current && !aiMenuRef.current.contains(e.target as Node)) {
-        setAiMenuOpen(false);
+      if (moreMenuRef.current && !moreMenuRef.current.contains(e.target as Node)) {
+        setMoreMenuOpen(false);
       }
     }
     function handleKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') setAiMenuOpen(false);
+      if (e.key === 'Escape') setMoreMenuOpen(false);
     }
 
     document.addEventListener('mousedown', handleClick);
@@ -57,22 +69,22 @@ export default function Header() {
       document.removeEventListener('mousedown', handleClick);
       document.removeEventListener('keydown', handleKey);
     };
-  }, [aiMenuOpen]);
+  }, [moreMenuOpen]);
 
-  // Close AI menu when navigating (pathname change).
+  // Close the More menu when navigating (pathname change).
   // This is a legitimate menu-close-on-route-change pattern; the React 19
   // lint rule is too strict for this specific use case.
   // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => { setAiMenuOpen(false); }, [pathname]);
+  useEffect(() => { setMoreMenuOpen(false); }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 bg-[#f7f9f5]/92 backdrop-blur-xl border-b border-[#d9dfd3]">
       <div className="absolute inset-x-0 bottom-0 h-px bg-[#17201b]/10"></div>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6">
+      <nav aria-label="Main" className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Skip to main content link for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-slate-900 focus:text-white focus:rounded-lg focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#17201b] focus:text-white focus:rounded-lg focus:shadow-lg"
         >
           Skip to main content
         </a>
@@ -108,22 +120,22 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* AI Dropdown */}
-            <div className="relative" ref={aiMenuRef}>
+            {/* "More" dropdown */}
+            <div className="relative" ref={moreMenuRef}>
               <button
                 type="button"
-                onClick={() => setAiMenuOpen((v) => !v)}
+                onClick={() => setMoreMenuOpen((v) => !v)}
                 aria-haspopup="true"
-                aria-expanded={aiMenuOpen}
+                aria-expanded={moreMenuOpen}
                 className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap inline-flex items-center gap-1 border-b-2 ${
-                  isActiveInGroup(AI_LINKS)
+                  isActiveInGroup(MORE_LINKS)
                     ? 'text-[#17201b] border-[#c97712] font-semibold'
                     : 'text-[#485248] border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
                 }`}
               >
-                AI
+                More
                 <svg
-                  className={`w-3.5 h-3.5 transition-transform ${aiMenuOpen ? 'rotate-180' : ''}`}
+                  className={`w-3.5 h-3.5 transition-transform ${moreMenuOpen ? 'rotate-180' : ''}`}
                   fill="none"
                   viewBox="0 0 20 20"
                   stroke="currentColor"
@@ -133,46 +145,34 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 8l5 5 5-5" />
                 </svg>
               </button>
-              {aiMenuOpen && (
+              {moreMenuOpen && (
                 <div
                   role="menu"
                   className="absolute right-0 mt-2 w-60 rounded-sm bg-[#fffef9] border border-[#d9dfd3] shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
                 >
-                  <div className="px-3 py-2 rule-label border-b border-[#d9dfd3]">
-                    AI Projects
-                  </div>
-                  {AI_LINKS.map(({ href, label }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      role="menuitem"
-                      onClick={() => setAiMenuOpen(false)}
-                      className={`block px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap ${
-                        isActive(href)
-                          ? 'text-[#17201b] bg-[#eef3ea] font-semibold'
-                          : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
-                      }`}
-                    >
-                      {label}
-                    </Link>
+                  {MORE_GROUPS.map((group) => (
+                    <div key={group.heading} className="border-b border-[#d9dfd3] last:border-b-0">
+                      <div className="px-3 py-2 rule-label">{group.heading}</div>
+                      {group.links.map(({ href, label }) => (
+                        <Link
+                          key={href}
+                          href={href}
+                          role="menuitem"
+                          onClick={() => setMoreMenuOpen(false)}
+                          className={`block px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap ${
+                            isActive(href)
+                              ? 'text-[#17201b] bg-[#eef3ea] font-semibold'
+                              : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
+                          }`}
+                        >
+                          {label}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                 </div>
               )}
             </div>
-
-            {SECONDARY_LINKS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap border-b-2 ${
-                  isActive(href)
-                    ? 'text-[#17201b] border-[#c97712] font-semibold'
-                    : 'text-[#485248] border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
           </div>
 
           {/* Mobile Menu Button */}
@@ -219,41 +219,25 @@ export default function Header() {
                 </Link>
               ))}
 
-              {/* AI subsection — flat list with a subheader */}
-              <div className="pt-3 pb-1 px-4 rule-label">
-                AI Projects
-              </div>
-              {AI_LINKS.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
-                    isActive(href)
-                      ? 'text-[#17201b] bg-[#eef3ea]'
-                      : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
-                  }`}
-                >
-                  {label}
-                </Link>
-              ))}
-
-              <div className="pt-3 pb-1 px-4 rule-label">
-                Connect
-              </div>
-              {SECONDARY_LINKS.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
-                    isActive(href)
-                      ? 'text-[#17201b] bg-[#eef3ea]'
-                      : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
-                  }`}
-                >
-                  {label}
-                </Link>
+              {/* Same groups as the desktop dropdown, flattened with subheaders */}
+              {MORE_GROUPS.map((group) => (
+                <div key={group.heading} className="contents">
+                  <div className="pt-3 pb-1 px-4 rule-label">{group.heading}</div>
+                  {group.links.map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
+                        isActive(href)
+                          ? 'text-[#17201b] bg-[#eef3ea]'
+                          : 'text-[#485248] hover:text-[#17201b] hover:bg-[#f1f5ee]'
+                      }`}
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
