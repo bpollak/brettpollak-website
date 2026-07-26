@@ -45,12 +45,39 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Editions are generated weekly by an external job. If that job stalls, the page
+ * should stop advertising a weekly cadence it is no longer keeping rather than
+ * telling visitors something untrue — so the promise is derived from the data,
+ * not asserted. On a weekly cadence anything past 10 days means at least one
+ * Monday was missed, which is the point at which the claim stops being true.
+ * Evaluated at build time, which is fine here: the site redeploys on every
+ * content cron commit.
+ */
+const STALE_AFTER_DAYS = 10;
+
+function daysSince(iso: string, asOf: Date): number {
+  const then = new Date(`${iso}T12:00:00Z`).getTime();
+  return Math.floor((asOf.getTime() - then) / 86_400_000);
+}
+
 export default function UcsdAiNewsPage() {
   const { weekLabel, publishedThrough, editionCount, itemCount, editions } = ucsdAiNewsletterData;
   const editionsNewestFirst = [...editions].sort((a, b) => b.isoDate.localeCompare(a.isoDate));
-  const latestStatus = editionCount > 0
-    ? `Published through ${publishedThrough}. New editions publish every Monday morning.`
-    : 'The first edition publishes Monday morning. Check back soon or bookmark this page.';
+
+  const newestEditionDate = editionsNewestFirst[0]?.isoDate;
+  const isStale =
+    newestEditionDate !== undefined &&
+    daysSince(newestEditionDate, new Date()) > STALE_AFTER_DAYS;
+
+  let latestStatus: string;
+  if (editionCount === 0) {
+    latestStatus = 'The first edition publishes Monday morning. Check back soon or bookmark this page.';
+  } else if (isStale) {
+    latestStatus = `Published through ${publishedThrough}. The archive below is complete through that date; the next edition is not yet posted.`;
+  } else {
+    latestStatus = `Published through ${publishedThrough}. New editions publish every Monday morning.`;
+  }
 
   const newsletterSchema = {
     "@context": "https://schema.org",
