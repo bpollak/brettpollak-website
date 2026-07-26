@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import MediaContent from './MediaContent';
 
 export const metadata: Metadata = {
-  title: "Media & Appearances | Brett Pollak — AI in Higher Education",
+  title: "Media & Appearances — AI in Higher Education",
   description: "Brett Pollak's published articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, NACUBO, and more.",
   keywords: [
     "Brett Pollak articles",

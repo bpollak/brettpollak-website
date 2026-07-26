@@ -6,18 +6,29 @@ export default function ReadingProgress() {
   const [completion, setCompletion] = useState(0);
 
   useEffect(() => {
-    const updateScrollCompletion = () => {
-      const currentProgress = window.scrollY;
+    // Coalesce to one measurement per frame. Reading scrollY and writing state
+    // on every scroll event forced a layout read plus a React re-render per
+    // event, which is well above one per frame during a fast scroll.
+    let frame = 0;
+
+    const measure = () => {
+      frame = 0;
       const scrollHeight = document.body.scrollHeight - window.innerHeight;
-      if (scrollHeight) {
-        setCompletion(Number((currentProgress / scrollHeight).toFixed(2)) * 100);
+      if (scrollHeight > 0) {
+        setCompletion(Math.min(100, (window.scrollY / scrollHeight) * 100));
       }
     };
 
-    window.addEventListener('scroll', updateScrollCompletion);
+    const onScroll = () => {
+      if (frame === 0) frame = requestAnimationFrame(measure);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    measure();
 
     return () => {
-      window.removeEventListener('scroll', updateScrollCompletion);
+      window.removeEventListener('scroll', onScroll);
+      if (frame) cancelAnimationFrame(frame);
     };
   }, []);
 

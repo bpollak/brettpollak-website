@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
-  title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
+  title: "Products & Innovation — AI-Powered Solutions",
   description: "Explore AI-driven products built by Brett Pollak, including Is This AI?, Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
   alternates: {
     canonical: "https://brettcpollak.com/products",

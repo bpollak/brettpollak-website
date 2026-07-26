@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { currentNow } from '@/lib/nowData';
 
 export const metadata: Metadata = {
-  title: 'Now | Brett Pollak',
+  title: 'Now',
   description:
     "What Brett Pollak is focused on right now — work, projects, and what's on his mind. Refreshed weekly.",
   alternates: {
