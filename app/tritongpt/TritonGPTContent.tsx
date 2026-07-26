@@ -177,7 +177,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Developer APIs",
 	              description:
-	                "A governed gateway to self-hosted and approved cloud models, with starter credits, usage reporting, and recharge paths for projects that scale.",
+	                "A governed gateway to self-hosted and approved cloud models, with three supported build paths and four hosting lanes that carry a project from a personal sandbox to an enterprise service.",
 	              href: "https://tritonai.ucsd.edu/developer-apis/start.html",
 	              icon: (
 	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,6 +236,116 @@ export default function TritonGPTContent() {
               </a>
             );
           })}
+        </div>
+      </section>
+
+      {/* Developer API Program */}
+      <section className="max-w-6xl mx-auto px-6 pb-16">
+        <div className="mb-10 max-w-4xl">
+          <p className="rule-label mb-4">Developer API Program</p>
+          <h2 className="text-3xl md:text-5xl font-medium leading-tight text-ink mb-4">
+            A governed path from a personal experiment to a campus service.
+          </h2>
+          <p className="text-lg leading-8 text-body">
+            The hardest part of campus AI is not access to a model — it is the distance between
+            someone&apos;s working prototype and something the university can operate. The Developer API
+            Program exists to make that distance walkable: shared infrastructure to build on, and a
+            clear owner at every step. Before choosing a path, a project defines its user, its task,
+            the approved data it may touch, and the outcome it will be measured against.
+          </p>
+        </div>
+
+        {/* Gateway usage */}
+        <div className="mb-12 grid border-y border-line md:grid-cols-3">
+          {[
+            { value: 309.4, suffix: 'B', label: 'Tokens through the gateway', detail: 'January–June 2026, peaking at 73.2B in June', colorClass: 'text-signal-blue', decimals: true },
+            { value: 105.1, suffix: 'M', label: 'API requests completed', detail: 'Across self-hosted and approved cloud routes', colorClass: 'text-signal-green', decimals: true },
+            { value: 95.3, suffix: '%', label: 'Served by self-hosted models', detail: 'UC-controlled hosting rather than commercial providers', colorClass: 'text-signal-gold-ink', decimals: true },
+          ].map(({ value, suffix, label, detail, colorClass }, index) => (
+            <div key={label} className="border-b border-line p-7 md:border-b-0 md:border-r md:last:border-r-0">
+              <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
+              <CountUp
+                value={value}
+                suffix={suffix}
+                format={(n) => n.toFixed(1)}
+                className={`mt-5 block text-5xl font-semibold leading-none ${colorClass}`}
+              />
+              <div className="mt-5 font-semibold text-ink">{label}</div>
+              <div className="mt-2 text-sm leading-6 text-body">{detail}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Build paths */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold text-ink mb-2">Three supported ways to build</h3>
+          <p className="text-body leading-7 mb-6 max-w-3xl">
+            All three route through the TritonAI LLM Gateway, which reaches approved commercial
+            providers and UC-hosted open-weight models across chat, reasoning, vision, image
+            generation, OCR, and coding.
+          </p>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                name: 'TritonAI Harness',
+                who: 'Preferred for most staff',
+                body: 'A campus-oriented desktop experience that reduces setup burden — bundled installation, UC San Diego model access, campus skills, and Microsoft 365 connections.',
+              },
+              {
+                name: 'Claude Code',
+                who: 'Technical builders',
+                body: 'A command-line environment with direct Anthropic model access, for people already comfortable working in a terminal.',
+              },
+              {
+                name: 'Codex desktop app',
+                who: 'Experienced builders',
+                body: 'An OpenAI desktop environment for managing code, repositories, parallel tasks, and agent workflows.',
+              },
+            ].map((path) => (
+              <div key={path.name} className="system-node p-6">
+                <p className="font-mono text-xs text-signal-gold-ink">{path.who}</p>
+                <h4 className="mt-4 text-lg font-semibold text-ink">{path.name}</h4>
+                <p className="mt-2 text-sm leading-6 text-body">{path.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Hosting lanes */}
+        <div className="field-note p-8">
+          <h3 className="text-2xl font-semibold text-ink mb-2">Four hosting lanes, chosen by scope and risk</h3>
+          <p className="text-body leading-7 mb-8 max-w-3xl">
+            A project does not have to guess how much process it needs. The lane follows the audience
+            and the blast radius, and it can change as the work grows. Whatever the lane, the owner
+            stays responsible for approved data, testing, accessibility, support, and human review.
+          </p>
+          <ol className="space-y-4">
+            {[
+              { lane: 'Lane 0', name: 'Personal workspace', body: 'Individual exploration in a desktop or sandbox environment.' },
+              { lane: 'Lane 1', name: 'Department application', body: 'A focused application with a known audience and a business owner, published through approved campus paths.' },
+              { lane: 'Lane 2', name: 'Managed campus service', body: 'A shared workflow with integrations or broader operational impact, hosted by TritonAI or ITS.' },
+              { lane: 'Lane 3', name: 'Enterprise service', body: 'Campus-wide delivery with formal architecture and governance.' },
+            ].map((item) => (
+              <li key={item.lane} className="flex flex-col gap-2 border-t border-line pt-4 sm:flex-row sm:gap-6">
+                <span className="font-mono text-xs text-signal-blue sm:w-20 sm:flex-none sm:pt-1">
+                  {item.lane}
+                </span>
+                <span className="flex-1">
+                  <span className="block font-semibold text-ink">{item.name}</span>
+                  <span className="mt-1 block text-sm leading-6 text-body">{item.body}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+          <a
+            href="https://tritonai.ucsd.edu/developer-apis/start.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 font-semibold text-signal-blue transition-colors hover:text-ink"
+          >
+            Credentials, usage expectations, and project ownership
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </section>
 
@@ -683,8 +793,8 @@ export default function TritonGPTContent() {
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" /></svg>
             },
             {
-              title: "Developer API Expansion",
-              desc: "Self-hosted model credits, approved cloud routes, usage reporting, and clearer paths from prototype to funded campus application.",
+              title: "Developer API Program (Live)",
+              desc: "Live with three supported build paths and four hosting lanes from personal sandbox to enterprise service. 309.4B tokens and 105.1M API requests through the gateway in the first half of 2026, 95.3% on self-hosted models. Next: broader recharge paths from prototype to funded campus application.",
               color: "pink",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" /></svg>
             },
