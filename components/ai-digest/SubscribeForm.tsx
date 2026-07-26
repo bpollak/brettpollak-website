@@ -46,15 +46,15 @@ export default function SubscribeForm() {
 
   return (
     <div className="editorial-panel p-8" data-tone="green">
-      <h2 className="text-xl font-bold text-slate-900 mb-2">
+      <h2 className="text-xl font-bold text-ink mb-2">
         Get the digest in your inbox
       </h2>
-      <p className="text-slate-600 text-sm mb-6">
+      <p className="text-body text-sm mb-6">
         A curated AI briefing delivered every morning — real sources, no hallucinated links.
       </p>
 
       {formState === 'success' ? (
-        <div className="rounded-xl bg-blue-50 border border-blue-100 px-5 py-4 text-sm font-medium text-blue-800">
+        <div className="rounded-xl bg-wash-blue border border-line px-5 py-4 text-sm font-medium text-signal-blue">
           You&rsquo;re subscribed! Check your inbox to confirm.
         </div>
       ) : (
@@ -71,13 +71,13 @@ export default function SubscribeForm() {
             onChange={(e) => setEmail(e.target.value)}
             disabled={formState === 'submitting'}
             aria-describedby={formState === 'error' ? 'subscribe-error' : undefined}
-            className="flex-1 rounded-sm border border-[#d9dfd3] bg-[#fffef9] px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-60"
+            className="flex-1 rounded-sm border border-line bg-paper-strong px-4 py-3 text-sm text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-signal-blue focus:border-signal-blue disabled:opacity-60"
           />
           <button
             type="submit"
             disabled={formState === 'submitting'}
             aria-busy={formState === 'submitting'}
-            className="rounded-sm bg-[#17201b] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-60 transition-colors"
+            className="rounded-sm bg-[#17201b] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-signal-blue focus:ring-offset-2 disabled:opacity-60 transition-colors"
           >
             {formState === 'submitting' ? 'Subscribing…' : 'Subscribe'}
           </button>
@@ -85,7 +85,7 @@ export default function SubscribeForm() {
       )}
 
       {formState === 'error' && (
-        <p id="subscribe-error" role="alert" className="mt-3 text-sm text-red-600">
+        <p id="subscribe-error" role="alert" className="mt-3 text-sm text-signal-coral">
           {errorMessage}
         </p>
       )}

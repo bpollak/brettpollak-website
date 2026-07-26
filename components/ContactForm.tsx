@@ -71,29 +71,29 @@ export default function ContactForm() {
   return (
     <div className="editorial-panel p-8 h-full flex flex-col">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 bg-[#edf5f7] border border-[#9eb7aa] flex items-center justify-center">
-          <svg aria-hidden="true" className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-12 h-12 bg-wash-blue border border-[#9eb7aa] flex items-center justify-center">
+          <svg aria-hidden="true" className="w-6 h-6 text-signal-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </div>
-        <h2 className="text-2xl font-bold text-slate-900">Send a Message</h2>
+        <h2 className="text-2xl font-bold text-ink">Send a Message</h2>
       </div>
 
       {status === 'success' && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg" role="alert" aria-live="polite">
-          <p className="text-green-800 font-medium">Thank you for your message! I&apos;ll get back to you soon.</p>
+        <div className="mb-6 p-4 bg-wash-green border border-line rounded-lg" role="alert" aria-live="polite">
+          <p className="text-signal-green font-medium">Thank you for your message! I&apos;ll get back to you soon.</p>
         </div>
       )}
 
       {status === 'error' && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg" role="alert" aria-live="assertive">
-          <p className="text-red-800 font-medium">{errorMessage}</p>
+        <div className="mb-6 p-4 bg-wash-coral border border-line rounded-lg" role="alert" aria-live="assertive">
+          <p className="text-signal-coral font-medium">{errorMessage}</p>
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-5 flex-1 flex flex-col">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-semibold text-body mb-2">
             Name *
           </label>
           <input
@@ -103,13 +103,13 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-[#d9dfd3] bg-[#fffef9] rounded-sm focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all outline-none"
+            className="w-full px-4 py-3 border border-line bg-paper-strong rounded-sm focus:ring-2 focus:ring-signal-blue focus:border-transparent transition-all outline-none"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+          <label htmlFor="email" className="block text-sm font-semibold text-body mb-2">
             Email *
           </label>
           <input
@@ -119,13 +119,13 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-[#d9dfd3] bg-[#fffef9] rounded-sm focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all outline-none"
+            className="w-full px-4 py-3 border border-line bg-paper-strong rounded-sm focus:ring-2 focus:ring-signal-blue focus:border-transparent transition-all outline-none"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">
+          <label htmlFor="subject" className="block text-sm font-semibold text-body mb-2">
             Subject *
           </label>
           <select
@@ -134,7 +134,7 @@ export default function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-[#d9dfd3] bg-[#fffef9] rounded-sm focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all outline-none"
+            className="w-full px-4 py-3 border border-line bg-paper-strong rounded-sm focus:ring-2 focus:ring-signal-blue focus:border-transparent transition-all outline-none"
           >
             <option value="">Select a topic</option>
             <option value="Speaking Engagement">Speaking Engagement</option>
@@ -146,7 +146,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex-1 flex flex-col">
-          <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-semibold text-body mb-2">
             Message *
           </label>
           <textarea
@@ -155,7 +155,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="w-full flex-1 px-4 py-3 border border-[#d9dfd3] bg-[#fffef9] rounded-sm focus:ring-2 focus:ring-blue-700 focus:border-transparent transition-all resize-none outline-none"
+            className="w-full flex-1 px-4 py-3 border border-line bg-paper-strong rounded-sm focus:ring-2 focus:ring-signal-blue focus:border-transparent transition-all resize-none outline-none"
             placeholder="Tell me about your inquiry..."
           />
         </div>
@@ -163,7 +163,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full bg-[#17201b] text-white px-8 py-4 font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+          className="w-full bg-[#17201b] text-white px-8 py-4 font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-signal-gold"
         >
           {status === 'loading' ? 'Sending...' : 'Send Message'}
         </button>

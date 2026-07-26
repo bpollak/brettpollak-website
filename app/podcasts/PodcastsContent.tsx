@@ -13,42 +13,39 @@ import {
 import PodcastCard, { PodcastCardData } from '@/components/PodcastCard';
 import PodcastSubmitModal from '@/components/PodcastSubmitModal';
 
+// Cards cycle through the four signal colours plus ink. Indexed modulo the
+// length, so the cycle can be any size — it used six mixed Tailwind hues
+// (cyan, indigo, rose) that sat outside the site palette.
 const COLOR_CYCLE = [
   {
-    border: 'hover:border-blue-700',
-    badge: 'bg-blue-50 text-blue-900',
-    hoverBg: 'hover:bg-blue-50/30',
-    accent: 'from-blue-800 to-indigo-700',
+    border: 'hover:border-signal-blue',
+    badge: 'bg-wash-blue text-signal-blue',
+    hoverBg: 'hover:bg-wash-blue/30',
+    accent: 'from-signal-blue to-ink',
   },
   {
-    border: 'hover:border-amber-500',
-    badge: 'bg-amber-50 text-amber-800',
-    hoverBg: 'hover:bg-amber-50/30',
-    accent: 'from-amber-500 to-orange-600',
+    border: 'hover:border-signal-gold',
+    badge: 'bg-wash-gold text-signal-gold-ink',
+    hoverBg: 'hover:bg-wash-gold/30',
+    accent: 'from-signal-gold to-signal-gold-ink',
   },
   {
-    border: 'hover:border-rose-700',
-    badge: 'bg-rose-50 text-rose-900',
-    hoverBg: 'hover:bg-rose-50/30',
-    accent: 'from-rose-800 to-red-900',
+    border: 'hover:border-signal-coral',
+    badge: 'bg-wash-coral text-signal-coral',
+    hoverBg: 'hover:bg-wash-coral/30',
+    accent: 'from-signal-coral to-ink',
   },
   {
-    border: 'hover:border-cyan-600',
-    badge: 'bg-cyan-50 text-cyan-800',
-    hoverBg: 'hover:bg-cyan-50/30',
-    accent: 'from-cyan-600 to-blue-600',
+    border: 'hover:border-signal-green',
+    badge: 'bg-wash-green text-signal-green',
+    hoverBg: 'hover:bg-wash-green/30',
+    accent: 'from-signal-green to-ink',
   },
   {
-    border: 'hover:border-indigo-600',
-    badge: 'bg-indigo-50 text-indigo-900',
-    hoverBg: 'hover:bg-indigo-50/30',
-    accent: 'from-indigo-700 to-violet-800',
-  },
-  {
-    border: 'hover:border-slate-600',
-    badge: 'bg-slate-100 text-slate-800',
-    hoverBg: 'hover:bg-slate-50/50',
-    accent: 'from-slate-700 to-slate-900',
+    border: 'hover:border-ink',
+    badge: 'bg-wash-green text-ink',
+    hoverBg: 'hover:bg-paper/50',
+    accent: 'from-ink to-signal-blue',
   },
 ];
 
@@ -240,10 +237,10 @@ export default function PodcastsContent() {
           <button
             key={value}
             onClick={() => setActiveFilter(value)}
-            className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 ${
+            className={`px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ink ${
               activeFilter === value
-                ? 'bg-gradient-to-r from-slate-800 to-blue-900 text-white shadow-lg'
-                : 'bg-white text-slate-600 border-2 border-slate-200 hover:border-slate-400 hover:text-slate-900'
+                ? 'bg-gradient-to-r from-ink to-signal-blue text-white shadow-lg'
+                : 'bg-paper-strong text-body border-2 border-line hover:border-signal-blue hover:text-ink'
             }`}
           >
             {label}
@@ -251,7 +248,7 @@ export default function PodcastsContent() {
               className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
                 activeFilter === value
                   ? 'bg-white/20 text-white'
-                  : 'bg-slate-100 text-slate-500'
+                  : 'bg-wash-green text-muted'
               }`}
             >
               {count}
@@ -263,7 +260,7 @@ export default function PodcastsContent() {
         {firebaseEnabled && (
           <button
             onClick={() => setModalOpen(true)}
-            className="ml-auto px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center gap-2 hover:shadow-xl active:scale-95"
+            className="ml-auto px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-signal-green to-ink text-white shadow-lg hover:from-ink hover:to-signal-green transition-all duration-300 flex items-center gap-2 hover:shadow-xl active:scale-95"
           >
             <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -276,8 +273,8 @@ export default function PodcastsContent() {
       {/* Loading state */}
       {loading && firebaseEnabled && (
         <div className="flex justify-center py-16">
-          <div className="flex items-center gap-3 text-slate-500">
-            <div className="w-6 h-6 border-2 border-slate-300 border-t-blue-500 rounded-full animate-spin" />
+          <div className="flex items-center gap-3 text-muted">
+            <div className="w-6 h-6 border-2 border-line border-t-blue-500 rounded-full animate-spin" />
             Loading podcasts...
           </div>
         </div>
@@ -303,13 +300,13 @@ export default function PodcastsContent() {
       {/* Empty state */}
       {!loading && filteredPodcasts.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-slate-500 text-lg">
+          <p className="text-muted text-lg">
             No podcasts found in this category.
           </p>
           {firebaseEnabled && (
             <button
               onClick={() => setModalOpen(true)}
-              className="mt-4 text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+              className="mt-4 text-signal-blue font-semibold hover:text-signal-blue transition-colors"
             >
               Be the first to share one!
             </button>

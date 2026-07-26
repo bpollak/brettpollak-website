@@ -184,8 +184,8 @@ export default function SpeakingPage() {
         {/* Upcoming Engagements */}
         {UPCOMING_ENGAGEMENTS.length > 0 && (
           <section className="mb-20">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Upcoming Engagements</h2>
-            <p className="text-slate-500 mb-10">Scheduled events and upcoming talks.</p>
+            <h2 className="text-3xl font-bold text-ink mb-2">Upcoming Engagements</h2>
+            <p className="text-muted mb-10">Scheduled events and upcoming talks.</p>
             <div className="space-y-4">
               {UPCOMING_ENGAGEMENTS.map((item, i) => (
                 <a
@@ -193,24 +193,24 @@ export default function SpeakingPage() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-6 bg-white rounded-xl px-7 py-5 border border-slate-200 shadow-sm hover:shadow-md transition-shadow group"
+                  className="flex items-start gap-6 bg-paper-strong rounded-xl px-7 py-5 border border-line shadow-sm hover:shadow-md transition-shadow group"
                 >
                   <div className="flex flex-col items-center min-w-[70px]">
-                    <div className="text-sm text-blue-700 font-mono pt-0.5 whitespace-nowrap">
+                    <div className="text-sm text-signal-blue font-mono pt-0.5 whitespace-nowrap">
                       {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}
                     </div>
-                    <div className="text-xs text-blue-500 font-semibold">
+                    <div className="text-xs text-signal-blue font-semibold">
                       {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', timeZone: 'UTC' })}
                     </div>
-                    <div className="mt-1 px-2 py-0.5 bg-blue-100 text-blue-800 text-[10px] font-bold rounded-full uppercase tracking-wider">
+                    <div className="mt-1 px-2 py-0.5 bg-wash-blue text-signal-blue text-[10px] font-bold rounded-full uppercase tracking-wider">
                       Upcoming
                     </div>
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">{item.publication}</div>
-                    <div className="text-slate-900 font-medium group-hover:text-blue-800 transition-colors">{item.title}</div>
+                    <div className="text-xs font-semibold text-signal-blue uppercase tracking-wide mb-1">{item.publication}</div>
+                    <div className="text-ink font-medium group-hover:text-signal-blue transition-colors">{item.title}</div>
                   </div>
-                  <svg aria-hidden="true" className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg aria-hidden="true" className="w-4 h-4 text-muted group-hover:text-signal-blue mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -222,8 +222,8 @@ export default function SpeakingPage() {
         {/* Past Engagements */}
         {PAST_ENGAGEMENTS.length > 0 && (
           <section className="mb-20">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Recent Engagements</h2>
-            <p className="text-slate-500 mb-10">Recent conferences, summits, and panels.</p>
+            <h2 className="text-3xl font-bold text-ink mb-2">Recent Engagements</h2>
+            <p className="text-muted mb-10">Recent conferences, summits, and panels.</p>
             <div className="space-y-4">
               {PAST_ENGAGEMENTS.map((item, i) => (
                 <a
@@ -231,16 +231,16 @@ export default function SpeakingPage() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-6 bg-white rounded-xl px-7 py-5 border border-slate-100 shadow-sm hover:shadow-md transition-shadow group"
+                  className="flex items-start gap-6 bg-paper-strong rounded-xl px-7 py-5 border border-line shadow-sm hover:shadow-md transition-shadow group"
                 >
-                  <div className="text-sm text-slate-400 font-mono pt-0.5 whitespace-nowrap min-w-[70px]">
+                  <div className="text-sm text-muted font-mono pt-0.5 whitespace-nowrap min-w-[70px]">
                     {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })}
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">{item.publication}</div>
-                    <div className="text-slate-900 font-medium group-hover:text-blue-800 transition-colors">{item.title}</div>
+                    <div className="text-xs font-semibold text-signal-blue uppercase tracking-wide mb-1">{item.publication}</div>
+                    <div className="text-ink font-medium group-hover:text-signal-blue transition-colors">{item.title}</div>
                   </div>
-                  <svg aria-hidden="true" className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg aria-hidden="true" className="w-4 h-4 text-muted group-hover:text-signal-blue mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -251,21 +251,21 @@ export default function SpeakingPage() {
 
         {/* Speaking Topics */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">Topics</h2>
-          <p className="text-slate-500 mb-10">Keynote and breakout session topics I cover regularly. All are grounded in production deployments at UC San Diego.</p>
+          <h2 className="text-3xl font-bold text-ink mb-2">Topics</h2>
+          <p className="text-muted mb-10">Keynote and breakout session topics I cover regularly. All are grounded in production deployments at UC San Diego.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {SPEAKING_TOPICS.map((topic, i) => (
               <div
                 key={i}
                 className="editorial-panel p-8 transition-colors hover:border-[#1f5a8a]"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{topic.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-5">{topic.description}</p>
+                <h3 className="text-xl font-bold text-ink mb-3">{topic.title}</h3>
+                <p className="text-body text-sm leading-relaxed mb-5">{topic.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {topic.signals.map((s, si) => (
                     <span
                       key={si}
-                      className="px-3 py-1 bg-blue-50 text-blue-800 text-xs font-medium rounded-full border border-blue-100"
+                      className="px-3 py-1 bg-wash-blue text-signal-blue text-xs font-medium rounded-full border border-line"
                     >
                       {s}
                     </span>
@@ -278,7 +278,7 @@ export default function SpeakingPage() {
 
         {/* What to Expect */}
         <section className="mb-20 editorial-panel p-8 md:p-10">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">What to Expect</h2>
+          <h2 className="text-3xl font-bold text-ink mb-8">What to Expect</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -295,9 +295,9 @@ export default function SpeakingPage() {
               },
             ].map((item, i) => (
               <div key={i}>
-                <div className="w-10 h-1 bg-amber-400 mb-4 rounded-full"></div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.heading}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+                <div className="w-10 h-1 bg-signal-gold mb-4 rounded-full"></div>
+                <h3 className="text-lg font-semibold text-ink mb-2">{item.heading}</h3>
+                <p className="text-body text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
@@ -306,13 +306,13 @@ export default function SpeakingPage() {
         {/* CTA */}
         <section className="text-center py-12 editorial-panel editorial-dark px-8">
           <h2 className="text-3xl font-bold text-white mb-4">Interested in having me speak?</h2>
-          <p className="text-slate-300 mb-8 max-w-xl mx-auto">
+          <p className="text-on-dark mb-8 max-w-xl mx-auto">
             I speak at higher ed technology conferences, AI summits, and institutional leadership events.
             Let me know what you&apos;re planning and who&apos;s in the room.
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-4 bg-[#f2b84b] text-[#17201b] font-bold rounded-sm hover:bg-[#ffd274] transition-colors"
+            className="inline-block px-8 py-4 bg-[#f2b84b] text-ink font-bold rounded-sm hover:bg-[#ffd274] transition-colors"
           >
             Get in Touch
           </Link>

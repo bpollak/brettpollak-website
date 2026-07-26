@@ -8,65 +8,65 @@ export default function TritonGPTContent() {
   const programOfferingStyles = [
     {
       card: "border-l-[#1f5a8a]",
-      iconWrap: "bg-[#edf4f7] text-[#1f5a8a]",
-      cta: "text-blue-800",
+      iconWrap: "bg-wash-blue text-signal-blue",
+      cta: "text-signal-blue",
     },
     {
       card: "border-l-[#c97712]",
-      iconWrap: "bg-[#fff5e7] text-[#9b5a06]",
-      cta: "text-[#9b5a06]",
+      iconWrap: "bg-wash-gold text-signal-gold-ink",
+      cta: "text-signal-gold-ink",
     },
     {
       card: "border-l-[#466b54]",
-      iconWrap: "bg-[#eef5ee] text-[#466b54]",
+      iconWrap: "bg-wash-green text-[#466b54]",
       cta: "text-[#466b54]",
     },
     {
       card: "border-l-[#b85642]",
-      iconWrap: "bg-[#fff0ed] text-[#b85642]",
+      iconWrap: "bg-wash-coral text-[#b85642]",
       cta: "text-[#b85642]",
     },
     {
       card: "border-l-[#17201b]",
-      iconWrap: "bg-[#eef0eb] text-[#17201b]",
-      cta: "text-[#17201b]",
+      iconWrap: "bg-[#eef0eb] text-ink",
+      cta: "text-ink",
     },
     {
       card: "border-l-[#1f5a8a]",
-      iconWrap: "bg-[#edf4f7] text-[#1f5a8a]",
-      cta: "text-[#1f5a8a]",
+      iconWrap: "bg-wash-blue text-signal-blue",
+      cta: "text-signal-blue",
     },
     {
       card: "border-l-[#c97712]",
-      iconWrap: "bg-[#fff5e7] text-[#9b5a06]",
-      cta: "text-[#9b5a06]",
+      iconWrap: "bg-wash-gold text-signal-gold-ink",
+      cta: "text-signal-gold-ink",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content" tabIndex={-1}>
+    <main className="min-h-screen bg-paper text-ink" id="main-content" tabIndex={-1}>
       {/* Hero Section */}
-      <section className="paper-grid border-b border-[#d9dfd3]">
+      <section className="paper-grid border-b border-line">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-end">
             <div>
               <p className="rule-label mb-6">Program overview</p>
-              <h1 className="text-5xl md:text-7xl leading-none font-medium text-[#17201b]">TritonAI</h1>
-              <p className="mt-8 text-2xl md:text-3xl leading-10 text-[#485248]">
+              <h1 className="text-5xl md:text-7xl leading-none font-medium text-ink">TritonAI</h1>
+              <p className="mt-8 text-2xl md:text-3xl leading-10 text-body">
                 A shared AI ecosystem for service, instruction, development, and everyday campus work.
               </p>
             </div>
-            <div className="border-y border-[#d9dfd3] py-6">
-              <p className="text-lg leading-8 text-[#485248]">
+            <div className="border-y border-line py-6">
+              <p className="text-lg leading-8 text-body">
                 TritonAI brings together TritonGPT, live campus data tools, a growing model hub, developer APIs, embedded assistants, reusable workflows, and the early scaffolding for supervised agents so campus teams can build on governed infrastructure instead of starting from scratch.
               </p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <div className="system-node p-4">
-                  <p className="font-mono text-xs text-[#c97712]">UPDATED</p>
+                  <p className="font-mono text-xs text-signal-gold-ink">UPDATED</p>
                   <p className="mt-2 font-semibold">July 2026</p>
                 </div>
                 <div className="system-node p-4">
-                  <p className="font-mono text-xs text-[#c97712]">CONTEXT</p>
+                  <p className="font-mono text-xs text-signal-gold-ink">CONTEXT</p>
                   <p className="mt-2 font-semibold">University of California, San Diego</p>
                 </div>
               </div>
@@ -80,16 +80,16 @@ export default function TritonGPTContent() {
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="rule-label mb-4">Executive summary</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#17201b]">A platform program, not a single chatbot.</h2>
+            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">A platform program, not a single chatbot.</h2>
           </div>
           <div className="field-note p-8">
-            <p className="text-xl text-[#485248] leading-9 mb-7">
-            <span className="font-bold text-blue-800">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It now spans secure infrastructure, task-specific assistants, live campus-aware tools, instructional pilots, developer access, and shared workflows in one governed campus ecosystem.
+            <p className="text-xl text-body leading-9 mb-7">
+            <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It now spans secure infrastructure, task-specific assistants, live campus-aware tools, instructional pilots, developer access, and shared workflows in one governed campus ecosystem.
           </p>
-            <p className="text-xl text-[#485248] leading-9 mb-8">
-            <span className="font-bold text-blue-800">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
+            <p className="text-xl text-body leading-9 mb-8">
+            <span className="font-bold text-signal-blue">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
           </p>
-            <p className="text-xl text-[#485248] leading-9">
+            <p className="text-xl text-body leading-9">
               The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function TritonGPTContent() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="mb-8 border border-[#d9dfd3] bg-white/70 p-4 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
+        <div className="mb-8 border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
           <TritonAISystemMap />
         </div>
         <div className="grid gap-3 md:grid-cols-4">
@@ -108,9 +108,9 @@ export default function TritonGPTContent() {
             ['04', 'Workflow', 'Assistants, embedded support, tools, and reusable agent scaffolding'],
           ].map(([number, title, body]) => (
             <div key={title} className="system-node p-5">
-              <p className="font-mono text-xs text-[#c97712]">{number}</p>
-              <h3 className="mt-5 text-lg font-semibold text-[#17201b]">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#485248]">{body}</p>
+              <p className="font-mono text-xs text-signal-gold-ink">{number}</p>
+              <h3 className="mt-5 text-lg font-semibold text-ink">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-body">{body}</p>
             </div>
           ))}
         </div>
@@ -120,8 +120,8 @@ export default function TritonGPTContent() {
       <section className="max-w-6xl mx-auto px-6 pb-16">
         <div className="mb-10 max-w-4xl">
           <p className="rule-label mb-4">Program parts</p>
-          <h2 className="text-3xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">What TritonAI Includes</h2>
-          <p className="text-lg leading-8 text-[#485248]">
+          <h2 className="text-3xl md:text-5xl font-medium leading-tight text-ink mb-4">What TritonAI Includes</h2>
+          <p className="text-lg leading-8 text-body">
             TritonAI includes the shared pieces needed to support campus adoption: a governed platform, embedded experiences, instructional tools,
             live data integrations, developer access, reusable skills, and a path toward supervised agent workflows.
           </p>
@@ -216,15 +216,15 @@ export default function TritonGPTContent() {
                 href={offering.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group border border-l-4 border-[#d9dfd3] bg-[#fffef9] p-7 transition-colors hover:bg-white ${style.card}`}
+                className={`group border border-l-4 border-line bg-paper-strong p-7 transition-colors hover:bg-white ${style.card}`}
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-10 h-10 flex items-center justify-center flex-shrink-0 ${style.iconWrap}`}>
                     {offering.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#17201b]">{offering.title}</h3>
-                    <p className="mt-2 text-sm text-[#485248] leading-6">{offering.description}</p>
+                    <h3 className="text-lg font-semibold text-ink">{offering.title}</h3>
+                    <p className="mt-2 text-sm text-body leading-6">{offering.description}</p>
                     <p className={`mt-4 text-sm font-semibold inline-flex items-center gap-2 ${style.cta}`}>
                       Learn more
                       <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -244,8 +244,8 @@ export default function TritonGPTContent() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12 max-w-4xl">
             <p className="rule-label mb-4">Recorded work</p>
-            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-4">TritonAI in Action</h2>
-            <p className="text-xl leading-8 text-[#485248]">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-4">TritonAI in Action</h2>
+            <p className="text-xl leading-8 text-body">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
           </div>
           <div className="grid grid-cols-1 gap-8">
             {[
@@ -274,11 +274,11 @@ export default function TritonGPTContent() {
             ].map((video) => (
               <div
                 key={video.src}
-                className="overflow-hidden border border-[#d9dfd3] bg-[#fffef9]"
+                className="overflow-hidden border border-line bg-paper-strong"
               >
-                <div className="p-6 border-b border-[#d9dfd3]">
-                  <h3 className="text-xl font-semibold text-[#17201b]">{video.title}</h3>
-                  <p className="mt-2 text-sm text-[#485248] leading-6">{video.description}</p>
+                <div className="p-6 border-b border-line">
+                  <h3 className="text-xl font-semibold text-ink">{video.title}</h3>
+                  <p className="mt-2 text-sm text-body leading-6">{video.description}</p>
                 </div>
                 <div className="relative">
                   <video
@@ -305,34 +305,34 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Key Metrics */}
-      <section className="bg-[#fffef9] py-20 border-y border-[#d9dfd3]">
+      <section className="bg-paper-strong py-20 border-y border-line">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
               <p className="rule-label mb-4">Measured signals</p>
-              <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b]">Early Signals from TritonAI</h2>
+              <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink">Early Signals from TritonAI</h2>
             </div>
-            <p className="text-lg leading-8 text-[#485248] max-w-3xl">
+            <p className="text-lg leading-8 text-body max-w-3xl">
               A few measures that show how the work is affecting administrative workflows, public support, and learning.
             </p>
           </div>
-          <div className="grid border-y border-[#d9dfd3] md:grid-cols-4">
+          <div className="grid border-y border-line md:grid-cols-4">
             {[
-              { value: 91, prefix: '', suffix: '%', label: 'Faster Contract Review', detail: '120 minutes to 11 minutes on average', colorClass: 'text-[#1f5a8a]' },
-              { value: 83, prefix: '', suffix: '%', label: 'Faster Job Description Drafting', detail: '30 minutes to 5 minutes on average', colorClass: 'text-[#b8503f]' },
-              { value: 20, prefix: '', suffix: '', label: 'Model Hub Breadth', detail: 'Self-hosted and approved cloud models available through TritonAI', colorClass: 'text-[#9b5a06]' },
-              { value: 500, prefix: '$', suffix: 'K', label: 'Projected Annual Savings', detail: 'From replacing third-party public support tooling', colorClass: 'text-[#366c5a]' },
+              { value: 91, prefix: '', suffix: '%', label: 'Faster Contract Review', detail: '120 minutes to 11 minutes on average', colorClass: 'text-signal-blue' },
+              { value: 83, prefix: '', suffix: '%', label: 'Faster Job Description Drafting', detail: '30 minutes to 5 minutes on average', colorClass: 'text-signal-coral' },
+              { value: 20, prefix: '', suffix: '', label: 'Model Hub Breadth', detail: 'Self-hosted and approved cloud models available through TritonAI', colorClass: 'text-signal-gold-ink' },
+              { value: 500, prefix: '$', suffix: 'K', label: 'Projected Annual Savings', detail: 'From replacing third-party public support tooling', colorClass: 'text-signal-green' },
             ].map(({ value, prefix, suffix, label, detail, colorClass }, index) => (
-              <div key={label} className="border-b border-[#d9dfd3] p-7 md:border-b-0 md:border-r md:last:border-r-0">
-                <p className="font-mono text-xs text-[#9b5a06]">0{index + 1}</p>
+              <div key={label} className="border-b border-line p-7 md:border-b-0 md:border-r md:last:border-r-0">
+                <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
                 <CountUp
                   value={value}
                   prefix={prefix}
                   suffix={suffix}
                   className={`mt-5 block text-5xl font-semibold leading-none ${colorClass}`}
                 />
-                <div className="mt-5 font-semibold text-[#17201b]">{label}</div>
-                <div className="mt-2 text-sm leading-6 text-[#485248]">{detail}</div>
+                <div className="mt-5 font-semibold text-ink">{label}</div>
+                <div className="mt-2 text-sm leading-6 text-body">{detail}</div>
               </div>
             ))}
           </div>
@@ -342,8 +342,8 @@ export default function TritonGPTContent() {
       {/* Strategic Vision */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <p className="rule-label mb-4">Operating principles</p>
-        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">How TritonAI Is Taking Shape</h2>
-        <p className="text-lg leading-8 text-[#485248] max-w-4xl mb-10">
+        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">How TritonAI Is Taking Shape</h2>
+        <p className="text-lg leading-8 text-body max-w-4xl mb-10">
           TritonAI is being built around a few practical principles: governed infrastructure for sensitive work, shared access instead of isolated pilots,
           tools designed around specific campus pain points, model choice without fragmented governance, and an architecture that can evolve from assistants toward supervised agency.
         </p>
@@ -382,20 +382,20 @@ export default function TritonGPTContent() {
             },
           ].map((principle) => (
             <div key={principle.title} className="field-note p-8">
-              <h3 className="text-xl font-semibold text-[#17201b] mb-3">{principle.title}</h3>
-              <p className="text-[#485248] leading-7">{principle.description}</p>
+              <h3 className="text-xl font-semibold text-ink mb-3">{principle.title}</h3>
+              <p className="text-body leading-7">{principle.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Use Cases */}
-      <section className="bg-[#f7f9f5] py-20">
+      <section className="bg-paper py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mb-12">
             <p className="rule-label mb-4">Assistant index</p>
-            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">Examples Across the TritonAI Portfolio</h2>
-            <p className="text-lg leading-8 text-[#485248]">
+            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">Examples Across the TritonAI Portfolio</h2>
+            <p className="text-lg leading-8 text-body">
               These are not generic chatbots. They are focused tools built around specific service, instructional, research, and administrative workflows where grounded context and institutional trust matter.
             </p>
           </div>
@@ -603,20 +603,20 @@ export default function TritonGPTContent() {
                   className="system-node p-7"
                 >
                   <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-[#eef2ea] text-[#1f5a8a]">
+                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-[#eef2ea] text-signal-blue">
                       {assistant.icon}
                     </div>
-                    <p className="font-mono text-xs text-[#c97712]">{String(index + 1).padStart(2, '0')}</p>
+                    <p className="font-mono text-xs text-signal-gold-ink">{String(index + 1).padStart(2, '0')}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-[#17201b] mb-3">
+                  <h3 className="text-xl font-semibold text-ink mb-3">
                     {assistant.name}
                   </h3>
-                  <p className="text-sm text-[#485248] mb-4 leading-6 flex-1">
+                  <p className="text-sm text-body mb-4 leading-6 flex-1">
                     {assistant.desc}
                   </p>
                   {assistant.metric && (
                     <div className="mt-auto">
-                      <p className="text-sm font-semibold mb-1 text-[#1f5a8a]">{assistant.metric}</p>
+                      <p className="text-sm font-semibold mb-1 text-signal-blue">{assistant.metric}</p>
                       {assistant.stats && <p className="text-xs text-[#6b746b]">{assistant.stats}</p>}
                     </div>
                   )}
@@ -631,36 +631,36 @@ export default function TritonGPTContent() {
       <section className="bg-[#eef2ea] py-24">
         <div className="max-w-5xl mx-auto px-6">
           <p className="rule-label mb-4">External recognition</p>
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-12">Recognition & Awards</h2>
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-12">Recognition & Awards</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <a 
               href="https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block border border-[#d9dfd3] bg-[#fffef9] p-8 transition-colors hover:bg-white"
+              className="group block border border-line bg-paper-strong p-8 transition-colors hover:bg-white"
             >
-              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-[#fff5e7] text-[#c97712]">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-wash-gold text-signal-gold-ink">
                 <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-semibold text-[#17201b] mb-2 transition-colors group-hover:text-[#1f5a8a]">CIO 100 Award</h3>
-              <p className="text-[#485248]">2025 - Recognized as top global IT innovation</p>
+              <h3 className="text-2xl font-semibold text-ink mb-2 transition-colors group-hover:text-[#1f5a8a]">CIO 100 Award</h3>
+              <p className="text-body">2025 - Recognized as top global IT innovation</p>
             </a>
             <a 
               href="https://www.gartner.com/en/about/awards/eye-on-innovation"
               target="_blank"
               rel="noopener noreferrer"
-              className="group block border border-[#d9dfd3] bg-[#fffef9] p-8 transition-colors hover:bg-white"
+              className="group block border border-line bg-paper-strong p-8 transition-colors hover:bg-white"
             >
-              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-[#edf4f7] text-[#1f5a8a]">
+              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-wash-blue text-signal-blue">
                 <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                   <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-semibold text-[#17201b] mb-2 transition-colors group-hover:text-[#1f5a8a]">Gartner Eye on Innovation</h3>
-              <p className="text-[#485248]">Finalist for transformational impact in education</p>
+              <h3 className="text-2xl font-semibold text-ink mb-2 transition-colors group-hover:text-[#1f5a8a]">Gartner Eye on Innovation</h3>
+              <p className="text-body">Finalist for transformational impact in education</p>
             </a>
           </div>
         </div>
@@ -669,8 +669,8 @@ export default function TritonGPTContent() {
       {/* Future Roadmap */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <p className="rule-label mb-4">Roadmap</p>
-        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#17201b] mb-5">Where TritonAI Is Going Next</h2>
-        <p className="text-lg leading-8 text-[#485248] max-w-4xl mb-12">
+        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">Where TritonAI Is Going Next</h2>
+        <p className="text-lg leading-8 text-body max-w-4xl mb-12">
           The next phase expands beyond chat into a broader tools hub: richer model access for developers, more embedded campus experiences,
           workflow orchestration, observability, live data integrations, and new support for academic and administrative use cases.
         </p>
@@ -719,13 +719,13 @@ export default function TritonGPTContent() {
                 className="system-node p-7"
               >
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-[#eef2ea] text-[#1f5a8a]">{item.icon}</div>
-                  <p className="font-mono text-xs text-[#c97712]">{String(index + 1).padStart(2, '0')}</p>
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center bg-[#eef2ea] text-signal-blue">{item.icon}</div>
+                  <p className="font-mono text-xs text-signal-gold-ink">{String(index + 1).padStart(2, '0')}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-[#17201b] mb-3">
+                <h3 className="text-xl font-semibold text-ink mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#485248] mb-4 leading-6 flex-1">
+                <p className="text-sm text-body mb-4 leading-6 flex-1">
                   {item.desc}
                 </p>
               </div>
@@ -749,10 +749,10 @@ export default function TritonGPTContent() {
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-[#f7f9f5] py-16">
+      <section className="bg-paper py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-medium text-[#17201b] mb-6">Want to Compare Notes?</h2>
-          <p className="text-xl leading-8 text-[#485248] mb-8">
+          <h2 className="text-3xl md:text-4xl font-medium text-ink mb-6">Want to Compare Notes?</h2>
+          <p className="text-xl leading-8 text-body mb-8">
             If you&apos;re building something similar in higher education, I&apos;d be glad to compare notes and hear what your institution is learning.
           </p>
           <Link

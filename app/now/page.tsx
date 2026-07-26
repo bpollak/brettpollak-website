@@ -55,7 +55,7 @@ export default function NowPage() {
             {currentNow.intro}
           </p>
         )}
-        <div className="text-sm text-[#485248] flex flex-wrap items-center gap-x-4 gap-y-1">
+        <div className="text-sm text-body flex flex-wrap items-center gap-x-4 gap-y-1">
           <span>Last updated: {formatDate(currentNow.lastUpdated)}</span>
           {currentNow.location && (
             <>
@@ -70,11 +70,11 @@ export default function NowPage() {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <ul className="space-y-10">
           {currentNow.items.map((item) => (
-            <li key={item.label} className="border-l-4 border-[#1f5a8a] bg-[#fffef9] px-6 py-5">
+            <li key={item.label} className="border-l-4 border-[#1f5a8a] bg-paper-strong px-6 py-5">
               <h2 className="rule-label mb-3">
                 {item.label}
               </h2>
-              <p className="text-[#485248] text-lg leading-8">{item.body}</p>
+              <p className="text-body text-lg leading-8">{item.body}</p>
             </li>
           ))}
         </ul>

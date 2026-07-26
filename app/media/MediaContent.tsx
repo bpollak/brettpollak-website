@@ -17,10 +17,10 @@ const categoryLabels: Record<CategoryFilter, string> = {
 };
 
 const categoryStyles: Record<MediaItem['category'], string> = {
-  article: 'border-[#9db8c8] bg-[#edf5f7] text-[#1f5a8a]',
-  interview: 'border-[#dfbf8b] bg-[#fff5e7] text-[#9b5a06]',
-  whitepaper: 'border-[#a9c2ae] bg-[#eef5ee] text-[#366c5a]',
-  speaking: 'border-[#e6ad9f] bg-[#fff0ed] text-[#b8503f]',
+  article: 'border-[#9db8c8] bg-wash-blue text-signal-blue',
+  interview: 'border-[#dfbf8b] bg-wash-gold text-signal-gold-ink',
+  whitepaper: 'border-[#a9c2ae] bg-wash-green text-signal-green',
+  speaking: 'border-[#e6ad9f] bg-wash-coral text-signal-coral',
   award: 'border-[#b7add4] bg-[#f2eff9] text-[#5b4a86]',
 };
 
@@ -113,13 +113,13 @@ export default function MediaContent() {
 
   return (
     <div>
-      <div className="mb-10 border border-[#d9dfd3] bg-white/80 p-4 shadow-[8px_8px_0_rgba(54,108,90,0.08)]">
-        <div className="mb-4 grid gap-2 border-b border-[#d9dfd3] pb-4 sm:grid-cols-[1fr_auto] sm:items-end">
+      <div className="mb-10 border border-line bg-white/80 p-4 shadow-[8px_8px_0_rgba(54,108,90,0.08)]">
+        <div className="mb-4 grid gap-2 border-b border-line pb-4 sm:grid-cols-[1fr_auto] sm:items-end">
           <div>
             <p className="rule-label mb-2">Archive controls</p>
-            <p className="text-sm leading-6 text-[#485248]">Filter the public record by format, then follow each item back to its original source.</p>
+            <p className="text-sm leading-6 text-body">Filter the public record by format, then follow each item back to its original source.</p>
           </div>
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#1f5a8a]">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-signal-blue">
             {filteredItems.length} visible
           </p>
         </div>
@@ -131,26 +131,26 @@ export default function MediaContent() {
               className={`rounded-sm border px-3 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
                 activeFilter === value
                   ? 'border-[#17201b] bg-[#17201b] text-white'
-                  : 'border-[#d9dfd3] bg-[#fffef9] text-[#485248] hover:border-[#9eb7aa] hover:text-[#17201b]'
+                  : 'border-line bg-paper-strong text-body hover:border-[#9eb7aa] hover:text-[#17201b]'
               }`}
             >
               {label}
-              <span className={`ml-2 font-mono text-xs ${activeFilter === value ? 'text-white/65' : 'text-[#7a8479]'}`}>{count}</span>
+              <span className={`ml-2 font-mono text-xs ${activeFilter === value ? 'text-white/65' : 'text-muted'}`}>{count}</span>
             </button>
           ))}
         </div>
       </div>
 
       <div className="mb-8 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end">
-        <p className="text-[#485248]">
-          Showing <span className="font-semibold text-[#17201b]">{filteredItems.length}</span> item{filteredItems.length !== 1 ? 's' : ''}
+        <p className="text-body">
+          Showing <span className="font-semibold text-ink">{filteredItems.length}</span> item{filteredItems.length !== 1 ? 's' : ''}
           {activeFilter !== 'all' ? ` in ${categoryLabels[activeFilter].toLowerCase()}` : ''}.
         </p>
         <p className="rule-label">Publication index</p>
       </div>
 
       {years.length === 0 ? (
-        <div className="border-y border-[#d9dfd3] py-14 text-center text-[#485248]">
+        <div className="border-y border-line py-14 text-center text-body">
           No publications found in this category.
         </div>
       ) : (
@@ -158,13 +158,13 @@ export default function MediaContent() {
           {years.map((year) => (
             <section key={year} className="grid gap-5 lg:grid-cols-[9rem_1fr]">
               <div>
-                <h2 className="font-mono text-3xl text-[#17201b]">{year}</h2>
-                <p className="mt-2 text-sm text-[#7a8479]">
+                <h2 className="font-mono text-3xl text-ink">{year}</h2>
+                <p className="mt-2 text-sm text-muted">
                   {itemsByYear[Number(year)].length} item{itemsByYear[Number(year)].length !== 1 ? 's' : ''}
                 </p>
               </div>
 
-              <div className="border-y border-[#d9dfd3]">
+              <div className="border-y border-line">
                 {itemsByYear[Number(year)].map((item) => {
                   const icon = iconForUrl(item.url);
                   return (
@@ -193,20 +193,20 @@ export default function MediaContent() {
                       )}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="block text-lg font-medium leading-7 text-[#17201b] transition-colors group-hover:text-[#1f5a8a]">
+                      <span className="block text-lg font-medium leading-7 text-ink transition-colors group-hover:text-[#1f5a8a]">
                         {item.title}
                       </span>
-                      <span className="mt-1 block font-mono text-xs uppercase tracking-[0.08em] text-[#7a8479]">
+                      <span className="mt-1 block font-mono text-xs uppercase tracking-[0.08em] text-muted">
                         <span className="whitespace-nowrap">{formatDate(item.date)}</span>
                         <span className="mx-2 text-[#d9dfd3]">/</span>
-                        <span className="text-[#485248] normal-case tracking-normal font-sans text-sm font-medium">{item.publication}</span>
+                        <span className="text-body normal-case tracking-normal font-sans text-sm font-medium">{item.publication}</span>
                       </span>
                     </span>
                     <span className="flex shrink-0 flex-col items-end gap-2">
                       <span className={`rounded-sm border px-2 py-1 text-xs font-semibold uppercase ${categoryStyles[item.category]}`}>
                         {item.category}
                       </span>
-                      <span className="hidden font-mono text-xs text-[#1f5a8a] sm:inline-flex sm:items-center sm:gap-1">
+                      <span className="hidden font-mono text-xs text-signal-blue sm:inline-flex sm:items-center sm:gap-1">
                         {item.url === '#' ? 'record' : 'open'}
                         {item.url !== '#' && (
                           <span aria-hidden="true" className="transition-transform duration-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
