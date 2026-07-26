@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { mediaItems } from '@/lib/mediaData';
 
 export const metadata: Metadata = {
-  title: 'Speaking | Brett Pollak — AI in Higher Education',
+  title: 'Speaking — AI in Higher Education',
   description:
     'Brett Pollak speaks on AI in higher education, agentic workflows, institutional AI governance, and how universities are building vertical AI at scale. Available for keynotes, panels, and conference sessions.',
   alternates: {

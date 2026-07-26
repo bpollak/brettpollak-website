@@ -150,7 +150,13 @@ export const metadata: Metadata = {
       ],
     },
   },
-  title: "Brett Pollak | AI in Higher Education",
+  // Pages that set a bare string title get the brand suffix appended for them.
+  // A page needing full control (already branded, or deliberately unbranded)
+  // can still set `title: { absolute: '…' }`.
+  title: {
+    default: "Brett Pollak | AI in Higher Education",
+    template: "%s | Brett Pollak",
+  },
   description: siteDescription,
   applicationName: "Brett Pollak",
   creator: "Brett Pollak",

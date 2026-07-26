@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import PodcastsContent from './PodcastsContent';
 
 export const metadata: Metadata = {
-  title: "Podcast Discovery | Brett Pollak",
+  title: "Podcast Discovery",
   description: "Discover and share your favorite podcasts on AI, technology, economics, and more. Featuring Brett's curated picks and community recommendations.",
   alternates: {
     canonical: "https://brettcpollak.com/podcasts",

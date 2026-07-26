@@ -5,7 +5,7 @@ import { mediaItems } from "@/lib/mediaData";
 import { SITE_URL, staticPageDates } from "@/lib/seoDates";
 
 export const metadata: Metadata = {
-  title: "LinkedIn Notes | Brett Pollak",
+  title: "LinkedIn Notes",
   description:
     "What Brett Pollak writes about on LinkedIn — institutional AI at UC San Diego, AI governance, agentic workflows, and citizen developer enablement — plus his published articles and posts.",
   alternates: {

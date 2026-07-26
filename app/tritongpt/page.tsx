@@ -2,7 +2,7 @@ import TritonGPTContent from './TritonGPTContent';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TritonAI | Shared AI Infrastructure in Higher Education",
+  title: "TritonAI — Shared AI Infrastructure in Higher Education",
   description: "How UC San Diego is building TritonAI: shared AI infrastructure spanning TritonGPT, live campus tools, model access, developer APIs, embedded assistants, and agent-ready workflows.",
   alternates: {
     canonical: "https://brettcpollak.com/tritongpt",

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
-  title: "About Brett Pollak | Work in Higher Education and AI",
+  title: "About — Work in Higher Education and AI",
   // Updated description to reflect Brett's preferred professional title
   description: "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego – background and current work on AI, digital services, and institutional change in higher education.",
   alternates: {

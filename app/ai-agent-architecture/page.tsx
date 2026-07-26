@@ -6,7 +6,7 @@ import DailyRhythmClock from '@/components/ai-architecture/DailyRhythmClock';
 import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Architecture | Brett Pollak',
+  title: 'AI Agent Architecture',
   description:
     'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 636-node knowledge graph, 602 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {

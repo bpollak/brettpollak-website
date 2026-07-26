@@ -5,7 +5,7 @@ import { linkDigestHeadlines, renderMarkdown, sanitizePublicDigest } from '@/lib
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 
 export const metadata: Metadata = {
-  title: 'AI Digest | Curated AI Developments',
+  title: 'AI Digest — Curated AI Developments',
   description: 'A rolling weekly archive of curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-digest',
