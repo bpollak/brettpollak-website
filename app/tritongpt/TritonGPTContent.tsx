@@ -136,7 +136,7 @@ export default function TritonGPTContent() {
             <span className="font-bold text-blue-800">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
           </p>
             <p className="text-xl text-[#485248] leading-9">
-              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, and Fairleigh Dickinson University.
+              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced.
             </p>
           </div>
         </div>
@@ -240,6 +240,17 @@ export default function TritonGPTContent() {
 	                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3h9v9" />
+                </svg>
+              ),
+            },
+            {
+              title: "TritonAI Harness",
+              description:
+                "Campus agentic development platform — the execution layer that turns model inference into governed, tool-using AI workers. Live with 22.5B tokens used, 119 merged PRs, and 1,139 AI reviews in its first weeks.",
+              href: "https://tritonai.ucsd.edu/tools/index.html",
+              icon: (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               ),
             },
@@ -612,6 +623,15 @@ export default function TritonGPTContent() {
                 )
               },
               {
+                name: "Enterprise Data Agent",
+                desc: "Natural-language interface to UC San Diego's enterprise data warehouse. Turns plain-English questions into structured queries across Activity Hub, UCPath, and campus data sources.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                  </svg>
+                )
+              },
+              {
                 name: "Transcript Matching (In Production)",
                 desc: "OCR and transcript verification workflows for enrollment-related review. Matches student transcripts against program requirements automatically, reducing manual review time for admissions and records teams.",
                 icon: (
@@ -731,8 +751,8 @@ export default function TritonGPTContent() {
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" /></svg>
             },
             {
-              title: "Agent Builder and Workflow Tools",
-              desc: "Low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows.",
+              title: "Agent Builder and Workflow Tools (Live)",
+              desc: "The TritonAI Harness is operational — low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows. 22.5B tokens used, 119 merged PRs, 1,139 AI reviews in first weeks.",
               color: "rose",
               icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
