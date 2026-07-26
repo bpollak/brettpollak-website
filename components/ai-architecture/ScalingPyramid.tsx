@@ -71,14 +71,16 @@ export default function ScalingPyramid() {
   const CX = 320;
 
   return (
-    <figure className="w-full my-10" role="img" aria-labelledby="scaling-pyramid-title">
+    <figure className="w-full my-10">
       <svg
+        role="img"
+        aria-labelledby="scaling-pyramid-title scaling-pyramid-desc"
         viewBox="0 0 1160 600"
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="scaling-pyramid-title">Scaling pyramid</title>
-        <desc>
+        <desc id="scaling-pyramid-desc">
           A four-tier pyramid showing how the personal-agent architecture could scale across UC
           San Diego while preserving privacy at every tier. The foundation is one agent per
           person with fully isolated data. Each tier above adds a stricter privacy boundary:

@@ -14,14 +14,16 @@
 
 export default function ThreeLayerDiagram() {
   return (
-    <figure className="w-full my-10" role="img" aria-labelledby="three-layer-title">
+    <figure className="w-full my-10">
       <svg
+        role="img"
+        aria-labelledby="three-layer-title three-layer-desc"
         viewBox="0 0 720 520"
         className="w-full h-auto max-w-3xl"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="three-layer-title">Three-layer context loading architecture</title>
-        <desc>
+        <desc id="three-layer-desc">
           Three concentric rings showing how the agent loads context. The innermost ring is
           Layer 1 (always loaded baseline). The middle ring is Layer 2 (loaded on conversational
           trigger). The outermost ring is Layer 3 (loaded only when the human explicitly asks).

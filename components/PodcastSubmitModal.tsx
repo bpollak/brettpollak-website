@@ -41,6 +41,7 @@ export default function PodcastSubmitModal({
   const [showResults, setShowResults] = useState(false);
   const searchTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   // Close results when clicking outside
   useEffect(() => {
@@ -99,6 +100,59 @@ export default function PodcastSubmitModal({
     onClose();
   }, [resetForm, onClose]);
 
+  /**
+   * Dialog keyboard contract: Escape closes, Tab cycles inside the panel, focus
+   * starts on the first field and returns to whatever opened the modal.
+   */
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const focusable = () =>
+      Array.from(
+        panelRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((el) => el.offsetParent !== null);
+
+    focusable()[0]?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        // Let Escape dismiss the search dropdown before it closes the dialog.
+        if (showResults) {
+          setShowResults(false);
+          return;
+        }
+        handleClose();
+        return;
+      }
+
+      if (e.key !== 'Tab') return;
+
+      const items = focusable();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+
+      if (e.shiftKey && (active === first || !panelRef.current?.contains(active))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      previouslyFocused?.focus();
+    };
+  }, [isOpen, showResults, handleClose]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
@@ -134,29 +188,38 @@ export default function PodcastSubmitModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
+      {/* Backdrop. Mouse-only by design — Escape is the keyboard equivalent. */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={handleClose}
+        aria-hidden="true"
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+      <div
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="podcast-submit-title"
+        aria-describedby="podcast-submit-description"
+        className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto"
+      >
         {/* Header */}
         <div className="sticky top-0 bg-white rounded-t-2xl border-b border-slate-100 px-6 py-4 flex items-center justify-between z-10">
           <div>
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 id="podcast-submit-title" className="text-xl font-bold text-slate-900">
               Share a Podcast
             </h2>
-            <p className="text-sm text-slate-500 mt-0.5">
+            <p id="podcast-submit-description" className="text-sm text-slate-500 mt-0.5">
               Start typing to search or fill in manually
             </p>
           </div>
           <button
             onClick={handleClose}
+            aria-label="Close dialog"
             className="p-2 hover:bg-slate-100 rounded-full transition-colors"
           >
-            <svg className="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -165,7 +228,7 @@ export default function PodcastSubmitModal({
         {success ? (
           <div className="p-8 text-center">
             <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg aria-hidden="true" className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -184,14 +247,15 @@ export default function PodcastSubmitModal({
           <form onSubmit={handleSubmit} className="p-6 space-y-5">
             {/* Podcast Name with iTunes Search */}
             <div className="relative" ref={resultsRef}>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label htmlFor="podcast-name" className="block text-sm font-semibold text-slate-700 mb-1.5">
                 Podcast Name <span className="text-rose-500">*</span>
               </label>
               <div className="relative">
                 <input
                   type="text"
                   value={name}
-                  onChange={(e) => handleNameChange(e.target.value)}
+                  id="podcast-name"
+                onChange={(e) => handleNameChange(e.target.value)}
                   onFocus={() => searchResults.length > 0 && setShowResults(true)}
                   placeholder="Start typing to search..."
                   className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
@@ -257,9 +321,10 @@ export default function PodcastSubmitModal({
                 <button
                   type="button"
                   onClick={() => setCoverImage(null)}
+                  aria-label="Remove cover artwork"
                   className="p-1 hover:bg-slate-200 rounded-full text-slate-400 hover:text-slate-600 transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
@@ -268,12 +333,13 @@ export default function PodcastSubmitModal({
 
             {/* Hosts */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label htmlFor="podcast-hosts" className="block text-sm font-semibold text-slate-700 mb-1.5">
                 Host(s) <span className="text-rose-500">*</span>
               </label>
               <input
                 type="text"
                 value={hosts}
+                id="podcast-hosts"
                 onChange={(e) => setHosts(e.target.value)}
                 placeholder="e.g. Kevin Roose & Casey Newton"
                 className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
@@ -283,11 +349,12 @@ export default function PodcastSubmitModal({
 
             {/* Category */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label htmlFor="podcast-category" className="block text-sm font-semibold text-slate-700 mb-1.5">
                 Category
               </label>
               <select
                 value={category}
+                id="podcast-category"
                 onChange={(e) => setCategory(e.target.value)}
                 className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 bg-white focus:border-blue-500 focus:outline-none transition-colors"
               >
@@ -301,11 +368,12 @@ export default function PodcastSubmitModal({
 
             {/* Summary */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label htmlFor="podcast-summary" className="block text-sm font-semibold text-slate-700 mb-1.5">
                 Why do you recommend it? <span className="text-rose-500">*</span>
               </label>
               <textarea
                 value={summary}
+                id="podcast-summary"
                 onChange={(e) => setSummary(e.target.value)}
                 placeholder="What makes this podcast great..."
                 rows={3}
@@ -320,12 +388,13 @@ export default function PodcastSubmitModal({
 
             {/* Listen URL */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label htmlFor="podcast-listen-url" className="block text-sm font-semibold text-slate-700 mb-1.5">
                 Podcast Link <span className="text-rose-500">*</span>
               </label>
               <input
                 type="url"
                 value={listenUrl}
+                id="podcast-listen-url"
                 onChange={(e) => setListenUrl(e.target.value)}
                 placeholder="https://..."
                 className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
@@ -335,12 +404,13 @@ export default function PodcastSubmitModal({
 
             {/* Your Name */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+              <label htmlFor="podcast-submitted-by" className="block text-sm font-semibold text-slate-700 mb-1.5">
                 Your Name <span className="text-slate-400 font-normal">(optional)</span>
               </label>
               <input
                 type="text"
                 value={submittedBy}
+                id="podcast-submitted-by"
                 onChange={(e) => setSubmittedBy(e.target.value)}
                 placeholder="Anonymous"
                 className="w-full px-4 py-2.5 border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-colors"
@@ -349,7 +419,7 @@ export default function PodcastSubmitModal({
 
             {/* Error */}
             {error && (
-              <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-sm text-rose-700">
+              <div role="alert" className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-sm text-rose-700">
                 {error}
               </div>
             )}

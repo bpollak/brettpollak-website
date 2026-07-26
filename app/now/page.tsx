@@ -43,7 +43,7 @@ function formatDate(iso: string): string {
 
 export default function NowPage() {
   return (
-    <main className="page-shell" id="main-content">
+    <main className="page-shell" id="main-content" tabIndex={-1}>
       <section className="page-hero">
         <div className="max-w-3xl mx-auto px-6 py-20 md:py-24">
         <p className="rule-label mb-6">Now</p>

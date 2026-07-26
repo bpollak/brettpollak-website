@@ -7,7 +7,7 @@ export default function LinkedInContent() {
   const [widgetLoaded, setWidgetLoaded] = useState(false);
 
   return (
-    <div className="page-shell" id="main-content">
+    <main className="page-shell" id="main-content" tabIndex={-1}>
       {/* Hide SociableKit's Follow button */}
       <style jsx global>{`
         .sk-ww-linkedin-profile-post a[href*="linkedin.com"][target="_blank"] {
@@ -52,16 +52,16 @@ export default function LinkedInContent() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#17201b] text-white px-10 py-4 font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
           >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
             Visit on LinkedIn
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

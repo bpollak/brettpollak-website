@@ -214,7 +214,7 @@ export default function Media() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content">
+    <main className="min-h-screen bg-[#f7f9f5] text-[#17201b]" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
@@ -253,6 +253,6 @@ export default function Media() {
 
         <MediaContent />
       </div>
-    </div>
+    </main>
   );
 }

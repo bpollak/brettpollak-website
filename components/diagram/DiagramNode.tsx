@@ -15,7 +15,7 @@ interface DiagramNodeProps {
 /**
  * A labeled node: a rounded rectangle with a colored signal bar, an optional
  * monospace index, a title, and an optional subtitle. Pure SVG fragment —
- * render inside an <svg>.
+ * render inside an <svg aria-hidden="true">.
  */
 export default function DiagramNode({
   x,

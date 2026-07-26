@@ -265,7 +265,7 @@ export default function PodcastsContent() {
             onClick={() => setModalOpen(true)}
             className="ml-auto px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center gap-2 hover:shadow-xl active:scale-95"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
             </svg>
             Share a Podcast

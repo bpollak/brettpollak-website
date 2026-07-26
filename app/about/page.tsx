@@ -45,7 +45,7 @@ const profilePageSchema = {
 
 export default function About() {
   return (
-    <div className="page-shell" id="main-content">
+    <main className="page-shell" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
@@ -252,19 +252,19 @@ export default function About() {
               <ul className="space-y-2 text-slate-700">
                 {/* Verified speaking engagements */}
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">ASU+GSV Summit 2026:</span> Shared AI at Scale — Developed by Universities for Universities</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">TechTalk Summits (2026):</span> From AI Pilots to Enterprise Platforms — Building Secure, Governed AI at Scale</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span><span className="font-semibold">NACUBO 2026:</span> The AI Investment Decision: Build, Buy, or Shared Services?</span>
@@ -276,25 +276,25 @@ export default function About() {
               <h3 className="text-lg font-bold text-gray-900 mb-4">Published Work</h3>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>EDUCAUSE Review — &ldquo;Ushering in a New Era of AI-Driven Data Insights at UC San Diego&rdquo; (Feb 2025)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>CIO.com — &ldquo;How poor data foundations can undermine AI success&rdquo; (Apr 2026)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Ithaka S+R, The Journal of Higher Education Web Professionals, Eduniverse, and others</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg aria-hidden="true" className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Featured in Forbes, CIO.com, EdTech Magazine, and 30+ other outlets</span>
@@ -304,6 +304,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

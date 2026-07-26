@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function PodcastModerationPage() {
   return (
-    <div className="min-h-screen bg-gray-50" id="main-content">
+    <main className="min-h-screen bg-gray-50" id="main-content" tabIndex={-1}>
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-10">
           <div className="inline-block px-4 py-1.5 bg-slate-100 text-slate-800 text-sm font-semibold rounded-full mb-6 border border-slate-200">
@@ -34,6 +34,6 @@ export default function PodcastModerationPage() {
 
         <ModerationConsole />
       </div>
-    </div>
+    </main>
   );
 }

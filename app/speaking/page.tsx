@@ -153,7 +153,7 @@ export default function SpeakingPage() {
   }));
 
   return (
-    <div className="page-shell" id="main-content">
+    <main className="page-shell" id="main-content" tabIndex={-1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakerSchema) }}
@@ -210,7 +210,7 @@ export default function SpeakingPage() {
                     <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">{item.publication}</div>
                     <div className="text-slate-900 font-medium group-hover:text-blue-800 transition-colors">{item.title}</div>
                   </div>
-                  <svg className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg aria-hidden="true" className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -240,7 +240,7 @@ export default function SpeakingPage() {
                     <div className="text-xs font-semibold text-blue-700 uppercase tracking-wide mb-1">{item.publication}</div>
                     <div className="text-slate-900 font-medium group-hover:text-blue-800 transition-colors">{item.title}</div>
                   </div>
-                  <svg className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg aria-hidden="true" className="w-4 h-4 text-slate-300 group-hover:text-blue-500 mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -319,6 +319,6 @@ export default function SpeakingPage() {
         </section>
 
       </div>
-    </div>
+    </main>
   );
 }

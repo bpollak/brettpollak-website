@@ -68,14 +68,16 @@ const ROLE_COLOR: Record<Cron['role'], string> = {
 
 export default function DailyRhythmClock() {
   return (
-    <figure className="w-full my-10" role="img" aria-labelledby="daily-rhythm-title">
+    <figure className="w-full my-10">
       <svg
+        role="img"
+        aria-labelledby="daily-rhythm-title daily-rhythm-desc"
         viewBox="0 0 1200 820"
         className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="daily-rhythm-title">Daily cron rhythm — 24-hour clock</title>
-        <desc>
+        <desc id="daily-rhythm-desc">
           A 24-hour clock face showing when each cron job fires throughout the day. Midnight is at
           the top. Accumulation jobs (blue) run in the morning. Synthesis jobs (green) run in the
           evening. Publication jobs (amber) run at scheduled delivery times.

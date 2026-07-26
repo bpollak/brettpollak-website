@@ -45,7 +45,7 @@ export default function GeneratedThumbnail({ name }: { name: string }) {
       </div>
 
       {/* Microphone icon */}
-      <svg
+      <svg aria-hidden="true"
         className="w-10 h-10 text-white/30 mb-3"
         fill="currentColor"
         viewBox="0 0 24 24"
