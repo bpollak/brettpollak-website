@@ -21,14 +21,24 @@ export type UcsdAiNewsletterData = {
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
-  "generatedAt": "2026-07-13T12:01:59.502Z",
-  "weekLabel": "Week of July 13–19, 2026",
-  "weekOf": "2026-07-13",
-  "weekEnding": "2026-07-19",
-  "publishedThrough": "July 13, 2026",
-  "editionCount": 15,
+  "generatedAt": "2026-07-27T12:01:06.331Z",
+  "weekLabel": "Week of July 27 – August 2, 2026",
+  "weekOf": "2026-07-27",
+  "weekEnding": "2026-08-02",
+  "publishedThrough": "July 27, 2026",
+  "editionCount": 16,
   "itemCount": 122,
   "editions": [
+    {
+      "isoDate": "2026-07-27",
+      "displayDate": "Monday, July 27",
+      "sourceFile": "ucsd-ai-newsletter-2026-07-27.md",
+      "toolUpdatesCount": 0,
+      "tritonAiNewsCount": 0,
+      "upcomingTrainingsCount": 0,
+      "heroImage": null,
+      "raw": "# UC San Diego AI Weekly Update\n\n## What's New in Your AI Tools\n\n*No new updates this week.*\n\n## Coming Up: Trainings & Workshops\n\n*No upcoming events.*\n\n## TritonAI News\n\n*No new releases.*\n"
+    },
     {
       "isoDate": "2026-07-13",
       "displayDate": "Monday, July 13",
