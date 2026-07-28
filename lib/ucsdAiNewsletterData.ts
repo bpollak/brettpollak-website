@@ -21,23 +21,23 @@ export type UcsdAiNewsletterData = {
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
-  "generatedAt": "2026-07-27T12:01:06.331Z",
+  "generatedAt": "2026-07-28T23:09:30.822Z",
   "weekLabel": "Week of July 27 – August 2, 2026",
   "weekOf": "2026-07-27",
   "weekEnding": "2026-08-02",
   "publishedThrough": "July 27, 2026",
   "editionCount": 16,
-  "itemCount": 122,
+  "itemCount": 127,
   "editions": [
     {
       "isoDate": "2026-07-27",
       "displayDate": "Monday, July 27",
       "sourceFile": "ucsd-ai-newsletter-2026-07-27.md",
-      "toolUpdatesCount": 0,
-      "tritonAiNewsCount": 0,
-      "upcomingTrainingsCount": 0,
+      "toolUpdatesCount": 1,
+      "tritonAiNewsCount": 2,
+      "upcomingTrainingsCount": 2,
       "heroImage": null,
-      "raw": "# UC San Diego AI Weekly Update\n\n## What's New in Your AI Tools\n\n*No new updates this week.*\n\n## Coming Up: Trainings & Workshops\n\n*No upcoming events.*\n\n## TritonAI News\n\n*No new releases.*\n"
+      "raw": "# UC San Diego AI Weekly Update\n\n## What's New in Your AI Tools\n\n### Zoom AI Companion\n\n- **[Zoom adds natural-language workflow creation](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0083515)** — Zoom's July 20 release lets people describe a workflow in the conversational interface, answer follow-up questions, and review the workflow before running it. ZoomMate licensing and UC San Diego's account settings determine availability.\n\n## Coming Up: Trainings & Workshops\n\nNo live sessions are listed for the next two weeks. These resources are available any time:\n\n- **[AI Webinars](https://tritonai.ucsd.edu/training-resources/webinars.html)** — Watch recordings on TritonGPT, prompting, and AI-supported campus work.\n- **[Everyday I AI video series](https://www.youtube.com/playlist?list=PLZoL-14Q0aIkY5gnibNuZZh3X0ikY6VGA)** — See short examples of prompting with TritonGPT and other generative AI tools.\n\n## TritonAI News\n\n- **[Mathematicians call for clear standards for AI research](https://today.ucsd.edu/story/leiden-declaration)** — UC San Diego mathematician Karthik Ganapathy helped write the Leiden Declaration on Artificial Intelligence and Mathematics. It asks researchers and AI companies to protect scientific integrity, disclose how systems produce results, and keep research priorities with the mathematics community.\n- **[Rahul Parhi receives the 2026 Popov Prize](https://today.ucsd.edu/area-story/uc-san-diego-electrical-engineer-receives-popov-prize-for-research-in-approximation-theory)** — The UC San Diego electrical engineering professor was recognized for research in approximation theory. His work examines what neural networks learn and when a trained model can perform well on new data.\n"
     },
     {
       "isoDate": "2026-07-13",

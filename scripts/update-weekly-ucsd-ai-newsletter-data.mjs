@@ -139,6 +139,14 @@ for (const filename of files) {
 editions.sort((a, b) => b.isoDate.localeCompare(a.isoDate));
 
 const latest = editions[0] ?? null;
+const latestItemCount = latest
+  ? latest.toolUpdatesCount + latest.tritonAiNewsCount + latest.upcomingTrainingsCount
+  : 0;
+if (latest && latestItemCount < 1) {
+  throw new Error(
+    `Latest newsletter ${latest.sourceFile} contains no counted items; review the draft before publishing`,
+  );
+}
 const latestDate = latest ? new Date(`${latest.isoDate}T12:00:00`) : null;
 const latestWeekEnd = latestDate ? new Date(latestDate) : null;
 if (latestWeekEnd) latestWeekEnd.setDate(latestWeekEnd.getDate() + 6);
