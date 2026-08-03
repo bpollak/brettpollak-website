@@ -406,6 +406,14 @@ export const mediaItems: MediaItem[] = [
     category: 'speaking'
   },
 
+  {
+    publication: 'Higher Ed AI Playbook',
+    title: "2.5 Hours to 11 Minutes, 60,000 Transcripts at 98%, 17 Models Under One Roof: Inside UC San Diego's Build-It-Yourself AI Strategy",
+    url: 'https://www.higheredaiplaybook.com/p/25-hours-to-11-minutes-60000-transcripts',
+    date: '2026-08-03',
+    category: 'article'
+  },
+
   // --- Media audit additions (July 19, 2026) ---
   {
     publication: 'Higher Ed AI Playbook',
