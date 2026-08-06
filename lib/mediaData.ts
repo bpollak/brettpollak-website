@@ -15,6 +15,13 @@ export interface MediaItem {
 // allowed values, or the chart math will be off.
 export const mediaItems: MediaItem[] = [
   {
+    publication: 'EDUCAUSE',
+    title: 'Member QuickTalk: The Next Data Decision — What Institutions Should Focus on in Their Data Journey',
+    url: 'https://events.educause.edu/member-quicktalks/2026/the-next-data-decision-what-institutions-should-focus-on-in-their-data-journey',
+    date: '2026-08-10',
+    category: 'speaking'
+  },
+  {
     publication: 'Inside Higher Ed',
     title: 'A Call to Meet the Moment at NACUBO',
     url: 'https://www.insidehighered.com/news/business/financial-health/2026/07/23/call-meet-moment-nacubo',
