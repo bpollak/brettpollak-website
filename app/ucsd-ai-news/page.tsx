@@ -13,7 +13,7 @@ import { renderMarkdown } from '@/lib/markdown';
 export const metadata: Metadata = {
   title: 'UC San Diego AI Weekly Update',
   description:
-    'A weekly roundup of what’s new with UC San Diego’s supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
+    'A weekly roundup of what’s new with UC San Diego’s supported AI services. Tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
   alternates: {
     canonical: 'https://brettcpollak.com/ucsd-ai-news',
     types: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'UC San Diego AI Weekly Update | Brett Pollak',
     description:
-      'A weekly roundup of what’s new with UC San Diego’s supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
+      'A weekly roundup of what’s new with UC San Diego’s supported AI services. Tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
     url: 'https://brettcpollak.com/ucsd-ai-news',
     siteName: 'Brett Pollak',
     type: 'article',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'UC San Diego AI Weekly Update | Brett Pollak',
     description:
-      'A weekly roundup of what’s new with UC San Diego’s supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
+      'A weekly roundup of what’s new with UC San Diego’s supported AI services. Tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
     images: ['/tritongpt-uc-san-diego-assistant.png'],
   },
 };
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 /**
  * Editions are generated weekly by an external job. If that job stalls, the page
  * should stop advertising a weekly cadence it is no longer keeping rather than
- * telling visitors something untrue — so the promise is derived from the data,
+ * telling visitors something untrue. So the promise is derived from the data,
  * not asserted. On a weekly cadence anything past 10 days means at least one
  * Monday was missed, which is the point at which the claim stops being true.
  * Evaluated at build time, which is fine here: the site redeploys on every
@@ -85,7 +85,7 @@ export default function UcsdAiNewsPage() {
     "@id": `${SITE_URL}/ucsd-ai-news#article`,
     headline: `UC San Diego AI Weekly Update — ${weekLabel}`,
     description:
-      "A weekly roundup of what's new with UC San Diego's supported AI services — tool release notes, TritonAI updates, and upcoming trainings for campus staff.",
+      "A weekly roundup of what's new with UC San Diego's supported AI services. Tool release notes, TritonAI updates, and upcoming trainings for campus staff.",
     url: `${SITE_URL}/ucsd-ai-news`,
     author: { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#person` },

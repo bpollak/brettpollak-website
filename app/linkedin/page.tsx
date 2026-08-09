@@ -7,14 +7,14 @@ import { SITE_URL, staticPageDates } from "@/lib/seoDates";
 export const metadata: Metadata = {
   title: "LinkedIn Notes",
   description:
-    "What Brett Pollak writes about on LinkedIn — institutional AI at UC San Diego, AI governance, agentic workflows, and citizen developer enablement — plus his published articles and posts.",
+    "What Brett Pollak writes about on LinkedIn. Institutional AI at UC San Diego, AI governance, agentic workflows, and citizen developer enablement. Plus his published articles and posts.",
   alternates: {
     canonical: "https://brettcpollak.com/linkedin",
   },
   openGraph: {
     title: "LinkedIn Notes | Brett Pollak",
     description:
-      "Institutional AI, governance, and agentic workflows in higher education — the topics behind the posts, and where to read the long versions.",
+      "Institutional AI, governance, and agentic workflows in higher education. The topics behind the posts, and where to read the long versions.",
     url: "https://brettcpollak.com/linkedin",
     siteName: "Brett Pollak",
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LinkedIn Notes | Brett Pollak",
     description:
-      "Institutional AI, governance, and agentic workflows in higher education — the topics behind the posts.",
+      "Institutional AI, governance, and agentic workflows in higher education. The topics behind the posts.",
     images: ["/brett-pollak-og-card.png"],
   },
 };
@@ -218,8 +218,8 @@ export default function LinkedIn() {
 
         <div className="border-t border-line pt-12 text-center">
           <p className="text-body mb-8 max-w-xl mx-auto">
-            The current posts live on LinkedIn. That is also the best place to
-            reach me if you would rather not use the contact form.
+            The current posts live on LinkedIn. That&apos;s also the best place to
+            reach me if you don&apos;t want to use the contact form.
           </p>
           <a
             href={linkedInProfile.profileUrl}

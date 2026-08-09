@@ -8,14 +8,14 @@ const PAGE_URL = `${SITE_URL}/products/cason-recruiting-crm`;
 export const metadata: Metadata = {
   title: "Cason Recruiting CRM | Brett Pollak",
   description:
-    "A private, family-only workspace for running a college athletic recruiting search — outreach pipeline, coach and conversation logs, questionnaire tracking, and next-step tasks. A walkthrough of what the tool does, illustrated with sample data.",
+    "A private, family-only workspace for running a college athletic recruiting search. Outreach pipeline, coach and conversation logs, questionnaire tracking, and next-step tasks. A walkthrough of what the tool does, illustrated with sample data.",
   alternates: {
     canonical: PAGE_URL,
   },
   openGraph: {
     title: "Cason Recruiting CRM | Brett Pollak",
     description:
-      "A private, family-only recruiting workspace — outreach pipeline, coach and conversation logs, questionnaire tracking, and next-step tasks. Walkthrough illustrated with sample data.",
+      "A private, family-only recruiting workspace. Outreach pipeline, coach and conversation logs, questionnaire tracking, and next-step tasks. Walkthrough illustrated with sample data.",
     url: PAGE_URL,
     siteName: "Brett Pollak",
     type: "article",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cason Recruiting CRM | Brett Pollak",
     description:
-      "A private recruiting workspace — pipeline, contacts, questionnaires, and tasks. Walkthrough illustrated with sample data.",
+      "A private recruiting workspace. Pipeline, contacts, questionnaires, and tasks. Walkthrough illustrated with sample data.",
     images: ["/crm-recruiting.png"],
   },
 };
@@ -110,8 +110,8 @@ const questionnaires = [
 ];
 
 const timeline = [
-  { date: "Jul 12", text: "Email to Coach Rivera — intro, personal bests, and film link." },
-  { date: "Jul 13", text: "Reply received — asked for summer meet schedule." },
+  { date: "Jul 12", text: "Email to Coach Rivera. Intro, personal bests, and film link." },
+  { date: "Jul 13", text: "Reply received. Asked for summer meet schedule." },
   { date: "Jul 14", text: "Logged reply and sent meet calendar; created follow-up task." },
 ];
 
@@ -195,14 +195,11 @@ export default function CasonRecruitingCrmPage() {
               <p className="rule-label mb-5">Product · Private family workspace</p>
               <h1 className="page-title">Cason Recruiting CRM</h1>
               <p className="page-intro mt-6">
-                College recruiting runs on relationships, deadlines, and follow-through across
-                dozens of programs at once. This is the private workspace behind Cason&apos;s public
-                recruiting profile — where every school, coach, conversation, questionnaire, and
-                next step is tracked in one place so nothing slips.
+                College recruiting runs on relationships and deadlines across dozens of programs at once. This is the private workspace behind Cason&apos;s public recruiting profile, where every school, coach, conversation, and next step is tracked in one place so nothing slips.
               </p>
               <p className="mt-5 inline-flex items-center gap-2 border border-line bg-paper-strong px-4 py-2 text-sm font-semibold text-body">
                 <span className="h-2 w-2 flex-shrink-0 bg-[#b8503f]" aria-hidden="true" />
-                Invite-only — access is limited to Cason and approved family accounts.
+                Invite-only. Access is limited to Cason and approved family accounts.
               </p>
             </div>
             <Frame label="crm.casonpollak.com · sign in">
@@ -222,8 +219,8 @@ export default function CasonRecruitingCrmPage() {
       <div className="max-w-6xl mx-auto px-6 py-6 md:py-10">
         <p className="field-note px-5 py-4 text-sm leading-6 text-body" data-tone="gold">
           <span className="font-semibold text-ink">A note on the screens below.</span>{" "}
-          The interface is illustrated with fictional sample data — made-up schools, coaches, and
-          dates — to show how it works without exposing any real recruiting information.
+          The interface is illustrated with fictional sample data (made-up schools, coaches, and
+          dates) to show how it works without exposing any real recruiting information.
         </p>
 
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden border border-line bg-[#d9dfd3] md:grid-cols-4">
@@ -238,7 +235,7 @@ export default function CasonRecruitingCrmPage() {
         <Capability
           eyebrow="Outreach pipeline"
           title="Every program, one board"
-          body="A recruiting search is a pipeline: schools move from research to first contact, to a reply, to a visit or camp, to an offer. A board view shows exactly where each program stands at a glance, so momentum and stalls are both obvious."
+          body="A recruiting search is a pipeline: schools move from research to first contact, to a reply, to a visit or camp, to an offer. A board view shows where each program stands, so stalls are obvious."
           wide
         >
           <Frame label="Pipeline">
@@ -366,7 +363,7 @@ export default function CasonRecruitingCrmPage() {
             <div>
               <p className="text-lg leading-8 text-body">
                 The workspace sits behind Google sign-in and is limited to Cason and approved family
-                accounts — so real coach contacts and conversations stay private. That is why this
+                accounts, so real coach contacts and conversations stay private. That is why this
                 page is a walkthrough rather than a login link. The public-facing companion is
                 Cason&apos;s recruiting profile, which is open to coaches.
               </p>

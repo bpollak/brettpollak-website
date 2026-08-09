@@ -5,13 +5,13 @@ import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 export const metadata: Metadata = {
   title: "About — Work in Higher Education and AI",
   // Updated description to reflect Brett's preferred professional title
-  description: "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego – background and current work on AI, digital services, and institutional change in higher education.",
+  description: "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. Background and current work on AI and digital services in higher education.",
   alternates: {
     canonical: "https://brettcpollak.com/about",
   },
   openGraph: {
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "Background and current work on AI, digital services, and institutional change in higher education.",
+    description: "Background and current work on AI and digital services in higher education.",
     url: "https://brettcpollak.com/about",
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "Background and current work on AI, digital services, and institutional change in higher education.",
+    description: "Background and current work on AI and digital services in higher education.",
     images: ["/brett-pollak-about.jpg"],
   },
 };
@@ -55,8 +55,8 @@ export default function About() {
           <p className="rule-label mb-6">Background</p>
           <h1 className="page-title mb-6">About</h1>
           <p className="page-intro">
-            Work rooted in practice, people, curiosity, and the institutional systems that make technology useful.
-            I serve as the Executive Director, Workplace Technology & Infrastructure Services for UC San Diego, leading teams that deliver hybrid-cloud infrastructure, data analytics, enterprise collaboration, and digital services across the university.
+            Work rooted in practice and the systems that make technology useful.
+            I serve as Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. My teams deliver hybrid-cloud infrastructure, data analytics, and digital services across the university.
           </p>
         </div>
       </section>
@@ -78,15 +78,15 @@ export default function About() {
             </div>
           </div>
           <div className="md:col-span-3 space-y-6">
-            <h2 className="text-4xl font-medium leading-tight text-ink">Work Rooted in Practice, People, and Curiosity</h2>
+            <h2 className="text-4xl font-medium leading-tight text-ink">Work Rooted in Practice</h2>
             <p className="text-xl text-body leading-relaxed">
-              My career started in web and digital services, where I learned early that new tools only matter when they fit the real work people are trying to do.
+              My career started in web and digital services. I learned early that new tools only matter when they fit the real work people are trying to do.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              At UC San Diego, I&apos;ve spent more than 18 years working with colleagues across web, cloud, data, and workplace technology. Projects like TritonGPT have reinforced that implementation is as much about trust, governance, and listening as it is about architecture.
+              At UC San Diego, I&apos;ve spent more than 18 years working across web, cloud, and workplace technology. Projects like TritonGPT reinforced that implementation is as much about trust and governance as it is about architecture.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              This site is a place to share what we&apos;ve learned so far and connect with others in higher education who are working through similar questions. I&apos;m especially interested in hearing how other institutions are approaching adoption, policy, and practical use cases.
+              This site is a place to share what we&apos;ve learned so far and connect with others in higher education working through similar questions. I&apos;m especially interested in how other institutions are approaching adoption and practical use.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">TritonGPT in Practice</h3>
-              <p className="text-lg text-body leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app, now live with student-facing AI services including course scheduling assistance, and reducing friction in workflows such as contract review for Procurement</p>
+              <p className="text-lg text-body leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app. Live features include course scheduling assistance and contract review for Procurement.</p>
             </div>
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">Campus Technology Work</h3>
@@ -105,11 +105,11 @@ export default function About() {
             </div>
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">Recognition</h3>
-              <p className="text-lg text-body leading-relaxed">Named to the Constellation Research Business Transformation 150™ (2026–2027) and recognized through campus and industry channels for work connected to TritonAI and related initiatives</p>
+              <p className="text-lg text-body leading-relaxed">Named to the Constellation Research Business Transformation 150 (2026-2027). Campus and industry outlets have covered the work on TritonAI and related initiatives.</p>
             </div>
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">Cross-Institution Sharing</h3>
-              <p className="text-lg text-body leading-relaxed">The TritonAI platform has been adopted by peer institutions including BearGPT at UC Berkeley, UC Agriculture and Natural Resources, Fairleigh Dickinson University, and UC Merced — with additional campuses exploring the deployment model</p>
+              <p className="text-lg text-body leading-relaxed">Peer institutions have adopted the TritonAI platform, including BearGPT at UC Berkeley, UC Agriculture and Natural Resources, Fairleigh Dickinson University, and UC Merced. Additional campuses are exploring the model.</p>
             </div>
             <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
               <h3 className="text-xl font-bold text-ink mb-3">Daily Context</h3>
@@ -128,23 +128,23 @@ export default function About() {
             </div>
             <div>
               <h3 className="text-xl font-bold text-ink mb-3">Data Governance</h3>
-              <p className="text-lg text-body">Privacy, security, stewardship, and how institutions make data usable without losing context</p>
+              <p className="text-lg text-body">Privacy, security, and how institutions make data usable without losing context</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-ink mb-3">Cloud Infrastructure</h3>
-              <p className="text-lg text-body">Hybrid-cloud architecture, operations, and what it takes to support dependable institutional services</p>
+              <p className="text-lg text-body">Hybrid-cloud architecture and what it takes to support dependable institutional services</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-ink mb-3">Organizational Change</h3>
-              <p className="text-lg text-body">Stakeholder engagement, service design, and learning how new tools actually fit campus workflows</p>
+              <p className="text-lg text-body">Service design and learning how new tools actually fit campus workflows</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-ink mb-3">Digital Experience</h3>
-              <p className="text-lg text-body">Web platforms, accessibility, and making institutional systems easier for people to navigate</p>
+              <p className="text-lg text-body">Web platforms, accessibility, and making institutional systems easier for people to use</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-ink mb-3">Data-Informed Decisions</h3>
-              <p className="text-lg text-body">Analytics, reporting, and helping teams ask better questions about the work in front of them</p>
+              <p className="text-lg text-body">Analytics and helping teams ask better questions about the work in front of them</p>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function About() {
                   <h4 className="text-lg font-bold text-ink">Senior Director, Workplace Technology Services</h4>
                   <p className="text-sm text-muted font-medium mb-2">Jan 2016 – Oct 2024</p>
                   <ul className="list-disc list-outside ml-5 text-body space-y-2 leading-relaxed">
-                    <li>Directed strategy for campus-wide workplace services, emerging technologies, and business intelligence (BI) for data-driven decision making.</li>
+                    <li>Directed strategy for campus workplace services, emerging technologies, and business intelligence.</li>
                     <li>Oversaw Customer Engagement Group (Service Desk, Field Support) and strategic platforms including ServiceNow, Microsoft 365, and Google Apps.</li>
                   </ul>
                 </div>
@@ -190,7 +190,7 @@ export default function About() {
                   <p className="text-sm text-muted font-medium mb-2">Aug 2010 – Oct 2024</p>
                   <ul className="list-disc list-outside ml-5 text-body space-y-2 leading-relaxed">
                     <li>Managed UC San Diego&apos;s top-level digital channels (ucsd.edu, Blink, TritonLink) and 160+ websites via the campus CMS.</li>
-                    <li>Led cloud strategy (SaaS/PaaS/IaaS) and mobile presence, including the Mobile Web Framework (MWF) adopted by 5 UC campuses.</li>
+                    <li>Led cloud strategy (SaaS/PaaS/IaaS) and mobile presence, including the Mobile Web Framework (MWF) that 5 UC campuses adopted.</li>
                     <li>Managed a $1M+ budget and a cross-functional web team delivering responsive frameworks and campus-wide applications.</li>
                   </ul>
                 </div>
@@ -200,8 +200,8 @@ export default function About() {
                   <h4 className="text-lg font-bold text-ink">Campus Web Manager</h4>
                   <p className="text-sm text-muted font-medium mb-2">Apr 2008 – Aug 2010</p>
                   <ul className="list-disc list-outside ml-5 text-body space-y-2 leading-relaxed">
-                    <li>Led the selection, implementation, and operations of the campus-wide Content Management System (CMS), serving 150+ users.</li>
-                    <li>Established ITIL-based best practices and Agile methodologies for web development, content migration, and system architecture.</li>
+                    <li>Led selection and operations of the campus-wide Content Management System (CMS), serving 150+ users.</li>
+                    <li>Established ITIL-based practices and Agile methods for web development and system architecture.</li>
                   </ul>
                 </div>
               </div>
@@ -219,9 +219,9 @@ export default function About() {
               <div className="text-xl font-medium text-signal-gold-ink mb-4">Corporate Web Team Manager</div>
               
               <p className="text-lg text-body leading-relaxed">
-                Managed a department of 40 professionals including web content developers, user interface designers,
-                programmers, project managers, and team leads. It was an early lesson in how large organizations adopt
-                technology through people, process, and collaboration.
+                Managed a department of 40 professionals including web developers, UI designers,
+                programmers, project managers, and team leads. Early lesson: large organizations adopt
+                technology through people and process.
               </p>
             </div>
 
@@ -245,7 +245,7 @@ export default function About() {
 
         {/* Talks and Writing */}
         <div className="border-t border-line pt-16">
-          <h2 className="text-3xl font-bold text-ink mb-8">Talks, Writing, and Shared Learning</h2>
+          <h2 className="text-3xl font-bold text-ink mb-8">Talks and Writing</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-paper-strong p-6 rounded-xl border border-line shadow-sm">
               <h3 className="text-lg font-bold text-ink mb-4">Conference Presentations</h3>

@@ -8,10 +8,10 @@ export default function ContactContent() {
           <p className="rule-label mb-6">Connect</p>
           <h1 className="page-title mb-6">Connect</h1>
           <p className="page-intro mb-6">
-            I&apos;m glad to connect with people across higher education who are thinking through similar questions around AI, governance, digital services, and change.
+            I&apos;m glad to connect with people in higher education working through similar questions about AI and governance.
           </p>
           <p className="max-w-3xl text-xl leading-relaxed text-body">
-            If you&apos;re building something, comparing approaches, or want to share what your institution is learning, feel free to reach out.
+            If you&apos;re building something or want to share what your institution is learning, reach out.
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function ContactContent() {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-signal-blue mb-4">Topics I Keep Returning To</h3>
                 <p className="text-body mb-4 leading-relaxed">
-                  Some conversations I especially value:
+                  Conversations I keep having:
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
@@ -102,7 +102,7 @@ export default function ContactContent() {
               <div className="border-t border-line pt-8">
                 <h3 className="text-xl font-bold text-ink mb-4">Online</h3>
                 <p className="text-body leading-relaxed">
-                  I share ongoing thoughts and updates on{" "}
+                  I post updates on{" "}
                   <a href="https://www.linkedin.com/in/brettpollak/" target="_blank" rel="noopener noreferrer" className="text-signal-blue underline hover:text-signal-blue transition-colors">
                     LinkedIn
                   </a>.

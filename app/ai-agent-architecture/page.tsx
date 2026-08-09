@@ -8,14 +8,14 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture',
   description:
-    'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego. 65+ enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 772-node knowledge graph, 691 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
+    'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego. 65+ enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 772-node knowledge graph, 691 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
   openGraph: {
     title: 'AI Agent Architecture | Brett Pollak',
     description:
-      'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego.',
+      'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego.',
     url: 'https://brettcpollak.com/ai-agent-architecture',
     siteName: 'Brett Pollak',
     type: 'article',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agent Architecture | Brett Pollak',
     description:
-      'How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego.',
+      'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego.',
     images: ['/ai-architecture-linkedin.png'],
   },
 };
@@ -43,7 +43,7 @@ const articleSchema = {
   "@id": `${SITE_URL}/ai-agent-architecture#article`,
   headline: "Building a Personal AI That Actually Knows You",
   description:
-    "How I architected a personal AI assistant that actually knows me — and a vision for scaling personal agents across UC San Diego.",
+    "How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego.",
   url: `${SITE_URL}/ai-agent-architecture`,
   image: `${SITE_URL}/ai-architecture-linkedin.png`,
   author: { "@id": `${SITE_URL}/#person` },
@@ -91,7 +91,7 @@ export default function AiAgentArchitecturePage() {
         </h1>
         <p className="page-intro mb-6">
           Generic AI is generic. Useful AI knows your people, projects, decisions, and trends.
-          Here&rsquo;s how I built one that does &mdash; and how the pattern could scale across
+          Here&rsquo;s how I built one that does, and how the pattern could scale across
           UC San Diego.
         </p>
         <p className="text-sm text-body mb-10">
@@ -117,7 +117,7 @@ export default function AiAgentArchitecturePage() {
 
         <p className="text-sm text-muted italic max-w-3xl">
           The pipeline in one glance: raw signals flow left to right through accumulation and
-          synthesis crons into the durable knowledge layer &mdash; where the agent pulls them
+          synthesis crons into the durable knowledge layer, where the agent pulls them
           back out at the moment of conversation.
         </p>
         </div>
@@ -136,9 +136,9 @@ export default function AiAgentArchitecturePage() {
         <div className="text-body text-[1.06rem] leading-8 space-y-5">
           <p>
             Ask any stock chatbot &ldquo;who should I follow up with this week?&rdquo; and you get
-            generic productivity advice. Ask one that actually knows you &mdash; who&rsquo;s been
-            in your meetings, what you committed to last Tuesday, what&rsquo;s trending on campus
-            &mdash; and you get something useful.
+            generic productivity advice. Ask one that actually knows you, who&rsquo;s been
+            in your meetings, what you committed to last Tuesday, what&rsquo;s trending on campus.
+            And you get something useful.
           </p>
           <p>
             The gap isn&rsquo;t model intelligence. The big models are already smart enough. The
@@ -152,7 +152,7 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p>
             The hard problem isn&rsquo;t connecting data sources. It&rsquo;s building a knowledge
-            layer on top of them &mdash; a system that:
+            layer on top of them. A system that:
           </p>
           <ul className="space-y-2 pl-5 list-disc marker:text-signal-blue">
             <li>
@@ -163,7 +163,7 @@ export default function AiAgentArchitecturePage() {
               decisions, recurring themes)
             </li>
             <li>
-              <strong>Retrieves</strong> the right context at the right moment &mdash; mention a
+              <strong>Retrieves</strong> the right context at the right moment. Mention a
               colleague by name and the AI recalls your meeting history with that person, not
               every meeting you&rsquo;ve ever had
             </li>
@@ -174,8 +174,8 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p>
             This page documents how I built that knowledge layer for myself: 65+ enabled automated
-            jobs routed through UC San Diego&rsquo;s TritonAI gateway &mdash; entirely on open-weight
-            models, with the primary inference path hosted on-prem &mdash; a 772-node knowledge graph, 691 wiki pages, a
+            jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
+            models, with the primary inference path hosted on-prem. A 772-node knowledge graph, 691 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
  It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -187,18 +187,18 @@ export default function AiAgentArchitecturePage() {
             </div>
             <p className="text-ink leading-7 mb-3">
               Every major research lab is converging on the same thing: a single app that turns
-              chat into an agent, and uses <em>your context</em> &mdash; your memory, your files,
-              your history &mdash; as the lock-in. Switch vendors and you lose it.
+              chat into an agent, and uses <em>your context</em> (your memory, your files,
+              your history) as the lock-in. Switch vendors and you lose it.
             </p>
             <p className="text-ink leading-7">
               The approach on this page flips that. Knowledge lives in <em>my</em> filesystem, in
               open formats, under my control. Any model can plug into it; any model can be
-              swapped out. The context layer is the moat &mdash; and it doesn&rsquo;t belong to
+              swapped out. The context layer is the moat. And it doesn&rsquo;t belong to
               the vendor.
             </p>
           </div>
           <p className="text-ink font-semibold">
-            The question isn&rsquo;t &ldquo;can AI do this?&rdquo; &mdash; it&rsquo;s &ldquo;how do
+            The question isn&rsquo;t &ldquo;can AI do this?&rdquo; It&rsquo;s &ldquo;how do
             you build the knowledge layer without handing your institutional memory to a
             vendor?&rdquo; This is my answer.
           </p>
@@ -218,7 +218,7 @@ export default function AiAgentArchitecturePage() {
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
             A personal AI faces a brutal constraint: context windows are finite, institutional
-            knowledge is not. You can&rsquo;t load everything &mdash; but loading nothing gives
+            knowledge is not. You can&rsquo;t load everything, but loading nothing gives
             you a chatbot with your name bolted on.
           </p>
           <p>The architecture I settled on has three layers:</p>
@@ -228,14 +228,14 @@ export default function AiAgentArchitecturePage() {
 
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Layer 1 &mdash; Always Loaded.</strong> A small
+            <strong className="text-ink">Layer 1: Always Loaded.</strong> A small
             fixed set of files the agent reads on every interaction: identity, user profile,
             curated long-term memory, observed work patterns, today&rsquo;s and yesterday&rsquo;s
             memory. ~15&#8239;KB total, cheap to load, enough for the AI to respond as itself
             with 48-hour awareness. Without it, every conversation starts from zero.
           </p>
           <p>
-            <strong className="text-ink">Layer 2 &mdash; Loaded on Trigger.</strong> When
+            <strong className="text-ink">Layer 2: Loaded on Trigger.</strong> When
             the conversation mentions a person, technology, decision, project, or trend, the
             agent proactively reads the matching wiki page. Mention a colleague and it reads{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/people/{'{person-id}'}.md</code>.
@@ -248,9 +248,9 @@ export default function AiAgentArchitecturePage() {
             feels like the AI &ldquo;just knows,&rdquo; not like it&rsquo;s doing a lookup.
           </p>
           <p>
-            <strong className="text-ink">Layer 3 &mdash; Loaded on Explicit Request.</strong>{' '}
-            Deep-dive content &mdash; dated memory files, full transcripts, the raw knowledge
-            graph &mdash; loaded only when you ask. &ldquo;What happened in Tuesday&rsquo;s
+            <strong className="text-ink">Layer 3: Loaded on Explicit Request.</strong>{' '}
+            Deep-dive content (dated memory files, full transcripts, the raw knowledge
+            graph) loaded only when you ask. &ldquo;What happened in Tuesday&rsquo;s
             meeting?&rdquo; pulls the specific file. &ldquo;Show me my full graph&rdquo; loads
             and analyzes the JSON. Rare but critical fallbacks.
           </p>
@@ -259,7 +259,7 @@ export default function AiAgentArchitecturePage() {
             everything; you load the right things at the right time.
           </p>
           <p>
-            Most personal-AI projects skip Layer 2 entirely &mdash; they read a long profile doc
+            Most personal-AI projects skip Layer 2 entirely. They read a long profile doc
             and call it done. Without triggered retrieval, the system can only use what fits in
             the opening prompt. Layer 2 is how an accumulating wiki becomes live knowledge.
           </p>
@@ -342,8 +342,8 @@ export default function AiAgentArchitecturePage() {
               <p className="text-sm text-body leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
-                Every node has a weight and a meetingCount. Fast, shallow, relational &mdash;
-                good at answering &ldquo;who works on X.&rdquo;
+                Every node has a weight and a meetingCount. Fast, shallow, relational.
+                Good at answering &ldquo;who works on X.&rdquo;
               </p>
             </div>
             <div className="rounded-2xl border border-line bg-paper-strong p-6 shadow-sm">
@@ -353,7 +353,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-2xl font-bold text-ink mb-2">691 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
-                decisions, projects, concepts. Slow, rich, narrative &mdash; good at answering
+                decisions, projects, concepts. Slow, rich, narrative. Good at answering
                 &ldquo;why did we choose X.&rdquo;
               </p>
             </div>
@@ -363,20 +363,20 @@ export default function AiAgentArchitecturePage() {
             <strong className="text-ink">Reconciliation:</strong> when a graph node crosses
             a weight threshold, a wiki page is auto-created as a stub and enriched over time by
             meetings and manual edits. The wiki-ingest cron runs at 9 AM daily, creating up to 5
-            new people pages and 5 new tech-stack pages per run &mdash; so even entities that
+            new people pages and 5 new tech-stack pages per run, so even entities that
             never cross the &ldquo;2+ meetings in one day&rdquo; threshold eventually get
             promoted as meeting history accumulates.
           </p>
           <p>
             <strong className="text-ink">Dedup:</strong> the graph pulls from multiple
-            sources (transcripts, calendar, manual edits), so duplicates creep in &mdash; the
+            sources (transcripts, calendar, manual edits), so duplicates creep in. The
             same person under &ldquo;First Last&rdquo; and &ldquo;Last, First,&rdquo; or a vendor
             under slight spelling variations. A periodic dedup pass merges them at the graph
             level.
           </p>
           <p>
             The wiki is also fed from outside the personal stream. A nightly sync mirrors 2,500+
-            pages from nine institutional Confluence spaces &mdash; runbooks, team docs, service
+            pages from nine institutional Confluence spaces: runbooks, team docs, service
             desk procedures, build &amp; release, AI governance. A second nightly sync pulls
             messages from scoped Microsoft Teams channels, so the agent sees the live
             conversations where decisions actually get made. &ldquo;Your work world&rdquo; is no
@@ -384,8 +384,8 @@ export default function AiAgentArchitecturePage() {
             what your team is talking about right now.
           </p>
           <p className="text-ink font-semibold border border-line border-l-4 border-l-amber-500 pl-5 py-2 bg-paper-strong rounded-r-lg shadow-sm">
-            The graph is the brain stem &mdash; fast, shallow, relational. The wiki is the cortex
-            &mdash; slow, rich, narrative. Together they&rsquo;re a cheap institutional memory
+            The graph is the brain stem: fast, shallow, relational. The wiki is the cortex:
+            slow, rich, narrative. Together they&rsquo;re a cheap institutional memory
             system.
           </p>
         </div>
@@ -415,7 +415,7 @@ export default function AiAgentArchitecturePage() {
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
               TritonAI
-            </a></strong> &mdash; UC San Diego&rsquo;s institutional AI gateway. <strong>Every enabled
+            </a></strong>, UC San Diego&rsquo;s institutional AI gateway. <strong>Every enabled
             route uses an open-weight model, and no scheduled job has a proprietary-model
             override.</strong> GLM 5.2 is the main agent, utility, active-memory, router, and
             default scheduled-work model. Eighty-one jobs inherit that default; nine lightweight
@@ -510,8 +510,8 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p className="text-ink font-semibold border border-line border-l-4 border-l-blue-600 pl-5 py-2 bg-paper-strong rounded-r-lg shadow-sm">
             Provider lock-in is the moat AI vendors want. Open weights on institutional infra,
-            wired through a gateway with strict fallback and active catalog monitoring &mdash;
-            that&rsquo;s how the moat stays from forming around your automation.
+            wired through a gateway with strict fallback and active catalog monitoring.
+            That&rsquo;s how the moat stays from forming around your automation.
           </p>
         </div>
       </section>
@@ -528,7 +528,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl mb-10">
           <p>
-            Building this was the hard part. Using it is where it pays off. What the ecosystem
+            Building this was the hard part. Using it is where it pays off. What the system
             delivers today, the value it generates, and what else becomes possible once the
             foundation is in place.
           </p>
@@ -581,14 +581,14 @@ export default function AiAgentArchitecturePage() {
                 <a href="/ucsd-ai-news" className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600">/ucsd-ai-news</a>.
                 The personal AI digest auto-publishes daily to{' '}
                 <a href="/ai-digest" className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600">/ai-digest</a>.
-                The knowledge framework documents itself &mdash; you&rsquo;re reading that output right now.
+                The knowledge framework documents itself. You&rsquo;re reading that output right now.
               </p>
             </div>
             <div className="rounded-2xl border border-line bg-white/90 shadow-sm p-6">
               <div className="text-ink font-bold text-lg mb-2">Cross-session continuity</div>
               <p className="text-sm text-body leading-6">
                 Decisions made in conversation write back to the wiki. Observed patterns write
-                to a patterns file. The framework is bidirectional &mdash; read for context,
+                to a patterns file. The framework is bidirectional. Read for context,
                 write for continuity. Future sessions inherit what present sessions learn.
               </p>
             </div>
@@ -622,7 +622,7 @@ export default function AiAgentArchitecturePage() {
                 <div className="text-ink font-semibold mb-1">Pattern recognition I&rsquo;d otherwise miss</div>
                 <p className="text-sm text-body leading-6">
                   Daily reports don&rsquo;t tell you the VPN failed 5 of 7 days last week. The
-                  weekly synthesis does. The graph shows who I actually meet with most &mdash;
+                  weekly synthesis does. The graph shows who I actually meet with most,
                   not who I think I meet with most. Data surfaces patterns intuition can&rsquo;t.
                 </p>
               </div>
@@ -689,8 +689,8 @@ export default function AiAgentArchitecturePage() {
               <div className="text-ink font-bold text-lg mb-2">Proactive nudges</div>
               <p className="text-sm text-body leading-6">
                 The agent notices patterns without being asked. &ldquo;This problem has come up
-                three weeks in a row &mdash; here are the options you&rsquo;ve already explored.&rdquo;
-                &ldquo;This person has asked about the same thing five times &mdash; worth a
+                three weeks in a row. Here are the options you&rsquo;ve already explored.&rdquo;
+                &ldquo;This person has asked about the same thing five times. Worth a
                 1:1?&rdquo;
               </p>
             </div>
@@ -698,14 +698,14 @@ export default function AiAgentArchitecturePage() {
               <div className="text-ink font-bold text-lg mb-2">Draft-first communications</div>
               <p className="text-sm text-body leading-6">
                 Emails, memos, and responses drafted in my voice using my actual context. Not
-                generic AI writing &mdash; contextual writing grounded in what I&rsquo;ve said
+                generic AI writing. Contextual writing grounded in what I&rsquo;ve said
                 and decided before. Review beats drafting from scratch.
               </p>
             </div>
             <div className="rounded-2xl border border-line bg-paper-strong p-6 shadow-sm">
               <div className="text-ink font-bold text-lg mb-2">Decision archaeology</div>
               <p className="text-sm text-body leading-6">
-                &ldquo;Why did we pick this architecture two years ago?&rdquo; &mdash; immediate
+                &ldquo;Why did we pick this architecture two years ago?&rdquo; Immediate
                 answer with the full reasoning, the voices that disagreed, and the tradeoffs
                 considered. No more Slack/email archaeology.
               </p>
@@ -714,7 +714,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-ink font-bold text-lg mb-2">Self-monitoring system health</div>
               <p className="text-sm text-body leading-6">
                 The agent notices when data sources go stale, crons degrade, or the knowledge
-                layer has gaps. Self-monitoring becomes self-repairing &mdash; the system
+                layer has gaps. Self-monitoring becomes self-repairing. The system
                 maintains itself instead of waiting for a human to notice.
               </p>
             </div>
@@ -730,7 +730,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-ink font-bold text-lg mb-2">Programming agents with institutional memory</div>
               <p className="text-sm text-body leading-6">
                 The TritonAI Code coding agent now has live MCP access to the same wiki,
-                knowledge graph, and memory logs that my personal agent uses &mdash; via an
+                knowledge graph, and memory logs that my personal agent uses, via an
                 authenticated SSE bridge running on my home network. When it needs context on
                 a person, project, or decision, it queries the memory system directly instead
                 of guessing. The knowledge layer isn&rsquo;t locked to one agent anymore.
@@ -754,7 +754,7 @@ export default function AiAgentArchitecturePage() {
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
             Everything above is one person&rsquo;s implementation. The interesting question:
-            what if every UCSD staff member had one?
+            what if every UC San Diego staff member had one?
           </p>
           <div className="my-6 border border-line border-l-4 border-l-blue-700 bg-paper-strong pl-5 py-4 rounded-r-lg shadow-sm">
             <div className="text-xs uppercase tracking-[0.18em] text-signal-blue font-semibold mb-2">
@@ -762,7 +762,7 @@ export default function AiAgentArchitecturePage() {
             </div>
             <p className="text-ink leading-7">
               This only scales if privacy scales with it. Personal data never leaves the personal
-              agent. Each tier above is opt-in, anonymized, or aggregate-only &mdash; never
+              agent. Each tier above is opt-in, anonymized, or aggregate-only, never
               individual records flowing upward. Without that guarantee at every level, nothing
               ships.
             </p>
@@ -773,15 +773,15 @@ export default function AiAgentArchitecturePage() {
 
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Personal &mdash; the foundation.</strong> Every
+            <strong className="text-ink">Personal: the foundation.</strong> Every
             staff member gets their own agent, memory, wiki, and crons. Data never leaves their
-            agent. This is proven &mdash; it works for one person, and the architecture is
+            agent. This is proven. It works for one person, and the architecture is
             replicable. The hard part isn&rsquo;t the technology; it&rsquo;s the deployment
             pattern: dedicated runtime, isolated data store, and a governance model that says
             &ldquo;this is yours, private by default.&rdquo;
           </p>
           <p>
-            <strong className="text-ink">Team &mdash; opt-in sharing, not opt-out.</strong>{' '}
+            <strong className="text-ink">Team: opt-in sharing, not opt-out.</strong>{' '}
             Team members choose what to share. The team wiki is visible to all members; 1:1s and
             personal notes stay private. Nothing crosses the boundary automatically. This is
             where governance gets interesting: who decides what&rsquo;s shared, how do you
@@ -791,12 +791,12 @@ export default function AiAgentArchitecturePage() {
 
           <div className="my-6 border-l-4 border-signal-green bg-wash-green/60 pl-5 py-4 rounded-r-lg">
             <div className="text-xs uppercase tracking-[0.18em] text-signal-green font-semibold mb-2">
-              Pilot in progress &mdash; TritonAI Team Knowledge Vault
+              Pilot in progress: TritonAI Team Knowledge Vault
             </div>
             <p className="text-ink leading-7 mb-3">
               The team tier is no longer hypothetical. The first instance launched May&nbsp;18,
-              2026: a 3-person shared Obsidian vault for the TritonAI core team &mdash; Brett
-              Pollak, Shawn Munro, and Jeremy Wiles &mdash; sitting in a private GitHub repo
+              2026: a 3-person shared Obsidian vault for the TritonAI core team (Brett
+              Pollak, Shawn Munro, and Jeremy Wiles), sitting in a private GitHub repo
               and auto-syncing every 10 minutes via the Obsidian Git plugin. The vault has six
               shared sections: <code className="text-[0.9em] bg-wash-green/60 px-1.5 py-0.5 rounded">people/</code>{' '}
               (professional profiles, no 1:1 notes),{' '}
@@ -813,14 +813,14 @@ export default function AiAgentArchitecturePage() {
             </p>
             <p className="text-ink leading-7 mb-3">
               <strong>Two contributor modes coexist.</strong> Type&nbsp;A (manual) edits pages
-              directly in Obsidian; auto-sync handles the rest &mdash; that&rsquo;s how Jeremy
+              directly in Obsidian; auto-sync handles the rest. That&rsquo;s how Jeremy
               works today. Type&nbsp;B (agent-assisted) is how Shawn and I work: an agent reads
               evening-wrap, meeting debriefs, and opportunity-scan output, drafts updates into{' '}
               <code className="text-[0.9em] bg-wash-green/60 px-1.5 py-0.5 rounded">proposals/YYYY-MM-DD-{'{topic}'}.md</code>,
-              and a human (the owner of the page) reviews each one &mdash; about
-              30&nbsp;seconds &mdash; before committing into the canonical page. <em>No
+              and a human (the owner of the page) reviews each one, about
+              30&nbsp;seconds, before committing into the canonical page. <em>No
               automation writes directly to shared pages.</em> Having both modes live in the
-              same vault from week one is a deliberate test &mdash; we want to see whether
+              same vault from week one is a deliberate test. We want to see whether
               manual and agent-assisted contributors can coexist without one mode crowding out
               the other. Four cron jobs run the rhythm: nightly ingest at 8&nbsp;PM weeknights
               folds team-vault changes into the personal knowledge graph, a proposals generator
@@ -829,7 +829,7 @@ export default function AiAgentArchitecturePage() {
             </p>
             <p className="text-ink leading-7 mb-3">
               <strong>What we&rsquo;ve seen in week one.</strong> 25+ assets updated in the
-              first 48 hours &mdash; people cards, decision docs, project pages, runbooks,
+              first 48 hours: people cards, decision docs, project pages, runbooks,
               tech-stack entries. Not a write-once-and-die artifact: all three of us are
               editing continuously, and the nightly ingest means a decision logged in the
               vault is in my agent&rsquo;s context by the next morning. The Monday briefing
@@ -839,46 +839,46 @@ export default function AiAgentArchitecturePage() {
             </p>
             <p className="text-ink leading-7">
               <strong>The strategic reason this matters.</strong> If this works at three
-              people, the same pattern &mdash; shared Obsidian vault, GitHub backing,
+              people, the same pattern (shared Obsidian vault, GitHub backing,
               proposals-first agent writes, ~10&nbsp;minutes of human review per week per
-              steward &mdash; should plausibly scale through WTS (a dozen+ people) to ITS
+              steward) should scale through WTS (a dozen+ people) to ITS
               leadership and onward. Each tier becomes &ldquo;Layer 2&rdquo; (triggered) for
-              the tier above. If a UCSD campus offering ever ships, this is the architectural
+              the tier above. If a UC San Diego campus offering ever ships, this is the architectural
               shape we&rsquo;d propose: every team gets a vault, every team member gets an
               agent that reads it, no team&rsquo;s vault is visible to another without explicit
               cross-vault permission.
             </p>
           </div>
           <p>
-            <strong className="text-ink">Department &mdash; anonymized aggregates only.</strong>{' '}
+            <strong className="text-ink">Department: anonymized aggregates only.</strong>{' '}
             At WTS or Academic Technology Services, the useful view is patterns, not records.
             &ldquo;Trending pain points this week&rdquo; or &ldquo;which vendors are we all
-            evaluating&rdquo; &mdash; no individual data, just signals that emerge from many
-            agents, the way public health surveillance works. Individual identity is stripped
+            evaluating&rdquo;. No individual data, just signals that emerge from many
+            agents, the way public health surveillance works. The system strips individual identity
             before aggregation; the dashboard never shows who said what.
           </p>
           <p>
-            <strong className="text-ink">Campus &mdash; statistical patterns only.</strong>{' '}
+            <strong className="text-ink">Campus: statistical patterns only.</strong>{' '}
             TritonAI provides campus-wide AI services. The missing piece is connective tissue:
             aggregate department patterns up to institutional insights. Which departments
             struggle with the same vendor, which AI use cases are converging, what decisions
-            would help everyone. This tier only ever sees statistical patterns &mdash; never
+            would help everyone. This tier only ever sees statistical patterns, never
             individual records, never attributable content.
           </p>
           <p>
             The tech mostly exists. The governance doesn&rsquo;t. Sharing boundaries have to be
-            first-class features, not bolt-ons &mdash; and campus data stewardship has to be
+            first-class features, not bolt-ons. And campus data stewardship has to be
             comfortable with the model before anything scales beyond the personal tier.
           </p>
           <p>
             <strong className="text-ink">Proven vs. speculative:</strong> the personal
-            layer works; I use it daily. The team layer is now also shipped &mdash; live for
+            layer works; I use it daily. The team layer is now also shipped, live for
             three people since May&nbsp;18 with a structured retrospective set for June&nbsp;15.
             Department and campus layers are still design exercises, not shipped code. The
             pattern is there; the architecture is a starting point, not a finished product.
           </p>
           <p className="text-ink font-semibold border border-line border-l-4 border-l-blue-600 pl-5 py-2 bg-paper-strong rounded-r-lg shadow-sm">
-            The real question isn&rsquo;t &ldquo;can we do this?&rdquo; &mdash; it&rsquo;s
+            The real question isn&rsquo;t &ldquo;can we do this?&rdquo; It&rsquo;s
             &ldquo;what would it take to do it responsibly, at scale, in a way a 30,000-employee
             university can actually adopt without violating anyone&rsquo;s privacy along the
             way?&rdquo; That&rsquo;s a design + governance + procurement project, not just a
@@ -901,7 +901,7 @@ export default function AiAgentArchitecturePage() {
         <div className="text-body text-[1.06rem] leading-8 space-y-5 mb-8">
           <p>
             It&rsquo;s a living system, updated continuously. Some of what&rsquo;s on this page
-            will be obsolete in six months &mdash; that&rsquo;s the point. Every change is in
+            will be obsolete in six months. That&rsquo;s the point. Every change is in
             the git history of my{' '}
             <a
               href="https://github.com/bpollak/mission-control"
@@ -1208,7 +1208,7 @@ export default function AiAgentArchitecturePage() {
             </Eyebrow>
             <div className="text-ink font-semibold mb-1">31-job migration to TritonAI open-weight models</div>
             <p className="text-sm text-body leading-6">
-              UCSD raised the TritonAI virtual-key budget. Migrated 31 cron jobs from a mixed
+              UC San Diego raised the TritonAI virtual-key budget. Migrated 31 cron jobs from a mixed
               OpenRouter / Codex / Google fleet onto TritonAI&rsquo;s open-weight catalog: Kimi
               K2.5 for synthesis-heavy work (briefings, opportunity scan), Mistral Large 3 for
               long-form (newsletter, audits), gpt-oss 120B for single-shot agentic, Gemma 4 for
@@ -1359,14 +1359,14 @@ export default function AiAgentArchitecturePage() {
             Built on
           </div>
           <p className="text-sm text-body leading-7">
-            The foundation of this ecosystem is{' '}
+            The foundation of this system is{' '}
             <a
               href="https://openclaw.ai"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
               OpenClaw
             </a>
-            {' '}&mdash; a personal AI assistant framework providing the cron scheduler, agent
+            {' '}, a personal AI assistant framework providing the cron scheduler, agent
             runtime, Telegram integration, multi-model gateway, and plugin SDK the pipeline runs
             on. What you see here isn&rsquo;t OpenClaw out of the box; it&rsquo;s OpenClaw
             tailored, extended, and reshaped over many months to fit a specific work context.

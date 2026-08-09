@@ -7,7 +7,7 @@ export interface MediaItem {
 }
 
 // This array is the single source of truth for the /media page. To update the
-// page, add or edit entries here — nothing else needs to change. The hero stats
+// page, add or edit entries here. Nothing else needs to change. The hero stats
 // (indexed items, talks, coverage span) and the "record by format / activity by
 // year" graphic (MediaArchiveChart in app/media/page.tsx) are all computed from
 // this data at build time, so they stay accurate automatically on the next

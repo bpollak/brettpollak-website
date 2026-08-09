@@ -33,7 +33,7 @@ export const linkedInProfile: LinkedInProfile = {
   lastReviewed: "2026-07-26",
   profileUrl: "https://www.linkedin.com/in/brettpollak/",
   intro:
-    "Most of what I post is the in-between version of the work on this site — what a deployment actually cost, what we got wrong first, and what turned out to be reusable.",
+    "Most of what I post is the in-between version of the work on this site. What a deployment actually cost, what we got wrong first, and what turned out to be reusable.",
   themes: [
     {
       label: "Institutional AI, with the numbers attached",
@@ -43,12 +43,12 @@ export const linkedInProfile: LinkedInProfile = {
     {
       label: "Governance as an accelerant",
       body:
-        "Data classification, guardrails, and review paths are what let an institution say yes faster. Most of what I write about governance is really about removing the reason to say no.",
+        "Data classification and guardrails are what let an institution say yes faster. Most of what I write about governance is really about removing the reason to say no.",
     },
     {
       label: "Agentic workflows in real administrative work",
       body:
-        "Contract review, transcript matching, scheduling, enterprise data questions — where agents have earned their place in production, and where they have not.",
+        "Contract review, transcript matching, scheduling, enterprise data questions. Where agents have earned their place in production, and where they have not.",
     },
     {
       label: "Enabling people who are not developers",

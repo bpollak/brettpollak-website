@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
-  title: "Products & Innovation — AI-Powered Solutions",
-  description: "Explore AI-driven products built by Brett Pollak, including Is This AI?, Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
+  title: "Products & Innovation. Built Work",
+  description: "Explore AI products built by Brett Pollak, including Is This AI?, Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
   openGraph: {
-    title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
-    description: "Discover innovative AI solutions and products built by Brett Pollak.",
+    title: "Products & Innovation | Built Work by Brett Pollak",
+    description: "AI products and prototypes built by Brett Pollak.",
     url: "https://brettcpollak.com/products",
     images: [
       {
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Products & Innovation | AI-Powered Solutions by Brett Pollak",
-    description: "Discover innovative AI solutions and products built by Brett Pollak.",
+    title: "Products & Innovation | Built Work by Brett Pollak",
+    description: "AI products and prototypes built by Brett Pollak.",
     images: ["/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg"],
   },
 };
@@ -54,7 +54,7 @@ const products = [
   },
   {
     category: "College recruiting",
-    title: "Cason Pollak — Track & Field Recruiting Profile",
+    title: "Cason Pollak. Track & Field Recruiting Profile",
     href: "https://casonpollak.com/",
     image: "/cason-recruiting.png",
     imageAlt: "Cason Pollak recruiting profile homepage showing hero section with athlete photo, personal bests, and navigation",
@@ -82,7 +82,7 @@ const products = [
     width: 1280,
     height: 800,
     description:
-      "The private operations backend behind Cason's public recruiting profile — a complementary but separate family workspace for running the outreach itself. Every target school, coach contact, conversation, questionnaire, and next step lives in one secure, Google-authenticated place, keeping the recruiting process organized from first email to commitment. Because it is invite-only, here is a walkthrough of what it does.",
+      "The private operations backend behind Cason's public recruiting profile. A separate family workspace for running the outreach itself. Every target school, coach contact, conversation, and next step lives in one Google-authenticated place, organized from first email to commitment. Because it is invite-only, here is a walkthrough of what it does.",
     features: [
       "Private, family-only access (Google sign-in)",
       "School & coach outreach pipeline",
@@ -101,7 +101,7 @@ const products = [
     width: 1520,
     height: 1040,
     description:
-      "A private family workspace with an autonomous agent behind it. It sweeps a registry of sponsors and foundations daily, reads each program's own page, and screens eligibility against a stored student profile — keeping a requirement only when it can quote the page text that proves it. The result is a short list of things that genuinely need a human decision, instead of a folder of tabs. Because it is invite-only, here is a walkthrough of what it does.",
+      "A private family workspace with an autonomous agent behind it. It sweeps a registry of sponsors and foundations daily, reads each program's own page, and screens eligibility against a stored student profile. It keeps a requirement only when it can quote the page text that proves it. The result is a short list of things that genuinely need a human decision, instead of a folder of tabs. Because it is invite-only, here is a walkthrough of what it does.",
     features: [
       "Private, family-only access (passkey or Google)",
       "Daily autonomous discovery across 65 sources",
@@ -113,14 +113,14 @@ const products = [
   },
   {
     category: "AI agent system",
-    title: "Henry — Personal AI Operating System",
+    title: "Henry. Personal AI Operating System",
     href: "https://bpollak.github.io/openclaw-ai-usecase-deck/",
     image: "/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg",
     imageAlt: "Mission Control Build / Campus App Pipeline view",
     width: 590,
     height: 1280,
     description:
-      "A production AI agent stack built on OpenClaw: 24/7 Mac mini operations, autonomous automations, knowledge graph memory, vector search, multi-model routing, and deep institutional integrations.",
+      "A production AI agent stack built on OpenClaw: 24/7 Mac mini operations, autonomous automations, knowledge graph memory, vector search, multi-model routing, and institutional integrations.",
     features: [
       "25+ autonomous automations",
       "Multi-model intelligence",
@@ -174,7 +174,7 @@ const products = [
     width: 1600,
     height: 900,
     description:
-      "Validates doctoral dissertations and master's theses against 84 UCSD GEPA formatting rules across 13 categories. Auto-corrects common issues and separates results into Fixed For You, Action Required, and Please Verify.",
+      "Validates doctoral dissertations and master's theses against 84 UC San Diego GEPA formatting rules across 13 categories. Auto-corrects common issues and separates results into Fixed For You, Action Required, and Please Verify.",
     features: [
       "84 GEPA rules checked",
       "13 formatting categories",
@@ -192,10 +192,10 @@ const products = [
     width: 1280,
     height: 800,
     description:
-      "Turns a faculty CV into a draft UCSD Academic Biography and Bibliography document. Breaks CVs into review parts, routes section work through TritonAI, and produces a downloadable Word file.",
+      "Turns a faculty CV into a draft UC San Diego Academic Biography and Bibliography document. Breaks CVs into review parts, routes section work through TritonAI, and produces a downloadable Word file.",
     features: [
       "20-part section review",
-      "Model-routed UCSD TritonAI review",
+      "Model-routed UC San Diego TritonAI review",
       "BioBib-compliant Word output",
       "Conversion recovery links",
     ],
@@ -265,7 +265,7 @@ export default function Products() {
             <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Built Work</h1>
           </div>
           <p className="text-2xl text-body mb-6 max-w-3xl leading-9">
-            AI-powered products and prototypes that solve real problems, from personal productivity to institutional transformation.
+            AI products and prototypes that solve real problems. Personal productivity, campus operations, family tools.
           </p>
         </div>
 
@@ -368,7 +368,7 @@ export default function Products() {
             </div>
             <div>
               <p className="text-lg leading-8 text-body">
-                I am continuing to develop new software products across education, productivity, and enterprise domains, with updates shared as the tools become concrete enough to inspect.
+                I'm building more software across education, productivity, and enterprise tools. I'll post updates as things get concrete enough to show.
               </p>
               <Link
                 href="/linkedin"

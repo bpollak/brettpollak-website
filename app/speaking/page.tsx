@@ -5,7 +5,7 @@ import { mediaItems } from '@/lib/mediaData';
 export const metadata: Metadata = {
   title: 'Speaking — AI in Higher Education',
   description:
-    'Brett Pollak speaks on AI in higher education, agentic workflows, institutional AI governance, and how universities are building vertical AI at scale. Available for keynotes, panels, and conference sessions.',
+    'Brett Pollak speaks on AI in higher education, agentic workflows, and AI governance. Available for keynotes and conference sessions.',
   alternates: {
     canonical: 'https://brettcpollak.com/speaking',
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Speaking | Brett Pollak — AI in Higher Education',
     description:
-      'Brett Pollak speaks on AI in higher education, agentic workflows, institutional AI governance, and how universities are building vertical AI at scale.',
+      'Brett Pollak speaks on AI in higher education, agentic workflows, and AI governance at scale.',
     url: 'https://brettcpollak.com/speaking',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Speaking | Brett Pollak — AI in Higher Education',
     description:
-      'Keynotes, panels, and conference sessions on institutional AI, agentic workflows, and AI governance in higher education.',
+      'Keynotes and conference sessions on institutional AI and agentic workflows in higher education.',
     images: ['/brett-pollak-og-card.png'],
   },
 };
@@ -52,31 +52,31 @@ const SPEAKING_TOPICS = [
   {
     title: 'Building Vertical AI at Scale',
     description:
-      'How UC San Diego moved from generic AI tools to purpose-built, on-premises institutional AI — and what it takes to go from pilot to 73,000 users. Covers architecture, governance, and the difference between deploying a chatbot and building infrastructure.',
+      'How UC San Diego moved from generic AI tools to purpose-built, on-premises institutional AI. What it takes to go from pilot to 73,000 users. Covers architecture, governance, and the difference between a chatbot and infrastructure.',
     signals: ['TritonAI', 'TritonGPT', 'LiteLLM', 'Vertical AI', 'On-premises AI'],
   },
   {
     title: 'Agentic AI Workflows in Higher Education',
     description:
-      'The shift from AI assistants to AI agents that act — automating administrative workflows, delegating tasks across systems, and governing autonomous behavior in an institutional setting. Real deployments: contract review (91% turnaround reduction), financial data agents, transcript matching.',
+      'The shift from AI assistants to AI agents that act. Automating administrative workflows and governing autonomous behavior in an institutional setting. Real deployments: contract review (91% turnaround reduction), financial data agents, transcript matching.',
     signals: ['Agentic AI', 'AI workflows', 'AI automation', 'Agent orchestration', 'MCP'],
   },
   {
     title: 'AI Governance That Actually Works',
     description:
-      'Governance isn\'t a brake on AI adoption — it\'s the infrastructure that makes adoption durable. How to build guardrails, data classification, and oversight frameworks that let an institution say yes faster, not slower.',
+      'Governance isn\'t a brake on AI adoption. It\'s the infrastructure that makes adoption durable. How to build guardrails and data classification that let an institution say yes faster, not slower.',
     signals: ['AI governance', 'Data classification', 'P1-P4 data policy', 'AI oversight', 'Responsible AI'],
   },
   {
     title: 'The Citizen Developer Program',
     description:
-      'How UC San Diego built a governed developer enablement model so staff, researchers, and faculty can build their own AI-powered tools — with credits, templates, guardrails, and a 4-step access path from idea to deployed application.',
+      'How UC San Diego built a governed developer enablement model so staff, researchers, and faculty can build their own AI tools. Includes credits, templates, guardrails, and a 4-step path from idea to deployed application.',
     signals: ['Citizen developer', 'Developer API', 'AI democratization', 'Low-code AI', 'Campus AI program'],
   },
   {
     title: 'AI as Institutional Infrastructure',
     description:
-      'The case for treating AI like cloud, email, and identity — shared, governed, rechargeable infrastructure — rather than a department-by-department procurement race. Includes the multi-institution model: BearGPT (UC Berkeley), UC ANR, Fairleigh Dickinson University, UC Merced.',
+      'The case for treating AI like cloud or email: shared, governed, rechargeable infrastructure rather than a department-by-department procurement race. Includes the multi-institution model: BearGPT (UC Berkeley), UC ANR, Fairleigh Dickinson University, UC Merced.',
     signals: ['AI infrastructure', 'Multi-tenant AI', 'Higher ed AI program', 'Shared AI services', 'UC system AI'],
   },
 ];
@@ -105,7 +105,7 @@ export default function SpeakingPage() {
       url: 'https://ucsd.edu/',
     },
     description:
-      'Brett Pollak is a technology executive and keynote speaker on AI in higher education. He leads TritonAI at UC San Diego — the institutional AI program serving 73,000+ users — and speaks on vertical AI deployment, agentic workflows, AI governance, and citizen developer enablement.',
+      'Brett Pollak is a technology executive and keynote speaker on AI in higher education. He leads TritonAI at UC San Diego, the institutional AI program serving 73,000+ users. He speaks on vertical AI deployment, agentic workflows, and citizen developer enablement.',
     knowsAbout: [
       'AI in Higher Education',
       'Institutional AI Deployment',
@@ -173,8 +173,8 @@ export default function SpeakingPage() {
             Speaking
           </h1>
           <p className="page-intro">
-            I speak about what we&apos;ve actually built and learned at UC San Diego — not frameworks, not predictions.
-            Real deployments, real outcomes, real friction. If that&apos;s useful for your audience, let&apos;s talk.
+            I speak about what we&apos;ve actually built and learned at UC San Diego. Not frameworks. Not predictions.
+            Real deployments, real friction. If that&apos;s useful for your audience, let&apos;s talk.
           </p>
         </div>
       </section>
@@ -223,7 +223,7 @@ export default function SpeakingPage() {
         {PAST_ENGAGEMENTS.length > 0 && (
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-ink mb-2">Recent Engagements</h2>
-            <p className="text-muted mb-10">Recent conferences, summits, and panels.</p>
+            <p className="text-muted mb-10">Recent conferences and panels.</p>
             <div className="space-y-4">
               {PAST_ENGAGEMENTS.map((item, i) => (
                 <a
@@ -283,11 +283,11 @@ export default function SpeakingPage() {
             {[
               {
                 heading: 'No slide decks full of AI hype',
-                body: 'Specific use cases, real numbers, and honest failures. What worked, what didn\'t, and why.',
+                body: 'Specific use cases, real numbers, and honest failures. What worked and what didn\'t.',
               },
               {
                 heading: 'Deployable ideas',
-                body: 'Every session surfaces things your audience can take back and try — not just frameworks to think about.',
+                body: 'Every session surfaces things your audience can take back and try. Not just frameworks to think about.',
               },
               {
                 heading: 'Institutional perspective',
@@ -307,7 +307,7 @@ export default function SpeakingPage() {
         <section className="text-center py-12 editorial-panel editorial-dark px-8">
           <h2 className="text-3xl font-bold text-white mb-4">Interested in having me speak?</h2>
           <p className="text-on-dark mb-8 max-w-xl mx-auto">
-            I speak at higher ed technology conferences, AI summits, and institutional leadership events.
+            I speak at higher ed technology conferences and institutional leadership events.
             Let me know what you&apos;re planning and who&apos;s in the room.
           </p>
           <Link

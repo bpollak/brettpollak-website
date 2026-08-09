@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brett Pollak | AI in Higher Education',
     description:
-      'Notes and conversations about building useful, responsible AI in higher education, informed by work at UC San Diego on TritonAI, the Developer API Program, and citizen agentic development.',
+      'Notes and conversations about building useful AI in higher education, informed by work at UC San Diego on TritonAI and the Developer API Program.',
     url: 'https://brettcpollak.com/',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Brett Pollak | AI in Higher Education',
     description:
-      'Building and learning from institutional AI in higher education, TritonAI, citizen-developer enablement, and the architecture behind it.',
+      'Building institutional AI at UC San Diego. Lessons from TritonAI and the architecture behind it.',
     images: ['/brett-pollak-og-card.png'],
   },
 };
@@ -73,19 +73,19 @@ const fieldNotes = [
     tone: 'blue',
     label: 'Experiment Pattern',
     title: 'Experiments need an exit ramp',
-    body: 'Most prototypes should teach something and disappear. The useful ones need a path into shared infrastructure, support, and governance.',
+    body: 'Most prototypes should teach something and disappear. The useful ones need a path into shared infrastructure and governance.',
   },
   {
     tone: 'gold',
     label: 'Decision Signal',
     title: 'Evidence decides what survives',
-    body: 'The work is separating enthusiasm from durable value: who used it, what changed, what risks appeared, and what should scale.',
+    body: 'The work is separating enthusiasm from durable value. Who used it, what changed, what risks showed up.',
   },
   {
     tone: 'green',
     label: 'Architecture Note',
     title: 'Scale is a design constraint',
-    body: 'A durable pattern has to survive outside the pilot team: documentation, ownership, funding, privacy, and repeatable operations.',
+    body: 'A durable pattern has to survive outside the pilot team. That means documentation, ownership, funding, and operations that repeat.',
   },
 ];
 
@@ -274,7 +274,7 @@ export default function Home() {
     "alternateName": "TritonAI Program at UC San Diego",
     "url": "https://brettcpollak.com/tritongpt",
     "description":
-      "UC San Diego's institutional AI program, a shared ecosystem that includes TritonGPT, the TritonAI Developer API Program, and the Citizen Agentic Development Framework. Serves 73,000+ campus users.",
+      "UC San Diego's institutional AI program, including TritonGPT, the TritonAI Developer API Program, and the Citizen Agentic Development Framework. Serves 73,000+ campus users.",
     "foundingDate": "2024",
     "parentOrganization": {
       "@type": "EducationalOrganization",
@@ -303,15 +303,14 @@ export default function Home() {
                 Making technology useful in higher education.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-body">
-                I lead technology, infrastructure, and digital workplace teams at UC San Diego,
-                turning emerging tools into dependable services people actually use. Right now that
-                work centers on practical AI through{' '}
+                I lead technology and digital workplace teams at UC San Diego.
+                The work is turning new tools into services people actually use. Right now that
+                means AI through{' '}
                 <Link href="/tritongpt" className="font-semibold text-signal-blue underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
-                . This site collects the field notes, architecture, talks, and product experiments
-                behind the question of what should be temporary, what should become durable, and
-                what should scale.
+                . This site collects field notes, architecture, and experiments
+                that come from deciding what stays temporary, what becomes durable, and what scales.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
@@ -332,8 +331,8 @@ export default function Home() {
                 <div>
                   <p className="rule-label mb-3">Operating idea</p>
                   <p className="text-base leading-7 text-body">
-                    Run experiments deliberately, keep what proves durable, and move the surviving
-                    patterns into shared infrastructure, governance, and scalable practice.
+                    Run experiments deliberately. Keep what proves durable. Move the surviving
+                    patterns into shared infrastructure and governance.
                   </p>
                 </div>
               </div>
@@ -355,7 +354,7 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 z-20 p-5 md:p-6 text-white">
                   <p className="rule-label mb-3 text-white/70">UC San Diego field work</p>
                   <p className="max-w-sm text-xl md:text-2xl leading-8 font-medium">
-                    Moving from promising tools to dependable services, shared practice, and campus trust.
+                    Moving from promising tools to dependable services and campus trust.
                   </p>
                 </div>
               </div>
@@ -396,8 +395,8 @@ export default function Home() {
                 Institutional inputs become useful outcomes.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-body">
-                Knowledge, people, and tools route through governed institutional AI into the
-                everyday work of service, instruction, and research.
+                Knowledge, people, and tools route through governed institutional AI into
+                everyday work across the university.
               </p>
             </div>
             <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
@@ -463,7 +462,7 @@ export default function Home() {
                 A publication index, not a logo wall.
               </h2>
               <p className="mt-6 text-white/70 leading-7">
-                The media page keeps the longer record. These are a few entry points into the public conversation.
+                The media page keeps the longer record. These are a few entry points.
               </p>
             </div>
             <div className="divide-y divide-white/12 border-y border-white/12">

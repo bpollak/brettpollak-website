@@ -6,7 +6,7 @@ import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 
 export const metadata: Metadata = {
   title: 'AI Digest — Curated AI Developments',
-  description: 'A rolling weekly archive of curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
+  description: 'A weekly archive of daily AI briefings covering product launches, enterprise moves, and higher education implications.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-digest',
     types: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'AI Digest | Curated AI Developments',
-    description: 'Curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
+    description: 'Daily AI briefings covering product launches, enterprise moves, and higher education implications.',
     url: 'https://brettcpollak.com/ai-digest',
     siteName: 'Brett Pollak',
     type: 'article',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Digest | Curated AI Developments',
-    description: 'Curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
+    description: 'Daily AI briefings covering product launches, enterprise moves, and higher education implications.',
     images: ['/ai-use-case-meeting.png'],
   },
 };
@@ -46,7 +46,7 @@ export default function AiDigestPage() {
     "@id": `${SITE_URL}/ai-digest#article`,
     headline: `This Week in AI Digest — ${weekLabel}`,
     description:
-      'A rolling weekly archive of curated daily AI developments, product launches, enterprise shifts, and higher education implications.',
+      'A weekly archive of daily AI briefings covering product launches, enterprise moves, and higher education implications.',
     url: `${SITE_URL}/ai-digest`,
     author: { "@id": `${SITE_URL}/#person` },
     publisher: { "@id": `${SITE_URL}/#person` },
@@ -68,7 +68,7 @@ export default function AiDigestPage() {
           This Week in AI Digest
         </h1>
         <p className="page-intro mb-10">
-          A rolling weekly archive of curated daily AI briefings focused on major developments, product launches, enterprise shifts, and higher education implications. This page updates as new digests are published and automatically resets to a new week every Monday.
+          A weekly archive of daily AI briefings. Product launches, enterprise moves, and what matters for higher education. Updates as new digests publish and resets each Monday.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">

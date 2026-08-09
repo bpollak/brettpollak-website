@@ -8,7 +8,7 @@ const PAGE_URL = `${SITE_URL}/products/cason-scholarship-agent`;
 export const metadata: Metadata = {
   title: "Scholarship Agent | Brett Pollak",
   description:
-    "A private, family-only scholarship CRM with an autonomous agent behind it — daily discovery, evidence-backed eligibility screening, an application pipeline, and inbox-driven status updates. A walkthrough illustrated with sample data.",
+    "A private, family-only scholarship CRM with an autonomous agent behind it. Daily discovery, evidence-backed eligibility screening, an application pipeline, and inbox-driven status updates. A walkthrough illustrated with sample data.",
   alternates: {
     canonical: PAGE_URL,
   },
@@ -208,16 +208,15 @@ export default function CasonScholarshipAgentPage() {
               <p className="rule-label mb-5">Product · Private family workspace</p>
               <h1 className="page-title">Scholarship Agent</h1>
               <p className="page-intro mt-6">
-                Scholarship searching is mostly unpaid research: finding programs, working out
-                whether you actually qualify, and keeping track of what is due when. This is a
-                private family workspace with an autonomous agent behind it — it sweeps sources
-                daily, reads each program&apos;s own page, screens eligibility against a stored
-                student profile, and surfaces only the handful of things that genuinely need a
-                human decision.
+                Scholarship searching is mostly unpaid research: finding programs and working out
+                whether you actually qualify. This is a private family workspace with an autonomous
+                agent behind it. It sweeps sources daily, reads each program&apos;s own page, screens
+                eligibility against a stored student profile, and surfaces only the handful of things
+                that genuinely need a human decision.
               </p>
               <p className="mt-5 inline-flex items-center gap-2 border border-line bg-paper-strong px-4 py-2 text-sm font-semibold text-body">
                 <span className="h-2 w-2 flex-shrink-0 bg-[#b8503f]" aria-hidden="true" />
-                Invite-only — access is limited to approved family accounts.
+                Invite-only. Access is limited to approved family accounts.
               </p>
             </div>
             <Frame label="scholarship agent · sign in">
@@ -237,8 +236,8 @@ export default function CasonScholarshipAgentPage() {
       <div className="max-w-6xl mx-auto px-6 py-6 md:py-10">
         <p className="field-note px-5 py-4 text-sm leading-6 text-body" data-tone="gold">
           <span className="font-semibold text-ink">A note on the screens below.</span>{" "}
-          The interface is illustrated with fictional sample data — invented sponsors, amounts, and
-          dates — to show how it works without exposing any real scholarship pipeline or student
+          The interface is illustrated with fictional sample data (invented sponsors, amounts, and
+          dates) to show how it works without exposing any real scholarship pipeline or student
           information.
         </p>
 
@@ -359,7 +358,7 @@ export default function CasonScholarshipAgentPage() {
         <Capability
           eyebrow="Writing support"
           title="A first draft built from what it already knows"
-          body="The student fills in a structured profile once — activities, leadership, work, athletics, academics — and the agent drafts essays and application answers from those facts alone, never invented ones. Drafts are proposals: nothing is submitted, and every one waits for the student to read and approve it."
+          body="The student fills in a structured profile once (activities, leadership, work, athletics, academics) and the agent drafts essays and application answers from those facts alone, never invented ones. Drafts are proposals: nothing is submitted, and every one waits for the student to read and approve it."
         >
           <Frame label="Essay draft">
             <div className="space-y-3">
@@ -402,7 +401,7 @@ export default function CasonScholarshipAgentPage() {
               <div className="border-t border-[#eceee8] pt-3">
                 <div className="rule-label">Ruled out</div>
                 <p className="mt-1.5 text-body">
-                  <span className="font-semibold text-ink">Mariner Lodge Grant</span> — restricted to
+                  <span className="font-semibold text-ink">Mariner Lodge Grant</span>. Restricted to
                   children of members in good standing.
                 </p>
               </div>

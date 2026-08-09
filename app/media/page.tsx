@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import MediaContent from './MediaContent';
 
 export const metadata: Metadata = {
-  title: "Media & Appearances — AI in Higher Education",
-  description: "Brett Pollak's published articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education — Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, NACUBO, and more.",
+  title: "Media & Appearances | AI in Higher Education",
+  description: "Articles, interviews, talks, and awards on AI strategy and technology leadership in higher education by Brett Pollak. Published in Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, NACUBO, and more.",
   keywords: [
     "Brett Pollak articles",
     "Brett Pollak interviews",
@@ -26,22 +26,22 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Media & Appearances | Brett Pollak — AI in Higher Education",
-    description: "Brett Pollak's articles, interviews, speaking engagements, whitepapers, and awards on AI strategy, institutional transformation, and technology leadership in higher education.",
+    title: "Media & Appearances | Brett Pollak | AI in Higher Education",
+    description: "Articles, interviews, talks, and awards on AI strategy and technology leadership in higher education by Brett Pollak.",
     url: "https://brettcpollak.com/media",
     images: [
       {
         url: "/brett-pollak-og-card.png",
         width: 1200,
         height: 630,
-        alt: "Brett Pollak — AI in Higher Education",
+        alt: "Brett Pollak, AI in Higher Education",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Media & Appearances | Brett Pollak — AI in Higher Education",
-    description: "Articles, interviews, speaking engagements, whitepapers, and awards on AI in higher education — Brett Pollak.",
+    title: "Media & Appearances | Brett Pollak | AI in Higher Education",
+    description: "Articles, interviews, talks, and awards on AI in higher education by Brett Pollak.",
     images: ["/brett-pollak-og-card.png"],
   },
 };
@@ -56,7 +56,7 @@ const FORMAT_META: { key: MediaItem['category']; label: string; color: string }[
 
 // Data-driven archive graphic: format breakdown (bars) + activity-by-year
 // timeline (columns), computed from mediaItems so it stays accurate as the
-// record grows. Nothing here is hand-tuned — add an item to mediaData and the
+// record grows. Nothing here is hand-tuned. Add an item to mediaData and the
 // chart recomputes on the next build.
 function MediaArchiveChart() {
   const total = mediaItems.length;
@@ -76,7 +76,7 @@ function MediaArchiveChart() {
   }
   const maxYear = Math.max(...yearSpan.map((y) => y.count), 1);
 
-  // layout — derive the timeline position from the format bars so the two
+  // layout: derive the timeline position from the format bars so the two
   // sections never overlap, no matter how many format rows are present.
   const W = 520;
   const barX = 132;
@@ -231,7 +231,7 @@ export default function Media() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl leading-none font-medium text-ink">Publication Index</h1>
             </div>
             <p className="text-xl sm:text-2xl text-body max-w-3xl leading-9">
-              Articles, interviews, speaking engagements, whitepapers, and awards covering AI strategy, institutional transformation, and technology leadership in higher education.
+              Articles, interviews, talks, and awards on AI strategy and technology leadership in higher education.
             </p>
             <div className="grid gap-3 sm:grid-cols-3">
               {[

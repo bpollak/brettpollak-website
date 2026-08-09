@@ -3,13 +3,13 @@ import PodcastsContent from './PodcastsContent';
 
 export const metadata: Metadata = {
   title: "Podcast Discovery",
-  description: "Discover and share your favorite podcasts on AI, technology, economics, and more. Featuring Brett's curated picks and community recommendations.",
+  description: "Brett's curated podcast picks and community recommendations on AI, technology, and economics.",
   alternates: {
     canonical: "https://brettcpollak.com/podcasts",
   },
   openGraph: {
     title: "Podcast Discovery | Brett Pollak",
-    description: "Discover and share your favorite podcasts on AI, technology, economics, and more.",
+    description: "Brett's curated podcast picks and community recommendations on AI, technology, and economics.",
     url: "https://brettcpollak.com/podcasts",
     siteName: "Brett Pollak",
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Podcast Discovery | Brett Pollak",
-    description: "Discover and share your favorite podcasts on AI, technology, economics, and more.",
+    description: "Brett's curated podcast picks and community recommendations on AI, technology, and economics.",
     images: ["/images/podcasts/ai-daily-brief.webp"],
   },
 };
@@ -37,7 +37,7 @@ export default function Podcasts() {
           <p className="rule-label mb-6">Podcast Discovery</p>
           <h1 className="page-title mb-6">Podcast Discovery</h1>
           <p className="page-intro">
-            My curated picks and community recommendations on AI, technology, and the forces shaping our world. Share yours too.
+            My curated picks and community recommendations on AI, technology, and economics. Share yours too.
           </p>
         </div>
       </section>

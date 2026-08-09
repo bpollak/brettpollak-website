@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Connect",
-  description: "Reach out to compare notes on AI, digital services, and institutional learning in higher education.",
+  description: "Reach out to compare notes on AI and digital services in higher education.",
   alternates: {
     canonical: "https://brettcpollak.com/contact",
   },
   openGraph: {
     title: "Connect with Brett Pollak",
-    description: "Reach out to compare notes on AI, digital services, and institutional learning in higher education.",
+    description: "Reach out to compare notes on AI and digital services in higher education.",
     url: "https://brettcpollak.com/contact",
     siteName: "Brett Pollak",
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Connect with Brett Pollak",
-    description: "Reach out to compare notes on AI, digital services, and institutional learning in higher education.",
+    description: "Reach out to compare notes on AI and digital services in higher education.",
     images: ["/brett-pollak-og-card.png"],
   },
 };
