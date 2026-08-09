@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-07-26",
+  lastUpdated: "2026-08-09",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,22 +37,22 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. BearGPT is live at UC Berkeley, UC ANR renewal is in flight, and we're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
+        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. BearGPT is live at UC Berkeley, FredGPT at Fairleigh Dickinson, and UC Merced is online. We're refining deployment models for peer institutions while building agentic capabilities alongside traditional chat.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is in beta distribution — 22.5 billion tokens, 119 merged PRs, and 1,139 AI reviews in the first two and a half weeks. Microsoft Graph plugin is live in draft-only mode, OIA pen-tested it clean, and the team presented to 212 attendees at our AI Use Case Office Hours. Working on a privacy and data explainer before broader rollout.",
+        "The TritonAI Harness is in beta distribution with active development — faculty are piloting Canvas/Onyx integration for AI-assisted course content, and an educational series is taking shape on the Triton AI platform with a three-tier learning pathway. A token recharge policy is landing: on-prem models free for administrative use, cloud cost-recovered, research always pays. Privacy and data documentation in progress ahead of broader rollout.",
     },
     {
       label: "AI agents in production",
       body:
-        "The Student Scheduling Assistant launched July 9 and Class Planner went live July 20, but TSS is crashing under launch-load concurrency. We built a stopgap caching app so students can still plan when TSS is down, and a weekend sprint shipped package-level deep links for the next 8,000-student wave. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries.",
+        "The Student Scheduling Assistant launched July 9 with Class Planner following July 20 — student waves are scaling with ongoing access support as enrollment grows. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries. A new workstream is applying AI to business operations, starting with automating cash receipt matching for unapplied accounts.",
     },
     {
       label: "Data platform modernization",
       body:
-        "Databricks remains the migration target from SAP HANA (2027 paywall), but the POC is currently blocked on vendor-side driver readiness — keeping pressure on the vendor while maintaining a parallel SAP baseline. On the observability side, architecture is locked: OpenTelemetry collectors feed an open-format data lake that vendor tools consume from — UCSD owns its telemetry data. Splunk stays for SecOps; OpenSearch for everything else.",
+        "Databricks is under active evaluation as a replacement for SAP HANA, with a decision target by end of August — SAP's renewal terms are still pending and factor heavily into the calculus. Materialize is being evaluated as a complementary real-time layer. The Activity Hub migration RFP is live with 57 vendors registered, targeting work to begin January 2027. On the observability side, architecture is locked: OpenTelemetry collectors feed an open-format data lake — UCSD owns its telemetry data. Splunk stays for SecOps; OpenSearch for everything else.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
