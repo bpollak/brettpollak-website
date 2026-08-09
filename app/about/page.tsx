@@ -187,7 +187,7 @@ export default function About() {
                 {/* Director */}
                 <div className="relative">
                   <h4 className="text-lg font-bold text-ink">Director, Cloud and Web Services</h4>
-                  <p className="text-sm text-muted font-medium mb-2">Aug 2010 – Oct 2024</p>
+                  <p className="text-sm text-muted font-medium mb-2">Aug 2010 – Jan 2016</p>
                   <ul className="list-disc list-outside ml-5 text-body space-y-2 leading-relaxed">
                     <li>Managed UC San Diego&apos;s top-level digital channels (ucsd.edu, Blink, TritonLink) and 160+ websites via the campus CMS.</li>
                     <li>Led cloud strategy (SaaS/PaaS/IaaS) and mobile presence, including the Mobile Web Framework (MWF) that 5 UC campuses adopted.</li>
