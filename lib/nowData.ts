@@ -37,27 +37,27 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. BearGPT is live at UC Berkeley, FredGPT at Fairleigh Dickinson, and UC Merced is online. We're refining deployment models for peer institutions while building agentic capabilities alongside traditional chat.",
+        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. We're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is in beta distribution with active development — faculty are piloting Canvas/Onyx integration for AI-assisted course content, and an educational series is taking shape on the Triton AI platform with a three-tier learning pathway. A token recharge policy is landing: on-prem models free for administrative use, cloud cost-recovered, research always pays. Privacy and data documentation in progress ahead of broader rollout.",
+        "The TritonAI Harness is in beta distribution with strong early adoption across development teams. Working on a privacy and data explainer before broader rollout, and exploring token recharge policy direction for cloud vs. on-prem usage.",
     },
     {
       label: "AI agents in production",
       body:
-        "The Student Scheduling Assistant launched July 9 with Class Planner following July 20 — student waves are scaling with ongoing access support as enrollment grows. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries. A new workstream is applying AI to business operations, starting with automating cash receipt matching for unapplied accounts.",
+        "The Student Scheduling Assistant launched this summer, serving tens of thousands of students in waves. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries.",
     },
     {
       label: "Data platform modernization",
       body:
-        "Databricks is under active evaluation as a replacement for SAP HANA, with a decision target by end of August — SAP's renewal terms are still pending and factor heavily into the calculus. Materialize is being evaluated as a complementary real-time layer. The Activity Hub migration RFP is live with 57 vendors registered, targeting work to begin January 2027. On the observability side, architecture is locked: OpenTelemetry collectors feed an open-format data lake — UCSD owns its telemetry data. Splunk stays for SecOps; OpenSearch for everything else.",
+        "Evaluating lakehouse migration from our legacy data warehouse platform, with a decision target by end of August. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from — UCSD owns its telemetry data.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "Aligning with HSDSC on a shared GPU strategy — keeping GPU workloads at SDSC, retrofitting TPCF for non-GPU compute, with RTX 6000 Blackwell as the primary hardware target and hardware refresh due FY28. The bigger picture: positioning UCSD as an inference and AI services provider for the UC system and beyond, with active conversations spanning CENIC, California's community colleges, and peer institutions.",
+        "Developing a shared GPU strategy to support data science and machine learning platform needs with a school at UC San Diego, positioning UCSD as an inference and AI services provider for the UC system and beyond.",
     },
   ],
 };
