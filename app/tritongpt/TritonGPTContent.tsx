@@ -247,7 +247,7 @@ export default function TritonGPTContent() {
             A governed path from a personal experiment to a campus service.
           </h2>
           <p className="text-lg leading-8 text-body">
-            The hardest part of campus AI is not access to a model. It's the distance between
+            The hardest part of campus AI is not access to a model. It&apos;s the distance between
             someone&apos;s working prototype and something the university can operate. The Developer API
             Program exists to make that distance walkable: shared infrastructure to build on, and a
             clear owner at every step. Before choosing a path, a project defines its user, its task,

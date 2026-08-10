@@ -368,7 +368,7 @@ export default function Products() {
             </div>
             <div>
               <p className="text-lg leading-8 text-body">
-                I'm building more software across education, productivity, and enterprise tools. I'll post updates as things get concrete enough to show.
+                I&apos;m building more software across education, productivity, and enterprise tools. I&apos;ll post updates as things get concrete enough to show.
               </p>
               <Link
                 href="/linkedin"
