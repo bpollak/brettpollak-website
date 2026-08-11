@@ -12,7 +12,7 @@
     "clean": "node scripts/clean-generated.mjs",
     "deploy:status": "node scripts/deploy-status.mjs --fetch",
     "deploy:prompt": "node scripts/deploy-prompt.mjs",
-    "build": "node scripts/run-with-supported-node.mjs node_modules/next/dist/bin/next build",
+    "build": "node scripts/run-with-supported-node.mjs node_modules/next/dist/bin/next build --webpack",
     "postbuild": "node scripts/run-with-supported-node.mjs scripts/emit-directory-aliases.mjs",
     "start": "next start",
     "lint": "node scripts/run-with-supported-node.mjs node_modules/eslint/bin/eslint.js \"app/**/*.{ts,tsx}\" \"components/**/*.{ts,tsx}\" \"lib/**/*.{ts,tsx}\" \"scripts/**/*.{js,mjs}\" \"*.{js,mjs,ts}\" --cache --cache-location .next/cache/eslint/ --cache-strategy content --max-warnings=0",
