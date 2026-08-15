@@ -22,17 +22,17 @@ export const SITE_URL = "https://brettcpollak.com";
  *
  * Do NOT add data-driven routes here (/media, /ai-digest, /ucsd-ai-news,
  * /now): their dates are derived from the data modules below and update
- * automatically when the OpenClaw content crons refresh the data files.
+ * automatically when the Hermes content crons refresh the data files.
  */
 export const staticPageDates: Record<string, string> = {
   "/": "2026-06-01",
-  "/about": "2026-07-19",
+  "/about": "2026-08-15",
   "/tritongpt": "2026-07-26",
-  "/speaking": "2026-06-02",
-  "/products": "2026-07-25",
+  "/speaking": "2026-08-15",
+  "/products": "2026-08-15",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-07-19",
+  "/ai-agent-architecture": "2026-08-15",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
   "/contact": "2026-06-01",

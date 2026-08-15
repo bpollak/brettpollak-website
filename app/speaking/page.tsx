@@ -219,6 +219,22 @@ export default function SpeakingPage() {
           </section>
         )}
 
+        {UPCOMING_ENGAGEMENTS.length === 0 && (
+          <section className="mb-20 editorial-panel p-8 md:p-10">
+            <h2 className="text-3xl font-bold text-ink mb-4">No events currently scheduled</h2>
+            <p className="text-body text-lg leading-8 mb-6">
+              Fall 2026 booking is open. I&apos;m available for keynotes, panels, and campus talks on
+              institutional AI, agentic workflows, and AI governance. Use the form below to start a conversation.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 bg-[#17201b] text-white font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors"
+            >
+              Book a Talk
+            </Link>
+          </section>
+        )}
+
         {/* Past Engagements */}
         {PAST_ENGAGEMENTS.length > 0 && (
           <section className="mb-20">

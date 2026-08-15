@@ -8,13 +8,14 @@ type NavLink = { href: string; label: string };
 type NavGroup = { heading: string; links: NavLink[] };
 
 // The six routes that carry the site's core narrative and its call to action.
-// Everything else lives behind the "Writing" dropdown so the bar stays scannable.
+// Agent Architecture is promoted to primary nav (it's a differentiator); Products
+// stays accessible via footer and the Products card on the homepage.
 const PRIMARY_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/tritongpt', label: 'TritonAI' },
   { href: '/speaking', label: 'Speaking' },
+  { href: '/ai-agent-architecture', label: 'Architecture' },
   { href: '/media', label: 'Media' },
-  { href: '/products', label: 'Products' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -32,6 +33,7 @@ const WRITING_GROUPS: NavGroup[] = [
   {
     heading: 'Elsewhere',
     links: [
+      { href: '/products', label: 'Products' },
       { href: '/podcasts', label: 'Podcasts' },
       { href: '/now', label: 'Now' },
       { href: '/linkedin', label: 'LinkedIn' },

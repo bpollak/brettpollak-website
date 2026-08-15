@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture',
   description:
-    'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego. 65+ enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 772-node knowledge graph, 691 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
+    'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego. 77 enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 772-node knowledge graph, 771 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -95,17 +95,17 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-body mb-10">
-          Last updated: August 2, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: August 15, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-ink">65+ enabled jobs</div>
+            <div className="text-2xl font-semibold text-ink">77 enabled jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-ink">772 nodes · 691 pages</div>
+            <div className="text-2xl font-semibold text-ink">772 nodes · 771 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -173,9 +173,9 @@ export default function AiAgentArchitecturePage() {
             personal AI actually becomes useful.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 65+ enabled automated
+            This page documents how I built that knowledge layer for myself: 77 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. A 772-node knowledge graph, 691 wiki pages, a
+            models, with the primary inference path hosted on-prem. A 772-node knowledge graph, 771 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
  It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -243,7 +243,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            This is the biggest unlock: 691 wiki pages that would otherwise sit unused become a
+            This is the biggest unlock: 771 wiki pages that would otherwise sit unused become a
             live reference library, pulled in silently the moment they&rsquo;re relevant. It
             feels like the AI &ldquo;just knows,&rdquo; not like it&rsquo;s doing a lookup.
           </p>
@@ -278,7 +278,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            65+ enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
+            77 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -350,7 +350,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-gold-ink font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">691 narrative pages</div>
+              <div className="text-2xl font-bold text-ink mb-2">771 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative. Good at answering
@@ -409,7 +409,7 @@ export default function AiAgentArchitecturePage() {
             local too.
           </p>
           <p>
-            As of July 19, 2026, <strong>all 65+ enabled jobs run through{' '}
+            As of August 15, 2026, <strong>all 77 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
@@ -418,7 +418,7 @@ export default function AiAgentArchitecturePage() {
             </a></strong>, UC San Diego&rsquo;s institutional AI gateway. <strong>Every enabled
             route uses an open-weight model, and no scheduled job has a proprietary-model
             override.</strong> GLM 5.2 is the main agent, utility, active-memory, router, and
-            default scheduled-work model. Eighty-one jobs inherit that default; nine lightweight
+            default scheduled-work model. Sixty-eight jobs inherit that default; nine lightweight
             jobs explicitly use DeepSeek V4 Flash Max.
           </p>
         </div>
@@ -440,7 +440,7 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.2</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.2 (open weight)</td>
                 <td className="px-4 py-3 text-body">Main chat, tools, briefings, long-horizon synthesis, utility inference, active memory, and router decisions</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">81</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">68</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-ink">Fast scheduled batch work</td>
@@ -485,7 +485,7 @@ export default function AiAgentArchitecturePage() {
             as an open model designed for long-horizon agentic work.
           </p>
           <p>
-            <strong className="text-ink">Why only two scheduled paths:</strong> 81 jobs
+            <strong className="text-ink">Why only two scheduled paths:</strong> 68 jobs
             inherit GLM 5.2 instead of pinning a model, so improvements to the default propagate
             without editing the fleet. Nine lightweight jobs remain explicitly on DeepSeek V4
             Flash Max. Gemma handles vision on demand, while Mistral Small is a narrow
@@ -493,14 +493,14 @@ export default function AiAgentArchitecturePage() {
           </p>
           <p>
             <strong className="text-ink">Strict fallback is a privacy boundary:</strong>{' '}
-            the main-agent fallback list is empty. If GLM or the gateway fails, OpenClaw surfaces
+            the main-agent fallback list is empty. If GLM or the gateway fails, Hermes surfaces
             the failure instead of silently sending private context to a cloud provider. Cloud
             models remain available only as explicit, human-selected emergency tools. Memory
             embeddings stay local through Ollama and <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">nomic-embed-text</code>.
           </p>
           <p>
             <strong className="text-ink">How routing stays healthy:</strong> the autonomous
-            router runs every two hours, reads live SQLite-backed cron state through the OpenClaw
+            router runs every two hours, reads live SQLite-backed cron state through the Hermes
             CLI, and uses GLM 5.2 itself to evaluate changes. It may target only approved on-prem
             aliases and is biased toward no-op decisions. A dedicated{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">tritonai-key-access-monitor</code>{' '}
@@ -904,16 +904,26 @@ export default function AiAgentArchitecturePage() {
             will be obsolete in six months. That&rsquo;s the point. Every change is in
             the git history of my{' '}
             <a
-              href="https://github.com/bpollak/mission-control"
+              href="https://github.com/bpollak/brettpollak-website"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
-              mission-control repo
+              brettpollak-website repo
             </a>
             ; highlights below for quick reference.
           </p>
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              August 15, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Platform migrated from OpenClaw to Hermes Agent</div>
+            <p className="text-sm text-body leading-6">
+              Decommissioned OpenClaw after 8 months. Migrated 74 cron jobs to Hermes Agent (by Nous Research), bringing the total to 77 enabled jobs. All scripts, integrations, wiki (771 pages), credentials, and memory archives ported. Hermes provides the cron scheduler, agent runtime, Telegram gateway, multi-model gateway, skill system, and plugin SDK. Model allocation unchanged: GLM 5.2 remains the on-prem default via TritonAI with deepseek-v4-flash-max, gpt-oss-120b, gemma-4-26b, and mistral-small as fallbacks. OpenClaw uninstalled; 3.3GB backup archived.
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
@@ -945,7 +955,7 @@ export default function AiAgentArchitecturePage() {
               <span className="font-mono text-xs">glm-5.2</span> to{' '}
               <span className="font-mono text-xs">api-glm-5.2</span> and made GLM 5.2 the main
               agent, utility, active-memory, router, and default cron model. Repaired the
-              two-hour router after OpenClaw&rsquo;s cron state moved to SQLite, replacing its
+              two-hour router after the cron state moved to SQLite, replacing its
               Claude CLI decision path with direct on-prem GLM inference. The live fleet is now
               90 enabled jobs: 81 inherit GLM 5.2 and nine lightweight jobs use DeepSeek V4
               Flash Max. No scheduled job has a proprietary override, the main fallback list is
@@ -1009,7 +1019,7 @@ export default function AiAgentArchitecturePage() {
             </Eyebrow>
             <div className="text-ink font-semibold mb-1">Router outage fixed &middot; fleet rebalanced to ~99% open-weight &middot; Gmail triage localized</div>
             <p className="text-sm text-body leading-6">
-              The OpenClaw 2026.6 upgrade silently moved cron job storage into the
+              A platform upgrade silently moved cron job storage into the
               gateway&rsquo;s internal store, which broke the model-router&rsquo;s state digest
               &mdash; it had been failing every 2-hour cycle since June 3 with no decisions and
               no alerts. Patched the digest to read merged state from the gateway, verified the
@@ -1188,15 +1198,15 @@ export default function AiAgentArchitecturePage() {
             <Eyebrow>
               April 29, 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">OpenRouter dependency dropped · OpenClaw upgraded to 2026.4.27</div>
+            <div className="text-ink font-semibold mb-1">OpenRouter dependency dropped · Platform runtime upgraded to 2026.4.27</div>
             <p className="text-sm text-body leading-6">
               Migrated 9 remaining OpenRouter-paid jobs onto TritonAI (light monitors to{' '}
               <span className="font-mono text-xs">tritonai-haiku</span>; weekly deep-dive to{' '}
               <span className="font-mono text-xs">tritonai-opus</span> &mdash; Claude Opus 4.7 on
               raised institutional quota). Zero jobs on OpenRouter post-migration. Upgraded the
-              OpenClaw runtime from 2026.4.23 to 2026.4.27 (skipping the 2026.4.24 bonjour-broken
+              runtime from 2026.4.23 to 2026.4.27 (skipping the 2026.4.24 bonjour-broken
               release) for cron correctness improvements, OpenAI-compatible empty-response retry,
-              and mixed-version safety. Ran <span className="font-mono text-xs">openclaw security
+              and mixed-version safety. Ran <span className="font-mono text-xs">platform security
               audit</span> &mdash; chmod 600 on the config file fixed a critical world-readable
               finding.
             </p>
@@ -1361,18 +1371,17 @@ export default function AiAgentArchitecturePage() {
           <p className="text-sm text-body leading-7">
             The foundation of this system is{' '}
             <a
-              href="https://openclaw.ai"
+              href="https://hermes-agent.nousresearch.com/docs"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
-              OpenClaw
+              Hermes Agent
             </a>
-            {' '}, a personal AI assistant framework providing the cron scheduler, agent
-            runtime, Telegram integration, multi-model gateway, and plugin SDK the pipeline runs
-            on. What you see here isn&rsquo;t OpenClaw out of the box; it&rsquo;s OpenClaw
-            tailored, extended, and reshaped over many months to fit a specific work context.
-            The accumulation pipeline, knowledge graph reconciliation, three-layer context
-            loading, and scaling vision all layer on top of that foundation. Without OpenClaw
-            as the starting point, none of this would have shipped.
+            , a personal AI assistant framework by Nous Research providing the cron scheduler,
+            agent runtime, Telegram integration, multi-model gateway, skill system, and plugin SDK
+            the pipeline runs on. What you see here isn&rsquo;t Hermes out of the box; it&rsquo;s
+            Hermes tailored, extended, and reshaped over months to fit a specific work context. The
+            accumulation pipeline, knowledge graph reconciliation, three-layer context loading, and
+            scaling vision all layer on top of that foundation.
           </p>
         </div>
 

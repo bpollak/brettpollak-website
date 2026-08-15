@@ -38,7 +38,7 @@ export default function ScalingPyramid() {
       halfWidthBottom: 250,
       fill: '#2563eb',
       textFill: '#eff6ff',
-      status: 'Design exercise',
+      status: 'Pilot in progress',
     },
     {
       label: 'Department',

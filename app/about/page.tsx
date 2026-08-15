@@ -83,7 +83,7 @@ export default function About() {
               My career started in web and digital services. I learned early that new tools only matter when they fit the real work people are trying to do.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              At UC San Diego, I&apos;ve spent more than 18 years working across web, cloud, and workplace technology. Projects like TritonGPT reinforced that implementation is as much about trust and governance as it is about architecture.
+              At UC San Diego, I&apos;ve spent more than 19 years working across web, cloud, and workplace technology. Projects like TritonGPT reinforced that implementation is as much about trust and governance as it is about architecture.
             </p>
             <p className="text-xl text-body leading-relaxed">
               This site is a place to share what we&apos;ve learned so far and connect with others in higher education working through similar questions. I&apos;m especially interested in how other institutions are approaching adoption and practical use.

@@ -1,7 +1,7 @@
 /**
  * /now page data — what Brett is focused on right now.
  *
- * Auto-refreshed weekly by the OpenClaw `now-page-weekly-refresh` cron job
+ * Auto-refreshed weekly by the Hermes `now-page-weekly-refresh` cron job
  * (Sundays ~11:33am PT). The cron only updates this file when it detects
  * meaningful drift; otherwise the file is unchanged.
  *
@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-08-09",
+  lastUpdated: "2026-08-15",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data platform modernization",
       body:
-        "Evaluating lakehouse migration from our legacy data warehouse platform, with a decision target by end of August. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from — UCSD owns its telemetry data.",
+        "Advancing lakehouse migration planning from our legacy data warehouse platform, with evaluation wrapping up and a decision expected before September. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from — UCSD owns its telemetry data.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
