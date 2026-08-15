@@ -8,8 +8,8 @@ type NavLink = { href: string; label: string };
 type NavGroup = { heading: string; links: NavLink[] };
 
 // The six routes that carry the site's core narrative and its call to action.
-// Agent Architecture is promoted to primary nav (it's a differentiator); Products
-// stays accessible via footer and the Products card on the homepage.
+// Architecture is promoted to primary nav (it's a differentiator); Products
+// and other secondary content live behind the "Field Notes" dropdown.
 const PRIMARY_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/tritongpt', label: 'TritonAI' },
@@ -19,23 +19,27 @@ const PRIMARY_LINKS: NavLink[] = [
   { href: '/contact', label: 'Contact' },
 ];
 
-// Grouped under a single "Writing" dropdown on desktop; the same groups render as
-// flat labelled subsections within the mobile menu.
+// Grouped under a single "Field Notes" dropdown on desktop; the same groups
+// render as flat labelled subsections within the mobile menu.
 const WRITING_GROUPS: NavGroup[] = [
   {
-    heading: 'AI Projects',
+    heading: 'Work',
+    links: [
+      { href: '/products', label: 'Products' },
+      { href: '/now', label: 'Now' },
+    ],
+  },
+  {
+    heading: 'Reading',
     links: [
       { href: '/ai-digest', label: 'AI Digest' },
-      { href: '/ai-agent-architecture', label: 'Agent Architecture' },
       { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
+      { href: '/podcasts', label: 'Podcasts' },
     ],
   },
   {
     heading: 'Elsewhere',
     links: [
-      { href: '/products', label: 'Products' },
-      { href: '/podcasts', label: 'Podcasts' },
-      { href: '/now', label: 'Now' },
       { href: '/linkedin', label: 'LinkedIn' },
     ],
   },
@@ -135,7 +139,7 @@ export default function Header() {
                     : 'text-body border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
                 }`}
               >
-                Writing
+                Field Notes
                 <svg
                   className={`w-3.5 h-3.5 transition-transform ${writingMenuOpen ? 'rotate-180' : ''}`}
                   fill="none"
