@@ -13,7 +13,7 @@ export const dynamic = "force-static";
 // Generates /llms-full.txt at build time (it replaced the old hand-edited
 // file in public/). The "Last updated" line and the activity snapshot derive
 // from the lib/ data modules, so the brief stays current automatically when
-// the OpenClaw content crons refresh those files. Edit the prose template
+// the Hermes content crons refresh those files. Edit the prose template
 // below to change the evergreen sections.
 export function GET(): Response {
   const recentMedia = [...mediaItems]

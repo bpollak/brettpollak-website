@@ -117,7 +117,7 @@ function buildPrompt({ isoDate, raw }) {
   };
 }
 
-const sourceDir = getArg('source-dir', '/Users/brettpollak/.openclaw/workspace/docs');
+const sourceDir = getArg('source-dir', '/Users/brettpollak/.hermes/workspace/docs');
 const output = getArg('output', null);
 const explicitIso = getArg('iso-date', null);
 

@@ -12,7 +12,7 @@ import {
 export const dynamic = "force-static";
 
 // <lastmod> values are real change dates, not the build timestamp: data-driven
-// routes derive from their data module (so OpenClaw content refreshes move
+// routes derive from their data module (so Hermes content refreshes move
 // them automatically), and hand-written pages read staticPageDates in
 // lib/seoDates.ts — bump that map when you substantively edit a page.
 

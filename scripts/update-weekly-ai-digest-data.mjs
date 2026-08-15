@@ -81,7 +81,7 @@ function extractHeadlines(markdown) {
     .filter(Boolean);
 }
 
-const sourceDir = getArg('source-dir', '/Users/brettpollak/.openclaw/workspace/docs');
+const sourceDir = getArg('source-dir', '/Users/brettpollak/.hermes/workspace/docs');
 const outputPath = getArg('output', path.resolve(process.cwd(), 'lib/weeklyAiDigestData.ts'));
 const todayArg = getArg('today', null);
 const today = todayArg ? new Date(`${todayArg}T12:00:00`) : new Date();

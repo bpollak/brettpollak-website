@@ -75,7 +75,7 @@ follow.
 ## SEO & AI discoverability — also derived at build time
 
 The sitemap, RSS feeds, and the LLM brief are generated from the **same data
-modules the OpenClaw content crons already update**. If a job only changed a
+modules the Hermes content crons already update**. If a job only changed a
 data file (`mediaData`, `weeklyAiDigestData`, `ucsdAiNewsletterData`,
 `nowData`), there is **nothing extra to do** — all of this recomputes on the
 next deploy:
