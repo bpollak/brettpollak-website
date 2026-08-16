@@ -8,7 +8,7 @@ import ScalingPyramid from '@/components/ai-architecture/ScalingPyramid';
 export const metadata: Metadata = {
   title: 'AI Agent Architecture',
   description:
-    'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego. 77 enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 772-node knowledge graph, 771 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
+    'How I architected a personal AI assistant that actually knows me, and a vision for scaling personal agents across UC San Diego. 77 enabled automated jobs run on open-weight models through UC San Diego\u2019s TritonAI gateway, with GLM 5.2 as the on-prem default and no automatic cloud fallback. 793-node knowledge graph, 776 wiki pages, a three-layer memory system, and an MCP bridge that opens it to programming agents.',
   alternates: {
     canonical: 'https://brettcpollak.com/ai-agent-architecture',
   },
@@ -95,7 +95,7 @@ export default function AiAgentArchitecturePage() {
           UC San Diego.
         </p>
         <p className="text-sm text-body mb-10">
-          Last updated: August 15, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: August 16, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
@@ -105,7 +105,7 @@ export default function AiAgentArchitecturePage() {
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-ink">772 nodes · 771 pages</div>
+            <div className="text-2xl font-semibold text-ink">793 nodes · 776 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -175,7 +175,7 @@ export default function AiAgentArchitecturePage() {
           <p>
             This page documents how I built that knowledge layer for myself: 77 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. A 772-node knowledge graph, 771 wiki pages, a
+            models, with the primary inference path hosted on-prem. A 793-node knowledge graph, 776 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
  It&rsquo;s also a design pattern that could scale to
             thousands of staff at UC San Diego, giving every person a personal AI that
@@ -243,7 +243,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            This is the biggest unlock: 771 wiki pages that would otherwise sit unused become a
+            This is the biggest unlock: 776 wiki pages that would otherwise sit unused become a
             live reference library, pulled in silently the moment they&rsquo;re relevant. It
             feels like the AI &ldquo;just knows,&rdquo; not like it&rsquo;s doing a lookup.
           </p>
@@ -338,7 +338,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-blue font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">772 nodes · 816 edges</div>
+              <div className="text-2xl font-bold text-ink mb-2">793 nodes · 837 edges</div>
               <p className="text-sm text-body leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -350,7 +350,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-gold-ink font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">771 narrative pages</div>
+              <div className="text-2xl font-bold text-ink mb-2">776 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative. Good at answering
@@ -914,6 +914,16 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              August 16, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Graph grew +21 nodes, +21 edges; wiki +5 pages</div>
+            <p className="text-sm text-body leading-6">
+              Knowledge graph expanded from 772 to 793 nodes and 816 to 837 edges (+21 each), driven by new people pages across ITS leadership and community college partners. Wiki grew from 771 to 776 pages (+5), with new and updated project pages including enrollment-aid-exception-agent, citizen-developer-program, and agentic-procurement-spend-optimization-agent. Enabled cron jobs held steady at 76 (no drift). One job retired since last week (architecture-review-monthly consolidated into this weekly review).
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
