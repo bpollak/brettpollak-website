@@ -5,7 +5,7 @@ import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "Products & Innovation. Built Work",
-  description: "Explore AI products built by Brett Pollak, including Is This AI?, Resolution Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
+  description: "Explore AI products built by Brett Pollak, including Is This AI?, Resolution Companion, Horse Racing Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
@@ -51,6 +51,25 @@ const products = [
     ],
     cta: "Learn More",
     secondaryCta: "Download for iOS",
+  },
+  {
+    category: "Sports betting analysis",
+    title: "Horse Racing Companion",
+    href: "https://horseracingcompanion.com/",
+    image: "/horse-racing-companion.png",
+    imageAlt: "Horse Racing Companion app showing race day picks and analysis",
+    width: 603,
+    height: 1311,
+    description:
+      "A mobile app that turns public odds, Del Mar history, and live race-day updates into one clear recommendation for each race. You get the bet, the horse numbers, and exactly what to say at the window. Coming soon to the App Store.",
+    features: [
+      "1,800+ Del Mar races behind the model",
+      "Real-time odds, scratches & changes",
+      "Payout preview on minimum bet",
+      "On-the-record past picks & results",
+      "One-time $19.99 season pass, no subscription",
+    ],
+    cta: "Visit Horse Racing Companion",
   },
   {
     category: "College recruiting",
