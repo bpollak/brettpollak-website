@@ -112,11 +112,11 @@ const writingLinks = [
 ];
 
 const routes = [
-  { href: '/tritongpt', label: 'TritonAI', note: 'Program overview, examples, metrics' },
-  { href: '/ai-agent-architecture', label: 'Agent Architecture', note: 'How the platform is being wired' },
-  { href: '/media', label: 'Media', note: 'Articles, interviews, speaking' },
-  { href: '/ai-digest', label: 'AI Digest', note: 'Weekly headlines and signals' },
-  { href: '/products', label: 'Products', note: 'Built tools and experiments' },
+  { href: '/tritongpt', label: 'TritonAI', note: 'Program overview and metrics' },
+  { href: '/ai-agent-architecture', label: 'Agent Architecture', note: 'Personal AI system design' },
+  { href: '/media', label: 'Media', note: 'Articles, interviews, and talks' },
+  { href: '/ai-digest', label: 'AI Digest', note: 'Weekly AI headlines' },
+  { href: '/products', label: 'Products', note: 'Built tools and apps' },
   { href: '/now', label: 'Now', note: 'Current focus areas' },
 ];
 
@@ -408,12 +408,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
             <div>
-              <p className="rule-label mb-4 text-white/55">Evidence and conversation</p>
+              <p className="rule-label mb-4 text-white/55">Writing &amp; press</p>
               <h2 className="text-4xl md:text-5xl leading-tight font-medium">
-                A publication index, not a logo wall.
+                Articles and interviews.
               </h2>
               <p className="mt-6 text-white/70 leading-7">
-                The media page keeps the longer record. These are a few entry points.
+                A few recent pieces. The full list is on the media page.
               </p>
             </div>
             <div className="divide-y divide-white/12 border-y border-white/12">
@@ -440,9 +440,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
             <div>
-              <p className="rule-label mb-4">Site index</p>
+              <p className="rule-label mb-4">More</p>
               <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-                Routes into the work.
+                Explore the site.
               </h2>
             </div>
             <div className="border-y border-line">
