@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brett Pollak | Technology Leadership in Higher Education',
     description:
-      'Running the technology behind a campus of 73,000 people at UC San Diego — infrastructure, data, service desk, collaboration, and AI.',
+      'Running the technology behind a campus of 73,000 people at UC San Diego. Infrastructure, data, service desk, collaboration, and AI.',
     url: 'https://brettcpollak.com/',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -56,7 +56,7 @@ function formatNowDate(iso: string): string {
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
 const portfolioAreas = [
-  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-prem compute — including the AI platform at SDSC.' },
+  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-prem compute, including the AI platform at SDSC.' },
   { label: 'Data & analytics', body: 'Enterprise data warehouse, BI tools, and predictive analytics.' },
   { label: 'Service desk & field support', body: 'Tier 1–2 support for the entire campus community.' },
   { label: 'Endpoint management', body: 'Device lifecycle, enrollment, and security compliance.' },
@@ -86,9 +86,9 @@ const lessons = [
 ];
 
 const questions = [
-  'How should IT prepare for a shift from applications people use to agents that work on their behalf?',
-  'What does governance look like for AI that can act across tools, data, and workflows \u2014 not just answer questions?',
-  'How do you run infrastructure for 73,000 people when the expectations change every semester?',
+  'How do you run infrastructure for 73,000 people when the quarter system resets everything every ten weeks?',
+  'What does governance look like when AI can act across tools and data, not just answer questions?',
+  'When does a pilot stop being a pilot? The answer determines whether it scales or stalls.',
 ];
 
 const writingLinks = [
@@ -252,12 +252,12 @@ export default function Home() {
                 I lead Workplace Technology and Infrastructure Services at UC San
                 Diego. My teams run the infrastructure, data platforms, service desk,
                 collaboration tools, and endpoint management that keep the university
-                working. Lately that means building the AI layer on top of all of it
-                {' '}—{' '}
+                working. Lately that means building the AI layer on top of all of it.
+                {' '}
                 <Link href="/tritongpt" className="font-semibold text-signal-blue underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
-                , which started as a pilot and now serves the entire campus community.
+                {' '}started as a pilot and now serves the entire campus community.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
