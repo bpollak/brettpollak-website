@@ -4,14 +4,13 @@ import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "About — Work in Higher Education and AI",
-  // Updated description to reflect Brett's preferred professional title
-  description: "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. Background and current work on AI and digital services in higher education.",
+  description: "18 years at UC San Diego, from campus web manager to running the technology behind a campus of 73,000 people. Background, career, and what shaped the work.",
   alternates: {
     canonical: "https://brettcpollak.com/about",
   },
   openGraph: {
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "Background and current work on AI and digital services in higher education.",
+    description: "18 years at UC San Diego. Background, career, and what shaped the work.",
     url: "https://brettcpollak.com/about",
     images: [
       {
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "Background and current work on AI and digital services in higher education.",
+    description: "18 years at UC San Diego. Background, career, and what shaped the work.",
     images: ["/brett-pollak-about.jpg"],
   },
 };
@@ -37,7 +36,7 @@ const profilePageSchema = {
   url: `${SITE_URL}/about`,
   name: "About Brett Pollak",
   description:
-    "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego – background and current work on AI, digital services, and institutional change in higher education.",
+    "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. 18 years across web, cloud, and workplace technology.",
   dateModified: staticPageDates["/about"],
   mainEntity: { "@id": `${SITE_URL}/#person` },
   isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -55,15 +54,16 @@ export default function About() {
           <p className="rule-label mb-6">Background</p>
           <h1 className="page-title mb-6">About</h1>
           <p className="page-intro">
-            Work rooted in practice and the systems that make technology useful.
-            I serve as Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. My teams deliver hybrid-cloud infrastructure, data analytics, and digital services across the university.
+            18 years at UC San Diego, from campus web manager to running the
+            technology behind a campus of 73,000 people. This is how I got here
+            and what shaped the work along the way.
           </p>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-6 py-16">
 
-        {/* Main Bio Section */}
+        {/* Personal Narrative */}
         <div className="grid md:grid-cols-5 gap-16 mb-20">
           <div className="md:col-span-2 relative">
             <div className="relative border border-line bg-paper-strong p-3 shadow-[12px_12px_0_rgba(201,119,18,0.16)]">
@@ -78,85 +78,50 @@ export default function About() {
             </div>
           </div>
           <div className="md:col-span-3 space-y-6">
-            <h2 className="text-4xl font-medium leading-tight text-ink">Work Rooted in Practice</h2>
+            <h2 className="text-4xl font-medium leading-tight text-ink">How I got here</h2>
             <p className="text-xl text-body leading-relaxed">
-              My career started in web and digital services. I learned early that new tools only matter when they fit the real work people are trying to do.
+              My career started in web and digital services at SAIC, managing a
+              team of 40. Early lesson: large organizations adopt technology
+              through people and process, not the other way around.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              At UC San Diego, I&apos;ve spent more than 18 years working across web, cloud, and workplace technology. Projects like TritonGPT reinforced that implementation is as much about trust and governance as it is about architecture.
+              I came to UC San Diego in 2008 to run the campus web manager
+              office. Over 18 years that turned into leading cloud and web
+              services, then workplace technology, and now the full
+              infrastructure portfolio. The throughline has been the same: figure
+              out which tools survive contact with real work, and build the
+              infrastructure to support them when they do.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              This site is a place to share what we&apos;ve learned so far and connect with others in higher education working through similar questions. I&apos;m especially interested in how other institutions are approaching adoption and practical use.
+              The AI work started as a pilot in 2024. Two years later TritonGPT
+              serves the entire campus, runs mostly on our own infrastructure at
+              SDSC, and peer institutions have adopted the model. The interesting
+              part now isn&apos;t the technology. It&apos;s adoption, governance, and
+              figuring out what agentic AI means for how a campus operates.
             </p>
           </div>
         </div>
 
-        {/* Recent Work */}
-        <div className="mb-20 editorial-panel p-8 md:p-12">
-          <h2 className="text-4xl font-medium text-ink mb-12">Recent Work</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-amber-500 shadow-sm hover:shadow-md transition-shadow card-3d">
-              <h3 className="text-xl font-bold text-ink mb-3">TritonGPT in Practice</h3>
-              <p className="text-lg text-body leading-relaxed">Bringing institutional knowledge to students, faculty, and staff through the UC San Diego Assistant on the campus mobile app. Live features include course scheduling assistance and contract review for Procurement.</p>
-            </div>
-            <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-blue-800 shadow-sm hover:shadow-md transition-shadow card-3d">
-              <h3 className="text-xl font-bold text-ink mb-3">Campus Technology Work</h3>
-              <p className="text-lg text-body leading-relaxed">Leading teams that deliver service desk, hybrid-cloud infrastructure, data analytics, web platforms, and enterprise collaboration services across the university</p>
-            </div>
-            <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-rose-700 shadow-sm hover:shadow-md transition-shadow card-3d">
-              <h3 className="text-xl font-bold text-ink mb-3">Recognition</h3>
-              <p className="text-lg text-body leading-relaxed">Named to the Constellation Research Business Transformation 150 (2026-2027). Campus and industry outlets have covered the work on TritonAI and related initiatives.</p>
-            </div>
-            <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-indigo-600 shadow-sm hover:shadow-md transition-shadow card-3d">
-              <h3 className="text-xl font-bold text-ink mb-3">Cross-Institution Sharing</h3>
-              <p className="text-lg text-body leading-relaxed">Peer institutions have adopted the TritonAI platform, including BearGPT at UC Berkeley, UC Agriculture and Natural Resources, Fairleigh Dickinson University, and UC Merced. Additional campuses are exploring the model.</p>
-            </div>
-            <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-slate-700 shadow-sm hover:shadow-md transition-shadow md:col-span-2 card-3d">
-              <h3 className="text-xl font-bold text-ink mb-3">Daily Context</h3>
-              <p className="text-lg text-body leading-relaxed">Supporting hybrid-cloud infrastructure and digital services for a campus community of more than 73,000 people</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Topics */}
+        {/* Recognition */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-ink mb-12">Topics I Spend Time On</h2>
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
-            <div>
-              <h3 className="text-xl font-bold text-ink mb-3">AI Implementation</h3>
-              <p className="text-lg text-body">Governance, adoption, and the practical questions that show up once a pilot becomes real work</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-ink mb-3">Data Governance</h3>
-              <p className="text-lg text-body">Privacy, security, and how institutions make data usable without losing context</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-ink mb-3">Cloud Infrastructure</h3>
-              <p className="text-lg text-body">Hybrid-cloud architecture and what it takes to support dependable institutional services</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-ink mb-3">Organizational Change</h3>
-              <p className="text-lg text-body">Service design and learning how new tools actually fit campus workflows</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-ink mb-3">Digital Experience</h3>
-              <p className="text-lg text-body">Web platforms, accessibility, and making institutional systems easier for people to use</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-ink mb-3">Data-Informed Decisions</h3>
-              <p className="text-lg text-body">Analytics and helping teams ask better questions about the work in front of them</p>
-            </div>
+          <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-rose-700 shadow-sm max-w-2xl">
+            <h3 className="text-xl font-bold text-ink mb-3">Recognition</h3>
+            <p className="text-lg text-body leading-relaxed">
+              Named to the Constellation Research Business Transformation 150
+              (2026-2027). Featured in Forbes, CIO.com, EdTech Magazine,
+              EDUCAUSE Review, and 30+ other outlets.
+            </p>
           </div>
         </div>
 
-        {/* Professional Background */}
+        {/* Career Journey */}
         <div className="mb-20 editorial-panel p-8 md:p-12">
           <h2 className="text-3xl font-bold text-ink mb-12">Career Journey</h2>
           <div className="space-y-12 max-w-4xl">
             {/* UC San Diego */}
             <div className="relative pl-8 border-l-2 border-line">
               <div className="absolute top-0 left-[-9px] w-4 h-4 bg-signal-blue rounded-full ring-4 ring-white shadow-sm"></div>
-              
+
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-8 gap-2">
                 <h3 className="text-2xl font-bold text-ink">University of California San Diego</h3>
                 <span className="text-sm font-bold text-signal-blue bg-wash-blue px-3 py-1 rounded-full w-fit whitespace-nowrap">2008 – Present</span>
@@ -168,9 +133,11 @@ export default function About() {
                   <h4 className="text-xl font-bold text-ink text-signal-blue">Executive Director, Workplace Technology & Infrastructure Services</h4>
                   <p className="text-sm text-muted font-semibold mb-3">Oct 2024 – Present</p>
                   <p className="text-body leading-relaxed">
-                    Working with teams across Data Warehouse, Analytics, Predictive Technologies, Email, Service Desk,
-                    Field Support, Endpoint Management, Enterprise Content Management, Web Technologies, and Integrated
-                    Collaboration Services. Part of the team behind the TritonAI program, which includes TritonGPT and other institutional AI efforts at UC San Diego.
+                    Seven teams covering hybrid cloud infrastructure, data and
+                    analytics, service desk, endpoint management, enterprise
+                    collaboration, and AI platforms. Service owner for the
+                    TritonAI program, which includes TritonGPT, the Developer
+                    API, and the agentic tools being built on top of them.
                   </p>
                 </div>
 
@@ -210,14 +177,14 @@ export default function About() {
             {/* SAIC */}
             <div className="relative pl-8 border-l-2 border-line">
               <div className="absolute top-0 left-[-9px] w-4 h-4 bg-signal-gold rounded-full ring-4 ring-white shadow-sm"></div>
-              
+
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
                 <h3 className="text-2xl font-bold text-ink">SAIC (Science Applications International Corporation)</h3>
                 <span className="text-sm font-bold text-signal-gold-ink bg-wash-gold px-3 py-1 rounded-full w-fit whitespace-nowrap">2001 – 2008</span>
               </div>
-              
+
               <div className="text-xl font-medium text-signal-gold-ink mb-4">Corporate Web Team Manager</div>
-              
+
               <p className="text-lg text-body leading-relaxed">
                 Managed a department of 40 professionals including web developers, UI designers,
                 programmers, project managers, and team leads. Early lesson: large organizations adopt
@@ -228,14 +195,14 @@ export default function About() {
             {/* Education */}
             <div className="relative pl-8 border-l-2 border-line">
               <div className="absolute top-0 left-[-9px] w-4 h-4 bg-ink rounded-full ring-4 ring-white shadow-sm"></div>
-              
+
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
                 <h3 className="text-2xl font-bold text-ink">University of San Diego</h3>
                 <span className="text-sm font-bold text-body bg-wash-green px-3 py-1 rounded-full w-fit whitespace-nowrap">1995</span>
               </div>
-              
+
               <div className="text-xl font-medium text-body mb-4">Education</div>
-              
+
               <p className="text-lg text-body leading-relaxed">
                 <span className="font-semibold text-ink">BBA in Marketing</span>
               </p>
