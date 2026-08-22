@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Brett Pollak | AI in Higher Education',
+    title: 'Brett Pollak | Technology Leadership in Higher Education',
     description:
-      'Notes and conversations about building useful AI in higher education, informed by work at UC San Diego on TritonAI and the Developer API Program.',
+      'Running the technology behind a campus of 73,000 people at UC San Diego — infrastructure, data, service desk, collaboration, and AI.',
     url: 'https://brettcpollak.com/',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brett Pollak | AI in Higher Education',
+    title: 'Brett Pollak | Technology Leadership in Higher Education',
     description:
-      'Building institutional AI at UC San Diego. Lessons from TritonAI and the architecture behind it.',
+      'Running the technology behind a campus of 73,000 people at UC San Diego.',
     images: ['/brett-pollak-og-card.png'],
   },
 };
@@ -55,38 +55,40 @@ function formatNowDate(iso: string): string {
 
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
-const questions = [
-  'How should IT prepare the institution for a shift from applications people use to agents that work on their behalf?',
-  'How do we decide which AI experiments should be retired, repeated, or scaled?',
-  'How does IT govern agentic systems that can act across tools, data, and workflows?',
+const portfolioAreas = [
+  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-prem compute — including the AI platform at SDSC.' },
+  { label: 'Data & analytics', body: 'Enterprise data warehouse, BI tools, and predictive analytics.' },
+  { label: 'Service desk & field support', body: 'Tier 1–2 support for the entire campus community.' },
+  { label: 'Endpoint management', body: 'Device lifecycle, enrollment, and security compliance.' },
+  { label: 'Enterprise collaboration', body: 'M365, Google Workspace, Zoom, Qualtrics.' },
+  { label: 'AI platforms', body: 'TritonGPT, the Developer API, and the agentic tools being built on top of them.' },
 ];
 
-const systemLayers = [
-  { label: 'Experiment', value: 'small bets, prototypes, local workflows' },
-  { label: 'Evidence', value: 'usage, feedback, risk, fit' },
-  { label: 'Durable Layer', value: 'platforms, APIs, governance, patterns' },
-  { label: 'Scale', value: 'shared services, adoption, support' },
-];
-
-const fieldNotes = [
+const lessons = [
   {
     tone: 'blue',
-    label: 'Experiment Pattern',
-    title: 'Experiments need an exit ramp',
-    body: 'Most prototypes should teach something and disappear. The useful ones need a path into shared infrastructure and governance.',
+    label: 'Lesson 01',
+    title: 'Start with a real problem.',
+    body: 'Our contract reviewer cut NDA turnaround time by 91%. That worked because it solved a specific bottleneck, not because it was clever AI.',
   },
   {
     tone: 'gold',
-    label: 'Decision Signal',
-    title: 'Evidence decides what survives',
-    body: 'The work is separating enthusiasm from durable value. Who used it, what changed, what risks showed up.',
+    label: 'Lesson 02',
+    title: 'Make the path easier than the workaround.',
+    body: 'We gave campus developers governed API access with free credits and real guardrails. A staff member with no engineering background built a PDF accessibility tool. That\u2019s the flywheel working.',
   },
   {
     tone: 'green',
-    label: 'Architecture Note',
-    title: 'Scale is a design constraint',
-    body: 'A durable pattern has to survive outside the pilot team. That means documentation, ownership, funding, and operations that repeat.',
+    label: 'Lesson 03',
+    title: 'The platform has to travel.',
+    body: 'BearGPT at Berkeley, UC ANR, UC Merced \u2014 same architecture, different campus. If it only works for us, it\u2019s a project. If it works for them, it\u2019s infrastructure.',
   },
+];
+
+const questions = [
+  'How should IT prepare for a shift from applications people use to agents that work on their behalf?',
+  'What does governance look like for AI that can act across tools, data, and workflows \u2014 not just answer questions?',
+  'How do you run infrastructure for 73,000 people when the expectations change every semester?',
 ];
 
 const writingLinks = [
@@ -121,7 +123,7 @@ const routes = [
   { href: '/now', label: 'Now', note: 'Current focus areas' },
 ];
 
-function HomePracticeMark() {
+function HomePortfolioMark() {
   return (
     <svg
       aria-hidden="true"
@@ -146,70 +148,13 @@ function HomePracticeMark() {
   );
 }
 
-function OperatingLoopDiagram() {
-  return (
-    <svg
-      role="img"
-      aria-labelledby="operating-loop-title operating-loop-desc"
-      viewBox="0 0 720 260"
-      className="h-auto w-full"
-      fill="none"
-    >
-      <title id="operating-loop-title">Experiment to scale operating loop</title>
-      <desc id="operating-loop-desc">
-        A loop moving experiments through evidence, durable patterns, and scalable services.
-      </desc>
-      <rect x="1" y="1" width="718" height="258" rx="18" fill="#fffef9" stroke="#d9dfd3" strokeWidth="2" />
-      {[
-        'M276 79h168',
-        'M550 108v42',
-        'M452 187H276',
-        'M170 158v-42',
-      ].map((path, index) => (
-        <path
-          key={path}
-          className={`flow-path${index % 2 ? ' flow-delay-1' : ''}`}
-          d={path}
-          fill="none"
-          stroke="#485248"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-      ))}
-      {[
-        { x: 72, y: 50, num: '01', label: 'Experiment', sub: 'learn fast', color: '#1f5a8a' },
-        { x: 452, y: 50, num: '02', label: 'Evidence', sub: 'decide what survives', color: '#366c5a' },
-        { x: 452, y: 158, num: '03', label: 'Durable', sub: 'make repeatable', color: '#c97712' },
-        { x: 72, y: 158, num: '04', label: 'Scale', sub: 'shared practice', color: '#c05643' },
-      ].map((node) => (
-        <g key={node.label}>
-          <rect x={node.x} y={node.y} width="196" height="58" rx="8" fill="white" stroke="#d9dfd3" strokeWidth="2" />
-          <rect x={node.x} y={node.y} width="7" height="58" rx="3.5" fill={node.color} />
-          <text x={node.x + 196 - 16} y={node.y + 22} fill="#c97712" fontSize="12" fontWeight="700" textAnchor="end" fontFamily="monospace">
-            {node.num}
-          </text>
-          <text x={node.x + 24} y={node.y + 27} fill="#17201b" fontSize="17" fontWeight="700">
-            {node.label}
-          </text>
-          <text x={node.x + 24} y={node.y + 46} fill="#485248" fontSize="12" fontWeight="600">
-            {node.sub}
-          </text>
-        </g>
-      ))}
-      <circle cx="360" cy="130" r="36" fill="#17201b" />
-      <path d="M342 130h36M360 112v36" stroke="#f2b84b" strokeWidth="5" strokeLinecap="round" />
-      <circle cx="360" cy="130" r="50" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="4 7" />
-    </svg>
-  );
-}
-
 export default function Home() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Brett Pollak",
     "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
-    "description": "Executive Director at UC San Diego sharing lessons from building TritonAI, the campus AI program that includes TritonGPT and other institutional AI efforts in higher education.",
+    "description": "Technology leader at UC San Diego running infrastructure, data, service desk, collaboration, and AI platforms for a campus of 73,000.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
     "worksFor": {
@@ -294,45 +239,48 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(tritonAISchema) }}
       />
 
+      {/* HERO */}
       <section className="paper-grid border-b border-line">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
-              <p className="rule-label mb-8">Higher education technology leadership</p>
+              <p className="rule-label mb-8">Technology leadership at UC San Diego</p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-ink max-w-[20rem] sm:max-w-4xl">
-                Making technology useful in higher education.
+                Running the technology behind a campus of 73,000 people.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-body">
-                I lead technology and digital workplace teams at UC San Diego.
-                The work is turning new tools into services people actually use. Right now that
-                means AI through{' '}
+                I lead Workplace Technology and Infrastructure Services at UC San
+                Diego. My teams run the infrastructure, data platforms, service desk,
+                collaboration tools, and endpoint management that keep the university
+                working. Lately that means building the AI layer on top of all of it
+                {' '}—{' '}
                 <Link href="/tritongpt" className="font-semibold text-signal-blue underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
-                . This site collects field notes, architecture, and experiments
-                that come from deciding what stays temporary, what becomes durable, and what scales.
+                , which started as a pilot and now serves the entire campus community.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
-                  href="/tritongpt"
+                  href="/now"
                   className="inline-flex items-center justify-center rounded-sm bg-[#17201b] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
                 >
-                  Explore TritonAI
+                  What I work on
                 </Link>
                 <Link
                   href="/media"
                   className="inline-flex items-center justify-center rounded-sm border border-[#9eb7aa] px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-[#1f5a8a] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
                 >
-                  Browse media
+                  Media &amp; writing
                 </Link>
               </div>
               <div className="mt-12 flex max-w-2xl flex-col gap-5 border border-line bg-white/75 p-5 shadow-[8px_8px_0_rgba(54,108,90,0.08)] sm:flex-row sm:items-center">
-                <HomePracticeMark />
+                <HomePortfolioMark />
                 <div>
                   <p className="rule-label mb-3">Operating idea</p>
                   <p className="text-base leading-7 text-body">
-                    Run experiments deliberately. Keep what proves durable. Move the surviving
-                    patterns into shared infrastructure and governance.
+                    Most new tools don&rsquo;t survive contact with real work. The job
+                    is figuring out which ones do, and building the infrastructure to
+                    support them when they do.
                   </p>
                 </div>
               </div>
@@ -352,27 +300,16 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#17201b]/70 via-[#17201b]/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 z-20 p-5 md:p-6 text-white">
-                  <p className="rule-label mb-3 text-white/70">UC San Diego field work</p>
+                  <p className="rule-label mb-3 text-white/70">UC San Diego</p>
                   <p className="max-w-sm text-xl md:text-2xl leading-8 font-medium">
-                    Moving from promising tools to dependable services and campus trust.
+                    Seven teams. One campus. Technology that has to work.
                   </p>
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-[1.05fr_0.95fr] gap-5">
                 <div className="home-support-card p-5" data-tone="gold">
-                  <p className="rule-label mb-4">Working questions</p>
-                  <ol className="space-y-4 text-sm leading-6 text-body">
-                    {questions.map((question, index) => (
-                      <li key={question} className="grid grid-cols-[2.25rem_1fr] gap-3">
-                        <span className="font-mono text-xs text-signal-gold-ink">0{index + 1}</span>
-                        <span>{question}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-                <div className="home-support-card home-support-card-dark p-5 text-white" data-tone="green">
-                  <p className="rule-label mb-4 text-white/60">Current focus</p>
+                  <p className="rule-label mb-4">Current focus</p>
                   <p className="text-lg leading-7">
                     <span className="font-semibold">{currentNow.items[0].label}:</span> {currentNow.items[0].body}
                   </p>
@@ -380,24 +317,43 @@ export default function Home() {
                     Updated {formatNowDate(currentNow.lastUpdated)}
                   </Link>
                 </div>
+                <div className="home-support-card home-support-card-dark p-5 text-white" data-tone="green">
+                  <p className="rule-label mb-4 text-white/60">Team</p>
+                  <p className="text-lg leading-7">
+                    A lean group running infrastructure, data, service desk,
+                    endpoint, collaboration, and AI for the entire campus.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* PORTFOLIO */}
       <section className="border-b border-line tint-gold">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
             <div>
-              <p className="rule-label mb-4">How it connects</p>
+              <p className="rule-label mb-4">The portfolio</p>
               <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-                Institutional inputs become useful outcomes.
+                The systems a campus depends on.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-body">
-                Knowledge, people, and tools route through governed institutional AI into
-                everyday work across the university.
+                Seven teams covering the technology that 73,000 students, faculty,
+                and staff rely on every day.
               </p>
+              <div className="mt-8 space-y-4">
+                {portfolioAreas.map((area, index) => (
+                  <div key={area.label} className="grid grid-cols-[2.5rem_1fr] gap-3">
+                    <span className="font-mono text-xs text-signal-gold-ink pt-1">0{index + 1}</span>
+                    <div>
+                      <h3 className="font-semibold text-ink">{area.label}</h3>
+                      <p className="text-sm leading-6 text-body">{area.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
               <HomeHeroSystemMap />
@@ -406,53 +362,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI FOCUS + LESSONS */}
       <section className="border-b border-line tint-blue">
-        <div className="max-w-7xl mx-auto px-6 py-14">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
-            <div>
-              <p className="rule-label mb-4">System map</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-                Useful AI moves from experiment to evidence to scale.
-              </h2>
-            </div>
-            <div>
-              <div className="mb-5 border border-line bg-white/70 p-3 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
-                <OperatingLoopDiagram />
-              </div>
-              <div className="grid sm:grid-cols-4 gap-3">
-              {systemLayers.map((layer, index) => (
-                <div key={layer.label} className="system-node p-4 min-h-36">
-                  <div className="font-mono text-xs text-signal-gold-ink mb-5">0{index + 1}</div>
-                  <h3 className="font-semibold text-ink">{layer.label}</h3>
-                  <p className="mt-2 text-sm leading-6 text-body">{layer.value}</p>
-                </div>
-              ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
-          <div>
-            <p className="rule-label mb-4">Field notes</p>
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="max-w-3xl">
+            <p className="rule-label mb-4">Current focus</p>
             <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-              What survives the experiment becomes the pattern.
+              Building AI that fits the institution.
             </h2>
+            <p className="mt-6 text-lg leading-8 text-body">
+              We started TritonGPT in 2024 as a pilot. Two years later it serves the
+              entire campus, runs mostly on our own infrastructure, and a few peer
+              institutions have adopted the model. The work now is moving from chat
+              to agents &mdash; tools that actually do things for people.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {fieldNotes.map((note) => (
-              <article key={note.title} className="field-note p-6" data-tone={note.tone}>
-                <p className="rule-label mb-5">{note.label}</p>
-                <h3 className="text-2xl leading-8 font-medium text-ink">{note.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-body">{note.body}</p>
+          <div className="mt-12 grid md:grid-cols-3 gap-5">
+            {lessons.map((lesson) => (
+              <article key={lesson.title} className="field-note p-6" data-tone={lesson.tone}>
+                <p className="rule-label mb-5">{lesson.label}</p>
+                <h3 className="text-2xl leading-8 font-medium text-ink">{lesson.title}</h3>
+                <p className="mt-5 text-sm leading-7 text-body">{lesson.body}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
+      {/* WORKING QUESTIONS */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
+          <div>
+            <p className="rule-label mb-4">Working questions</p>
+            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
+              Things I don&rsquo;t have answers to yet.
+            </h2>
+          </div>
+          <div>
+            <ol className="space-y-6">
+              {questions.map((question, index) => (
+                <li key={question} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-line pb-6">
+                  <span className="font-mono text-sm text-signal-gold-ink pt-1">0{index + 1}</span>
+                  <p className="text-lg leading-8 text-ink">{question}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* MEDIA */}
       <section className="bg-[#17201b] text-white accent-strip" data-tone="gold">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
@@ -484,6 +443,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SITE INDEX */}
       <section className="tint-green">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
