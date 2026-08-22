@@ -37,7 +37,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January — 95% processed on‑prem. We're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
+        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January. 95% processed on‑prem. We're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
     },
     {
       label: "Governed AI enablement",

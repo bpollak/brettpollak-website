@@ -307,7 +307,7 @@ export default function SpeakingPage() {
               },
               {
                 heading: 'Institutional perspective',
-                body: 'I\'m not a vendor or a consultant. I run a 5.7-FTE team serving 73,000 users. That shapes how I talk about AI.',
+                body: 'I\'m not a vendor or a consultant. I run technology for a campus of 73,000 people. That shapes how I talk about AI.',
               },
             ].map((item, i) => (
               <div key={i}>
