@@ -67,21 +67,18 @@ const portfolioAreas = [
 const lessons = [
   {
     tone: 'blue',
-    label: 'Lesson 01',
     title: 'Start with a real problem.',
     body: 'Our contract reviewer cut NDA turnaround time by 91%. That worked because it solved a specific bottleneck, not because it was clever AI.',
   },
   {
     tone: 'gold',
-    label: 'Lesson 02',
     title: 'Make the path easier than the workaround.',
     body: 'We gave campus developers governed API access with free credits and real guardrails. A staff member with no engineering background built a PDF accessibility tool. That\u2019s the flywheel working.',
   },
   {
     tone: 'green',
-    label: 'Lesson 03',
     title: 'The platform has to travel.',
-    body: 'BearGPT at Berkeley, UC ANR, UC Merced \u2014 same architecture, different campus. If it only works for us, it\u2019s a project. If it works for them, it\u2019s infrastructure.',
+    body: 'BearGPT at Berkeley, UC ANR, UC Merced. Same architecture, different campus. If it only works for us, it\u2019s a project. If it works for them, it\u2019s infrastructure.',
   },
 ];
 
@@ -344,13 +341,10 @@ export default function Home() {
                 and staff rely on every day.
               </p>
               <div className="mt-8 space-y-4">
-                {portfolioAreas.map((area, index) => (
-                  <div key={area.label} className="grid grid-cols-[2.5rem_1fr] gap-3">
-                    <span className="font-mono text-xs text-signal-gold-ink pt-1">0{index + 1}</span>
-                    <div>
-                      <h3 className="font-semibold text-ink">{area.label}</h3>
-                      <p className="text-sm leading-6 text-body">{area.body}</p>
-                    </div>
+                {portfolioAreas.map((area) => (
+                  <div key={area.label}>
+                    <h3 className="font-semibold text-ink">{area.label}</h3>
+                    <p className="text-sm leading-6 text-body">{area.body}</p>
                   </div>
                 ))}
               </div>
@@ -374,13 +368,12 @@ export default function Home() {
               We started TritonGPT in 2024 as a pilot. Two years later it serves the
               entire campus, runs mostly on our own infrastructure, and a few peer
               institutions have adopted the model. The work now is moving from chat
-              to agents &mdash; tools that actually do things for people.
+              to agents. Tools that actually do things for people.
             </p>
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-5">
             {lessons.map((lesson) => (
               <article key={lesson.title} className="field-note p-6" data-tone={lesson.tone}>
-                <p className="rule-label mb-5">{lesson.label}</p>
                 <h3 className="text-2xl leading-8 font-medium text-ink">{lesson.title}</h3>
                 <p className="mt-5 text-sm leading-7 text-body">{lesson.body}</p>
               </article>
@@ -399,14 +392,13 @@ export default function Home() {
             </h2>
           </div>
           <div>
-            <ol className="space-y-6">
-              {questions.map((question, index) => (
-                <li key={question} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-line pb-6">
-                  <span className="font-mono text-sm text-signal-gold-ink pt-1">0{index + 1}</span>
+            <ul className="space-y-6">
+              {questions.map((question) => (
+                <li key={question} className="border-b border-line pb-6">
                   <p className="text-lg leading-8 text-ink">{question}</p>
                 </li>
               ))}
-            </ol>
+            </ul>
           </div>
         </div>
       </section>

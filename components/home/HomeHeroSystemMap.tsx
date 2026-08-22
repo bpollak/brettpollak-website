@@ -6,12 +6,12 @@ import SystemMap, {
 // Seven portfolio areas (left) flow through the institutional technology core (center)
 // into the campus outcomes they enable (right).
 const NODES: SystemMapNode[] = [
-  { x: 36, y: 24, width: 168, height: 50, tone: 'blue', label: 'Hybrid cloud', index: '01' },
-  { x: 36, y: 86, width: 168, height: 50, tone: 'green', label: 'Data & analytics', index: '02' },
-  { x: 36, y: 148, width: 168, height: 50, tone: 'gold', label: 'Service desk', index: '03' },
-  { x: 36, y: 210, width: 168, height: 50, tone: 'blue', label: 'Endpoint', index: '04' },
-  { x: 36, y: 272, width: 168, height: 50, tone: 'green', label: 'Collaboration', index: '05' },
-  { x: 36, y: 334, width: 168, height: 50, tone: 'gold', label: 'AI platforms', index: '06' },
+  { x: 36, y: 24, width: 168, height: 50, tone: 'blue', label: 'Hybrid cloud' },
+  { x: 36, y: 86, width: 168, height: 50, tone: 'green', label: 'Data & analytics' },
+  { x: 36, y: 148, width: 168, height: 50, tone: 'gold', label: 'Service desk' },
+  { x: 36, y: 210, width: 168, height: 50, tone: 'blue', label: 'Endpoint' },
+  { x: 36, y: 272, width: 168, height: 50, tone: 'green', label: 'Collaboration' },
+  { x: 36, y: 334, width: 168, height: 50, tone: 'gold', label: 'AI platforms' },
   { x: 436, y: 86, width: 168, height: 50, tone: 'blue', label: 'Teaching', barSide: 'top' },
   { x: 436, y: 168, width: 168, height: 50, tone: 'gold', label: 'Research', barSide: 'top' },
   { x: 436, y: 250, width: 168, height: 50, tone: 'green', label: 'Operations', barSide: 'top' },
