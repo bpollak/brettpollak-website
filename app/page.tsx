@@ -86,9 +86,9 @@ const lessons = [
 ];
 
 const questions = [
-  'How do you run infrastructure for 73,000 people when the quarter system resets everything every ten weeks?',
-  'What does governance look like when AI can act across tools and data, not just answer questions?',
-  'When does a pilot stop being a pilot? The answer determines whether it scales or stalls.',
+  'The technical challenge is tapering. The human side is harder. How do you get past the early adopters and reach people who aren\u2019t volunteering?',
+  'Students pushed back on AI they could see. Does responsible adoption mean keeping AI invisible in the solution layer?',
+  'Lightweight governance worked for experimentation. What does the version look like when the stakes are real?',
 ];
 
 const writingLinks = [
