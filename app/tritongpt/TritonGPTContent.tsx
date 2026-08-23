@@ -177,7 +177,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Developer APIs",
 	              description:
-	                "A governed gateway to self-hosted and approved cloud models, with three supported build paths and four hosting lanes that carry a project from a personal sandbox to an enterprise service.",
+	                "A governed gateway to self-hosted and approved cloud models, with supported build paths including the TritonAI Harness, n8n workflow automation, and developer APIs across four hosting lanes that carry a project from a personal sandbox to an enterprise service.",
 	              href: "https://tritonai.ucsd.edu/developer-apis/start.html",
 	              icon: (
 	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -278,18 +278,24 @@ export default function TritonGPTContent() {
 
         {/* Build paths */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-ink mb-2">Three supported ways to build</h3>
+          <h3 className="text-2xl font-semibold text-ink mb-2">Supported ways to build</h3>
           <p className="text-body leading-7 mb-6 max-w-3xl">
-            All three route through the TritonAI LLM Gateway, which reaches approved commercial
+            All paths route through the TritonAI LLM Gateway, which reaches approved commercial
             providers and UC-hosted open-weight models across chat, reasoning, vision, image
             generation, OCR, and coding.
           </p>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {
+              [
               {
                 name: 'TritonAI Harness',
                 who: 'Preferred for most staff',
                 body: 'A campus-oriented desktop experience that reduces setup burden with bundled installation, UC San Diego model access, campus skills, and Microsoft 365 connections.',
+              },
+              {
+                name: 'n8n Workflow Automation',
+                who: 'Recurring processes',
+                body: 'Connect applications and APIs around a defined trigger — schedules, webhooks, messages, or file events — for repeatable, reviewable automation.',
               },
               {
                 name: 'Claude Code',
@@ -700,9 +706,29 @@ export default function TritonGPTContent() {
               {
                 name: "Transcript Matching (In Production)",
                 desc: "OCR and transcript verification workflows for enrollment-related review. Matches student transcripts against program requirements automatically, reducing manual review time for admissions and records teams.",
+                metric: "99.86% accuracy in validation",
+                stats: "Across 3,700+ records with five errors",
                 icon: (
                   <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Dissertation Formatter (Pilot)",
+                desc: "Helps students identify which formatting rules their dissertation breaks, with clear guidance on which fixes still need a person to decide.",
+                icon: (
+                  <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                )
+              },
+              {
+                name: "BioBib (Pilot)",
+                desc: "Assembles a faculty BioBib draft from approved activity data — publications, teaching, service, and awards — ready for review.",
+                icon: (
+                  <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 )
               }
@@ -794,13 +820,13 @@ export default function TritonGPTContent() {
             },
             {
               title: "Developer API Program (Live)",
-              desc: "Live with three supported build paths and four hosting lanes from personal sandbox to enterprise service. 309.4B tokens and 105.1M API requests through the gateway in the first half of 2026, 95.3% on self-hosted models. Next: broader recharge paths from prototype to funded campus application.",
+              desc: "Live with supported build paths — the TritonAI Harness, n8n workflow automation, and developer APIs — across four hosting lanes from personal sandbox to enterprise service. 309.4B tokens and 105.1M API requests through the gateway in the first half of 2026, 95.3% on self-hosted models. Next: broader recharge paths from prototype to funded campus application.",
               color: "pink",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" /></svg>
             },
             {
-              title: "Mobile Integration",
-              desc: "Bringing TritonGPT-powered support into the UC San Diego mobile experience.",
+              title: "Mobile Integration (Live)",
+              desc: "The UC San Diego Assistant is live in the official UC San Diego mobile app on iOS and Android, delivering campus knowledge, parking availability, and location busyness from the phone.",
               color: "cyan",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
             },
