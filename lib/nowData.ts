@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-08-15",
+  lastUpdated: "2026-08-23",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -37,27 +37,32 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is at 73,000+ users with 309 billion tokens through our LLM gateway since January. 95% processed on‑prem. We're refining deployment models that work for peer institutions while adding agentic capabilities alongside traditional chat.",
+        "TritonGPT has grown to 73,000+ users, with the vast majority of inference processed on‑prem through our LLM gateway. The platform is evolving beyond chat into agentic workflows, with new models and capabilities shipping in regular sprints.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is in beta distribution with strong early adoption across development teams. Working on a privacy and data explainer before broader rollout, and exploring token recharge policy direction for cloud vs. on-prem usage.",
+        "The TritonAI Harness is in beta distribution with strong early adoption across development teams. The usage recharge model is now finalized: on‑prem inference is free for administrative use, while cloud usage requires a funding source. A privacy and data explainer is in progress before broader rollout.",
     },
     {
       label: "AI agents in production",
       body:
-        "The Student Scheduling Assistant launched this summer, serving tens of thousands of students in waves. The UC San Diego Assistant is live on the flagship mobile app, and enterprise data agents continue bridging natural language to structured data warehouse queries.",
+        "The Student Scheduling Assistant launched this summer, serving students in waves alongside the UC San Diego Assistant on the flagship mobile app. Enterprise data agents continue bridging natural language to structured data queries, and a pipeline of new agent concepts is forming around transfer credit evaluation, academic integrity triage, and student success analytics.",
+    },
+    {
+      label: "Student system stabilization",
+      body:
+        "The student system cutover has been in crisis recovery through summer — most students have booked classes, but thousands of transfer transcripts required an emergency automated processing pipeline to unblock registration. The team is at capacity, and we're beginning to scope the longer‑term replacement path.",
     },
     {
       label: "Data platform modernization",
       body:
-        "Advancing lakehouse migration planning from our legacy data warehouse platform, with evaluation wrapping up and a decision expected before September. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from — UCSD owns its telemetry data.",
+        "Lakehouse migration evaluation is advancing, but the platform decision is extending into late fall as we wait for competitive pricing windows. On the observability side, architecture is locked: open‑format telemetry feeds a data lake that vendor tools consume from — UCSD owns its telemetry data.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "Developing a shared GPU strategy to support data science and machine learning platform needs with a school at UC San Diego, positioning UCSD as an inference and AI services provider for the UC system and beyond.",
+        "Developing a shared GPU strategy to support data science and machine learning needs, with a proposal forming for a small enabling team that would serve as a campus‑facing front door for AI platform capabilities. Positioning UCSD as an inference and AI services provider for the UC system and beyond.",
     },
   ],
 };
