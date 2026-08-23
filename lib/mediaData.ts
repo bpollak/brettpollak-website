@@ -364,8 +364,8 @@ export const mediaItems: MediaItem[] = [
   // --- 2024 additions ---
   {
     publication: 'EDUCAUSE Annual Conference 2024',
-    title: 'EDUCAUSE Annual Conference 2024 (Common Solutions Collaborative workshops)',
-    url: 'https://members.educause.edu/brett-pollak',
+    title: 'Overcoming the AI Stalemate in Higher Ed: Empowering Campus Adoption through Tailored Solutions',
+    url: 'https://events.educause.edu/annual-conference/2024/agenda/overcoming-the-ai-stalemate-in-higher-ed-empowering-campus-adoption-through-tailored-solutions',
     date: '2024-10-22',
     category: 'speaking'
   },
@@ -407,8 +407,8 @@ export const mediaItems: MediaItem[] = [
   // --- 2013 addition ---
   {
     publication: 'EDUCAUSE',
-    title: 'EDUCAUSE Annual Conference 2013',
-    url: 'https://members.educause.edu/brett-pollak',
+    title: 'Responsive Web Design',
+    url: 'https://events.educause.edu/annual-conference/2013/proceedings/responsive-web-design',
     date: '2013-10-15',
     category: 'speaking'
   },
