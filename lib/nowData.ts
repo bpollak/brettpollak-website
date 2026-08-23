@@ -37,12 +37,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT has grown to 73,000+ users, with the vast majority of inference processed on‑prem through our LLM gateway. The platform is evolving beyond chat into agentic workflows, with new models and capabilities shipping in regular sprints.",
+        "TritonGPT has grown to 73,000+ users, with the vast majority of inference processed on-prem through our LLM gateway. The platform is evolving beyond chat into agentic workflows, with new models and capabilities shipping in regular sprints.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is in beta distribution with strong early adoption across development teams. The usage recharge model is now finalized: on‑prem inference is free for administrative use, while cloud usage requires a funding source. A privacy and data explainer is in progress before broader rollout.",
+        "The TritonAI Harness is in beta distribution with strong early adoption across development teams. The usage recharge model is now finalized: on-prem inference is free for administrative use, while cloud usage requires a funding source. A privacy and data explainer is in progress before broader rollout.",
     },
     {
       label: "AI agents in production",
@@ -57,12 +57,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data platform modernization",
       body:
-        "Evaluating lakehouse migration from our legacy data warehouse platform. The field has narrowed to a hybrid architecture: one platform for data engineering, another for integration and governance. Decision likely December as vendor pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UCSD owns its telemetry data."
+        "Evaluating lakehouse migration from our legacy data warehouse platform. The field has narrowed to a hybrid architecture: one platform for data engineering, another for integration and governance. Decision likely December as vendor pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data."
     },
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "Developing a shared GPU strategy to support data science and machine learning needs, with a proposal forming for a small enabling team that would serve as a campus‑facing front door for AI platform capabilities. Positioning UCSD as an inference and AI services provider for the UC system and beyond.",
+        "Developing a shared GPU strategy to support data science and machine learning needs, with a proposal forming for a small enabling team that would serve as a campus-facing front door for AI platform capabilities. Positioning UC San Diego as an inference and AI services provider for the UC system and beyond.",
     },
   ],
 };
