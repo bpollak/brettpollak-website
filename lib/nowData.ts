@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Student system stabilization",
       body:
-        "The student system cutover has been in crisis recovery through summer — most students have booked classes, but thousands of transfer transcripts required an emergency automated processing pipeline to unblock registration. The team is at capacity, and we're beginning to scope the longer‑term replacement path.",
+        "The student system cutover has been in crisis recovery through summer. Most students have booked classes, but thousands of transfer transcripts required an emergency automated processing pipeline to unblock registration. The team is at capacity, and we're beginning to scope the longer-term replacement path.",
     },
     {
       label: "Data platform modernization",
