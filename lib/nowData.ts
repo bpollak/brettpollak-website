@@ -57,7 +57,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data platform modernization",
       body:
-        "Lakehouse migration evaluation is advancing, but the platform decision is extending into late fall as we wait for competitive pricing windows. On the observability side, architecture is locked: open‑format telemetry feeds a data lake that vendor tools consume from — UCSD owns its telemetry data.",
+        "Evaluating lakehouse migration from our legacy data warehouse platform. The field has narrowed to a hybrid architecture: one platform for data engineering, another for integration and governance. Decision likely December as vendor pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UCSD owns its telemetry data."
     },
     {
       label: "On-prem AI infrastructure and expansion",
