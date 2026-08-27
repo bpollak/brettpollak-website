@@ -39,8 +39,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '772 nodes · 816 edges' },
-  { label: 'Wiki', note: '771 curated pages' },
+  { label: 'Knowledge Graph', note: '793 nodes · 837 edges' },
+  { label: 'Wiki', note: '880 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -297,7 +297,7 @@ export default function HeroPipelineDiagram() {
             textAnchor="middle"
             style={{ fontSize: '13px', fill: '#64748b', fontStyle: 'italic' }}
           >
-            77 enabled jobs turn raw signals into durable knowledge
+            80 enabled jobs turn raw signals into durable knowledge
           </text>
         </g>
       </svg>

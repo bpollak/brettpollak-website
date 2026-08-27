@@ -436,7 +436,7 @@ export default function TritonGPTContent() {
             {[
               { value: 91, prefix: '', suffix: '%', label: 'Faster Contract Review', detail: '120 minutes to 11 minutes on average', colorClass: 'text-signal-blue' },
               { value: 83, prefix: '', suffix: '%', label: 'Faster Job Description Drafting', detail: '30 minutes to 5 minutes on average', colorClass: 'text-signal-coral-ink' },
-              { value: 23, prefix: '', suffix: '', label: 'Model Hub Breadth', detail: 'Self-hosted and approved cloud models available through TritonAI', colorClass: 'text-signal-gold-ink' },
+              { value: 30, prefix: '', suffix: '+', label: 'Model Hub Breadth', detail: 'Self-hosted and approved cloud models available through TritonAI', colorClass: 'text-signal-gold-ink' },
               { value: 500, prefix: '$', suffix: 'K', label: 'Projected Annual Savings', detail: 'From replacing third-party public support tooling', colorClass: 'text-signal-green' },
             ].map(({ value, prefix, suffix, label, detail, colorClass }, index) => (
               <div key={label} className="border-b border-line p-7 md:border-b-0 md:border-r md:last:border-r-0">

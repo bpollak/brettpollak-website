@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-08-23",
+  lastUpdated: "2026-08-27",
   location: "San Diego, California",
   intro:
     "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Student system stabilization",
       body:
-        "The student system cutover has been in crisis recovery through summer. Most students have booked classes, but thousands of transfer transcripts required an emergency automated processing pipeline to unblock registration. The team is at capacity, and we're beginning to scope the longer-term replacement path.",
+        "The student system cutover is stabilizing after a difficult summer. Most students have booked classes and enrollment is approaching normal levels. The team is still at capacity but beginning to shift from crisis recovery to scoping the longer-term replacement path.",
     },
     {
       label: "Data platform modernization",
