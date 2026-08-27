@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import WebMCPProvider from "@/components/WebMCPProvider";
 
 const siteUrl = "https://brettcpollak.com";
 const siteDescription =
@@ -237,6 +238,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${interfaceFont.variable} ${displayFont.variable} antialiased`}>
         <GoogleAnalytics />
+        <WebMCPProvider />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
