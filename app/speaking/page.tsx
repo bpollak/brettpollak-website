@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Speaking | Brett Pollak — AI in Higher Education',
     description:
-      'Brett Pollak speaks on AI in higher education, agentic workflows, and AI governance at scale.',
+      'Talks on AI in higher education, agentic workflows, and institutional AI governance.',
     url: 'https://brettcpollak.com/speaking',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -50,33 +50,33 @@ export const metadata: Metadata = {
 
 const SPEAKING_TOPICS = [
   {
-    title: 'Building Vertical AI at Scale',
+    title: 'Institutional AI: From Pilot to Service',
     description:
-      'How UC San Diego moved from generic AI tools to purpose-built, on-premises institutional AI. What it takes to go from pilot to 73,000 users. Covers architecture, governance, and the difference between a chatbot and infrastructure.',
+      'How UC San Diego developed an institutional AI service from an early pilot. Covers architecture, governance, on-premises hosting, and lessons from campus use.',
     signals: ['TritonAI', 'TritonGPT', 'LiteLLM', 'Vertical AI', 'On-premises AI'],
   },
   {
     title: 'Agentic AI Workflows in Higher Education',
     description:
-      'The shift from AI assistants to AI agents that act. Automating administrative workflows and governing autonomous behavior in an institutional setting. Real deployments: contract review (91% turnaround reduction), financial data agents, transcript matching.',
+      'How supervised AI agents are being tested in administrative workflows, including contract review, financial data questions, and transcript matching. Covers controls, review, and measured results.',
     signals: ['Agentic AI', 'AI workflows', 'AI automation', 'Agent orchestration', 'MCP'],
   },
   {
-    title: 'AI Governance That Actually Works',
+    title: 'AI Governance in Practice',
     description:
-      'Governance isn\'t a brake on AI adoption. It\'s the infrastructure that makes adoption durable. How to build guardrails and data classification that let an institution say yes faster, not slower.',
+      'A practical look at data classification, review, and guardrails for institutional AI. Includes where governance has helped and where questions remain unresolved.',
     signals: ['AI governance', 'Data classification', 'P1-P4 data policy', 'AI oversight', 'Responsible AI'],
   },
   {
     title: 'The Citizen Developer Program',
     description:
-      'How UC San Diego built a governed developer enablement model so staff, researchers, and faculty can build their own AI tools. Includes credits, templates, guardrails, and a 4-step path from idea to deployed application.',
+      'How UC San Diego provides staff, researchers, and faculty with a governed path for building AI tools. Includes credits, templates, guardrails, and the steps from an idea to a supported application.',
     signals: ['Citizen developer', 'Developer API', 'AI democratization', 'Low-code AI', 'Campus AI program'],
   },
   {
     title: 'AI as Institutional Infrastructure',
     description:
-      'The case for treating AI like cloud or email: shared, governed, rechargeable infrastructure rather than a department-by-department procurement race. Includes the multi-institution model: BearGPT (UC Berkeley), UC ANR, Fairleigh Dickinson University, UC Merced.',
+      'How shared AI infrastructure can support campus services while reducing duplicated setup across departments. Includes examples from UC San Diego and peer institutions using related approaches.',
     signals: ['AI infrastructure', 'Multi-tenant AI', 'Higher ed AI program', 'Shared AI services', 'UC system AI'],
   },
 ];
@@ -105,7 +105,7 @@ export default function SpeakingPage() {
       url: 'https://ucsd.edu/',
     },
     description:
-      'Brett Pollak is a technology executive and keynote speaker on AI in higher education. He leads TritonAI at UC San Diego, the institutional AI program serving 73,000+ users. He speaks on vertical AI deployment, agentic workflows, and citizen developer enablement.',
+      'Brett Pollak is an Executive Director at UC San Diego and speaks about institutional AI, agentic workflows, governance, and developer enablement in higher education.',
     knowsAbout: [
       'AI in Higher Education',
       'Institutional AI Deployment',
@@ -168,13 +168,13 @@ export default function SpeakingPage() {
 
       <section className="page-hero">
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
-          <p className="rule-label mb-6">Keynotes · Panels · Conference Sessions</p>
+          <p className="rule-label mb-6">Talks · Panels · Conference Sessions</p>
           <h1 className="page-title mb-6">
             Speaking
           </h1>
           <p className="page-intro">
-            I speak about what we&apos;ve actually built and learned at UC San Diego. Not frameworks. Not predictions.
-            Real deployments, real friction. If that&apos;s useful for your audience, let&apos;s talk.
+            I speak about institutional AI work at UC San Diego, including what
+            has worked, what has not, and the questions we are still working through.
           </p>
         </div>
       </section>
@@ -223,8 +223,9 @@ export default function SpeakingPage() {
           <section className="mb-20 editorial-panel p-8 md:p-10">
             <h2 className="text-3xl font-bold text-ink mb-4">No events currently scheduled</h2>
             <p className="text-body text-lg leading-8 mb-6">
-              Fall 2026 booking is open. I&apos;m available for keynotes, panels, and campus talks on
-              institutional AI, agentic workflows, and AI governance. Use the form below to start a conversation.
+              I&apos;m available for keynotes, panels, and campus talks on institutional
+              AI, agentic workflows, and AI governance. The contact page is the easiest
+              way to ask about an event.
             </p>
             <Link
               href="/contact"
@@ -268,7 +269,7 @@ export default function SpeakingPage() {
         {/* Speaking Topics */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-ink mb-2">Topics</h2>
-          <p className="text-muted mb-10">Keynote and breakout session topics I cover regularly. All are grounded in production deployments at UC San Diego.</p>
+          <p className="text-muted mb-10">Topics I cover regularly, drawing from current and past work at UC San Diego.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {SPEAKING_TOPICS.map((topic, i) => (
               <div
@@ -292,22 +293,22 @@ export default function SpeakingPage() {
           </div>
         </section>
 
-        {/* What to Expect */}
+        {/* Session approach */}
         <section className="mb-20 editorial-panel p-8 md:p-10">
-          <h2 className="text-3xl font-bold text-ink mb-8">What to Expect</h2>
+          <h2 className="text-3xl font-bold text-ink mb-8">Session approach</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                heading: 'No slide decks full of AI hype',
-                body: 'Specific use cases, real numbers, and honest failures. What worked and what didn\'t.',
+                heading: 'Specific examples',
+                body: 'I use concrete cases, available measures, and lessons from work that did not go as planned.',
               },
               {
-                heading: 'Deployable ideas',
-                body: 'Every session surfaces things your audience can take back and try. Not just frameworks to think about.',
+                heading: 'Practical discussion',
+                body: 'Sessions include ideas an audience can adapt, along with the conditions and tradeoffs behind them.',
               },
               {
-                heading: 'Institutional perspective',
-                body: 'I\'m not a vendor or a consultant. I run technology for a campus of 73,000 people. That shapes how I talk about AI.',
+                heading: 'Campus perspective',
+                body: 'My examples come from day-to-day technology work at a public research university.',
               },
             ].map((item, i) => (
               <div key={i}>

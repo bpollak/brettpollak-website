@@ -209,7 +209,7 @@ export default function CasonScholarshipAgentPage() {
               <h1 className="page-title">Scholarship Agent</h1>
               <p className="page-intro mt-6">
                 Scholarship searching is mostly unpaid research: finding programs and working out
-                whether you actually qualify. This is a private family workspace with an autonomous
+                whether the available evidence supports eligibility. This is a private family workspace with a background
                 agent behind it. It sweeps sources daily, reads each program&apos;s own page, screens
                 eligibility against a stored student profile, and surfaces only the handful of things
                 that genuinely need a human decision.
@@ -281,7 +281,7 @@ export default function CasonScholarshipAgentPage() {
         <Capability
           eyebrow="Eligibility screening"
           title="Don't spend a Saturday on something you can't win"
-          body="The hardest lesson of a scholarship search is finding the disqualifying sentence at the bottom of the form. The agent extracts each requirement as a structured rule, and keeps it only if it can quote the page text that proves it. Requirements are then shown in plain English as met, blocked, or a question worth answering first."
+          body="Scholarship requirements are often spread across a long page or form. The agent extracts each requirement as a structured rule and keeps it only when it can quote the supporting page text. Requirements are shown as met, blocked, or needing review."
           wide
         >
           <Frame label="Before you start">
@@ -384,7 +384,7 @@ export default function CasonScholarshipAgentPage() {
 
         <Capability
           eyebrow="Daily brief"
-          title="One email, not a notification stream"
+          title="Email status updates"
           body="Each morning both accounts get a short brief: what now needs a decision, what moved forward, what was ruled out and why, and a single line for the routine verification work that needed nobody. The agent's own bookkeeping stays out of it."
           wide
         >

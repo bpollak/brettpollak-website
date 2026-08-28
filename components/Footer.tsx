@@ -44,7 +44,7 @@ export default function Footer() {
               Brett Pollak
             </div>
             <p className="text-body leading-relaxed mb-6">
-              Field notes on institutional AI, platform governance, digital services, and the practical work of higher education transformation.
+              Notes on institutional AI, platform governance, digital services, and day-to-day technology work in higher education.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4">

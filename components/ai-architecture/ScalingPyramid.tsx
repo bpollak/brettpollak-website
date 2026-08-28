@@ -25,7 +25,7 @@ export default function ScalingPyramid() {
       halfWidthBottom: 310,
       fill: '#1e40af',
       textFill: '#eff6ff',
-      status: 'Proven · working now',
+      status: 'In daily use · one person',
     },
     {
       label: 'Team',

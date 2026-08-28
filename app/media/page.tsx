@@ -4,7 +4,7 @@ import MediaContent from './MediaContent';
 
 export const metadata: Metadata = {
   title: "Media & Appearances | AI in Higher Education",
-  description: "Articles, interviews, talks, and awards on AI strategy and technology leadership in higher education by Brett Pollak. Published in Forbes, CIO.com, EdTech Magazine, EDUCAUSE, Ithaka S+R, NACUBO, and more.",
+  description: "An index of articles, interviews, talks, and external recognition related to Brett Pollak's work in higher education technology.",
   keywords: [
     "Brett Pollak articles",
     "Brett Pollak interviews",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Media & Appearances | Brett Pollak | AI in Higher Education",
-    description: "Articles, interviews, talks, and awards on AI strategy and technology leadership in higher education by Brett Pollak.",
+    description: "An index of articles, interviews, talks, and external recognition related to higher education technology.",
     url: "https://brettcpollak.com/media",
     images: [
       {

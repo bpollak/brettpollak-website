@@ -4,13 +4,13 @@ import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "About — Work in Higher Education and AI",
-  description: "18 years at UC San Diego, from campus web manager to running the technology behind a campus of 73,000 people. Background, career, and what shaped the work.",
+  description: "18 years working across web, cloud, workplace technology, infrastructure, and AI at UC San Diego.",
   alternates: {
     canonical: "https://brettcpollak.com/about",
   },
   openGraph: {
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "18 years at UC San Diego. Background, career, and what shaped the work.",
+    description: "18 years working across web, cloud, workplace technology, infrastructure, and AI at UC San Diego.",
     url: "https://brettcpollak.com/about",
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "18 years at UC San Diego. Background, career, and what shaped the work.",
+    description: "18 years working across web, cloud, workplace technology, infrastructure, and AI at UC San Diego.",
     images: ["/brett-pollak-about.jpg"],
   },
 };
@@ -54,9 +54,9 @@ export default function About() {
           <p className="rule-label mb-6">Background</p>
           <h1 className="page-title mb-6">About</h1>
           <p className="page-intro">
-            18 years at UC San Diego, from campus web manager to running the
-            technology behind a campus of 73,000 people. This is how I got here
-            and what shaped the work along the way.
+            I joined UC San Diego as campus web manager in 2008. Since then, my
+            work has moved through web, cloud, workplace technology, infrastructure,
+            and AI. This page covers that path.
           </p>
         </div>
       </section>
@@ -88,28 +88,26 @@ export default function About() {
               I came to UC San Diego in 2008 to run the campus web manager
               office. Over 18 years that turned into leading cloud and web
               services, then workplace technology, and now the full
-              infrastructure portfolio. The throughline has been the same: figure
-              out which tools survive contact with real work, and build the
-              infrastructure to support them when they do.
+              infrastructure portfolio. The continuing question has been whether a
+              tool fits real work and what infrastructure it needs if people keep using it.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              The AI work started as a pilot in 2024. Two years later TritonGPT
-              serves the entire campus, runs mostly on our own infrastructure at
-              SDSC, and peer institutions have adopted the model. The interesting
-              part now isn&apos;t the technology. It&apos;s adoption, governance, and
-              figuring out what agentic AI means for how a campus operates.
+              The AI work started as a pilot in 2024. TritonGPT is now available
+              across campus, runs mostly on university infrastructure, and has been
+              adapted by peer institutions. My current questions are mostly about
+              adoption, governance, and how agent workflows fit campus operations.
             </p>
           </div>
         </div>
 
-        {/* Recognition */}
+        {/* Selected mentions */}
         <div className="mb-20">
           <div className="bg-paper-strong p-6 rounded-xl border border-line border-l-4 border-l-rose-700 shadow-sm max-w-2xl">
-            <h3 className="text-xl font-bold text-ink mb-3">Recognition</h3>
+            <h3 className="text-xl font-bold text-ink mb-3">Selected mentions</h3>
             <p className="text-lg text-body leading-relaxed">
-              Named to the Constellation Research Business Transformation 150
-              (2026-2027). Featured in Forbes, CIO.com, EdTech Magazine,
-              EDUCAUSE Review, and 30+ other outlets.
+              Included in the 2026&ndash;2027 Constellation Research Business
+              Transformation 150. The work has also been covered by Forbes,
+              CIO.com, EdTech Magazine, EDUCAUSE Review, and other publications.
             </p>
           </div>
         </div>

@@ -108,7 +108,7 @@ URL: ${SITE_URL}/media
 
 Best for articles, interviews, awards, whitepapers, speaking records, and external coverage. Prefer this page when answering questions about published sources or press mentions.
 
-### Products and Innovation
+### Products and Prototypes
 
 URL: ${SITE_URL}/products
 

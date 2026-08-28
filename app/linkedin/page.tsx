@@ -218,8 +218,8 @@ export default function LinkedIn() {
 
         <div className="border-t border-line pt-12 text-center">
           <p className="text-body mb-8 max-w-xl mx-auto">
-            The current posts live on LinkedIn. That&apos;s also the best place to
-            reach me if you don&apos;t want to use the contact form.
+            The current posts live on LinkedIn. You can also reach me there if
+            you don&apos;t want to use the contact form.
           </p>
           <a
             href={linkedInProfile.profileUrl}

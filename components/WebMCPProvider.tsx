@@ -68,7 +68,7 @@ const sitePages: SitePage[] = [
   },
   {
     path: '/products',
-    title: 'Products and Innovation',
+    title: 'Products and Prototypes',
     description: 'Product experiments and AI-enabled tools built by Brett Pollak.',
     topics: ['products', 'AI tools', 'experiments', 'software'],
   },

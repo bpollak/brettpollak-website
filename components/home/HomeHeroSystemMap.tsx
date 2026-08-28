@@ -43,7 +43,7 @@ export default function HomeHeroSystemMap({ className }: { className?: string })
       height={410}
       nodes={NODES}
       edges={EDGES}
-      core={{ cx: 320, cy: 190, tone: 'gold', label: '73,000 people', width: 156 }}
+      core={{ cx: 320, cy: 190, tone: 'gold', label: 'Campus community', width: 168 }}
       figureClassName={className}
     />
   );

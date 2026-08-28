@@ -4,13 +4,13 @@ import { currentNow } from '@/lib/nowData';
 export const metadata: Metadata = {
   title: 'Now',
   description:
-    "What Brett Pollak is focused on right now — work, projects, and what's on his mind. Refreshed weekly.",
+    "Current work and project notes from Brett Pollak. Refreshed weekly.",
   alternates: {
     canonical: 'https://brettcpollak.com/now',
   },
   openGraph: {
     title: 'Now | Brett Pollak',
-    description: "What Brett Pollak is focused on right now — refreshed weekly.",
+    description: "Current work and project notes from Brett Pollak. Refreshed weekly.",
     url: 'https://brettcpollak.com/now',
     siteName: 'Brett Pollak',
     type: 'article',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Now | Brett Pollak',
-    description: "What Brett Pollak is focused on right now — refreshed weekly.",
+    description: "Current work and project notes from Brett Pollak. Refreshed weekly.",
     images: ['/brett-pollak-og-card.png'],
   },
 };
@@ -48,7 +48,7 @@ export default function NowPage() {
         <div className="max-w-3xl mx-auto px-6 py-20 md:py-24">
         <p className="rule-label mb-6">Now</p>
         <h1 className="page-title mb-6">
-          What I&rsquo;m focused on right now
+          Current work
         </h1>
         {currentNow.intro && (
           <p className="page-intro mb-6">

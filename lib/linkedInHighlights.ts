@@ -33,27 +33,27 @@ export const linkedInProfile: LinkedInProfile = {
   lastReviewed: "2026-07-26",
   profileUrl: "https://www.linkedin.com/in/brettpollak/",
   intro:
-    "Most of what I post is the in-between version of the work on this site. What a deployment actually cost, what we got wrong first, and what turned out to be reusable.",
+    "I use LinkedIn for shorter notes on current work, including costs, mistakes, and things that may be reusable elsewhere.",
   themes: [
     {
-      label: "Institutional AI, with the numbers attached",
+      label: "Institutional AI",
       body:
-        "TritonAI and TritonGPT at UC San Diego: what it takes to move from a pilot to a governed service serving 73,000+ people, and what changes about the work at that scale.",
+        "Notes on TritonAI and TritonGPT at UC San Diego, including the move from a pilot to a governed campus service.",
     },
     {
-      label: "Governance as an accelerant",
+      label: "Governance and adoption",
       body:
-        "Data classification and guardrails are what let an institution say yes faster. Most of what I write about governance is really about removing the reason to say no.",
+        "How data classification, review, and guardrails affect the pace and scope of institutional AI work.",
     },
     {
-      label: "Agentic workflows in real administrative work",
+      label: "Agent workflows",
       body:
-        "Contract review, transcript matching, scheduling, enterprise data questions. Where agents have earned their place in production, and where they have not.",
+        "Examples from contract review, transcript matching, scheduling, and enterprise data, including where agents have and have not been useful.",
     },
     {
-      label: "Enabling people who are not developers",
+      label: "Tools for people who are not developers",
       body:
-        "The Citizen Developer Program and the Developer API Program: giving staff and faculty a governed path from an idea to a tool other people depend on.",
+        "Notes on the Citizen Developer Program and Developer API Program, including how staff and faculty move from an idea to a supported tool.",
     },
   ],
 };

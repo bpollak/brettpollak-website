@@ -30,10 +30,10 @@ export default function ContactContent() {
 
             {/* Conversation Topics */}
             <div className="editorial-panel p-8 md:p-10 border-l-4 border-l-[#1f5a8a] flex flex-col card-3d">
-              <h2 className="text-3xl font-bold text-ink mb-6">What I&apos;d Love to Talk About</h2>
+              <h2 className="text-3xl font-bold text-ink mb-6">Topics</h2>
 
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-signal-blue mb-4">Topics I Keep Returning To</h3>
+                <h3 className="text-xl font-bold text-signal-blue mb-4">Areas of interest</h3>
                 <p className="text-body mb-4 leading-relaxed">
                   Conversations I keep having:
                 </p>
@@ -66,7 +66,7 @@ export default function ContactContent() {
               </div>
 
               <div className="border-t border-line pt-8">
-                <h3 className="text-xl font-bold text-signal-gold-ink mb-4">Helpful Context When You Reach Out</h3>
+                <h3 className="text-xl font-bold text-signal-gold-ink mb-4">Useful context</h3>
                 <p className="text-body mb-4 leading-relaxed">
                   It&apos;s helpful to know a bit about what your institution is working through, especially around:
                 </p>

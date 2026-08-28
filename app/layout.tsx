@@ -9,7 +9,7 @@ import WebMCPProvider from "@/components/WebMCPProvider";
 
 const siteUrl = "https://brettcpollak.com";
 const siteDescription =
-  "Brett Pollak builds and governs institutional AI at UC San Diego. Field notes, talks, and practical architecture for AI in higher education, TritonAI, TritonGPT, agentic workflows, and AI governance.";
+  "Notes from Brett Pollak's work in higher education technology at UC San Diego, including infrastructure, digital services, TritonAI, agent workflows, and AI governance.";
 const siteImage = `${siteUrl}/brett-pollak-headshot-sit-center.png`;
 // 1200x630 share card (scripts/generate-og-card.mjs) — link previews crop
 // portrait images, so the Person schema keeps the headshot while OG/Twitter
@@ -77,7 +77,7 @@ const siteSchema = {
           "@type": "WebPage",
           "@id": `${siteUrl}/products#webpage`,
           "url": `${siteUrl}/products`,
-          "name": "Products and Innovation",
+          "name": "Products and Prototypes",
           "description": "AI-enabled tools and experiments built by Brett Pollak."
         }
       ],
@@ -89,7 +89,7 @@ const siteSchema = {
       "name": "Brett Pollak",
       "url": `${siteUrl}/`,
       "image": siteImage,
-      "description": "Technology executive at UC San Diego focused on institutional AI, digital services, AI governance, and practical higher education technology adoption.",
+      "description": "Executive Director at UC San Diego working across infrastructure, digital services, institutional AI, and AI governance.",
       "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
       "worksFor": {
         "@type": "EducationalOrganization",

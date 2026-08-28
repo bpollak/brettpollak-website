@@ -195,7 +195,7 @@ export default function CasonRecruitingCrmPage() {
               <p className="rule-label mb-5">Product · Private family workspace</p>
               <h1 className="page-title">Cason Recruiting CRM</h1>
               <p className="page-intro mt-6">
-                College recruiting runs on relationships and deadlines across dozens of programs at once. This is the private workspace behind Cason&apos;s public recruiting profile, where every school, coach, conversation, and next step is tracked in one place so nothing slips.
+                College recruiting involves relationships and deadlines across many programs. This is the private workspace behind Cason&apos;s public recruiting profile, where the family tracks schools, coach contacts, conversations, and next steps.
               </p>
               <p className="mt-5 inline-flex items-center gap-2 border border-line bg-paper-strong px-4 py-2 text-sm font-semibold text-body">
                 <span className="h-2 w-2 flex-shrink-0 bg-[#b8503f]" aria-hidden="true" />
@@ -234,7 +234,7 @@ export default function CasonRecruitingCrmPage() {
 
         <Capability
           eyebrow="Outreach pipeline"
-          title="Every program, one board"
+          title="Programs organized on one board"
           body="A recruiting search is a pipeline: schools move from research to first contact, to a reply, to a visit or camp, to an offer. A board view shows where each program stands, so stalls are obvious."
           wide
         >
@@ -334,7 +334,7 @@ export default function CasonRecruitingCrmPage() {
         <Capability
           eyebrow="Next-step tasks"
           title="The list that keeps recruiting moving"
-          body="Everything the board and contacts surface rolls up into a dated to-do list, so the family always knows the three things that actually need to happen this week."
+          body="Items from the board and contact records roll up into a dated to-do list, with the current priorities shown first."
           reverse
         >
           <Frame label="This week">

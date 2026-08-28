@@ -58,7 +58,7 @@ export default function TritonGPTContent() {
             </div>
             <div className="border-y border-line py-6">
               <p className="text-lg leading-8 text-body">
-                TritonAI brings together TritonGPT, live campus data tools, a growing model hub, developer APIs, embedded assistants, reusable workflows, and the early scaffolding for supervised agents so campus teams can build on governed infrastructure instead of starting from scratch.
+                TritonAI includes TritonGPT, campus data tools, a model hub, developer APIs, embedded assistants, reusable workflows, and early support for supervised agents. These services share a common governance and infrastructure model.
               </p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <div className="system-node p-4">
@@ -80,14 +80,14 @@ export default function TritonGPTContent() {
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="rule-label mb-4">Executive summary</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">A platform program, not a single chatbot.</h2>
+            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">Scope of the program.</h2>
           </div>
           <div className="field-note p-8">
             <p className="text-xl text-body leading-9 mb-7">
-            <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s approach to making AI useful across the university. It now spans secure infrastructure, task-specific assistants, live campus-aware tools, instructional pilots, developer access, and shared workflows in one governed campus platform.
+            <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s institutional AI program. It includes infrastructure, task-specific assistants, campus data tools, instructional pilots, developer access, and shared workflows.
           </p>
             <p className="text-xl text-body leading-9 mb-8">
-            <span className="font-bold text-signal-blue">TritonGPT</span> remains the platform layer at the center of that work: a secure, SDSC-hosted environment available to more than <span className="font-bold">73,000 students, staff, and faculty</span>. The current arc is broader than chat: model choice, on-prem and approved cloud routes, API access for builders, embedded website support, and the building blocks for agentic workflows.
+            <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. The SDSC-hosted environment is available to students, staff, and faculty and supports model choice, on-premises and approved cloud routes, developer APIs, embedded website support, and agent workflow components.
           </p>
             <p className="text-xl text-body leading-9">
               The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced.
@@ -200,7 +200,7 @@ export default function TritonGPTContent() {
             {
               title: "TritonAI Harness",
               description:
-                "Campus agentic development platform. The execution layer that turns model inference into governed, tool-using AI workers. Live with 22.5B tokens used, 119 merged PRs, and 1,139 AI reviews in its first weeks.",
+                "A campus development environment for tool-using AI workflows. Early usage includes 22.5B tokens, 119 merged pull requests, and 1,139 AI reviews.",
               href: "https://tritonai.ucsd.edu/tools/index.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,10 +247,9 @@ export default function TritonGPTContent() {
             A governed path from a personal experiment to a campus service.
           </h2>
           <p className="text-lg leading-8 text-body">
-            The hardest part of campus AI is not access to a model. It&apos;s the distance between
-            someone&apos;s working prototype and something the university can operate. The Developer API
-            Program exists to make that distance walkable: shared infrastructure to build on, and a
-            clear owner at every step. Before choosing a path, a project defines its user, its task,
+            A recurring challenge in campus AI is moving from a working prototype to something the
+            university can operate. The Developer API Program provides shared infrastructure and
+            defined ownership for that process. Before choosing a path, a project defines its user, its task,
             the approved data it may touch, and the outcome to measure it against.
           </p>
         </div>
@@ -460,7 +459,7 @@ export default function TritonGPTContent() {
         <p className="rule-label mb-4">Operating principles</p>
         <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">How TritonAI Is Taking Shape</h2>
         <p className="text-lg leading-8 text-body max-w-4xl mb-10">
-          TritonAI is being built around a few practical principles: governed infrastructure for sensitive work, shared access instead of isolated pilots,
+          TritonAI is being developed around a few practical principles: governed infrastructure for sensitive work, shared access across projects,
           tools designed around specific campus pain points, model choice without fragmented governance, and an architecture that can evolve from assistants toward supervised agency.
         </p>
 
@@ -474,7 +473,7 @@ export default function TritonGPTContent() {
             {
               title: 'Make AI a Shared Utility',
               description:
-                'Shared infrastructure and zero-variable-cost access make experimentation easier for more people. The goal is not a small number of premium tools, but broad and equitable access to useful ones.',
+                'Shared infrastructure and zero-variable-cost access can make experimentation available to more people. The program aims to provide broad and equitable access to useful tools.',
             },
             {
               title: 'Solve Specific Pain Points',
@@ -781,7 +780,7 @@ export default function TritonGPTContent() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-ink mb-2 transition-colors group-hover:text-[#1f5a8a]">CIO 100 Award</h3>
-              <p className="text-body">2025 - Recognized as top global IT innovation</p>
+              <p className="text-body">2025 CIO 100 recipient</p>
             </a>
             <a 
               href="https://www.gartner.com/en/about/awards/eye-on-innovation"
@@ -796,7 +795,7 @@ export default function TritonGPTContent() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-ink mb-2 transition-colors group-hover:text-[#1f5a8a]">Gartner Eye on Innovation</h3>
-              <p className="text-body">Finalist for transformational impact in education</p>
+              <p className="text-body">Finalist in the education category</p>
             </a>
           </div>
         </div>
@@ -876,7 +875,7 @@ export default function TritonGPTContent() {
           <p className="rule-label mb-4 text-[#d9dfd3]">Program lesson</p>
           <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-8">What We&apos;re Learning Through TritonAI</h2>
           <p className="text-2xl text-[#d9dfd3] leading-10 mb-8">
-            The clearest lesson so far: institutional AI works best as shared infrastructure, not a collection of disconnected demos. Secure hosting matters, but so do model choice, good knowledge sources, live tools, reusable connectors, governance, and close partnership with the people doing the work.
+            One lesson so far is that shared infrastructure makes institutional AI easier to support. Secure hosting, model choice, reliable knowledge sources, live tools, reusable connectors, governance, and partnership with the people doing the work all affect the result.
           </p>
           <div className="border-l-4 border-[#c97712] bg-white/5 px-6 py-4">
             <p className="text-[#eef2ea] italic">TritonAI is one way of learning how shared institutional AI can become practical and trusted.</p>

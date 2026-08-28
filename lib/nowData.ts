@@ -32,27 +32,27 @@ export const currentNow: NowSnapshot = {
   lastUpdated: "2026-08-27",
   location: "San Diego, California",
   intro:
-    "What I'm focused on at UC San Diego and around it. Updated weekly when something material shifts.",
+    "A short record of the work taking most of my attention. Updated when something material changes.",
   items: [
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT has grown to 73,000+ users, with the vast majority of inference processed on-prem through our LLM gateway. The platform is evolving beyond chat into agentic workflows, with new models and capabilities shipping in regular sprints.",
+        "TritonGPT is available across campus, with most inference processed on-premises through the university's LLM gateway. Current work includes new models, developer access, and supervised agent workflows.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is in beta distribution with strong early adoption across development teams. The usage recharge model is now finalized: on-prem inference is free for administrative use, while cloud usage requires a funding source. A privacy and data explainer is in progress before broader rollout.",
+        "The TritonAI Harness is in beta with several development teams. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source. A privacy and data explainer is in progress before broader distribution.",
     },
     {
-      label: "AI agents in production",
+      label: "AI workflow pilots and services",
       body:
-        "The Student Scheduling Assistant launched this summer, serving students in waves alongside the UC San Diego Assistant on the flagship mobile app. Enterprise data agents continue bridging natural language to structured data queries, and a pipeline of new agent concepts is forming around transfer credit evaluation, academic integrity triage, and student success analytics.",
+        "The Student Scheduling Assistant launched this summer in a phased rollout alongside the UC San Diego Assistant in the campus mobile app. Other work includes natural-language access to structured data and early concepts for transfer credit evaluation, academic integrity triage, and student success analytics.",
     },
     {
       label: "Student system stabilization",
       body:
-        "The student system cutover is stabilizing after a difficult summer. Most students have booked classes and enrollment is approaching normal levels. The team is still at capacity but beginning to shift from crisis recovery to scoping the longer-term replacement path.",
+        "The student system cutover is stabilizing after a difficult summer, and enrollment is approaching normal levels. The team remains at capacity and is beginning to define a longer-term replacement path.",
     },
     {
       label: "Data platform modernization",
@@ -62,7 +62,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "Developing a shared GPU strategy to support data science and machine learning needs, with a proposal forming for a small enabling team that would serve as a campus-facing front door for AI platform capabilities. Positioning UC San Diego as an inference and AI services provider for the UC system and beyond.",
+        "Developing a shared GPU strategy for data science and machine learning, along with a proposal for a small team that could coordinate access to AI platform capabilities. The scope may include shared services for other UC locations.",
     },
   ],
 };

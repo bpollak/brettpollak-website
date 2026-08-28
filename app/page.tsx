@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Brett Pollak | Technology Leadership in Higher Education',
+    title: 'Brett Pollak | Higher Education Technology',
     description:
-      'Running the technology behind a campus of 73,000 people at UC San Diego. Infrastructure, data, service desk, collaboration, and AI.',
+      'Notes on infrastructure, data, digital services, and institutional AI from my work at UC San Diego.',
     url: 'https://brettcpollak.com/',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brett Pollak | Technology Leadership in Higher Education',
+    title: 'Brett Pollak | Higher Education Technology',
     description:
-      'Running the technology behind a campus of 73,000 people at UC San Diego.',
+      'Notes on infrastructure, data, digital services, and institutional AI from my work at UC San Diego.',
     images: ['/brett-pollak-og-card.png'],
   },
 };
@@ -56,9 +56,9 @@ function formatNowDate(iso: string): string {
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
 const portfolioAreas = [
-  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-prem compute, including the AI platform at SDSC.' },
+  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-premises compute, including infrastructure used by the campus AI platform.' },
   { label: 'Data & analytics', body: 'Enterprise data warehouse, BI tools, and predictive analytics.' },
-  { label: 'Service desk & field support', body: 'Tier 1–2 support for the entire campus community.' },
+  { label: 'Service desk & field support', body: 'Tier 1–2 support for students, faculty, and staff.' },
   { label: 'Endpoint management', body: 'Device lifecycle, enrollment, and security compliance.' },
   { label: 'Enterprise collaboration', body: 'M365, Google Workspace, Zoom, Qualtrics.' },
   { label: 'AI platforms', body: 'TritonGPT, the Developer API, and the agentic tools being built on top of them.' },
@@ -68,17 +68,17 @@ const lessons = [
   {
     tone: 'blue',
     title: 'Start with a real problem.',
-    body: 'Our contract reviewer cut NDA turnaround time by 91%. That worked because it solved a specific bottleneck, not because it was clever AI.',
+    body: 'One contract-review project reduced NDA turnaround time by 91%. It addressed a specific bottleneck and gave us a clear result to measure.',
   },
   {
     tone: 'gold',
-    title: 'Make the path easier than the workaround.',
-    body: 'We gave campus developers governed API access with free credits and real guardrails. A staff member with no engineering background built a PDF accessibility tool. That\u2019s the flywheel working.',
+    title: 'Provide a supported path.',
+    body: 'We gave campus developers governed API access, credits, and guardrails. One staff member without an engineering background used it to build a PDF accessibility tool.',
   },
   {
     tone: 'green',
-    title: 'The platform has to travel.',
-    body: 'BearGPT at Berkeley, UC ANR, UC Merced. Same architecture, different campus. If it only works for us, it\u2019s a project. If it works for them, it\u2019s infrastructure.',
+    title: 'Check what transfers.',
+    body: 'A few peer institutions have adapted the same architecture for their own campuses. Their implementations help us see which parts are reusable and which are local to UC San Diego.',
   },
 ];
 
@@ -151,7 +151,7 @@ export default function Home() {
     "@type": "Person",
     "name": "Brett Pollak",
     "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
-    "description": "Technology leader at UC San Diego running infrastructure, data, service desk, collaboration, and AI platforms for a campus of 73,000.",
+    "description": "Executive Director at UC San Diego responsible for teams working across infrastructure, data, service desk, collaboration, endpoint management, and AI platforms.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
     "worksFor": {
@@ -190,13 +190,13 @@ export default function Home() {
     "hasOccupation": [
       {
         "@type": "Occupation",
-        "name": "Technology Executive",
+        "name": "Higher Education Technology Executive",
         "occupationLocation": { "@type": "City", "name": "San Diego, CA" }
       },
       {
         "@type": "Occupation",
-        "name": "Keynote Speaker",
-        "description": "Keynote speaker on AI in higher education, agentic workflows, institutional AI governance, and vertical AI deployment.",
+        "name": "Conference Speaker",
+        "description": "Speaks about AI in higher education, agentic workflows, institutional AI governance, and campus AI implementation.",
         "occupationLocation": { "@type": "Country", "name": "United States" }
       }
     ],
@@ -216,7 +216,7 @@ export default function Home() {
     "alternateName": "TritonAI Program at UC San Diego",
     "url": "https://brettcpollak.com/tritongpt",
     "description":
-      "UC San Diego's institutional AI program, including TritonGPT, the TritonAI Developer API Program, and the Citizen Agentic Development Framework. Serves 73,000+ campus users.",
+      "UC San Diego's institutional AI program, including TritonGPT, developer APIs, and tools for supervised agent workflows. Available to students, faculty, and staff.",
     "foundingDate": "2024",
     "parentOrganization": {
       "@type": "EducationalOrganization",
@@ -241,20 +241,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
             <div>
-              <p className="rule-label mb-8">Technology leadership at UC San Diego</p>
+              <p className="rule-label mb-8">Work at UC San Diego</p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-ink max-w-[20rem] sm:max-w-4xl">
-                Running the technology behind a campus of 73,000 people.
+                I work on technology and AI in higher education.
               </h1>
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-body">
-                I lead Workplace Technology and Infrastructure Services at UC San
-                Diego. My teams run the infrastructure, data platforms, service desk,
-                collaboration tools, and endpoint management that keep the university
-                working. Lately that means building the AI layer on top of all of it.
+                I&rsquo;m the Executive Director of Workplace Technology and Infrastructure
+                Services at UC San Diego. My group is responsible for infrastructure,
+                data platforms, the service desk, collaboration tools, endpoint management,
+                and parts of the university&rsquo;s AI program.
                 {' '}
                 <Link href="/tritongpt" className="font-semibold text-signal-blue underline underline-offset-4 decoration-[#1f5a8a]/30">
                   TritonAI
                 </Link>
-                {' '}started as a pilot and now serves the entire campus community.
+                {' '}started as a pilot and is now available to students, faculty, and staff.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
@@ -275,9 +275,8 @@ export default function Home() {
                 <div>
                   <p className="rule-label mb-3">Operating idea</p>
                   <p className="text-base leading-7 text-body">
-                    Most new tools don&rsquo;t survive contact with real work. The job
-                    is figuring out which ones do, and building the infrastructure to
-                    support them when they do.
+                    New tools have to fit the way people actually work. I try to understand
+                    where they help, where they do not, and what support they need over time.
                   </p>
                 </div>
               </div>
@@ -299,7 +298,7 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 z-20 p-5 md:p-6 text-white">
                   <p className="rule-label mb-3 text-white/70">UC San Diego</p>
                   <p className="max-w-sm text-xl md:text-2xl leading-8 font-medium">
-                    Seven teams. One campus. Technology that has to work.
+                    Seven teams supporting shared campus technology.
                   </p>
                 </div>
               </div>
@@ -317,8 +316,8 @@ export default function Home() {
                 <div className="home-support-card home-support-card-dark p-5 text-white" data-tone="green">
                   <p className="rule-label mb-4 text-white/60">Team</p>
                   <p className="text-lg leading-7">
-                    A lean group running infrastructure, data, service desk,
-                    endpoint, collaboration, and AI for the entire campus.
+                    Seven teams working across infrastructure, data, service desk,
+                    endpoint management, collaboration, and AI services.
                   </p>
                 </div>
               </div>
@@ -334,11 +333,11 @@ export default function Home() {
             <div>
               <p className="rule-label mb-4">The portfolio</p>
               <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-                The systems a campus depends on.
+                What my group supports.
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-body">
-                Seven teams covering the technology that 73,000 students, faculty,
-                and staff rely on every day.
+                The work spans shared services used by students, faculty, and staff,
+                along with the platforms and support teams behind them.
               </p>
               <div className="mt-8 space-y-4">
                 {portfolioAreas.map((area) => (
@@ -362,13 +361,13 @@ export default function Home() {
           <div className="max-w-3xl">
             <p className="rule-label mb-4">Current focus</p>
             <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-              Building AI that fits the institution.
+              Working on institutional AI.
             </h2>
             <p className="mt-6 text-lg leading-8 text-body">
-              We started TritonGPT in 2024 as a pilot. Two years later it serves the
-              entire campus, runs mostly on our own infrastructure, and a few peer
-              institutions have adopted the model. The work now is moving from chat
-              to agents. Tools that actually do things for people.
+              TritonGPT began as a pilot in 2024. It is now available across campus,
+              runs mostly on university infrastructure, and has been adapted by a few
+              peer institutions. Current work includes supervised agents and tools that
+              can take bounded actions within university workflows.
             </p>
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-5">

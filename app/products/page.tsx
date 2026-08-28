@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
-  title: "Products & Innovation. Built Work",
-  description: "Explore AI products built by Brett Pollak, including Is This AI?, Resolution Companion, Horse Racing Companion, BioBib Formatter, AI Use Case Meeting, PDF Remediator, Dissertation Agent, and the Henry AI Operating System.",
+  title: "Products and Prototypes",
+  description: "A selection of software projects and prototypes built by Brett Pollak for education, productivity, and family use.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
   openGraph: {
-    title: "Products & Innovation | Built Work by Brett Pollak",
-    description: "AI products and prototypes built by Brett Pollak.",
+    title: "Products and Prototypes | Brett Pollak",
+    description: "A selection of software projects and prototypes for education, productivity, and family use.",
     url: "https://brettcpollak.com/products",
     images: [
       {
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Products & Innovation | Built Work by Brett Pollak",
-    description: "AI products and prototypes built by Brett Pollak.",
+    title: "Products and Prototypes | Brett Pollak",
+    description: "A selection of software projects and prototypes for education, productivity, and family use.",
     images: ["/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg"],
   },
 };
@@ -41,7 +41,7 @@ const products = [
     width: 900,
     height: 1280,
     description:
-      "Now live in the App Store, Resolution Companion is an AI-powered mobile app that helps users build lasting habits through identity-based personal growth. Define your ideal self and make daily choices aligned with that persona, supported by AI coaching and progress tracking.",
+      "Resolution Companion is an iOS app for identity-based habit planning. It combines a defined personal goal, short daily activities, AI coaching, and progress tracking.",
     features: [
       "Live in the App Store",
       "AI-guided persona definition",
@@ -61,7 +61,7 @@ const products = [
     width: 603,
     height: 1311,
     description:
-      "A mobile app that turns public odds, Del Mar history, and live race-day updates into one clear recommendation for each race. You get the bet, the horse numbers, and exactly what to say at the window. Coming soon to the App Store.",
+      "A mobile app that combines public odds, Del Mar history, and race-day updates to present one suggested wager for each race. It is being prepared for the App Store.",
     features: [
       "1,800+ Del Mar races behind the model",
       "Real-time odds, scratches & changes",
@@ -80,7 +80,7 @@ const products = [
     width: 1280,
     height: 800,
     description:
-      "A collegiate athletic recruiting profile built for Cason Pollak (C/O 2027), a track & field athlete from Del Norte HS. Combines personal bests, race film, season progression charts, a conference points projector tool, and a college fit matrix across six target programs into a single polished landing page for coach outreach.",
+      "A collegiate athletic recruiting website for Cason Pollak (Class of 2027), a track and field athlete from Del Norte High School. It includes personal bests, race film, season progression charts, a conference points projector, and a college fit matrix for six programs.",
     features: [
       "Personal bests & athletic résumé",
       "Race film with meet-by-meet context",
@@ -120,7 +120,7 @@ const products = [
     width: 1520,
     height: 1040,
     description:
-      "A private family workspace with an autonomous agent behind it. It sweeps a registry of sponsors and foundations daily, reads each program's own page, and screens eligibility against a stored student profile. It keeps a requirement only when it can quote the page text that proves it. The result is a short list of things that genuinely need a human decision, instead of a folder of tabs. Because it is invite-only, here is a walkthrough of what it does.",
+      "A private family workspace with a background agent. It checks a registry of sponsors and foundations each day, reads each program's page, and compares the requirements with a stored student profile. It retains requirements only when it can quote the source. The walkthrough shows the workflow without exposing private account data.",
     features: [
       "Private, family-only access (passkey or Google)",
       "Daily autonomous discovery across 65 sources",
@@ -140,12 +140,12 @@ const products = [
     width: 590,
     height: 1280,
     description:
-      "A production AI agent stack built on Hermes Agent: 24/7 Mac mini operations, autonomous automations, knowledge graph memory, vector search, multi-model routing, and institutional integrations.",
+      "A personal AI setup built on Hermes Agent, with scheduled automations, a knowledge graph, vector search, model routing, and institutional integrations.",
     features: [
-      "77 autonomous automations",
-      "Multi-model intelligence",
+      "77 scheduled automations",
+      "Multiple model routes",
       "Software blueprint pipeline",
-      "Persistent executive operating layer",
+      "Persistent working context",
     ],
     cta: "See the Architecture",
   },
@@ -281,11 +281,11 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="mb-12 grid gap-8 border-y border-line bg-wash-blue p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
-            <p className="rule-label mb-5">Product laboratory</p>
-            <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Built Work</h1>
+            <p className="rule-label mb-5">Projects</p>
+            <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Products and Prototypes</h1>
           </div>
           <p className="text-2xl text-body mb-6 max-w-3xl leading-9">
-            AI products and prototypes that solve real problems. Personal productivity, campus operations, family tools.
+            A selection of software for personal productivity, campus operations, and family use.
           </p>
         </div>
 
@@ -384,11 +384,11 @@ export default function Products() {
           <div className="grid gap-8 md:grid-cols-[0.55fr_1fr] md:items-center">
             <div>
               <p className="rule-label mb-4">In progress</p>
-              <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink">More built work is moving through the lab.</h3>
+              <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink">Other projects are in progress.</h3>
             </div>
             <div>
               <p className="text-lg leading-8 text-body">
-                I&apos;m building more software across education, productivity, and enterprise tools. I&apos;ll post updates as things get concrete enough to show.
+                I&apos;m also working on software for education, productivity, and enterprise use. I&apos;ll add projects here when there is enough to document.
               </p>
               <Link
                 href="/linkedin"

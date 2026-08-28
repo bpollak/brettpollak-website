@@ -92,7 +92,7 @@ export default function PreviewPage() {
               Reusable across the site
             </h2>
             <p className="mt-3 max-w-2xl text-[color:color-mix(in_srgb,var(--ink),transparent_30%)]">
-              The same primitives compose into a flagship TritonAI architecture map and a speaking
+              The same primitives compose into a full TritonAI architecture map and a speaking
               topics network — proposed for those currently text-only pages.
             </p>
           </Reveal>
