@@ -92,10 +92,11 @@ export default function About() {
               tool fits real work and what infrastructure it needs if people keep using it.
             </p>
             <p className="text-xl text-body leading-relaxed">
-              The AI work started as a pilot in 2024. TritonGPT is now available
-              across campus, runs mostly on university infrastructure, and has been
-              adapted by peer institutions. My current questions are mostly about
-              adoption, governance, and how agent workflows fit campus operations.
+              The AI work started as a pilot in late 2023. TritonGPT is now
+              available across campus, runs mostly on university infrastructure,
+              and has been adapted by peer institutions. My current questions are
+              mostly about adoption, governance, and how agent workflows fit
+              campus operations.
             </p>
           </div>
         </div>
