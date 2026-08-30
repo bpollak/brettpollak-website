@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-08-27",
+  lastUpdated: "2026-08-30",
   location: "San Diego, California",
   intro:
     "A short record of the work taking most of my attention. Updated when something material changes.",
@@ -47,7 +47,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI workflow pilots and services",
       body:
-        "The Student Scheduling Assistant launched this summer in a phased rollout alongside the UC San Diego Assistant in the campus mobile app. Other work includes natural-language access to structured data and early concepts for transfer credit evaluation, academic integrity triage, and student success analytics.",
+        "The Student Scheduling Assistant launched this summer in a phased rollout alongside the UC San Diego Assistant in the campus mobile app. Other work includes natural-language access to structured data, transfer credit evaluation with automated transcript processing, academic integrity triage, and student success analytics.",
     },
     {
       label: "Student system stabilization",
@@ -63,6 +63,11 @@ export const currentNow: NowSnapshot = {
       label: "On-prem AI infrastructure and expansion",
       body:
         "Developing a shared GPU strategy for data science and machine learning, along with a proposal for a small team that could coordinate access to AI platform capabilities. The scope may include shared services for other UC locations.",
+    },
+    {
+      label: "Identity management",
+      body:
+        "Kicked off a project to rebuild the identity registry as the foundation for access management. Starting with the registry itself before tackling downstream automation. Alignment with Health Sciences is a key risk we're managing.",
     },
   ],
 };
