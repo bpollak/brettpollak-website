@@ -95,17 +95,17 @@ export default function AiAgentArchitecturePage() {
           in a university setting and which remain untested.
         </p>
         <p className="text-sm text-body mb-10">
-          Last updated: August 27, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: August 30, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-ink">80 enabled jobs</div>
+            <div className="text-2xl font-semibold text-ink">65+ enabled jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-ink">793 nodes · 880 pages</div>
+            <div className="text-2xl font-semibold text-ink">793 nodes · 898 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -170,9 +170,9 @@ export default function AiAgentArchitecturePage() {
             whether the accumulated information is useful later.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 80 enabled automated
+            This page documents how I built that knowledge layer for myself: 69 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. A 793-node knowledge graph, 880 wiki pages, a
+            models, with the primary inference path hosted on-prem. A 793-node knowledge graph, 898 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
             It also provides a starting point for considering whether parts of the
             pattern could be used beyond one person.
@@ -236,7 +236,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            In this system, 880 wiki pages form a reference library. A relevant page is
+            In this system, 898 wiki pages form a reference library. A relevant page is
             retrieved when a matching person, project, technology, or decision is mentioned.
           </p>
           <p>
@@ -269,7 +269,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            80 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
+            69 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -341,7 +341,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-gold-ink font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">880 narrative pages</div>
+              <div className="text-2xl font-bold text-ink mb-2">898 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative. Good at answering
@@ -400,17 +400,17 @@ export default function AiAgentArchitecturePage() {
             local too.
           </p>
           <p>
-            As of August 27, 2026, <strong>all 80 enabled jobs run through{' '}
+            As of August 30, 2026, <strong>all 69 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
               TritonAI
-            </a></strong>, UC San Diego&rsquo;s institutional AI gateway. <strong>Every enabled
-            route uses an open-weight model, and no scheduled job has a proprietary-model
-            override.</strong> GLM 5.2 is the main agent, utility, active-memory, router, and
-            default scheduled-work model. Sixty-eight jobs inherit that default; nine lightweight
-            jobs explicitly use DeepSeek V4 Flash Max.
+            </a></strong>, UC San Diego&rsquo;s institutional AI gateway. Sixty-four of the 69
+            enabled jobs run on open-weight models hosted on-prem: 22 on gpt-oss-120b, 18 on
+            Mistral Small, 16 on Gemma 4 26B, 6 on Mistral Large, and 1 on DeepSeek V4 Flash Max.
+            Five jobs that need deeper reasoning use Claude Sonnet through TritonAI&rsquo;s
+            hosted route.
           </p>
         </div>
 
@@ -430,29 +430,50 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-semibold text-ink">Primary reasoning &amp; agentic work</td>
                 <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.2</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.2 (open weight)</td>
-                <td className="px-4 py-3 text-body">Main chat, tools, briefings, long-horizon synthesis, utility inference, active memory, and router decisions</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">68</td>
+                <td className="px-4 py-3 text-body">Main chat, tools, interactive sessions, and router decisions</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Fast scheduled batch work</td>
+                <td className="px-4 py-3 font-semibold text-ink">Scheduled batch work</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">gpt-oss-120b</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · OpenAI GPT-OSS 120B (open weight)</td>
+                <td className="px-4 py-3 text-body">Briefings, monitors, ingestion, and recurring synthesis jobs</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">22</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-ink">Lightweight scheduled work</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">mistral-small-3.2</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
+                <td className="px-4 py-3 text-body">Fast monitors, reminders, and simple recurring checks</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">18</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-ink">Vision &amp; multimodal</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">gemma-4-26b</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
+                <td className="px-4 py-3 text-body">Logbook image analysis, multimodal tasks, and scheduled vision work</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">16</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-ink">Heavier scheduled reasoning</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">mistral-large-3</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Large 3 (open weight)</td>
+                <td className="px-4 py-3 text-body">Jobs that need deeper reasoning than the lightweight tier but not full agentic capability</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">6</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-ink">Deep reasoning (proprietary)</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">claude-sonnet-4</td>
+                <td className="px-4 py-3 text-body">TritonAI hosted · Anthropic Claude Sonnet 4 (proprietary)</td>
+                <td className="px-4 py-3 text-body">Meeting debriefs, email triage, and identity drift review where reasoning quality justifies the trade-off</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">5</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-semibold text-ink">Fast batch work</td>
                 <td className="px-4 py-3 font-mono text-xs text-body">deepseek-v4-flash-max</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · DeepSeek V4 Flash Max (open weight)</td>
-                <td className="px-4 py-3 text-body">Lightweight monitors, ingestion, and recurring batch jobs where speed matters more than deep reasoning</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">9</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Vision</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-26b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
-                <td className="px-4 py-3 text-body">Logbook image analysis and explicit multimodal work</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">On demand</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Bounded plugin fallback</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">api-mistral-small-3.2-2506</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
-                <td className="px-4 py-3 text-body">Active-memory fallback only; it is not a hidden main-agent cloud escape hatch</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">Fallback only</td>
+                <td className="px-4 py-3 text-body">Overnight code maintenance where speed matters more than deep reasoning</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">1</td>
               </tr>
             </tbody>
           </table>
@@ -476,18 +497,21 @@ export default function AiAgentArchitecturePage() {
             as an open model designed for long-horizon agentic work.
           </p>
           <p>
-            <strong className="text-ink">Why only two scheduled paths:</strong> 68 jobs
-            inherit GLM 5.2 instead of pinning a model, so improvements to the default propagate
-            without editing the fleet. Nine lightweight jobs remain explicitly on DeepSeek V4
-            Flash Max. Gemma handles vision on demand, while Mistral Small is a narrow
-            active-memory fallback. That keeps specialization where it earns its complexity.
+            <strong className="text-ink">Why multiple open-weight models:</strong> the fleet
+            spreads across four open-weight models hosted on-prem, each matched to the reasoning
+            depth the job needs. GPT-OSS 120B handles the largest share of scheduled work; Mistral
+            Small covers fast lightweight checks; Gemma 4 handles vision; and Mistral Large covers
+            the mid-tier. Five jobs that need deeper reasoning use Claude Sonnet through
+            TritonAI&rsquo;s hosted route. DeepSeek V4 Flash Max handles one overnight code
+            maintenance job where speed is the priority.
           </p>
           <p>
             <strong className="text-ink">Strict fallback is a privacy boundary:</strong>{' '}
             the main-agent fallback list is empty. If GLM or the gateway fails, Hermes surfaces
-            the failure instead of silently sending private context to a cloud provider. Cloud
-            models remain available only as explicit, human-selected emergency tools. Memory
-            embeddings stay local through Ollama and <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">nomic-embed-text</code>.
+            the failure instead of silently sending private context to a cloud provider. Five
+            scheduled jobs explicitly use Claude Sonnet for tasks where reasoning quality
+            justifies the trade-off, but this is a deliberate per-job choice, not a fallback.
+            Memory embeddings stay local through Ollama and <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">nomic-embed-text</code>.
           </p>
           <p>
             <strong className="text-ink">How routing stays healthy:</strong> the autonomous
@@ -900,6 +924,16 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              August 30, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Wiki grew +64 pages; model allocation corrected; cron count held at 65+</div>
+            <p className="text-sm text-body leading-6">
+              Wiki expanded from 834 to 898 pages (+64), driven by 39 new people pages, 15 new decision pages, and 2 new project pages (regulatory-change-intelligence-agent, transfer-credit-articulation-agent). Enabled cron jobs held steady at 69 (65+). Model allocation table corrected: the fleet now spans four open-weight models (gpt-oss-120b, mistral-small, gemma-4-26b, mistral-large) plus 5 jobs on Claude Sonnet for deeper reasoning and 1 on DeepSeek V4 Flash Max. Knowledge graph held at 793 nodes and 837 edges (no drift).
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>

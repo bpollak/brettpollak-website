@@ -72,6 +72,25 @@ const products = [
     cta: "Visit Horse Racing Companion",
   },
   {
+    category: "Sports group experience",
+    title: "Steel City Gameday",
+    href: "https://steelcitygameday.com/",
+    image: "/steel-city-gameday.png",
+    imageAlt: "Steel City Gameday with a private Crew room and live Flash Pick",
+    width: 1200,
+    height: 630,
+    description:
+      "An iOS app that turns group texts into live game picks. Start a private Crew for the people you watch with, make pregame picks, answer timed Flash Picks during the game, and settle up with receipts that last all season.",
+    features: [
+      "Private Crews for each watch group",
+      "Pregame picks and live Flash Picks",
+      "Crew chat during the game",
+      "Receipts and season standings",
+      "Coming to iPhone Fall 2026",
+    ],
+    cta: "Visit Steel City Gameday",
+  },
+  {
     category: "College recruiting",
     title: "Cason Pollak. Track & Field Recruiting Profile",
     href: "https://casonpollak.com/",
