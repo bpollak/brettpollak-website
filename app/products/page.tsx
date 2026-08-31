@@ -80,13 +80,13 @@ const products = [
     width: 1200,
     height: 630,
     description:
-      "An iOS app that turns group texts into live game picks. Start a private Crew for the people you watch with, make pregame picks, answer timed Flash Picks during the game, and settle up with receipts that last all season.",
+      "Turns your group texts into live game picks. Start a private Crew for the people you watch with, make pregame picks, answer timed Flash Picks while the game is live, and tally receipts that last all season.",
     features: [
       "Private Crews for each watch group",
-      "Pregame picks and live Flash Picks",
-      "Crew chat during the game",
-      "Receipts and season standings",
-      "Coming to iPhone Fall 2026",
+      "Pregame picks and timed Flash Picks during the game",
+      "Crew chat with final receipts when the game is over",
+      "The Wire collects Steelers headlines in one place",
+      "Season standings, schedule, and quarter races",
     ],
     cta: "Visit Steel City Gameday",
   },
