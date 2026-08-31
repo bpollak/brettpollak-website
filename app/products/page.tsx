@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Products and Prototypes | Brett Pollak",
     description: "A selection of software projects and prototypes for education, productivity, and family use.",
-    images: ["/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg"],
+    images: ["/ai-architecture-linkedin.png"],
   },
 };
 
@@ -154,10 +154,10 @@ const products = [
     title: "Henry. Personal AI Operating System",
     href: "/ai-agent-architecture",
     internal: true,
-    image: "/screenshots/mission-control-build-campus-app-pipeline-mobile-2026-04-24.jpg",
-    imageAlt: "Mission Control Build / Campus App Pipeline view",
-    width: 590,
-    height: 1280,
+    image: "/ai-architecture-linkedin.png",
+    imageAlt: "AI agent architecture diagram showing knowledge layer, model routing, and agent actions",
+    width: 1200,
+    height: 675,
     description:
       "A personal AI setup built on Hermes Agent, with scheduled automations, a knowledge graph, vector search, model routing, and institutional integrations.",
     features: [

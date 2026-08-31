@@ -1296,8 +1296,8 @@ export default function AiAgentArchitecturePage() {
               and a Friday{' '}
               <span className="font-mono text-xs">backlog-completion-scan</span> that
               cross-references backlog tasks against the week&rsquo;s meetings, debriefs, and
-              sent mail to flag probable completions. Mission Control gained an Accessibility
-              Audit screen surfacing vendor accessibility statements across 150 enterprise
+              sent mail to flag probable completions. An Accessibility
+              Audit screen was added surfacing vendor accessibility statements across 150 enterprise
               systems. New wiki page: TritonAI AI Initiative Readiness Copilot.
             </p>
           </li>

@@ -1,6 +1,6 @@
 /**
  * Shared markdown rendering for the public AI digest page.
- * Intentionally mirrors Mission Control formatting so digest content stays identical.
+ * Intentionally mirrors the digest formatting so content stays identical.
  */
 
 /**
