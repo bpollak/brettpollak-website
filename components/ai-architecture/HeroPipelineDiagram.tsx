@@ -1,24 +1,12 @@
 /**
  * D1: Hero Knowledge Flow Diagram
  *
- * Replaces the earlier card-and-arrow layout with a proper SVG flow visual:
+ * CSS/HTML layout replacing the earlier SVG flow visual:
  *   Data Sources  →  Knowledge & Memory  →  Agent Actions
  *
- * Left column: the raw inputs that feed the system (calendar, email, meetings,
- * web, campus signals, transcripts).
- *
- * Middle column: the durable knowledge layer — the 4 stores where synthesized
- * information lives (Knowledge Graph, Wiki, MEMORY.md, PATTERNS.md).
- *
- * Right column: what the agent actually DOES with that knowledge — the
- * outputs and actions that make the ecosystem useful day to day.
- *
- * Curved SVG paths connect left items into the middle and middle items out
- * to the right, showing how raw data becomes durable knowledge becomes
- * action.
- *
- * At the bottom: the synthesis layer — the crons that do the work of
- * transforming raw signals into durable knowledge.
+ * Three columns of styled cards with colored left borders, CSS arrows between
+ * columns, and a synthesis band at the bottom. On mobile the columns stack
+ * vertically with downward arrows.
  */
 import React from 'react';
 
@@ -53,261 +41,140 @@ const AGENT_ACTIONS: Item[] = [
   { label: 'Proactive nudges', note: 'trends, patterns' },
 ];
 
-// Viewbox layout
-const VB_W = 1200;
-const VB_H = 720;
-
-// Reserve vertical space at the bottom for the synthesis band so columns
-// don't overlap it. Synth band is 38px tall + breathing room.
-const SYNTH_RESERVE = 80;
-
-// Column x centers
-const LEFT_CX = 180;
-const MID_CX = 600;
-const RIGHT_CX = 1020;
-
-// Column item dimensions
-const ITEM_W = 220;
-const ITEM_H = 62;
-const ITEM_GAP = 16;
-
-// Compute y positions for a column of N items, vertically centered within
-// the area above the synthesis band.
-function columnY(count: number, idx: number) {
-  const usableH = VB_H - SYNTH_RESERVE;
-  const totalH = count * ITEM_H + (count - 1) * ITEM_GAP;
-  const startY = (usableH - totalH) / 2;
-  return startY + idx * (ITEM_H + ITEM_GAP);
-}
-
-function Item({
-  x,
-  y,
-  label,
-  note,
-  variant,
-}: {
-  x: number;
-  y: number;
-  label: string;
-  note?: string;
-  variant: 'source' | 'knowledge' | 'action';
-}) {
-  const styles = {
-    source: { fill: '#dbeafe', stroke: '#3b82f6', labelFill: '#1e3a8a', noteFill: '#1d4ed8' },
-    knowledge: { fill: '#fde68a', stroke: '#d97706', labelFill: '#78350f', noteFill: '#92400e' },
-    action: { fill: '#a7f3d0', stroke: '#059669', labelFill: '#064e3b', noteFill: '#047857' },
-  }[variant];
-
+/** Horizontal arrow shown between columns on desktop (md+). */
+function ArrowH({ color }: { color: string }) {
   return (
-    <g>
-      <rect
-        x={x - ITEM_W / 2}
-        y={y}
-        width={ITEM_W}
-        height={ITEM_H}
-        rx={12}
-        ry={12}
-        fill={styles.fill}
-        stroke={styles.stroke}
-        strokeWidth="2.5"
-      />
-      <text
-        x={x}
-        y={y + 27}
-        textAnchor="middle"
-        style={{ fontSize: '18px', fontWeight: 700, fill: styles.labelFill }}
+    <div className="hidden md:flex items-center justify-center" aria-hidden="true">
+      <div
+        className="flex items-center"
+        style={{ color }}
       >
-        {label}
-      </text>
-      {note && (
-        <text
-          x={x}
-          y={y + 48}
-          textAnchor="middle"
-          style={{ fontSize: '13px', fill: styles.noteFill, fontStyle: 'italic' }}
-        >
-          {note}
-        </text>
-      )}
-    </g>
+        <span className="text-2xl font-bold leading-none" style={{ color }}>
+          →
+        </span>
+      </div>
+    </div>
   );
 }
 
-// Curved path from one box edge to another
-function curvePath(x1: number, y1: number, x2: number, y2: number) {
-  const midX = (x1 + x2) / 2;
-  return `M ${x1},${y1} C ${midX},${y1} ${midX},${y2} ${x2},${y2}`;
+/** Downward arrow shown between stacked columns on mobile. */
+function ArrowV() {
+  return (
+    <div className="flex md:hidden items-center justify-center py-1" aria-hidden="true">
+      <span className="text-xl font-bold text-muted">↓</span>
+    </div>
+  );
+}
+
+function ColumnCard({
+  item,
+  borderColor,
+  bgClass,
+  labelClass,
+}: {
+  item: Item;
+  borderColor: string;
+  bgClass: string;
+  labelClass: string;
+}) {
+  return (
+    <div
+      className={`rounded-lg ${bgClass} px-4 py-2.5 shadow-sm border-l-4 transition-all hover:shadow-md`}
+      style={{ borderColor }}
+    >
+      <div className={`text-sm font-bold leading-tight ${labelClass}`}>
+        {item.label}
+      </div>
+      {item.note && (
+        <div className="text-xs italic text-muted mt-0.5">{item.note}</div>
+      )}
+    </div>
+  );
 }
 
 export default function HeroPipelineDiagram() {
   return (
-    <figure
-      className="w-full my-10"
-    >
-      <svg
-        role="img"
-        aria-labelledby="knowledge-flow-title knowledge-flow-desc"
-        viewBox={`0 0 ${VB_W} ${VB_H}`}
-        className="w-full h-auto"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title id="knowledge-flow-title">Knowledge flow: data sources to knowledge layer to agent actions</title>
-        <desc id="knowledge-flow-desc">
-          Three-column flow diagram. Left column shows the data sources feeding the system
-          (calendar, email, meetings, web, campus signals, conversations). Middle column shows the
-          four durable knowledge layers (graph, wiki, long-term memory, patterns). Right column
-          shows what the agent does with that knowledge (briefings, meeting intelligence,
-          real-time answers, published artifacts, proactive nudges). Curved paths connect each
-          data source into the knowledge layer, and each knowledge layer out to the agent actions.
-        </desc>
-
-        <defs>
-          {/* Subtle gradients */}
-          <linearGradient id="source-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#2563eb" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0.95" />
-          </linearGradient>
-          <linearGradient id="action-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#047857" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#059669" stopOpacity="0.55" />
-          </linearGradient>
-        </defs>
-
-        {/* Column headers */}
-        <text
-          x={LEFT_CX}
-          y={32}
-          textAnchor="middle"
-          style={{ fontSize: '16px', fontWeight: 700, letterSpacing: '0.15em', fill: '#1e40af', textTransform: 'uppercase' }}
-        >
-          Data Sources
-        </text>
-        <text
-          x={MID_CX}
-          y={32}
-          textAnchor="middle"
-          style={{ fontSize: '16px', fontWeight: 700, letterSpacing: '0.15em', fill: '#92400e', textTransform: 'uppercase' }}
-        >
-          Knowledge &amp; Memory
-        </text>
-        <text
-          x={RIGHT_CX}
-          y={32}
-          textAnchor="middle"
-          style={{ fontSize: '16px', fontWeight: 700, letterSpacing: '0.15em', fill: '#065f46', textTransform: 'uppercase' }}
-        >
-          Agent Actions
-        </text>
-
-        {/* Connector paths — drawn first so they sit behind the boxes */}
-        <g strokeWidth="2.25" fill="none" strokeLinecap="round">
-          {/* Each left item curves into each middle item */}
-          {DATA_SOURCES.map((_, i) => {
-            const y1 = columnY(DATA_SOURCES.length, i) + ITEM_H / 2;
-            return KNOWLEDGE_LAYERS.map((_, j) => {
-              const y2 = columnY(KNOWLEDGE_LAYERS.length, j) + ITEM_H / 2;
-              return (
-                <path
-                  key={`src-${i}-kn-${j}`}
-                  d={curvePath(LEFT_CX + ITEM_W / 2, y1, MID_CX - ITEM_W / 2, y2)}
-                  stroke="url(#source-glow)"
-                  strokeOpacity="0.85"
-                />
-              );
-            });
-          })}
-          {/* Each middle item curves out to each right item */}
-          {KNOWLEDGE_LAYERS.map((_, i) => {
-            const y1 = columnY(KNOWLEDGE_LAYERS.length, i) + ITEM_H / 2;
-            return AGENT_ACTIONS.map((_, j) => {
-              const y2 = columnY(AGENT_ACTIONS.length, j) + ITEM_H / 2;
-              return (
-                <path
-                  key={`kn-${i}-act-${j}`}
-                  d={curvePath(MID_CX + ITEM_W / 2, y1, RIGHT_CX - ITEM_W / 2, y2)}
-                  stroke="url(#action-glow)"
-                  strokeOpacity="0.85"
-                />
-              );
-            });
-          })}
-        </g>
-
-        {/* Left column — data sources */}
-        {DATA_SOURCES.map((item, i) => (
-          <Item
-            key={`source-${i}`}
-            x={LEFT_CX}
-            y={columnY(DATA_SOURCES.length, i)}
-            label={item.label}
-            note={item.note}
-            variant="source"
-          />
-        ))}
-
-        {/* Middle column — knowledge layers */}
-        {KNOWLEDGE_LAYERS.map((item, i) => (
-          <Item
-            key={`knowledge-${i}`}
-            x={MID_CX}
-            y={columnY(KNOWLEDGE_LAYERS.length, i)}
-            label={item.label}
-            note={item.note}
-            variant="knowledge"
-          />
-        ))}
-
-        {/* Right column — agent actions */}
-        {AGENT_ACTIONS.map((item, i) => (
-          <Item
-            key={`action-${i}`}
-            x={RIGHT_CX}
-            y={columnY(AGENT_ACTIONS.length, i)}
-            label={item.label}
-            note={item.note}
-            variant="action"
-          />
-        ))}
-
-        {/* Synthesis band at the bottom */}
-        <g>
-          <rect
-            x={MID_CX - 300}
-            y={VB_H - 60}
-            width={600}
-            height={38}
-            rx={19}
-            ry={19}
-            fill="#f8fafc"
-            stroke="#cbd5e1"
-            strokeWidth="1.5"
-          />
-          <text
-            x={MID_CX}
-            y={VB_H - 42}
-            textAnchor="middle"
-            style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.15em', fill: '#64748b', textTransform: 'uppercase' }}
-          >
-            Synthesis
-          </text>
-          <text
-            x={MID_CX}
-            y={VB_H - 25}
-            textAnchor="middle"
-            style={{ fontSize: '13px', fill: '#64748b', fontStyle: 'italic' }}
-          >
-            80 enabled jobs turn raw signals into durable knowledge
-          </text>
-        </g>
-      </svg>
+    <figure className="w-full my-10" role="img" aria-label="Knowledge flow: data sources to knowledge layer to agent actions">
       <figcaption className="sr-only">
         Knowledge flow visualization: data sources (calendar, email, meetings, web, campus signals,
         conversations) feed into a durable knowledge layer (graph, wiki, memory, patterns) which
         the agent uses to drive actions (briefings, meeting intelligence, real-time answers,
-        published artifacts, proactive nudges). A synthesis band at the bottom represents the 77
+        published artifacts, proactive nudges). A synthesis band at the bottom represents the 80
         enabled jobs that do the transformation work.
       </figcaption>
+
+      {/* Column headers */}
+      <div className="hidden md:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-3 mb-4">
+        <div className="text-center text-sm font-bold uppercase tracking-[0.15em] text-signal-blue">
+          Data Sources
+        </div>
+        <div className="w-8" />
+        <div className="text-center text-sm font-bold uppercase tracking-[0.15em] text-signal-gold-ink">
+          Knowledge &amp; Memory
+        </div>
+        <div className="w-8" />
+        <div className="text-center text-sm font-bold uppercase tracking-[0.15em] text-signal-green">
+          Agent Actions
+        </div>
+      </div>
+
+      {/* Three-column grid: col1 | arrow | col2 | arrow | col3 */}
+      <div className="md:grid md:grid-cols-[1fr_auto_1fr_auto_1fr] md:gap-3 md:items-center">
+        {/* Column 1 — Data Sources */}
+        <div className="space-y-2.5">
+          {DATA_SOURCES.map((item, i) => (
+            <ColumnCard
+              key={`source-${i}`}
+              item={item}
+              borderColor="var(--signal-blue)"
+              bgClass="bg-wash-blue"
+              labelClass="text-signal-blue"
+            />
+          ))}
+        </div>
+
+        <ArrowH color="var(--signal-blue)" />
+        <ArrowV />
+
+        {/* Column 2 — Knowledge Layers */}
+        <div className="space-y-2.5">
+          {KNOWLEDGE_LAYERS.map((item, i) => (
+            <ColumnCard
+              key={`knowledge-${i}`}
+              item={item}
+              borderColor="var(--signal-gold)"
+              bgClass="bg-wash-gold"
+              labelClass="text-signal-gold-ink"
+            />
+          ))}
+        </div>
+
+        <ArrowH color="var(--signal-green)" />
+        <ArrowV />
+
+        {/* Column 3 — Agent Actions */}
+        <div className="space-y-2.5">
+          {AGENT_ACTIONS.map((item, i) => (
+            <ColumnCard
+              key={`action-${i}`}
+              item={item}
+              borderColor="var(--signal-green)"
+              bgClass="bg-wash-green"
+              labelClass="text-signal-green"
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Synthesis band */}
+      <div className="mt-6 rounded-xl border border-line bg-ink px-6 py-4 text-center">
+        <div className="text-sm font-bold uppercase tracking-[0.15em] text-on-dark">
+          Synthesis
+        </div>
+        <div className="text-sm text-on-dark-muted italic mt-1">
+          80 enabled jobs turn raw signals into durable knowledge
+        </div>
+      </div>
     </figure>
   );
 }

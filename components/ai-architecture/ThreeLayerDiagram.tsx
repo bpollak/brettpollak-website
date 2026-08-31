@@ -1,122 +1,123 @@
 /**
  * D2: Three-Layer Context Loading Diagram
  *
- * Shows three nested rings representing the agent's context loading strategy:
- * - Layer 1 (center): Always loaded — baseline identity + 48hr context
- * - Layer 2 (middle): Loaded on trigger — wiki pages pulled in when conversation mentions them
- * - Layer 3 (outer): Loaded on explicit request — deep-dive content only when asked
- *
- * Pure SVG with concentric circles. Labels sit outside each ring.
- * Font sizes are set for legibility after viewBox scaling: at a 360px-wide
- * mobile container the 720-unit viewBox renders at ~0.5x, so nothing here
- * may be smaller than 12px (≈6px rendered) and labels target 14px+.
+ * CSS/HTML layout replacing the earlier concentric SVG circles. Three nested
+ * rounded-rectangle panels, each a distinct color, show the context loading
+ * tiers: Always Loaded → On Trigger → Explicit Request.
  */
 
 export default function ThreeLayerDiagram() {
   return (
-    <figure className="w-full my-10">
-      <svg
-        role="img"
-        aria-labelledby="three-layer-title three-layer-desc"
-        viewBox="0 0 720 520"
-        className="w-full h-auto max-w-3xl"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title id="three-layer-title">Three-layer context loading architecture</title>
-        <desc id="three-layer-desc">
-          Three concentric rings showing how the agent loads context. The innermost ring is
-          Layer 1 (always loaded baseline). The middle ring is Layer 2 (loaded on conversational
-          trigger). The outermost ring is Layer 3 (loaded only when the human explicitly asks).
-        </desc>
-
-        {/* Gradients for fills */}
-        <defs>
-          <radialGradient id="l1-grad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#1e3a8a" />
-            <stop offset="100%" stopColor="#1e40af" />
-          </radialGradient>
-          <radialGradient id="l2-grad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.15" />
-            <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.08" />
-          </radialGradient>
-          <radialGradient id="l3-grad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#cbd5e1" stopOpacity="0.15" />
-            <stop offset="100%" stopColor="#e2e8f0" stopOpacity="0.05" />
-          </radialGradient>
-        </defs>
-
-        {/* Layer 3 — outer ring */}
-        <circle cx="360" cy="260" r="240" fill="url(#l3-grad)" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-        <text x="360" y="48" textAnchor="middle" className="fill-slate-600" style={{ fontSize: '16px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-          Layer 3 · Explicit Request Only
-        </text>
-
-        {/* Layer 2 — middle ring */}
-        <circle cx="360" cy="260" r="170" fill="url(#l2-grad)" stroke="#60a5fa" strokeWidth="2" />
-        <text x="360" y="118" textAnchor="middle" className="fill-blue-700" style={{ fontSize: '16px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-          Layer 2 · Loaded on Trigger
-        </text>
-
-        {/* Layer 1 — center, solid */}
-        <circle cx="360" cy="260" r="100" fill="url(#l1-grad)" />
-        <text x="360" y="214" textAnchor="middle" className="fill-blue-100" style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-          Layer 1
-        </text>
-        <text x="360" y="240" textAnchor="middle" className="fill-white" style={{ fontSize: '21px', fontWeight: 700 }}>
-          Always Loaded
-        </text>
-        <text x="360" y="264" textAnchor="middle" className="fill-blue-200" style={{ fontSize: '13px' }}>
-          IDENTITY · USER · MEMORY
-        </text>
-        <text x="360" y="283" textAnchor="middle" className="fill-blue-200" style={{ fontSize: '13px' }}>
-          PATTERNS · today · yesterday
-        </text>
-        <text x="360" y="305" textAnchor="middle" className="fill-blue-300" style={{ fontSize: '12px', fontStyle: 'italic' }}>
-          ~15 KB · loaded every turn
-        </text>
-
-        {/* Layer 2 content labels (arranged around the middle ring) */}
-        <text x="218" y="160" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
-          wiki/people/
-        </text>
-        <text x="470" y="160" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
-          wiki/tech-stack/
-        </text>
-        <text x="186" y="362" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
-          wiki/decisions/
-        </text>
-        <text x="470" y="362" className="fill-slate-800" style={{ fontSize: '14px', fontWeight: 600 }}>
-          weekly-synthesis
-        </text>
-        <text x="360" y="400" textAnchor="middle" className="fill-slate-700" style={{ fontSize: '13px', fontStyle: 'italic' }}>
-          880 pages · pulled in when conversation mentions the topic
-        </text>
-
-        {/* Layer 3 content labels */}
-        <text x="36" y="252" className="fill-slate-500" style={{ fontSize: '13px' }}>
-          specific memory/
-        </text>
-        <text x="36" y="271" className="fill-slate-500" style={{ fontSize: '13px' }}>
-          dated files
-        </text>
-        <text x="568" y="252" className="fill-slate-500" style={{ fontSize: '13px' }}>
-          raw transcripts
-        </text>
-        <text x="568" y="271" className="fill-slate-500" style={{ fontSize: '13px' }}>
-          full graph JSON
-        </text>
-        <text x="360" y="492" textAnchor="middle" className="fill-slate-500" style={{ fontSize: '13px', fontStyle: 'italic' }}>
-          Loaded only when the human explicitly asks &mdash; &ldquo;read the architecture doc,&rdquo; &ldquo;check the knowledge graph&rdquo;
-        </text>
-      </svg>
-
+    <figure className="w-full my-10" role="img" aria-label="Three-layer context loading architecture">
       <figcaption className="sr-only">
         The agent loads context in three priority tiers. Layer 1 is a small fixed set of files
         (identity, user profile, long-term memory, patterns, today, yesterday) loaded on every
-        session start. Layer 2 is 880 wiki pages pulled in conditionally when the conversation
-        mentions a person, technology, decision, or trend. Layer 3 is deep-dive content like
-        specific dated memory files or raw transcripts, loaded only when the human explicitly asks.
+        session start — about 15 KB. Layer 2 is 880 wiki pages pulled in conditionally when the
+        conversation mentions a person, technology, decision, or trend. Layer 3 is deep-dive
+        content like specific dated memory files or raw transcripts, loaded only when the human
+        explicitly asks.
       </figcaption>
+
+      {/* Layer 3 — outermost panel */}
+      <div
+        className="rounded-2xl border-2 border-dashed p-4 sm:p-6"
+        style={{ borderColor: 'var(--signal-coral)', backgroundColor: 'color-mix(in srgb, var(--wash-coral) 40%, var(--paper-strong))' }}
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold text-paper-strong" style={{ backgroundColor: 'var(--signal-coral)' }}>
+            3
+          </span>
+          <span className="text-sm font-bold uppercase tracking-[0.12em] text-signal-coral-ink">
+            Layer 3 · Explicit Request Only
+          </span>
+        </div>
+
+        {/* Layer 2 — middle panel */}
+        <div
+          className="rounded-2xl border-2 p-4 sm:p-6"
+          style={{ borderColor: 'var(--signal-gold)', backgroundColor: 'color-mix(in srgb, var(--wash-gold) 50%, var(--paper-strong))' }}
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold text-paper-strong" style={{ backgroundColor: 'var(--signal-gold)' }}>
+              2
+            </span>
+            <span className="text-sm font-bold uppercase tracking-[0.12em] text-signal-gold-ink">
+              Layer 2 · Loaded on Trigger
+            </span>
+          </div>
+
+          {/* Layer 1 — center panel */}
+          <div
+            className="rounded-2xl border-2 p-5 sm:p-7"
+            style={{ borderColor: 'var(--signal-blue)', backgroundColor: 'var(--signal-blue)' }}
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-paper-strong text-sm font-bold text-signal-blue">
+                1
+              </span>
+              <span className="text-sm font-bold uppercase tracking-[0.15em] text-on-dark">
+                Layer 1 · Always Loaded
+              </span>
+            </div>
+
+            <div className="text-white text-lg font-bold mb-2">Every Session Start</div>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-on-dark">
+              <span>IDENTITY</span>
+              <span>USER PROFILE</span>
+              <span>MEMORY</span>
+              <span>PATTERNS</span>
+              <span>TODAY</span>
+              <span>YESTERDAY</span>
+            </div>
+            <div className="mt-3 text-sm italic text-on-dark-muted">
+              ~15 KB · loaded every turn
+            </div>
+          </div>
+
+          {/* Layer 2 content — below Layer 1 */}
+          <div className="mt-4 space-y-1">
+            <div className="flex flex-wrap gap-2">
+              {['wiki/people/', 'wiki/tech-stack/', 'wiki/decisions/', 'weekly-synthesis'].map((tag) => (
+                <span
+                  key={tag}
+                  className="font-mono text-xs font-semibold px-2.5 py-1 rounded-md"
+                  style={{
+                    backgroundColor: 'color-mix(in srgb, var(--wash-gold) 60%, white)',
+                    color: 'var(--signal-gold-ink)',
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="text-sm italic text-muted mt-1">
+              880 pages · pulled in when conversation mentions the topic
+            </p>
+          </div>
+        </div>
+
+        {/* Layer 3 content — below Layer 2 */}
+        <div className="mt-4 space-y-1">
+          <div className="flex flex-wrap gap-2">
+            {['specific memory/', 'dated files', 'raw transcripts', 'full graph JSON'].map((tag) => (
+              <span
+                key={tag}
+                className="font-mono text-xs font-semibold px-2.5 py-1 rounded-md"
+                style={{
+                  backgroundColor: 'color-mix(in srgb, var(--wash-coral) 50%, white)',
+                  color: 'var(--signal-coral-ink)',
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm italic text-muted mt-1">
+            Loaded only when the human explicitly asks — &ldquo;read the architecture doc,&rdquo;
+            &ldquo;check the knowledge graph&rdquo;
+          </p>
+        </div>
+      </div>
     </figure>
   );
 }
