@@ -24,7 +24,7 @@ const FOOTER_GROUPS: FooterGroup[] = [
     heading: 'Notes & Elsewhere',
     links: [
       { href: '/ai-digest', label: 'AI Digest' },
-      { href: '/ai-agent-architecture', label: 'Agent Architecture' },
+      { href: '/ai-agent-architecture', label: 'Memory Ecosystem' },
       { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
       { href: '/podcasts', label: 'Podcasts' },
       { href: '/now', label: 'Now' },

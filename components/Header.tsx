@@ -14,7 +14,7 @@ const PRIMARY_LINKS: NavLink[] = [
   { href: '/about', label: 'About' },
   { href: '/tritongpt', label: 'TritonAI' },
   { href: '/speaking', label: 'Speaking' },
-  { href: '/ai-agent-architecture', label: 'Architecture' },
+  { href: '/ai-agent-architecture', label: 'Memory Ecosystem' },
   { href: '/media', label: 'Media' },
   { href: '/contact', label: 'Contact' },
 ];
