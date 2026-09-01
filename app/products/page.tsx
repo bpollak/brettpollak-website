@@ -57,10 +57,10 @@ const products = [
     title: "Horse Racing Companion",
     href: "https://horseracingcompanion.com/",
     secondaryHref: "https://apps.apple.com/us/app/horse-racing-companion/id6802113749",
-    image: "/horse-racing-companion.png",
-    imageAlt: "Horse Racing Companion app showing race day picks and analysis",
-    width: 603,
-    height: 1311,
+    image: "/horse-racing-companion-framed.png",
+    imageAlt: "Horse Racing Companion iPhone app showing race day picks and analysis",
+    width: 691,
+    height: 1391,
     description:
       "An iOS app for independent Del Mar race-day analysis. Live odds, scratches, and changes feed one clear pick per race, and every final pick stays on the record beside the official result. The app never accepts or places a wager.",
     features: [
