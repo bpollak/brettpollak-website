@@ -208,7 +208,7 @@ export default function Header() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-line">
+          <div className="md:hidden py-4 border-t border-line max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
             <div className="flex flex-col space-y-2">
               {PRIMARY_LINKS.map(({ href, label }) => (
                 <Link
@@ -228,7 +228,7 @@ export default function Header() {
               {/* Same groups as the desktop dropdown, flattened with subheaders */}
               {WRITING_GROUPS.map((group) => (
                 <div key={group.heading} className="contents">
-                  <div className="pt-3 pb-1 px-4 rule-label">{group.heading}</div>
+                  <div className="pt-2 pb-1 px-4 rule-label">{group.heading}</div>
                   {group.links.map(({ href, label }) => (
                     <Link
                       key={href}
