@@ -1,12 +1,11 @@
 /**
  * D1: Hero Knowledge Flow Diagram
  *
- * CSS/HTML layout replacing the earlier SVG flow visual:
- *   Data Sources  →  Knowledge & Memory  →  Agent Actions
- *
- * Three columns of styled cards with colored left borders, CSS arrows between
- * columns, and a synthesis band at the bottom. On mobile the columns stack
- * vertically with downward arrows.
+ * Pipeline grammar. A numbered stage rail across the top carries the flow
+ * semantics (1 Sources → 2 Knowledge → 3 Actions); each stage holds rounded
+ * "signal pill" chips; a dark synthesis engine band at the bottom carries the
+ * live fleet stats. Distinct from every other diagram on the page: rail +
+ * pills + engine band, no left-bordered cards.
  */
 import React from 'react';
 
@@ -14,6 +13,12 @@ type Item = {
   label: string;
   note?: string;
 };
+
+const STAGES = [
+  { n: '1', name: 'Data Sources', color: 'var(--signal-blue)', text: 'text-signal-blue' },
+  { n: '2', name: 'Knowledge & Memory', color: 'var(--signal-gold)', text: 'text-signal-gold-ink' },
+  { n: '3', name: 'Agent Actions', color: 'var(--signal-green)', text: 'text-signal-green' },
+];
 
 const DATA_SOURCES: Item[] = [
   { label: 'Calendar & email', note: 'MS Graph' },
@@ -27,8 +32,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '793 nodes · 837 edges' },
-  { label: 'Wiki', note: '880 curated pages' },
+  { label: 'Knowledge Graph', note: '803 nodes · 844 edges' },
+  { label: 'Wiki', note: '898 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -41,138 +46,170 @@ const AGENT_ACTIONS: Item[] = [
   { label: 'Proactive nudges', note: 'trends, patterns' },
 ];
 
-/** Horizontal arrow shown between columns on desktop (md+). */
-function ArrowH({ color }: { color: string }) {
+function Pill({ item, color, bg }: { item: Item; color: string; bg: string }) {
   return (
-    <div className="hidden md:flex items-center justify-center" aria-hidden="true">
-      <div
-        className="flex items-center"
-        style={{ color }}
-      >
-        <span className="text-2xl font-bold leading-none" style={{ color }}>
-          →
+    <div
+      className="flex items-center gap-2.5 rounded-full border px-3.5 py-2 shadow-sm"
+      style={{
+        borderColor: `color-mix(in srgb, ${color} 30%, white)`,
+        backgroundColor: bg,
+      }}
+    >
+      <span
+        className="w-2 h-2 rounded-full shrink-0"
+        style={{ backgroundColor: color }}
+        aria-hidden="true"
+      />
+      <span className="min-w-0">
+        <span className="block text-sm font-semibold text-ink leading-tight">
+          {item.label}
         </span>
-      </div>
+        {item.note && (
+          <span className="block text-xs text-muted leading-tight mt-0.5">
+            {item.note}
+          </span>
+        )}
+      </span>
     </div>
   );
 }
 
-/** Downward arrow shown between stacked columns on mobile. */
+/** Compact stage header shown above each column on mobile. */
+function StageChip({ stage }: { stage: (typeof STAGES)[number] }) {
+  return (
+    <div className="flex items-center gap-2 mb-3 md:hidden">
+      <span
+        className="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-extrabold text-paper-strong shrink-0"
+        style={{ backgroundColor: stage.color }}
+        aria-hidden="true"
+      >
+        {stage.n}
+      </span>
+      <span
+        className={`text-xs font-bold uppercase tracking-[0.14em] ${stage.text}`}
+      >
+        {stage.name}
+      </span>
+    </div>
+  );
+}
+
 function ArrowV() {
   return (
     <div className="flex md:hidden items-center justify-center py-1" aria-hidden="true">
-      <span className="text-xl font-bold text-muted">↓</span>
-    </div>
-  );
-}
-
-function ColumnCard({
-  item,
-  borderColor,
-  bgClass,
-  labelClass,
-}: {
-  item: Item;
-  borderColor: string;
-  bgClass: string;
-  labelClass: string;
-}) {
-  return (
-    <div
-      className={`rounded-lg ${bgClass} px-4 py-2.5 shadow-sm border-l-4 transition-all hover:shadow-md`}
-      style={{ borderColor }}
-    >
-      <div className={`text-sm font-bold leading-tight ${labelClass}`}>
-        {item.label}
-      </div>
-      {item.note && (
-        <div className="text-xs italic text-muted mt-0.5">{item.note}</div>
-      )}
+      <span className="text-xl font-bold text-muted">&darr;</span>
     </div>
   );
 }
 
 export default function HeroPipelineDiagram() {
   return (
-    <figure className="w-full my-10" role="img" aria-label="Knowledge flow: data sources to knowledge layer to agent actions">
+    <figure
+      className="w-full my-10"
+      role="img"
+      aria-label="Knowledge flow: data sources to knowledge layer to agent actions"
+    >
       <figcaption className="sr-only">
-        Knowledge flow visualization: data sources (calendar, email, meetings, web, campus signals,
-        conversations) feed into a durable knowledge layer (graph, wiki, memory, patterns) which
-        the agent uses to drive actions (briefings, meeting intelligence, real-time answers,
-        published artifacts, proactive nudges). A synthesis band at the bottom represents the 80
-        enabled jobs that do the transformation work.
+        Knowledge flow visualization: data sources (calendar, email, meetings, web,
+        campus signals, conversations) feed into a durable knowledge layer (an 803-node
+        knowledge graph, 898 wiki pages, long-term memory, work patterns) which the
+        agent uses to drive actions (briefings, meeting intelligence, real-time answers,
+        published artifacts, proactive nudges). A synthesis engine band at the bottom
+        represents the 80 enabled jobs that do the transformation work.
       </figcaption>
 
-      {/* Column headers */}
-      <div className="hidden md:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-3 mb-4">
-        <div className="text-center text-sm font-bold uppercase tracking-[0.15em] text-signal-blue">
-          Data Sources
+      {/* Stage rail (desktop) — numbered stations joined by dotted connectors */}
+      <div className="hidden md:flex items-center gap-3 mb-6" aria-hidden="true">
+        {STAGES.map((stage, i) => (
+          <React.Fragment key={stage.n}>
+            {i > 0 && (
+              <div
+                className="flex-1 border-t-2 border-dotted"
+                style={{ borderColor: 'var(--line)' }}
+              />
+            )}
+            <div className="flex items-center gap-2.5">
+              <span
+                className="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-extrabold text-paper-strong shrink-0"
+                style={{ backgroundColor: stage.color }}
+              >
+                {stage.n}
+              </span>
+              <span
+                className={`text-sm font-bold uppercase tracking-[0.14em] ${stage.text}`}
+              >
+                {stage.name}
+              </span>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+
+      {/* Three stage columns */}
+      <div className="md:grid md:grid-cols-3 md:gap-4 md:items-start">
+        <div>
+          <StageChip stage={STAGES[0]} />
+          <div className="space-y-2">
+            {DATA_SOURCES.map((item) => (
+              <Pill
+                key={item.label}
+                item={item}
+                color="var(--signal-blue)"
+                bg="var(--wash-blue)"
+              />
+            ))}
+          </div>
         </div>
-        <div className="w-8" />
-        <div className="text-center text-sm font-bold uppercase tracking-[0.15em] text-signal-gold-ink">
-          Knowledge &amp; Memory
+
+        <ArrowV />
+
+        <div>
+          <StageChip stage={STAGES[1]} />
+          <div className="space-y-2">
+            {KNOWLEDGE_LAYERS.map((item) => (
+              <Pill
+                key={item.label}
+                item={item}
+                color="var(--signal-gold)"
+                bg="var(--wash-gold)"
+              />
+            ))}
+          </div>
         </div>
-        <div className="w-8" />
-        <div className="text-center text-sm font-bold uppercase tracking-[0.15em] text-signal-green">
-          Agent Actions
+
+        <ArrowV />
+
+        <div>
+          <StageChip stage={STAGES[2]} />
+          <div className="space-y-2">
+            {AGENT_ACTIONS.map((item) => (
+              <Pill
+                key={item.label}
+                item={item}
+                color="var(--signal-green)"
+                bg="var(--wash-green)"
+              />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Three-column grid: col1 | arrow | col2 | arrow | col3 */}
-      <div className="md:grid md:grid-cols-[1fr_auto_1fr_auto_1fr] md:gap-3 md:items-center">
-        {/* Column 1 — Data Sources */}
-        <div className="space-y-2.5">
-          {DATA_SOURCES.map((item, i) => (
-            <ColumnCard
-              key={`source-${i}`}
-              item={item}
-              borderColor="var(--signal-blue)"
-              bgClass="bg-wash-blue"
-              labelClass="text-signal-blue"
-            />
-          ))}
-        </div>
-
-        <ArrowH color="var(--signal-blue)" />
-        <ArrowV />
-
-        {/* Column 2 — Knowledge Layers */}
-        <div className="space-y-2.5">
-          {KNOWLEDGE_LAYERS.map((item, i) => (
-            <ColumnCard
-              key={`knowledge-${i}`}
-              item={item}
-              borderColor="var(--signal-gold)"
-              bgClass="bg-wash-gold"
-              labelClass="text-signal-gold-ink"
-            />
-          ))}
-        </div>
-
-        <ArrowH color="var(--signal-green)" />
-        <ArrowV />
-
-        {/* Column 3 — Agent Actions */}
-        <div className="space-y-2.5">
-          {AGENT_ACTIONS.map((item, i) => (
-            <ColumnCard
-              key={`action-${i}`}
-              item={item}
-              borderColor="var(--signal-green)"
-              bgClass="bg-wash-green"
-              labelClass="text-signal-green"
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Synthesis band */}
-      <div className="mt-6 rounded-xl border border-line bg-ink px-6 py-4 text-center">
-        <div className="text-sm font-bold uppercase tracking-[0.15em] text-on-dark">
-          Synthesis
-        </div>
-        <div className="text-sm text-on-dark-muted italic mt-1">
-          80 enabled jobs turn raw signals into durable knowledge
+      {/* Synthesis engine band */}
+      <div className="mt-8 rounded-xl bg-ink px-6 py-5">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 text-center md:text-left">
+          <div className="shrink-0">
+            <div className="text-3xl font-extrabold text-white leading-none">80</div>
+            <div className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-on-dark-muted mt-1">
+              enabled jobs
+            </div>
+          </div>
+          <div className="hidden md:block w-px self-stretch bg-white/15" aria-hidden="true" />
+          <div className="text-sm font-semibold text-on-dark mt-3 md:mt-0">
+            49 inference agents &middot; 31 deterministic scripts
+          </div>
+          <div className="text-sm italic text-on-dark-muted mt-1 md:mt-0 md:max-w-[15rem]">
+            turning raw signals into durable knowledge, every day
+          </div>
         </div>
       </div>
     </figure>

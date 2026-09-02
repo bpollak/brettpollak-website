@@ -1,14 +1,14 @@
 /**
  * D4: Scaling Pyramid
  *
- * CSS/HTML layout replacing the earlier SVG trapezoid pyramid. Four stacked
- * cards show how the personal-agent pattern scales:
- *   Personal → Team → Department → Campus
- *
- * Each tier carries an explicit privacy boundary — privacy protections tighten
- * as you go up. On desktop the cards are displayed as a stepped layout with
- * increasing privacy indicators; on mobile they stack as a simple vertical list.
+ * Expansion-band grammar. Four horizontal bands of increasing width encode
+ * scope (one person → whole campus); the "privacy gradient" note at the bottom
+ * shows protections tightening as scope widens. The foundation tier
+ * (Personal) inverts to solid blue — it is the tier in daily use. Distinct
+ * from every other diagram on the page: width-graded bands, not stacked
+ * equal cards. Bands render full-width on mobile (no squeezed percentages).
  */
+import React from 'react';
 
 type Tier = {
   label: string;
@@ -21,6 +21,8 @@ type Tier = {
   textOnDark: boolean;
   /** 0–3 privacy strictness level for the indicator. */
   privacyLevel: number;
+  /** Desktop band width %. */
+  widthPct: number;
 };
 
 const TIERS: Tier[] = [
@@ -34,6 +36,7 @@ const TIERS: Tier[] = [
     bg: 'var(--signal-blue)',
     textOnDark: true,
     privacyLevel: 0,
+    widthPct: 42,
   },
   {
     label: 'Team',
@@ -45,6 +48,7 @@ const TIERS: Tier[] = [
     bg: 'var(--wash-green)',
     textOnDark: false,
     privacyLevel: 1,
+    widthPct: 61,
   },
   {
     label: 'Department',
@@ -56,6 +60,7 @@ const TIERS: Tier[] = [
     bg: 'var(--wash-gold)',
     textOnDark: false,
     privacyLevel: 2,
+    widthPct: 80,
   },
   {
     label: 'Campus',
@@ -67,153 +72,132 @@ const TIERS: Tier[] = [
     bg: 'var(--wash-coral)',
     textOnDark: false,
     privacyLevel: 3,
+    widthPct: 100,
   },
 ];
 
 const PRIVACY_LABELS = ['Individual private', 'Opt-in sharing', 'Anonymized', 'Aggregate only'];
 
-function PrivacyMeter({ level }: { level: number }) {
+function PrivacyMeter({ level, color, dim }: { level: number; color: string; dim: string }) {
   return (
     <div className="flex items-center gap-1" aria-hidden="true">
       {[0, 1, 2, 3].map((i) => (
         <span
           key={i}
           className="w-2 h-2 rounded-full"
-          style={{
-            backgroundColor: i <= level ? 'var(--signal-coral)' : 'var(--line)',
-          }}
+          style={{ backgroundColor: i <= level ? color : dim }}
         />
       ))}
     </div>
   );
 }
 
-export default function ScalingPyramid() {
-  // Desktop: reverse order (Campus on top → Personal on bottom) to match pyramid
-  // Mobile: Personal first (foundation) → Campus last
-  const desktopOrder = [...TIERS].reverse();
-
+function Band({ tier, dimColor }: { tier: Tier; dimColor: string }) {
+  const isDark = tier.textOnDark;
   return (
-    <figure className="w-full my-10" role="img" aria-label="Scaling pyramid: Personal to Team to Department to Campus with tightening privacy boundaries">
+    <div
+      className="band-w w-full rounded-xl shadow-md overflow-hidden"
+      style={{ '--band-w': `${tier.widthPct}%` } as React.CSSProperties}
+    >
+      <div
+        className="border-l-4 p-4 flex flex-col sm:flex-row sm:items-stretch gap-3 sm:gap-4"
+        style={{
+          borderColor: tier.color,
+          backgroundColor: isDark ? tier.color : tier.bg,
+        }}
+      >
+        {/* Left: label + sub */}
+        <div className="shrink-0 sm:w-32">
+          <div className={`text-lg font-extrabold ${isDark ? 'text-white' : 'text-ink'}`}>
+            {tier.label}
+          </div>
+          <div className={`text-xs mt-0.5 ${isDark ? 'text-on-dark' : 'text-muted'}`}>
+            {tier.sub}
+          </div>
+        </div>
+
+        {/* Right: detail + privacy + status */}
+        <div className="flex-1 flex flex-col justify-center gap-1.5">
+          <div className={`text-sm font-bold ${isDark ? 'text-white' : 'text-ink'}`}>
+            {tier.detail}
+          </div>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-sm" aria-hidden="true">&#128274;</span>
+            <span className={`text-xs font-semibold ${isDark ? 'text-on-dark' : 'text-body'}`}>
+              {tier.privacy}
+            </span>
+          </div>
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className={`text-xs italic ${isDark ? 'text-on-dark-muted' : 'text-muted'}`}>
+              {tier.status}
+            </span>
+            <PrivacyMeter level={tier.privacyLevel} color={tier.color} dim={dimColor} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function ScalingPyramid() {
+  // Desktop: Personal (foundation) on top, widening down to Campus.
+  //   Width = scope. Reading top-to-bottom mirrors the pyramid metaphor
+  //   while keeping every label horizontal and legible.
+  // Mobile: same order, full width — no horizontal scroll at small sizes.
+  return (
+    <figure
+      className="w-full my-10"
+      role="img"
+      aria-label="Scaling bands: Personal to Team to Department to Campus with tightening privacy boundaries"
+    >
       <figcaption className="sr-only">
-        Four-tier scaling pyramid. Personal is the foundation — every staff member has their
-        own agent with fully isolated data. Team adds opt-in sharing. Department only sees
-        anonymized aggregates. Campus only sees statistical patterns. Privacy boundaries
-        tighten upward — campus-level data is aggregate-only, and individual-level data never
-        leaves the personal tier.
+        Four-tier scaling diagram. Personal is the foundation — every staff member has
+        their own agent with fully isolated data; the band is narrow because it covers
+        one person at a time. Team adds opt-in sharing. Department only sees anonymized
+        aggregates. Campus only sees statistical patterns. Bands widen as scope grows;
+        privacy protections tighten at the same time — campus-level data is
+        aggregate-only, and individual-level data never leaves the personal tier.
       </figcaption>
 
-      {/* Privacy axis label (desktop) */}
-      <div className="hidden md:flex items-center gap-3 mb-4">
+      {/* Header rail: scale axis */}
+      <div className="flex items-center gap-3 mb-4">
+        <span className="text-xs font-bold uppercase tracking-[0.2em] text-signal-blue">
+          Scope
+        </span>
+        <span className="text-xs text-muted">one person</span>
+        <div className="flex-1 border-t border-dotted border-line" aria-hidden="true" />
+        <span className="text-xs text-muted">entire campus</span>
+      </div>
+
+      {/* Desktop bands — Personal on top widening to Campus */}
+      <div className="flex flex-col items-start gap-3">
+        {TIERS.map((tier) => (
+          <Band key={tier.label} tier={tier} dimColor="var(--line)" />
+        ))}
+      </div>
+
+      <style>{`
+        @media (min-width: 768px) {
+          .band-w { width: var(--band-w); }
+        }
+      `}</style>
+
+      {/* Privacy gradient note */}
+      <div className="mt-5 flex items-center gap-3 flex-wrap">
         <span className="text-xs font-bold uppercase tracking-[0.2em] text-signal-coral-ink">
           Privacy
         </span>
-        <span className="text-xs text-muted">{PRIVACY_LABELS[3]}</span>
-        <div className="flex-1 border-t border-dashed border-line" />
-        <span className="text-xs text-muted">{PRIVACY_LABELS[0]}</span>
+        <span className="text-xs text-muted">
+          {PRIVACY_LABELS[0]} &rarr; {PRIVACY_LABELS[3]}
+        </span>
+        <div className="flex-1 border-t border-dotted border-line" aria-hidden="true" />
+        <span className="text-xs text-muted">
+          tighter as scope widens
+        </span>
       </div>
 
-      {/* Desktop stepped layout — narrow at top (Campus), wide at bottom (Personal) */}
-      <div className="hidden md:flex flex-col items-center gap-3">
-        {desktopOrder.map((tier, idx) => {
-          // Width increases from top (Campus) to bottom (Personal)
-          // idx 0 = Campus (narrowest), idx 3 = Personal (widest)
-          const widthPct = 55 + idx * 15; // 55%, 70%, 85%, 100%
-          const isDark = tier.textOnDark;
-          return (
-            <div
-              key={tier.label}
-              className="rounded-xl shadow-md overflow-hidden transition-all"
-              style={{ width: `${widthPct}%` }}
-            >
-              <div
-                className="border-l-4 p-4 flex items-stretch gap-4"
-                style={{
-                  borderColor: tier.color,
-                  backgroundColor: isDark ? tier.color : tier.bg,
-                }}
-              >
-                {/* Left: label + sub */}
-                <div className="flex-shrink-0 w-32">
-                  <div className={`text-lg font-extrabold ${isDark ? 'text-white' : 'text-ink'}`}>
-                    {tier.label}
-                  </div>
-                  <div className={`text-xs mt-0.5 ${isDark ? 'text-on-dark' : 'text-muted'}`}>
-                    {tier.sub}
-                  </div>
-                </div>
-
-                {/* Right: detail + privacy + status */}
-                <div className="flex-1 flex flex-col justify-center gap-1.5">
-                  <div className={`text-sm font-bold ${isDark ? 'text-white' : 'text-ink'}`}>
-                    {tier.detail}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm" aria-hidden="true">🔒</span>
-                    <span className={`text-xs font-semibold ${isDark ? 'text-on-dark' : 'text-body'}`}>
-                      {tier.privacy}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className={`text-xs italic ${isDark ? 'text-on-dark-muted' : 'text-muted'}`}>
-                      {tier.status}
-                    </span>
-                    <PrivacyMeter level={tier.privacyLevel} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Foundation label (desktop) */}
-      <div className="hidden md:block text-center mt-4 text-sm uppercase tracking-[0.15em] font-bold text-muted">
+      <div className="mt-4 text-sm uppercase tracking-[0.15em] font-bold text-muted">
         Foundation: one agent per person · privacy by default
-      </div>
-
-      {/* Mobile: simple vertical list — Personal first */}
-      <div className="md:hidden space-y-3">
-        {TIERS.map((tier) => {
-          const isDark = tier.textOnDark;
-          return (
-            <div
-              key={tier.label}
-              className="rounded-xl border-l-4 shadow-sm overflow-hidden"
-              style={{
-                borderColor: tier.color,
-                backgroundColor: isDark ? tier.color : tier.bg,
-              }}
-            >
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-1">
-                  <span className={`text-base font-extrabold ${isDark ? 'text-white' : 'text-ink'}`}>
-                    {tier.label}
-                  </span>
-                  <PrivacyMeter level={tier.privacyLevel} />
-                </div>
-                <div className={`text-xs mb-2 ${isDark ? 'text-on-dark' : 'text-muted'}`}>
-                  {tier.sub}
-                </div>
-                <div className={`text-sm font-bold mb-1 ${isDark ? 'text-white' : 'text-ink'}`}>
-                  {tier.detail}
-                </div>
-                <div className="flex items-center gap-1.5 mb-1">
-                  <span aria-hidden="true">🔒</span>
-                  <span className={`text-xs font-semibold ${isDark ? 'text-on-dark' : 'text-body'}`}>
-                    {tier.privacy}
-                  </span>
-                </div>
-                <div className={`text-xs italic ${isDark ? 'text-on-dark-muted' : 'text-muted'}`}>
-                  {tier.status}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-        <div className="text-center text-xs uppercase tracking-[0.15em] font-bold text-muted pt-1">
-          Foundation: one agent per person · privacy by default
-        </div>
       </div>
     </figure>
   );

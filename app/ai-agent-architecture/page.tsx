@@ -95,17 +95,17 @@ export default function AiAgentArchitecturePage() {
           in a university setting and which remain untested.
         </p>
         <p className="text-sm text-body mb-10">
-          Last updated: August 30, 2026 &middot; This page evolves as the architecture evolves.
+          Last updated: September 2, 2026 &middot; This page evolves as the architecture evolves.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-ink">65+ enabled jobs</div>
+            <div className="text-2xl font-semibold text-ink">80 enabled jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-ink">793 nodes · 898 pages</div>
+            <div className="text-2xl font-semibold text-ink">803 nodes · 898 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -170,9 +170,9 @@ export default function AiAgentArchitecturePage() {
             whether the accumulated information is useful later.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 69 enabled automated
+            This page documents how I built that knowledge layer for myself: 80 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. A 793-node knowledge graph, 898 wiki pages, a
+            models, with the primary inference path hosted on-prem. An 803-node knowledge graph, 898 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
             It also provides a starting point for considering whether parts of the
             pattern could be used beyond one person.
@@ -269,7 +269,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            69 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
+            80 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -292,11 +292,8 @@ export default function AiAgentArchitecturePage() {
             Evening wrap triages emails and drafts replies. Granola meeting debrief extracts
             commitments, sentiment, and undercurrents from today&rsquo;s transcripts. Daily
             reflection synthesizes everything into a narrative debrief. Context promotion moves
-            the day&rsquo;s signals into long-term memory.
-          </p>
-          <p>
-            <strong className="text-ink">Night consolidation (3:00 AM).</strong> A dreaming
-            cron consolidates short-term memories into long-term, the way sleep does for humans.
+            the day&rsquo;s signals into long-term memory — the closest thing to a dreaming
+            phase the system has, and it runs at 7:35 PM, not 3 AM.
           </p>
           <p>
             <strong className="text-ink">Weekly synthesis (Sunday 6 PM).</strong> Reads 7
@@ -329,7 +326,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-blue font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">793 nodes · 837 edges</div>
+              <div className="text-2xl font-bold text-ink mb-2">803 nodes · 844 edges</div>
               <p className="text-sm text-body leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -400,17 +397,19 @@ export default function AiAgentArchitecturePage() {
             local too.
           </p>
           <p>
-            As of August 30, 2026, <strong>all 69 enabled jobs run through{' '}
+            As of September 2, 2026, <strong>all 80 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
               TritonAI
-            </a></strong>, UC San Diego&rsquo;s institutional AI gateway. Sixty-four of the 69
-            enabled jobs run on open-weight models hosted on-prem: 22 on gpt-oss-120b, 18 on
-            Mistral Small, 16 on Gemma 4 26B, 6 on Mistral Large, and 1 on DeepSeek V4 Flash Max.
-            Five jobs that need deeper reasoning use Claude Sonnet through TritonAI&rsquo;s
-            hosted route.
+            </a></strong>, UC San Diego&rsquo;s institutional AI gateway. The fleet runs on a
+            two-tier design: 49 inference jobs on open-weight models hosted on-prem — 47 on
+            GLM 5.3 for reasoning, tools, and long-horizon synthesis, and 2 on Gemma 4 31B for
+            lightweight scan-and-check jobs. The other 31 jobs are deterministic scripts that
+            never call a model at all. Four fallback models (DeepSeek V4 Flash Max, GPT-OSS
+            120B, Gemma 4 26B, Mistral Small) stand ready behind the primary, and a weekly
+            key-access monitor watches that every rung stays reachable.
           </p>
         </div>
 
@@ -428,55 +427,53 @@ export default function AiAgentArchitecturePage() {
             <tbody className="divide-y divide-line">
               <tr>
                 <td className="px-4 py-3 font-semibold text-ink">Primary reasoning &amp; agentic work</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.2</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.2 (open weight)</td>
-                <td className="px-4 py-3 text-body">Main chat, tools, interactive sessions, and router decisions</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Scheduled batch work</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">gpt-oss-120b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · OpenAI GPT-OSS 120B (open weight)</td>
-                <td className="px-4 py-3 text-body">Briefings, monitors, ingestion, and recurring synthesis jobs</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">22</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.3</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.3 (open weight)</td>
+                <td className="px-4 py-3 text-body">Main chat, tools, interactive sessions, and nearly all scheduled agent work</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive + 47</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-ink">Lightweight scheduled work</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">mistral-small-3.2</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
-                <td className="px-4 py-3 text-body">Fast monitors, reminders, and simple recurring checks</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">18</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-31b</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 31B (open weight)</td>
+                <td className="px-4 py-3 text-body">Fast scan-and-check jobs where reasoning overhead is wasted: feed watches, date reminders</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">2</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Vision &amp; multimodal</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">gemma-4-26b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 26B (open weight, multimodal)</td>
-                <td className="px-4 py-3 text-body">Logbook image analysis, multimodal tasks, and scheduled vision work</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">16</td>
+                <td className="px-4 py-3 font-semibold text-ink">No inference needed</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">—</td>
+                <td className="px-4 py-3 text-body">Local scripts (deterministic)</td>
+                <td className="px-4 py-3 text-body">Syncs, refreshes, health checks, and other jobs that run without a model call</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">31</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Heavier scheduled reasoning</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">mistral-large-3</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Large 3 (open weight)</td>
-                <td className="px-4 py-3 text-body">Jobs that need deeper reasoning than the lightweight tier but not full agentic capability</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">6</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Deep reasoning (proprietary)</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">claude-sonnet-4</td>
-                <td className="px-4 py-3 text-body">TritonAI hosted · Anthropic Claude Sonnet 4 (proprietary)</td>
-                <td className="px-4 py-3 text-body">Meeting debriefs, email triage, and identity drift review where reasoning quality justifies the trade-off</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">5</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-semibold text-ink">Fast batch work</td>
+                <td className="px-4 py-3 font-semibold text-ink" rowSpan={4}>Fallback chain</td>
                 <td className="px-4 py-3 font-mono text-xs text-body">deepseek-v4-flash-max</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · DeepSeek V4 Flash Max (open weight)</td>
-                <td className="px-4 py-3 text-body">Overnight code maintenance where speed matters more than deep reasoning</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">1</td>
+                <td className="px-4 py-3 text-body" rowSpan={4}>Automatic if the primary is unreachable &mdash; tried in order</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-xs text-body">gpt-oss-120b</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · OpenAI GPT-OSS 120B (open weight)</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-xs text-body">gemma-4-26b</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 26B (open weight)</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-xs text-body">mistral-small-3.2</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
               </tr>
             </tbody>
           </table>
+          <div className="px-4 py-3 text-xs text-muted border-t border-line">
+            Counts current as of September 2, 2026. Fallbacks are verified weekly by the
+            tritonai-key-access-monitor job.
+          </div>
         </div>
 
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
@@ -924,6 +921,27 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              September 2, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Diagrams redesigned; model fleet corrected to two-tier; stats re-verified against live system</div>
+            <p className="text-sm text-body leading-6">
+              All four diagrams rebuilt with distinct visual grammars — pipeline rail, retrieval
+              cross-section, daily-rhythm waterfall, and scaling bands — and every number on the
+              page re-verified against the live system: 80 enabled jobs (49 inference + 31
+              deterministic scripts), 803 graph nodes and 844 edges, 898 wiki pages. The model
+              fleet was corrected to its real shape: 47 jobs on GLM 5.3, 2 lightweight scan jobs
+              moved to Gemma 4 31B, 31 script jobs with no model call. The old multi-model
+              allocation table (GPT-OSS, Mistral Small/Large, Gemma 4 26B, Claude Sonnet) is
+              retired; those tiers described a fleet layout that no longer exists after the
+              GLM 5.2&ndash;&gt;5.3 swap flattened every job to the primary. Also removed the
+              fictional 3 AM &ldquo;dreaming cron&rdquo; — nightly memory consolidation actually
+              runs at 7:35 PM, after the evening synthesis pass. A split-brain digest publisher
+              job (midnight fires targeting a stale site clone) was found and retired.
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
