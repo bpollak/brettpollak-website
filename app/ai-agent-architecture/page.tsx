@@ -478,7 +478,7 @@ export default function AiAgentArchitecturePage() {
 
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            <strong className="text-ink">Why GLM 5.2 is the default:</strong>{' '}
+            <strong className="text-ink">Why GLM 5.3 is the default:</strong>{' '}
             its tool use, reasoning controls, and long-horizon behavior let one model cover work
             that previously needed several capability tiers. The current TritonAI virtual key
             advertises a 320K context envelope and 32K maximum output, so the local configuration
@@ -486,34 +486,33 @@ export default function AiAgentArchitecturePage() {
             Ambiguous router decisions increase reasoning effort from medium to high on the same
             GLM route instead of escalating to a proprietary model.{' '}
             <a
-              href="https://z.ai/blog/glm-5.2"
+              href="https://z.ai/blog/glm-5.3"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
-              Z.ai describes GLM 5.2
+              Z.ai describes GLM 5.3
             </a>{' '}
             as an open model designed for long-horizon agentic work.
           </p>
           <p>
-            <strong className="text-ink">Why multiple open-weight models:</strong> the fleet
-            spreads across four open-weight models hosted on-prem, each matched to the reasoning
-            depth the job needs. GPT-OSS 120B handles the largest share of scheduled work; Mistral
-            Small covers fast lightweight checks; Gemma 4 handles vision; and Mistral Large covers
-            the mid-tier. Five jobs that need deeper reasoning use Claude Sonnet through
-            TritonAI&rsquo;s hosted route. DeepSeek V4 Flash Max handles one overnight code
-            maintenance job where speed is the priority.
+            <strong className="text-ink">Why one primary model:</strong> when the fleet was
+            spread across six models, a hub-side model swap or a key change could break a
+            quarter of the schedule at once, and the multi-tier layout silently rotted —
+            jobs drifted onto models they were never assigned to. Consolidating on one
+            well-matched open-weight default removes that failure surface: one model to
+            pin, one swap to run, one monitoring lane. A small second tier (Gemma 4 31B)
+            covers the two jobs where a reasoning model is wasted overhead, and four
+            fallback models stand ready behind the primary.
           </p>
           <p>
             <strong className="text-ink">Strict fallback is a privacy boundary:</strong>{' '}
             the main-agent fallback list is empty. If GLM or the gateway fails, Hermes surfaces
-            the failure instead of silently sending private context to a cloud provider. Five
-            scheduled jobs explicitly use Claude Sonnet for tasks where reasoning quality
-            justifies the trade-off, but this is a deliberate per-job choice, not a fallback.
-            Memory embeddings stay local through Ollama and <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">nomic-embed-text</code>.
+            the failure instead of silently sending private context to a cloud provider. Memory
+            embeddings stay local through Ollama and <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">nomic-embed-text</code>.
           </p>
           <p>
             <strong className="text-ink">How routing stays healthy:</strong> the autonomous
             router runs every two hours, reads live SQLite-backed cron state through the Hermes
-            CLI, and uses GLM 5.2 itself to evaluate changes. It may target only approved on-prem
+            CLI, and uses GLM 5.3 itself to evaluate changes. It may target only approved on-prem
             aliases and is biased toward no-op decisions. A dedicated{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">tritonai-key-access-monitor</code>{' '}
             job probes TritonAI&rsquo;s{' '}
