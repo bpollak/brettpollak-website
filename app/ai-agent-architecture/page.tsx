@@ -407,9 +407,13 @@ export default function AiAgentArchitecturePage() {
             two-tier design: 49 inference jobs on open-weight models hosted on-prem — 47 on
             GLM 5.3 for reasoning, tools, and long-horizon synthesis, and 2 on Gemma 4 31B for
             lightweight scan-and-check jobs. The other 31 jobs are deterministic scripts that
-            never call a model at all. Four fallback models (DeepSeek V4 Flash Max, GPT-OSS
-            120B, Gemma 4 26B, Mistral Small) stand ready behind the primary, and a weekly
-            key-access monitor watches that every rung stays reachable.
+            never call a model at all. Three of the 49 inference jobs pair with monitor
+            mode: a deterministic script checks the source first, and the model call is
+            skipped entirely when nothing changed. Three fallback models (DeepSeek V4
+            Flash, Gemma 4 26B, Gemma 4 31B) stand ready behind the primary — a chain
+            rebuilt from verified completions, since the gateway&rsquo;s model listing
+            advertises models that reject real requests — and a key-access monitor probes
+            every rung with live completion calls twice a week.
           </p>
         </div>
 
@@ -447,32 +451,28 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 text-right font-semibold text-ink">31</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink" rowSpan={4}>Fallback chain</td>
-                <td className="px-4 py-3 font-mono text-xs text-body">deepseek-v4-flash-max</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · DeepSeek V4 Flash Max (open weight)</td>
-                <td className="px-4 py-3 text-body" rowSpan={4}>Automatic if the primary is unreachable &mdash; tried in order</td>
+                <td className="px-4 py-3 font-semibold text-ink" rowSpan={3}>Fallback chain</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">api-deepseek-v4-flash</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · DeepSeek V4 Flash (open weight)</td>
+                <td className="px-4 py-3 text-body" rowSpan={3}>Automatic if the primary is unreachable &mdash; tried in order, each verified by live completion probe</td>
                 <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-mono text-xs text-body">gpt-oss-120b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · OpenAI GPT-OSS 120B (open weight)</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-mono text-xs text-body">gemma-4-26b</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-26b</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 26B (open weight)</td>
                 <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-mono text-xs text-body">mistral-small-3.2</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Mistral Small 3.2 (open weight)</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-31b</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 31B (open weight)</td>
                 <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
               </tr>
             </tbody>
           </table>
           <div className="px-4 py-3 text-xs text-muted border-t border-line">
-            Counts current as of September 2, 2026. Fallbacks are verified weekly by the
-            tritonai-key-access-monitor job.
+            Counts current as of September 2, 2026. Every fallback rung is verified with a
+            real completion call — the gateway&rsquo;s model listing is not trusted, after it
+            was found advertising models that reject actual requests.
           </div>
         </div>
 
@@ -920,6 +920,26 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              September 2, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Runtime upgraded to Hermes v0.21.0; monitor mode and run continuity added; fallback chain rebuilt from verified completions</div>
+            <p className="text-sm text-body leading-6">
+              The agent runtime moved from Hermes v0.20.6 to v0.21.0. Three monitoring jobs
+              now run in monitor mode: a deterministic script checks the source first, and
+              the model call is skipped entirely when nothing changed — the release-watch,
+              blog-watch, and key-access jobs only &ldquo;think&rdquo; when there is
+              something to think about. Seven reasoning jobs gained cross-run continuity,
+              so each run starts from where the last one ended instead of from zero.
+              Rebuilding the fallback chain surfaced a sharper lesson: the gateway&rsquo;s
+              model listing advertises models that reject real requests, so every fallback
+              rung is now verified with a live completion call. Three of the four listed
+              fallbacks were dead and were replaced with verified models (DeepSeek V4
+              Flash, Gemma 4 26B, Gemma 4 31B).
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
