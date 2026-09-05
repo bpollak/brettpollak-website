@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
-import { caseStudies } from '@/lib/caseStudies';
 import HomeHeroSystemMap from '@/components/home/HomeHeroSystemMap';
 
 export const metadata: Metadata = {
@@ -43,6 +42,37 @@ export const metadata: Metadata = {
     images: ['/brett-pollak-og-card.png'],
   },
 };
+
+// Feature current TritonAI work; historical case studies remain in the archive.
+const featuredWork = [
+  {
+    id: 'tritongpt',
+    category: 'Campus assistants',
+    tone: 'blue',
+    title: 'TritonGPT',
+    summary: 'AI assistants for students, faculty, and staff to work with documents, ask campus questions, and get help with everyday tasks.',
+    href: '/tritongpt',
+    linkLabel: 'Explore the TritonAI program',
+  },
+  {
+    id: 'tritonai-api',
+    category: 'Developer access',
+    tone: 'gold',
+    title: 'TritonAI API Gateway',
+    summary: 'One API connects campus applications and workflows to approved UC-hosted and cloud models, with shared access and usage controls.',
+    href: 'https://tritonai.ucsd.edu/developer-apis/index.html',
+    linkLabel: 'Explore the API program',
+  },
+  {
+    id: 'tritonai-harness',
+    category: 'Agent workspace',
+    tone: 'green',
+    title: 'TritonAI Harness',
+    summary: 'A desktop agent workspace for working with files, code, and connected campus services under human supervision. Currently in pilot.',
+    href: 'https://tritonai.ucsd.edu/developer-apis/harness.html',
+    linkLabel: 'Explore TritonAI Harness',
+  },
+];
 
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
@@ -227,7 +257,7 @@ export default function Home() {
                 technology services, and AI.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <a href="#selected-work" className="button-primary">Selected work</a>
+                <a href="#selected-work" className="button-primary">Explore TritonAI</a>
                 <Link href="/speaking" className="button-secondary">Speaking</Link>
               </div>
               <p className="mt-6 max-w-xl text-base leading-7 text-body">
@@ -248,14 +278,15 @@ export default function Home() {
 
       <section id="selected-work" className="border-b border-line bg-paper-strong">
         <div className="mx-auto max-w-7xl px-6 py-12">
-          <p className="rule-label mb-3">Selected work</p>
-          <h2 className="text-3xl font-medium md:text-4xl">Three examples from campus.</h2>
+          <p className="rule-label mb-3">Featured work</p>
+          <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-body">My work in AI centers on helping build and support TritonAI with colleagues across campus.</p>
           <div className="mt-7 grid gap-5 md:grid-cols-3">
-            {caseStudies.map(study => <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
+            {featuredWork.map(study => <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
               <p className="rule-label mb-3">{study.category}</p>
               <h3 className="text-2xl leading-7 font-medium">{study.title}</h3>
               <p className="mt-4 text-base leading-7 text-body">{study.summary}</p>
-              <Link href={`/work#${study.id}`} className="mt-auto inline-block pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">Read the case study<span className="sr-only">: {study.title}</span></Link>
+              <Link href={study.href} className="mt-auto inline-block pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">{study.linkLabel}<span className="sr-only">: {study.title}</span></Link>
             </article>)}
           </div>
         </div>
