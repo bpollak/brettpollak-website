@@ -82,6 +82,12 @@ function groupByYear(items: MediaItem[]) {
   }, {} as Record<number, MediaItem[]>);
 }
 
+const featuredMedia = [
+  { title: 'Shifting to Responsive Web Design', note: 'My account of bringing responsive templates to campus websites and applications.' },
+  { title: 'Ushering in a New Era of AI-Driven Data Insights at UC San Diego', note: 'An article I coauthored about connecting institutional information with AI assistants.' },
+  { title: 'TritonGPT is Here and Ready to Help', note: 'The university’s account of the platform, campus rollout, and partnerships.' },
+].map(feature => ({ ...feature, item: mediaItems.find(item => item.title === feature.title) }));
+
 export default function MediaContent() {
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all');
 
@@ -113,6 +119,16 @@ export default function MediaContent() {
 
   return (
     <div>
+      <section aria-labelledby="featured-media" className="mb-12">
+        <h2 id="featured-media" className="mb-6 text-3xl font-medium">A place to start</h2>
+        <div className="grid gap-5 md:grid-cols-3">
+          {featuredMedia.map(({ item, note }) => item && <article key={item.url} className="editorial-panel p-6">
+            <p className="mb-3 text-sm text-muted">{item.publication} · {formatDate(item.date)}</p>
+            <h3 className="text-2xl leading-7 font-medium"><a href={item.url} target="_blank" rel="noopener noreferrer" className="text-signal-blue underline underline-offset-4">{item.title}</a></h3>
+            <p className="mt-4 text-sm leading-7 text-body">{note}</p>
+          </article>)}
+        </div>
+      </section>
       <div className="mb-10 border border-line bg-white/80 p-4 shadow-[8px_8px_0_rgba(54,108,90,0.08)]">
         <div className="mb-4 grid gap-2 border-b border-line pb-4 sm:grid-cols-[1fr_auto] sm:items-end">
           <div>
@@ -128,6 +144,7 @@ export default function MediaContent() {
             <button
               key={value}
               onClick={() => setActiveFilter(value)}
+              aria-pressed={activeFilter === value}
               className={`rounded-sm border px-3 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
                 activeFilter === value
                   ? 'border-[#17201b] bg-[#17201b] text-white'
@@ -142,7 +159,7 @@ export default function MediaContent() {
       </div>
 
       <div className="mb-8 grid gap-3 sm:grid-cols-[1fr_auto] sm:items-end">
-        <p className="text-body">
+        <p className="text-body" role="status" aria-live="polite">
           Showing <span className="font-semibold text-ink">{filteredItems.length}</span> item{filteredItems.length !== 1 ? 's' : ''}
           {activeFilter !== 'all' ? ` in ${categoryLabels[activeFilter].toLowerCase()}` : ''}.
         </p>
@@ -156,7 +173,7 @@ export default function MediaContent() {
       ) : (
         <div className="space-y-14">
           {years.map((year) => (
-            <section key={year} className="grid gap-5 lg:grid-cols-[9rem_1fr]">
+            <section key={year} className="grid min-w-0 grid-cols-1 gap-5 lg:grid-cols-[9rem_minmax(0,1fr)]">
               <div>
                 <h2 className="font-mono text-3xl text-ink">{year}</h2>
                 <p className="mt-2 text-sm text-muted">
@@ -164,7 +181,7 @@ export default function MediaContent() {
                 </p>
               </div>
 
-              <div className="border-y border-line">
+              <div className="min-w-0 border-y border-line">
                 {itemsByYear[Number(year)].map((item) => {
                   const icon = iconForUrl(item.url);
                   return (
@@ -192,17 +209,18 @@ export default function MediaContent() {
                         </span>
                       )}
                     </span>
-                    <span className="min-w-0 flex-1">
+                    <span className="min-w-0 flex-1 break-words">
                       <span className="block text-lg font-medium leading-7 text-ink transition-colors group-hover:text-[#1f5a8a]">
                         {item.title}
                       </span>
+                      <span className="mt-2 block text-xs font-semibold uppercase text-muted sm:hidden">{item.category}</span>
                       <span className="mt-1 block font-mono text-xs uppercase tracking-[0.08em] text-muted">
                         <span className="whitespace-nowrap">{formatDate(item.date)}</span>
                         <span className="mx-2 text-[#d9dfd3]">/</span>
                         <span className="text-body normal-case tracking-normal font-sans text-sm font-medium">{item.publication}</span>
                       </span>
                     </span>
-                    <span className="flex shrink-0 flex-col items-end gap-2">
+                    <span className="hidden shrink-0 flex-col items-end gap-2 sm:flex">
                       <span className={`rounded-sm border px-2 py-1 text-xs font-semibold uppercase ${categoryStyles[item.category]}`}>
                         {item.category}
                       </span>

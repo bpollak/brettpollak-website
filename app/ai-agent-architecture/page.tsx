@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import HashDetails from '@/components/HashDetails';
 import type { Metadata } from 'next';
 import { SITE_URL, pagePublishDates, staticPageDates } from '@/lib/seoDates';
 import HeroPipelineDiagram from '@/components/ai-architecture/HeroPipelineDiagram';
@@ -95,9 +97,15 @@ export default function AiAgentArchitecturePage() {
           in a university setting and which remain untested.
         </p>
         <p className="text-sm text-body mb-10">
-          Last updated: September 2, 2026 &middot; This page evolves as the architecture evolves.
+          Architecture snapshot: September 2, 2026 &middot; Reading layout updated September 5, 2026.
         </p>
 
+        <nav aria-label="Architecture sections" className="reading-links mb-8">
+          <a href="#context">Why context matters</a><a href="#layers">Context layers</a>
+          <a href="#daily-rhythm">Daily rhythm</a><a href="#knowledge">Knowledge stores</a>
+          <a href="#models">Model routing</a><a href="#outcomes">Outcomes</a>
+          <a href="#scaling">Wider use</a><a href="#development-history">Development history</a>
+        </nav>
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
@@ -126,7 +134,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 2 — THE PROBLEM
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="context" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           The Problem
         </div>
@@ -201,7 +209,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 3 — THREE LAYERS
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="layers" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           The Architecture
         </div>
@@ -260,7 +268,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 4 — DAILY RHYTHM
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="daily-rhythm" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           The Pipeline
         </div>
@@ -311,7 +319,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 5 — GRAPH + WIKI
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="knowledge" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           The Durable Layer
         </div>
@@ -382,7 +390,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 5.5 — MODEL ALLOCATION
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="models" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           The Inference Layer
         </div>
@@ -529,7 +537,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 6 — OUTCOMES & VALUE
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="outcomes" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           Current uses
         </div>
@@ -588,9 +596,9 @@ export default function AiAgentArchitecturePage() {
               <div className="text-ink font-bold text-lg mb-2">Auto-published public artifacts</div>
               <p className="text-sm text-body leading-6">
                 The weekly UCSD AI newsletter auto-generates and publishes to{' '}
-                <a href="/ucsd-ai-news" className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600">/ucsd-ai-news</a>.
+                <Link href="/ucsd-ai-news" className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600">/ucsd-ai-news</Link>.
                 The personal AI digest auto-publishes daily to{' '}
-                <a href="/ai-digest" className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600">/ai-digest</a>.
+                <Link href="/ai-digest" className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600">/ai-digest</Link>.
                 The knowledge framework documents itself. You&rsquo;re reading that output right now.
               </p>
             </div>
@@ -754,7 +762,7 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 7 — SCALING VISION
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="scaling" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           The Vision
         </div>
@@ -897,13 +905,14 @@ export default function AiAgentArchitecturePage() {
       {/* ======================================================================
           SECTION 7 — EVOLUTION / CHANGELOG
           ====================================================================== */}
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+      <section id="evolution" className="max-w-6xl mx-auto px-6 py-10 border-t border-line">
         <div className="text-xs uppercase tracking-[0.18em] text-muted font-semibold mb-3">
           Evolution
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-ink tracking-tight mb-6">
           This architecture isn&rsquo;t done
         </h2>
+        <HashDetails id="development-history" label="Read the development history">
         <div className="text-body text-[1.06rem] leading-8 space-y-5 mb-8">
           <p>
             It&rsquo;s a living system, updated continuously. Some of what&rsquo;s on this page
@@ -1435,6 +1444,8 @@ export default function AiAgentArchitecturePage() {
             </p>
           </li>
         </ol>
+
+        </HashDetails>
       </section>
 
       {/* ======================================================================

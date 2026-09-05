@@ -1,0 +1,41 @@
+export const caseStudies = [
+  {
+    id: 'responsive-web', category: 'Campus services', period: '2012', tone: 'blue',
+    title: 'Campus websites that work across devices',
+    summary: 'Shared templates brought responsive design to the campus website, departmental sites, and web applications.',
+    problem: 'Campus information needed to work on phones and tablets as well as desktop computers.',
+    role: 'I directed the Campus Web Office and wrote about our rollout in 2012.',
+    work: 'Our team built responsive CMS templates and adapted shared application layouts so campus units could use the same approach.',
+    result: 'By October 2012, the approach was in use on more than 30 academic and administrative websites, following the campus homepage launch that January.',
+    lesson: 'As I noted in that account, building templates for responsive design from the start was easier than retrofitting them later.',
+    sources: [{ title: 'Shifting to Responsive Web Design', publisher: 'The EvoLLLution · October 8, 2012', url: 'https://evolllution.com/opinions/shifting-to-responsive-web-design' }],
+  },
+  {
+    id: 'student-activity-hub', category: 'Data & analytics', period: '2019–2022', tone: 'gold',
+    title: 'A shared foundation for student analytics',
+    summary: 'The Student Activity Hub brought student data together for reporting, with a later collaboration supporting advising at UC Merced.',
+    problem: 'Understanding enrollment, progression, and student needs required data from multiple systems.',
+    role: 'I served in project governance and as the escalation contact for the Student Activity Hub, as documented in the project archive.',
+    work: 'The team created a central repository of student data for analysis in Cognos and Tableau. UC Merced and UC San Diego later collaborated on advising support.',
+    result: 'The hub launched on January 21, 2019, according to the project archive. The two-campus collaboration received the Silver UC Collaboration Award in 2022.',
+    lesson: 'The design shows how shared student data can support a specific task: identifying students who may need advising.',
+    sources: [
+      { title: 'Student Activity Hub project archive', publisher: 'UC San Diego', url: 'https://esr.ucsd.edu/projects/activity-hubs/student/index.html' },
+      { title: '2022 UC Tech Awards winners: Celebrating collaboration, innovation and more', publisher: 'UC Tech News · August 2022', url: 'https://uctechnews.ucop.edu/2022-uc-tech-awards-winners-celebrating-collaboration-innovation-and-more%EF%BF%BC/' },
+    ],
+  },
+  {
+    id: 'tritongpt', category: 'Institutional AI', period: '2023–2025', tone: 'green',
+    title: 'From an AI pilot to a campus service',
+    summary: 'TritonGPT grew into a campus service with assistants grounded in university information and hosting at the San Diego Supercomputer Center.',
+    problem: 'Staff needed help with administrative work and questions about campus policies and processes.',
+    role: 'I work on TritonGPT within IT Services, alongside Operational Strategic Initiatives and campus partners. I have coauthored articles and spoken publicly about the work.',
+    work: 'The teams developed specialized assistants, connected university content, and expanded access through a pilot and phased rollout.',
+    result: 'The university reports employee access in spring 2024 and student access in June 2025. Its November 2025 account also documents adoption by other institutions.',
+    lesson: 'In the university account, I emphasized the value of curated campus material in helping TritonGPT give useful responses to campus questions.',
+    sources: [
+      { title: 'TritonGPT is Here and Ready to Help', publisher: 'UC San Diego Magazine · November 21, 2025', url: 'https://today.ucsd.edu/story/tritongpt-is-here-and-ready-to-help' },
+      { title: 'Ushering in a New Era of AI-Driven Data Insights at UC San Diego', publisher: 'EDUCAUSE Review · February 20, 2025', url: 'https://er.educause.edu/articles/2025/2/ushering-in-a-new-era-of-ai-driven-data-insights-at-uc-san-diego' },
+    ],
+  },
+];

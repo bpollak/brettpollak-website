@@ -24,6 +24,9 @@ For a longer machine-readable briefing, use:
 
 ## Key Pages
 
+- Selected work: https://brettcpollak.com/work
+  - Source-backed examples of campus web services, student analytics, and institutional AI.
+
 - TritonAI: https://brettcpollak.com/tritongpt
   - Overview of UC San Diego's shared AI infrastructure and practice ecosystem, including TritonGPT, developer APIs, embedded assistants, governance, and agent-ready workflows.
 - AI Agent Architecture: https://brettcpollak.com/ai-agent-architecture

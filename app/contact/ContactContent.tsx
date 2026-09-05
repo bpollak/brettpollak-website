@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ContactForm from '@/components/ContactForm';
 
 export default function ContactContent() {
@@ -24,7 +25,7 @@ export default function ContactContent() {
             {/* Contact Form */}
             <div className="flex">
               <div className="flex-1">
-                <ContactForm />
+                <Suspense fallback={<p>Loading contact form…</p>}><ContactForm /></Suspense>
               </div>
             </div>
 

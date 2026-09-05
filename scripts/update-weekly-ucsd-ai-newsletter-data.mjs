@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { preserveEditions, readGeneratedData } from './edition-archive.mjs';
 
 function getArg(name, fallback = null) {
   const prefix = `--${name}=`;
@@ -138,7 +139,9 @@ for (const filename of files) {
 // Sort newest first
 editions.sort((a, b) => b.isoDate.localeCompare(a.isoDate));
 
-const latest = editions[0] ?? null;
+const archive = preserveEditions(readGeneratedData(outputPath), editions, 'editions');
+const availableEditions = [...editions, ...archive].sort((a, b) => b.isoDate.localeCompare(a.isoDate));
+const latest = availableEditions[0] ?? null;
 const latestItemCount = latest
   ? latest.toolUpdatesCount + latest.tritonAiNewsCount + latest.upcomingTrainingsCount
   : 0;
@@ -152,6 +155,7 @@ const latestWeekEnd = latestDate ? new Date(latestDate) : null;
 if (latestWeekEnd) latestWeekEnd.setDate(latestWeekEnd.getDate() + 6);
 
 const data = {
+  archive,
   generatedAt: new Date().toISOString(),
   weekLabel: latest && latestDate && latestWeekEnd
     ? getWeekLabel(latestDate, latestWeekEnd)
@@ -188,6 +192,7 @@ export type UcsdAiNewsletterData = {
   publishedThrough: string;
   editionCount: number;
   itemCount: number;
+  archive?: UcsdAiNewsletterEdition[];
   editions: UcsdAiNewsletterEdition[];
 };
 

@@ -138,7 +138,8 @@ html {
 
 .home-portrait-panel {
   position: relative;
-  min-height: 440px;
+  min-height: 300px;
+  height: clamp(300px, 34vw, 440px);
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--line), var(--signal-blue) 22%);
   background: color-mix(in srgb, var(--paper-strong) 82%, var(--signal-blue) 18%);
@@ -526,3 +527,49 @@ html {
     transform: none !important;
   }
 }
+
+/* Shared controls and anchor destinations for the public reading experience. */
+:where(a, button, summary, input, select, textarea):focus-visible {
+  outline: 2px solid var(--signal-blue);
+  outline-offset: 4px;
+}
+:where(section[id], article[id], details[id], h2[id], h3[id]) {
+  scroll-margin-top: 7rem;
+}
+.button-primary, .button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.button-primary { background: var(--ink); color: white; }
+.button-primary:hover { background: var(--signal-blue); }
+.button-secondary { color: var(--ink); border-color: #9eb7aa; }
+.button-secondary:hover { background: var(--paper-strong); }
+.reading-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.reading-links a {
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  color: var(--signal-blue);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.reading-links a:hover { border-color: var(--signal-blue); }
+.reading-copy { color: var(--body-text); overflow-wrap: anywhere; }
+.reading-copy p, .reading-copy li { font-size: 1rem; line-height: 1.8; }
+.reading-copy p { margin-block: 1rem; }
+.reading-copy ul, .reading-copy ol { margin-block: 1rem; padding-left: 1.5rem; }
+.reading-copy ul { list-style: disc; }
+.reading-copy ol { list-style: decimal; }
+.reading-copy li { margin-block: 0.75rem; }
+.reading-copy h2 { margin: 2rem 0 1rem; font-size: 1.75rem; line-height: 1.25; }
+.reading-copy h3 { margin: 1.75rem 0 0.75rem; font-size: 1.2rem; }
+.reading-copy a { color: var(--signal-blue); text-decoration: underline; text-underline-offset: 3px; }
+.reading-copy hr { margin-block: 2rem; border-color: var(--line); }
+.reading-copy strong { color: var(--ink); font-weight: 600; }

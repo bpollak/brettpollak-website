@@ -36,17 +36,27 @@ function safeHref(escapedUrl: string): string | null {
 }
 
 /** Convert inline markdown to HTML: bold, italic, markdown links, and bare URLs */
-export function inlineFormat(text: string): string {
-  return escapeHtml(text)
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label: string, url: string) => {
-      const href = safeHref(url);
-      return href
-        ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`
-        : label;
-    })
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-    .replace(/(?<!href="|">)(https?:\/\/[^\s<)"]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+export function inlineFormat(text: string, allowLinks = true): string {
+  // Tokenize the input once: generated anchors must never be linkified again.
+  const tokens = /`([^`]+)`|\[([^\]]+)\]\(([^)\s]+)\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\n]+)\*|(?<!\w)_([^_\n]+)_(?!\w)|https?:\/\/[^\s<>]+/g;
+  let output = '';
+  let cursor = 0;
+  for (const match of text.matchAll(tokens)) {
+    output += escapeHtml(text.slice(cursor, match.index));
+    if (match[1]) output += `<code>${escapeHtml(match[1])}</code>`;
+    else if (match[2]) {
+      const href = safeHref(escapeHtml(match[3]));
+      output += href && allowLinks ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${inlineFormat(match[2], false)}</a>` : inlineFormat(match[2], false);
+    } else if (match[4] || match[5]) output += `<strong>${inlineFormat(match[4] || match[5], allowLinks)}</strong>`;
+    else if (match[6] || match[7]) output += `<em>${inlineFormat(match[6] || match[7], allowLinks)}</em>`;
+    else {
+      const url = match[0].replace(/[.,;!?)]+$/, '');
+      const escaped = escapeHtml(url);
+      output += allowLinks ? `<a href="${escaped}" target="_blank" rel="noopener noreferrer">${escaped}</a>${escapeHtml(match[0].slice(url.length))}` : escapeHtml(match[0]);
+    }
+    cursor = match.index + match[0].length;
+  }
+  return output + escapeHtml(text.slice(cursor));
 }
 
 export function linkDigestHeadlines(raw: string): string {
@@ -229,7 +239,7 @@ export function renderMarkdown(raw: string): string {
       continue;
     }
 
-    if (/^---+$/.test(t) || /^━+$/.test(t)) {
+    if (/^(?:-{3,}|(?:\*\s*){3,}|(?:_\s*){3,}|━+)$/.test(t)) {
       if (inList) {
         out.push('</ul>');
         inList = false;
@@ -274,7 +284,7 @@ export function renderMarkdown(raw: string): string {
     //   📼       → videotape-emoji bullets used for recent recordings in the UCSD newsletter
     // For emoji bullets the emoji is preserved inside the <li> as a visual marker;
     // for plain bullets the marker is stripped as usual.
-    if (/^(?:[-•]|📅|📼) /.test(t)) {
+    if (/^(?:[-•*]|📅|📼) /.test(t)) {
       if (inOrderedList) {
         out.push('</ol>');
         inOrderedList = false;
@@ -283,7 +293,7 @@ export function renderMarkdown(raw: string): string {
         out.push('<ul>');
         inList = true;
       }
-      const itemText = /^[-•] /.test(t) ? t.replace(/^[-•] /, '') : t;
+      const itemText = /^[-•*] /.test(t) ? t.replace(/^[-•*] /, '') : t;
       out.push(`<li>${inlineFormat(itemText)}</li>`);
       continue;
     }
@@ -315,4 +325,14 @@ export function renderMarkdown(raw: string): string {
   if (inList) out.push('</ul>');
   if (inOrderedList) out.push('</ol>');
   return out.join('\n');
+}
+
+/** Only adapt email presentation; keep the newsletter's audience and facts intact. */
+export function newsletterForWeb(raw: string): string {
+  return raw.split('\n').map(line => {
+    if (/reply to this email/i.test(line)) {
+      return 'Have feedback on this newsletter? [Get in touch](https://brettcpollak.com/contact).';
+    }
+    return line;
+  }).filter(line => !/^\s*Source:\s*[^\s]+\.md\s*$/i.test(line)).join('\n');
 }

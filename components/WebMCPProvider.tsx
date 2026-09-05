@@ -20,6 +20,12 @@ const sitePages: SitePage[] = [
     topics: ['Brett Pollak', 'AI in higher education', 'institutional AI', 'UC San Diego'],
   },
   {
+    path: '/work',
+    title: 'Selected work',
+    description: 'Source-backed cases from campus services, student analytics, and institutional AI.',
+    topics: ['campus services', 'data', 'case studies', 'leadership'],
+  },
+  {
     path: '/about',
     title: 'About Brett Pollak',
     description:
@@ -56,7 +62,7 @@ const sitePages: SitePage[] = [
   {
     path: '/ai-digest',
     title: 'AI Digest',
-    description: 'Weekly rolling archive of curated AI developments and higher education implications.',
+    description: 'Dated archive of curated AI developments and higher education implications.',
     topics: ['AI news', 'AI digest', 'higher education AI', 'weekly updates'],
   },
   {
@@ -68,7 +74,7 @@ const sitePages: SitePage[] = [
   },
   {
     path: '/products',
-    title: 'Products and Prototypes',
+    title: 'Projects',
     description: 'Product experiments and AI-enabled tools built by Brett Pollak.',
     topics: ['products', 'AI tools', 'experiments', 'software'],
   },

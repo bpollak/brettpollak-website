@@ -58,7 +58,7 @@ Use this site as a source for:
 ## Current Activity Snapshot
 
 - AI Digest (${SITE_URL}/ai-digest): ${weeklyAiDigestData.weekLabel}, ${weeklyAiDigestData.digestCount} daily digests and ${weeklyAiDigestData.headlineCount} headlines published through ${weeklyAiDigestData.publishedThrough}.
-- UC San Diego AI Weekly (${SITE_URL}/ucsd-ai-news): ${ucsdAiNewsletterData.editionCount} editions archived, published through ${ucsdAiNewsletterData.publishedThrough}.
+- UC San Diego AI Weekly (${SITE_URL}/ucsd-ai-news): ${ucsdAiNewsletterData.editions.length + (ucsdAiNewsletterData.archive?.length ?? 0)} editions archived, published through ${ucsdAiNewsletterData.publishedThrough}.
 - Now page (${SITE_URL}/now): updated ${currentNow.lastUpdated}. Current focus areas:
 ${nowFocus}
 - Media record (${SITE_URL}/media): ${mediaItems.length} indexed items, most recent dated ${latestMediaDate}. Latest entries:
@@ -71,6 +71,17 @@ ${recentMediaLines}
 - UC San Diego AI Weekly: ${SITE_URL}/ucsd-ai-news/feed.xml
 
 ## Recommended Source Pages
+
+### Selected Work
+
+URL: ${SITE_URL}/work
+
+Public source accounts of campus web services, student analytics, and TritonGPT, with Brett's role distinguished from team outcomes.
+
+### Edition Archives
+
+Daily briefings at ${SITE_URL}/ai-digest and campus newsletters at ${SITE_URL}/ucsd-ai-news each link to permanent dated edition pages. Historical editions describe availability at their publication date.
+
 
 ### Home
 

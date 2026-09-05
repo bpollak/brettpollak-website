@@ -4,250 +4,93 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
-type NavLink = { href: string; label: string };
-type NavGroup = { heading: string; links: NavLink[] };
-
-// The six routes that carry the site's core narrative and its call to action.
-// Architecture is promoted to primary nav (it's a differentiator); Products
-// and other secondary content live behind the "Field Notes" dropdown.
-const PRIMARY_LINKS: NavLink[] = [
+const primaryLinks = [
   { href: '/about', label: 'About' },
+  { href: '/products', label: 'Projects' },
   { href: '/tritongpt', label: 'TritonAI' },
   { href: '/speaking', label: 'Speaking' },
-  { href: '/ai-agent-architecture', label: 'Memory Ecosystem' },
   { href: '/media', label: 'Media' },
   { href: '/contact', label: 'Contact' },
 ];
-
-// Grouped under a single "Field Notes" dropdown on desktop; the same groups
-// render as flat labelled subsections within the mobile menu.
-const WRITING_GROUPS: NavGroup[] = [
-  {
-    heading: 'Work',
-    links: [
-      { href: '/products', label: 'Products' },
-      { href: '/now', label: 'Now' },
-    ],
-  },
-  {
-    heading: 'Reading',
-    links: [
-      { href: '/ai-digest', label: 'AI Digest' },
-      { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
-      { href: '/podcasts', label: 'Podcasts' },
-    ],
-  },
-  {
-    heading: 'Elsewhere',
-    links: [
-      { href: '/linkedin', label: 'LinkedIn' },
-    ],
-  },
+const noteLinks = [
+  { href: '/now', label: 'Current focus' },
+  { href: '/ai-agent-architecture', label: 'AI architecture' },
+  { href: '/ai-digest', label: 'AI Digest' },
+  { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
+  { href: '/podcasts', label: 'Podcasts' },
+  { href: '/linkedin', label: 'LinkedIn' },
 ];
 
-const WRITING_LINKS: NavLink[] = WRITING_GROUPS.flatMap((group) => group.links);
-
 export default function Header() {
-  const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [writingMenuOpen, setWritingMenuOpen] = useState(false);
-  const writingMenuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname().replace(/\/$/, '') || '/';
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [notesOpen, setNotesOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const notesRef = useRef<HTMLDivElement>(null);
+  const mobileButton = useRef<HTMLButtonElement>(null);
+  const notesButton = useRef<HTMLButtonElement>(null);
+  const active = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  const close = () => { setMobileOpen(false); setNotesOpen(false); };
 
-  const isActive = (path: string) => pathname === path;
-  const isActiveInGroup = (links: NavLink[]) => links.some((l) => pathname === l.href);
-
-  // Close the Writing dropdown when clicking outside or pressing Escape
   useEffect(() => {
-    if (!writingMenuOpen) return;
-
-    function handleClick(e: MouseEvent) {
-      if (writingMenuRef.current && !writingMenuRef.current.contains(e.target as Node)) {
-        setWritingMenuOpen(false);
-      }
+    function keydown(event: KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      if (mobileOpen) { setMobileOpen(false); mobileButton.current?.focus(); }
+      if (notesOpen) { setNotesOpen(false); notesButton.current?.focus(); }
     }
-    function handleKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') setWritingMenuOpen(false);
+    function outside(event: PointerEvent) {
+      if (!headerRef.current?.contains(event.target as Node)) setMobileOpen(false);
+      if (!notesRef.current?.contains(event.target as Node)) setNotesOpen(false);
     }
-
-    document.addEventListener('mousedown', handleClick);
-    document.addEventListener('keydown', handleKey);
+    function breakpoint() { setMobileOpen(false); setNotesOpen(false); }
+    const desktop = matchMedia('(min-width: 1024px)');
+    document.addEventListener('keydown', keydown);
+    document.addEventListener('pointerdown', outside);
+    desktop.addEventListener('change', breakpoint);
     return () => {
-      document.removeEventListener('mousedown', handleClick);
-      document.removeEventListener('keydown', handleKey);
+      document.removeEventListener('keydown', keydown);
+      document.removeEventListener('pointerdown', outside);
+      desktop.removeEventListener('change', breakpoint);
     };
-  }, [writingMenuOpen]);
+  }, [mobileOpen, notesOpen]);
 
-  // Close the Writing menu when navigating (pathname change).
-  // This is a legitimate menu-close-on-route-change pattern; the React 19
-  // lint rule is too strict for this specific use case.
+  // Back/forward navigation should close a disclosure just as a link click does.
   // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => { setWritingMenuOpen(false); }, [pathname]);
+  useEffect(() => { setMobileOpen(false); setNotesOpen(false); }, [pathname]);
+
+  const linkClass = (href: string) => `rounded-sm px-3 py-3 font-medium transition-colors ${active(href) ? 'text-ink bg-wash-green' : 'text-body hover:bg-wash-green hover:text-ink'}`;
 
   return (
-    <header className="sticky top-0 z-50 bg-[#f7f9f5]/92 backdrop-blur-xl border-b border-line">
-      <div className="absolute inset-x-0 bottom-0 h-px bg-[#17201b]/10"></div>
-      <nav aria-label="Main" className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Skip to main content link for accessibility */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#17201b] focus:text-white focus:rounded-lg focus:shadow-lg"
-        >
-          Skip to main content
-        </a>
-        <div className="flex justify-between items-center h-16 sm:h-20 gap-4">
-          <Link
-            href="/"
-            className="group inline-flex items-center gap-2.5 text-xl sm:text-2xl font-semibold text-ink transition-colors font-[family-name:var(--font-display)] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 rounded-sm whitespace-nowrap flex-none"
-          >
-            <span
-              aria-hidden="true"
-              className="flex h-6 sm:h-7 w-[5px] flex-col overflow-hidden rounded-full"
-            >
-              <span className="flex-1 bg-[#b8503f]" />
-              <span className="flex-1 bg-[#c97712]" />
-              <span className="flex-1 bg-[#366c5a]" />
+    <header ref={headerRef} className="sticky top-0 z-50 border-b border-line bg-[#f7f9f5]/95 backdrop-blur-xl">
+      <nav aria-label="Main" className="mx-auto max-w-7xl px-4 sm:px-6">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-ink focus:px-4 focus:py-2 focus:text-white">Skip to main content</a>
+        <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
+          <Link href="/" onClick={close} className="inline-flex shrink-0 items-center gap-2.5 whitespace-nowrap font-[family-name:var(--font-display)] text-xl font-semibold text-ink sm:text-2xl">
+            <span aria-hidden="true" className="flex h-6 w-[5px] flex-col overflow-hidden rounded-full">
+              <span className="flex-1 bg-[#b8503f]" /><span className="flex-1 bg-[#c97712]" /><span className="flex-1 bg-[#366c5a]" />
             </span>
-            <span>Brett Pollak</span>
+            Brett Pollak
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            {PRIMARY_LINKS.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap border-b-2 ${
-                  isActive(href)
-                    ? 'text-ink border-[#c97712] font-semibold'
-                    : 'text-body border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
-
-            {/* "Writing" dropdown */}
-            <div className="relative" ref={writingMenuRef}>
-              <button
-                type="button"
-                onClick={() => setWritingMenuOpen((v) => !v)}
-                aria-haspopup="true"
-                aria-expanded={writingMenuOpen}
-                className={`px-3 lg:px-4 py-2 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 whitespace-nowrap inline-flex items-center gap-1 border-b-2 ${
-                  isActiveInGroup(WRITING_LINKS)
-                    ? 'text-ink border-[#c97712] font-semibold'
-                    : 'text-body border-transparent hover:text-[#17201b] hover:border-[#9eb7aa]'
-                }`}
-              >
-                Field Notes
-                <svg
-                  className={`w-3.5 h-3.5 transition-transform ${writingMenuOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  viewBox="0 0 20 20"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 8l5 5 5-5" />
-                </svg>
+          <div className="hidden items-center gap-1 lg:flex">
+            {primaryLinks.map(link => <Link key={link.href} href={link.href} onClick={close} aria-current={active(link.href) ? 'page' : undefined} className={linkClass(link.href)}>{link.label}</Link>)}
+            <div ref={notesRef} className="relative" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setNotesOpen(false); }}>
+              <button ref={notesButton} type="button" aria-expanded={notesOpen} aria-controls="notes-navigation" onClick={() => setNotesOpen(!notesOpen)} className={linkClass('/notes')}>
+                Notes <span aria-hidden="true">{notesOpen ? '−' : '+'}</span>
               </button>
-              {writingMenuOpen && (
-                <div
-                  role="menu"
-                  className="absolute right-0 mt-2 w-60 rounded-sm bg-paper-strong border border-line shadow-lg ring-1 ring-black/5 overflow-hidden z-50"
-                >
-                  {WRITING_GROUPS.map((group) => (
-                    <div key={group.heading} className="border-b border-line last:border-b-0">
-                      <div className="px-3 py-2 rule-label">{group.heading}</div>
-                      {group.links.map(({ href, label }) => (
-                        <Link
-                          key={href}
-                          href={href}
-                          role="menuitem"
-                          onClick={() => setWritingMenuOpen(false)}
-                          className={`block px-4 py-2.5 text-sm font-medium transition-colors whitespace-nowrap ${
-                            isActive(href)
-                              ? 'text-ink bg-[#eef3ea] font-semibold'
-                              : 'text-body hover:text-[#17201b] hover:bg-[#f1f5ee]'
-                          }`}
-                        >
-                          {label}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-              )}
+              {notesOpen && <div id="notes-navigation" className="absolute right-0 mt-2 w-56 border border-line bg-paper-strong p-2 shadow-lg">
+                {noteLinks.map(link => <Link key={link.href} href={link.href} onClick={close} aria-current={active(link.href) ? 'page' : undefined} className={`block ${linkClass(link.href)}`}>{link.label}</Link>)}
+              </div>}
             </div>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-sm text-ink hover:bg-[#eef3ea] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
-            aria-label="Toggle menu"
-            aria-expanded={mobileMenuOpen}
-          >
-            <svg aria-hidden="true"
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {mobileMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+          <button ref={mobileButton} type="button" className="inline-flex min-h-11 items-center gap-2 rounded-sm px-3 text-sm font-semibold hover:bg-wash-green lg:hidden" aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? 'Close menu' : 'Menu'} <span aria-hidden="true">{mobileOpen ? '×' : '☰'}</span>
           </button>
         </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-line max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
-            <div className="flex flex-col space-y-2">
-              {PRIMARY_LINKS.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
-                    isActive(href)
-                      ? 'text-ink bg-[#eef3ea]'
-                      : 'text-body hover:text-[#17201b] hover:bg-[#f1f5ee]'
-                  }`}
-                >
-                  {label}
-                </Link>
-              ))}
-
-              {/* Same groups as the desktop dropdown, flattened with subheaders */}
-              {WRITING_GROUPS.map((group) => (
-                <div key={group.heading} className="contents">
-                  <div className="pt-2 pb-1 px-4 rule-label">{group.heading}</div>
-                  {group.links.map(({ href, label }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`px-4 py-3 font-medium transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2 ${
-                        isActive(href)
-                          ? 'text-ink bg-[#eef3ea]'
-                          : 'text-body hover:text-[#17201b] hover:bg-[#f1f5ee]'
-                      }`}
-                    >
-                      {label}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        {mobileOpen && <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-line py-3 lg:hidden">
+          {primaryLinks.map(link => <Link key={link.href} href={link.href} onClick={close} aria-current={active(link.href) ? 'page' : undefined} className={`block ${linkClass(link.href)}`}>{link.label}</Link>)}
+          <p className="rule-label px-3 pt-5 pb-2">Notes</p>
+          {noteLinks.map(link => <Link key={link.href} href={link.href} onClick={close} aria-current={active(link.href) ? 'page' : undefined} className={`block ${linkClass(link.href)}`}>{link.label}</Link>)}
+        </div>}
       </nav>
     </header>
   );

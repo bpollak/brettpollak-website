@@ -1,0 +1,1729 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 7240,
+    "h1": [
+      "I work on technology and AI in higher education."
+    ],
+    "canonical": "https://brettcpollak.com/",
+    "selectedWork": 1014.625,
+    "ctaBottom": 516.625,
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true,
+      "homeActions": true,
+      "selectedWork": true
+    }
+  },
+  {
+    "route": "/about/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 7302,
+    "h1": [
+      "About"
+    ],
+    "canonical": "https://brettcpollak.com/about",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/work/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 5116,
+    "h1": [
+      "Selected work"
+    ],
+    "canonical": "https://brettcpollak.com/work",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/speaking/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 6380,
+    "h1": [
+      "Speaking"
+    ],
+    "canonical": "https://brettcpollak.com/speaking",
+    "ctaBottom": 411.546875,
+    "structuredDataBlocks": 16,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/contact/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 3791,
+    "h1": [
+      "Connect"
+    ],
+    "canonical": "https://brettcpollak.com/contact",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 13281,
+    "h1": [
+      "Projects"
+    ],
+    "canonical": "https://brettcpollak.com/products",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/media/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 15728,
+    "h1": [
+      "Publication Index"
+    ],
+    "canonical": "https://brettcpollak.com/media",
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/now/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 4391,
+    "h1": [
+      "Current work"
+    ],
+    "canonical": "https://brettcpollak.com/now",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/tritongpt/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 28303,
+    "h1": [
+      "TritonAI"
+    ],
+    "canonical": "https://brettcpollak.com/tritongpt",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-agent-architecture/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 28691,
+    "h1": [
+      "Personal AI Architecture: Memory, Retrieval, and Automation"
+    ],
+    "canonical": "https://brettcpollak.com/ai-agent-architecture",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 4624,
+    "h1": [
+      "Daily AI briefings"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 2581,
+    "h1": [
+      "UC San Diego AI Weekly Update"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/2026-09-05/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 10633,
+    "h1": [
+      "September 5, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest/2026-09-05",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/2026-08-31/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 5425,
+    "h1": [
+      "August 31, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-31",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-recruiting-crm/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 6628,
+    "h1": [
+      "Cason Recruiting CRM"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-recruiting-crm",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-scholarship-agent/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 8768,
+    "h1": [
+      "Scholarship Agent"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-scholarship-agent",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/podcasts/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 6571,
+    "h1": [
+      "Podcast Discovery"
+    ],
+    "canonical": "https://brettcpollak.com/podcasts",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/linkedin/",
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 5359,
+    "h1": [
+      "LinkedIn"
+    ],
+    "canonical": "https://brettcpollak.com/linkedin",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 5484,
+    "h1": [
+      "I work on technology and AI in higher education."
+    ],
+    "canonical": "https://brettcpollak.com/",
+    "selectedWork": 1001.65625,
+    "ctaBottom": 479.65625,
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/about/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 4469,
+    "h1": [
+      "About"
+    ],
+    "canonical": "https://brettcpollak.com/about",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/work/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3725,
+    "h1": [
+      "Selected work"
+    ],
+    "canonical": "https://brettcpollak.com/work",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/speaking/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 4241,
+    "h1": [
+      "Speaking"
+    ],
+    "canonical": "https://brettcpollak.com/speaking",
+    "ctaBottom": 382.890625,
+    "structuredDataBlocks": 16,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/contact/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3010,
+    "h1": [
+      "Connect"
+    ],
+    "canonical": "https://brettcpollak.com/contact",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 11434,
+    "h1": [
+      "Projects"
+    ],
+    "canonical": "https://brettcpollak.com/products",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/media/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 10699,
+    "h1": [
+      "Publication Index"
+    ],
+    "canonical": "https://brettcpollak.com/media",
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/now/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 2823,
+    "h1": [
+      "Current work"
+    ],
+    "canonical": "https://brettcpollak.com/now",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/tritongpt/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 18573,
+    "h1": [
+      "TritonAI"
+    ],
+    "canonical": "https://brettcpollak.com/tritongpt",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-agent-architecture/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 17383,
+    "h1": [
+      "Personal AI Architecture: Memory, Retrieval, and Automation"
+    ],
+    "canonical": "https://brettcpollak.com/ai-agent-architecture",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3425,
+    "h1": [
+      "Daily AI briefings"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 1683,
+    "h1": [
+      "UC San Diego AI Weekly Update"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/2026-09-05/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 5659,
+    "h1": [
+      "September 5, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest/2026-09-05",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/2026-08-31/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3280,
+    "h1": [
+      "August 31, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-31",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-recruiting-crm/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 5225,
+    "h1": [
+      "Cason Recruiting CRM"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-recruiting-crm",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-scholarship-agent/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 6651,
+    "h1": [
+      "Scholarship Agent"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-scholarship-agent",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/podcasts/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3588,
+    "h1": [
+      "Podcast Discovery"
+    ],
+    "canonical": "https://brettcpollak.com/podcasts",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/linkedin/",
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 3309,
+    "h1": [
+      "LinkedIn"
+    ],
+    "canonical": "https://brettcpollak.com/linkedin",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 5461,
+    "h1": [
+      "I work on technology and AI in higher education."
+    ],
+    "canonical": "https://brettcpollak.com/",
+    "selectedWork": 1001.65625,
+    "ctaBottom": 479.65625,
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/about/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 4324,
+    "h1": [
+      "About"
+    ],
+    "canonical": "https://brettcpollak.com/about",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/work/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 3726,
+    "h1": [
+      "Selected work"
+    ],
+    "canonical": "https://brettcpollak.com/work",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/speaking/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 4134,
+    "h1": [
+      "Speaking"
+    ],
+    "canonical": "https://brettcpollak.com/speaking",
+    "ctaBottom": 383.9375,
+    "structuredDataBlocks": 16,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/contact/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 2985,
+    "h1": [
+      "Connect"
+    ],
+    "canonical": "https://brettcpollak.com/contact",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 11309,
+    "h1": [
+      "Projects"
+    ],
+    "canonical": "https://brettcpollak.com/products",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/media/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 10485,
+    "h1": [
+      "Publication Index"
+    ],
+    "canonical": "https://brettcpollak.com/media",
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/now/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 2824,
+    "h1": [
+      "Current work"
+    ],
+    "canonical": "https://brettcpollak.com/now",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/tritongpt/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 18127,
+    "h1": [
+      "TritonAI"
+    ],
+    "canonical": "https://brettcpollak.com/tritongpt",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-agent-architecture/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 16791,
+    "h1": [
+      "Personal AI Architecture: Memory, Retrieval, and Automation"
+    ],
+    "canonical": "https://brettcpollak.com/ai-agent-architecture",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 3426,
+    "h1": [
+      "Daily AI briefings"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 1684,
+    "h1": [
+      "UC San Diego AI Weekly Update"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/2026-09-05/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 5429,
+    "h1": [
+      "September 5, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest/2026-09-05",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/2026-08-31/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 3195,
+    "h1": [
+      "August 31, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-31",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-recruiting-crm/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 5218,
+    "h1": [
+      "Cason Recruiting CRM"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-recruiting-crm",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-scholarship-agent/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 6632,
+    "h1": [
+      "Scholarship Agent"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-scholarship-agent",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/podcasts/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 3693,
+    "h1": [
+      "Podcast Discovery"
+    ],
+    "canonical": "https://brettcpollak.com/podcasts",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/linkedin/",
+    "width": 820,
+    "scrollWidth": 820,
+    "height": 3263,
+    "h1": [
+      "LinkedIn"
+    ],
+    "canonical": "https://brettcpollak.com/linkedin",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 4306,
+    "h1": [
+      "I work on technology and AI in higher education."
+    ],
+    "canonical": "https://brettcpollak.com/",
+    "selectedWork": 749.484375,
+    "ctaBottom": 563.484375,
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/about/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 4059,
+    "h1": [
+      "About"
+    ],
+    "canonical": "https://brettcpollak.com/about",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/work/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 3498,
+    "h1": [
+      "Selected work"
+    ],
+    "canonical": "https://brettcpollak.com/work",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/speaking/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 3785,
+    "h1": [
+      "Speaking"
+    ],
+    "canonical": "https://brettcpollak.com/speaking",
+    "ctaBottom": 398.765625,
+    "structuredDataBlocks": 16,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/contact/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 2434,
+    "h1": [
+      "Connect"
+    ],
+    "canonical": "https://brettcpollak.com/contact",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 8635,
+    "h1": [
+      "Projects"
+    ],
+    "canonical": "https://brettcpollak.com/products",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/media/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 8949,
+    "h1": [
+      "Publication Index"
+    ],
+    "canonical": "https://brettcpollak.com/media",
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/now/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 2839,
+    "h1": [
+      "Current work"
+    ],
+    "canonical": "https://brettcpollak.com/now",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/tritongpt/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 16702,
+    "h1": [
+      "TritonAI"
+    ],
+    "canonical": "https://brettcpollak.com/tritongpt",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-agent-architecture/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 15830,
+    "h1": [
+      "Personal AI Architecture: Memory, Retrieval, and Automation"
+    ],
+    "canonical": "https://brettcpollak.com/ai-agent-architecture",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 3385,
+    "h1": [
+      "Daily AI briefings"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 1699,
+    "h1": [
+      "UC San Diego AI Weekly Update"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/2026-09-05/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 5008,
+    "h1": [
+      "September 5, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest/2026-09-05",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/2026-08-31/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 3148,
+    "h1": [
+      "August 31, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-31",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-recruiting-crm/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 4249,
+    "h1": [
+      "Cason Recruiting CRM"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-recruiting-crm",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-scholarship-agent/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 5328,
+    "h1": [
+      "Scholarship Agent"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-scholarship-agent",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/podcasts/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 2966,
+    "h1": [
+      "Podcast Discovery"
+    ],
+    "canonical": "https://brettcpollak.com/podcasts",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/linkedin/",
+    "width": 1024,
+    "scrollWidth": 1024,
+    "height": 3132,
+    "h1": [
+      "LinkedIn"
+    ],
+    "canonical": "https://brettcpollak.com/linkedin",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 4073,
+    "h1": [
+      "I work on technology and AI in higher education."
+    ],
+    "canonical": "https://brettcpollak.com/",
+    "selectedWork": 691.59375,
+    "ctaBottom": 505.59375,
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/about/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 4108,
+    "h1": [
+      "About"
+    ],
+    "canonical": "https://brettcpollak.com/about",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/work/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3445,
+    "h1": [
+      "Selected work"
+    ],
+    "canonical": "https://brettcpollak.com/work",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/speaking/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3700,
+    "h1": [
+      "Speaking"
+    ],
+    "canonical": "https://brettcpollak.com/speaking",
+    "ctaBottom": 429.34375,
+    "structuredDataBlocks": 16,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/contact/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 2368,
+    "h1": [
+      "Connect"
+    ],
+    "canonical": "https://brettcpollak.com/contact",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 8041,
+    "h1": [
+      "Projects"
+    ],
+    "canonical": "https://brettcpollak.com/products",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/media/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 8530,
+    "h1": [
+      "Publication Index"
+    ],
+    "canonical": "https://brettcpollak.com/media",
+    "structuredDataBlocks": 3,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/now/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 2869,
+    "h1": [
+      "Current work"
+    ],
+    "canonical": "https://brettcpollak.com/now",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/tritongpt/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 16404,
+    "h1": [
+      "TritonAI"
+    ],
+    "canonical": "https://brettcpollak.com/tritongpt",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-agent-architecture/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 15585,
+    "h1": [
+      "Personal AI Architecture: Memory, Retrieval, and Automation"
+    ],
+    "canonical": "https://brettcpollak.com/ai-agent-architecture",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3415,
+    "h1": [
+      "Daily AI briefings"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 1786,
+    "h1": [
+      "UC San Diego AI Weekly Update"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ai-digest/2026-09-05/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 5030,
+    "h1": [
+      "September 5, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ai-digest/2026-09-05",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/ucsd-ai-news/2026-08-31/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3170,
+    "h1": [
+      "August 31, 2026"
+    ],
+    "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-31",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-recruiting-crm/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 4234,
+    "h1": [
+      "Cason Recruiting CRM"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-recruiting-crm",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/products/cason-scholarship-agent/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 5376,
+    "h1": [
+      "Scholarship Agent"
+    ],
+    "canonical": "https://brettcpollak.com/products/cason-scholarship-agent",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/podcasts/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3180,
+    "h1": [
+      "Podcast Discovery"
+    ],
+    "canonical": "https://brettcpollak.com/podcasts",
+    "structuredDataBlocks": 1,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  },
+  {
+    "route": "/linkedin/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3139,
+    "h1": [
+      "LinkedIn"
+    ],
+    "canonical": "https://brettcpollak.com/linkedin",
+    "structuredDataBlocks": 2,
+    "errors": [],
+    "checks": {
+      "http": true,
+      "overflow": true,
+      "h1": true,
+      "canonical": true,
+      "noRuntimeErrors": true
+    }
+  }
+]

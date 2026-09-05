@@ -15,6 +15,7 @@ export type WeeklyDigestData = {
   digestCount: number;
   headlineCount: number;
   days: WeeklyDigestDay[];
+  archive?: WeeklyDigestDay[];
 };
 
 export const weeklyAiDigestData: WeeklyDigestData = {

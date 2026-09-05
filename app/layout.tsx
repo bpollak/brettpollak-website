@@ -77,8 +77,15 @@ const siteSchema = {
           "@type": "WebPage",
           "@id": `${siteUrl}/products#webpage`,
           "url": `${siteUrl}/products`,
-          "name": "Products and Prototypes",
+          "name": "Projects",
           "description": "AI-enabled tools and experiments built by Brett Pollak."
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteUrl}/work#webpage`,
+          "url": `${siteUrl}/work`,
+          "name": "Selected work",
+          "description": "Historical examples of campus web services, institutional data, and TritonGPT, with public sources and team attribution."
         }
       ],
       "sameAs": sameAsProfiles

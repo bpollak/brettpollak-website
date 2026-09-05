@@ -306,7 +306,7 @@ export const mediaItems: MediaItem[] = [
     publication: 'The EvoLLLution',
     title: 'Shifting to Responsive Web Design',
     url: 'https://evolllution.com/opinions/shifting-to-responsive-web-design',
-    date: '2015-01-01',
+    date: '2012-10-08',
     category: 'article'
   },
   {

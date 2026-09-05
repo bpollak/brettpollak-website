@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
+import { caseStudies } from '@/lib/caseStudies';
 import HomeHeroSystemMap from '@/components/home/HomeHeroSystemMap';
 
 export const metadata: Metadata = {
@@ -113,37 +114,12 @@ const writingLinks = [
 
 const routes = [
   { href: '/tritongpt', label: 'TritonAI', note: 'Program overview and metrics' },
-  { href: '/ai-agent-architecture', label: 'Agent Architecture', note: 'Personal AI system design' },
+  { href: '/ai-agent-architecture', label: 'AI architecture', note: 'Personal AI system design' },
   { href: '/media', label: 'Media', note: 'Articles, interviews, and talks' },
-  { href: '/ai-digest', label: 'AI Digest', note: 'Weekly AI headlines' },
-  { href: '/products', label: 'Products', note: 'Built tools and apps' },
+  { href: '/ai-digest', label: 'AI Digest', note: 'Daily AI briefings' },
+  { href: '/products', label: 'Projects', note: 'Apps and walkthroughs' },
   { href: '/now', label: 'Now', note: 'Current focus areas' },
 ];
-
-function HomePortfolioMark() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="diagram h-24 w-32 shrink-0"
-      viewBox="0 0 160 120"
-      fill="none"
-    >
-      <path d="M20 100h120" stroke="#d9dfd3" strokeWidth="2" />
-      <path d="M30 84v16M80 56v44M130 32v68" stroke="#d9dfd3" strokeWidth="2" strokeDasharray="4 5" />
-      <path
-        className="flow-path"
-        d="M30 84 80 56 130 32"
-        stroke="#485248"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="30" cy="84" r="7" fill="#1f5a8a" />
-      <circle cx="80" cy="56" r="7" fill="#c97712" />
-      <circle cx="130" cy="32" r="7" fill="#366c5a" />
-    </svg>
-  );
-}
 
 export default function Home() {
   const personSchema = {
@@ -238,90 +214,49 @@ export default function Home() {
 
       {/* HERO */}
       <section className="paper-grid border-b border-line">
-        <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 xl:gap-20 items-start">
+        <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
+          <div className="grid items-center gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
-              <p className="rule-label mb-8">Work at UC San Diego</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.08] sm:leading-[1.02] lg:leading-[0.98] font-medium text-ink max-w-[20rem] sm:max-w-4xl">
+              <p className="rule-label mb-5">Work at UC San Diego</p>
+              <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
                 I work on technology and AI in higher education.
               </h1>
-              <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-9 text-body">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
                 I&rsquo;m the Executive Director of Workplace Technology and Infrastructure
-                Services at UC San Diego. My group is responsible for infrastructure,
-                data platforms, the service desk, collaboration tools, endpoint management,
-                and parts of the university&rsquo;s AI program.
-                {' '}
-                <Link href="/tritongpt" className="font-semibold text-signal-blue underline underline-offset-4 decoration-[#1f5a8a]/30">
-                  TritonAI
-                </Link>
-                {' '}started as a pilot and is now available to students, faculty, and staff.
+                Services at UC San Diego. My teams support infrastructure, data, campus
+                technology services, and AI.
               </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  href="/now"
-                  className="inline-flex items-center justify-center rounded-sm bg-[#17201b] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
-                >
-                  What I work on
-                </Link>
-                <Link
-                  href="/media"
-                  className="inline-flex items-center justify-center rounded-sm border border-[#9eb7aa] px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-[#1f5a8a] hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
-                >
-                  Media &amp; writing
-                </Link>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href="#selected-work" className="button-primary">Selected work</a>
+                <Link href="/speaking" className="button-secondary">Speaking</Link>
               </div>
-              <div className="mt-12 flex max-w-2xl flex-col gap-5 border border-line bg-white/75 p-5 shadow-[8px_8px_0_rgba(54,108,90,0.08)] sm:flex-row sm:items-center">
-                <HomePortfolioMark />
-                <div>
-                  <p className="rule-label mb-3">Operating idea</p>
-                  <p className="text-base leading-7 text-body">
-                    New tools have to fit the way people actually work. I try to understand
-                    where they help, where they do not, and what support they need over time.
-                  </p>
-                </div>
-              </div>
+              <p className="mt-6 max-w-xl text-base leading-7 text-body">
+                New tools have to fit the way people actually work, with support that lasts beyond the pilot.
+              </p>
+              <Link href="/now" className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Current focus · Updated {formatNowDate(currentNow.lastUpdated)}
+              </Link>
             </div>
-
-            <div className="space-y-5 lg:self-stretch">
-              <div className="home-portrait-panel">
-                <Image
-                  src="/brettpollak-headshot-lean.webp"
-                  alt="Brett Pollak"
-                  fill
-                  className="z-0 object-cover object-[center_36%]"
-                  placeholder="blur"
-                  blurDataURL={heroBlurDataURL}
-                  priority
-                  sizes="(min-width: 1280px) 520px, (min-width: 1024px) 44vw, 100vw"
-                />
-                <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#17201b]/70 via-[#17201b]/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 z-20 p-5 md:p-6 text-white">
-                  <p className="rule-label mb-3 text-white/70">UC San Diego</p>
-                  <p className="max-w-sm text-xl md:text-2xl leading-8 font-medium">
-                    Seven teams supporting shared campus technology.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-[1.05fr_0.95fr] gap-5">
-                <div className="home-support-card p-5" data-tone="gold">
-                  <p className="rule-label mb-4">Current focus</p>
-                  <p className="text-lg leading-7">
-                    <span className="font-semibold">{currentNow.items[0].label}:</span> {currentNow.items[0].body}
-                  </p>
-                  <Link href="/now" className="mt-5 inline-block text-sm font-semibold text-[#f2b84b] underline underline-offset-4">
-                    Updated {formatNowDate(currentNow.lastUpdated)}
-                  </Link>
-                </div>
-                <div className="home-support-card home-support-card-dark p-5 text-white" data-tone="green">
-                  <p className="rule-label mb-4 text-white/60">Team</p>
-                  <p className="text-lg leading-7">
-                    Seven teams working across infrastructure, data, service desk,
-                    endpoint management, collaboration, and AI services.
-                  </p>
-                </div>
-              </div>
+            <div className="home-portrait-panel">
+              <Image src="/brettpollak-headshot-lean.webp" alt="Brett Pollak on the UC San Diego campus" fill
+                className="object-cover object-[center_36%]" placeholder="blur" blurDataURL={heroBlurDataURL}
+                priority sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, 100vw" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="selected-work" className="border-b border-line bg-paper-strong">
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          <p className="rule-label mb-3">Selected work</p>
+          <h2 className="text-3xl font-medium md:text-4xl">Three examples from campus.</h2>
+          <div className="mt-7 grid gap-5 md:grid-cols-3">
+            {caseStudies.map(study => <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
+              <p className="rule-label mb-3">{study.category}</p>
+              <h3 className="text-2xl leading-7 font-medium">{study.title}</h3>
+              <p className="mt-4 text-base leading-7 text-body">{study.summary}</p>
+              <Link href={`/work#${study.id}`} className="mt-auto inline-block pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">Read the case study<span className="sr-only">: {study.title}</span></Link>
+            </article>)}
           </div>
         </div>
       </section>
@@ -357,14 +292,16 @@ export default function Home() {
 
       {/* AI FOCUS + LESSONS */}
       <section className="border-b border-line tint-blue">
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <details className="mx-auto max-w-7xl px-6 py-6">
+          <summary className="cursor-pointer text-xl font-semibold">Notes on institutional AI</summary>
+        <div className="max-w-7xl mx-auto py-6">
           <div className="max-w-3xl">
             <p className="rule-label mb-4">Current focus</p>
             <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
               Working on institutional AI.
             </h2>
             <p className="mt-6 text-lg leading-8 text-body">
-              TritonGPT began as a pilot in 2024. It is now available across campus,
+              TritonGPT began as a pilot in 2023. It is now available across campus,
               runs mostly on university infrastructure, and has been adapted by a few
               peer institutions. Current work includes supervised agents and tools that
               can take bounded actions within university workflows.
@@ -379,6 +316,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </details>
       </section>
 
       {/* WORKING QUESTIONS */}

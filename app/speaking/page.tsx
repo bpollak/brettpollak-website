@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { speakerBio } from '@/lib/speakerBio';
+import Image from 'next/image';
 import { mediaItems } from '@/lib/mediaData';
 
 export const metadata: Metadata = {
@@ -53,36 +55,35 @@ const SPEAKING_TOPICS = [
     title: 'Institutional AI: From Pilot to Service',
     description:
       'How UC San Diego developed an institutional AI service from an early pilot. Covers architecture, governance, on-premises hosting, and lessons from campus use.',
-    signals: ['TritonAI', 'TritonGPT', 'LiteLLM', 'Vertical AI', 'On-premises AI'],
+    takeaway: 'What it takes to move from a pilot to a supported campus service.',
   },
   {
     title: 'Agentic AI Workflows in Higher Education',
     description:
       'How supervised AI agents are being tested in administrative workflows, including contract review, financial data questions, and transcript matching. Covers controls, review, and measured results.',
-    signals: ['Agentic AI', 'AI workflows', 'AI automation', 'Agent orchestration', 'MCP'],
+    takeaway: 'How to choose a workflow with clear limits and decide where human review belongs.',
   },
   {
     title: 'AI Governance in Practice',
     description:
       'A practical look at data classification, review, and guardrails for institutional AI. Includes where governance has helped and where questions remain unresolved.',
-    signals: ['AI governance', 'Data classification', 'P1-P4 data policy', 'AI oversight', 'Responsible AI'],
+    takeaway: 'Questions to ask about data access, oversight, and responsibility before expanding use.',
   },
   {
     title: 'The Citizen Developer Program',
     description:
-      'How UC San Diego provides staff, researchers, and faculty with a governed path for building AI tools. Includes credits, templates, guardrails, and the steps from an idea to a supported application.',
-    signals: ['Citizen developer', 'Developer API', 'AI democratization', 'Low-code AI', 'Campus AI program'],
+      'How UC San Diego supports staff, researchers, and faculty as they build AI tools. Includes credits, templates, guardrails, and the steps from an idea to a supported application.',
+    takeaway: 'How to support people building tools without leaving each department to manage its own platform.',
   },
   {
     title: 'AI as Institutional Infrastructure',
     description:
       'How shared AI infrastructure can support campus services while reducing duplicated setup across departments. Includes examples from UC San Diego and peer institutions using related approaches.',
-    signals: ['AI infrastructure', 'Multi-tenant AI', 'Higher ed AI program', 'Shared AI services', 'UC system AI'],
+    takeaway: 'How to compare shared services, local hosting, and cloud access against institutional needs.',
   },
 ];
 
-const NOW = new Date();
-const TODAY_ISO = `${NOW.getFullYear()}-${String(NOW.getMonth() + 1).padStart(2, '0')}-${String(NOW.getDate()).padStart(2, '0')}`;
+const TODAY_ISO = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles' }).format(new Date());
 
 const ALL_SPEAKING = mediaItems
   .filter(i => i.category === 'speaking')
@@ -167,175 +168,92 @@ export default function SpeakingPage() {
       ))}
 
       <section className="page-hero">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
-          <p className="rule-label mb-6">Talks · Panels · Conference Sessions</p>
-          <h1 className="page-title mb-6">
-            Speaking
-          </h1>
+        <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+          <p className="rule-label mb-5">Talks · Panels · Campus conversations</p>
+          <h1 className="page-title mb-6">Speaking</h1>
           <p className="page-intro">
             I speak about institutional AI work at UC San Diego, including what
             has worked, what has not, and the questions we are still working through.
           </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link href="/contact?topic=speaking#contact-form" className="button-primary">Ask about a talk</Link>
+            <a href="#speaker-resources" className="button-secondary">Bio &amp; headshot</a>
+          </div>
+          <nav aria-label="Speaking page sections" className="reading-links mt-6">
+            <a href="#topics">Topics</a><a href="#recording">Watch a session</a><a href="#engagements">Recent engagements</a>
+          </nav>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
-
-        {/* Upcoming Engagements */}
-        {UPCOMING_ENGAGEMENTS.length > 0 && (
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-ink mb-2">Upcoming Engagements</h2>
-            <p className="text-muted mb-10">Scheduled events and upcoming talks.</p>
-            <div className="space-y-4">
-              {UPCOMING_ENGAGEMENTS.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-6 bg-paper-strong rounded-xl px-7 py-5 border border-line shadow-sm hover:shadow-md transition-shadow group"
-                >
-                  <div className="flex flex-col items-center min-w-[70px]">
-                    <div className="text-sm text-signal-blue font-mono pt-0.5 whitespace-nowrap">
-                      {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}
-                    </div>
-                    <div className="text-xs text-signal-blue font-semibold">
-                      {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', timeZone: 'UTC' })}
-                    </div>
-                    <div className="mt-1 px-2 py-0.5 bg-wash-blue text-signal-blue text-[10px] font-bold rounded-full uppercase tracking-wider">
-                      Upcoming
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-semibold text-signal-blue uppercase tracking-wide mb-1">{item.publication}</div>
-                    <div className="text-ink font-medium group-hover:text-signal-blue transition-colors">{item.title}</div>
-                  </div>
-                  <svg aria-hidden="true" className="w-4 h-4 text-muted group-hover:text-signal-blue mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {UPCOMING_ENGAGEMENTS.length === 0 && (
-          <section className="mb-20 editorial-panel p-8 md:p-10">
-            <h2 className="text-3xl font-bold text-ink mb-4">No events currently scheduled</h2>
-            <p className="text-body text-lg leading-8 mb-6">
-              I&apos;m available for keynotes, panels, and campus talks on institutional
-              AI, agentic workflows, and AI governance. The contact page is the easiest
-              way to ask about an event.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-4 bg-[#17201b] text-white font-bold rounded-sm hover:bg-[#1f5a8a] transition-colors"
-            >
-              Book a Talk
-            </Link>
-          </section>
-        )}
-
-        {/* Past Engagements */}
-        {PAST_ENGAGEMENTS.length > 0 && (
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-ink mb-2">Recent Engagements</h2>
-            <p className="text-muted mb-10">Recent conferences and panels.</p>
-            <div className="space-y-4">
-              {PAST_ENGAGEMENTS.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-6 bg-paper-strong rounded-xl px-7 py-5 border border-line shadow-sm hover:shadow-md transition-shadow group"
-                >
-                  <div className="text-sm text-muted font-mono pt-0.5 whitespace-nowrap min-w-[70px]">
-                    {new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })}
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-semibold text-signal-blue uppercase tracking-wide mb-1">{item.publication}</div>
-                    <div className="text-ink font-medium group-hover:text-signal-blue transition-colors">{item.title}</div>
-                  </div>
-                  <svg aria-hidden="true" className="w-4 h-4 text-muted group-hover:text-signal-blue mt-1 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Speaking Topics */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-ink mb-2">Topics</h2>
-          <p className="text-muted mb-10">Topics I cover regularly, drawing from current and past work at UC San Diego.</p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {SPEAKING_TOPICS.map((topic, i) => (
-              <div
-                key={i}
-                className="editorial-panel p-8 transition-colors hover:border-[#1f5a8a]"
-              >
-                <h3 className="text-xl font-bold text-ink mb-3">{topic.title}</h3>
-                <p className="text-body text-sm leading-relaxed mb-5">{topic.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {topic.signals.map((s, si) => (
-                    <span
-                      key={si}
-                      className="px-3 py-1 bg-wash-blue text-signal-blue text-xs font-medium rounded-full border border-line"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
+      <div className="mx-auto max-w-7xl px-6 py-12">
+        <section id="topics" className="mb-14">
+          <h2 className="mb-3 text-3xl font-medium">Topics for your audience</h2>
+          <p className="mb-8 max-w-3xl leading-7 text-body">Sessions use campus examples to discuss practical tradeoffs, with measured results where available. These topics are starting points for a session shaped around your audience.</p>
+          <div className="grid gap-5 md:grid-cols-2">
+            {SPEAKING_TOPICS.map(topic => (
+              <article key={topic.title} className="editorial-panel p-6">
+                <h3 className="mb-3 text-2xl font-medium">{topic.title}</h3>
+                <p className="text-base leading-7 text-body">{topic.description}</p>
+                <p className="mt-5 border-t border-line pt-4 text-sm leading-6 text-body"><strong className="text-ink">Audience takeaway:</strong> {topic.takeaway}</p>
+              </article>
             ))}
           </div>
         </section>
 
-        {/* Session approach */}
-        <section className="mb-20 editorial-panel p-8 md:p-10">
-          <h2 className="text-3xl font-bold text-ink mb-8">Session approach</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                heading: 'Specific examples',
-                body: 'I use concrete cases, available measures, and lessons from work that did not go as planned.',
-              },
-              {
-                heading: 'Practical discussion',
-                body: 'Sessions include ideas an audience can adapt, along with the conditions and tradeoffs behind them.',
-              },
-              {
-                heading: 'Campus perspective',
-                body: 'My examples come from day-to-day technology work at a public research university.',
-              },
-            ].map((item, i) => (
-              <div key={i}>
-                <div className="w-10 h-1 bg-signal-gold mb-4 rounded-full"></div>
-                <h3 className="text-lg font-semibold text-ink mb-2">{item.heading}</h3>
-                <p className="text-body text-sm leading-relaxed">{item.body}</p>
-              </div>
-            ))}
+        <section id="recording" className="mb-14 grid gap-8 border-y border-line py-8 md:grid-cols-2">
+          <div>
+            <p className="rule-label mb-3">Watch a session · September 2024</p>
+            <h2 className="mb-4 text-3xl font-medium">A conversation about TritonGPT</h2>
+            <p className="text-body leading-7">A UC Tech webinar with Vince Kellen, Allorah Pradenas, and me on the platform, campus use, and collaboration with other institutions. This recording reflects the program at that time.</p>
+          </div>
+          <div className="editorial-panel flex flex-col justify-center p-6">
+            <a className="button-primary w-fit" href="https://www.youtube.com/watch?v=0V8TmUXY-z4" target="_blank" rel="noopener noreferrer">Watch the webinar on YouTube ↗</a>
+            <a className="mt-5 text-sm font-semibold text-signal-blue underline underline-offset-4" href="https://uctechnews.ucop.edu/tritongpt-webinar-recap-democratizing-ai-for-uc-san-diego-and-the-broader-higher-education-community/">Read the UC Tech recap</a>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="text-center py-12 editorial-panel editorial-dark px-8">
-          <h2 className="text-3xl font-bold text-white mb-4">Interested in having me speak?</h2>
-          <p className="text-on-dark mb-8 max-w-xl mx-auto">
-            I speak at higher ed technology conferences and institutional leadership events.
-            Let me know what you&apos;re planning and who&apos;s in the room.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block px-8 py-4 bg-[#f2b84b] text-ink font-bold rounded-sm hover:bg-[#ffd274] transition-colors"
-          >
-            Get in Touch
-          </Link>
+        <section id="speaker-resources" className="mb-14 editorial-panel p-6 md:p-8">
+          <h2 className="mb-6 text-3xl font-medium">For event organizers</h2>
+          <div className="grid gap-8 md:grid-cols-[10rem_1fr]">
+            <Image src="/brettpollak-headshot-lean.webp" alt="Brett Pollak" width={160} height={200} className="h-48 w-40 object-cover object-[center_25%]" />
+            <div>
+              <h3 className="mb-3 text-xl font-semibold">Short biography</h3>
+              <p className="max-w-3xl text-body leading-7">{speakerBio}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="/speaking/bio.txt" download="brett-pollak-bio.txt" className="button-secondary">Download bio (TXT)</a>
+                <a href="/brettpollak-headshot-lean.png" download="brett-pollak-headshot.png" className="button-secondary">Download headshot (PNG)</a>
+              </div>
+            </div>
+          </div>
         </section>
 
+        {UPCOMING_ENGAGEMENTS.length > 0 && <section className="mb-14">
+          <h2 className="mb-6 text-3xl font-medium">Upcoming engagements</h2>
+          <EngagementList items={UPCOMING_ENGAGEMENTS} />
+        </section>}
+        <section id="engagements" className="mb-14">
+          <h2 className="mb-6 text-3xl font-medium">Recent engagements</h2>
+          <EngagementList items={PAST_ENGAGEMENTS.slice(0, 3)} />
+          {PAST_ENGAGEMENTS.length > 3 && <details className="mt-6 border border-line bg-paper-strong p-5">
+            <summary className="cursor-pointer font-semibold text-signal-blue">Earlier engagements ({PAST_ENGAGEMENTS.length - 3})</summary>
+            <div className="mt-5"><EngagementList items={PAST_ENGAGEMENTS.slice(3)} /></div>
+          </details>}
+        </section>
+        <section className="editorial-panel editorial-dark p-8 text-white">
+          <h2 className="mb-4 text-3xl font-medium text-white">Planning an event?</h2>
+          <p className="mb-6 max-w-2xl leading-7 text-on-dark">Let me know the audience, topic, date, and format you have in mind.</p>
+          <Link href="/contact?topic=speaking#contact-form" className="button-secondary bg-paper-strong">Ask about a talk</Link>
+        </section>
       </div>
     </main>
   );
+}
+
+function EngagementList({ items }: { items: typeof mediaItems }) {
+  return <ul className="space-y-3">{items.map(item => <li key={`${item.date}-${item.title}`}>
+    <a href={item.url} target="_blank" rel="noopener noreferrer" className="grid gap-2 border border-line bg-paper-strong p-5 hover:border-[#1f5a8a] sm:grid-cols-[6rem_1fr]">
+      <time dateTime={item.date} className="text-sm text-muted">{new Date(`${item.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })}</time>
+      <span className="min-w-0"><span className="block text-sm text-signal-blue">{item.publication}</span><span className="font-semibold">{item.title} <span aria-hidden="true">↗</span></span></span>
+    </a>
+  </li>)}</ul>;
 }

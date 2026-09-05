@@ -4,13 +4,13 @@ import type { Metadata } from "next";
 import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
-  title: "Products and Prototypes",
+  title: "Projects",
   description: "A selection of software projects and prototypes built by Brett Pollak for education, productivity, and family use.",
   alternates: {
     canonical: "https://brettcpollak.com/products",
   },
   openGraph: {
-    title: "Products and Prototypes | Brett Pollak",
+    title: "Projects | Brett Pollak",
     description: "A selection of software projects and prototypes for education, productivity, and family use.",
     url: "https://brettcpollak.com/products",
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Products and Prototypes | Brett Pollak",
+    title: "Projects | Brett Pollak",
     description: "A selection of software projects and prototypes for education, productivity, and family use.",
     images: ["/ai-architecture-linkedin.png"],
   },
@@ -32,10 +32,12 @@ export const metadata: Metadata = {
 
 const products = [
   {
+    group: "personal-apps",
+    status: "Available on iOS",
     category: "AI-powered habit building",
     title: "Resolution Companion",
     href: "https://resolutioncompanion.com/",
-    secondaryHref: "https://apps.apple.com/us/app/resolution-companion-ai/id6742682189",
+    secondaryHref: "https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708",
     image: "/resolution-companion.webp",
     imageAlt: "Resolution Companion landing page screenshots",
     width: 900,
@@ -53,6 +55,8 @@ const products = [
     secondaryCta: "Download for iOS",
   },
   {
+    group: "personal-apps",
+    status: "Available on iOS",
     category: "Independent race-day analysis",
     title: "Horse Racing Companion",
     href: "https://horseracingcompanion.com/",
@@ -74,6 +78,8 @@ const products = [
     secondaryCta: "Download for iOS",
   },
   {
+    group: "personal-apps",
+    status: "Available online",
     category: "Sports group experience",
     title: "Steel City Gameday",
     href: "https://steelcitygameday.com/",
@@ -93,6 +99,8 @@ const products = [
     cta: "Visit Steel City Gameday",
   },
   {
+    group: "personal-apps",
+    status: "Public website",
     category: "College recruiting",
     title: "Cason Pollak. Track & Field Recruiting Profile",
     href: "https://casonpollak.com/",
@@ -113,6 +121,8 @@ const products = [
     cta: "Visit Recruiting Profile",
   },
   {
+    group: "personal-apps",
+    status: "Private · walkthrough",
     category: "College recruiting",
     title: "Cason Recruiting CRM",
     href: "/products/cason-recruiting-crm",
@@ -132,6 +142,8 @@ const products = [
     cta: "See how it works",
   },
   {
+    group: "personal-apps",
+    status: "Private · walkthrough",
     category: "College funding",
     title: "Scholarship Agent",
     href: "/products/cason-scholarship-agent",
@@ -152,6 +164,8 @@ const products = [
     cta: "See how it works",
   },
   {
+    group: "experiments",
+    status: "Personal setup · documentation",
     category: "AI agent system",
     title: "Henry. Personal AI Operating System",
     href: "/ai-agent-architecture",
@@ -163,7 +177,7 @@ const products = [
     description:
       "A personal AI setup built on Hermes Agent, with scheduled automations, a knowledge graph, vector search, model routing, and institutional integrations.",
     features: [
-      "77 scheduled automations",
+      "77 scheduled automations (August 2026 project snapshot)",
       "Multiple model routes",
       "Software blueprint pipeline",
       "Persistent working context",
@@ -171,6 +185,8 @@ const products = [
     cta: "See the Architecture",
   },
   {
+    group: "experiments",
+    status: "Available online",
     category: "Media authenticity",
     title: "Is This AI?",
     href: "https://isthisai.brettcpollak.com/",
@@ -189,6 +205,8 @@ const products = [
     cta: "Try Is This AI?",
   },
   {
+    group: "campus-tools",
+    status: "Available online",
     category: "Accessibility and compliance",
     title: "PDF Accessibility Remediator",
     href: "https://pdf-remediator-codex.vercel.app",
@@ -207,6 +225,8 @@ const products = [
     cta: "Visit PDF Remediator",
   },
   {
+    group: "campus-tools",
+    status: "Available online",
     category: "Academic workflow",
     title: "Dissertation Formatting Agent",
     href: "https://dissertation-formatter.vercel.app",
@@ -225,6 +245,8 @@ const products = [
     cta: "Try Dissertation Formatter",
   },
   {
+    group: "campus-tools",
+    status: "Available online",
     category: "Academic workflow",
     title: "BioBib Formatter",
     href: "https://biobib-formatter.vercel.app/",
@@ -243,6 +265,8 @@ const products = [
     cta: "Try BioBib Formatter",
   },
   {
+    group: "campus-tools",
+    status: "Available online",
     category: "Campus community",
     title: "AI Use Case Meeting",
     href: "https://ai-use-case-meeting.vercel.app/",
@@ -260,6 +284,12 @@ const products = [
     ],
     cta: "Visit AI Use Case Meeting",
   },
+];
+
+const projectGroups = [
+  { id: 'campus-tools', title: 'Campus tools', description: 'Applications for campus work, including document preparation and AI use case meetings.' },
+  { id: 'personal-apps', title: 'Personal apps', description: 'Apps and websites for everyday interests and family use. Private projects have public walkthroughs.' },
+  { id: 'experiments', title: 'Experiments', description: 'Projects exploring personal AI systems and ways to assess whether media was generated by AI.' },
 ];
 
 const frameColors = [
@@ -303,15 +333,22 @@ export default function Products() {
         <div className="mb-12 grid gap-8 border-y border-line bg-wash-blue p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
           <div>
             <p className="rule-label mb-5">Projects</p>
-            <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Products and Prototypes</h1>
+            <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Projects</h1>
           </div>
           <p className="text-2xl text-body mb-6 max-w-3xl leading-9">
-            A selection of software for personal productivity, campus operations, and family use.
+            Software I have built for campus workflows, personal productivity, and family use. Project links lead to the application or a walkthrough.
           </p>
         </div>
 
-        <div className="border-y border-line">
-          {products.map((product, index) => {
+        <nav className="reading-links mb-10" aria-label="Project categories">
+          {projectGroups.map(group => <a key={group.id} href={`#${group.id}`}>{group.title} ({products.filter(product => product.group === group.id).length})</a>)}
+        </nav>
+        {projectGroups.map(group => <section key={group.id} id={group.id} className="mb-12">
+          <div className="border-y border-line py-6">
+            <h2 className="text-3xl font-medium">{group.title}</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-body">{group.description}</p>
+          </div>
+          {products.filter(product => product.group === group.id).map((product, index) => {
             const isInternal = "internal" in product && product.internal === true;
             const frameClass = `block border border-line p-4 ${frameColors[index % frameColors.length]}`;
             const thumbnail = (
@@ -320,7 +357,7 @@ export default function Products() {
                 alt={product.imageAlt}
                 width={product.width}
                 height={product.height}
-                className="h-auto w-full border border-white/15 object-cover"
+                className="mx-auto h-auto max-h-96 w-auto max-w-full border border-white/15 object-contain"
                 sizes="(min-width: 1024px) 28vw, 100vw"
               />
             );
@@ -354,9 +391,10 @@ export default function Products() {
               )}
               <div>
                 <p className="rule-label mb-4 text-signal-gold-ink">{product.category}</p>
-                <h2 className="text-3xl md:text-5xl leading-tight font-medium text-ink transition-colors group-hover:text-[#1f5a8a]">
+                <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink transition-colors group-hover:text-[#1f5a8a]">
                   {product.title}
-                </h2>
+                </h3>
+                <p className="mt-3 inline-block border border-line bg-wash-green px-3 py-1 text-sm font-semibold text-signal-green">{product.status}</p>
                 <p className="mt-5 text-lg leading-8 text-body">{product.description}</p>
                 <div className="mt-7 grid gap-3 sm:grid-cols-2">
                   {product.features.map((feature) => (
@@ -399,7 +437,7 @@ export default function Products() {
             </article>
             );
           })}
-        </div>
+        </section>)}
 
         <div className="mt-14 border border-dashed border-[#9fa89d] bg-paper-strong p-8 md:p-10">
           <div className="grid gap-8 md:grid-cols-[0.55fr_1fr] md:items-center">

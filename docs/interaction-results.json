@@ -1,0 +1,245 @@
+{
+  "reviewedAt": "2026-09-05T23:06:21.306Z",
+  "preview": "http://127.0.0.1:3017",
+  "interactions": [
+    {
+      "width": 390,
+      "checks": [
+        "skip link and visible keyboard focus",
+        "menu keyboard, Escape, outside click and route closing",
+        "all media filters and counts",
+        "native speaking archive disclosure",
+        "bio and headshot downloads",
+        "speaking contact preselection",
+        "intercepted success and failure submissions",
+        "architecture direct and in-page deep links"
+      ],
+      "interceptedSubmissions": 2
+    },
+    {
+      "width": 768,
+      "checks": [
+        "skip link and visible keyboard focus",
+        "menu keyboard, Escape, outside click and route closing",
+        "all media filters and counts",
+        "native speaking archive disclosure",
+        "bio and headshot downloads",
+        "speaking contact preselection",
+        "intercepted success and failure submissions",
+        "architecture direct and in-page deep links"
+      ],
+      "interceptedSubmissions": 2
+    },
+    {
+      "width": 820,
+      "checks": [
+        "skip link and visible keyboard focus",
+        "menu keyboard, Escape, outside click and route closing",
+        "all media filters and counts",
+        "native speaking archive disclosure",
+        "bio and headshot downloads",
+        "speaking contact preselection",
+        "intercepted success and failure submissions",
+        "architecture direct and in-page deep links"
+      ],
+      "interceptedSubmissions": 2
+    },
+    {
+      "width": 1024,
+      "checks": [
+        "skip link and visible keyboard focus",
+        "menu keyboard, Escape, outside click and route closing",
+        "all media filters and counts",
+        "native speaking archive disclosure",
+        "bio and headshot downloads",
+        "speaking contact preselection",
+        "intercepted success and failure submissions",
+        "architecture direct and in-page deep links"
+      ],
+      "interceptedSubmissions": 2
+    },
+    {
+      "width": 1440,
+      "checks": [
+        "skip link and visible keyboard focus",
+        "menu keyboard, Escape, outside click and route closing",
+        "all media filters and counts",
+        "native speaking archive disclosure",
+        "bio and headshot downloads",
+        "speaking contact preselection",
+        "intercepted success and failure submissions",
+        "architecture direct and in-page deep links"
+      ],
+      "interceptedSubmissions": 2
+    }
+  ],
+  "pages": [
+    {
+      "pathname": "/ai-digest/2026-09-05",
+      "title": "AI Digest · September 5, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest/2026-09-05",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ai-digest/2026-09-04",
+      "title": "AI Digest · September 4, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest/2026-09-04",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ai-digest/2026-09-03",
+      "title": "AI Digest · September 3, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest/2026-09-03",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ai-digest/2026-09-02",
+      "title": "AI Digest · September 2, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest/2026-09-02",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ai-digest/2026-09-01",
+      "title": "AI Digest · September 1, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest/2026-09-01",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ai-digest/2026-08-31",
+      "title": "AI Digest · August 31, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest/2026-08-31",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ucsd-ai-news/2026-08-31",
+      "title": "UC San Diego AI Weekly · August 31, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-31",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ucsd-ai-news/2026-08-24",
+      "title": "UC San Diego AI Weekly · August 24, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-24",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ucsd-ai-news/2026-08-17",
+      "title": "UC San Diego AI Weekly · August 17, 2026 | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ucsd-ai-news/2026-08-17",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/work",
+      "title": "Selected work: Campus Services, Data, and AI | Brett Pollak",
+      "canonical": "https://brettcpollak.com/work",
+      "structuredDataBlocks": 1
+    },
+    {
+      "pathname": "/",
+      "title": "Brett Pollak | AI in Higher Education",
+      "canonical": "https://brettcpollak.com/",
+      "structuredDataBlocks": 3
+    },
+    {
+      "pathname": "/about",
+      "title": "About — Work in Higher Education and AI | Brett Pollak",
+      "canonical": "https://brettcpollak.com/about",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/tritongpt",
+      "title": "TritonAI | Shared AI Infrastructure in Higher Education | Brett Pollak",
+      "canonical": "https://brettcpollak.com/tritongpt",
+      "structuredDataBlocks": 1
+    },
+    {
+      "pathname": "/products",
+      "title": "Projects | Brett Pollak",
+      "canonical": "https://brettcpollak.com/products",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/products/cason-recruiting-crm",
+      "title": "Cason Recruiting CRM | Brett Pollak | Brett Pollak",
+      "canonical": "https://brettcpollak.com/products/cason-recruiting-crm",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/products/cason-scholarship-agent",
+      "title": "Scholarship Agent | Brett Pollak | Brett Pollak",
+      "canonical": "https://brettcpollak.com/products/cason-scholarship-agent",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/speaking",
+      "title": "Speaking — AI in Higher Education | Brett Pollak",
+      "canonical": "https://brettcpollak.com/speaking",
+      "structuredDataBlocks": 16
+    },
+    {
+      "pathname": "/media",
+      "title": "Media & Appearances | AI in Higher Education | Brett Pollak",
+      "canonical": "https://brettcpollak.com/media",
+      "structuredDataBlocks": 3
+    },
+    {
+      "pathname": "/ai-digest",
+      "title": "AI Digest — Curated AI Developments | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-digest",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ucsd-ai-news",
+      "title": "UC San Diego AI Weekly Update | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ucsd-ai-news",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/ai-agent-architecture",
+      "title": "AI Agent Architecture | Brett Pollak",
+      "canonical": "https://brettcpollak.com/ai-agent-architecture",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/now",
+      "title": "Now | Brett Pollak",
+      "canonical": "https://brettcpollak.com/now",
+      "structuredDataBlocks": 1
+    },
+    {
+      "pathname": "/podcasts",
+      "title": "Podcast Discovery | Brett Pollak",
+      "canonical": "https://brettcpollak.com/podcasts",
+      "structuredDataBlocks": 1
+    },
+    {
+      "pathname": "/linkedin",
+      "title": "LinkedIn Notes | Brett Pollak",
+      "canonical": "https://brettcpollak.com/linkedin",
+      "structuredDataBlocks": 2
+    },
+    {
+      "pathname": "/contact",
+      "title": "Connect | Brett Pollak",
+      "canonical": "https://brettcpollak.com/contact",
+      "structuredDataBlocks": 1
+    }
+  ],
+  "internalDestinations": 128,
+  "missing": [],
+  "feeds": [
+    {
+      "kind": "ai-digest",
+      "items": 6,
+      "datedLinks": true,
+      "originalGuids": true
+    },
+    {
+      "kind": "ucsd-ai-news",
+      "items": 3,
+      "datedLinks": true,
+      "originalGuids": true
+    }
+  ],
+  "newsletterRendering": "passed"
+}

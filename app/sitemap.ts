@@ -1,3 +1,4 @@
+import { digestEditions, newsletterEditions } from '@/lib/editions';
 import type { MetadataRoute } from "next";
 import {
   SITE_URL,
@@ -18,6 +19,14 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    ...digestEditions.map(day => ({ url: `${SITE_URL}/ai-digest/${day.isoDate}` })),
+    ...newsletterEditions.map(edition => ({ url: `${SITE_URL}/ucsd-ai-news/${edition.isoDate}` })),
+    {
+      url: `${SITE_URL}/work`,
+      lastModified: isoToDate(staticPageDates["/work"]),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     {
       url: `${SITE_URL}/`,
       lastModified: isoToDate(staticPageDates["/"]),

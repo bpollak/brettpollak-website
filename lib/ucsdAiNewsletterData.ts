@@ -18,6 +18,7 @@ export type UcsdAiNewsletterData = {
   editionCount: number;
   itemCount: number;
   editions: UcsdAiNewsletterEdition[];
+  archive?: UcsdAiNewsletterEdition[];
 };
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {

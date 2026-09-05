@@ -25,17 +25,18 @@ export const SITE_URL = "https://brettcpollak.com";
  * automatically when the Hermes content crons refresh the data files.
  */
 export const staticPageDates: Record<string, string> = {
-  "/": "2026-08-22",
+  "/": "2026-09-05",
+  "/work": "2026-09-05",
   "/about": "2026-08-30",
   "/tritongpt": "2026-07-26",
-  "/speaking": "2026-08-22",
-  "/products": "2026-09-01",
+  "/speaking": "2026-09-05",
+  "/products": "2026-09-05",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-09-02",
+  "/ai-agent-architecture": "2026-09-05",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
-  "/contact": "2026-06-01",
+  "/contact": "2026-09-05",
 };
 
 /** First-published dates for long-form pages that carry Article JSON-LD. */
@@ -64,7 +65,7 @@ function clampToBuildDate(iso: string): string {
 
 // Derived automatically from the data modules; nothing to maintain here.
 export const latestMediaDate = clampToBuildDate(
-  maxIso(mediaItems.map((item) => item.date)),
+  maxIso(['2026-09-05', ...mediaItems.map((item) => item.date)]) // Featured selections revised September 5.
 );
 
 export const latestDigestDate = clampToBuildDate(

@@ -13,10 +13,11 @@ const FOOTER_GROUPS: FooterGroup[] = [
     heading: 'The Work',
     links: [
       { href: '/about', label: 'About' },
+      { href: '/work', label: 'Selected work' },
       { href: '/tritongpt', label: 'TritonAI' },
       { href: '/speaking', label: 'Speaking' },
       { href: '/media', label: 'Media & Publications' },
-      { href: '/products', label: 'Products' },
+      { href: '/products', label: 'Projects' },
       { href: 'https://resolutioncompanion.com/', label: 'Resolution Companion', external: true },
     ],
   },
@@ -24,7 +25,7 @@ const FOOTER_GROUPS: FooterGroup[] = [
     heading: 'Notes & Elsewhere',
     links: [
       { href: '/ai-digest', label: 'AI Digest' },
-      { href: '/ai-agent-architecture', label: 'Memory Ecosystem' },
+      { href: '/ai-agent-architecture', label: 'AI architecture' },
       { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
       { href: '/podcasts', label: 'Podcasts' },
       { href: '/now', label: 'Now' },

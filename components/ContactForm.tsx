@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 /**
  * A Web3Forms access key is a public client-side endpoint identifier, not a
@@ -14,10 +15,16 @@ const WEB3FORMS_ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '98628ac2-b0b6-4edc-8753-59822ba57b21';
 
 export default function ContactForm() {
+  const params = useSearchParams();
+  const initialSubject = params.get('topic') === 'speaking' ? 'Speaking Engagement' : '';
+  return <ContactFormFields key={initialSubject} initialSubject={initialSubject} />;
+}
+
+function ContactFormFields({ initialSubject }: { initialSubject: string }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: initialSubject,
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -69,7 +76,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="editorial-panel p-8 h-full flex flex-col">
+    <div id="contact-form" className="editorial-panel scroll-mt-28 p-6 sm:p-8 h-full flex flex-col">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 bg-wash-blue border border-[#9eb7aa] flex items-center justify-center">
           <svg aria-hidden="true" className="w-6 h-6 text-signal-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,6 +107,7 @@ export default function ContactForm() {
             type="text"
             id="name"
             name="name"
+            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -116,6 +124,7 @@ export default function ContactForm() {
             type="email"
             id="email"
             name="email"
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             required

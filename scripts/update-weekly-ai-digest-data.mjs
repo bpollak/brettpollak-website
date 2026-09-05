@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { preserveEditions, readGeneratedData } from './edition-archive.mjs';
 
 function getArg(name, fallback = null) {
   const prefix = `--${name}=`;
@@ -121,18 +122,23 @@ for (let current = new Date(weekStart); current <= today; current.setDate(curren
 }
 
 const headlineCount = days.reduce((total, day) => total + day.headlines.length, 0);
+const archive = preserveEditions(readGeneratedData(outputPath), days, 'days');
+
+const newestAvailable = [...archive, ...days].sort((a, b) => b.isoDate.localeCompare(a.isoDate))[0];
+
 const data = {
+  archive,
   generatedAt: new Date().toISOString(),
   weekOf: toIsoDate(weekStart),
   weekEnding: toIsoDate(weekEnd),
   weekLabel: getWeekLabel(weekStart, weekEnd),
-  publishedThrough: formatLongDate(today),
+  publishedThrough: newestAvailable ? formatLongDate(new Date(`${newestAvailable.isoDate}T12:00:00Z`)) : 'No editions yet',
   digestCount: days.length,
   headlineCount,
   days,
 };
 
-const fileContent = `export type WeeklyDigestDay = {\n  isoDate: string;\n  displayDate: string;\n  sourceFile: string;\n  headlines: string[];\n  raw: string;\n};\n\nexport type WeeklyDigestData = {\n  generatedAt: string;\n  weekOf: string;\n  weekEnding: string;\n  weekLabel: string;\n  publishedThrough: string;\n  digestCount: number;\n  headlineCount: number;\n  days: WeeklyDigestDay[];\n};\n\nexport const weeklyAiDigestData: WeeklyDigestData = ${JSON.stringify(data, null, 2)};\n`;
+const fileContent = `export type WeeklyDigestDay = {\n  isoDate: string;\n  displayDate: string;\n  sourceFile: string;\n  headlines: string[];\n  raw: string;\n};\n\nexport type WeeklyDigestData = {\n  generatedAt: string;\n  weekOf: string;\n  weekEnding: string;\n  weekLabel: string;\n  publishedThrough: string;\n  digestCount: number;\n  headlineCount: number;\n  archive?: WeeklyDigestDay[];\n  days: WeeklyDigestDay[];\n};\n\nexport const weeklyAiDigestData: WeeklyDigestData = ${JSON.stringify(data, null, 2)};\n`;
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, fileContent);
