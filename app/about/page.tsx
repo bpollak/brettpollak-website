@@ -186,8 +186,7 @@ export default function About() {
 
               <p className="text-lg text-body leading-relaxed">
                 Managed a department of 40 professionals including web developers, UI designers,
-                programmers, project managers, and team leads. Early lesson: large organizations adopt
-                technology through people and process.
+                programmers, project managers, and team leads.
               </p>
             </div>
 
@@ -221,13 +220,13 @@ export default function About() {
                   <svg aria-hidden="true" className="w-5 h-5 text-signal-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span><span className="font-semibold">ASU+GSV Summit 2026:</span> Shared AI at Scale — Developed by Universities for Universities</span>
+                  <span><span className="font-semibold">ASU+GSV Summit 2026:</span> Shared AI at Scale: Developed by Universities for Universities</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg aria-hidden="true" className="w-5 h-5 text-signal-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span><span className="font-semibold">TechTalk Summits (2026):</span> From AI Pilots to Enterprise Platforms — Building Secure, Governed AI at Scale</span>
+                  <span><span className="font-semibold">TechTalk Summits (2026):</span> From AI Pilots to Enterprise Platforms: Building Secure, Governed AI at Scale</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg aria-hidden="true" className="w-5 h-5 text-signal-blue mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -245,13 +244,13 @@ export default function About() {
                   <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>EDUCAUSE Review — &ldquo;Ushering in a New Era of AI-Driven Data Insights at UC San Diego&rdquo; (Feb 2025)</span>
+                  <span>EDUCAUSE Review: &ldquo;Ushering in a New Era of AI-Driven Data Insights at UC San Diego&rdquo; (Feb 2025)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>CIO.com — &ldquo;How poor data foundations can undermine AI success&rdquo; (Apr 2026)</span>
+                  <span>CIO.com: &ldquo;How poor data foundations can undermine AI success&rdquo; (Apr 2026)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">

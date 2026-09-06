@@ -27,7 +27,7 @@ export const SITE_URL = "https://brettcpollak.com";
 export const staticPageDates: Record<string, string> = {
   "/": "2026-09-05",
   "/work": "2026-09-05",
-  "/about": "2026-08-30",
+  "/about": "2026-09-06",
   "/tritongpt": "2026-07-26",
   "/speaking": "2026-09-05",
   "/products": "2026-09-05",
