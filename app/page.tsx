@@ -249,7 +249,7 @@ export default function Home() {
             <div>
               <p className="rule-label mb-5">Work at UC San Diego</p>
               <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
-                I work on technology and AI in higher education.
+                I help teams build and run technology at UC San Diego.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
                 I&rsquo;m the Executive Director of Workplace Technology and Infrastructure
