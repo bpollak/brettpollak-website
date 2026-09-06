@@ -97,7 +97,7 @@ export default function AiAgentArchitecturePage() {
           in a university setting and which remain untested.
         </p>
         <p className="text-sm text-body mb-10">
-          Architecture snapshot: September 2, 2026 &middot; Reading layout updated September 5, 2026.
+          Architecture snapshot: September 6, 2026 &middot; Reading layout updated September 5, 2026.
         </p>
 
         <nav aria-label="Architecture sections" className="reading-links mb-8">
@@ -109,11 +109,11 @@ export default function AiAgentArchitecturePage() {
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
             <div className="rule-label mb-2">Automated jobs</div>
-            <div className="text-2xl font-semibold text-ink">80 enabled jobs</div>
+            <div className="text-2xl font-semibold text-ink">83 enabled jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-ink">803 nodes · 898 pages</div>
+            <div className="text-2xl font-semibold text-ink">848 nodes · 1,008 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -178,9 +178,9 @@ export default function AiAgentArchitecturePage() {
             whether the accumulated information is useful later.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 80 enabled automated
+            This page documents how I built that knowledge layer for myself: 83 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. An 803-node knowledge graph, 898 wiki pages, a
+            models, with the primary inference path hosted on-prem. An 848-node knowledge graph, 1,008 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
             It also provides a starting point for considering whether parts of the
             pattern could be used beyond one person.
@@ -244,7 +244,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            In this system, 898 wiki pages form a reference library. A relevant page is
+            In this system, 1,008 wiki pages form a reference library. A relevant page is
             retrieved when a matching person, project, technology, or decision is mentioned.
           </p>
           <p>
@@ -277,7 +277,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            80 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
+            83 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -334,7 +334,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-blue font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">803 nodes · 844 edges</div>
+              <div className="text-2xl font-bold text-ink mb-2">848 nodes · 884 edges</div>
               <p className="text-sm text-body leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -346,7 +346,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-gold-ink font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">898 narrative pages</div>
+              <div className="text-2xl font-bold text-ink mb-2">1,008 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative. Good at answering
@@ -405,17 +405,17 @@ export default function AiAgentArchitecturePage() {
             local too.
           </p>
           <p>
-            As of September 2, 2026, <strong>all 80 enabled jobs run through{' '}
+            As of September 6, 2026, <strong>all 83 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
               TritonAI
             </a></strong>, UC San Diego&rsquo;s institutional AI gateway. The fleet runs on a
-            two-tier design: 49 inference jobs on open-weight models hosted on-prem — 47 on
+            two-tier design: 52 inference jobs on open-weight models hosted on-prem — 50 on
             GLM 5.3 for reasoning, tools, and long-horizon synthesis, and 2 on Gemma 4 31B for
             lightweight scan-and-check jobs. The other 31 jobs are deterministic scripts that
-            never call a model at all. Three of the 49 inference jobs pair with monitor
+            never call a model at all. Three of the 52 inference jobs pair with monitor
             mode: a deterministic script checks the source first, and the model call is
             skipped entirely when nothing changed. Three fallback models (DeepSeek V4
             Flash, Gemma 4 26B, Gemma 4 31B) stand ready behind the primary — a chain
@@ -442,7 +442,7 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.3</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.3 (open weight)</td>
                 <td className="px-4 py-3 text-body">Main chat, tools, interactive sessions, and nearly all scheduled agent work</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive + 47</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive + 50</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-ink">Lightweight scheduled work</td>
@@ -929,6 +929,26 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              September 6, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Weekly stats refresh: 83 jobs, graph +45 nodes, wiki crosses 1,000 pages</div>
+            <p className="text-sm text-body leading-6">
+              Knowledge graph grew from 803 to 848 nodes and 844 to 884 edges. The wiki
+              crossed a thousand pages, growing from 898 to 1,008 (+110): the largest single
+              addition is a 60-page mirror of Claude Code work-session memories from the
+              work Mac, plus new project pages for four TritonAI initiatives (comeback
+              cohort agent, course redesign studio, recharge cost attribution engine,
+              student voice intelligence engine). Four jobs joined the fleet
+              (agent-session-ingest, which pulls Claude Code and Codex session recaps into
+              the wiki; decision-brief-weekly; vendor-terms-watch;
+              opportunity-validation-loop) and the daily enhancement sprint was retired.
+              The fleet now stands at 83 enabled jobs: 52 inference (50 on GLM 5.3, 2 on
+              Gemma 4 31B) and 31 deterministic scripts.
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>

@@ -4,7 +4,7 @@
  * Waterfall grammar. The agent fleet's real daily schedule as a vertical
  * cascade: each row is a real cron entry (time, name, cadence), role-tinted,
  * with a connecting spine and hour markers on the rail. Data drawn from the
- * live Hermes schedule (79 timed fires/day), not idealized — the three daily
+ * live Hermes schedule (42 jobs fire on a typical weekday), not idealized — the three daily
  * arcs read top to bottom: accumulate, deliver, synthesize.
  */
 
@@ -75,7 +75,7 @@ export default function DailyRhythmClock() {
   return (
     <figure className="w-full my-10" role="img" aria-label="Daily cron rhythm — 24-hour timeline">
       <figcaption className="sr-only">
-        The real daily rhythm of the 80-job fleet, from the live schedule. Early-morning
+        The real daily rhythm of the 83-job fleet, from the live schedule. Early-morning
         scripts (4–8 AM) accumulate raw signals — Confluence, Google Drive, Teams, RSS
         feeds, digest, opportunity scan, pain signals. The 7:30 AM daily briefing
         delivers the morning read. Later crons synthesize: memory system health, wiki
@@ -158,8 +158,8 @@ export default function DailyRhythmClock() {
 
       {/* Footer note */}
       <p className="mt-5 text-xs text-muted italic max-w-2xl">
-        Selected daily and weekday jobs from the live schedule — 79 timed fires across a
-        typical week-day, plus Sunday&rsquo;s weekly synthesis pass and Monday&rsquo;s
+        Selected daily and weekday jobs from the live schedule — 42 jobs firing across a
+        typical weekday, plus Sunday&rsquo;s weekly synthesis pass and Monday&rsquo;s
         newsletter. Weekend and monthly jobs omitted for clarity.
       </p>
     </figure>
