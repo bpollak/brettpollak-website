@@ -63,7 +63,7 @@ export default function TritonGPTContent() {
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <div className="system-node p-4">
                   <p className="font-mono text-xs text-signal-gold-ink">UPDATED</p>
-                  <p className="mt-2 font-semibold">August 2026</p>
+                  <p className="mt-2 font-semibold">September 2026</p>
                 </div>
                 <div className="system-node p-4">
                   <p className="font-mono text-xs text-signal-gold-ink">CONTEXT</p>
@@ -84,7 +84,7 @@ export default function TritonGPTContent() {
           </div>
           <div className="field-note p-8">
             <p className="text-xl text-body leading-9 mb-7">
-            <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s institutional AI program. It includes infrastructure, task-specific assistants, campus data tools, instructional pilots, developer access, and shared workflows.
+            <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s institutional AI program, serving 73,000+ students, faculty, and staff. It includes infrastructure, task-specific assistants, campus data tools, instructional pilots, developer access, and shared workflows.
           </p>
             <p className="text-xl text-body leading-9 mb-8">
             <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. The SDSC-hosted environment is available to students, staff, and faculty and supports model choice, on-premises and approved cloud routes, developer APIs, embedded website support, and agent workflow components.
@@ -154,7 +154,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Instructional AI",
 	              description:
-	                "Course-grounded student and instructor assistants built around instructor-approved materials and teaching workflows.",
+	                "Course-grounded student and instructor assistants built around instructor-approved materials and teaching workflows, now natively integrated with Canvas.",
 	              href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
 	              icon: (
 	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -813,7 +813,7 @@ export default function TritonGPTContent() {
           {[
             {
               title: "Instructional AI Expansion",
-              desc: "More course pilots, faculty tooling, and simpler assistant creation for instructors.",
+              desc: "Canvas integration is live, giving enrolled students a course-connected AI Tutor grounded in instructor-approved materials. Next: more course pilots and simpler assistant creation for instructors.",
               color: "purple",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" /></svg>
             },
