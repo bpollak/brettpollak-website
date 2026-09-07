@@ -156,10 +156,11 @@ const products = [
     title: "Cason Recruiting CRM",
     href: "/products/cason-recruiting-crm",
     internal: true,
-    image: "/crm-recruiting.png",
-    imageAlt: "Cason Recruiting CRM sign-in page with the tagline \"Recruiting, organized\" and a Class of 2027 panel",
-    width: 1280,
-    height: 800,
+    image: "/crm-recruiting-workspace.png",
+    imageAlt: "Cason Recruiting CRM dashboard showing follow-ups, priority programs, and recruiting activity",
+    imageCaption: "Actual dashboard captured locally on September 7, 2026, with an empty database. No coach contacts or recruiting conversations are loaded.",
+    width: 1036,
+    height: 1342,
     description:
       "The private operations backend behind Cason's public recruiting profile. A separate family workspace for running the outreach itself. Every target school, coach contact, conversation, and next step lives in one Google-authenticated place, organized from first email to commitment. Because it is invite-only, here is a walkthrough of what it does.",
     features: [
@@ -177,10 +178,11 @@ const products = [
     title: "Scholarship Agent",
     href: "/products/cason-scholarship-agent",
     internal: true,
-    image: "/scholarship-agent.png",
-    imageAlt: "Scholarship Agent sign-in page showing passkey and Google sign-in options",
-    width: 1520,
-    height: 1040,
+    image: "/scholarship-agent-workspace.png",
+    imageAlt: "Scholarship Agent parent console showing application totals and action queues",
+    imageCaption: "Actual console captured locally on September 7, 2026, with an empty database and the background worker disconnected. No private applications are loaded.",
+    width: 1280,
+    height: 900,
     description:
       "A private family workspace with a background agent. It checks a registry of sponsors and foundations each day, reads each program's page, and compares the requirements with a stored student profile. It retains requirements only when it can quote the source. The walkthrough shows the workflow without exposing private account data.",
     features: [

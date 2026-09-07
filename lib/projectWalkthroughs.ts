@@ -115,11 +115,11 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
   },
   {
     "slug": "school-brief",
-    "image": "/project-school-brief.png",
-    "imageAlt": "School Brief private parent sign-in screen",
-    "imageCaption": "Live sign-in screen captured September 7, 2026. Private student records are not shown.",
-    "imageWidth": 1280,
-    "imageHeight": 900,
+    "image": "/project-school-brief-workspace.png",
+    "imageAlt": "School Brief dashboard showing attention summaries and parent follow-up controls",
+    "imageCaption": "Cropped from the running app on September 7, 2026, with no student data connected. Counts and lists show the empty state.",
+    "imageWidth": 1220,
+    "imageHeight": 588,
     "title": "School Brief",
     "group": "personal-apps",
     "category": "Family organization",
@@ -146,13 +146,13 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Use the information to decide what to discuss or check next."
       ]
     ],
-    "boundary": "The application is private. The capture shows only the sign-in screen. Collectors are read-only; the app does not submit assignments, send Classroom messages, or change grades."
+    "boundary": "The application is private. The capture shows its dashboard with no student records connected. Collectors are read-only; the app does not submit assignments, send Classroom messages, or change grades."
   },
   {
     "slug": "tritonverify",
-    "image": "/project-tritonverify.png",
-    "imageAlt": "TritonVerify Service Desk agent sign-in screen",
-    "imageCaption": "Live agent sign-in screen captured September 7, 2026. Verification records are not shown.",
+    "image": "/project-tritonverify-workspace.png",
+    "imageAlt": "TritonVerify agent console showing the verification-session form and policy guidance",
+    "imageCaption": "Captured from the running local app on September 7, 2026. The session form is empty and the staff directory is disconnected.",
     "imageWidth": 1280,
     "imageHeight": 900,
     "title": "TritonVerify",
@@ -185,11 +185,11 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
   },
   {
     "slug": "process-discovery",
-    "image": "/project-process-discovery.png",
-    "imageAlt": "Process Discovery invitation-only console sign-in screen",
-    "imageCaption": "Live console sign-in screen captured September 7, 2026. Staff interviews are not shown.",
-    "imageWidth": 1280,
-    "imageHeight": 900,
+    "image": "/project-process-discovery-workspace.png",
+    "imageAlt": "Process Discovery interview-template editor showing persona, opening line, and interview sections",
+    "imageCaption": "Cropped from the running local app on September 7, 2026. This is the built-in administrative-workflow template; no staff interviews are loaded.",
+    "imageWidth": 1210,
+    "imageHeight": 810,
     "title": "Process Discovery / Fable",
     "group": "campus-tools",
     "category": "Voice interviews",
@@ -220,11 +220,11 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
   },
   {
     "slug": "reviewdraft",
-    "image": "/project-reviewdraft.png",
-    "imageAlt": "ReviewDraft About screen from the local application",
-    "imageCaption": "Cropped capture of the local About screen from May 11, 2026. Interface text reflects that version; no employee reviews are shown.",
+    "image": "/project-reviewdraft-workspace.png",
+    "imageAlt": "ReviewDraft self-assessment workspace with review-period, goals, and supervisor-feedback fields",
+    "imageCaption": "Captured from the running local app on September 7, 2026, with an empty database and disconnected private sources. The form shows the app\u2019s default review period.",
     "imageWidth": 1280,
-    "imageHeight": 510,
+    "imageHeight": 900,
     "title": "ReviewDraft",
     "group": "experiments",
     "category": "Performance-review drafting",
@@ -251,6 +251,6 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Check the narrative against the inputs and retain responsibility for the final assessment."
       ]
     ],
-    "boundary": "This is a local proof of concept, not an institutional performance-management service. Its source and design were reviewed, but current runtime readiness was not tested. No employee records or evaluations are shown here."
+    "boundary": "This is a local proof of concept, not an institutional performance-management service. The self-assessment workspace was run locally for this capture. No employee records or evaluations are shown here."
   }
 ];

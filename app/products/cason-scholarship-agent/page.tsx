@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/scholarship-agent.png",
+        url: "/scholarship-agent-workspace.png",
         width: 1280,
-        height: 800,
-        alt: "Scholarship Agent sign-in page",
+        height: 900,
+        alt: "Scholarship Agent parent console showing application totals and action queues",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Scholarship Agent | Brett Pollak",
     description:
       "A private scholarship CRM with an autonomous agent behind it. Walkthrough illustrated with sample data.",
-    images: ["/scholarship-agent.png"],
+    images: ["/scholarship-agent-workspace.png"],
   },
 };
 
@@ -219,15 +219,16 @@ export default function CasonScholarshipAgentPage() {
                 Invite-only. Access is limited to approved family accounts.
               </p>
             </div>
-            <Frame label="scholarship agent · sign in">
+            <Frame label="Scholarship Agent · parent console">
               <Image
-                src="/scholarship-agent.png"
-                alt="Scholarship Agent sign-in page showing passkey and Google sign-in options"
-                width={1520}
-                height={1040}
+                src="/scholarship-agent-workspace.png"
+                alt="Scholarship Agent parent console showing application totals and action queues"
+                width={1280}
+                height={900}
                 className="h-auto w-full border border-line"
                 sizes="(min-width: 1024px) 34vw, 100vw"
               />
+              <p className="mt-3 text-sm leading-6 text-body">Actual console captured locally on September 7, 2026, with an empty database and the background worker disconnected. No private applications are loaded.</p>
             </Frame>
           </div>
         </div>

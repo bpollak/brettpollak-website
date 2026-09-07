@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/crm-recruiting.png",
-        width: 1280,
-        height: 800,
-        alt: "Cason Recruiting CRM sign-in page",
+        url: "/crm-recruiting-workspace.png",
+        width: 1036,
+        height: 1342,
+        alt: "Cason Recruiting CRM dashboard showing follow-ups, priority programs, and recruiting activity",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Cason Recruiting CRM | Brett Pollak",
     description:
       "A private recruiting workspace. Pipeline, contacts, questionnaires, and tasks. Walkthrough illustrated with sample data.",
-    images: ["/crm-recruiting.png"],
+    images: ["/crm-recruiting-workspace.png"],
   },
 };
 
@@ -202,15 +202,16 @@ export default function CasonRecruitingCrmPage() {
                 Invite-only. Access is limited to Cason and approved family accounts.
               </p>
             </div>
-            <Frame label="crm.casonpollak.com · sign in">
+            <Frame label="Recruiting CRM · dashboard">
               <Image
-                src="/crm-recruiting.png"
-                alt="Cason Recruiting CRM sign-in page with the tagline Recruiting, organized and a Class of 2027 panel"
-                width={1280}
-                height={800}
+                src="/crm-recruiting-workspace.png"
+                alt="Cason Recruiting CRM dashboard showing follow-ups, priority programs, and recruiting activity"
+                width={1036}
+                height={1342}
                 className="h-auto w-full border border-line"
                 sizes="(min-width: 1024px) 34vw, 100vw"
               />
+              <p className="mt-3 text-sm leading-6 text-body">Actual dashboard captured locally on September 7, 2026, with an empty database. No coach contacts or recruiting conversations are loaded.</p>
             </Frame>
           </div>
         </div>
