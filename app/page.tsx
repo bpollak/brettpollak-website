@@ -84,12 +84,12 @@ const featuredApps = [
     href: 'https://resolutioncompanion.com/',
   },
   {
-    title: 'BioBib Formatter',
-    category: 'Campus tool',
-    description: 'A web app that turns a faculty CV into a draft UC San Diego Academic Biography and Bibliography document for review.',
-    image: '/biobib-formatter.png',
-    imageAlt: 'BioBib Formatter web app',
-    href: 'https://biobib-formatter.vercel.app/',
+    title: 'Horse Racing Companion',
+    category: 'Race-day analysis',
+    description: 'An iOS app for independent Del Mar race-day analysis, with live odds, plain-language picks, and a record of results.',
+    image: '/horse-racing-companion-framed.png',
+    imageAlt: 'Horse Racing Companion iPhone app showing race-day picks and analysis',
+    href: 'https://horseracingcompanion.com/',
   },
   {
     title: 'Rock Hill Property Radar',
