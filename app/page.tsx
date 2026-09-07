@@ -74,6 +74,33 @@ const featuredWork = [
   },
 ];
 
+const featuredApps = [
+  {
+    title: 'Resolution Companion',
+    category: 'Mobile app',
+    description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
+    image: '/resolution-companion.webp',
+    imageAlt: 'Resolution Companion screens showing habit planning and progress',
+    href: 'https://resolutioncompanion.com/',
+  },
+  {
+    title: 'BioBib Formatter',
+    category: 'Campus tool',
+    description: 'A web app that turns a faculty CV into a draft UC San Diego Academic Biography and Bibliography document for review.',
+    image: '/biobib-formatter.png',
+    imageAlt: 'BioBib Formatter web app',
+    href: 'https://biobib-formatter.vercel.app/',
+  },
+  {
+    title: 'Rock Hill Property Radar',
+    category: 'Personal research',
+    description: 'A housing comparison dashboard that brings listing sources, rental evidence, and adjustable planning assumptions together.',
+    image: '/property-radar.png',
+    imageAlt: 'Rock Hill Property Radar housing comparison dashboard',
+    href: 'https://bpollak.github.io/rock-hill-property-radar/',
+  },
+];
+
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
   return d.toLocaleDateString('en-US', {
@@ -317,6 +344,37 @@ export default function Home() {
             <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
               <HomeHeroSystemMap />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-line bg-paper-strong" aria-labelledby="featured-apps-heading">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="flex flex-wrap items-end justify-between gap-5">
+            <div>
+              <p className="rule-label mb-3">Projects</p>
+              <h2 id="featured-apps-heading" className="text-3xl font-medium md:text-4xl">Apps I&apos;ve built.</h2>
+            </div>
+            <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all projects</Link>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {featuredApps.map(app => (
+              <article key={app.title} className="flex flex-col border border-line bg-paper">
+                <div className="relative h-52 border-b border-line bg-white/70">
+                  <Image src={app.image} alt={app.imageAlt} fill
+                    className="object-contain p-4" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="rule-label mb-3">{app.category}</p>
+                  <h3 className="text-2xl font-medium leading-8">{app.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-body">{app.description}</p>
+                  <a href={app.href} target="_blank" rel="noopener noreferrer"
+                    className="mt-auto inline-block pt-6 text-sm font-semibold text-signal-blue underline underline-offset-4">
+                    Explore app<span className="sr-only">: {app.title} (opens in a new tab)</span>
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

@@ -25,7 +25,7 @@ export const SITE_URL = "https://brettcpollak.com";
  * automatically when the Hermes content crons refresh the data files.
  */
 export const staticPageDates: Record<string, string> = {
-  "/": "2026-09-05",
+  "/": "2026-09-07",
   "/work": "2026-09-05",
   "/about": "2026-09-06",
   "/tritongpt": "2026-07-26",
