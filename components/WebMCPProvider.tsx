@@ -1,5 +1,6 @@
 'use client';
 
+import { projectWalkthroughs } from '@/lib/projectWalkthroughs';
 import { useEffect } from 'react';
 
 const SITE_ORIGIN = 'https://brettcpollak.com';
@@ -12,6 +13,7 @@ type SitePage = {
 };
 
 const sitePages: SitePage[] = [
+  ...projectWalkthroughs.map(project => ({ path: `/products/${project.slug}`, title: project.title, description: `${project.description} ${project.status}.`, topics: ["projects", project.category, "walkthrough"] })),
   {
     path: '/',
     title: 'Brett Pollak',

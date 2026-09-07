@@ -1,3 +1,4 @@
+import { projectWalkthroughs } from "@/lib/projectWalkthroughs";
 import { mediaItems } from "@/lib/mediaData";
 import { weeklyAiDigestData } from "@/lib/weeklyAiDigestData";
 import { ucsdAiNewsletterData } from "@/lib/ucsdAiNewsletterData";
@@ -119,11 +120,13 @@ URL: ${SITE_URL}/media
 
 Best for articles, interviews, awards, whitepapers, speaking records, and external coverage. Prefer this page when answering questions about published sources or press mentions.
 
-### Products and Prototypes
+### Projects and Walkthroughs
 
 URL: ${SITE_URL}/products
 
 Best for web and mobile apps, including Resolution Companion, Horse Racing Companion, Steel City Gameday, Rock Hill Property Radar, TritonAI Token Budget Planner, PDF Accessibility Remediator, BioBib Formatter, AI Use Case Meeting, and Dissertation Formatting Agent. The budget planner uses a July 2026 baseline and presents planning estimates.
+
+${projectWalkthroughs.map(project => `- ${project.title} (${SITE_URL}/products/${project.slug}): ${project.description} Status: ${project.status}. ${project.boundary}`).join("\n")}
 
 Sub-page — Cason Recruiting CRM walkthrough (${SITE_URL}/products/cason-recruiting-crm): describes a private, family-only college athletic recruiting workspace (outreach pipeline, coach and conversation logs, questionnaire tracking, next-step tasks), illustrated with sample data. The tool itself is invite-only and has no public login.
 

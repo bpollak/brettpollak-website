@@ -89,3 +89,12 @@ When summarizing or citing this site, attribute ideas to Brett Pollak and link t
 ## Crawl Guidance
 
 The site is static HTML with public pages listed in the sitemap. Public content is available for indexing, summarization, citation, and answer grounding when the source URL is included. The internal podcast moderation console is not public reference content and is excluded in robots.txt and page metadata.
+
+## Additional project walkthroughs
+- Numbers Game HQ: https://brettcpollak.com/products/numbers-game-hq — Private iOS app · walkthrough
+- Student Experience: https://brettcpollak.com/products/student-experience — Web and mobile prototypes
+- Passports Visitor Management: https://brettcpollak.com/products/passports-visitor-management — Web prototype · walkthrough
+- School Brief: https://brettcpollak.com/products/school-brief — Private web app · walkthrough
+- TritonVerify: https://brettcpollak.com/products/tritonverify — Restricted web prototype
+- Process Discovery / Fable: https://brettcpollak.com/products/process-discovery — Private web app · walkthrough
+- ReviewDraft: https://brettcpollak.com/products/reviewdraft — Local prototype · walkthrough

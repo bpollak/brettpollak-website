@@ -1,3 +1,4 @@
+import { projectWalkthroughs } from "@/lib/projectWalkthroughs";
 import { digestEditions, newsletterEditions } from '@/lib/editions';
 import type { MetadataRoute } from "next";
 import {
@@ -19,6 +20,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    ...projectWalkthroughs.map(project => ({ url: `${SITE_URL}/products/${project.slug}`, lastModified: isoToDate(staticPageDates[`/products/${project.slug}`]) })),
     ...digestEditions.map(day => ({ url: `${SITE_URL}/ai-digest/${day.isoDate}` })),
     ...newsletterEditions.map(edition => ({ url: `${SITE_URL}/ucsd-ai-news/${edition.isoDate}` })),
     {

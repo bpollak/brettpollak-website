@@ -1,3 +1,4 @@
+import { projectWalkthroughs } from "./projectWalkthroughs";
 import { mediaItems } from "./mediaData";
 import { weeklyAiDigestData } from "./weeklyAiDigestData";
 import { ucsdAiNewsletterData } from "./ucsdAiNewsletterData";
@@ -25,6 +26,7 @@ export const SITE_URL = "https://brettcpollak.com";
  * automatically when the Hermes content crons refresh the data files.
  */
 export const staticPageDates: Record<string, string> = {
+  ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
   "/": "2026-09-07",
   "/work": "2026-09-05",
   "/about": "2026-09-06",
