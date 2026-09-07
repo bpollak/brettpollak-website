@@ -35,7 +35,8 @@ For a longer machine-readable briefing, use:
   - Speaking topics, keynote themes, and session framing around AI in higher education, institutional AI governance, and agentic workflows.
 - Media: https://brettcpollak.com/media
   - Published articles, interviews, press, awards, and external coverage.
-- Products: https://brettcpollak.com/products
+- Projects: https://brettcpollak.com/products
+  - Web and mobile apps, including Rock Hill Property Radar and TritonAI Token Budget Planner.
   - Product experiments and AI-enabled tools.
   - Cason Recruiting CRM (walkthrough): https://brettcpollak.com/products/cason-recruiting-crm
     - What a private, family-only college-recruiting workspace does (pipeline, coach and conversation logs, questionnaires, tasks), illustrated with sample data. The tool itself is invite-only.

@@ -30,7 +30,7 @@ export const staticPageDates: Record<string, string> = {
   "/about": "2026-09-06",
   "/tritongpt": "2026-07-26",
   "/speaking": "2026-09-05",
-  "/products": "2026-09-05",
+  "/products": "2026-09-07",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-09-06",
