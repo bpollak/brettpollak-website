@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { projectWalkthroughs } from '@/lib/projectWalkthroughs';
 import { SITE_URL } from '@/lib/seoDates';
@@ -37,6 +38,12 @@ export default async function ProjectWalkthrough({ params }: Props) {
           <p className="mt-5 inline-block border border-line bg-wash-green px-3 py-2 text-sm font-semibold text-signal-green">{project.status}</p>
           <p className="mt-6 max-w-3xl text-xl leading-9 text-body">{project.description}</p>
         </header>
+        <figure className="border-b border-line py-10">
+          <a href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size capture of ${project.title}`}>
+            <Image src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} className="mx-auto h-auto max-h-[640px] w-auto max-w-full border border-line object-contain" sizes="(min-width: 1024px) 1000px, 100vw" />
+          </a>
+          <figcaption className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-body">{project.imageCaption}</figcaption>
+        </figure>
         <section aria-labelledby="purpose-heading" className="grid gap-8 border-b border-line py-10 md:grid-cols-[0.5fr_1fr]">
           <h2 id="purpose-heading" className="text-3xl font-medium">Why I built it</h2>
           <p className="text-lg leading-8 text-body">{project.purpose}</p>
@@ -44,7 +51,7 @@ export default async function ProjectWalkthrough({ params }: Props) {
         <section aria-labelledby="workflow-heading" className="py-10">
           <p className="rule-label mb-4">Walkthrough</p>
           <h2 id="workflow-heading" className="text-3xl font-medium">How the workflow fits together</h2>
-          <p className="mt-4 text-body">A process overview, illustrated below with a fictional scenario.</p>
+          <p className="mt-4 text-body">A short guide to the application’s workflow.</p>
           <ol className="mt-7 grid gap-5 md:grid-cols-3">
             {project.steps.map(([title, body], index) => (
               <li key={title} className="border border-line bg-paper-strong p-6">
@@ -54,10 +61,7 @@ export default async function ProjectWalkthrough({ params }: Props) {
               </li>
             ))}
           </ol>
-          <div className="mt-7 border-l-4 border-[#366c5a] bg-wash-green p-6">
-            <h3 className="font-semibold">Illustrative example</h3>
-            <p className="mt-3 text-lg leading-8 text-body">{project.example}</p>
-          </div>
+
         </section>
         <section aria-labelledby="status-heading" className="border-y border-line py-10">
           <h2 id="status-heading" className="text-3xl font-medium">Project status and access</h2>

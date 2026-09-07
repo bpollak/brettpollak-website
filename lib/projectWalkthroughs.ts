@@ -1,10 +1,16 @@
 export type ProjectWalkthrough = {
-  slug: string; title: string; group: string; category: string; status: string; description: string; purpose: string; features: string[]; steps: string[][]; example: string; boundary: string; publicUrl?: string; publicLabel?: string; creditUrl?: string; creditLabel?: string;
+  image: string; imageAlt: string; imageCaption: string; imageWidth: number; imageHeight: number;
+  slug: string; title: string; group: string; category: string; status: string; description: string; purpose: string; features: string[]; steps: string[][]; boundary: string; publicUrl?: string; publicLabel?: string; creditUrl?: string; creditLabel?: string;
 };
 
 export const projectWalkthroughs: ProjectWalkthrough[] = [
   {
     "slug": "numbers-game-hq",
+    "image": "/project-numbers-game-hq.png",
+    "imageAlt": "Numbers Game HQ Waivers screen captured in the iOS simulator",
+    "imageCaption": "Actual iOS simulator capture from September 5, 2026. The QA session uses test players and values, not a live league.",
+    "imageWidth": 1206,
+    "imageHeight": 2622,
     "title": "Numbers Game HQ",
     "group": "personal-apps",
     "category": "Fantasy football",
@@ -31,11 +37,15 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Use the activity log and notifications to track the work."
       ]
     ],
-    "example": "A manager asks which bench player could cover a lineup gap, then reviews the options in the context of the rest of the team.",
-    "boundary": "This is a private app, not a public download. The example here is illustrative and contains no real league or account data."
+    "boundary": "This is a private app, not a public download. The simulator capture uses test data and contains no private account information."
   },
   {
     "slug": "student-experience",
+    "image": "/project-student-experience.png",
+    "imageAlt": "Student Experience web prototype showing its Today view",
+    "imageCaption": "Live web prototype captured September 7, 2026. Student records shown are the application\u2019s built-in sample data.",
+    "imageWidth": 1280,
+    "imageHeight": 900,
     "title": "Student Experience",
     "group": "campus-tools",
     "category": "Student services",
@@ -62,7 +72,6 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Explore how a unified experience could guide a student through a task."
       ]
     ],
-    "example": "A fictional student checks an upcoming class, reviews a balance after aid, and opens the next coursework item from one starting point.",
     "boundary": "The web demonstrator uses sample student records and transactions. It is not a live student system. The mobile prototype adapts the existing UC San Diego Campus Mobile application; my work includes the navigation and flagship experience, building on that team\u2019s code. Live integration and release readiness vary by platform.",
     "publicUrl": "https://ucsd-student-experience.vercel.app/",
     "publicLabel": "Open the sample-data web demo",
@@ -71,6 +80,11 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
   },
   {
     "slug": "passports-visitor-management",
+    "image": "/project-passports-visitor-management.png",
+    "imageAlt": "Passports Visitor Management location check-in screen",
+    "imageCaption": "Live visitor check-in entry page captured September 7, 2026.",
+    "imageWidth": 1280,
+    "imageHeight": 900,
     "title": "Passports Visitor Management",
     "group": "campus-tools",
     "category": "Visitor services",
@@ -97,11 +111,15 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "The app also includes an employee-dashboard entry for the staff side of the experience."
       ]
     ],
-    "example": "A visitor arriving at a campus service counter chooses that location and starts the check-in flow.",
     "boundary": "This is a prototype overview, not an announcement of a campus service rollout. The public entry page was reviewed; end-to-end check-in and staff-dashboard behavior have not been independently verified for this walkthrough. No visitor records are shown."
   },
   {
     "slug": "school-brief",
+    "image": "/project-school-brief.png",
+    "imageAlt": "School Brief private parent sign-in screen",
+    "imageCaption": "Live sign-in screen captured September 7, 2026. Private student records are not shown.",
+    "imageWidth": 1280,
+    "imageHeight": 900,
     "title": "School Brief",
     "group": "personal-apps",
     "category": "Family organization",
@@ -128,11 +146,15 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Use the information to decide what to discuss or check next."
       ]
     ],
-    "example": "A fictional family reviews an upcoming science assignment and a school notice before planning the week.",
-    "boundary": "The application is private. This page uses an illustrative scenario, not student records. Collectors are read-only; the app does not submit assignments, send Classroom messages, or change grades."
+    "boundary": "The application is private. The capture shows only the sign-in screen. Collectors are read-only; the app does not submit assignments, send Classroom messages, or change grades."
   },
   {
     "slug": "tritonverify",
+    "image": "/project-tritonverify.png",
+    "imageAlt": "TritonVerify Service Desk agent sign-in screen",
+    "imageCaption": "Live agent sign-in screen captured September 7, 2026. Verification records are not shown.",
+    "imageWidth": 1280,
+    "imageHeight": 900,
     "title": "TritonVerify",
     "group": "campus-tools",
     "category": "Service-desk identity verification",
@@ -159,11 +181,15 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Retain the workflow outcome and audit events for follow-up."
       ]
     ],
-    "example": "A fictional caller needs account help. An agent follows the verification workflow before continuing with the support request.",
     "boundary": "Agent access is restricted. This walkthrough does not expose identities, challenge links, or staff records, and it does not claim a campus-wide production rollout."
   },
   {
     "slug": "process-discovery",
+    "image": "/project-process-discovery.png",
+    "imageAlt": "Process Discovery invitation-only console sign-in screen",
+    "imageCaption": "Live console sign-in screen captured September 7, 2026. Staff interviews are not shown.",
+    "imageWidth": 1280,
+    "imageHeight": 900,
     "title": "Process Discovery / Fable",
     "group": "campus-tools",
     "category": "Voice interviews",
@@ -190,11 +216,15 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Organize findings into themes and possible projects for human review."
       ]
     ],
-    "example": "An illustrative interview describes repeatedly moving information between two systems. The reviewer examines the supporting evidence before deciding whether to investigate an integration.",
     "boundary": "The console is invitation-only. This page contains no staff interviews or transcripts. An opportunity in the backlog is a proposal for review, not a decision to automate someone\u2019s work."
   },
   {
     "slug": "reviewdraft",
+    "image": "/project-reviewdraft.png",
+    "imageAlt": "ReviewDraft About screen from the local application",
+    "imageCaption": "Cropped capture of the local About screen from May 11, 2026. Interface text reflects that version; no employee reviews are shown.",
+    "imageWidth": 1280,
+    "imageHeight": 510,
     "title": "ReviewDraft",
     "group": "experiments",
     "category": "Performance-review drafting",
@@ -221,7 +251,6 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Check the narrative against the inputs and retain responsibility for the final assessment."
       ]
     ],
-    "example": "Using invented goals and accomplishments, a supervisor develops a draft and checks that each statement has supporting context.",
     "boundary": "This is a local proof of concept, not an institutional performance-management service. Its source and design were reviewed, but current runtime readiness was not tested. No employee records or evaluations are shown here."
   }
 ];

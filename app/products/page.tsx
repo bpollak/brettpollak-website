@@ -35,8 +35,8 @@ const products = [
   ...projectWalkthroughs.map(project => ({
     group: project.group, status: project.status, category: project.category, title: project.title,
     href: `/products/${project.slug}`, internal: true,
-    image: `/project-${project.slug}.svg`, imageAlt: `${project.title}: illustrated workflow overview, not an application screenshot`,
-    width: 1200, height: 675, description: project.description, features: project.features, cta: "See how it works",
+    image: project.image, imageAlt: project.imageAlt, imageCaption: project.imageCaption,
+    width: project.imageWidth, height: project.imageHeight, description: project.description, features: project.features, cta: "See how it works",
   })),
   {
     group: "personal-apps",
@@ -447,6 +447,7 @@ export default function Products() {
                 </h3>
                 <p className="mt-3 inline-block border border-line bg-wash-green px-3 py-1 text-sm font-semibold text-signal-green">{product.status}</p>
                 <p className="mt-5 text-lg leading-8 text-body">{product.description}</p>
+                {"imageCaption" in product && <p className="mt-3 text-sm leading-6 text-body">{product.imageCaption}</p>}
                 <div className="mt-7 grid gap-3 sm:grid-cols-2">
                   {product.features.map((feature) => (
                     <div key={feature} className="flex items-start gap-3 border-t border-line pt-3">
