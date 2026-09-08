@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
-import { homeUpdates, type HomeUpdateArea } from '@/lib/homeUpdatesData';
+import { updatesByArea } from '@/lib/homeUpdatesData';
 import { mediaItems } from '@/lib/mediaData';
 
 export const metadata: Metadata = {
@@ -107,18 +107,6 @@ const featuredApps = [
     cta: 'Read the case study',
   },
 ];
-
-const AREA_LABELS: Record<HomeUpdateArea, string> = {
-  work: 'Work',
-  personal: 'Personal',
-  media: 'Media',
-};
-
-const AREA_TONES: Record<HomeUpdateArea, string> = {
-  work: 'blue',
-  personal: 'gold',
-  media: 'green',
-};
 
 const recentMedia = [...mediaItems]
   .sort((a, b) => (a.date < b.date ? 1 : -1))
@@ -293,7 +281,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WORKING ON NOW */}
+      {/* WORKING ON NOW — three horizontal modules */}
       <section className="border-b border-line tint-gold" aria-labelledby="working-on-now-heading">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="flex flex-wrap items-end justify-between gap-5">
@@ -303,21 +291,50 @@ export default function Home() {
             </div>
             <Link href="/now" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Full current focus</Link>
           </div>
-          <ol className="mt-8 grid gap-4 md:grid-cols-3">
-            {homeUpdates.updates.map(update => (
-              <li key={update.text} className="border border-line bg-paper p-5" data-area={update.area}>
-                <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-body">
-                  <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone={AREA_TONES[update.area]} />
-                  <span>{AREA_LABELS[update.area]}</span>
-                  <span aria-hidden="true">·</span>
-                  <span className="font-mono normal-case tracking-normal">{update.date}</span>
-                </p>
-                <a href={update.href} className="leading-7 text-ink underline decoration-signal-gold decoration-2 underline-offset-4 hover:text-signal-blue">
-                  {update.text}
-                </a>
-              </li>
-            ))}
-          </ol>
+
+          <div className="mt-10 space-y-12">
+            {/* UCSD work module */}
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="blue" />
+                UC San Diego
+              </h3>
+              <div className="border-y border-line">
+                {updatesByArea('work').map(update => (
+                  <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    <span className="font-mono text-xs text-body">{update.date}</span>
+                    <span className="min-w-0">
+                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{update.text}</span>
+                      {update.note && <span className="mt-0.5 block text-sm leading-6 text-body">{update.note}</span>}
+                    </span>
+                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Personal module */}
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="gold" />
+                Personal projects
+              </h3>
+              <div className="border-y border-line">
+                {updatesByArea('personal').map(update => (
+                  <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    <span className="font-mono text-xs text-body">{update.date}</span>
+                    <span className="min-w-0">
+                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{update.text}</span>
+                      {update.note && <span className="mt-0.5 block text-sm leading-6 text-body">{update.note}</span>}
+                    </span>
+                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -395,11 +412,14 @@ export default function Home() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid gap-2 py-5 sm:grid-cols-[11rem_1fr_auto] sm:items-center text-white/78 transition-colors hover:text-white"
+                  className="grid gap-2 py-5 transition-colors hover:bg-white/[0.04] sm:grid-cols-[8rem_1fr_auto] sm:items-center sm:gap-4 sm:px-3"
                 >
-                  <span className="font-semibold text-white">{item.publication}</span>
-                  <span>{item.title}</span>
-                  <span className="font-mono text-xs text-[#f2b84b]">{item.category}</span>
+                  <span className="font-mono text-xs text-[#f2b84b]">{item.date}</span>
+                  <span className="min-w-0">
+                    <span className="block font-semibold text-white">{item.publication}</span>
+                    <span className="mt-0.5 block text-sm leading-6 text-white/72">{item.title}</span>
+                  </span>
+                  <span className="font-mono text-xs text-white/45">{item.category}</span>
                 </a>
               ))}
             </div>
