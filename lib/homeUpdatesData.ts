@@ -66,10 +66,10 @@ export const homeUpdates: HomeUpdatesData = {
 
     // ── Personal work ─────────────────────────────────────────────────
     {
-      date: '2026-09-07',
+      date: '2026-09-08',
       area: 'personal',
       text: 'Resolution Companion 1.4.0 approved — live in the App Store',
-      note: 'New coach check-ins and progress view. Site refreshed with current screenshots.',
+      note: 'New coach check-ins and progress view, approved by Apple and available now.',
       href: 'https://resolutioncompanion.com/',
     },
     {
