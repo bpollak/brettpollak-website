@@ -139,12 +139,6 @@ function formatNowDate(iso: string): string {
 
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
-const questions = [
-  'The technical challenge is tapering. The human side is harder. How do you get past the early adopters and reach people who aren\u2019t volunteering?',
-  'Students pushed back on AI they could see. Does responsible adoption mean keeping AI invisible in the solution layer?',
-  'Lightweight governance worked for experimentation. What does the version look like when the stakes are real?',
-];
-
 const routes = [
   { href: '/tritongpt', label: 'TritonAI', note: 'Program overview and metrics' },
   { href: '/ai-agent-architecture', label: 'AI architecture', note: 'Personal AI system design' },
@@ -395,27 +389,6 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WORKING QUESTIONS */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
-          <div>
-            <p className="rule-label mb-4">Working questions</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-              Things I don&rsquo;t have answers to yet.
-            </h2>
-          </div>
-          <div>
-            <ul className="space-y-6">
-              {questions.map((question) => (
-                <li key={question} className="border-b border-line pb-6">
-                  <p className="text-lg leading-8 text-ink">{question}</p>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
