@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Metadata } from "next";
 import { SITE_URL, staticPageDates } from '@/lib/seoDates';
+import HomeHeroSystemMap from '@/components/home/HomeHeroSystemMap';
 
 export const metadata: Metadata = {
   title: "About — Work in Higher Education and AI",
@@ -42,6 +43,15 @@ const profilePageSchema = {
   isPartOf: { "@id": `${SITE_URL}/#website` },
 };
 
+const portfolioAreas = [
+  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-premises compute, including infrastructure used by the campus AI platform.' },
+  { label: 'Data & analytics', body: 'Enterprise data warehouse, BI tools, and predictive analytics.' },
+  { label: 'Service desk & field support', body: 'Tier 1–2 support for students, faculty, and staff.' },
+  { label: 'Endpoint management', body: 'Device lifecycle, enrollment, and security compliance.' },
+  { label: 'Enterprise collaboration', body: 'M365, Google Workspace, Zoom, Qualtrics.' },
+  { label: 'AI platforms', body: 'TritonGPT, the Developer API, and the agentic tools being built on top of them.' },
+];
+
 export default function About() {
   return (
     <main className="page-shell" id="main-content" tabIndex={-1}>
@@ -62,6 +72,32 @@ export default function About() {
       </section>
 
       <div className="max-w-7xl mx-auto px-6 py-16">
+
+        {/* What my group supports */}
+        <div className="mb-20">
+          <div className="border-y border-line py-6 mb-10">
+            <p className="rule-label mb-3">The portfolio</p>
+            <h2 className="text-3xl font-medium text-ink">What my group supports.</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-body">
+              The work spans shared services used by students, faculty, and staff,
+              along with the platforms and support teams behind them.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+            <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
+              <HomeHeroSystemMap />
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-ink">Areas of responsibility</h3>
+              {portfolioAreas.map((area) => (
+                <div key={area.label} className="border-b border-line pb-4">
+                  <h4 className="font-semibold text-ink">{area.label}</h4>
+                  <p className="mt-1 text-sm leading-6 text-body">{area.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Personal Narrative */}
         <div className="grid md:grid-cols-5 gap-16 mb-20">

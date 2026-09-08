@@ -5,6 +5,124 @@ export type ProjectWalkthrough = {
 
 export const projectWalkthroughs: ProjectWalkthrough[] = [
   {
+    "slug": "resolution-companion",
+    "image": "/resolution-companion.webp",
+    "imageAlt": "Resolution Companion screens showing the journey calendar, today view, and AI coach",
+    "imageCaption": "Screens from the public app site, resolutioncompanion.com, captured September 8, 2026.",
+    "imageWidth": 900,
+    "imageHeight": 1280,
+    "title": "Resolution Companion",
+    "group": "personal-apps",
+    "category": "AI-powered habit building",
+    "status": "Available on iOS · v1.4.0 in App Store review",
+    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Live on the App Store, with version 1.4.0 currently in review.",
+    "purpose": "Most habit apps count streaks, and one broken streak ends the habit. Resolution Companion starts from identity instead: name who you are becoming, then log small daily actions that reinforce it, with an AI coach in the loop for the days when motivation runs out.",
+    "features": [
+      "Identity-based plans, not streak counts",
+      "Small daily actions with two-minute versions",
+      "AI coach: open conversations and weekly reviews",
+      "Journey calendar, milestones, and comebacks",
+      "Plans and progress stay on the device"
+    ],
+    "steps": [
+      [
+        "Define who you're becoming",
+        "Start with a short conversation about the goal. The app drafts an identity statement and a plan of small daily actions to confirm."
+      ],
+      [
+        "Act today",
+        "Each day shows one or two small actions, each with a two-minute version. Progress fills the day's ring, and one missed day never erases the record."
+      ],
+      [
+        "Review with the coach",
+        "Ask the AI coach for help, run a weekly review, or preview a small plan adjustment. Nothing changes until it is confirmed."
+      ]
+    ],
+    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.0 is in App Store review as of September 8, 2026.",
+    "publicUrl": "https://resolutioncompanion.com/",
+    "publicLabel": "Visit the app's website",
+    "creditUrl": "https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708",
+    "creditLabel": "Download on the App Store"
+  },
+  {
+    "slug": "horse-racing-companion",
+    "image": "/horse-racing-companion-framed.png",
+    "imageAlt": "Horse Racing Companion iPhone app showing race day picks and analysis",
+    "imageCaption": "Screens from the public app site, horseracingcompanion.com, captured September 8, 2026.",
+    "imageWidth": 691,
+    "imageHeight": 1391,
+    "title": "Horse Racing Companion",
+    "group": "personal-apps",
+    "category": "Independent race-day analysis",
+    "status": "Available on iOS · Del Mar 2026 season",
+    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. Live on the App Store through the 2026 season.",
+    "purpose": "A day at Del Mar had one frustrating part: the betting window. Horse Racing Companion weighs public odds, past Del Mar results for horses, trainers, jockeys, and post position the same way for every race — and says so when the information is not there.",
+    "features": [
+      "One pick per race: Win, Show, or a three-horse Trifecta box",
+      "Estimated win chance for every horse in the race",
+      "Odds, scratches, and post times rechecked until just before post",
+      "Final picks saved before post and kept beside official results",
+      "Public record: 31 of 72 final picks matched across ten tracked cards"
+    ],
+    "steps": [
+      [
+        "Read the day's card",
+        "The Races tab lists every Del Mar race with post time, surface, and distance, with the next race first. Live picks open about two hours before first post."
+      ],
+      [
+        "See the pick and the reasons",
+        "Each race shows the pick, a confidence meter, and a short explanation, plus every horse with jockey, trainer, odds, and estimated win chance."
+      ],
+      [
+        "Check the record",
+        "About two minutes before post the pick is saved. The Results tab shows it beside the official finish, marked Matched or Did Not Match, with a summary for each race day."
+      ]
+    ],
+    "boundary": "Horse Racing Companion is an independent app and is not affiliated with Del Mar Thoroughbred Club. It has no bet slip, wagering account, or connection to a betting operator, and it never places a wager. The tracked record — 31 of 72 final picks matched (43.1%) across ten cards, August 20 to September 4, 2026 — is a small sample that does not establish profitability or a betting edge. For adults 18+.",
+    "publicUrl": "https://horseracingcompanion.com/",
+    "publicLabel": "Visit the app's website",
+    "creditUrl": "https://apps.apple.com/us/app/horse-racing-companion/id6802113749",
+    "creditLabel": "Download on the App Store"
+  },
+  {
+    "slug": "steel-city-gameday",
+    "image": "/steel-city-gameday.png",
+    "imageAlt": "Steel City Gameday with a private Crew room and a live Flash Pick",
+    "imageCaption": "Screens from the public app site, steelcitygameday.com, captured September 8, 2026.",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "title": "Steel City Gameday",
+    "group": "personal-apps",
+    "category": "Sports group experience",
+    "status": "In App Store review · Fall 2026",
+    "description": "A private iPhone app for Steelers fans: invite-only Crews share game-day chat, pregame picks, timed live polls, and season-long standings. Currently in App Store review ahead of the fall 2026 season.",
+    "purpose": "Watching the game apart is normal now, but group texts lose the season. Steel City Gameday turns the people you watch with into a Crew and gives every game a scored record that lasts all year.",
+    "features": [
+      "Invite-only Crews — no public feed",
+      "Pregame picks, editable until kickoff and private until they lock",
+      "Timed Flash Picks while the game is live",
+      "Season standings, receipts, and quarter races",
+      "The Wire: Steelers headlines from original publishers, refreshed every 15 minutes"
+    ],
+    "steps": [
+      [
+        "Start a Crew",
+        "Create a private Crew for family, college friends, or whoever you watch with. Members join by invite link only."
+      ],
+      [
+        "Make picks before and during the game",
+        "Answer pregame questions — who wins, total points, first touchdown — then timed Flash Picks while the game is live. Picks stay private until they lock."
+      ],
+      [
+        "Keep the season tally",
+        "Correct answers earn points, every game leaves a receipt, and Crew standings carry the season. The Wire keeps Steelers news alongside."
+      ]
+    ],
+    "boundary": "Steel City Gameday is in App Store review as of September 8, 2026, built for the 2026 NFL season. Crews are private and join by invite only. Picks are for entertainment; there is no wagering, entry fee, or prize of monetary value. Crew chat is free; scored picks and standings are free for the first five played games, then a one-time 2026 Season Pass.",
+    "publicUrl": "https://steelcitygameday.com/",
+    "publicLabel": "Visit the app's website"
+  },
+  {
     "slug": "numbers-game-hq",
     "image": "/project-numbers-game-hq.png",
     "imageAlt": "Numbers Game HQ Waivers screen captured in the iOS simulator",

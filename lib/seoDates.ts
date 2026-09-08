@@ -27,9 +27,9 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-09-07",
+  "/": "2026-09-08",
   "/work": "2026-09-05",
-  "/about": "2026-09-06",
+  "/about": "2026-09-08",
   "/tritongpt": "2026-07-26",
   "/speaking": "2026-09-05",
   "/products": "2026-09-07",

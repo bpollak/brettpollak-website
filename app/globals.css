@@ -298,6 +298,11 @@ html {
   box-shadow: 0 1px 0 rgba(23, 32, 27, 0.06);
 }
 
+/* Dots on the homepage "Working on now" update cards. */
+.home-update-dot[data-tone="blue"] { background: var(--signal-blue); }
+.home-update-dot[data-tone="gold"] { background: var(--signal-gold); }
+.home-update-dot[data-tone="green"] { background: var(--signal-green); }
+
 .field-note[data-tone="gold"] {
   border-left-color: var(--signal-gold);
   background: color-mix(in srgb, var(--paper-strong) 82%, var(--signal-gold) 18%);

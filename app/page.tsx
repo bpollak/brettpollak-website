@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
-import HomeHeroSystemMap from '@/components/home/HomeHeroSystemMap';
+import { homeUpdates, type HomeUpdateArea } from '@/lib/homeUpdatesData';
+import { mediaItems } from '@/lib/mediaData';
 
 export const metadata: Metadata = {
   alternates: {
@@ -79,27 +80,49 @@ const featuredApps = [
     title: 'Resolution Companion',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
+    latest: 'Version 1.4.0 in App Store review — new coach check-ins and progress view.',
     image: '/resolution-companion.webp',
     imageAlt: 'Resolution Companion screens showing habit planning and progress',
-    href: 'https://resolutioncompanion.com/',
+    href: '/products/resolution-companion',
+    cta: 'Read the case study',
   },
   {
     title: 'Horse Racing Companion',
     category: 'Race-day analysis',
     description: 'An iOS app for independent Del Mar race-day analysis, with live odds, plain-language picks, and a record of results.',
+    latest: 'Ten tracked Del Mar cards, 31 of 72 final picks matched — every pick saved before post.',
     image: '/horse-racing-companion-framed.png',
     imageAlt: 'Horse Racing Companion iPhone app showing race-day picks and analysis',
-    href: 'https://horseracingcompanion.com/',
+    href: '/products/horse-racing-companion',
+    cta: 'Read the case study',
   },
   {
-    title: 'Rock Hill Property Radar',
-    category: 'Personal research',
-    description: 'A housing comparison dashboard that brings listing sources, rental evidence, and adjustable planning assumptions together.',
-    image: '/property-radar.png',
-    imageAlt: 'Rock Hill Property Radar housing comparison dashboard',
-    href: 'https://bpollak.github.io/rock-hill-property-radar/',
+    title: 'Steel City Gameday',
+    category: 'Game-day app',
+    description: 'Turns football group texts into live game picks: private Crews, timed Flash Picks, and season-long receipts.',
+    latest: 'Submitted for App Store review — built for the fall 2026 football season.',
+    image: '/steel-city-gameday.png',
+    imageAlt: 'Steel City Gameday with a private Crew room and live Flash Pick',
+    href: '/products/steel-city-gameday',
+    cta: 'Read the case study',
   },
 ];
+
+const AREA_LABELS: Record<HomeUpdateArea, string> = {
+  work: 'Work',
+  personal: 'Personal',
+  media: 'Media',
+};
+
+const AREA_TONES: Record<HomeUpdateArea, string> = {
+  work: 'blue',
+  personal: 'gold',
+  media: 'green',
+};
+
+const recentMedia = [...mediaItems]
+  .sort((a, b) => (a.date < b.date ? 1 : -1))
+  .slice(0, 4);
 
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
@@ -113,60 +136,10 @@ function formatNowDate(iso: string): string {
 
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
-const portfolioAreas = [
-  { label: 'Hybrid cloud infrastructure', body: 'Servers, storage, and on-premises compute, including infrastructure used by the campus AI platform.' },
-  { label: 'Data & analytics', body: 'Enterprise data warehouse, BI tools, and predictive analytics.' },
-  { label: 'Service desk & field support', body: 'Tier 1–2 support for students, faculty, and staff.' },
-  { label: 'Endpoint management', body: 'Device lifecycle, enrollment, and security compliance.' },
-  { label: 'Enterprise collaboration', body: 'M365, Google Workspace, Zoom, Qualtrics.' },
-  { label: 'AI platforms', body: 'TritonGPT, the Developer API, and the agentic tools being built on top of them.' },
-];
-
-const lessons = [
-  {
-    tone: 'blue',
-    title: 'Start with a real problem.',
-    body: 'One contract-review project reduced NDA turnaround time by 91%. It addressed a specific bottleneck and gave us a clear result to measure.',
-  },
-  {
-    tone: 'gold',
-    title: 'Provide a supported path.',
-    body: 'We gave campus developers governed API access, credits, and guardrails. One staff member without an engineering background used it to build a PDF accessibility tool.',
-  },
-  {
-    tone: 'green',
-    title: 'Check what transfers.',
-    body: 'A few peer institutions have adapted the same architecture for their own campuses. Their implementations help us see which parts are reusable and which are local to UC San Diego.',
-  },
-];
-
 const questions = [
   'The technical challenge is tapering. The human side is harder. How do you get past the early adopters and reach people who aren\u2019t volunteering?',
   'Students pushed back on AI they could see. Does responsible adoption mean keeping AI invisible in the solution layer?',
   'Lightweight governance worked for experimentation. What does the version look like when the stakes are real?',
-];
-
-const writingLinks = [
-  {
-    outlet: 'Forbes',
-    topic: 'Faculty and AI',
-    href: 'https://www.forbes.com/sites/avivalegatt/2025/08/10/why-faculty-hold-the-keys-to-higher-eds-ai-digital-transformation/',
-  },
-  {
-    outlet: 'CIO.com',
-    topic: 'Knowledge access',
-    href: 'https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html',
-  },
-  {
-    outlet: 'EdTech Magazine',
-    topic: 'Campus implementation',
-    href: 'https://edtechmagazine.com/higher/article/2025/05/uc-san-diego-launches-tritongpt-generative-ai-tool',
-  },
-  {
-    outlet: 'EDUCAUSE Review',
-    topic: 'Data and AI insights',
-    href: 'https://er.educause.edu/articles/2025/2/ushering-in-a-new-era-of-ai-driven-data-insights-at-uc-san-diego',
-  },
 ];
 
 const routes = [
@@ -274,18 +247,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
           <div className="grid items-center gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
-              <p className="rule-label mb-5">Work at UC San Diego</p>
+              <p className="rule-label mb-5">Technology leader, builder</p>
               <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
-                I help teams build and run technology at UC San Diego.
+                I run technology at UC San Diego and build my own apps.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
-                I&rsquo;m the Executive Director of Workplace Technology and Infrastructure
-                Services at UC San Diego. My teams support infrastructure, data, campus
-                technology services, and AI.
+                By day I&rsquo;m the Executive Director of Workplace Technology and
+                Infrastructure Services, where my teams support infrastructure,
+                data, campus services, and AI. Nights and weekends I design and
+                ship my own products.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="#selected-work" className="button-primary">Explore TritonAI</a>
-                <Link href="/speaking" className="button-secondary">Speaking</Link>
+                <Link href="/products" className="button-secondary">My apps</Link>
               </div>
               <p className="mt-6 max-w-xl text-base leading-7 text-body">
                 New tools have to fit the way people actually work, with support that lasts beyond the pilot.
@@ -319,32 +293,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PORTFOLIO */}
-      <section className="border-b border-line tint-gold">
+      {/* WORKING ON NOW */}
+      <section className="border-b border-line tint-gold" aria-labelledby="working-on-now-heading">
         <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
+          <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
-              <p className="rule-label mb-4">The portfolio</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-                What my group supports.
-              </h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-body">
-                The work spans shared services used by students, faculty, and staff,
-                along with the platforms and support teams behind them.
-              </p>
-              <div className="mt-8 space-y-4">
-                {portfolioAreas.map((area) => (
-                  <div key={area.label}>
-                    <h3 className="font-semibold text-ink">{area.label}</h3>
-                    <p className="text-sm leading-6 text-body">{area.body}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="rule-label mb-3">Working on now</p>
+              <h2 id="working-on-now-heading" className="text-3xl font-medium md:text-4xl">Inside and outside UC San Diego.</h2>
             </div>
-            <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(201,119,18,0.10)]">
-              <HomeHeroSystemMap />
-            </div>
+            <Link href="/now" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Full current focus</Link>
           </div>
+          <ol className="mt-8 grid gap-4 md:grid-cols-3">
+            {homeUpdates.updates.map(update => (
+              <li key={update.text} className="border border-line bg-paper p-5" data-area={update.area}>
+                <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-body">
+                  <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone={AREA_TONES[update.area]} />
+                  <span>{AREA_LABELS[update.area]}</span>
+                  <span aria-hidden="true">·</span>
+                  <span className="font-mono normal-case tracking-normal">{update.date}</span>
+                </p>
+                <a href={update.href} className="leading-7 text-ink underline decoration-signal-gold decoration-2 underline-offset-4 hover:text-signal-blue">
+                  {update.text}
+                </a>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -368,44 +341,16 @@ export default function Home() {
                   <p className="rule-label mb-3">{app.category}</p>
                   <h3 className="text-2xl font-medium leading-8">{app.title}</h3>
                   <p className="mt-4 text-base leading-7 text-body">{app.description}</p>
-                  <a href={app.href} target="_blank" rel="noopener noreferrer"
+                  <p className="mt-3 border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">{app.latest}</p>
+                  <Link href={app.href}
                     className="mt-auto inline-block pt-6 text-sm font-semibold text-signal-blue underline underline-offset-4">
-                    Explore app<span className="sr-only">: {app.title} (opens in a new tab)</span>
-                  </a>
+                    {app.cta}<span className="sr-only">: {app.title}</span>
+                  </Link>
                 </div>
               </article>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* AI FOCUS + LESSONS */}
-      <section className="border-b border-line tint-blue">
-        <details className="mx-auto max-w-7xl px-6 py-6">
-          <summary className="cursor-pointer text-xl font-semibold">Notes on institutional AI</summary>
-        <div className="max-w-7xl mx-auto py-6">
-          <div className="max-w-3xl">
-            <p className="rule-label mb-4">Current focus</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-              Working on institutional AI.
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-body">
-              TritonGPT began as a pilot in 2023. It is now available across campus,
-              runs mostly on university infrastructure, and has been adapted by a few
-              peer institutions. Current work includes supervised agents and tools that
-              can take bounded actions within university workflows.
-            </p>
-          </div>
-          <div className="mt-12 grid md:grid-cols-3 gap-5">
-            {lessons.map((lesson) => (
-              <article key={lesson.title} className="field-note p-6" data-tone={lesson.tone}>
-                <h3 className="text-2xl leading-8 font-medium text-ink">{lesson.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-body">{lesson.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </details>
       </section>
 
       {/* WORKING QUESTIONS */}
@@ -436,24 +381,25 @@ export default function Home() {
             <div>
               <p className="rule-label mb-4 text-white/55">Writing &amp; press</p>
               <h2 className="text-4xl md:text-5xl leading-tight font-medium">
-                Articles and interviews.
+                Recent writing and speaking.
               </h2>
               <p className="mt-6 text-white/70 leading-7">
-                A few recent pieces. The full list is on the media page.
+                The newest articles, interviews, and talks. The full list is on the media page.
               </p>
+              <Link href="/media" className="mt-6 inline-block text-sm font-semibold text-[#f2b84b] underline underline-offset-4">All media and appearances</Link>
             </div>
             <div className="divide-y divide-white/12 border-y border-white/12">
-              {writingLinks.map((item) => (
+              {recentMedia.map((item) => (
                 <a
-                  key={item.href}
-                  href={item.href}
+                  key={item.url}
+                  href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="grid gap-2 py-5 sm:grid-cols-[11rem_1fr_auto] sm:items-center text-white/78 transition-colors hover:text-white"
                 >
-                  <span className="font-semibold text-white">{item.outlet}</span>
-                  <span>{item.topic}</span>
-                  <span className="font-mono text-xs text-[#f2b84b]">external</span>
+                  <span className="font-semibold text-white">{item.publication}</span>
+                  <span>{item.title}</span>
+                  <span className="font-mono text-xs text-[#f2b84b]">{item.category}</span>
                 </a>
               ))}
             </div>
