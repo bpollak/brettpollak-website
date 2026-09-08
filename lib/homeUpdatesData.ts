@@ -43,7 +43,7 @@ export const homeUpdates: HomeUpdatesData = {
       href: 'https://tritonai.ucsd.edu/tritongpt/release-notes/9-8-2026-release.html',
     },
     {
-      date: '2026-09-04',
+      date: '2026-08-21',
       area: 'work',
       text: 'TritonAI Harness access expands',
       note: 'Faculty and staff can request the Harness desktop agent workspace through the approved gateway.',
