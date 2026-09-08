@@ -19,23 +19,23 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "purpose": "Most habit apps count streaks, and one broken streak ends the habit. Resolution Companion starts from identity instead: name who you are becoming, then log small daily actions that reinforce it, with an AI coach in the loop for the days when motivation runs out.",
     "features": [
       "Identity-based plans, not streak counts",
-      "Small daily actions with two-minute versions",
-      "AI coach: open conversations and weekly reviews",
-      "Journey calendar, milestones, and comebacks",
+      "One small habit at a time, with a two-minute version of every action",
+      "AI Coach: build your starting plan in two steps, then chat-based check-ins",
+      "Journey calendar with direct habit editing and recovery for interrupted replies",
       "Plans and progress stay on the device"
     ],
     "steps": [
       [
         "Define who you're becoming",
-        "Start with a short conversation about the goal. The app drafts an identity statement and a plan of small daily actions to confirm."
+        "Talk with AI Coach to shape one small habit, then review the plan summary and schedule before your first day."
       ],
       [
         "Act today",
-        "Each day shows one or two small actions, each with a two-minute version. Progress fills the day's ring, and one missed day never erases the record."
+        "Each day shows the next small action, with the full version or its two-minute kickstart. One missed day never erases the record."
       ],
       [
         "Review with the coach",
-        "Ask the AI coach for help, run a weekly review, or preview a small plan adjustment. Nothing changes until it is confirmed."
+        "Chat-based check-ins, weekly reviews, and direct habit adjustments from the Journey calendar. Nothing changes until it is confirmed."
       ]
     ],
     "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.0 was approved by Apple and is available now (September 8, 2026).",
