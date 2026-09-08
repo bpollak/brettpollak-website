@@ -95,7 +95,7 @@ const featuredApps = [
     title: 'Resolution Companion',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
-    latest: 'Version 1.4.0 in App Store review — new coach check-ins and progress view.',
+    latest: 'Version 1.4.0 now available in the App Store — new coach check-ins and progress view.',
     image: '/resolution-companion.webp',
     imageAlt: 'Resolution Companion screens showing habit planning and progress',
     href: '/products/resolution-companion',

@@ -68,7 +68,7 @@ export const homeUpdates: HomeUpdatesData = {
     {
       date: '2026-09-07',
       area: 'personal',
-      text: 'Resolution Companion 1.4.0 in App Store review',
+      text: 'Resolution Companion 1.4.0 approved — live in the App Store',
       note: 'New coach check-ins and progress view. Site refreshed with current screenshots.',
       href: 'https://resolutioncompanion.com/',
     },

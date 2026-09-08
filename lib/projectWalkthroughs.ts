@@ -14,8 +14,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Resolution Companion",
     "group": "personal-apps",
     "category": "AI-powered habit building",
-    "status": "Available on iOS · v1.4.0 in App Store review",
-    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Live on the App Store, with version 1.4.0 currently in review.",
+    "status": "Available on iOS · v1.4.0",
+    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Version 1.4.0 is now live on the App Store.",
     "purpose": "Most habit apps count streaks, and one broken streak ends the habit. Resolution Companion starts from identity instead: name who you are becoming, then log small daily actions that reinforce it, with an AI coach in the loop for the days when motivation runs out.",
     "features": [
       "Identity-based plans, not streak counts",
@@ -38,7 +38,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Ask the AI coach for help, run a weekly review, or preview a small plan adjustment. Nothing changes until it is confirmed."
       ]
     ],
-    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.0 is in App Store review as of September 8, 2026.",
+    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.0 was approved by Apple and is available now (September 8, 2026).",
     "publicUrl": "https://resolutioncompanion.com/",
     "publicLabel": "Visit the app's website",
     "creditUrl": "https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708",
