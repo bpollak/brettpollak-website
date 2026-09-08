@@ -235,9 +235,9 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
           <div className="grid items-center gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
-              <p className="rule-label mb-5">Technology leader, builder</p>
+              <p className="rule-label mb-5">Day job, side projects</p>
               <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
-                I run technology at UC San Diego and build my own apps.
+                Technology for UC San Diego by day. My own apps at night.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
                 By day I&rsquo;m the Executive Director of Workplace Technology and
