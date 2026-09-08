@@ -24,22 +24,32 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const dataFile = path.join(root, 'lib', 'mediaData.ts');
+const dataFiles = [
+  path.join(root, 'lib', 'mediaData.ts'),
+  // Homepage "Working on now" rows link out too; give them favicon tiles
+  // with the same monogram fallback as the media page.
+  path.join(root, 'lib', 'homeUpdatesData.ts'),
+];
 const outDir = path.join(root, 'public', 'media-icons');
 const manifestFile = path.join(root, 'lib', 'mediaIconManifest.json');
 
 const FETCH_TIMEOUT_MS = 8000;
 
 function hostsFromData() {
-  const src = fs.readFileSync(dataFile, 'utf8');
-  const urls = [...src.matchAll(/url:\s*'([^']+)'/g)].map((m) => m[1]);
   const hosts = new Set();
-  for (const u of urls) {
-    if (!u.startsWith('http')) continue;
-    try {
-      hosts.add(new URL(u).hostname.replace(/^www\./, ''));
-    } catch {
-      /* skip malformed URLs */
+  for (const dataFile of dataFiles) {
+    const src = fs.readFileSync(dataFile, 'utf8');
+    const urls = [
+      ...src.matchAll(/url:\s*'([^']+)'/g),
+      ...src.matchAll(/href:\s*'([^']+)'/g),
+    ].map((m) => m[1]);
+    for (const u of urls) {
+      if (!u.startsWith('http')) continue;
+      try {
+        hosts.add(new URL(u).hostname.replace(/^www\./, ''));
+      } catch {
+        /* skip malformed URLs */
+      }
     }
   }
   return [...hosts].sort();

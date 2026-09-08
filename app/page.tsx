@@ -4,6 +4,21 @@ import Image from 'next/image';
 import { currentNow } from '@/lib/nowData';
 import { updatesByArea } from '@/lib/homeUpdatesData';
 import { mediaItems } from '@/lib/mediaData';
+import mediaIconManifest from '@/lib/mediaIconManifest.json';
+
+// Favicon tile for a row's destination, using the same manifest the media
+// page uses (public/media-icons/, fetched by scripts/fetch-media-icons.mjs).
+// Falls back to null so callers can render a monogram instead.
+function iconForUrl(url: string): string | null {
+  if (!url.startsWith('http')) return null;
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '');
+    const file = (mediaIconManifest as Record<string, string>)[host];
+    return file ? `/media-icons/${file}` : null;
+  } catch {
+    return null;
+  }
+}
 
 export const metadata: Metadata = {
   alternates: {
@@ -302,7 +317,14 @@ export default function Home() {
               <div className="border-y border-line">
                 {updatesByArea('work').map(update => (
                   <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-line bg-white/70">
+                      {iconForUrl(update.href) ? (
+                        <Image src={iconForUrl(update.href) as string} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
+                      ) : (
+                        <span className="font-mono text-xs font-bold text-body">UC</span>
+                      )}
+                    </span>
                     <span className="font-mono text-xs text-body">{update.date}</span>
                     <span className="min-w-0">
                       <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{update.text}</span>
@@ -323,7 +345,14 @@ export default function Home() {
               <div className="border-y border-line">
                 {updatesByArea('personal').map(update => (
                   <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-line bg-white/70">
+                      {iconForUrl(update.href) ? (
+                        <Image src={iconForUrl(update.href) as string} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
+                      ) : (
+                        <span className="font-mono text-xs font-bold text-body">+</span>
+                      )}
+                    </span>
                     <span className="font-mono text-xs text-body">{update.date}</span>
                     <span className="min-w-0">
                       <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{update.text}</span>
@@ -406,14 +435,23 @@ export default function Home() {
               <Link href="/media" className="mt-6 inline-block text-sm font-semibold text-[#f2b84b] underline underline-offset-4">All media and appearances</Link>
             </div>
             <div className="divide-y divide-white/12 border-y border-white/12">
-              {recentMedia.map((item) => (
+              {recentMedia.map((item) => {
+                const icon = iconForUrl(item.url);
+                return (
                 <a
                   key={item.url}
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid gap-2 py-5 transition-colors hover:bg-white/[0.04] sm:grid-cols-[8rem_1fr_auto] sm:items-center sm:gap-4 sm:px-3"
+                  className="grid gap-2 py-5 transition-colors hover:bg-white/[0.04] sm:grid-cols-[auto_8rem_1fr_auto] sm:items-center sm:gap-4 sm:px-3"
                 >
+                  <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-white/15 bg-white/[0.06]">
+                    {icon ? (
+                      <Image src={icon} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
+                    ) : (
+                      <span className="font-mono text-xs font-bold text-white/60">{item.publication.slice(0, 2).toUpperCase()}</span>
+                    )}
+                  </span>
                   <span className="font-mono text-xs text-[#f2b84b]">{item.date}</span>
                   <span className="min-w-0">
                     <span className="block font-semibold text-white">{item.publication}</span>
@@ -421,7 +459,8 @@ export default function Home() {
                   </span>
                   <span className="font-mono text-xs text-white/45">{item.category}</span>
                 </a>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
