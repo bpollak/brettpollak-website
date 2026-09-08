@@ -21,6 +21,9 @@ function iconForUrl(url: string): string | null {
 }
 
 export const metadata: Metadata = {
+  title: {
+    absolute: 'Technology leadership at UC San Diego, and the apps I build outside it',
+  },
   alternates: {
     canonical: 'https://brettcpollak.com/',
     // Repeated here because this page's `alternates` replaces the root
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Brett Pollak | Higher Education Technology',
+    title: 'Technology leadership at UC San Diego, and the apps I build outside it',
     description:
       'Technology leadership at UC San Diego, and the apps I build outside it — from institutional AI to independent iPhone apps.',
     url: 'https://brettcpollak.com/',
@@ -52,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brett Pollak | Higher Education Technology',
+    title: 'Technology leadership at UC San Diego, and the apps I build outside it',
     description:
       'Technology leadership at UC San Diego, and the apps I build outside it — from institutional AI to independent iPhone apps.',
     images: ['/brett-pollak-og-card.png'],
@@ -440,7 +443,7 @@ export default function Home() {
       </section>
 
       {/* SITE INDEX */}
-      <section className="tint-green">
+      <section className="border-t border-line bg-paper">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
             <div>
