@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brett Pollak | Higher Education Technology',
     description:
-      'Notes on infrastructure, data, digital services, and institutional AI from my work at UC San Diego.',
+      'Technology leadership at UC San Diego, and the apps I build outside it — from institutional AI to independent iPhone apps.',
     url: 'https://brettcpollak.com/',
     siteName: 'Brett Pollak',
     type: 'profile',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Brett Pollak | Higher Education Technology',
     description:
-      'Notes on infrastructure, data, digital services, and institutional AI from my work at UC San Diego.',
+      'Technology leadership at UC San Diego, and the apps I build outside it — from institutional AI to independent iPhone apps.',
     images: ['/brett-pollak-og-card.png'],
   },
 };

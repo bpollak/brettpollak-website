@@ -45,7 +45,7 @@ export default function Footer() {
               Brett Pollak
             </div>
             <p className="text-body leading-relaxed mb-6">
-              Notes on institutional AI, platform governance, digital services, and day-to-day technology work in higher education.
+              Technology leadership at UC San Diego, and the apps I build outside it.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4">
