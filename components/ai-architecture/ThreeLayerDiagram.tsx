@@ -20,7 +20,7 @@ const FILE_CHIPS = [
 
 const TRIGGER_TAGS = ['wiki/people/', 'wiki/tech-stack/', 'wiki/decisions/', 'weekly-synthesis'];
 
-const REQUEST_TAGS = ['specific memory/', 'dated files', 'raw transcripts', 'full graph JSON · 848 nodes'];
+const REQUEST_TAGS = ['specific memory/', 'dated files', 'raw transcripts', 'full graph JSON · 852 nodes'];
 
 function DepthMark({
   n,
@@ -74,16 +74,16 @@ export default function ThreeLayerDiagram() {
         The agent loads context in three priority tiers, drawn as a cross-section: the
         deeper the retrieval, the more material is available. Layer 1 is a small fixed
         set of files (identity, user profile, long-term memory, patterns, today,
-        yesterday) loaded on every session start — about 15 KB. Layer 2 is the 1,008-page
+        yesterday) loaded on every session start — about 50 KB. Layer 2 is the 1,038-page
         wiki, pulled in conditionally when the conversation mentions a person,
         technology, decision, or trend. Layer 3 is the deep archive — dated memory
-        files, raw transcripts, the full 848-node graph — loaded only when the human
+        files, raw transcripts, the full 852-node graph — loaded only when the human
         explicitly asks.
       </figcaption>
 
       {/* Zone 1 — always loaded: narrow, solid, on top */}
       <div className="md:grid md:grid-cols-[10rem_1fr] md:gap-4 md:items-center">
-        <DepthMark n="1" when="Every session" cost="~15 KB" color="var(--signal-blue)" inkClass="text-signal-blue" />
+        <DepthMark n="1" when="Every session" cost="~50 KB" color="var(--signal-blue)" inkClass="text-signal-blue" />
         <div
           className="w-full md:w-[62%] rounded-2xl p-5 sm:p-6 text-white shadow-md"
           style={{ backgroundColor: 'var(--signal-blue)' }}
@@ -93,7 +93,7 @@ export default function ThreeLayerDiagram() {
               Layer 1 · Always loaded
             </span>
             <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-white/15">
-              &asymp;15 KB · every turn
+              &asymp;50 KB · every turn
             </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -111,7 +111,7 @@ export default function ThreeLayerDiagram() {
 
       {/* Zone 2 — on trigger: wider, wash */}
       <div className="mt-4 md:grid md:grid-cols-[10rem_1fr] md:gap-4 md:items-center">
-        <DepthMark n="2" when="On trigger" cost="1,008 pages" color="var(--signal-gold)" inkClass="text-signal-gold-ink" />
+        <DepthMark n="2" when="On trigger" cost="1,038 pages" color="var(--signal-gold)" inkClass="text-signal-gold-ink" />
         <div
           className="w-full md:w-[81%] rounded-2xl border-2 p-5 sm:p-6"
           style={{
@@ -126,7 +126,7 @@ export default function ThreeLayerDiagram() {
             <span className="text-xs font-bold px-2.5 py-1 rounded-full text-signal-gold-ink"
               style={{ backgroundColor: 'color-mix(in srgb, var(--wash-gold) 80%, white)' }}
             >
-              1,008 wiki pages
+              1,038 wiki pages
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
