@@ -140,6 +140,39 @@ const recentMedia = [...mediaItems]
 const latestDigestEdition = [...weeklyAiDigestData.days, ...(weeklyAiDigestData.archive ?? [])]
   .sort((a, b) => (a.isoDate < b.isoDate ? 1 : -1))[0];
 
+// Parse the edition's raw markdown into per-article { headline, summary,
+// higherEd } triples for the homepage module. The raw format (stable across
+// editions): "• **headline** — summary ¶ 🔗 Graph: … ¶ 📌 Key takeaways: ¶ bullets".
+// Summary = text between the em-dash and the 🔗 line (trimmed to one sentence);
+// higherEd = the first takeaway bullet, which the digest pipeline writes
+// through an institutional lens, so the higher-ed angle is authored content,
+// not something this page invents.
+function parseDigestArticles(raw: string): { headline: string; summary: string; higherEd: string }[] {
+  return raw
+    .split(/•\s+\*\*/)
+    .slice(1)
+    .map(block => {
+      const headline = block.slice(0, block.indexOf('**')).trim();
+      const afterHeadline = block.slice(block.indexOf('**') + 2);
+      const graphIdx = afterHeadline.indexOf('🔗');
+      const summaryText = afterHeadline
+        .slice(0, graphIdx >= 0 ? graphIdx : undefined)
+        .replace(/^\s*—\s*/, '')
+        .trim();
+      // one sentence: cut at the first ". " that follows at least 80 chars
+      const sentenceEnd = summaryText.indexOf('. ', 80);
+      const summary = (sentenceEnd >= 0 ? summaryText.slice(0, sentenceEnd + 1) : summaryText).trim();
+      const takeawayIdx = afterHeadline.indexOf('Key takeaways:');
+      const takeaways = takeawayIdx >= 0 ? afterHeadline.slice(takeawayIdx + 'Key takeaways:'.length) : '';
+      const firstBullet = takeaways.split(/•\s+/).find(t => t.trim().length > 0);
+      const higherEd = firstBullet ? firstBullet.replace(/\s+/g, ' ').trim() : '';
+      return { headline, summary, higherEd };
+    })
+    .filter(a => a.headline.length > 0 && a.summary.length > 0);
+}
+
+const latestDigestArticles = parseDigestArticles(latestDigestEdition.raw).slice(0, 4);
+
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
   return d.toLocaleDateString('en-US', {
@@ -394,11 +427,17 @@ export default function Home() {
                 Latest — {latestDigestEdition.displayDate}
               </h3>
               <div className="border-y border-line">
-                {latestDigestEdition.headlines.slice(0, 4).map(headline => (
-                  <Link key={headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-4">
+                {latestDigestArticles.map(article => (
+                  <Link key={article.headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
                     <span className="min-w-0">
-                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{headline}</span>
+                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{article.headline}</span>
+                      <span className="mt-1 block text-sm leading-6 text-body">{article.summary}</span>
+                      {article.higherEd && (
+                        <span className="mt-2 block border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">
+                          {article.higherEd}
+                        </span>
+                      )}
                     </span>
                     <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
                   </Link>
