@@ -34,13 +34,14 @@ export const staticPageDates: Record<string, string> = {
   "/about": "2026-09-08",
   "/tritongpt": "2026-07-26",
   "/speaking": "2026-09-05",
-  "/products": "2026-09-07",
+  "/products": "2026-09-09",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-09-09",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
   "/contact": "2026-09-05",
+  "/products/horse-racing-companion": "2026-09-09",
 };
 
 /** First-published dates for long-form pages that carry Article JSON-LD. */

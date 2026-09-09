@@ -110,7 +110,7 @@ const featuredApps = [
     title: 'Horse Racing Companion',
     category: 'Race-day analysis',
     description: 'An iOS app for independent Del Mar race-day analysis, with live odds, plain-language picks, and a record of results.',
-    latest: 'Summer meet complete: 47 of 105 final picks matched (44.8%), every pick saved before post. Fall Bing Crosby meet included in the pass.',
+    latest: 'Version 1.0.2 now available in the App Store — Bing Crosby fall meet (Nov 6–29) ready and included in the summer pass, plus a new Pool money card.',
     image: '/horse-racing-companion-social.jpg',
     imageAlt: 'Horse Racing Companion app screen showing a Del Mar race pick.',
     href: '/products/horse-racing-companion',

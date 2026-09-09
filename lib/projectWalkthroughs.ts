@@ -86,8 +86,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Horse Racing Companion",
     "group": "personal-apps",
     "category": "Independent race-day analysis",
-    "status": "Available on iOS · Del Mar summer complete · Bing Crosby fall meet Nov 6–29",
-    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. The summer meet is complete; the fall Bing Crosby meet is included in the season pass.",
+    "status": "Available on iOS · v1.0.2 · Bing Crosby fall meet ready Nov 6–29",
+    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. Version 1.0.2 adds the fall Bing Crosby meet schedule and a Pool money card that shows exotic-pool prices beside the pick.",
     "purpose": "A day at Del Mar had one frustrating part: the betting window. Horse Racing Companion weighs public odds, past Del Mar results for horses, trainers, jockeys, and post position the same way for every race — and says so when the information is not there.",
     "features": [
       "One pick per race: Win, Show, or a three-horse Trifecta box",
@@ -95,6 +95,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
       "Odds, scratches, and post times rechecked until just before post",
       "Final picks saved before post and kept beside official results",
       "Summer record: 47 of 105 final picks matched (44.8%) across 13 tracked cards",
+      "Pool money card: exotic-pool prices beside the pick — information only, never a bet slip",
       "Fall Bing Crosby meet, November 6–29, included in the season pass"
     ],
     "steps": [

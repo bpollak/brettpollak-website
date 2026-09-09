@@ -80,10 +80,10 @@ export const homeUpdates: HomeUpdatesData = {
       href: 'https://steelcitygameday.com/',
     },
     {
-      date: '2026-09-08',
+      date: '2026-09-09',
       area: 'personal',
-      text: 'Del Mar summer meet closes with a 44.8% pick-match rate',
-      note: 'Horse Racing Companion: 47 of 105 final picks matched across 13 tracked cards, every pick saved before post. Fall Bing Crosby meet (Nov 6–29) is included in the pass.',
+      text: 'Horse Racing Companion 1.0.2 approved — fall meet ready',
+      note: 'Bing Crosby meet (Nov 6–29) included in the summer pass at no extra charge; new Pool money card shows exotic-pool prices beside the pick. Summer record: 47 of 105 final picks matched (44.8%).',
       href: 'https://horseracingcompanion.com/',
     },
 
