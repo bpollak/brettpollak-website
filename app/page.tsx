@@ -99,8 +99,8 @@ const featuredApps = [
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
     latest: 'Version 1.4.0 now available in the App Store — new coach check-ins and progress view.',
-    image: '/resolution-companion.webp',
-    imageAlt: 'Resolution Companion screens showing habit planning and progress',
+    image: '/resolution-companion-social.png',
+    imageAlt: 'Resolution Companion: a real app screen showing a reading habit and its two-minute alternative.',
     href: '/products/resolution-companion',
     cta: 'Read the case study',
   },
@@ -109,8 +109,8 @@ const featuredApps = [
     category: 'Race-day analysis',
     description: 'An iOS app for independent Del Mar race-day analysis, with live odds, plain-language picks, and a record of results.',
     latest: 'Summer meet complete: 47 of 105 final picks matched (44.8%), every pick saved before post. Fall Bing Crosby meet included in the pass.',
-    image: '/horse-racing-companion-framed.png',
-    imageAlt: 'Horse Racing Companion iPhone app showing race-day picks and analysis',
+    image: '/horse-racing-companion-social.jpg',
+    imageAlt: 'Horse Racing Companion app screen showing a Del Mar race pick.',
     href: '/products/horse-racing-companion',
     cta: 'Read the case study',
   },
@@ -369,7 +369,7 @@ export default function Home() {
               <article key={app.title} className="flex flex-col border border-line bg-paper">
                 <div className="relative h-52 border-b border-line bg-white/70">
                   <Image src={app.image} alt={app.imageAlt} fill
-                    className="object-contain p-4" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
+                    className="object-cover" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <p className="rule-label mb-3">{app.category}</p>
