@@ -5,6 +5,8 @@ import { currentNow } from '@/lib/nowData';
 import { updatesByArea } from '@/lib/homeUpdatesData';
 import { mediaItems } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
+import SubscribeForm from '@/components/ai-digest/SubscribeForm';
+import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 
 // Favicon tile for a row's destination, using the same manifest the media
 // page uses (public/media-icons/, fetched by scripts/fetch-media-icons.mjs).
@@ -129,6 +131,14 @@ const featuredApps = [
 const recentMedia = [...mediaItems]
   .sort((a, b) => (a.date < b.date ? 1 : -1))
   .slice(0, 4);
+
+// Newest digest edition for the homepage module. Both `days` and `archive`
+// carry editions; sort a merged copy by date so the module is robust to
+// whichever array the daily sync cron appended to. If a run ever fails, the
+// module shows the last successful edition with its date visible — honest
+// staleness, never a fabricated "today".
+const latestDigestEdition = [...weeklyAiDigestData.days, ...(weeklyAiDigestData.archive ?? [])]
+  .sort((a, b) => (a.isoDate < b.isoDate ? 1 : -1))[0];
 
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
@@ -359,6 +369,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI DIGEST — daily briefing + sign-up */}
+      <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div>
+              <p className="rule-label mb-3">Daily briefing</p>
+              <h2 id="ai-digest-heading" className="text-3xl font-medium md:text-4xl">The AI Digest.</h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+                A daily AI briefing for people who run technology in higher education — the
+                launches, enterprise moves, and campus policy shifts that matter, with key
+                takeaways and source links.
+              </p>
+              <div className="mt-8">
+                <SubscribeForm />
+              </div>
+              <Link href="/ai-digest" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Browse past editions<span className="sr-only"> of the AI Digest</span>
+              </Link>
+            </div>
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="green" />
+                Latest — {latestDigestEdition.displayDate}
+              </h3>
+              <div className="border-y border-line">
+                {latestDigestEdition.headlines.slice(0, 4).map(headline => (
+                  <Link key={headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-4">
+                    <span className="min-w-0">
+                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{headline}</span>
+                    </span>
+                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+                  </Link>
+                ))}
+              </div>
+              <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Read {latestDigestEdition.displayDate}&rsquo;s full digest
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MEDIA */}
       <section className="bg-[#17201b] text-white accent-strip" data-tone="gold">
         <div className="max-w-7xl mx-auto px-6 py-20">
@@ -372,9 +425,6 @@ export default function Home() {
                 The newest articles, interviews, and talks. The full list is on the media page.
               </p>
               <Link href="/media" className="mt-6 inline-block text-sm font-semibold text-[#f2b84b] underline underline-offset-4">All media and appearances</Link>
-              <p className="mt-8 text-white/70 leading-7">
-                I also write the <Link href="/ai-digest" className="font-semibold text-[#f2b84b] underline underline-offset-4">AI Digest</Link> — a daily briefing on AI for people who run technology in higher education.
-              </p>
             </div>
             <div className="divide-y divide-white/12 border-y border-white/12">
               {recentMedia.map((item) => {
