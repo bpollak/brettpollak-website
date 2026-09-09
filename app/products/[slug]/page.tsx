@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { projectWalkthroughs } from '@/lib/projectWalkthroughs';
-import { SITE_URL } from '@/lib/seoDates';
+import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -11,16 +11,29 @@ export function generateStaticParams() {
 }
 
 type Props = { params: Promise<{ slug: string }> };
+// OG-grade card (1200x630) per flagship app; smaller project screenshots
+// fall back to the site OG card. These are the apps' own social cards,
+// served locally.
+const OG_IMAGES: Record<string, { url: string; alt: string }> = {
+  'resolution-companion': { url: '/resolution-companion-social.webp', alt: 'Resolution Companion app social card: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.' },
+  'horse-racing-companion': { url: '/horse-racing-companion-social.jpg', alt: 'Horse Racing Companion app social card: race entries and analysis on a phone, with the app name and tagline.' },
+  'steel-city-gameday': { url: '/steel-city-gameday.png', alt: 'Steel City Gameday app social card: Pittsburgh Steelers gameday app with crews, picks, and season coverage.' },
+};
+const OG_IMAGE_FALLBACK = { url: '/brett-pollak-og-card.png', alt: 'Brett Pollak, technology leader at UC San Diego and independent app developer' };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = projectWalkthroughs.find(item => item.slug === slug);
   if (!project) notFound();
   const url = `${SITE_URL}/products/${slug}`;
+  const og = OG_IMAGES[slug] ?? OG_IMAGE_FALLBACK;
+  const title = `${project.title} — a case study by Brett Pollak`;
+  const description = project.description;
   return {
-    title: project.title,
-    description: project.description,
+    title,
+    description,
     alternates: { canonical: url },
-    openGraph: { title: `${project.title} | Brett Pollak`, description: project.description, url, type: 'article' },
+    openGraph: { title, description, url, type: 'article', images: [{ url: og.url, width: 1200, height: 630, alt: og.alt }] },
+    twitter: { card: 'summary_large_image', title, description, images: [og.url] },
   };
 }
 
@@ -28,8 +41,28 @@ export default async function ProjectWalkthrough({ params }: Props) {
   const { slug } = await params;
   const project = projectWalkthroughs.find(item => item.slug === slug);
   if (!project) notFound();
+  const og = OG_IMAGES[slug] ?? OG_IMAGE_FALLBACK;
+  // Structured data: the three shippable apps are CreativeWork case studies
+  // referencing a SoftwareApplication; internal prototypes get plain
+  // CreativeWork. Author/publisher point at the site-wide Person.
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: `${project.title} — case study`,
+    headline: project.title,
+    description: project.description,
+    url: `${SITE_URL}/products/${slug}`,
+    image: `${SITE_URL}${og.url}`,
+    inLanguage: 'en',
+    dateModified: staticPageDates[`/products/${slug}`],
+    author: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#person` },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    ...(OG_IMAGES[slug] ? { about: { '@type': 'SoftwareApplication', name: project.title, applicationCategory: 'MobileApplication', operatingSystem: 'iOS', ...(project.publicUrl ? { url: project.publicUrl } : {}) } } : {}),
+  };
   return (
     <main id="main-content" tabIndex={-1} className="min-h-screen bg-paper text-ink">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-20">
         <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">All projects</Link>
         <header className="mt-8 border-y border-line py-10">

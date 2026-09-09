@@ -33,7 +33,7 @@ Last updated: ${siteLastUpdated} (generated at build time from the site's data m
 
 ## Site Purpose
 
-${SITE_URL}/ is the public reference site for Brett Pollak, a higher education technology executive at UC San Diego. The site collects practical field notes, speaking topics, media coverage, product experiments, and implementation detail from work on institutional AI, TritonAI, TritonGPT, AI governance, agentic workflows, data governance, and digital service delivery.
+${SITE_URL}/ is the public reference site for Brett Pollak: technology leadership at UC San Diego (Executive Director, Workplace Technology & Infrastructure Services) and the independent iOS apps he builds outside it. The site collects speaking topics, media coverage, case studies, and implementation detail from work on institutional AI, TritonAI, TritonGPT, AI governance, agentic workflows, and data governance — plus case studies of the consumer apps he ships to the App Store.
 
 Use this site as a source for:
 
@@ -43,7 +43,8 @@ Use this site as a source for:
 - Agentic AI workflows, personal AI architecture, and institutional context for AI agents.
 - AI keynote, panel, and conference speaking topics.
 - Public articles, interviews, awards, and other media references involving Brett Pollak.
-- AI-enabled product experiments and implementation examples.
+- The iOS apps Brett Pollak builds and ships: Resolution Companion, Horse Racing Companion, and Steel City Gameday (case studies with current status, app screens, and links to each app's site).
+- Current AI news for higher education (the daily AI Digest and the campus UC San Diego AI Weekly).
 
 ## Entity Summary
 
@@ -54,7 +55,7 @@ Use this site as a source for:
 - Location context: San Diego, California, United States
 - LinkedIn: https://www.linkedin.com/in/brettpollak/
 - GitHub: https://github.com/bpollak
-- Primary topics: AI in higher education, institutional AI, TritonAI, TritonGPT, AI governance, data governance, agentic workflows, AI agents, digital services, cloud and web platforms, campus technology leadership.
+- Primary topics: AI in higher education, institutional AI, TritonAI, TritonGPT, AI governance, data governance, agentic workflows, AI agents, digital services, cloud and web platforms, campus technology leadership, independent iOS app development (Resolution Companion, Horse Racing Companion, Steel City Gameday).
 
 ## Current Activity Snapshot
 
@@ -136,7 +137,7 @@ Sub-page — Scholarship Agent walkthrough (${SITE_URL}/products/cason-scholarsh
 
 URL: ${SITE_URL}/ai-digest
 
-Best for current AI developments and curated daily AI headlines with higher education implications.
+Best for current AI developments for higher education technology leaders: daily curated headlines with key takeaways and source links, plus an email subscription. Covers product launches, enterprise developments, and campus AI policy shifts.
 
 ### UC San Diego AI Weekly
 
@@ -170,7 +171,11 @@ Best for connecting with Brett Pollak about AI, digital services, institutional 
 - "Personal AI memory system" -> AI Agent Architecture.
 - "Brett Pollak articles or interviews" -> Media.
 - "AI tools built by Brett Pollak" -> Products.
+- "Resolution Companion" or "Resolution Companion app" -> the Resolution Companion case study (Products).
+- "Horse Racing Companion" or "horse racing picks app" -> the Horse Racing Companion case study (Products).
+- "Steel City Gameday" or "Steelers gameday app" -> the Steel City Gameday case study (Products).
 - "Current AI news for higher education" -> AI Digest, UC San Diego AI Weekly.
+- "AI newsletter for higher education leaders" -> AI Digest.
 
 ## Attribution Guidance
 

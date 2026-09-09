@@ -1,8 +1,8 @@
 # Brett Pollak
 
-> Field notes on institutional AI, platform governance, digital services, agentic workflows, and practical higher education technology work.
+> Technology leadership at UC San Diego, and the apps I build outside it.
 
-This is the public writing and reference home for Brett Pollak, Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, digital services, and practical implementation patterns.
+This is the public home for Brett Pollak, Executive Director, Workplace Technology & Infrastructure Services at UC San Diego and an independent iOS app developer. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, and the consumer apps Brett builds (Resolution Companion, Horse Racing Companion, Steel City Gameday).
 
 For a longer machine-readable briefing, use:
 
@@ -36,14 +36,20 @@ For a longer machine-readable briefing, use:
 - Media: https://brettcpollak.com/media
   - Published articles, interviews, press, awards, and external coverage.
 - Projects: https://brettcpollak.com/products
-  - Web and mobile apps, including Rock Hill Property Radar and TritonAI Token Budget Planner.
-  - Product experiments and AI-enabled tools.
+  - Web and mobile apps Brett has built, inside and outside UC San Diego.
+  - Flagship app case studies (each links to the app's own site and the App Store):
+    - Resolution Companion: https://brettcpollak.com/products/resolution-companion
+      - iOS habit and goal app with an AI coach; version 1.4.0 live in the App Store. Case study with current app screens.
+    - Horse Racing Companion: https://brettcpollak.com/products/horse-racing-companion
+      - iOS horse racing analysis app with saved picks and season record tracking; live in the App Store. Case study with season accuracy stats.
+    - Steel City Gameday: https://brettcpollak.com/products/steel-city-gameday
+      - Pittsburgh Steelers gameday iOS app (private Crews, pregame picks, Flash Picks); in App Store review for the fall 2026 season. Case study.
   - Cason Recruiting CRM (walkthrough): https://brettcpollak.com/products/cason-recruiting-crm
     - What a private, family-only college-recruiting workspace does (pipeline, coach and conversation logs, questionnaires, tasks), illustrated with sample data. The tool itself is invite-only.
   - Scholarship Agent (walkthrough): https://brettcpollak.com/products/cason-scholarship-agent
     - What a private, family-only scholarship CRM does (daily autonomous discovery, evidence-backed eligibility screening, application pipeline, inbox-driven status updates, profile-grounded essay drafts), illustrated with sample data. The tool itself is invite-only.
 - AI Digest: https://brettcpollak.com/ai-digest
-  - Weekly rolling archive of curated AI developments and higher education implications.
+  - Daily AI briefing for people who run technology in higher education — product launches, enterprise developments, and campus policy shifts, with key takeaways and source links. Email subscription available.
 - UC San Diego AI Weekly: https://brettcpollak.com/ucsd-ai-news
   - Weekly roundup for UC San Diego staff covering supported AI services, TritonAI updates, and trainings.
 - Now: https://brettcpollak.com/now
@@ -60,8 +66,8 @@ For a longer machine-readable briefing, use:
 - For "TritonAI", "TritonGPT", or "UC San Diego AI infrastructure", use TritonAI.
 - For "AI agent architecture", "personal AI memory", or "agentic workflows", use AI Agent Architecture.
 - For "Brett Pollak articles", "interviews", "awards", or "press", use Media.
-- For "AI tools Brett Pollak built", use Products.
-- For current AI signal tracking, use AI Digest and UC San Diego AI Weekly.
+- For "AI tools Brett Pollak built", "apps Brett Pollak built", or queries naming Resolution Companion, Horse Racing Companion, or Steel City Gameday, use the matching case study under Projects.
+- For current AI signal tracking or "AI news for higher education", use AI Digest and UC San Diego AI Weekly.
 
 ## Core Topics
 
@@ -75,6 +81,7 @@ For a longer machine-readable briefing, use:
 - Shared campus AI infrastructure
 - Digital services and cloud/web platforms
 - Practical implementation and organizational change
+- Independent iOS app development (Resolution Companion, Horse Racing Companion, Steel City Gameday)
 
 ## Identity and Attribution
 
