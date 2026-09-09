@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/ai-use-case-meeting.png',
-        width: 1280,
-        height: 800,
-        alt: 'AI digest and higher education signal tracking',
+        url: '/ai-digest-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'AI Digest: the daily AI briefing for higher education technology, with recent headlines',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Digest | Curated AI Developments',
     description: 'Daily AI briefings covering product launches, enterprise developments, and implications for higher education.',
-    images: ['/ai-use-case-meeting.png'],
+    images: ['/ai-digest-og.png'],
   },
 };
 
