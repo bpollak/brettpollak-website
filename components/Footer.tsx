@@ -36,7 +36,7 @@ const FOOTER_GROUPS: FooterGroup[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-paper-strong border-t border-line mt-24 relative overflow-hidden">
+    <footer className="bg-paper-strong border-t border-line relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-[#17201b]/12"></div>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
