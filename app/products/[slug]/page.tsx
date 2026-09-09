@@ -44,6 +44,21 @@ export default async function ProjectWalkthrough({ params }: Props) {
           </a>
           <figcaption className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-body">{project.imageCaption}</figcaption>
         </figure>
+        {project.gallery && project.gallery.length > 0 && (
+          <section aria-label={`${project.title} app screens`} className="border-b border-line py-10">
+            <p className="rule-label mb-4">The app today</p>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {project.gallery.map(shot => (
+                <figure key={shot.image} className="border border-line bg-paper-strong p-3">
+                  <a href={shot.image} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${shot.caption}`}>
+                    <Image src={shot.image} alt={shot.alt} width={shot.width} height={shot.height} className="mx-auto h-auto max-h-80 w-auto max-w-full object-contain" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, 100vw" />
+                  </a>
+                  <figcaption className="mt-3 text-sm leading-6 text-body">{shot.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
         <section aria-labelledby="purpose-heading" className="grid gap-8 border-b border-line py-10 md:grid-cols-[0.5fr_1fr]">
           <h2 id="purpose-heading" className="text-3xl font-medium">Why I built it</h2>
           <p className="text-lg leading-8 text-body">{project.purpose}</p>

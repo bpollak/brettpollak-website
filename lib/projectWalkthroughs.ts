@@ -1,16 +1,18 @@
 export type ProjectWalkthrough = {
   image: string; imageAlt: string; imageCaption: string; imageWidth: number; imageHeight: number;
   slug: string; title: string; group: string; category: string; status: string; description: string; purpose: string; features: string[]; steps: string[][]; boundary: string; publicUrl?: string; publicLabel?: string; creditUrl?: string; creditLabel?: string;
+  /** Optional gallery of additional app screens below the hero image. */
+  gallery?: { image: string; alt: string; width: number; height: number; caption: string }[];
 };
 
 export const projectWalkthroughs: ProjectWalkthrough[] = [
   {
     "slug": "resolution-companion",
-    "image": "/resolution-companion.webp",
-    "imageAlt": "Resolution Companion screens showing the journey calendar, today view, and AI coach",
-    "imageCaption": "Screens from the public app site, resolutioncompanion.com, captured September 8, 2026.",
-    "imageWidth": 900,
-    "imageHeight": 1280,
+    "image": "/resolution-companion-social.webp",
+    "imageAlt": "Resolution Companion: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.",
+    "imageCaption": "Current social card from resolutioncompanion.com, captured September 8, 2026. The site also shows Today, Journey, Plan, and Coach screens from version 1.4.",
+    "imageWidth": 1200,
+    "imageHeight": 630,
     "title": "Resolution Companion",
     "group": "personal-apps",
     "category": "AI-powered habit building",
@@ -39,6 +41,36 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
       ]
     ],
     "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.0 was approved by Apple and is available now (September 8, 2026).",
+    "gallery": [
+      {
+        "image": "/resolution-companion-screen-today.webp",
+        "alt": "Resolution Companion Today screen showing identity, daily progress, and actions",
+        "width": 603,
+        "height": 1311,
+        "caption": "Today: the daily ring and one or two small actions, each with a two-minute version."
+      },
+      {
+        "image": "/resolution-companion-screen-plan.webp",
+        "alt": "Resolution Companion plan summary screen from the two-step AI Coach setup",
+        "width": 603,
+        "height": 1311,
+        "caption": "Your plan, before you start: review the habit and schedule the AI Coach drafted, then begin."
+      },
+      {
+        "image": "/resolution-companion-screen-journey.webp",
+        "alt": "Resolution Companion Journey screen with the calendar and notes",
+        "width": 603,
+        "height": 1311,
+        "caption": "Journey: the calendar keeps the record. One missed day never erases the growth."
+      },
+      {
+        "image": "/resolution-companion-screen-coach.webp",
+        "alt": "Resolution Companion Coach screen with a conversation and quick review options",
+        "width": 603,
+        "height": 1311,
+        "caption": "Coach: chat-based check-ins, weekly reviews, and plan adjustments you confirm."
+      }
+    ],
     "publicUrl": "https://resolutioncompanion.com/",
     "publicLabel": "Visit the app's website",
     "creditUrl": "https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708",
