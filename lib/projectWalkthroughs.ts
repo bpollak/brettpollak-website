@@ -54,15 +54,16 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Horse Racing Companion",
     "group": "personal-apps",
     "category": "Independent race-day analysis",
-    "status": "Available on iOS · Del Mar 2026 season",
-    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. Live on the App Store through the 2026 season.",
+    "status": "Available on iOS · Del Mar summer complete · Bing Crosby fall meet Nov 6–29",
+    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. The summer meet is complete; the fall Bing Crosby meet is included in the season pass.",
     "purpose": "A day at Del Mar had one frustrating part: the betting window. Horse Racing Companion weighs public odds, past Del Mar results for horses, trainers, jockeys, and post position the same way for every race — and says so when the information is not there.",
     "features": [
       "One pick per race: Win, Show, or a three-horse Trifecta box",
       "Estimated win chance for every horse in the race",
       "Odds, scratches, and post times rechecked until just before post",
       "Final picks saved before post and kept beside official results",
-      "Public record: 31 of 72 final picks matched across ten tracked cards"
+      "Summer record: 47 of 105 final picks matched (44.8%) across 13 tracked cards",
+      "Fall Bing Crosby meet, November 6–29, included in the season pass"
     ],
     "steps": [
       [
@@ -78,7 +79,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "About two minutes before post the pick is saved. The Results tab shows it beside the official finish, marked Matched or Did Not Match, with a summary for each race day."
       ]
     ],
-    "boundary": "Horse Racing Companion is an independent app and is not affiliated with Del Mar Thoroughbred Club. It has no bet slip, wagering account, or connection to a betting operator, and it never places a wager. The tracked record — 31 of 72 final picks matched (43.1%) across ten cards, August 20 to September 4, 2026 — is a small sample that does not establish profitability or a betting edge. For adults 18+.",
+    "boundary": "Horse Racing Companion is an independent app and is not affiliated with Del Mar Thoroughbred Club. It has no bet slip, wagering account, or connection to a betting operator, and it never places a wager. The tracked summer record — 47 of 105 final picks matched (44.8%) across 13 cards, August 20 through closing day September 7, 2026, with no pick in 16 of 121 settled races — is a small sample that does not establish profitability or a betting edge. The fall Bing Crosby meet (November 6–29) is included in the season pass at no additional charge. For adults 18+.",
     "publicUrl": "https://horseracingcompanion.com/",
     "publicLabel": "Visit the app's website",
     "creditUrl": "https://apps.apple.com/us/app/horse-racing-companion/id6802113749",
