@@ -59,6 +59,9 @@ export default function UcsdAiNewsPage() {
           <a href="https://tritonai.ucsd.edu/">TritonAI platform ↗</a>
           <a href="https://tritonai.ucsd.edu/tritongpt/release-notes/">TritonGPT release notes ↗</a>
         </nav>
+        <p className="mt-6 text-sm text-body">
+          For the national picture — product launches, enterprise developments, and AI policy across higher education — see the <Link href="/ai-digest" className="font-semibold text-signal-blue underline underline-offset-4">AI Digest</Link>, Brett&apos;s daily briefing.
+        </p>
       </div>
     </section>
     <section id="ai-updates" className="mx-auto max-w-6xl px-6 py-10">

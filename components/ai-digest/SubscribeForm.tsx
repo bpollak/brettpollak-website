@@ -50,7 +50,7 @@ export default function SubscribeForm() {
         Get the digest in your inbox
       </h2>
       <p className="text-body text-sm mb-6">
-        A morning AI briefing with links to the source material.
+        A daily AI briefing for people who run technology in higher education — the launches, enterprise moves, and campus policy shifts that matter, with key takeaways and source links.
       </p>
 
       {formState === 'success' ? (

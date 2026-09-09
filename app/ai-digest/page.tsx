@@ -44,7 +44,7 @@ export default function AiDigestPage() {
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <p className="rule-label mb-5">AI Digest</p>
         <h1 className="page-title mb-6">Daily AI briefings</h1>
-        <p className="page-intro">Product launches, enterprise developments, and implications for higher education. Each edition links to the source material.</p>
+        <p className="page-intro">The AI news that matters to people who run technology in higher education — product launches, enterprise developments, and campus policy shifts, each with key takeaways and source links.</p>
         <p className="mt-6 text-sm text-body">{weeklyAiDigestData.weekLabel} · Published through {weeklyAiDigestData.publishedThrough}</p>
         <div className="mt-8"><SubscribeForm /></div>
       </div>
@@ -60,6 +60,12 @@ export default function AiDigestPage() {
         {day.headlines.length > 3 && <details className="mt-4"><summary className="cursor-pointer text-sm font-semibold text-signal-blue">More headlines ({day.headlines.length - 3})</summary><ul className="mt-3 list-disc space-y-2 pl-5 text-body">{day.headlines.slice(3).map(headline => <li key={headline}>{headline}</li>)}</ul></details>}
         <Link href={`/ai-digest/${day.isoDate}`} className="button-secondary mt-5">Read edition<span className="sr-only"> for {editionDate(day.isoDate)}</span></Link>
       </article>)}</div>
+    </section>
+    <section aria-label="Related" className="mx-auto max-w-6xl px-6 pb-16">
+      <p className="rule-label mb-4">The campus side of this</p>
+      <p className="leading-7 text-body">
+        The <Link href="/ucsd-ai-news" className="font-semibold text-signal-blue underline underline-offset-4">UC San Diego AI Weekly</Link> is the campus-internal companion to this digest: what&apos;s new in UCSD&apos;s supported AI tools, TritonAI platform updates, and upcoming staff trainings.
+      </p>
     </section>
   </main>;
 }

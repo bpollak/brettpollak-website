@@ -372,6 +372,9 @@ export default function Home() {
                 The newest articles, interviews, and talks. The full list is on the media page.
               </p>
               <Link href="/media" className="mt-6 inline-block text-sm font-semibold text-[#f2b84b] underline underline-offset-4">All media and appearances</Link>
+              <p className="mt-8 text-white/70 leading-7">
+                I also write the <Link href="/ai-digest" className="font-semibold text-[#f2b84b] underline underline-offset-4">AI Digest</Link> — a daily briefing on AI for people who run technology in higher education.
+              </p>
             </div>
             <div className="divide-y divide-white/12 border-y border-white/12">
               {recentMedia.map((item) => {

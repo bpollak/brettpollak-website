@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { editionDate } from '@/lib/editions';
 import { SITE_URL } from '@/lib/seoDates';
+import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 
 export default function EditionPage({ kind, date, html, dates }: {
   kind: 'ai-digest' | 'ucsd-ai-news'; date: string; html: string; dates: string[];
@@ -30,5 +31,27 @@ export default function EditionPage({ kind, date, html, dates }: {
       {newer && <Link className="button-secondary" href={`/${kind}/${newer}`}>← Newer: {editionDate(newer)}</Link>}
       {older && <Link className="button-secondary" href={`/${kind}/${older}`}>Older: {editionDate(older)} →</Link>}
     </nav>
+    {kind === 'ai-digest' && (
+      <section aria-label="Subscribe" className="mx-auto max-w-4xl px-6 pb-16">
+        <p className="rule-label mb-4">Keep up with this</p>
+        <SubscribeForm />
+        <p className="mt-4 text-sm text-body">
+          Reading the campus-internal side of this? The{' '}
+          <Link href="/ucsd-ai-news" className="font-semibold text-signal-blue underline underline-offset-4">UC San Diego AI Weekly</Link>{' '}
+          covers supported AI tools, TritonAI updates, and trainings for UCSD staff.
+        </p>
+      </section>
+    )}
+    {kind === 'ucsd-ai-news' && (
+      <section aria-label="Subscribe" className="mx-auto max-w-4xl px-6 pb-16">
+        <p className="rule-label mb-4">Beyond campus</p>
+        <p className="leading-7 text-body">
+          The{' '}
+          <Link href="/ai-digest" className="font-semibold text-signal-blue underline underline-offset-4">AI Digest</Link>{' '}
+          is the national-facing daily briefing that pairs with this weekly: product launches, enterprise developments, and AI policy across higher education, with key takeaways and source links.
+        </p>
+        <Link href="/ai-digest" className="button-secondary mt-5">Browse the AI Digest</Link>
+      </section>
+    )}
   </main>;
 }
