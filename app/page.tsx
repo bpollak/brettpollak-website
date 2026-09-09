@@ -367,7 +367,7 @@ export default function Home() {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {featuredApps.map(app => (
               <article key={app.title} className="flex flex-col border border-line bg-paper">
-                <div className="relative h-52 border-b border-line bg-white/70">
+                <div className="relative aspect-[1200/630] border-b border-line bg-white/70">
                   <Image src={app.image} alt={app.imageAlt} fill
                     className="object-cover" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
                 </div>
