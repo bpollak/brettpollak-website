@@ -290,7 +290,7 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
               <p className="rule-label mb-3">Working on now</p>
-              <h2 id="working-on-now-heading" className="text-3xl font-medium md:text-4xl">Inside and outside UC San Diego.</h2>
+              <h2 id="working-on-now-heading" className="text-3xl font-medium md:text-4xl">What UC San Diego is working on.</h2>
             </div>
             <Link href="/now" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Full current focus</Link>
           </div>
@@ -311,34 +311,6 @@ export default function Home() {
                         <Image src={iconForUrl(update.href) as string} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
                       ) : (
                         <span className="font-mono text-xs font-bold text-body">UC</span>
-                      )}
-                    </span>
-                    <span className="font-mono text-xs text-body">{update.date}</span>
-                    <span className="min-w-0">
-                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{update.text}</span>
-                      {update.note && <span className="mt-0.5 block text-sm leading-6 text-body">{update.note}</span>}
-                    </span>
-                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Personal module */}
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
-                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="gold" />
-                Personal projects
-              </h3>
-              <div className="border-y border-line">
-                {updatesByArea('personal').map(update => (
-                  <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
-                    <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-line bg-white/70">
-                      {iconForUrl(update.href) ? (
-                        <Image src={iconForUrl(update.href) as string} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
-                      ) : (
-                        <span className="font-mono text-xs font-bold text-body">+</span>
                       )}
                     </span>
                     <span className="font-mono text-xs text-body">{update.date}</span>
