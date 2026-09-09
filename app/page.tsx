@@ -142,15 +142,6 @@ function formatNowDate(iso: string): string {
 
 const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
 
-const routes = [
-  { href: '/tritongpt', label: 'TritonAI', note: 'Program overview and metrics' },
-  { href: '/ai-agent-architecture', label: 'AI architecture', note: 'Personal AI system design' },
-  { href: '/media', label: 'Media', note: 'Articles, interviews, and talks' },
-  { href: '/ai-digest', label: 'AI Digest', note: 'Daily AI briefings' },
-  { href: '/products', label: 'Projects', note: 'Apps and walkthroughs' },
-  { href: '/now', label: 'Now', note: 'Current focus areas' },
-];
-
 export default function Home() {
   const personSchema = {
     "@context": "https://schema.org",
@@ -249,7 +240,7 @@ export default function Home() {
             <div>
               <p className="rule-label mb-5">Day job, side projects</p>
               <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
-                Technology for UC San Diego by day. My own apps at night.
+                Technology leadership at UC San Diego, and the apps I build outside it.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
                 By day I&rsquo;m the Executive Director of Workplace Technology and
@@ -442,32 +433,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SITE INDEX */}
-      <section className="border-t border-line bg-paper">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
-            <div>
-              <p className="rule-label mb-4">More</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">
-                Explore the site.
-              </h2>
-            </div>
-            <div className="border-y border-line">
-              {routes.map((route) => (
-                <Link
-                  key={route.href}
-                  href={route.href}
-                  className="index-row grid gap-2 py-5 sm:grid-cols-[13rem_1fr_auto] sm:items-center"
-                >
-                  <span className="text-xl font-medium text-ink">{route.label}</span>
-                  <span className="text-body">{route.note}</span>
-                  <span className="font-mono text-xs text-signal-blue">open</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
