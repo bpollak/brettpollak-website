@@ -131,7 +131,7 @@ const featuredApps = [
     title: 'Steel City Gameday',
     category: 'Game-day app',
     description: 'Turns football group texts into live game picks: private Crews, timed Flash Picks, and season-long receipts.',
-    latest: 'Submitted for App Store review — built for the fall 2026 football season.',
+    latest: 'Version 1.0 now live in the App Store — free to download for the 2026 season.',
     image: '/steel-city-gameday.png',
     imageAlt: 'Steel City Gameday with a private Crew room and live Flash Pick',
     href: '/products/steel-city-gameday',

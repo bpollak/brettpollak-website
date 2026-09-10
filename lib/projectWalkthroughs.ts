@@ -128,8 +128,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Steel City Gameday",
     "group": "personal-apps",
     "category": "Sports group experience",
-    "status": "In App Store review · Fall 2026",
-    "description": "A private iPhone app for Steelers fans: invite-only Crews share game-day chat, pregame picks, timed live polls, and season-long standings. Currently in App Store review ahead of the fall 2026 season.",
+    "status": "Live on the App Store · Fall 2026",
+    "description": "A private iPhone app for Steelers fans: invite-only Crews share game-day chat, pregame picks, timed live polls, and season-long standings. Now live on the App Store for the 2026 season.",
     "purpose": "Watching the game apart is normal now, but group texts lose the season. Steel City Gameday turns the people you watch with into a Crew and gives every game a scored record that lasts all year.",
     "features": [
       "Invite-only Crews — no public feed",
@@ -152,9 +152,11 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Correct answers earn points, every game leaves a receipt, and Crew standings carry the season. The Wire keeps Steelers news alongside."
       ]
     ],
-    "boundary": "Steel City Gameday is in App Store review as of September 8, 2026, built for the 2026 NFL season. Crews are private and join by invite only. Picks are for entertainment; there is no wagering, entry fee, or prize of monetary value. Crew chat is free; scored picks and standings are free for the first five played games, then a one-time 2026 Season Pass.",
+    "boundary": "Steel City Gameday is live on the App Store as of September 10, 2026, built for the 2026 NFL season. Crews are private and join by invite only. Picks are for entertainment; there is no wagering, entry fee, or prize of monetary value. Crew chat is free; scored picks and standings are free for the first five played games, then a one-time 2026 Season Pass.",
     "publicUrl": "https://steelcitygameday.com/",
-    "publicLabel": "Visit the app's website"
+    "publicLabel": "Visit the app's website",
+    "creditUrl": "https://apps.apple.com/us/app/steel-city-gameday/id6806732803",
+    "creditLabel": "Download on the App Store"
   },
   {
     "slug": "numbers-game-hq",

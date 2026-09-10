@@ -43,7 +43,7 @@ For a longer machine-readable briefing, use:
     - Horse Racing Companion: https://brettcpollak.com/products/horse-racing-companion
       - iOS horse racing analysis app with saved picks and season record tracking; live in the App Store. Case study with season accuracy stats.
     - Steel City Gameday: https://brettcpollak.com/products/steel-city-gameday
-      - Pittsburgh Steelers gameday iOS app (private Crews, pregame picks, Flash Picks); in App Store review for the fall 2026 season. Case study.
+      - Pittsburgh Steelers gameday iOS app (private Crews, pregame picks, Flash Picks); live on the App Store for the 2026 season. Case study.
   - Cason Recruiting CRM (walkthrough): https://brettcpollak.com/products/cason-recruiting-crm
     - What a private, family-only college-recruiting workspace does (pipeline, coach and conversation logs, questionnaires, tasks), illustrated with sample data. The tool itself is invite-only.
   - Scholarship Agent (walkthrough): https://brettcpollak.com/products/cason-scholarship-agent

@@ -73,10 +73,10 @@ export const homeUpdates: HomeUpdatesData = {
       href: 'https://resolutioncompanion.com/',
     },
     {
-      date: '2026-09-07',
+      date: '2026-09-10',
       area: 'personal',
-      text: 'Steel City Gameday submitted for App Store review',
-      note: 'Private Crews, pregame picks, and Flash Picks — built for the fall 2026 football season.',
+      text: 'Steel City Gameday 1.0 is live on the App Store',
+      note: 'Private Crews, pregame picks, and Flash Picks — free to download for the 2026 season.',
       href: 'https://steelcitygameday.com/',
     },
     {

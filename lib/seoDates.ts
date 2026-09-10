@@ -27,14 +27,14 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-09-10",  // homepage: layout improvements & restructuring
+  "/": "2026-09-10",  // homepage: layout restructure + SCG live on the App Store status line
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-09-08",
   "/tritongpt": "2026-09-09",
   "/speaking": "2026-09-05",
-  "/products": "2026-09-09",
+  "/products": "2026-09-10",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-09-09",
@@ -42,6 +42,7 @@ export const staticPageDates: Record<string, string> = {
   "/linkedin": "2026-07-26",
   "/contact": "2026-09-05",
   "/products/horse-racing-companion": "2026-09-09",
+  "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store
 };
 
 /** First-published dates for long-form pages that carry Article JSON-LD. */
