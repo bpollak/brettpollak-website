@@ -402,6 +402,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI ARCHITECTURE — the system behind the work */}
+      <section className="border-b border-line bg-paper-strong" aria-labelledby="ai-arch-heading">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div>
+              <p className="rule-label mb-3">The system</p>
+              <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl">The agent behind the output.</h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+                Everything above runs on an agent I built and operate myself: 86 automated
+                jobs, an 852-node knowledge graph, and a 1,038-page wiki, with the primary
+                inference path hosted on-prem on open-weight models. The briefing you just
+                read is one of its daily outputs.
+              </p>
+              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+                Context loads in three tiers — a small always-loaded core, the wiki pulled in
+                when the conversation calls for it, and the deep archive on explicit request.
+              </p>
+              <Link href="/ai-agent-architecture" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                How the architecture works
+              </Link>
+            </div>
+            <figure aria-label="Three-layer context loading, miniature">
+              <figcaption className="mb-3 flex items-center justify-between">
+                <span className="rule-label">Context loading</span>
+                <span className="font-mono text-xs text-body">every turn → deep archive</span>
+              </figcaption>
+              <div className="space-y-3">
+                <a href="/ai-agent-architecture#layers" className="block">
+                  <div className="w-[62%] rounded-xl bg-signal-blue px-4 py-3 text-white shadow-sm transition-transform hover:scale-[1.01]">
+                    <p className="text-xs font-bold uppercase tracking-[0.14em]">Layer 1 · Always loaded</p>
+                    <p className="mt-0.5 text-sm font-medium text-white/85">Identity, memory, patterns — ~50 KB</p>
+                  </div>
+                </a>
+                <a href="/ai-agent-architecture#layers" className="block">
+                  <div className="w-[81%] rounded-xl border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-4 py-3 transition-transform hover:scale-[1.01]">
+                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Layer 2 · On trigger</p>
+                    <p className="mt-0.5 text-sm font-medium text-ink">The 1,038-page wiki, pulled in when mentioned</p>
+                  </div>
+                </a>
+                <a href="/ai-agent-architecture#layers" className="block">
+                  <div className="w-full rounded-xl border-2 border-dashed border-signal-coral bg-[color-mix(in_srgb,var(--wash-coral)_40%,white)] px-4 py-3 transition-transform hover:scale-[1.01]">
+                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-coral-ink">Layer 3 · On request</p>
+                    <p className="mt-0.5 text-sm font-medium text-ink">Dated memory, transcripts, the full graph</p>
+                  </div>
+                </a>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       {/* AI DIGEST — daily briefing + sign-up */}
       <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
         <div className="max-w-7xl mx-auto px-6 py-16">
