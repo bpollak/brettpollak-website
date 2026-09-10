@@ -444,11 +444,15 @@ export default function Home() {
             <figure aria-label="What goes into the memory ecosystem, how it is layered, and what comes out">
               <div className="rounded-xl border border-line bg-paper p-4 shadow-sm">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-green">What goes in</p>
-                <div className="mt-3 grid grid-cols-2 gap-2">
+                <div className="mt-3 grid grid-cols-2 gap-2.5">
                   {ARCH_INPUTS.map(item => (
-                    <a key={item.label} href="/ai-agent-architecture#context" className="block rounded-lg bg-[color-mix(in_srgb,var(--wash-green)_45%,white)] px-3 py-2 transition-transform hover:scale-[1.01]">
-                      <p className="text-sm font-semibold leading-5 text-ink">{item.label}</p>
-                      <p className="text-xs text-body">{item.note}</p>
+                    <a key={item.label} href="/ai-agent-architecture#context"
+                       className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2.5 transition-all hover:border-signal-blue hover:shadow-sm">
+                      <span className="min-w-0">
+                        <span className="block text-sm font-semibold leading-5 text-ink transition-colors group-hover:text-signal-blue">{item.label}</span>
+                        <span className="block text-xs text-body">{item.note}</span>
+                      </span>
+                      <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-green/70 transition-colors group-hover:text-signal-green">↗</span>
                     </a>
                   ))}
                 </div>
@@ -461,33 +465,46 @@ export default function Home() {
                 and published artifacts.
               </figcaption>
               <div className="space-y-3">
-                <a href="/ai-agent-architecture#layers" className="block">
-                  <div className="w-[62%] rounded-xl bg-signal-blue px-4 py-3 text-white shadow-sm transition-transform hover:scale-[1.01]">
-                    <p className="text-xs font-bold uppercase tracking-[0.14em]">Layer 1 · Always loaded</p>
-                    <p className="mt-0.5 text-sm font-medium text-white/85">Identity, memory, patterns — ~50 KB</p>
+                <a href="/ai-agent-architecture#layers" className="group block">
+                  <div className="flex w-[62%] items-center justify-between gap-2 rounded-xl bg-signal-blue px-4 py-3 text-white shadow-sm transition-transform group-hover:scale-[1.01]">
+                    <span>
+                      <span className="block text-xs font-bold uppercase tracking-[0.14em]">Layer 1 · Always loaded</span>
+                      <span className="mt-0.5 block text-sm font-medium text-white/85">Identity, memory, patterns — ~50 KB</span>
+                    </span>
+                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-white/60">↗</span>
                   </div>
                 </a>
-                <a href="/ai-agent-architecture#layers" className="block">
-                  <div className="w-[81%] rounded-xl border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-4 py-3 transition-transform hover:scale-[1.01]">
-                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Layer 2 · On trigger</p>
-                    <p className="mt-0.5 text-sm font-medium text-ink">The 1,038-page wiki, pulled in when mentioned</p>
+                <a href="/ai-agent-architecture#layers" className="group block">
+                  <div className="flex w-[81%] items-center justify-between gap-2 rounded-xl border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-4 py-3 transition-transform group-hover:scale-[1.01]">
+                    <span>
+                      <span className="block text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Layer 2 · On trigger</span>
+                      <span className="mt-0.5 block text-sm font-medium text-ink">The 1,038-page wiki, pulled in when mentioned</span>
+                    </span>
+                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-gold-ink/70">↗</span>
                   </div>
                 </a>
-                <a href="/ai-agent-architecture#layers" className="block">
-                  <div className="w-full rounded-xl border-2 border-dashed border-signal-coral bg-[color-mix(in_srgb,var(--wash-coral)_40%,white)] px-4 py-3 transition-transform hover:scale-[1.01]">
-                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-coral-ink">Layer 3 · On request</p>
-                    <p className="mt-0.5 text-sm font-medium text-ink">Dated memory, transcripts, the full graph</p>
+                <a href="/ai-agent-architecture#layers" className="group block">
+                  <div className="flex w-full items-center justify-between gap-2 rounded-xl border-2 border-dashed border-signal-coral bg-[color-mix(in_srgb,var(--wash-coral)_40%,white)] px-4 py-3 transition-transform group-hover:scale-[1.01]">
+                    <span>
+                      <span className="block text-xs font-bold uppercase tracking-[0.14em] text-signal-coral-ink">Layer 3 · On request</span>
+                      <span className="mt-0.5 block text-sm font-medium text-ink">Dated memory, transcripts, the full graph</span>
+                    </span>
+                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-coral-ink/70">↗</span>
                   </div>
                 </a>
               </div>
               <p aria-hidden="true" className="my-2 text-center font-mono text-sm text-body">↓</p>
               <div className="rounded-xl border border-line bg-paper p-4 shadow-sm">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-blue">What comes out</p>
-                <div className="mt-3 grid grid-cols-2 gap-2">
+                <div className="mt-3 grid grid-cols-2 gap-2.5">
                   {ARCH_OUTPUTS.map(item => (
-                    <a key={item.label} href="/ai-agent-architecture#outcomes" className="block rounded-lg bg-[color-mix(in_srgb,var(--wash-blue)_45%,white)] px-3 py-2 transition-transform hover:scale-[1.01]">
-                      <p className="text-sm font-semibold leading-5 text-ink">{item.label}</p>
-                      <p className="text-xs text-body">{item.note}</p>
+                    <a key={item.label} href="/ai-agent-architecture#outcomes"
+                       className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2.5 transition-all hover:border-signal-blue hover:shadow-sm">
+                      <span className="min-w-0">
+                        <span className="block text-sm font-semibold leading-5 text-ink transition-colors group-hover:text-signal-blue">{item.label}</span>
+                        <span className="block text-xs text-body">{item.note}</span>
+                      </span>
+                      <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-blue/70 transition-colors group-hover:text-signal-blue">↗</span>
                     </a>
                   ))}
                 </div>
