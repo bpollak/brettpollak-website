@@ -337,30 +337,6 @@ export default function Home() {
                 priority sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, 100vw" />
             </div>
           </div>
-
-          {/* Impact Stat Strip */}
-          <div className="mt-12 pt-8 border-t border-line grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <p className="font-mono text-3xl sm:text-4xl font-semibold text-ink">7</p>
-              <p className="rule-label mt-1">Campus Teams</p>
-              <p className="text-xs text-body mt-1">Infrastructure, data, AI, endpoint, and collaboration platforms</p>
-            </div>
-            <div>
-              <p className="font-mono text-3xl sm:text-4xl font-semibold text-signal-blue">30+</p>
-              <p className="rule-label mt-1">Governed Models</p>
-              <p className="text-xs text-body mt-1">TritonAI Gateway on UC &amp; cloud infrastructure</p>
-            </div>
-            <div>
-              <p className="font-mono text-3xl sm:text-4xl font-semibold text-signal-gold">21</p>
-              <p className="rule-label mt-1">Shipped Projects</p>
-              <p className="text-xs text-body mt-1">Mobile apps, campus systems, and autonomous agents</p>
-            </div>
-            <div>
-              <p className="font-mono text-3xl sm:text-4xl font-semibold text-signal-green">86</p>
-              <p className="rule-label mt-1">Automated Workflows</p>
-              <p className="text-xs text-body mt-1">Personal AI ecosystem operating on-premises</p>
-            </div>
-          </div>
         </div>
       </section>
 
