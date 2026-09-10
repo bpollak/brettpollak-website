@@ -71,7 +71,6 @@ const featuredWork = [
     category: 'Campus assistants',
     tone: 'blue',
     status: 'Production',
-    step: { n: '1', label: 'Ask' },
     title: 'TritonGPT',
     summary: 'AI assistants for students, faculty, and staff to work with documents, ask campus questions, and get help with everyday tasks.',
     href: '/tritongpt',
@@ -82,7 +81,6 @@ const featuredWork = [
     category: 'Developer access',
     tone: 'gold',
     status: 'Production',
-    step: { n: '2', label: 'Embed' },
     title: 'TritonAI API Gateway',
     summary: 'One API connects campus applications and workflows to approved UC-hosted and cloud models, with shared access and usage controls.',
     href: 'https://tritonai.ucsd.edu/developer-apis/index.html',
@@ -90,16 +88,22 @@ const featuredWork = [
   },
   {
     id: 'tritonai-harness',
-    section: 'Agent workspace',
     category: 'Agent workspace',
     tone: 'green',
     status: 'Pilot',
-    step: { n: '3', label: 'Automate' },
     title: 'TritonAI Harness',
     summary: 'A desktop agent workspace for working with files, code, and connected campus services under human supervision.',
     href: 'https://tritonai.ucsd.edu/developer-apis/harness.html',
     linkLabel: 'Explore TritonAI Harness',
   },
+];
+
+// How campus services mature — mirrors tritonai.ucsd.edu's shared-foundation
+// framing (Ask -> Embed -> Automate). Step tones match the three cards below.
+const TRITONAI_STEPS = [
+  { n: '1', label: 'Ask', note: 'Start in TritonGPT — chat, documents, approved models.', tone: 'blue' },
+  { n: '2', label: 'Embed', note: 'Add approved AI to a system campus teams already use.', tone: 'gold' },
+  { n: '3', label: 'Automate', note: 'Automate what repeats, with a person reviewing the result.', tone: 'green' },
 ];
 
 const featuredApps = [
@@ -340,31 +344,30 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-12">
           <p className="rule-label mb-3">Featured work</p>
           <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-body">My work in AI centers on helping build and support TritonAI with colleagues across campus. Campus services mature along one path — <strong className="font-semibold text-ink">ask in chat, embed in the systems people already use, automate what repeats.</strong></p>
-
-          <div className="mt-10 grid gap-0 md:grid-cols-[1.15fr_1fr_1fr]">
-            {featuredWork.map(study => {
-              const toneColor = study.tone === 'blue' ? 'bg-signal-blue' : study.tone === 'gold' ? 'bg-signal-gold' : 'bg-signal-green';
-              const isPilot = study.status === 'Pilot';
-              return (
-              <article key={study.id} className="flex flex-col px-5 py-2 md:px-7 md:py-2 [&:not(:first-child)]:border-t md:[&:not(:first-child)]:border-t-0 md:[&:not(:first-child)]:border-l md:[&:not(:first-child)]:border-line">
-                <div aria-hidden="true" className={`-mx-5 -mt-2 h-1 w-full md:-mx-7 ${toneColor}`}
-                  style={isPilot ? { backgroundImage: 'repeating-linear-gradient(90deg, var(--tone-bar, #366c5a) 0, var(--tone-bar, #366c5a) 10px, transparent 10px, transparent 16px)' } : undefined}></div>
-                <div className="flex items-baseline gap-2.5">
-                  <span className="home-update-dot inline-block h-2 w-2 translate-y-[-2px] self-center rounded-full" data-tone={study.tone} aria-hidden="true" />
-                  <span className="font-mono text-[0.72rem] font-bold uppercase tracking-[0.16em] text-body">{study.step.n} · {study.step.label}</span>
-                  <span aria-hidden="true" className="ml-auto font-serif text-4xl font-bold leading-none tracking-tight text-body/25">{study.step.n}</span>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-body">My work in AI centers on helping build and support TritonAI with colleagues across campus. Campus services mature along one path:</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-3" aria-label="How campus AI services mature">
+            {TRITONAI_STEPS.map((step, i) => (
+              <div key={step.n} className="relative rounded-lg border border-line bg-paper px-4 py-3">
+                <div className="flex items-center gap-2.5">
+                  <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone={step.tone} aria-hidden="true" />
+                  <span className="font-mono text-xs font-bold text-body">{step.n}</span>
+                  <span className="text-sm font-semibold text-ink">{step.label}</span>
+                  <span aria-hidden="true" className="ml-auto font-mono text-sm text-line">{i < TRITONAI_STEPS.length - 1 ? '→' : ''}</span>
                 </div>
-                <h3 className="mt-4 min-h-14 text-2xl font-medium leading-7">{study.title}</h3>
-                <span className={`mt-3 inline-flex w-fit items-center gap-1.5 rounded-none px-2 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.12em] ${isPilot ? 'border border-ink text-ink' : 'bg-ink text-paper'}`}>{study.status}</span>
-                <p className="mt-3 text-sm leading-6 text-body">{study.summary}</p>
-                <div className="mt-auto pt-6">
-                  <p className="rule-label">{study.category}</p>
-                  <Link href={study.href} className="mt-1.5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">{study.linkLabel}<span className="sr-only">: {study.title}</span></Link>
-                </div>
-              </article>
-              );
-            })}
+                <p className="mt-1.5 text-xs leading-5 text-body">{step.note}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-7 grid gap-5 md:grid-cols-3">
+            {featuredWork.map(study => <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
+              <div className="mb-3 flex items-center justify-between gap-2">
+                <p className="rule-label">{study.category}</p>
+                <span className="rounded-full border border-line bg-white px-2.5 py-0.5 font-mono text-[0.68rem] font-bold uppercase tracking-wider text-body">{study.status}</span>
+              </div>
+              <h3 className="text-2xl leading-7 font-medium">{study.title}</h3>
+              <p className="mt-4 text-base leading-7 text-body">{study.summary}</p>
+              <Link href={study.href} className="mt-auto inline-block pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">{study.linkLabel}<span className="sr-only">: {study.title}</span></Link>
+            </article>)}
           </div>
         </div>
       </section>
