@@ -337,13 +337,43 @@ export default function Home() {
                 priority sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, 100vw" />
             </div>
           </div>
+
+          {/* Impact Stat Strip */}
+          <div className="mt-12 pt-8 border-t border-line grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <p className="font-mono text-3xl sm:text-4xl font-semibold text-ink">7</p>
+              <p className="rule-label mt-1">Campus Teams</p>
+              <p className="text-xs text-body mt-1">Infrastructure, data, AI, endpoint, and collaboration platforms</p>
+            </div>
+            <div>
+              <p className="font-mono text-3xl sm:text-4xl font-semibold text-signal-blue">30+</p>
+              <p className="rule-label mt-1">Governed Models</p>
+              <p className="text-xs text-body mt-1">TritonAI Gateway on UC &amp; cloud infrastructure</p>
+            </div>
+            <div>
+              <p className="font-mono text-3xl sm:text-4xl font-semibold text-signal-gold">21</p>
+              <p className="rule-label mt-1">Shipped Projects</p>
+              <p className="text-xs text-body mt-1">Mobile apps, campus systems, and autonomous agents</p>
+            </div>
+            <div>
+              <p className="font-mono text-3xl sm:text-4xl font-semibold text-signal-green">86</p>
+              <p className="rule-label mt-1">Automated Workflows</p>
+              <p className="text-xs text-body mt-1">Personal AI ecosystem operating on-premises</p>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* TRITONAI & CAMPUS WORK */}
       <section id="selected-work" className="border-b border-line bg-paper-strong">
-        <div className="mx-auto max-w-7xl px-6 py-12">
-          <p className="rule-label mb-3">Featured work</p>
-          <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
+          <div className="flex flex-wrap items-end justify-between gap-5">
+            <div>
+              <p className="rule-label mb-3">Featured work</p>
+              <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
+            </div>
+            <Link href="/tritongpt" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Explore the TritonAI program</Link>
+          </div>
           <p className="mt-4 max-w-3xl text-base leading-7 text-body">My work in AI centers on helping build and support TritonAI with colleagues across campus. Campus services mature along one path:</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-3" aria-label="How campus AI services mature">
             {TRITONAI_STEPS.map((step, i) => (
@@ -369,61 +399,53 @@ export default function Home() {
               <Link href={study.href} className="mt-auto inline-block pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">{study.linkLabel}<span className="sr-only">: {study.title}</span></Link>
             </article>)}
           </div>
-        </div>
-      </section>
 
-      {/* WORKING ON NOW — three horizontal modules */}
-      <section className="border-b border-line tint-gold" aria-labelledby="working-on-now-heading">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="flex flex-wrap items-end justify-between gap-5">
-            <div>
-              <p className="rule-label mb-3">Working on now</p>
-              <h2 id="working-on-now-heading" className="text-3xl font-medium md:text-4xl">What UC San Diego is working on.</h2>
-            </div>
-            <Link href="/now" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Full current focus</Link>
-          </div>
-
-          <div className="mt-10 space-y-12">
-            {/* UCSD work module */}
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+          {/* Integrated Campus Updates Dispatch */}
+          <div className="mt-12 pt-8 border-t border-line">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
                 <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="blue" />
-                UC San Diego
+                Recent Campus Dispatches
               </h3>
-              <div className="border-y border-line">
-                {updatesByArea('work').map(update => (
-                  <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
-                    <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-line bg-white/70">
-                      {iconForUrl(update.href) ? (
-                        <Image src={iconForUrl(update.href) as string} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
-                      ) : (
-                        <span className="font-mono text-xs font-bold text-body">UC</span>
-                      )}
-                    </span>
-                    <span className="font-mono text-xs text-body">{update.date}</span>
-                    <span className="min-w-0">
-                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{update.text}</span>
-                      {update.note && <span className="mt-0.5 block text-sm leading-6 text-body">{update.note}</span>}
-                    </span>
-                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
-                  </a>
-                ))}
-              </div>
+              <Link href="/now" className="text-xs font-semibold text-signal-blue underline underline-offset-4">Full current focus on /now →</Link>
+            </div>
+            <div className="border-y border-line">
+              {updatesByArea('work').slice(0, 3).map(update => (
+                <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
+                  className="home-update-row index-row group grid gap-1 py-4 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                  <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-line bg-white/70">
+                    {iconForUrl(update.href) ? (
+                      <Image src={iconForUrl(update.href) as string} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
+                    ) : (
+                      <span className="font-mono text-xs font-bold text-body">UC</span>
+                    )}
+                  </span>
+                  <span className="font-mono text-xs text-body">{update.date}</span>
+                  <span className="min-w-0">
+                    <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{update.text}</span>
+                    {update.note && <span className="mt-0.5 block text-xs leading-5 text-body">{update.note}</span>}
+                  </span>
+                  <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-line bg-paper-strong" aria-labelledby="featured-apps-heading">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+      {/* PROJECTS */}
+      <section className="border-b border-line tint-gold" aria-labelledby="featured-apps-heading">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
-              <p className="rule-label mb-3">Projects</p>
+              <p className="rule-label mb-3">Independent software</p>
               <h2 id="featured-apps-heading" className="text-3xl font-medium md:text-4xl">Apps I&apos;ve built.</h2>
             </div>
-            <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all projects</Link>
+            <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all 21 projects</Link>
           </div>
+          <p className="mt-3 max-w-2xl text-base leading-7 text-body">
+            Nights and weekends I build independent mobile apps, campus prototypes, and automated personal agent systems.
+          </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {featuredApps.map(app => (
               <article key={app.title} className="flex flex-col border border-line bg-paper">
@@ -444,78 +466,54 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* AI DIGEST — daily briefing + sign-up */}
-      <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-            <div>
-              <p className="rule-label mb-3">Daily briefing</p>
-              <h2 id="ai-digest-heading" className="text-3xl font-medium md:text-4xl">The AI Digest.</h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                A daily AI briefing for people who run technology in higher education — the
-                launches, enterprise moves, and campus policy shifts that matter, with key
-                takeaways and source links.
-              </p>
-              <div className="mt-8">
-                <SubscribeForm />
+          {/* Portfolio Breadth Directory */}
+          <div className="mt-10 rounded-lg border border-line bg-white/70 p-6 shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div>
+                <p className="rule-label mb-1">Portfolio breadth</p>
+                <h3 className="text-lg font-semibold text-ink">More projects across mobile, enterprise, and agents</h3>
               </div>
-              <Link href="/ai-digest" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Browse past editions<span className="sr-only"> of the AI Digest</span>
+              <Link href="/products" className="button-secondary text-xs px-4 py-2">
+                All 21 projects &amp; walkthroughs →
               </Link>
             </div>
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
-                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="green" />
-                Latest — {latestDigestEdition.displayDate}
-              </h3>
-              <div className="border-y border-line">
-                {latestDigestArticles.map(article => (
-                  <Link key={article.headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
-                    <span className="min-w-0">
-                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{article.headline}</span>
-                      <span className="mt-1 block text-sm leading-6 text-body">{article.summary}</span>
-                      {article.higherEd && (
-                        <span className="mt-2 block border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">
-                          {article.higherEd}
-                        </span>
-                      )}
-                    </span>
-                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
-                  </Link>
-                ))}
+            <div className="grid sm:grid-cols-3 gap-5 text-sm">
+              <div className="border-l-2 border-signal-blue pl-3.5">
+                <p className="font-semibold text-ink">Mobile &amp; Consumer</p>
+                <p className="text-xs text-body mt-1 leading-5">Resolution Companion, Horse Racing Companion, Steel City Gameday, Rock Hill Property Radar</p>
               </div>
-              <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Read {latestDigestEdition.displayDate}&rsquo;s full digest
-              </Link>
+              <div className="border-l-2 border-signal-gold pl-3.5">
+                <p className="font-semibold text-ink">Campus &amp; Enterprise</p>
+                <p className="text-xs text-body mt-1 leading-5">Numbers Game HQ, Student Experience, Passports Visitor Management, TritonVerify, ReviewDraft, Process Discovery</p>
+              </div>
+              <div className="border-l-2 border-signal-green pl-3.5">
+                <p className="font-semibold text-ink">Family &amp; Discovery Agents</p>
+                <p className="text-xs text-body mt-1 leading-5">Scholarship Agent, Cason Recruiting Profile &amp; CRM, School Brief, Henry Personal AI OS</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AI ARCHITECTURE — the system behind the work */}
+      {/* AI ARCHITECTURE — the system behind the work (Moved up) */}
       <section className="border-b border-line bg-paper-strong" aria-labelledby="ai-arch-heading">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div>
               <p className="rule-label mb-3">The system</p>
               <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl">The agent behind the output.</h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                The AI Digest above is written by an agent I built and operate myself:
-                86 automated jobs, an 860-node knowledge graph, and a 1,044-page wiki,
-                with the primary inference path hosted on-prem on open-weight models.
-                Beyond the digest, it produces my daily briefings, meeting
-                intelligence, and real-time answers with full context.
+                The daily briefings, research synthesis, and newsletters on this site are powered
+                by an agent I built and operate myself: 86 automated jobs, an 860-node knowledge graph,
+                and a 1,044-page wiki, with the primary inference path hosted on-premises on open-weight models.
               </p>
               <p className="mt-4 max-w-xl text-base leading-7 text-body">
                 Context loads in three tiers — a small always-loaded core, the wiki pulled in
                 when the conversation calls for it, and the deep archive on explicit request.
               </p>
               <Link href="/ai-agent-architecture" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                How the architecture works
+                How the architecture works →
               </Link>
             </div>
             <figure aria-label="What goes into the memory ecosystem, how it is layered, and what comes out">
@@ -591,47 +589,137 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MEDIA */}
-      <section className="bg-[#17201b] text-white accent-strip" data-tone="gold">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-12">
+      {/* AI DIGEST — daily briefing + sign-up */}
+      <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
+        <div className="max-w-7xl mx-auto px-6 py-14 md:py-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div>
-              <p className="rule-label mb-4 text-white/55">Writing &amp; press</p>
-              <h2 className="text-4xl md:text-5xl leading-tight font-medium">
-                Recent writing and speaking.
-              </h2>
-              <p className="mt-6 text-white/70 leading-7">
-                The newest articles, interviews, and talks. The full list is on the media page.
+              <p className="rule-label mb-3">Daily briefing</p>
+              <h2 id="ai-digest-heading" className="text-3xl font-medium md:text-4xl">The AI Digest.</h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+                A daily AI briefing for people who run technology in higher education — the
+                launches, enterprise moves, and campus policy shifts that matter, with key
+                takeaways and source links.
               </p>
-              <Link href="/media" className="mt-6 inline-block text-sm font-semibold text-[#f2b84b] underline underline-offset-4">All media and appearances</Link>
+              <div className="mt-8">
+                <SubscribeForm />
+              </div>
+              <Link href="/ai-digest" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Browse past editions<span className="sr-only"> of the AI Digest</span> →
+              </Link>
             </div>
-            <div className="divide-y divide-white/12 border-y border-white/12">
-              {recentMedia.map((item) => {
-                const icon = iconForUrl(item.url);
-                return (
-                <a
-                  key={item.url}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="grid gap-2 py-5 transition-colors hover:bg-white/[0.04] sm:grid-cols-[auto_8rem_1fr_auto] sm:items-center sm:gap-4 sm:px-3"
-                >
-                  <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm border border-white/15 bg-white/[0.06]">
-                    {icon ? (
-                      <Image src={icon} alt="" width={24} height={24} className="h-6 w-6" unoptimized />
-                    ) : (
-                      <span className="font-mono text-xs font-bold text-white/60">{item.publication.slice(0, 2).toUpperCase()}</span>
-                    )}
-                  </span>
-                  <span className="font-mono text-xs text-[#f2b84b]">{item.date}</span>
-                  <span className="min-w-0">
-                    <span className="block font-semibold text-white">{item.publication}</span>
-                    <span className="mt-0.5 block text-sm leading-6 text-white/72">{item.title}</span>
-                  </span>
-                  <span className="font-mono text-xs text-white/45">{item.category}</span>
-                </a>
-                );
-              })}
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="green" />
+                Latest Edition — {latestDigestEdition.displayDate}
+              </h3>
+              <div className="border-y border-line divide-y divide-line">
+                {/* Lead article with full context */}
+                {latestDigestArticles[0] && (
+                  <div className="py-5">
+                    <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="group block">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-signal-gold-ink">Lead Story</span>
+                      <h4 className="mt-1 text-xl font-medium leading-7 text-ink group-hover:text-signal-blue">
+                        {latestDigestArticles[0].headline}
+                      </h4>
+                      <p className="mt-1.5 text-sm leading-6 text-body">{latestDigestArticles[0].summary}</p>
+                      {latestDigestArticles[0].higherEd && (
+                        <p className="mt-2.5 border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">
+                          {latestDigestArticles[0].higherEd}
+                        </p>
+                      )}
+                    </Link>
+                  </div>
+                )}
+                {/* Subsequent articles in brief */}
+                {latestDigestArticles.slice(1, 3).map(article => (
+                  <Link key={article.headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
+                    className="home-update-row index-row group grid gap-1 py-4 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
+                    <span className="min-w-0">
+                      <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{article.headline}</span>
+                      <span className="mt-0.5 block text-xs leading-5 text-body">{article.summary}</span>
+                    </span>
+                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">read ↗</span>
+                  </Link>
+                ))}
+              </div>
+              <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Read {latestDigestEdition.displayDate}&rsquo;s full digest →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SPEAKING & PRESS */}
+      <section className="bg-[#17201b] text-white accent-strip" data-tone="gold">
+        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 xl:gap-16">
+            <div>
+              <p className="rule-label mb-4 text-white/55">Speaking &amp; Keynotes</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-medium">
+                Talks on AI in higher education.
+              </h2>
+              <p className="mt-5 text-white/70 text-base leading-7">
+                I speak to institutional leaders, IT conferences, and campus communities on
+                moving AI from experimental pilots to production infrastructure, governed agent workflows,
+                and citizen developer models.
+              </p>
+              <div className="mt-6 space-y-3">
+                <div className="border-l-2 border-[#c97712] pl-3 py-0.5">
+                  <p className="text-sm font-semibold text-white">Institutional AI: From Pilot to Service</p>
+                  <p className="text-xs text-white/60">Architecture, governance, and on-premises hosting at university scale</p>
+                </div>
+                <div className="border-l-2 border-[#366c5a] pl-3 py-0.5">
+                  <p className="text-sm font-semibold text-white">Agentic AI Workflows in Higher Ed</p>
+                  <p className="text-xs text-white/60">Supervised agents, administrative bottlenecks, and guardrails</p>
+                </div>
+                <div className="border-l-2 border-[#1f5a8a] pl-3 py-0.5">
+                  <p className="text-sm font-semibold text-white">The Citizen Developer Program</p>
+                  <p className="text-xs text-white/60">Empowering campus staff with governed APIs and compute credits</p>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4 items-center">
+                <Link href="/speaking" className="inline-flex items-center justify-center rounded-sm bg-[#c97712] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#d98520]">
+                  Speaking topics &amp; booking →
+                </Link>
+                <span className="text-xs text-white/50">Recent: EDUCAUSE, ASU+GSV, UC AI Council</span>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <p className="rule-label text-white/55">Writing &amp; Press</p>
+                <Link href="/media" className="text-xs font-semibold text-[#f2b84b] underline underline-offset-4">All 40+ appearances →</Link>
+              </div>
+              <div className="divide-y divide-white/12 border-y border-white/12">
+                {recentMedia.map((item) => {
+                  const icon = iconForUrl(item.url);
+                  return (
+                    <a
+                      key={item.url}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grid gap-2 py-4 transition-colors hover:bg-white/[0.04] sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4 sm:px-2"
+                    >
+                      <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-white/15 bg-white/[0.06]">
+                        {icon ? (
+                          <Image src={icon} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
+                        ) : (
+                          <span className="font-mono text-xs font-bold text-white/60">{item.publication.slice(0, 2).toUpperCase()}</span>
+                        )}
+                      </span>
+                      <span className="font-mono text-xs text-[#f2b84b]">{item.date}</span>
+                      <span className="min-w-0">
+                        <span className="block text-sm font-semibold text-white">{item.publication}</span>
+                        <span className="mt-0.5 block text-xs leading-5 text-white/72">{item.title}</span>
+                      </span>
+                      <span className="font-mono text-xs text-white/45">{item.category}</span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
