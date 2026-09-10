@@ -472,95 +472,135 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI ARCHITECTURE — the system behind the work (Moved up) */}
+      {/* AI ARCHITECTURE — the system behind the work */}
       <section className="border-b border-line bg-paper-strong" aria-labelledby="ai-arch-heading">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-            <div>
-              <p className="rule-label mb-3">The system</p>
-              <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl">The agent behind the output.</h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+          {/* Header */}
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-8">
+            <div className="max-w-2xl">
+              <p className="rule-label mb-2">The system</p>
+              <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl text-ink">
+                The agent behind the output.
+              </h2>
+              <p className="mt-3 text-base leading-7 text-body">
                 The daily briefings, research synthesis, and newsletters on this site are powered
                 by an agent I built and operate myself: 86 automated jobs, an 860-node knowledge graph,
-                and a 1,044-page wiki, with the primary inference path hosted on-premises on open-weight models.
+                and a 1,044-page wiki, running on-premises on open-weight models.
               </p>
-              <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                Context loads in three tiers — a small always-loaded core, the wiki pulled in
-                when the conversation calls for it, and the deep archive on explicit request.
-              </p>
-              <Link href="/ai-agent-architecture" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                How the architecture works →
-              </Link>
             </div>
-            <figure aria-label="What goes into the memory ecosystem, how it is layered, and what comes out">
-              <div className="rounded-xl border border-line bg-paper p-4 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-green">What goes in</p>
-                <div className="mt-3 grid grid-cols-2 gap-2.5">
+            <Link
+              href="/ai-agent-architecture"
+              className="text-sm font-semibold text-signal-blue underline underline-offset-4"
+            >
+              How the architecture works →
+            </Link>
+          </div>
+
+          {/* 3-Stage Pipeline Card */}
+          <div className="rounded-xl border border-line bg-paper p-6 shadow-sm">
+            <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+              
+              {/* Stage 1: Inputs */}
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-line">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-signal-green text-[10px] font-bold text-white">1</span>
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-green">What goes in</p>
+                  <span className="ml-auto text-[11px] text-muted font-mono">Sources</span>
+                </div>
+                <div className="space-y-2 flex-1 flex flex-col justify-between">
                   {ARCH_INPUTS.map(item => (
-                    <a key={item.label} href="/ai-agent-architecture#context"
-                       className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2.5 transition-all hover:border-signal-blue hover:shadow-sm">
+                    <a
+                      key={item.label}
+                      href="/ai-agent-architecture#context"
+                      className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2 text-xs transition-all hover:border-signal-blue hover:shadow-xs"
+                    >
                       <span className="min-w-0">
-                        <span className="block text-sm font-semibold leading-5 text-ink transition-colors group-hover:text-signal-blue">{item.label}</span>
-                        <span className="block text-xs text-body">{item.note}</span>
+                        <span className="block font-semibold text-ink group-hover:text-signal-blue">{item.label}</span>
+                        <span className="text-[11px] text-body">{item.note}</span>
                       </span>
-                      <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-green/70 transition-colors group-hover:text-signal-green">↗</span>
+                      <span aria-hidden="true" className="font-mono text-[11px] text-signal-green opacity-70 group-hover:opacity-100">↗</span>
                     </a>
                   ))}
                 </div>
               </div>
-              <p aria-hidden="true" className="my-2 text-center font-mono text-sm text-body">↓</p>
-              <figcaption className="sr-only">
-                Inputs feed a three-tier knowledge layer: a small always-loaded core, the wiki
-                pulled in when the conversation calls for it, and the deep archive on explicit
-                request. Outputs are daily briefings, meeting intelligence, real-time answers,
-                and published artifacts.
-              </figcaption>
-              <div className="space-y-3">
-                <a href="/ai-agent-architecture#layers" className="group block">
-                  <div className="flex w-[62%] items-center justify-between gap-2 rounded-xl bg-signal-blue px-4 py-3 text-white shadow-sm transition-transform group-hover:scale-[1.01]">
-                    <span>
-                      <span className="block text-xs font-bold uppercase tracking-[0.14em]">Layer 1 · Always loaded</span>
-                      <span className="mt-0.5 block text-sm font-medium text-white/85">Identity, memory, patterns — ~50 KB</span>
-                    </span>
-                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-white/60">↗</span>
-                  </div>
-                </a>
-                <a href="/ai-agent-architecture#layers" className="group block">
-                  <div className="flex w-[81%] items-center justify-between gap-2 rounded-xl border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-4 py-3 transition-transform group-hover:scale-[1.01]">
-                    <span>
-                      <span className="block text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Layer 2 · On trigger</span>
-                      <span className="mt-0.5 block text-sm font-medium text-ink">The 1,044-page wiki, pulled in when mentioned</span>
-                    </span>
-                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-gold-ink/70">↗</span>
-                  </div>
-                </a>
-                <a href="/ai-agent-architecture#layers" className="group block">
-                  <div className="flex w-full items-center justify-between gap-2 rounded-xl border-2 border-dashed border-signal-coral bg-[color-mix(in_srgb,var(--wash-coral)_40%,white)] px-4 py-3 transition-transform group-hover:scale-[1.01]">
-                    <span>
-                      <span className="block text-xs font-bold uppercase tracking-[0.14em] text-signal-coral-ink">Layer 3 · On request</span>
-                      <span className="mt-0.5 block text-sm font-medium text-ink">Dated memory, transcripts, the full graph</span>
-                    </span>
-                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-coral-ink/70">↗</span>
-                  </div>
-                </a>
+
+              {/* Stage 2: 3-Tier Context Loading */}
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-line">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-signal-gold text-[10px] font-bold text-white">2</span>
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Context loading</p>
+                  <span className="ml-auto text-[11px] text-muted font-mono">3 Layers</span>
+                </div>
+                <div className="space-y-2.5 flex-1 flex flex-col justify-between">
+                  <a
+                    href="/ai-agent-architecture#layers"
+                    className="group block rounded-lg bg-signal-blue px-3.5 py-2.5 text-white shadow-xs transition-transform hover:scale-[1.01]"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider">Layer 1 · Always Loaded</span>
+                      <span className="font-mono text-[10px] text-white/75">~50 KB</span>
+                    </div>
+                    <p className="text-xs font-medium text-white/90 mt-0.5">Identity, memory, patterns</p>
+                  </a>
+                  <a
+                    href="/ai-agent-architecture#layers"
+                    className="group block rounded-lg border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-3.5 py-2.5 transition-transform hover:scale-[1.01]"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-signal-gold-ink">Layer 2 · On Trigger</span>
+                      <span className="font-mono text-[10px] text-signal-gold-ink">1,044 pages</span>
+                    </div>
+                    <p className="text-xs font-medium text-ink mt-0.5">Curated wiki, pulled when mentioned</p>
+                  </a>
+                  <a
+                    href="/ai-agent-architecture#layers"
+                    className="group block rounded-lg border-2 border-dashed border-signal-coral bg-[color-mix(in_srgb,var(--wash-coral)_40%,white)] px-3.5 py-2.5 transition-transform hover:scale-[1.01]"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-signal-coral-ink">Layer 3 · On Request</span>
+                      <span className="font-mono text-[10px] text-signal-coral-ink">860 nodes</span>
+                    </div>
+                    <p className="text-xs font-medium text-ink mt-0.5">Dated memory, transcripts &amp; graph</p>
+                  </a>
+                </div>
               </div>
-              <p aria-hidden="true" className="my-2 text-center font-mono text-sm text-body">↓</p>
-              <div className="rounded-xl border border-line bg-paper p-4 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-blue">What comes out</p>
-                <div className="mt-3 grid grid-cols-2 gap-2.5">
+
+              {/* Stage 3: Outputs */}
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-line">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-signal-blue text-[10px] font-bold text-white">3</span>
+                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-blue">What comes out</p>
+                  <span className="ml-auto text-[11px] text-muted font-mono">Outputs</span>
+                </div>
+                <div className="space-y-2 flex-1 flex flex-col justify-between">
                   {ARCH_OUTPUTS.map(item => (
-                    <a key={item.label} href="/ai-agent-architecture#outcomes"
-                       className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2.5 transition-all hover:border-signal-blue hover:shadow-sm">
+                    <a
+                      key={item.label}
+                      href="/ai-agent-architecture#outcomes"
+                      className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2 text-xs transition-all hover:border-signal-blue hover:shadow-xs"
+                    >
                       <span className="min-w-0">
-                        <span className="block text-sm font-semibold leading-5 text-ink transition-colors group-hover:text-signal-blue">{item.label}</span>
-                        <span className="block text-xs text-body">{item.note}</span>
+                        <span className="block font-semibold text-ink group-hover:text-signal-blue">{item.label}</span>
+                        <span className="text-[11px] text-body">{item.note}</span>
                       </span>
-                      <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-blue/70 transition-colors group-hover:text-signal-blue">↗</span>
+                      <span aria-hidden="true" className="font-mono text-[11px] text-signal-blue opacity-70 group-hover:opacity-100">↗</span>
                     </a>
                   ))}
                 </div>
               </div>
-            </figure>
+
+            </div>
+
+            {/* Bottom telemetry strip */}
+            <div className="mt-6 pt-4 border-t border-line flex flex-wrap items-center justify-between gap-4 text-xs text-body">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
+                <span><strong className="text-ink font-mono font-semibold">86</strong> automated jobs</span>
+                <span><strong className="text-ink font-mono font-semibold">860</strong> graph nodes</span>
+                <span><strong className="text-ink font-mono font-semibold">1,044</strong> wiki pages</span>
+                <span><strong className="text-ink font-semibold">On-prem</strong> open-weight inference</span>
+              </div>
+              <span className="text-muted">Context-grounded personal AI setup</span>
+            </div>
           </div>
         </div>
       </section>
