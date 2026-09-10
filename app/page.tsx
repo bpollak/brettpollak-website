@@ -446,10 +446,10 @@ export default function Home() {
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-green">What goes in</p>
                 <div className="mt-3 grid grid-cols-2 gap-2">
                   {ARCH_INPUTS.map(item => (
-                    <div key={item.label} className="rounded-lg bg-[color-mix(in_srgb,var(--wash-green)_45%,white)] px-3 py-2">
+                    <a key={item.label} href="/ai-agent-architecture#context" className="block rounded-lg bg-[color-mix(in_srgb,var(--wash-green)_45%,white)] px-3 py-2 transition-transform hover:scale-[1.01]">
                       <p className="text-sm font-semibold leading-5 text-ink">{item.label}</p>
                       <p className="text-xs text-body">{item.note}</p>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -485,10 +485,10 @@ export default function Home() {
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-blue">What comes out</p>
                 <div className="mt-3 grid grid-cols-2 gap-2">
                   {ARCH_OUTPUTS.map(item => (
-                    <div key={item.label} className="rounded-lg bg-[color-mix(in_srgb,var(--wash-blue)_45%,white)] px-3 py-2">
+                    <a key={item.label} href="/ai-agent-architecture#outcomes" className="block rounded-lg bg-[color-mix(in_srgb,var(--wash-blue)_45%,white)] px-3 py-2 transition-transform hover:scale-[1.01]">
                       <p className="text-sm font-semibold leading-5 text-ink">{item.label}</p>
                       <p className="text-xs text-body">{item.note}</p>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
