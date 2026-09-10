@@ -353,6 +353,7 @@ export default function Home() {
                 <div className="flex items-baseline gap-2.5">
                   <span className="home-update-dot inline-block h-2 w-2 translate-y-[-2px] self-center rounded-full" data-tone={study.tone} aria-hidden="true" />
                   <span className="font-mono text-[0.72rem] font-bold uppercase tracking-[0.16em] text-body">{study.step.n} · {study.step.label}</span>
+                  <span aria-hidden="true" className="ml-auto font-serif text-4xl font-bold leading-none tracking-tight text-body/25">{study.step.n}</span>
                 </div>
                 <h3 className="mt-4 min-h-14 text-2xl font-medium leading-7">{study.title}</h3>
                 <span className={`mt-3 inline-flex w-fit items-center gap-1.5 rounded-none px-2 py-1 font-mono text-[0.62rem] font-bold uppercase tracking-[0.12em] ${isPilot ? 'border border-ink text-ink' : 'bg-ink text-paper'}`}>{study.status}</span>
