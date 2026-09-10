@@ -64,20 +64,26 @@ export const metadata: Metadata = {
   },
 };
 
-// Feature current TritonAI work; historical case studies remain in the archive.
+// Feature current TritonAI work; campus services mature along one path: Ask -> Embed -> Automate.
 const featuredWork = [
   {
     id: 'tritongpt',
+    step: '1',
+    stepLabel: 'Ask',
+    principle: 'Start in TritonGPT — chat, documents, approved models.',
     category: 'Campus assistants',
     tone: 'blue',
     status: 'Production',
     title: 'TritonGPT',
     summary: 'AI assistants for students, faculty, and staff to work with documents, ask campus questions, and get help with everyday tasks.',
     href: '/tritongpt',
-    linkLabel: 'Explore the TritonAI program',
+    linkLabel: 'Explore TritonGPT',
   },
   {
     id: 'tritonai-api',
+    step: '2',
+    stepLabel: 'Embed',
+    principle: 'Add approved AI to a system campus teams already use.',
     category: 'Developer access',
     tone: 'gold',
     status: 'Production',
@@ -88,6 +94,9 @@ const featuredWork = [
   },
   {
     id: 'tritonai-harness',
+    step: '3',
+    stepLabel: 'Automate',
+    principle: 'Automate what repeats, with a person reviewing the result.',
     category: 'Agent workspace',
     tone: 'green',
     status: 'Pilot',
@@ -96,14 +105,6 @@ const featuredWork = [
     href: 'https://tritonai.ucsd.edu/developer-apis/harness.html',
     linkLabel: 'Explore TritonAI Harness',
   },
-];
-
-// How campus services mature — mirrors tritonai.ucsd.edu's shared-foundation
-// framing (Ask -> Embed -> Automate). Step tones match the three cards below.
-const TRITONAI_STEPS = [
-  { n: '1', label: 'Ask', note: 'Start in TritonGPT — chat, documents, approved models.', tone: 'blue' },
-  { n: '2', label: 'Embed', note: 'Add approved AI to a system campus teams already use.', tone: 'gold' },
-  { n: '3', label: 'Automate', note: 'Automate what repeats, with a person reviewing the result.', tone: 'green' },
 ];
 
 const featuredApps = [
@@ -345,35 +346,99 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
-              <p className="rule-label mb-3">Featured work</p>
+              <p className="rule-label mb-2">Featured work</p>
               <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
             </div>
-            <Link href="/tritongpt" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Explore the TritonAI program</Link>
+            <a
+              href="https://tritonai.ucsd.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-signal-blue underline underline-offset-4"
+            >
+              tritonai.ucsd.edu ↗
+            </a>
           </div>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-body">My work in AI centers on helping build and support TritonAI with colleagues across campus. Campus services mature along one path:</p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-3" aria-label="How campus AI services mature">
-            {TRITONAI_STEPS.map((step, i) => (
-              <div key={step.n} className="relative rounded-lg border border-line bg-paper px-4 py-3">
-                <div className="flex items-center gap-2.5">
-                  <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone={step.tone} aria-hidden="true" />
-                  <span className="font-mono text-xs font-bold text-body">{step.n}</span>
-                  <span className="text-sm font-semibold text-ink">{step.label}</span>
-                  <span aria-hidden="true" className="ml-auto font-mono text-sm text-line">{i < TRITONAI_STEPS.length - 1 ? '→' : ''}</span>
+
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4 text-xs text-body">
+            <p className="max-w-2xl text-sm leading-6">
+              My work in AI centers on helping build and support TritonAI with colleagues across campus. Campus services mature along one path:
+            </p>
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted">
+              <span className="font-bold text-signal-blue">1. Ask</span>
+              <span className="text-line">→</span>
+              <span className="font-bold text-signal-gold-ink">2. Embed</span>
+              <span className="text-line">→</span>
+              <span className="font-bold text-signal-green">3. Automate</span>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {featuredWork.map(study => (
+              <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
+                <div className="flex items-center justify-between gap-2 border-b border-line/60 pb-3">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold text-white ${
+                        study.tone === 'blue'
+                          ? 'bg-signal-blue'
+                          : study.tone === 'gold'
+                          ? 'bg-signal-gold'
+                          : 'bg-signal-green'
+                      }`}
+                    >
+                      {study.step}
+                    </span>
+                    <span className="text-xs font-bold uppercase tracking-[0.14em] text-ink">
+                      {study.stepLabel}
+                    </span>
+                  </div>
+                  <span className="rounded-full border border-line bg-white px-2.5 py-0.5 font-mono text-[0.68rem] font-bold uppercase tracking-wider text-body">
+                    {study.status}
+                  </span>
                 </div>
-                <p className="mt-1.5 text-xs leading-5 text-body">{step.note}</p>
-              </div>
+
+                <div className="mt-3.5">
+                  <p className="rule-label text-[0.68rem]">{study.category}</p>
+                  <h3 className="mt-1 text-2xl font-medium leading-7 text-ink">{study.title}</h3>
+                </div>
+
+                <p
+                  className={`mt-2.5 text-xs font-semibold leading-5 ${
+                    study.tone === 'blue'
+                      ? 'text-signal-blue'
+                      : study.tone === 'gold'
+                      ? 'text-signal-gold-ink'
+                      : 'text-signal-green'
+                  }`}
+                >
+                  {study.principle}
+                </p>
+
+                <p className="mt-3 text-sm leading-6 text-body">{study.summary}</p>
+
+                {study.href.startsWith('http') ? (
+                  <a
+                    href={study.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4"
+                  >
+                    {study.linkLabel}
+                    <span aria-hidden="true" className="font-mono text-xs">↗</span>
+                    <span className="sr-only">: {study.title}</span>
+                  </a>
+                ) : (
+                  <Link
+                    href={study.href}
+                    className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4"
+                  >
+                    {study.linkLabel}
+                    <span aria-hidden="true" className="font-mono text-xs">↗</span>
+                    <span className="sr-only">: {study.title}</span>
+                  </Link>
+                )}
+              </article>
             ))}
-          </div>
-          <div className="mt-7 grid gap-5 md:grid-cols-3">
-            {featuredWork.map(study => <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
-              <div className="mb-3 flex items-center justify-between gap-2">
-                <p className="rule-label">{study.category}</p>
-                <span className="rounded-full border border-line bg-white px-2.5 py-0.5 font-mono text-[0.68rem] font-bold uppercase tracking-wider text-body">{study.status}</span>
-              </div>
-              <h3 className="text-2xl leading-7 font-medium">{study.title}</h3>
-              <p className="mt-4 text-base leading-7 text-body">{study.summary}</p>
-              <Link href={study.href} className="mt-auto inline-block pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">{study.linkLabel}<span className="sr-only">: {study.title}</span></Link>
-            </article>)}
           </div>
 
           {/* Integrated Campus Updates Dispatch */}
