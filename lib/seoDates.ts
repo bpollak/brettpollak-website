@@ -32,7 +32,7 @@ export const staticPageDates: Record<string, string> = {
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-09-08",
-  "/tritongpt": "2026-07-26",
+  "/tritongpt": "2026-09-09",
   "/speaking": "2026-09-05",
   "/products": "2026-09-09",
   "/products/cason-recruiting-crm": "2026-07-14",

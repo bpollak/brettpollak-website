@@ -275,6 +275,54 @@ export default function TritonGPTContent() {
           ))}
         </div>
 
+        {/* Governed route figure — the TritonAI gateway graphic, restyled in the site's design language */}
+        <figure className="mb-12 border border-line bg-paper p-5 md:p-7" aria-describedby="governed-route-caption">
+          <div className="grid items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1.15fr] md:gap-0">
+            <div className="flex items-center justify-center border border-line bg-[var(--wash-blue)] p-5 text-center">
+              <div>
+                <p className="text-sm font-semibold text-ink">Campus need</p>
+                <p className="mt-1 text-xs leading-5 text-body">A question, a workflow, a document task</p>
+              </div>
+            </div>
+            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-line md:rotate-0 md:px-2">&rarr;</span>
+            <div className="flex items-center justify-center border border-signal-blue/50 border-l-[5px] border-l-signal-blue bg-[var(--wash-blue)] p-5 text-center">
+              <div>
+                <p className="font-serif text-xl font-medium text-signal-blue">TritonAI Gateway</p>
+                <p className="mt-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-body">identity · routing · policy</p>
+              </div>
+            </div>
+            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-line md:rotate-0 md:px-2">&rarr;</span>
+            <div className="flex flex-col justify-center gap-2.5">
+              {[
+                { title: 'Approved models', note: 'Chosen for the task — UC-hosted or approved cloud', border: 'border-l-signal-blue', wash: 'bg-[var(--wash-blue)]' },
+                { title: 'Approved knowledge', note: 'Grounded at request time, not trained into weights', border: 'border-l-signal-gold', wash: 'bg-[var(--wash-gold)]' },
+                { title: 'Approved tools', note: 'Bounded capabilities a person can check', border: 'border-l-signal-green', wash: 'bg-[var(--wash-green)]' },
+              ].map(stage => (
+                <div key={stage.title} className={`border-l-4 px-4 py-3 ${stage.border} ${stage.wash}`}>
+                  <p className="text-sm font-semibold text-ink">{stage.title}</p>
+                  <p className="mt-0.5 text-xs leading-5 text-body">{stage.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <figcaption id="governed-route-caption" className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-4">
+            <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-body">Human review — ownership · evidence</span>
+            <span className="inline-flex items-center gap-1.5">
+              {[
+                { label: 'Evaluation', dot: 'bg-signal-coral' },
+                { label: 'Accessibility', dot: 'bg-signal-green' },
+                { label: 'Monitoring', dot: 'bg-signal-blue' },
+              ].map(pill => (
+                <span key={pill.label} className="inline-flex items-center gap-1.5 border border-line bg-white px-2.5 py-1 text-xs font-semibold text-ink">
+                  <span aria-hidden="true" className={`inline-block h-1.5 w-1.5 rounded-full ${pill.dot}`} />
+                  {pill.label}
+                </span>
+              ))}
+            </span>
+            <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-body md:ml-auto">Controls surround the full service</span>
+          </figcaption>
+        </figure>
+
         {/* Build paths */}
         <div className="mb-12">
           <h3 className="text-2xl font-semibold text-ink mb-2">Supported ways to build</h3>
