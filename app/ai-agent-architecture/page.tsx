@@ -113,7 +113,7 @@ export default function AiAgentArchitecturePage() {
           </div>
           <div className="editorial-panel p-6" data-tone="green">
             <div className="rule-label mb-2">Durable memory</div>
-            <div className="text-2xl font-semibold text-ink">852 nodes · 1,038 pages</div>
+            <div className="text-2xl font-semibold text-ink">860 nodes · 1,044 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -180,7 +180,7 @@ export default function AiAgentArchitecturePage() {
           <p>
             This page documents how I built that knowledge layer for myself: 86 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. An 852-node knowledge graph, 1,038 wiki pages, a
+            models, with the primary inference path hosted on-prem. An 860-node knowledge graph, 1,044 wiki pages, a
             three-layer memory system, and an MCP bridge that opens it to programming agents.
             It also provides a starting point for considering whether parts of the
             pattern could be used beyond one person.
@@ -244,7 +244,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            In this system, 1,038 wiki pages form a reference library. A relevant page is
+            In this system, 1,044 wiki pages form a reference library. A relevant page is
             retrieved when a matching person, project, technology, or decision is mentioned.
           </p>
           <p>
@@ -334,7 +334,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-blue font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">852 nodes · 888 edges</div>
+              <div className="text-2xl font-bold text-ink mb-2">860 nodes · 904 edges</div>
               <p className="text-sm text-body leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -346,7 +346,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-gold-ink font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">1,038 narrative pages</div>
+              <div className="text-2xl font-bold text-ink mb-2">1,044 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative. Good at answering
@@ -932,6 +932,17 @@ export default function AiAgentArchitecturePage() {
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
           <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              September 9, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Evening update: graph crosses 860, wiki passes 1,044 curated pages</div>
+            <p className="text-sm text-body leading-6">
+              The nightly team-vault ingest returned from a five-day deadlock and processed
+              the backlog: the knowledge graph grew from 852 to 860 nodes and 888 to 904
+              edges, and the wiki grew from 1,038 to 1,044 curated pages. The homepage now
+              carries a summary of this architecture with links into each section.
+            </p>
             <TimelineDot />
             <Eyebrow>
               September 9, 2026

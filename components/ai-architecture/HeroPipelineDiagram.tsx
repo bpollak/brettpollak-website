@@ -32,8 +32,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '852 nodes · 888 edges' },
-  { label: 'Wiki', note: '1,038 curated pages' },
+  { label: 'Knowledge Graph', note: '860 nodes · 904 edges' },
+  { label: 'Wiki', note: '1,044 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -111,8 +111,8 @@ export default function HeroPipelineDiagram() {
     >
       <figcaption className="sr-only">
         Knowledge flow visualization: data sources (calendar, email, meetings, web,
-        campus signals, conversations) feed into a durable knowledge layer (an 852-node
-        knowledge graph, 1,038 wiki pages, long-term memory, work patterns) which the
+        campus signals, conversations) feed into a durable knowledge layer (an 860-node
+        knowledge graph, 1,044 wiki pages, long-term memory, work patterns) which the
         agent uses to drive actions (briefings, meeting intelligence, real-time answers,
         published artifacts, proactive nudges). A synthesis engine band at the bottom
         represents the 86 enabled jobs that do the transformation work.

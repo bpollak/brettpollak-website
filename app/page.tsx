@@ -478,7 +478,7 @@ export default function Home() {
               <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl">The agent behind the output.</h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-body">
                 The AI Digest above is written by an agent I built and operate myself:
-                86 automated jobs, an 852-node knowledge graph, and a 1,038-page wiki,
+                86 automated jobs, an 860-node knowledge graph, and a 1,044-page wiki,
                 with the primary inference path hosted on-prem on open-weight models.
                 Beyond the digest, it produces my daily briefings, meeting
                 intelligence, and real-time answers with full context.
@@ -528,7 +528,7 @@ export default function Home() {
                   <div className="flex w-[81%] items-center justify-between gap-2 rounded-xl border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-4 py-3 transition-transform group-hover:scale-[1.01]">
                     <span>
                       <span className="block text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Layer 2 · On trigger</span>
-                      <span className="mt-0.5 block text-sm font-medium text-ink">The 1,038-page wiki, pulled in when mentioned</span>
+                      <span className="mt-0.5 block text-sm font-medium text-ink">The 1,044-page wiki, pulled in when mentioned</span>
                     </span>
                     <span aria-hidden="true" className="shrink-0 font-mono text-xs text-signal-gold-ink/70">↗</span>
                   </div>

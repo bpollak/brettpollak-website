@@ -20,7 +20,7 @@ const FILE_CHIPS = [
 
 const TRIGGER_TAGS = ['wiki/people/', 'wiki/tech-stack/', 'wiki/decisions/', 'weekly-synthesis'];
 
-const REQUEST_TAGS = ['specific memory/', 'dated files', 'raw transcripts', 'full graph JSON · 852 nodes'];
+const REQUEST_TAGS = ['specific memory/', 'dated files', 'raw transcripts', 'full graph JSON · 860 nodes'];
 
 function DepthMark({
   n,
@@ -74,10 +74,10 @@ export default function ThreeLayerDiagram() {
         The agent loads context in three priority tiers, drawn as a cross-section: the
         deeper the retrieval, the more material is available. Layer 1 is a small fixed
         set of files (identity, user profile, long-term memory, patterns, today,
-        yesterday) loaded on every session start — about 50 KB. Layer 2 is the 1,038-page
+        yesterday) loaded on every session start — about 50 KB. Layer 2 is the 1,044-page
         wiki, pulled in conditionally when the conversation mentions a person,
         technology, decision, or trend. Layer 3 is the deep archive — dated memory
-        files, raw transcripts, the full 852-node graph — loaded only when the human
+        files, raw transcripts, the full 860-node graph — loaded only when the human
         explicitly asks.
       </figcaption>
 
@@ -111,7 +111,7 @@ export default function ThreeLayerDiagram() {
 
       {/* Zone 2 — on trigger: wider, wash */}
       <div className="mt-4 md:grid md:grid-cols-[10rem_1fr] md:gap-4 md:items-center">
-        <DepthMark n="2" when="On trigger" cost="1,038 pages" color="var(--signal-gold)" inkClass="text-signal-gold-ink" />
+        <DepthMark n="2" when="On trigger" cost="1,044 pages" color="var(--signal-gold)" inkClass="text-signal-gold-ink" />
         <div
           className="w-full md:w-[81%] rounded-2xl border-2 p-5 sm:p-6"
           style={{
@@ -126,7 +126,7 @@ export default function ThreeLayerDiagram() {
             <span className="text-xs font-bold px-2.5 py-1 rounded-full text-signal-gold-ink"
               style={{ backgroundColor: 'color-mix(in srgb, var(--wash-gold) 80%, white)' }}
             >
-              1,038 wiki pages
+              1,044 wiki pages
             </span>
           </div>
           <div className="flex flex-wrap gap-2">
