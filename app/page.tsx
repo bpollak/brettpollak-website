@@ -420,6 +420,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI DIGEST — daily briefing + sign-up */}
+      <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div>
+              <p className="rule-label mb-3">Daily briefing</p>
+              <h2 id="ai-digest-heading" className="text-3xl font-medium md:text-4xl">The AI Digest.</h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+                A daily AI briefing for people who run technology in higher education — the
+                launches, enterprise moves, and campus policy shifts that matter, with key
+                takeaways and source links.
+              </p>
+              <div className="mt-8">
+                <SubscribeForm />
+              </div>
+              <Link href="/ai-digest" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Browse past editions<span className="sr-only"> of the AI Digest</span>
+              </Link>
+            </div>
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="green" />
+                Latest — {latestDigestEdition.displayDate}
+              </h3>
+              <div className="border-y border-line">
+                {latestDigestArticles.map(article => (
+                  <Link key={article.headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
+                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
+                    <span className="min-w-0">
+                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{article.headline}</span>
+                      <span className="mt-1 block text-sm leading-6 text-body">{article.summary}</span>
+                      {article.higherEd && (
+                        <span className="mt-2 block border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">
+                          {article.higherEd}
+                        </span>
+                      )}
+                    </span>
+                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
+                  </Link>
+                ))}
+              </div>
+              <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Read {latestDigestEdition.displayDate}&rsquo;s full digest
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* AI ARCHITECTURE — the system behind the work */}
       <section className="border-b border-line bg-paper-strong" aria-labelledby="ai-arch-heading">
         <div className="mx-auto max-w-7xl px-6 py-16">
@@ -428,10 +477,11 @@ export default function Home() {
               <p className="rule-label mb-3">The system</p>
               <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl">The agent behind the output.</h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                Everything above runs on an agent I built and operate myself: 86 automated
-                jobs, an 852-node knowledge graph, and a 1,038-page wiki, with the primary
-                inference path hosted on-prem on open-weight models. The briefing you just
-                read is one of its daily outputs.
+                The AI Digest above is written by an agent I built and operate myself:
+                86 automated jobs, an 852-node knowledge graph, and a 1,038-page wiki,
+                with the primary inference path hosted on-prem on open-weight models.
+                Beyond the digest, it produces my daily briefings, meeting
+                intelligence, and real-time answers with full context.
               </p>
               <p className="mt-4 max-w-xl text-base leading-7 text-body">
                 Context loads in three tiers — a small always-loaded core, the wiki pulled in
@@ -510,55 +560,6 @@ export default function Home() {
                 </div>
               </div>
             </figure>
-          </div>
-        </div>
-      </section>
-
-      {/* AI DIGEST — daily briefing + sign-up */}
-      <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-            <div>
-              <p className="rule-label mb-3">Daily briefing</p>
-              <h2 id="ai-digest-heading" className="text-3xl font-medium md:text-4xl">The AI Digest.</h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                A daily AI briefing for people who run technology in higher education — the
-                launches, enterprise moves, and campus policy shifts that matter, with key
-                takeaways and source links.
-              </p>
-              <div className="mt-8">
-                <SubscribeForm />
-              </div>
-              <Link href="/ai-digest" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Browse past editions<span className="sr-only"> of the AI Digest</span>
-              </Link>
-            </div>
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
-                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="green" />
-                Latest — {latestDigestEdition.displayDate}
-              </h3>
-              <div className="border-y border-line">
-                {latestDigestArticles.map(article => (
-                  <Link key={article.headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
-                    className="home-update-row index-row group grid gap-1 py-5 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
-                    <span className="min-w-0">
-                      <span className="block text-lg font-medium leading-7 text-ink group-hover:text-signal-blue">{article.headline}</span>
-                      <span className="mt-1 block text-sm leading-6 text-body">{article.summary}</span>
-                      {article.higherEd && (
-                        <span className="mt-2 block border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">
-                          {article.higherEd}
-                        </span>
-                      )}
-                    </span>
-                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
-                  </Link>
-                ))}
-              </div>
-              <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Read {latestDigestEdition.displayDate}&rsquo;s full digest
-              </Link>
-            </div>
           </div>
         </div>
       </section>
