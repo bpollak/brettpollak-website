@@ -128,6 +128,24 @@ const featuredApps = [
   },
 ];
 
+// Input/output summary for the architecture module. Mirrors the categories in
+// HeroPipelineDiagram (Sources → Knowledge → Actions) so the homepage graphic
+// and the architecture page stay in agreement. Keep these high-level; the
+// architecture page owns the detail.
+const ARCH_INPUTS = [
+  { label: 'Calendar & email', note: 'MS Graph' },
+  { label: 'Meetings', note: 'transcripts' },
+  { label: 'Documents', note: 'Drive sync' },
+  { label: 'Campus sources', note: 'Confluence · RSS' },
+];
+
+const ARCH_OUTPUTS = [
+  { label: 'Daily briefings', note: 'every morning' },
+  { label: 'Meeting intelligence', note: 'commitments, follow-ups' },
+  { label: 'Real-time answers', note: 'with full context' },
+  { label: 'Published artifacts', note: 'newsletter, digest' },
+];
+
 const recentMedia = [...mediaItems]
   .sort((a, b) => (a.date < b.date ? 1 : -1))
   .slice(0, 4);
@@ -423,10 +441,24 @@ export default function Home() {
                 How the architecture works
               </Link>
             </div>
-            <figure aria-label="Three-layer context loading, miniature">
-              <figcaption className="mb-3 flex items-center justify-between">
-                <span className="rule-label">Context loading</span>
-                <span className="font-mono text-xs text-body">every turn → deep archive</span>
+            <figure aria-label="What goes into the memory ecosystem, how it is layered, and what comes out">
+              <div className="rounded-xl border border-line bg-paper p-4 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-green">What goes in</p>
+                <div className="mt-3 grid grid-cols-2 gap-2">
+                  {ARCH_INPUTS.map(item => (
+                    <div key={item.label} className="rounded-lg bg-[color-mix(in_srgb,var(--wash-green)_45%,white)] px-3 py-2">
+                      <p className="text-sm font-semibold leading-5 text-ink">{item.label}</p>
+                      <p className="text-xs text-body">{item.note}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <p aria-hidden="true" className="my-2 text-center font-mono text-sm text-body">↓</p>
+              <figcaption className="sr-only">
+                Inputs feed a three-tier knowledge layer: a small always-loaded core, the wiki
+                pulled in when the conversation calls for it, and the deep archive on explicit
+                request. Outputs are daily briefings, meeting intelligence, real-time answers,
+                and published artifacts.
               </figcaption>
               <div className="space-y-3">
                 <a href="/ai-agent-architecture#layers" className="block">
@@ -447,6 +479,18 @@ export default function Home() {
                     <p className="mt-0.5 text-sm font-medium text-ink">Dated memory, transcripts, the full graph</p>
                   </div>
                 </a>
+              </div>
+              <p aria-hidden="true" className="my-2 text-center font-mono text-sm text-body">↓</p>
+              <div className="rounded-xl border border-line bg-paper p-4 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-blue">What comes out</p>
+                <div className="mt-3 grid grid-cols-2 gap-2">
+                  {ARCH_OUTPUTS.map(item => (
+                    <div key={item.label} className="rounded-lg bg-[color-mix(in_srgb,var(--wash-blue)_45%,white)] px-3 py-2">
+                      <p className="text-sm font-semibold leading-5 text-ink">{item.label}</p>
+                      <p className="text-xs text-body">{item.note}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </figure>
           </div>
