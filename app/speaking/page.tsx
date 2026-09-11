@@ -215,7 +215,7 @@ export default function SpeakingPage() {
         <section id="speaker-resources" className="mb-14 editorial-panel p-6 md:p-8">
           <h2 className="mb-6 text-3xl font-medium">For event organizers</h2>
           <div className="grid gap-8 md:grid-cols-[10rem_1fr]">
-            <Image src="/brettpollak-headshot-lean.webp" alt="Brett Pollak" width={160} height={200} className="h-48 w-40 object-cover object-[center_25%]" />
+            <Image src="/brettpollak-headshot-lean.webp" alt="Brett Pollak" width={160} height={200} className="h-48 w-40 object-cover object-[center_22%]" />
             <div>
               <h3 className="mb-3 text-xl font-semibold">Short biography</h3>
               <p className="max-w-3xl text-body leading-7">{speakerBio}</p>

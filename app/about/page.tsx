@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/brett-pollak-about.jpg",
-        width: 850,
+        width: 849,
         height: 1280,
-        alt: "Brett Pollak seated outdoors on the UC San Diego campus",
+        alt: "Brett Pollak on the UC San Diego campus at golden hour",
       },
     ],
   },
@@ -105,8 +105,8 @@ export default function About() {
             <div className="relative border border-line bg-paper-strong p-3 shadow-[12px_12px_0_rgba(201,119,18,0.16)]">
               <Image
                 src="/brett-pollak-about.jpg"
-                alt="Brett Pollak seated outdoors on the UC San Diego campus"
-                width={850}
+                alt="Brett Pollak on the UC San Diego campus at golden hour"
+                width={849}
                 height={1280}
                 className="w-full"
                 sizes="(min-width: 768px) 40vw, 100vw"
