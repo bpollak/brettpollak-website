@@ -213,7 +213,7 @@ function formatNowDate(iso: string): string {
   });
 }
 
-const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAIAAABSnclZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVR4nAHRAS7+AJm26pm37Jq47py68J278Z688Z+98p++86O966a84wCftNmhueSjvu6lwfGnw/KoxPOoxvaoxvWnvuSmttMAo6qyqbfNrsLhsMTlsMPiscTis8npr8Hapa+8m5ybAJ+ZgairprC4w7O4x7W0urKwqbO1qaank5uUepGBXQCUhU+cknCmn46qnZaznYytlm6pmmOUh0mMej+GbjMAf28vhHVBiXtXjXhhnHtfl3ZAlHovf20hhG4uh3A6AHFeK3NgMW5cOG1XQXtfS31jQIdvO4FsM492QY91SACDbEOAaUFnVDZURDFXRTtdSjxzX0B9aTuZg0ebhkkAhnBSfmlPX04+RjkxRDg2SDs4Xk89cmI1koM7log2AHJgR2xbRlNFNzswKT4xLlA9NmJNOGhYK3JqJnVxHwBDOi1BOC45LyotJSIyJyRINSxTPS1SQCRJQhlGRhAAMSohMiolMCcmLCMhMCUhSTUrTDYoQjEhLyoTKSsLACsmGC4nHy8mJDMoJDUpIzwvJDImGicfEyAeCiIkCAAhHBIoIBkqIR00KSM8LyU/MiQvJRggGw0fHwgpKgcAFhAJHxcPIxoUMCUdPS4iQTEhMCQWIBoLISAILS0ILv2zdpLJpOwAAAAASUVORK5CYII=";
+const heroBlurDataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAIAAAB8wupbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEiklEQVQ4jR3P3U8aBwAA8PMDjs+DO+GO4/NAxK6CClVRQRTwkAMOuAOULwtqRSiKQjcVpVo/2jq0H+nWZZ3NmqUf2exLm21Ztuxl2VOTdcmW7GFblj3sfdne+rhkv//gBwwahCx78ea1463a9vtnvz757s1soRGd8u6sFtxOl806QPsD8Ug8GozGaGY6wgBuC2ozqUNUtHh5597TVy9fvckt1IqZ2K2tVZokHSNj2Vg8N5NmQtFEhE0xLNDXpWQob4QKJvKNxt2vvnn171yutFHKn9RXEoFANBBcms3OpzORYDQRiWVjcWAj5405kIiPJJ2juXjgxdmLfCqxUb60szIf9fniNF3KXbw4nQ5T4ViYybAx4NZKeDvdP2q1dOvwcszw9KA/x1rnkpnFmahzZMztmijns9lEMjRFs3Q0xcSAG4vW2yXzEm2JTTrK6d5He9ZiepKa9GdoX3B8ZNx+oZTLzEQTQV8wHmazbByop9F3i/Jne97bq+TmvOxWFV3Ouj2uybXw8OvjhWeVQJEhQwGGpuhklJ1lY0BjTrwxIzndJGvJgcNluFmVlrMuv4d8XPS/eb7/2/2VRnyUmqJDU4F4gJplGODOmu5KUroUQEJ2vJ43nTaMpYyTJv0PL5E/NRf/ebL1xc6cx0P5PV7G654JUsBeXv92UpF0S5aZ7qPL58+ajrU5VypMnyRHftzL/P3p7mFpdtxFUm4P63UngwFgO2tam0bWU3iBNqxO61fTwNaSq7qYP8hPvT4p/vmwVmL9tv6Bob7ecaslPDEGXFvo3Vk0VrPDgYnhiWF7xGU4qExvluZZv/dueuSPj7Yr2dSAbWh40O6w9vlG7UDaPzRDeTN0MBelarPMvVr669P99aX8hR7z1bnkg+tHvZ2Gc1pN//me0YFB2uMB1tNTlZiveXn6+WHph4+v/vWy+fkHDUyOW8zDzd0jj91uUMhNKmWfkeg1GpyDg8CXJ0u/nNV/f1n/+bOV7z/JfPshXWAdECTfrO7XChUt1mFQKggMtXUZTSq829AJPG6Q968M3a931lfaGmXpzSoRniDM52y7G0cXLFaVDDZpVDpMbjYQZr1Wr1YDjw5M7+1q71xVnR5riin9QrLHadMkI9nypSsoAusUqJnQKTuQcxqVmdDqlUpgvSZbrSDVClxYEJE+rmu8TYXy0kwmRNISPkjgWA+hhUVCAkPPazU6BQbM5zi72+I7R/BeQ1DfAOOMUCqEvGMkodbIIJFeqehS4UIeKJNAb2nValQGPLgHH18XbK2D5RJnaxOcdAt5HKjbaEHEIhyBO3GFXoHyQI5EKNArMAUiBZaL3NJie7XCfacK7jb4XUYuh4MQKgISgApYalCgOlQOcjliAV+LyVEpBNw+lDT3oaN90fF1UWEe5LS3wLCmS2uQQaIOSKzHMUwKtbW2ivh8vEOKiIUARbU7nG191lZLP6BUcttbeQK+UIOiGCzFOxAMliAikeD/g4gPCnkggGAtMrylA2uV4y2QBOS083hcjhqTQUKhSoboULlEKBAL+BCfx21v43M5/wEMT0GoKgOSAQAAAABJRU5ErkJggg==";
 
 export default function Home() {
   const personSchema = {
@@ -333,7 +333,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="home-portrait-panel">
-              <Image src="/brettpollak-headshot-lean.webp" alt="Brett Pollak on the UC San Diego campus" fill
+              <Image src="/brettpollak-portrait-golden-hour.webp" alt="Brett Pollak on the UC San Diego campus" fill
                 className="object-cover object-[center_36%]" placeholder="blur" blurDataURL={heroBlurDataURL}
                 priority sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, 100vw" />
             </div>
