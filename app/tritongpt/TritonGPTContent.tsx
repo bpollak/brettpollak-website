@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import CountUp from '@/components/motion/CountUp';
 import TritonAISystemMap from '@/components/tritongpt/TritonAISystemMap';
+import { tritonAiMetrics } from '@/lib/tritonAiMetrics';
 
 export default function TritonGPTContent() {
   const programOfferingStyles = [
@@ -200,7 +201,7 @@ export default function TritonGPTContent() {
             {
               title: "TritonAI Harness",
               description:
-                "A campus development environment for tool-using AI workflows. Early usage includes 22.5B tokens, 119 merged pull requests, and 1,139 AI reviews.",
+                `A campus development environment for tool-using AI workflows. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
               href: "https://tritonai.ucsd.edu/tools/index.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -257,9 +258,30 @@ export default function TritonGPTContent() {
         {/* Gateway usage */}
         <div className="mb-12 grid border-y border-line md:grid-cols-3">
           {[
-            { value: 309.4, suffix: 'B', label: 'Tokens through the gateway', detail: 'January–June 2026, peaking at 73.2B in June', colorClass: 'text-signal-blue', decimals: true },
-            { value: 105.1, suffix: 'M', label: 'API requests completed', detail: 'Across self-hosted and approved cloud routes', colorClass: 'text-signal-green', decimals: true },
-            { value: 95.3, suffix: '%', label: 'Served by self-hosted models', detail: 'UC-controlled hosting rather than commercial providers', colorClass: 'text-signal-gold-ink', decimals: true },
+            {
+              value: tritonAiMetrics.gateway.tokensBillions,
+              suffix: tritonAiMetrics.gateway.tokensSuffix,
+              label: 'Tokens through the gateway',
+              detail: `${tritonAiMetrics.gateway.tokensPeriodLabel}, ${tritonAiMetrics.gateway.tokensPeakNote}`,
+              colorClass: 'text-signal-blue',
+              decimals: true,
+            },
+            {
+              value: tritonAiMetrics.gateway.requestsMillions,
+              suffix: tritonAiMetrics.gateway.requestsSuffix,
+              label: 'API requests completed',
+              detail: tritonAiMetrics.gateway.requestsRouteNote,
+              colorClass: 'text-signal-green',
+              decimals: true,
+            },
+            {
+              value: tritonAiMetrics.gateway.selfHostedPercent,
+              suffix: tritonAiMetrics.gateway.selfHostedSuffix,
+              label: 'Served by self-hosted models',
+              detail: tritonAiMetrics.gateway.selfHostedNote,
+              colorClass: 'text-signal-gold-ink',
+              decimals: true,
+            },
           ].map(({ value, suffix, label, detail, colorClass }, index) => (
             <div key={label} className="border-b border-line p-7 md:border-b-0 md:border-r md:last:border-r-0">
               <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
@@ -867,7 +889,7 @@ export default function TritonGPTContent() {
             },
             {
               title: "Developer API Program (Live)",
-              desc: "Live with supported build paths — the TritonAI Harness, n8n workflow automation, and developer APIs — across four hosting lanes from personal sandbox to enterprise service. 309.4B tokens and 105.1M API requests through the gateway in the first half of 2026, 95.3% on self-hosted models. Next: broader recharge paths from prototype to funded campus application.",
+              desc: `Live with supported build paths — the TritonAI Harness, n8n workflow automation, and developer APIs — across four hosting lanes from personal sandbox to enterprise service. ${tritonAiMetrics.gateway.tokensBillions}${tritonAiMetrics.gateway.tokensSuffix} tokens and ${tritonAiMetrics.gateway.requestsMillions}${tritonAiMetrics.gateway.requestsSuffix} API requests through the gateway in the ${tritonAiMetrics.reportingPeriod.toLowerCase()}, ${tritonAiMetrics.gateway.selfHostedPercent}${tritonAiMetrics.gateway.selfHostedSuffix} on self-hosted models. Next: broader recharge paths from prototype to funded campus application.`,
               color: "pink",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" /></svg>
             },
@@ -891,7 +913,7 @@ export default function TritonGPTContent() {
             },
             {
               title: "Agent Builder and Workflow Tools (Live)",
-              desc: "The TritonAI Harness is operational. Low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows. 22.5B tokens used, 119 merged PRs, 1,139 AI reviews in first weeks.",
+              desc: `The TritonAI Harness is operational. Low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows. ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens used, ${tritonAiMetrics.harness.mergedPullRequests} merged PRs, ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews ${tritonAiMetrics.harness.timeframeNote}.`,
               color: "rose",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
