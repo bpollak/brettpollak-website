@@ -614,7 +614,7 @@ export default function Home() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-signal-gold-ink">Layer 2 · On Trigger</span>
-                      <span className="font-mono text-[10px] text-signal-gold-ink">1,044 pages</span>
+                      <span className="font-mono text-[10px] text-signal-gold-ink">1,076 pages</span>
                     </div>
                     <p className="text-xs font-medium text-ink mt-0.5">Curated wiki, pulled when mentioned</p>
                   </a>
@@ -624,7 +624,7 @@ export default function Home() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-signal-coral-ink">Layer 3 · On Request</span>
-                      <span className="font-mono text-[10px] text-signal-coral-ink">860 nodes</span>
+                      <span className="font-mono text-[10px] text-signal-coral-ink">873 nodes</span>
                     </div>
                     <p className="text-xs font-medium text-ink mt-0.5">Dated memory, transcripts &amp; graph</p>
                   </a>
