@@ -273,6 +273,7 @@ const products = [
 ];
 
 const projectGroups = [
+  { id: 'app-store', title: 'App Store', description: 'Independently built and shipped iOS apps. Three are live on the App Store right now.' },
   { id: 'campus-tools', title: 'Campus tools', description: 'Applications and prototypes for campus workflows, student and visitor services, document preparation, and AI planning.' },
   { id: 'personal-apps', title: 'Personal apps', description: 'Apps and websites for everyday interests and family use. Private projects have public walkthroughs.' },
   { id: 'experiments', title: 'Experiments', description: 'Projects exploring personal AI systems, drafting workflows, and media authenticity.' },
