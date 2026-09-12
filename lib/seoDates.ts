@@ -27,7 +27,7 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-09-10",  // homepage: layout restructure + SCG live on the App Store status line
+  "/": "2026-09-11",  // homepage: layout restructure + SCG live on the App Store status line
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
@@ -37,7 +37,7 @@ export const staticPageDates: Record<string, string> = {
   "/products": "2026-09-10",
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-09-09",
+  "/ai-agent-architecture": "2026-09-11",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
   "/contact": "2026-09-05",

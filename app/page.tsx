@@ -549,8 +549,9 @@ export default function Home() {
               </h2>
               <p className="mt-3 text-base leading-7 text-body">
                 The daily briefings, research synthesis, and newsletters on this site are powered
-                by an agent I built and operate myself: 86 automated jobs, an 860-node knowledge graph,
-                and a 1,044-page wiki, running on-premises on open-weight models.
+                by an agent I built and operate myself: 85 automated jobs, an 873-node knowledge graph,
+                and a 1,076-page wiki — all running on-premises on open-weight models, on a
+                shared memory ecosystem that Claude Code, Codex, and Hermes read and write together.
               </p>
             </div>
             <Link
@@ -659,9 +660,9 @@ export default function Home() {
             {/* Bottom telemetry strip */}
             <div className="mt-6 pt-4 border-t border-line flex flex-wrap items-center justify-between gap-4 text-xs text-body">
               <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
-                <span><strong className="text-ink font-mono font-semibold">86</strong> automated jobs</span>
-                <span><strong className="text-ink font-mono font-semibold">860</strong> graph nodes</span>
-                <span><strong className="text-ink font-mono font-semibold">1,044</strong> wiki pages</span>
+                <span><strong className="text-ink font-mono font-semibold">85</strong> automated jobs</span>
+                <span><strong className="text-ink font-mono font-semibold">873</strong> graph nodes</span>
+                <span><strong className="text-ink font-mono font-semibold">1,076</strong> wiki pages</span>
                 <span><strong className="text-ink font-semibold">On-prem</strong> open-weight inference</span>
               </div>
               <span className="text-muted">Context-grounded personal AI setup</span>

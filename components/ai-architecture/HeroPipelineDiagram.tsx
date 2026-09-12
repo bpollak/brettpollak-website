@@ -32,8 +32,8 @@ const DATA_SOURCES: Item[] = [
 ];
 
 const KNOWLEDGE_LAYERS: Item[] = [
-  { label: 'Knowledge Graph', note: '860 nodes · 904 edges' },
-  { label: 'Wiki', note: '1,044 curated pages' },
+  { label: 'Knowledge Graph', note: '873 nodes · 926 edges' },
+  { label: 'Wiki', note: '1,076 curated pages' },
   { label: 'Long-term memory', note: 'MEMORY.md' },
   { label: 'Work patterns', note: 'PATTERNS.md' },
 ];
@@ -111,11 +111,11 @@ export default function HeroPipelineDiagram() {
     >
       <figcaption className="sr-only">
         Knowledge flow visualization: data sources (calendar, email, meetings, web,
-        campus signals, conversations) feed into a durable knowledge layer (an 860-node
-        knowledge graph, 1,044 wiki pages, long-term memory, work patterns) which the
+        campus signals, conversations) feed into a durable knowledge layer (an 873-node
+        knowledge graph, 1,076 wiki pages, long-term memory, work patterns) which the
         agent uses to drive actions (briefings, meeting intelligence, real-time answers,
         published artifacts, proactive nudges). A synthesis engine band at the bottom
-        represents the 86 enabled jobs that do the transformation work.
+        represents the 85 enabled jobs that do the transformation work.
       </figcaption>
 
       {/* Stage rail (desktop) — numbered stations joined by dotted connectors */}
@@ -198,7 +198,7 @@ export default function HeroPipelineDiagram() {
       <div className="mt-8 rounded-xl bg-ink px-6 py-5">
         <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 text-center md:text-left">
           <div className="shrink-0">
-            <div className="text-3xl font-extrabold text-white leading-none">86</div>
+            <div className="text-3xl font-extrabold text-white leading-none">85</div>
             <div className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-on-dark-muted mt-1">
               enabled jobs
             </div>
