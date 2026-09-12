@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Projects | Brett Pollak",
     description: "A selection of software projects and prototypes for education, productivity, and family use.",
-    images: ["/ai-architecture-linkedin.png"],
+    images: ["/products-og.png"],
   },
 };
 
@@ -134,7 +134,7 @@ const products = [
     title: "Henry. Personal AI Operating System",
     href: "/ai-agent-architecture",
     internal: true,
-    image: "/ai-architecture-linkedin.png",
+    image: "/products-og.png",
     imageAlt: "AI agent architecture diagram showing knowledge layer, model routing, and agent actions",
     width: 1200,
     height: 675,

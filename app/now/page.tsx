@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/brett-pollak-og-card.png',
+        url: '/now-og.png',
         width: 1200,
         height: 630,
         alt: 'Brett Pollak',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Now | Brett Pollak',
     description: "Current work and project notes from Brett Pollak. Refreshed weekly.",
-    images: ['/brett-pollak-og-card.png'],
+    images: ['/now-og.png'],
   },
 };
 

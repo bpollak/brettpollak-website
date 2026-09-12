@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/tritongpt-uc-san-diego-assistant.png',
+        url: '/ucsd-ai-news-og.png',
         width: 1200,
-        height: 800,
+        height: 630,
         alt: 'UC San Diego AI weekly updates and TritonAI platform notes',
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'UC San Diego AI Weekly Update | Brett Pollak',
     description:
       'A weekly roundup of what’s new with UC San Diego’s supported AI services. Tool release notes, TritonAI updates, and upcoming trainings for campus staff.',
-    images: ['/tritongpt-uc-san-diego-assistant.png'],
+    images: ['/ucsd-ai-news-og.png'],
   },
 };
 

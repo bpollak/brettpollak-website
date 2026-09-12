@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     url: "https://brettcpollak.com/about",
     images: [
       {
-        url: "/brett-pollak-about.jpg",
-        width: 849,
-        height: 1280,
-        alt: "Brett Pollak on the UC San Diego campus at golden hour",
+        url: "/about-og.png",
+        width: 1200,
+        height: 630,
+        alt: "About Brett Pollak — technology leadership at UC San Diego",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Brett Pollak | Work in Higher Education and AI",
     description: "18 years working across web, cloud, workplace technology, infrastructure, and AI at UC San Diego.",
-    images: ["/brett-pollak-about.jpg"],
+    images: ["/about-og.png"],
   },
 };
 

@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     siteName: "Brett Pollak",
     images: [
       {
-        url: "/images/podcasts/ai-daily-brief.webp",
+        url: "/podcasts-og.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Podcast discovery recommendations for AI, technology, and economics",
       },
     ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Podcast Discovery | Brett Pollak",
     description: "Brett's curated podcast picks and community recommendations on AI, technology, and economics.",
-    images: ["/images/podcasts/ai-daily-brief.webp"],
+    images: ["/podcasts-og.png"],
   },
 };
 

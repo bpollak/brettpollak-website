@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'profile',
     images: [
       {
-        url: '/brett-pollak-og-card.png',
+        url: '/speaking-og.png',
         width: 1200,
         height: 630,
         alt: 'Brett Pollak — AI in Higher Education Speaker',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'Speaking | Brett Pollak — AI in Higher Education',
     description:
       'Keynotes and conference sessions on institutional AI and agentic workflows in higher education.',
-    images: ['/brett-pollak-og-card.png'],
+    images: ['/speaking-og.png'],
   },
 };
 
