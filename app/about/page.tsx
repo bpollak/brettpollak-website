@@ -104,9 +104,9 @@ export default function About() {
           <div className="md:col-span-2 relative">
             <div className="relative border border-line bg-paper-strong p-3 shadow-[12px_12px_0_rgba(201,119,18,0.16)]">
               <Image
-                src="/brett-pollak-about.jpg"
-                alt="Brett Pollak on the UC San Diego campus at golden hour"
-                width={849}
+                src="/brett-pollak-about-seated.jpg"
+                alt="Brett Pollak seated outdoors on the UC San Diego campus"
+                width={850}
                 height={1280}
                 className="w-full"
                 sizes="(min-width: 768px) 40vw, 100vw"
