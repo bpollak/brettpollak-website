@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     url: "https://brettcpollak.com/products",
     images: [
       {
-        url: "/resolution-companion.png",
-        width: 400,
-        height: 800,
-        alt: "Resolution Companion App",
+        url: "/products-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Projects by Brett Pollak — campus services to family apps",
       },
     ],
   },
