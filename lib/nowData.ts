@@ -62,7 +62,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and another goes live this month. The bigger effort is a shared GPU strategy for data science and machine learning, plus a proposal for a small central team to coordinate access to AI platform capabilities.",
+        "The shared AI platform now runs assistants for several other campuses, and another goes live this month. The bigger effort is a shared GPU strategy for data science and machine learning, which has received funding and is moving forward, plus a proposal for a small central team to coordinate access to AI platform capabilities.",
     },
     {
       label: "Core infrastructure consolidation",
