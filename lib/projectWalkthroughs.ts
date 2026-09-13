@@ -16,8 +16,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Resolution Companion",
     "group": "app-store",
     "category": "AI-powered habit building",
-    "status": "Available on iOS · v1.4.0",
-    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Version 1.4.0 is now live on the App Store.",
+    "status": "Available on iOS · v1.4.1",
+    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Version 1.4.1 is now live on the App Store.",
     "purpose": "Most habit apps count streaks, and one broken streak ends the habit. Resolution Companion starts from identity instead: name who you are becoming, then log small daily actions that reinforce it, with an AI coach in the loop for the days when motivation runs out.",
     "features": [
       "Identity-based plans, not streak counts",
@@ -40,7 +40,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Chat-based check-ins, weekly reviews, and direct habit adjustments from the Journey calendar. Nothing changes until it is confirmed."
       ]
     ],
-    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.0 was approved by Apple and is available now (September 8, 2026).",
+    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.4.1 is live on the App Store as of September 10, 2026.",
     "gallery": [
       {
         "image": "/resolution-companion-screen-today.webp",
