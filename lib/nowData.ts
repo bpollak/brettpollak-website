@@ -29,20 +29,20 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-09-06",
+  lastUpdated: "2026-09-13",
   location: "San Diego, California",
   intro:
-    "A short record of the work taking most of my attention. Updated when something material changes.",
+    "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
   items: [
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is available across campus, with most inference still processed on-premises through the university's LLM gateway. Current work includes landing new models on the gateway, expanding developer access, and supervised agent workflows that operate inside campus systems.",
+        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is now a supported build path for development teams. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source.",
+        "The TritonAI Harness is moving from pilot to a supported build path for development teams, with a broader rollout planned this fall. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source.",
     },
     {
       label: "AI workflow pilots and services",
@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Student system stabilization",
       body:
-        "The student system has stabilized after a difficult summer, and enrollment has recovered to near-normal levels. The team remains at capacity. The longer-term replacement path is taking shape around the class-planning tool, which has seen record adoption.",
+        "The student system held through fall enrollment after a difficult summer, though a rough second pass kept the team firefighting. The longer-term replacement path is firming around the class-planning tool, which has doubled in use.",
     },
     {
       label: "Data platform modernization",
@@ -62,12 +62,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "Developing a shared GPU strategy for data science and machine learning, along with a proposal for a small central team to coordinate access to AI platform capabilities. The scope may include shared services for other UC locations.",
+        "The shared AI platform now runs assistants for several other campuses, and another goes live this month. The bigger effort is a shared GPU strategy for data science and machine learning, plus a proposal for a small central team to coordinate access to AI platform capabilities.",
     },
     {
       label: "Core infrastructure consolidation",
       body:
-        "We finished moving about 1,500 virtual machines to an alternative hypervisor in roughly seven months, and UC San Diego is now a reference campus for peers working through the same licensing shift. The bigger open question is the endgame for our main on-campus data center: ownership, funding, and whether to offer colocation to partner institutions.",
+        "We finished moving about 1,500 virtual machines to an alternative hypervisor in roughly seven months, and UC San Diego is now a reference campus for peers working through the same licensing shift. Now the question is the main on-campus data center: the colocation model is set and the first partner racks arrive this fall, but ownership and funding are still to land.",
     },
     {
       label: "Identity management",
@@ -77,7 +77,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Systemwide AI strategy",
       body:
-        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. Also working with national higher-ed groups on shared AI standards for research institutions.",
+        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. That decision comes to a head this fall. Also working with national higher-ed groups on shared AI standards for research institutions.",
+    },
+    {
+      label: "The apps I build",
+      body:
+        "Outside the day job I build iOS apps, and all three shipped this month. Resolution Companion added coach check-ins. Horse Racing Companion is ready for the fall meet. Steel City Gameday launched for the 2026 season.",
     },
   ],
 };
