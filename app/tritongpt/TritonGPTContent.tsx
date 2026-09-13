@@ -91,7 +91,7 @@ export default function TritonGPTContent() {
             <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. The SDSC-hosted environment is available to students, staff, and faculty and supports model choice, on-premises and approved cloud routes, developer APIs, embedded website support, and agent workflow components.
           </p>
             <p className="text-xl text-body leading-9">
-              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced.
+              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced (SCOUT).
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function TritonGPTContent() {
             {
               title: "TritonAI Harness",
               description:
-                `A campus development environment for tool-using AI workflows. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
+                `A campus development environment for tool-using AI workflows, now in open pilot. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
               href: "https://tritonai.ucsd.edu/tools/index.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -359,7 +359,7 @@ export default function TritonGPTContent() {
               {
                 name: 'TritonAI Harness',
                 who: 'Preferred for most staff',
-                body: 'A campus-oriented desktop experience that reduces setup burden with bundled installation, UC San Diego model access, campus skills, and Microsoft 365 connections.',
+                body: 'A campus-oriented desktop experience for Mac and Windows, in pilot and open to anyone with a Gateway key. Bundled installation, UC San Diego model access, campus skills, and Microsoft 365 connections.',
               },
               {
                 name: 'n8n Workflow Automation',
@@ -912,8 +912,8 @@ export default function TritonGPTContent() {
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" /></svg>
             },
             {
-              title: "Agent Builder and Workflow Tools (Live)",
-              desc: `The TritonAI Harness is operational. Low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows. ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens used, ${tritonAiMetrics.harness.mergedPullRequests} merged PRs, ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews ${tritonAiMetrics.harness.timeframeNote}.`,
+              title: "Agent Builder and Workflow Tools (Pilot)",
+              desc: `The TritonAI Harness is in open pilot. Low-code orchestration, reusable skills, MCP-style connectors, and guardrails for supervised multi-step campus workflows. ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens used, ${tritonAiMetrics.harness.mergedPullRequests} merged PRs, ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews ${tritonAiMetrics.harness.timeframeNote}.`,
               color: "rose",
               icon: <svg aria-hidden="true" className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" /></svg>
             },
