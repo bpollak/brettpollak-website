@@ -549,8 +549,8 @@ export default function Home() {
               </h2>
               <p className="mt-3 text-base leading-7 text-body">
                 The daily briefings, research synthesis, and newsletters on this site are powered
-                by an agent I built and operate myself: 85 automated jobs, an 873-node knowledge graph,
-                and a 1,076-page wiki — all running on-premises on open-weight models, on a
+                by an agent I built and operate myself: 86 automated jobs, an 886-node knowledge graph,
+                and a 1,100-page wiki — all running on-premises on open-weight models, on a
                 shared memory ecosystem that Claude Code, Codex, and Hermes read and write together.
               </p>
             </div>
@@ -614,7 +614,7 @@ export default function Home() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-signal-gold-ink">Layer 2 · On Trigger</span>
-                      <span className="font-mono text-[10px] text-signal-gold-ink">1,076 pages</span>
+                      <span className="font-mono text-[10px] text-signal-gold-ink">1,100 pages</span>
                     </div>
                     <p className="text-xs font-medium text-ink mt-0.5">Curated wiki, pulled when mentioned</p>
                   </a>
@@ -624,7 +624,7 @@ export default function Home() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-signal-coral-ink">Layer 3 · On Request</span>
-                      <span className="font-mono text-[10px] text-signal-coral-ink">873 nodes</span>
+                      <span className="font-mono text-[10px] text-signal-coral-ink">886 nodes</span>
                     </div>
                     <p className="text-xs font-medium text-ink mt-0.5">Dated memory, transcripts &amp; graph</p>
                   </a>
@@ -660,9 +660,9 @@ export default function Home() {
             {/* Bottom telemetry strip */}
             <div className="mt-6 pt-4 border-t border-line flex flex-wrap items-center justify-between gap-4 text-xs text-body">
               <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
-                <span><strong className="text-ink font-mono font-semibold">85</strong> automated jobs</span>
-                <span><strong className="text-ink font-mono font-semibold">873</strong> graph nodes</span>
-                <span><strong className="text-ink font-mono font-semibold">1,076</strong> wiki pages</span>
+                <span><strong className="text-ink font-mono font-semibold">86</strong> automated jobs</span>
+                <span><strong className="text-ink font-mono font-semibold">886</strong> graph nodes</span>
+                <span><strong className="text-ink font-mono font-semibold">1,100</strong> wiki pages</span>
                 <span><strong className="text-ink font-semibold">On-prem</strong> open-weight inference</span>
               </div>
               <span className="text-muted">Context-grounded personal AI setup</span>
