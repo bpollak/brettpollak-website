@@ -9,13 +9,13 @@ const primaryLinks = [
   { href: '/products', label: 'Projects' },
   { href: '/tritongpt', label: 'TritonAI' },
   { href: '/speaking', label: 'Speaking' },
+  { href: '/ai-digest', label: 'AI Digest' },
   { href: '/media', label: 'Media' },
   { href: '/contact', label: 'Contact' },
 ];
 const noteLinks = [
   { href: '/now', label: 'Current focus' },
   { href: '/ai-agent-architecture', label: 'AI architecture' },
-  { href: '/ai-digest', label: 'AI Digest' },
   { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
   { href: '/podcasts', label: 'Podcasts' },
   { href: '/linkedin', label: 'LinkedIn' },
