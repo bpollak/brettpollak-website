@@ -49,6 +49,7 @@ For a longer machine-readable briefing, use:
   - Scholarship Agent (walkthrough): https://brettcpollak.com/products/cason-scholarship-agent
     - What a private, family-only scholarship CRM does (daily autonomous discovery, evidence-backed eligibility screening, application pipeline, inbox-driven status updates, profile-grounded essay drafts), illustrated with sample data. The tool itself is invite-only.
 - AI Digest: https://brettcpollak.com/ai-digest
+- AI Digest topic archives: https://brettcpollak.com/ai-digest/tag/ai-governance, /tag/higher-education, /tag/ai-adoption, /tag/agentic-ai, /tag/ai-security, /tag/model-strategy, /tag/vendor-moves, /tag/infrastructure
   - Daily AI briefing for people who run technology in higher education — product launches, enterprise developments, and campus policy shifts, with key takeaways and source links. Email subscription available.
 - UC San Diego AI Weekly: https://brettcpollak.com/ucsd-ai-news
   - Weekly roundup for UC San Diego staff covering supported AI services, TritonAI updates, and trainings.

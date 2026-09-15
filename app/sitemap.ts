@@ -1,5 +1,6 @@
 import { projectWalkthroughs } from "@/lib/projectWalkthroughs";
 import { digestEditions, newsletterEditions } from '@/lib/editions';
+import { DIGEST_TAGS } from '@/lib/digestTags';
 import type { MetadataRoute } from "next";
 import {
   SITE_URL,
@@ -22,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...projectWalkthroughs.map(project => ({ url: `${SITE_URL}/products/${project.slug}`, lastModified: isoToDate(staticPageDates[`/products/${project.slug}`]) })),
     ...digestEditions.map(day => ({ url: `${SITE_URL}/ai-digest/${day.isoDate}` })),
+    ...DIGEST_TAGS.map(tag => ({
+      url: `${SITE_URL}/ai-digest/tag/${tag.slug}`,
+      lastModified: isoToDate(latestDigestDate),
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    })),
     ...newsletterEditions.map(edition => ({ url: `${SITE_URL}/ucsd-ai-news/${edition.isoDate}` })),
     {
       url: `${SITE_URL}/work`,

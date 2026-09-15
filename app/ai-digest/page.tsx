@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { digestEditions, editionDate } from '@/lib/editions';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
+import { DIGEST_TAGS } from '@/lib/digestTags';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 
 export const metadata: Metadata = {
@@ -47,6 +48,14 @@ export default function AiDigestPage() {
         <p className="page-intro">The AI news that matters to people who run technology in higher education — product launches, enterprise developments, and campus policy shifts, each with key takeaways and source links.</p>
         <p className="mt-6 text-sm text-body">{weeklyAiDigestData.weekLabel} · Published through {weeklyAiDigestData.publishedThrough}</p>
         <div className="mt-8"><SubscribeForm /></div>
+      </div>
+    </section>
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <h2 className="mb-6 text-3xl font-medium">Browse by topic</h2>
+      <div className="flex flex-wrap gap-2">
+        {DIGEST_TAGS.map(tag => (
+          <Link key={tag.slug} href={`/ai-digest/tag/${tag.slug}`} className="rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-body transition-colors hover:border-signal-blue hover:text-ink">{tag.label}</Link>
+        ))}
       </div>
     </section>
     <section className="mx-auto max-w-6xl px-6 py-10">
