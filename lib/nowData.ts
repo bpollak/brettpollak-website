@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-09-13",
+  lastUpdated: "2026-09-20",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -37,7 +37,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems.",
+        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems. This month the assistant became an LTI tool in the learning management system, so courses can use it without a separate login.",
     },
     {
       label: "Governed AI enablement",
@@ -47,7 +47,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI workflow pilots and services",
       body:
-        "The Student Scheduling Assistant is live for fall planning and seeing record use, alongside the UC San Diego Assistant in the campus mobile app. Other work includes natural-language access to structured data, automated transfer credit evaluation, academic integrity triage, and student success analytics.",
+        "The Student Scheduling Assistant is live for fall planning and seeing record use, alongside a voice assistant in the campus mobile app that answers questions using live university data. Other work includes natural-language access to structured data, automated transfer credit evaluation, academic integrity triage, and student success analytics.",
     },
     {
       label: "Student system stabilization",
@@ -57,12 +57,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data platform modernization",
       body:
-        "Evaluating lakehouse migration from our legacy data warehouse platform. The field has narrowed to a hybrid architecture: one platform for data engineering, another for integration and governance. Decision likely December as vendor pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data.",
+        "The lakehouse migration off our legacy data warehouse is in evaluation: the RFP closed with about ten bids, and the field is narrowing toward a hybrid architecture, one platform for data engineering and another for integration and governance. Decision likely December as vendor pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and another goes live this month. The bigger effort is a shared GPU strategy for data science and machine learning, which has received funding and is moving forward, plus a proposal for a small central team to coordinate access to AI platform capabilities.",
+        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live this month. The bigger effort is a shared GPU strategy for data science and machine learning, which has received funding and is moving forward, plus a proposal for a small central team to coordinate access to AI platform capabilities.",
     },
     {
       label: "Core infrastructure consolidation",
@@ -77,7 +77,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Systemwide AI strategy",
       body:
-        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. That decision comes to a head this fall. Also working with national higher-ed groups on shared AI standards for research institutions.",
+        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. Full terms are now on the table and the decision lands with the Regents by December. Also working with national higher-ed groups on shared AI standards for research institutions.",
     },
     {
       label: "The apps I build",
