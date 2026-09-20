@@ -91,7 +91,7 @@ export default function TritonGPTContent() {
             <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. The SDSC-hosted environment is available to students, staff, and faculty and supports model choice, on-premises and approved cloud routes, developer APIs, embedded website support, and agent workflow components.
           </p>
             <p className="text-xl text-body leading-9">
-              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced (SCOUT).
+              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced (SCOUT), which opened to its full campus in September 2026.
             </p>
           </div>
         </div>
