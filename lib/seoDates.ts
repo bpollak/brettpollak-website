@@ -27,14 +27,14 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-09-13",  // homepage: arch stats refresh 86/886/1,100
+  "/": "2026-09-20",  // homepage: arch stats refresh 92/810/1,179; SCG 1.0.6
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-09-12",  // new portrait
   "/tritongpt": "2026-09-20",  // UC Merced SCOUT full launch; also fixes 9/13 drift
   "/speaking": "2026-09-10",  // new portrait
-  "/products": "2026-09-10",
+  "/products": "2026-09-20",  // Henry feature: 92 automations
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-09-20",

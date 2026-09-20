@@ -141,7 +141,7 @@ const products = [
     description:
       "A personal AI setup built on Hermes Agent, with scheduled automations, a knowledge graph, vector search, model routing, and institutional integrations.",
     features: [
-      "86 scheduled automations (September 2026 snapshot)",
+      "92 scheduled automations (September 2026 snapshot)",
       "Multiple model routes",
       "Software blueprint pipeline",
       "Persistent working context",
