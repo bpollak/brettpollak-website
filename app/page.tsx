@@ -7,6 +7,7 @@ import { mediaItems } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
+import { ucsdAiNewsletterData } from '@/lib/ucsdAiNewsletterData';
 
 // Favicon tile for a row's destination, using the same manifest the media
 // page uses (public/media-icons/, fetched by scripts/fetch-media-icons.mjs).
@@ -202,6 +203,33 @@ function parseDigestArticles(raw: string): { headline: string; summary: string; 
 }
 
 const latestDigestArticles = parseDigestArticles(latestDigestEdition.raw).slice(0, 4);
+
+// Newest UCSD AI Weekly edition for the homepage module — same honest-staleness
+// pattern as the digest module: merged+sorted copy, shows the last successful
+// edition with its date visible.
+const latestNewsletterEdition = [...ucsdAiNewsletterData.editions, ...(ucsdAiNewsletterData.archive ?? [])]
+  .sort((a, b) => (a.isoDate < b.isoDate ? 1 : -1))[0];
+
+// Parse the newsletter's raw markdown bullets into { headline, summary, url }
+// triples. Bullet format (stable): "- **[Headline](url)** — summary text."
+function parseNewsletterItems(raw: string): { headline: string; summary: string; url: string }[] {
+  const items: { headline: string; summary: string; url: string }[] = [];
+  for (const line of raw.split('\n')) {
+    const m = line.match(/^\s*-\s+\*\*\[([^\]]+)\]\(([^)]+)\)\*\*\s+—\s+(.*)$/);
+    if (m) {
+      const summaryText = m[3].trim();
+      const sentenceEnd = summaryText.indexOf('. ', 80);
+      items.push({
+        headline: m[1].trim(),
+        summary: (sentenceEnd >= 0 ? summaryText.slice(0, sentenceEnd + 1) : summaryText).trim(),
+        url: m[2].trim(),
+      });
+    }
+  }
+  return items;
+}
+
+const latestNewsletterItems = parseNewsletterItems(latestNewsletterEdition.raw).slice(0, 3);
 
 function formatNowDate(iso: string): string {
   const d = new Date(iso + 'T12:00:00Z');
@@ -727,6 +755,47 @@ export default function Home() {
               </div>
               <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
                 Read {latestDigestEdition.displayDate}&rsquo;s full digest →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* UCSD AI WEEKLY — campus newsletter */}
+      <section className="border-b border-line" aria-labelledby="ucsd-weekly-heading">
+        <div className="max-w-7xl mx-auto px-6 py-14 md:py-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+            <div>
+              <p className="rule-label mb-3">Campus newsletter</p>
+              <h2 id="ucsd-weekly-heading" className="text-3xl font-medium md:text-4xl">UC San Diego AI Weekly.</h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-body">
+                What changed in UC San Diego&rsquo;s supported AI tools, what the campus AI program
+                shipped, and the trainings worth attending — published Mondays and mirrored on
+                tritonai.ucsd.edu.
+              </p>
+              <Link href="/ucsd-ai-news" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Browse past editions<span className="sr-only"> of UC San Diego AI Weekly</span> →
+              </Link>
+            </div>
+            <div>
+              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
+                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="gold" />
+                Latest Edition — {latestNewsletterEdition.isoDate}
+              </h3>
+              <div className="border-y border-line divide-y divide-line">
+                {latestNewsletterItems.map(item => (
+                  <a key={item.headline} href={item.url}
+                    className="home-update-row index-row group grid gap-1 py-4 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
+                    <span className="min-w-0">
+                      <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{item.headline}</span>
+                      <span className="mt-0.5 block text-xs leading-5 text-body">{item.summary}</span>
+                    </span>
+                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">read ↗</span>
+                  </a>
+                ))}
+              </div>
+              <Link href={`/ucsd-ai-news/${latestNewsletterEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
+                Read the full edition →
               </Link>
             </div>
           </div>
