@@ -75,9 +75,9 @@ export const currentNow: NowSnapshot = {
         "Kicked off a project to rebuild the identity registry as the foundation for access management. Starting with the registry itself before tackling downstream automation. Alignment with the health sciences side of campus is a key risk we're managing.",
     },
     {
-      label: "Systemwide AI strategy",
+      label: "Systemwide and national AI strategy",
       body:
-        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. Full terms are now on the table and the decision lands with the Regents by December. Also working with national higher-ed groups on shared AI standards for research institutions.",
+        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. Full terms are now on the table and the decision lands with the Regents by December. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group.",
     },
     {
       label: "The apps I build",

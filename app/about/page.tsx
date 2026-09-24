@@ -84,6 +84,7 @@ const toneDot: Record<string, string> = {
 const atAGlance = [
   "Executive Director, Workplace Technology & Infrastructure Services",
   "Service owner, TritonAI program",
+  "Member, NASH AI Advisory Board (Data Infrastructure & Privacy)",
   "Seven teams, from service desk to AI platforms",
 ];
 
@@ -175,9 +176,13 @@ export default function About() {
             <div className="border border-line bg-paper p-6">
               <h3 className="text-lg font-bold text-ink mb-4">Recognition</h3>
               <p className="text-base leading-7 text-body">
-                Named to the 2026–2027 Constellation Research Business
-                Transformation 150. Coverage in Forbes, CIO.com, EdTech
-                Magazine, EDUCAUSE Review, and 30+ other outlets.
+                Member of the inaugural NASH AI Advisory Board, the first
+                national AI effort built exclusively for public higher
+                education systems, serving on the Data Infrastructure &
+                Privacy working group. Named to the 2026–2027 Constellation
+                Research Business Transformation 150. Coverage in Forbes,
+                CIO.com, EdTech Magazine, EDUCAUSE Review, and 30+ other
+                outlets.
               </p>
               <Link href="/media" className="mt-4 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
                 Full media index

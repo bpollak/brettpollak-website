@@ -31,7 +31,7 @@ export const staticPageDates: Record<string, string> = {
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
-  "/about": "2026-09-12",  // new portrait
+  "/about": "2026-09-23",  // NASH AI Advisory Board added
   "/tritongpt": "2026-09-20",  // UC Merced SCOUT full launch; also fixes 9/13 drift
   "/speaking": "2026-09-10",  // new portrait
   "/products": "2026-09-20",  // Henry feature: 92 automations
