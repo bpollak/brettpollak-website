@@ -7,6 +7,7 @@ import { mediaItems } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
+import { publicationInitials } from '@/lib/publicationInitials';
 import { ucsdAiNewsletterData } from '@/lib/ucsdAiNewsletterData';
 
 // Favicon tile for a row's destination, using the same manifest the media
@@ -72,7 +73,6 @@ const featuredWork = [
     step: '1',
     stepLabel: 'Ask',
     principle: 'Start in TritonGPT — chat, documents, approved models.',
-    category: 'Campus assistants',
     tone: 'blue',
     status: 'Production',
     title: 'TritonGPT',
@@ -85,7 +85,6 @@ const featuredWork = [
     step: '2',
     stepLabel: 'Embed',
     principle: 'Add approved AI to a system campus teams already use.',
-    category: 'Developer access',
     tone: 'gold',
     status: 'Production',
     title: 'TritonAI API Gateway',
@@ -98,7 +97,6 @@ const featuredWork = [
     step: '3',
     stepLabel: 'Automate',
     principle: 'Automate what repeats, with a person reviewing the result.',
-    category: 'Agent workspace',
     tone: 'green',
     status: 'Pilot',
     title: 'TritonAI Harness',
@@ -117,7 +115,7 @@ const featuredApps = [
     image: '/resolution-companion-social.webp',
     imageAlt: 'Resolution Companion: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.',
     href: '/products/resolution-companion',
-    cta: 'Read the case study',
+    appStoreUrl: 'https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708',
   },
   {
     title: 'Horse Racing Companion',
@@ -127,7 +125,7 @@ const featuredApps = [
     image: '/horse-racing-companion-social.jpg',
     imageAlt: 'Horse Racing Companion app screen showing a Del Mar race pick.',
     href: '/products/horse-racing-companion',
-    cta: 'Read the case study',
+    appStoreUrl: 'https://apps.apple.com/us/app/horse-racing-companion/id6802113749',
   },
   {
     title: 'Steel City Gameday',
@@ -137,9 +135,20 @@ const featuredApps = [
     image: '/steel-city-gameday.png',
     imageAlt: 'Steel City Gameday with a private Crew room and live Flash Pick',
     href: '/products/steel-city-gameday',
-    cta: 'Read the case study',
+    appStoreUrl: 'https://apps.apple.com/us/app/steel-city-gameday/id6806732803',
   },
 ];
+
+// Split an app's `latest` line ("Version 1.4.1 now available in the App Store —
+// what changed") into a short version tag and the change note, so the card can
+// show the version as metadata instead of a full release-note callout. Lines
+// that don't match the pattern fall back to showing the whole text as the note.
+function splitReleaseNote(latest: string): { version: string | null; note: string } {
+  const version = latest.match(/Version\s+([\d.]+)/i)?.[1] ?? null;
+  const dash = latest.indexOf('—');
+  const note = dash >= 0 ? latest.slice(dash + 1).trim() : latest;
+  return { version, note: note.charAt(0).toUpperCase() + note.slice(1) };
+}
 
 // Input/output summary for the architecture module. Mirrors the categories in
 // HeroPipelineDiagram (Sources → Knowledge → Actions) so the homepage graphic
@@ -339,7 +348,6 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
           <div className="grid items-center gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
-              <p className="rule-label mb-5">Day job, side projects</p>
               <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
                 Technology leadership at UC San Diego, and the apps I build outside it.
               </h1>
@@ -353,14 +361,17 @@ export default function Home() {
                 <a href="#selected-work" className="button-primary">Explore TritonAI</a>
                 <Link href="/products" className="button-secondary">My apps</Link>
               </div>
-              <p className="mt-6 max-w-xl text-base leading-7 text-body">
-                New tools have to fit the way people actually work, with support that lasts beyond the pilot.
-              </p>
-              <Link href="/now" className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Current focus · Updated {formatNowDate(currentNow.lastUpdated)}
-              </Link>
+              <div className="mt-7 flex flex-col gap-2 border-t border-line pt-5 text-sm text-body sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5">
+                <Link href="/speaking" className="hover:text-ink">
+                  Recent talks: <span className="font-semibold text-ink">EDUCAUSE · ASU+GSV · UC AI Council</span>
+                </Link>
+                <Link href="/now" className="font-semibold text-signal-blue underline underline-offset-4">
+                  Current focus · Updated {formatNowDate(currentNow.lastUpdated)}
+                </Link>
+              </div>
             </div>
-            <div className="home-portrait-panel">
+            {/* On phones the portrait leads (shorter crop) so the first screen isn't all text. */}
+            <div className="home-portrait-panel order-first lg:order-none">
               <Image src="/brettpollak-portrait-golden-hour.webp" alt="Brett Pollak on the UC San Diego campus" fill
                 className="object-cover object-[center_36%]" placeholder="blur" blurDataURL={heroBlurDataURL}
                 priority sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, 100vw" />
@@ -373,10 +384,7 @@ export default function Home() {
       <section id="selected-work" className="border-b border-line bg-paper-strong">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-5">
-            <div>
-              <p className="rule-label mb-2">Featured work</p>
-              <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
-            </div>
+            <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
             <a
               href="https://tritonai.ucsd.edu"
               target="_blank"
@@ -389,7 +397,8 @@ export default function Home() {
 
           <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4 text-xs text-body">
             <p className="max-w-2xl text-sm leading-6">
-              My work in AI centers on helping build and support TritonAI with colleagues across campus. Campus services mature along one path:
+              My work in AI centers on helping build and support TritonAI with colleagues across campus.
+              New tools have to fit the way people actually work, with support that lasts beyond the pilot.
             </p>
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted">
               <span className="font-bold text-signal-blue">1. Ask</span>
@@ -425,10 +434,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="mt-3.5">
-                  <p className="rule-label text-[0.68rem]">{study.category}</p>
-                  <h3 className="mt-1 text-2xl font-medium leading-7 text-ink">{study.title}</h3>
-                </div>
+                <h3 className="mt-4 text-2xl font-medium leading-7 text-ink">{study.title}</h3>
 
                 <p
                   className={`mt-2.5 text-xs font-semibold leading-5 ${
@@ -503,50 +509,51 @@ export default function Home() {
       </section>
 
       {/* PROJECTS */}
-      <section className="border-b border-line tint-gold" aria-labelledby="featured-apps-heading">
+      <section className="border-b border-line bg-paper" aria-labelledby="featured-apps-heading">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-5">
-            <div>
-              <p className="rule-label mb-3">Independent software</p>
-              <h2 id="featured-apps-heading" className="text-3xl font-medium md:text-4xl">Apps I&apos;ve built.</h2>
-            </div>
+            <h2 id="featured-apps-heading" className="text-3xl font-medium md:text-4xl">Apps I&apos;ve built.</h2>
             <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all 21 projects</Link>
           </div>
           <p className="mt-3 max-w-2xl text-base leading-7 text-body">
             Nights and weekends I build independent mobile apps, campus prototypes, and automated personal agent systems.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {featuredApps.map(app => (
-              <article key={app.title} className="flex flex-col border border-line bg-paper">
-                <div className="relative aspect-[1200/630] border-b border-line bg-white/70">
-                  <Image src={app.image} alt={app.imageAlt} fill
-                    className="object-cover" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <p className="rule-label mb-3">{app.category}</p>
-                  <h3 className="text-2xl font-medium leading-8">{app.title}</h3>
-                  <p className="mt-4 text-base leading-7 text-body">{app.description}</p>
-                  <p className="mt-3 border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">{app.latest}</p>
-                  <Link href={app.href}
-                    className="mt-auto inline-block pt-6 text-sm font-semibold text-signal-blue underline underline-offset-4">
-                    {app.cta}<span className="sr-only">: {app.title}</span>
-                  </Link>
-                </div>
-              </article>
-            ))}
+            {featuredApps.map(app => {
+              const release = splitReleaseNote(app.latest);
+              return (
+                <article key={app.title} className="flex flex-col border border-line bg-paper-strong">
+                  <div className="relative aspect-[1200/630] border-b border-line bg-white/70">
+                    <Image src={app.image} alt={app.imageAlt} fill
+                      className="object-cover" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-sm text-muted">
+                      {app.category}
+                      {release.version && <> · <span className="font-mono text-xs">v{release.version}</span></>}
+                    </p>
+                    <h3 className="mt-1 text-2xl font-medium leading-8">{app.title}</h3>
+                    <p className="mt-3 text-base leading-7 text-body">{app.description}</p>
+                    <p className="mt-3 line-clamp-2 text-sm leading-6 text-muted">
+                      <span className="font-semibold text-body">New:</span> {release.note}
+                    </p>
+                    <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-6">
+                      <a href={app.appStoreUrl} target="_blank" rel="noopener noreferrer" className="button-primary">
+                        Get it on the App Store<span className="sr-only">: {app.title} (opens in a new tab)</span>
+                      </a>
+                      <Link href={app.href} className="text-sm font-semibold text-signal-blue underline underline-offset-4">
+                        Case study<span className="sr-only">: {app.title}</span>
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
 
           {/* Portfolio Breadth Directory */}
-          <div className="mt-10 rounded-lg border border-line bg-white/70 p-6 shadow-sm">
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-              <div>
-                <p className="rule-label mb-1">Portfolio breadth</p>
-                <h3 className="text-lg font-semibold text-ink">More projects across mobile, enterprise, and agents</h3>
-              </div>
-              <Link href="/products" className="button-secondary text-xs px-4 py-2">
-                All 21 projects &amp; walkthroughs →
-              </Link>
-            </div>
+          <div className="mt-10 border-t border-line pt-6">
+            <h3 className="mb-4 text-lg font-semibold text-ink">More projects across mobile, enterprise, and agents</h3>
             <div className="grid sm:grid-cols-3 gap-5 text-sm">
               <div className="border-l-2 border-signal-blue pl-3.5">
                 <p className="font-semibold text-ink">Mobile &amp; Consumer</p>
@@ -565,13 +572,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI ARCHITECTURE — the system behind the work */}
+      {/* AI ARCHITECTURE — compact teaser; /ai-agent-architecture owns the detail */}
       <section className="border-b border-line bg-paper-strong" aria-labelledby="ai-arch-heading">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          {/* Header */}
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-8">
-            <div className="max-w-2xl">
-              <p className="rule-label mb-2">The system</p>
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <div>
               <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl text-ink">
                 The agent behind the output.
               </h2>
@@ -581,222 +586,109 @@ export default function Home() {
                 and a 1,179-page wiki — all running on-premises on open-weight models, on a
                 shared memory ecosystem that Claude Code, Codex, and Hermes read and write together.
               </p>
-            </div>
-            <Link
-              href="/ai-agent-architecture"
-              className="text-sm font-semibold text-signal-blue underline underline-offset-4"
-            >
-              How the architecture works →
-            </Link>
-          </div>
-
-          {/* 3-Stage Pipeline Card */}
-          <div className="rounded-xl border border-line bg-paper p-6 shadow-sm">
-            <div className="grid lg:grid-cols-3 gap-6 items-stretch">
-              
-              {/* Stage 1: Inputs */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-line">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-signal-green text-[10px] font-bold text-white">1</span>
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-green">What goes in</p>
-                  <span className="ml-auto text-[11px] text-muted font-mono">Sources</span>
-                </div>
-                <div className="space-y-2 flex-1 flex flex-col justify-between">
-                  {ARCH_INPUTS.map(item => (
-                    <a
-                      key={item.label}
-                      href="/ai-agent-architecture#context"
-                      className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2 text-xs transition-all hover:border-signal-blue hover:shadow-xs"
-                    >
-                      <span className="min-w-0">
-                        <span className="block font-semibold text-ink group-hover:text-signal-blue">{item.label}</span>
-                        <span className="text-[11px] text-body">{item.note}</span>
-                      </span>
-                      <span aria-hidden="true" className="font-mono text-[11px] text-signal-green opacity-70 group-hover:opacity-100">↗</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Stage 2: 3-Tier Context Loading */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-line">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-signal-gold text-[10px] font-bold text-white">2</span>
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-gold-ink">Context loading</p>
-                  <span className="ml-auto text-[11px] text-muted font-mono">3 Layers</span>
-                </div>
-                <div className="space-y-2.5 flex-1 flex flex-col justify-between">
-                  <a
-                    href="/ai-agent-architecture#layers"
-                    className="group block rounded-lg bg-signal-blue px-3.5 py-2.5 text-white shadow-xs transition-transform hover:scale-[1.01]"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-bold uppercase tracking-wider">Layer 1 · Always Loaded</span>
-                      <span className="font-mono text-[10px] text-white/75">~50 KB</span>
-                    </div>
-                    <p className="text-xs font-medium text-white/90 mt-0.5">Identity, memory, patterns</p>
-                  </a>
-                  <a
-                    href="/ai-agent-architecture#layers"
-                    className="group block rounded-lg border-2 border-signal-gold bg-[color-mix(in_srgb,var(--wash-gold)_55%,white)] px-3.5 py-2.5 transition-transform hover:scale-[1.01]"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-signal-gold-ink">Layer 2 · On Trigger</span>
-                      <span className="font-mono text-[10px] text-signal-gold-ink">1,179 pages</span>
-                    </div>
-                    <p className="text-xs font-medium text-ink mt-0.5">Curated wiki, pulled when mentioned</p>
-                  </a>
-                  <a
-                    href="/ai-agent-architecture#layers"
-                    className="group block rounded-lg border-2 border-dashed border-signal-coral bg-[color-mix(in_srgb,var(--wash-coral)_40%,white)] px-3.5 py-2.5 transition-transform hover:scale-[1.01]"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-signal-coral-ink">Layer 3 · On Request</span>
-                      <span className="font-mono text-[10px] text-signal-coral-ink">810 nodes</span>
-                    </div>
-                    <p className="text-xs font-medium text-ink mt-0.5">Dated memory, transcripts &amp; graph</p>
-                  </a>
-                </div>
-              </div>
-
-              {/* Stage 3: Outputs */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-line">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-signal-blue text-[10px] font-bold text-white">3</span>
-                  <p className="text-xs font-bold uppercase tracking-[0.14em] text-signal-blue">What comes out</p>
-                  <span className="ml-auto text-[11px] text-muted font-mono">Outputs</span>
-                </div>
-                <div className="space-y-2 flex-1 flex flex-col justify-between">
-                  {ARCH_OUTPUTS.map(item => (
-                    <a
-                      key={item.label}
-                      href="/ai-agent-architecture#outcomes"
-                      className="group flex items-center justify-between gap-2 rounded-lg border border-line bg-white px-3 py-2 text-xs transition-all hover:border-signal-blue hover:shadow-xs"
-                    >
-                      <span className="min-w-0">
-                        <span className="block font-semibold text-ink group-hover:text-signal-blue">{item.label}</span>
-                        <span className="text-[11px] text-body">{item.note}</span>
-                      </span>
-                      <span aria-hidden="true" className="font-mono text-[11px] text-signal-blue opacity-70 group-hover:opacity-100">↗</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
+              <Link
+                href="/ai-agent-architecture"
+                className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4"
+              >
+                How the architecture works →
+              </Link>
             </div>
 
-            {/* Bottom telemetry strip */}
-            <div className="mt-6 pt-4 border-t border-line flex flex-wrap items-center justify-between gap-4 text-xs text-body">
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5">
+            <div>
+              <ol className="grid gap-3 sm:grid-cols-3 sm:gap-0">
+                {[
+                  { step: '1', label: 'What goes in', tone: 'bg-signal-green', items: ARCH_INPUTS.map(i => i.label).join(', ') },
+                  { step: '2', label: 'Context', tone: 'bg-signal-gold', items: 'Three layers, loaded only when a task needs them' },
+                  { step: '3', label: 'What comes out', tone: 'bg-signal-blue', items: ARCH_OUTPUTS.map(i => i.label).join(', ') },
+                ].map(stage => (
+                  <li key={stage.step} className="border-l-2 border-line pl-4 sm:pr-4">
+                    <p className="flex items-center gap-2 text-sm font-semibold text-ink">
+                      <span aria-hidden="true" className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold text-white ${stage.tone}`}>{stage.step}</span>
+                      {stage.label}
+                    </p>
+                    <p className="mt-1.5 text-sm leading-6 text-body">{stage.items}</p>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-1.5 border-t border-line pt-4 text-xs text-body">
                 <span><strong className="text-ink font-mono font-semibold">92</strong> automated jobs</span>
                 <span><strong className="text-ink font-mono font-semibold">810</strong> graph nodes</span>
                 <span><strong className="text-ink font-mono font-semibold">1,179</strong> wiki pages</span>
                 <span><strong className="text-ink font-semibold">On-prem</strong> open-weight inference</span>
               </div>
-              <span className="text-muted">Context-grounded personal AI setup</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AI DIGEST — daily briefing + sign-up */}
-      <section className="border-b border-line tint-green" aria-labelledby="ai-digest-heading">
+      {/* WRITING — the two newsletters, side by side, headlines only */}
+      <section className="border-b border-line bg-paper" aria-labelledby="writing-heading">
         <div className="max-w-7xl mx-auto px-6 py-14 md:py-16">
-          <div className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-            <div>
-              <p className="rule-label mb-3">Daily briefing</p>
-              <h2 id="ai-digest-heading" className="text-3xl font-medium md:text-4xl">The AI Digest.</h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                A daily AI briefing for people who run technology in higher education — the
-                launches, enterprise moves, and campus policy shifts that matter, with key
-                takeaways and source links.
-              </p>
-              <div className="mt-8">
-                <SubscribeForm />
+          <h2 id="writing-heading" className="text-3xl font-medium md:text-4xl">What I publish.</h2>
+          <p className="mt-3 max-w-2xl text-base leading-7 text-body">
+            Two newsletters: a daily AI briefing for people who run technology in higher education,
+            and a Monday update on UC San Diego&rsquo;s own AI tools and programs.
+          </p>
+
+          <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex flex-col">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink pb-3">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl font-medium text-ink">
+                  <Link href="/ai-digest" className="hover:text-signal-blue">The AI Digest</Link>
+                </h3>
+                <span className="text-sm text-muted">Daily · latest <span className="font-mono text-xs">{latestDigestEdition.isoDate}</span></span>
               </div>
-              <Link href="/ai-digest" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Browse past editions<span className="sr-only"> of the AI Digest</span> →
-              </Link>
-            </div>
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
-                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="green" />
-                Latest Edition — {latestDigestEdition.displayDate}
-              </h3>
-              <div className="border-y border-line divide-y divide-line">
-                {/* Lead article with full context */}
-                {latestDigestArticles[0] && (
-                  <div className="py-5">
-                    <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="group block">
-                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-signal-gold-ink">Lead Story</span>
-                      <h4 className="mt-1 text-xl font-medium leading-7 text-ink group-hover:text-signal-blue">
-                        {latestDigestArticles[0].headline}
-                      </h4>
-                      <p className="mt-1.5 text-sm leading-6 text-body">{latestDigestArticles[0].summary}</p>
-                      {latestDigestArticles[0].higherEd && (
-                        <p className="mt-2.5 border-l-2 border-signal-gold pl-3 text-sm font-medium leading-6 text-ink">
-                          {latestDigestArticles[0].higherEd}
-                        </p>
-                      )}
-                    </Link>
-                  </div>
-                )}
-                {/* Subsequent articles in brief */}
-                {latestDigestArticles.slice(1, 3).map(article => (
-                  <Link key={article.headline} href={`/ai-digest/${latestDigestEdition.isoDate}`}
-                    className="home-update-row index-row group grid gap-1 py-4 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
-                    <span className="min-w-0">
+              <ul className="divide-y divide-line border-b border-line">
+                {latestDigestArticles.slice(0, 3).map(article => (
+                  <li key={article.headline}>
+                    <Link href={`/ai-digest/${latestDigestEdition.isoDate}`}
+                      className="group block py-4 transition-colors hover:bg-paper-strong">
                       <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{article.headline}</span>
-                      <span className="mt-0.5 block text-xs leading-5 text-body">{article.summary}</span>
-                    </span>
-                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">read ↗</span>
-                  </Link>
+                    </Link>
+                  </li>
                 ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+                <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="text-signal-blue underline underline-offset-4">
+                  Read the full edition<span className="sr-only"> of the AI Digest</span> →
+                </Link>
+                <Link href="/ai-digest" className="text-signal-blue underline underline-offset-4">
+                  Past editions<span className="sr-only"> of the AI Digest</span>
+                </Link>
               </div>
-              <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Read {latestDigestEdition.displayDate}&rsquo;s full digest →
-              </Link>
+              <div className="mt-8">
+                <SubscribeForm headingLevel="h4" compact />
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* UCSD AI WEEKLY — campus newsletter */}
-      <section className="border-b border-line" aria-labelledby="ucsd-weekly-heading">
-        <div className="max-w-7xl mx-auto px-6 py-14 md:py-16">
-          <div className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-            <div>
-              <p className="rule-label mb-3">Campus newsletter</p>
-              <h2 id="ucsd-weekly-heading" className="text-3xl font-medium md:text-4xl">UC San Diego AI Weekly.</h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-body">
-                What changed in UC San Diego&rsquo;s supported AI tools, what the campus AI program
-                shipped, and the trainings worth attending — published Mondays and mirrored on
-                tritonai.ucsd.edu.
-              </p>
-              <Link href="/ucsd-ai-news" className="mt-6 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Browse past editions<span className="sr-only"> of UC San Diego AI Weekly</span> →
-              </Link>
-            </div>
-            <div>
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
-                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="gold" />
-                Latest Edition — {latestNewsletterEdition.isoDate}
-              </h3>
-              <div className="border-y border-line divide-y divide-line">
-                {latestNewsletterItems.map(item => (
-                  <a key={item.headline} href={item.url}
-                    className="home-update-row index-row group grid gap-1 py-4 sm:grid-cols-[1fr_auto] sm:items-start sm:gap-4">
-                    <span className="min-w-0">
-                      <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{item.headline}</span>
-                      <span className="mt-0.5 block text-xs leading-5 text-body">{item.summary}</span>
-                    </span>
-                    <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">read ↗</span>
-                  </a>
-                ))}
+            <div className="flex flex-col">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink pb-3">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl font-medium text-ink">
+                  <Link href="/ucsd-ai-news" className="hover:text-signal-blue">UC San Diego AI Weekly</Link>
+                </h3>
+                <span className="text-sm text-muted">Mondays · latest <span className="font-mono text-xs">{latestNewsletterEdition.isoDate}</span></span>
               </div>
-              <Link href={`/ucsd-ai-news/${latestNewsletterEdition.isoDate}`} className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
-                Read the full edition →
-              </Link>
+              <ul className="divide-y divide-line border-b border-line">
+                {latestNewsletterItems.map(item => (
+                  <li key={item.headline}>
+                    <a href={item.url} className="group block py-4 transition-colors hover:bg-paper-strong">
+                      <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{item.headline}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+                <Link href={`/ucsd-ai-news/${latestNewsletterEdition.isoDate}`} className="text-signal-blue underline underline-offset-4">
+                  Read the full edition<span className="sr-only"> of UC San Diego AI Weekly</span> →
+                </Link>
+                <Link href="/ucsd-ai-news" className="text-signal-blue underline underline-offset-4">
+                  Past editions<span className="sr-only"> of UC San Diego AI Weekly</span>
+                </Link>
+              </div>
+              <p className="mt-8 text-sm leading-6 text-body">
+                Also published on{' '}
+                <a href="https://tritonai.ucsd.edu" target="_blank" rel="noopener noreferrer" className="font-semibold text-signal-blue underline underline-offset-4">tritonai.ucsd.edu ↗</a>
+              </p>
             </div>
           </div>
         </div>
@@ -807,7 +699,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
           <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 xl:gap-16">
             <div>
-              <p className="rule-label mb-4 text-white/55">Speaking &amp; Keynotes</p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-medium">
                 Talks on AI in higher education.
               </h2>
@@ -834,7 +725,6 @@ export default function Home() {
                 <Link href="/speaking" className="inline-flex items-center justify-center rounded-sm bg-[#c97712] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#d98520]">
                   Speaking topics &amp; booking →
                 </Link>
-                <span className="text-xs text-white/50">Recent: EDUCAUSE, ASU+GSV, UC AI Council</span>
               </div>
             </div>
 
@@ -858,7 +748,7 @@ export default function Home() {
                         {icon ? (
                           <Image src={icon} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
                         ) : (
-                          <span className="font-mono text-xs font-bold text-white/60">{item.publication.slice(0, 2).toUpperCase()}</span>
+                          <span className="font-mono text-xs font-bold text-white/60">{publicationInitials(item.publication)}</span>
                         )}
                       </span>
                       <span className="font-mono text-xs text-[#f2b84b]">{item.date}</span>

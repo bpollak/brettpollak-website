@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { mediaItems, MediaItem } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
+import { publicationInitials } from '@/lib/publicationInitials';
 
 type CategoryFilter = 'all' | 'article' | 'interview' | 'whitepaper' | 'speaking' | 'award';
 
@@ -46,18 +47,6 @@ function iconForUrl(url: string): string | null {
   } catch {
     return null;
   }
-}
-
-// 1–2 letter monogram for the publication tile, e.g. "Campus Technology"
-// -> "CT". Awards get a star instead (see the row markup).
-function publicationInitials(name: string): string {
-  const tokens = name.split(/[\s:&,\-–—./]+/);
-  // Prefer alphabetic words so "NACUBO 2026 Annual Meeting" -> "NA", not "N2"
-  const alpha = tokens.filter((w) => /^[A-Za-z]/.test(w));
-  const words = alpha.length > 0 ? alpha : tokens.filter((w) => /^[A-Za-z0-9]/.test(w));
-  if (words.length === 0) return name.slice(0, 2).toUpperCase();
-  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
-  return (words[0][0] + words[1][0]).toUpperCase();
 }
 
 function formatDate(dateString: string) {

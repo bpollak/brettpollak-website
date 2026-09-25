@@ -6,7 +6,15 @@ const BUTTONDOWN_ID = 'pollak';
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error';
 
-export default function SubscribeForm() {
+type SubscribeFormProps = {
+  /** Match the surrounding outline — the homepage nests this under an h3. */
+  headingLevel?: 'h2' | 'h3' | 'h4';
+  /** Tighter padding for use inside a column rather than as a standalone panel. */
+  compact?: boolean;
+};
+
+export default function SubscribeForm({ headingLevel = 'h2', compact = false }: SubscribeFormProps) {
+  const Heading = headingLevel;
   const [email, setEmail] = useState('');
   const [formState, setFormState] = useState<FormState>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -45,12 +53,12 @@ export default function SubscribeForm() {
   }
 
   return (
-    <div className="editorial-panel p-8" data-tone="green">
-      <h2 className="text-xl font-bold text-ink mb-2">
+    <div className={`editorial-panel ${compact ? 'p-6' : 'p-8'}`} data-tone="green">
+      <Heading className="font-[family-name:var(--font-display)] text-xl font-bold text-ink mb-2">
         Get the digest in your inbox
-      </h2>
-      <p className="text-body text-sm mb-6">
-        A daily AI briefing for people who run technology in higher education — the launches, enterprise moves, and campus policy shifts that matter, with key takeaways and source links.
+      </Heading>
+      <p className={`text-body text-sm ${compact ? 'mb-4' : 'mb-6'}`}>
+        One email each morning, a few minutes to read. Free, and you can unsubscribe anytime.
       </p>
 
       {formState === 'success' ? (

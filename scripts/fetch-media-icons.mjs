@@ -35,6 +35,14 @@ const manifestFile = path.join(root, 'lib', 'mediaIconManifest.json');
 
 const FETCH_TIMEOUT_MS = 8000;
 
+// Hosts whose favicon is a detailed wordmark that turns into an unreadable
+// smudge at the 20px tile size. They get the publication monogram instead;
+// listing them here keeps a rerun from fetching the icon again.
+const MONOGRAM_ONLY_HOSTS = new Set([
+  'higheredaiplaybook.com',
+  'higheredaiplaybook.substack.com',
+]);
+
 function hostsFromData() {
   const hosts = new Set();
   for (const dataFile of dataFiles) {
@@ -92,7 +100,7 @@ async function main() {
   // throws away previously fetched icons.
   const manifest = {};
   for (const f of fs.readdirSync(outDir)) {
-    if (f.endsWith('.png')) manifest[f.slice(0, -4)] = f;
+    if (f.endsWith('.png') && !MONOGRAM_ONLY_HOSTS.has(f.slice(0, -4))) manifest[f.slice(0, -4)] = f;
   }
 
   const fingerprint = await get(
@@ -105,6 +113,7 @@ async function main() {
   let fetched = 0;
   let skipped = 0;
   for (const host of hostsFromData()) {
+    if (MONOGRAM_ONLY_HOSTS.has(host)) continue;
     try {
       const icon = await fetchIcon(host, googleDefaultHash);
       if (icon) {

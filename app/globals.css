@@ -81,6 +81,14 @@ h2 {
   letter-spacing: 0;
 }
 
+/* Even out ragged headline lines so a wrap never strands one short word
+   ("…outside / it.") on its own line. Browsers without support ignore it. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
 ::selection {
   background: rgba(31, 90, 138, 0.18);
 }
@@ -138,8 +146,8 @@ html {
 
 .home-portrait-panel {
   position: relative;
-  min-height: 300px;
-  height: clamp(300px, 34vw, 440px);
+  min-height: 220px;
+  height: clamp(220px, 34vw, 440px);
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--line), var(--signal-blue) 22%);
   background: color-mix(in srgb, var(--paper-strong) 82%, var(--signal-blue) 18%);

@@ -317,53 +317,56 @@ export default function Products() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema) }}
       />
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-        <div className="mb-12 grid gap-8 border-y border-line bg-wash-blue p-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <div>
-            <p className="rule-label mb-5">Projects</p>
-            <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Projects</h1>
-          </div>
-          <p className="text-2xl text-body mb-6 max-w-3xl leading-9">
+        <div className="mb-10 grid gap-6 border-b border-line pb-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Projects</h1>
+          <p className="max-w-3xl text-xl leading-8 text-body md:text-2xl md:leading-9">
             Web and mobile apps I have built for campus workflows, everyday interests, and family use. Project links lead to the application or a walkthrough.
           </p>
         </div>
 
-        <nav className="reading-links mb-10" aria-label="Project categories">
-          {projectGroups.map(group => <a key={group.id} href={`#${group.id}`}>{group.title} ({products.filter(product => product.group === group.id).length})</a>)}
+        <nav className="mb-12 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm" aria-label="Project categories">
+          <span className="text-muted">Jump to</span>
+          {projectGroups.map(group => (
+            <a key={group.id} href={`#${group.id}`} className="font-semibold text-signal-blue underline underline-offset-4">
+              {group.title} <span className="font-normal text-muted">({products.filter(product => product.group === group.id).length})</span>
+            </a>
+          ))}
         </nav>
-        {projectGroups.map(group => <section key={group.id} id={group.id} className="mb-12">
-          <div className="border-y border-line py-6">
+        {projectGroups.map(group => <section key={group.id} id={group.id} className="mb-16 scroll-mt-24">
+          <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-ink pb-3">
             <h2 className="text-3xl font-medium">{group.title}</h2>
-            <p className="mt-3 max-w-3xl leading-7 text-body">{group.description}</p>
+            <p className="max-w-2xl text-sm leading-6 text-body">{group.description}</p>
           </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.filter(product => product.group === group.id).map((product, index) => {
             const isInternal = "internal" in product && product.internal === true;
-            const frameClass = `block border border-line p-4 ${frameColors[index % frameColors.length]}`;
+            const frameClass = `flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-line p-4 ${frameColors[index % frameColors.length]}`;
             const thumbnail = (
               <Image
                 src={product.image}
                 alt={product.imageAlt}
                 width={product.width}
                 height={product.height}
-                className="mx-auto h-auto max-h-96 w-auto max-w-full border border-white/15 object-contain"
-                sizes="(min-width: 1024px) 28vw, 100vw"
+                className="h-full w-auto max-w-full border border-white/15 object-contain"
+                sizes="(min-width: 1024px) 26vw, (min-width: 640px) 45vw, 100vw"
               />
             );
             const ctaLabel = (
               <>
                 {product.cta}
-                <svg aria-hidden="true" className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </>
             );
-            const ctaClass = "inline-flex items-center gap-2 font-semibold text-signal-blue";
+            const ctaClass = "inline-flex items-center gap-2 text-sm font-semibold text-signal-blue";
             return (
             <article
               key={product.title}
-              className="group grid gap-8 border-b border-line py-10 last:border-b-0 transition-colors hover:bg-[#fffef9] lg:grid-cols-[0.42fr_0.72fr] lg:items-center"
+              className="group flex flex-col border border-line bg-paper-strong transition-colors hover:border-signal-blue"
             >
               {isInternal ? (
-                <Link href={product.href} className={frameClass}>
+                <Link href={product.href} className={frameClass} tabIndex={-1} aria-hidden="true">
                   {thumbnail}
                 </Link>
               ) : (
@@ -372,27 +375,28 @@ export default function Products() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={frameClass}
+                  tabIndex={-1}
+                  aria-hidden="true"
                 >
                   {thumbnail}
                 </a>
               )}
-              <div>
-                <p className="rule-label mb-4 text-signal-gold-ink">{product.category}</p>
-                <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink transition-colors group-hover:text-[#1f5a8a]">
+              <div className="flex flex-1 flex-col p-5">
+                <p className="text-sm text-muted">{product.category} · <span className="text-signal-green">{product.status}</span></p>
+                <h3 className="mt-1 text-2xl leading-tight font-medium text-ink transition-colors group-hover:text-signal-blue">
                   {product.title}
                 </h3>
-                <p className="mt-3 inline-block border border-line bg-wash-green px-3 py-1 text-sm font-semibold text-signal-green">{product.status}</p>
-                <p className="mt-5 text-lg leading-8 text-body">{product.description}</p>
-                {"imageCaption" in product && <p className="mt-3 text-sm leading-6 text-body">{product.imageCaption}</p>}
-                <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                <p className="mt-3 text-sm leading-6 text-body">{product.description}</p>
+                {"imageCaption" in product && <p className="mt-2 text-xs leading-5 text-muted">{product.imageCaption}</p>}
+                <ul className="mt-4 space-y-1.5 border-t border-line pt-3">
                   {product.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3 border-t border-line pt-3">
-                      <span className="mt-2 h-2 w-2 flex-shrink-0 bg-[#c97712]" aria-hidden="true" />
-                      <span className="text-sm font-semibold leading-6 text-ink">{feature}</span>
-                    </div>
+                    <li key={feature} className="flex items-start gap-2.5 text-sm leading-6 text-ink">
+                      <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 bg-signal-gold" aria-hidden="true" />
+                      {feature}
+                    </li>
                   ))}
-                </div>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
+                </ul>
+                <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-5">
                   {isInternal ? (
                     <Link href={product.href} className={ctaClass}>
                       {ctaLabel}
@@ -412,12 +416,9 @@ export default function Products() {
                       href={product.secondaryHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-sm bg-[#17201b] px-5 py-2.5 font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
+                      className="text-sm font-semibold text-body underline underline-offset-4 hover:text-ink"
                     >
                       {product.secondaryCta}
-                      <svg aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
                     </a>
                   ) : null}
                 </div>
@@ -425,12 +426,12 @@ export default function Products() {
             </article>
             );
           })}
+          </div>
         </section>)}
 
         <div className="mt-14 border border-dashed border-[#9fa89d] bg-paper-strong p-8 md:p-10">
           <div className="grid gap-8 md:grid-cols-[0.55fr_1fr] md:items-center">
             <div>
-              <p className="rule-label mb-4">In progress</p>
               <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink">Other projects are in progress.</h3>
             </div>
             <div>
