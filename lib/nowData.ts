@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-09-20",
+  lastUpdated: "2026-09-27",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -42,7 +42,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is moving from pilot to a supported build path for development teams, with a broader rollout planned this fall. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source.",
+        "The TritonAI Harness is out of pilot and is now a supported build path for development teams, with a broad rollout and a training program landing this month. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source.",
     },
     {
       label: "AI workflow pilots and services",
@@ -52,7 +52,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Student system stabilization",
       body:
-        "The student system held through fall enrollment after a difficult summer, though a rough second pass kept the team firefighting. The longer-term replacement path is firming around the class-planning tool, which has doubled in use.",
+        "The student system held through fall enrollment after a difficult summer, and the class-planning tool has doubled in use as it becomes the go-to path for course planning. The work now is data quality cleanup and deciding the longer-term replacement path, which is firming around that same tool.",
     },
     {
       label: "Data platform modernization",
@@ -62,7 +62,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live this month. The bigger effort is a shared GPU strategy for data science and machine learning, which has received funding and is moving forward, plus a proposal for a small central team to coordinate access to AI platform capabilities.",
+        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live this month. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. A small central team to coordinate access to AI platform capabilities is proposed.",
     },
     {
       label: "Core infrastructure consolidation",
@@ -77,7 +77,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Systemwide and national AI strategy",
       body:
-        "Contributing to the university system's position on systemwide AI licensing, pushing API-first access over single-vendor lock-in. Full terms are now on the table and the decision lands with the Regents by December. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group.",
+        "A systemwide AI council is now negotiating systemwide licensing directly with the major model providers, and I'm pushing API-first access over single-vendor lock-in. Contracts are expected soon, with final decisions landing with the Regents by December. Separately, our campus is the on-premises and open-source tier of that strategy. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group.",
     },
     {
       label: "The apps I build",
