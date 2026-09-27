@@ -75,7 +75,7 @@ export default function DailyRhythmClock() {
   return (
     <figure className="w-full my-10" role="img" aria-label="Daily cron rhythm — 24-hour timeline">
       <figcaption className="sr-only">
-        The real daily rhythm of the 92-job fleet, from the live schedule. Early-morning
+        The real daily rhythm of the 95-job fleet, from the live schedule. Early-morning
         scripts (4–8 AM) accumulate raw signals — Confluence, Google Drive, Teams, RSS
         feeds, digest, opportunity scan, pain signals. The 7:30 AM daily briefing
         delivers the morning read. Later crons synthesize: memory system health, wiki
