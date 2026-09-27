@@ -27,12 +27,12 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-09-25",  // homepage: design pass — newsletters merged, agent teaser, hero proof line
+  "/": "2026-09-27",  // homepage: Harness status Pilot → Supported (out of pilot)
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-09-23",  // NASH AI Advisory Board added
-  "/tritongpt": "2026-09-27",  // TritonGPT default model on UC-hosted infrastructure (4.6.6)
+  "/tritongpt": "2026-09-27",  // Harness out of pilot — supported build path
   "/speaking": "2026-09-10",  // new portrait
   "/products": "2026-09-20",  // Henry feature: 92 automations
   "/products/cason-recruiting-crm": "2026-07-14",

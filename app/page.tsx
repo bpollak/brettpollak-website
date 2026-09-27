@@ -98,7 +98,7 @@ const featuredWork = [
     stepLabel: 'Automate',
     principle: 'Automate what repeats, with a person reviewing the result.',
     tone: 'green',
-    status: 'Pilot',
+    status: 'Supported',
     title: 'TritonAI Harness',
     summary: 'A desktop agent workspace for working with files, code, and connected campus services under human supervision.',
     href: 'https://tritonai.ucsd.edu/developer-apis/harness.html',
