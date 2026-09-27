@@ -32,7 +32,7 @@ export const staticPageDates: Record<string, string> = {
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-09-23",  // NASH AI Advisory Board added
-  "/tritongpt": "2026-09-20",  // UC Merced SCOUT full launch; also fixes 9/13 drift
+  "/tritongpt": "2026-09-27",  // TritonGPT default model on UC-hosted infrastructure (4.6.6)
   "/speaking": "2026-09-10",  // new portrait
   "/products": "2026-09-20",  // Henry feature: 92 automations
   "/products/cason-recruiting-crm": "2026-07-14",

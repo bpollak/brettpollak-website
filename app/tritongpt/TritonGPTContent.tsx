@@ -88,7 +88,7 @@ export default function TritonGPTContent() {
             <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s institutional AI program, serving 73,000+ students, faculty, and staff. It includes infrastructure, task-specific assistants, campus data tools, instructional pilots, developer access, and shared workflows.
           </p>
             <p className="text-xl text-body leading-9 mb-8">
-            <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. The SDSC-hosted environment is available to students, staff, and faculty and supports model choice, on-premises and approved cloud routes, developer APIs, embedded website support, and agent workflow components.
+            <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. The SDSC-hosted environment is available to students, staff, and faculty and supports model choice, on-premises and approved cloud routes, developer APIs, embedded website support, and agent workflow components. TritonGPT&apos;s default model now runs on UC San Diego-hosted infrastructure, keeping routine campus AI traffic on UC-controlled hardware.
           </p>
             <p className="text-xl text-body leading-9">
               The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, UC Agriculture and Natural Resources, Fairleigh Dickinson University (FredGPT), and UC Merced (SCOUT), which opened to its full campus in September 2026.
