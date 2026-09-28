@@ -40,6 +40,16 @@ export default function EditionPage({ kind, date, html, dates }: {
           <Link href="/ucsd-ai-news" className="font-semibold text-signal-blue underline underline-offset-4">UC San Diego AI Weekly</Link>{' '}
           covers supported AI tools, TritonAI updates, and trainings for UCSD staff.
         </p>
+        <div className="mt-8 border-t border-line pt-6">
+          <p className="rule-label mb-3">More from this site</p>
+          <ul className="list-disc space-y-2 pl-5 text-body leading-7">
+            <li>How I run AI on a campus: the{' '}
+              <Link href="/ai-agent-architecture" className="font-semibold text-signal-blue underline underline-offset-4">agent architecture</Link>{' '}
+              behind UCSD&apos;s platform.</li>
+            <li><Link href="/about" className="font-semibold text-signal-blue underline underline-offset-4">About me</Link> and the{' '}
+              <Link href="/speaking" className="font-semibold text-signal-blue underline underline-offset-4">talks I give</Link> on TritonAI and higher-ed AI strategy.</li>
+          </ul>
+        </div>
       </section>
     )}
     {kind === 'ucsd-ai-news' && (
