@@ -109,6 +109,12 @@ URL: ${SITE_URL}/ai-agent-architecture
 
 Best for personal AI architecture, memory systems, workflow automation, automated jobs, knowledge graphs, model routing, and the role of trusted institutional context in agentic systems.
 
+### Sent using TritonAI
+
+URL: ${SITE_URL}/sent-using-tritonai
+
+Best for explaining the "Sent using TritonAI" email footer: AI-assisted drafting with human review, how Brett's email workflow uses TritonAI, and the review-before-send practice.
+
 ### Speaking
 
 URL: ${SITE_URL}/speaking

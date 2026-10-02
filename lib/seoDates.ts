@@ -40,6 +40,7 @@ export const staticPageDates: Record<string, string> = {
   "/ai-agent-architecture": "2026-09-27",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
+  "/sent-using-tritonai": "2026-10-01",
   "/contact": "2026-09-05",
   "/products/horse-racing-companion": "2026-09-09",
   "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store

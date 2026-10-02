@@ -57,6 +57,8 @@ For a longer machine-readable briefing, use:
   - Current focus areas.
 - LinkedIn Notes: https://brettcpollak.com/linkedin
   - Recent notes and updates.
+- Sent using TritonAI: https://brettcpollak.com/sent-using-tritonai
+  - What the "Sent using TritonAI" email footer means: AI drafts the wording, every message is reviewed and edited before sending.
 - Podcasts: https://brettcpollak.com/podcasts
   - Curated podcast recommendations.
 

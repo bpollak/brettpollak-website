@@ -121,6 +121,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${SITE_URL}/sent-using-tritonai`,
+      lastModified: isoToDate(staticPageDates["/sent-using-tritonai"]),
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
       url: `${SITE_URL}/contact`,
       lastModified: isoToDate(staticPageDates["/contact"]),
       changeFrequency: "yearly",
