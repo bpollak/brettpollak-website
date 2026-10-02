@@ -93,6 +93,13 @@ export default function SentUsingTritonAI() {
             to me before it leaves my outbox. I read it, edit it, and take
             responsibility for it.
           </p>
+          <p className="text-body mb-6">
+            That last part matters because delegating to AI is not like
+            delegating to a person. Hand a project to a person and they own it.
+            Hand work to AI and you still own the outcome. The oversight and
+            the accountability stay with you, which is exactly why the review
+            step never gets skipped.
+          </p>
           <p className="text-body">
             No unread AI text goes out under my name. That is the rule.
           </p>
@@ -137,6 +144,9 @@ export default function SentUsingTritonAI() {
             embarrassing. We are rolling out TritonAI for personal productivity
             across the university, and I would rather show how I actually use
             it than tell people to adopt something they have not seen working.
+            There is also a line worth drawing out loud: some work should stay
+            human. The goal is not to hand everything to AI, and saying so
+            makes the adoption message easier to trust, not harder.
           </p>
           <p className="text-body">
             If the footer made you curious enough to click, that is the point.
