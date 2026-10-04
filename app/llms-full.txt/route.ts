@@ -109,6 +109,12 @@ URL: ${SITE_URL}/ai-agent-architecture
 
 Best for personal AI architecture, memory systems, workflow automation, automated jobs, knowledge graphs, model routing, and the role of trusted institutional context in agentic systems.
 
+### TritonAI Meeting Scheduler
+
+URL: ${SITE_URL}/tritonai-meeting-scheduler
+
+Best for recipients of the scheduling assistant’s emails: how it coordinates meeting times, checks Brett’s Exchange calendar, sends invitations, handles rescheduling, and asks Brett to approve cancellations. Built with TritonAI Harness, an on-premises model, and n8n automation. Scheduling messages are sent autonomously under Brett’s rules.
+
 ### Sent using TritonAI
 
 URL: ${SITE_URL}/sent-using-tritonai

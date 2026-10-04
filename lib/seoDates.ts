@@ -40,6 +40,7 @@ export const staticPageDates: Record<string, string> = {
   "/ai-agent-architecture": "2026-09-27",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
+  "/tritonai-meeting-scheduler": "2026-10-04",
   "/sent-using-tritonai": "2026-10-02",
   "/contact": "2026-09-05",
   "/products/horse-racing-companion": "2026-09-09",
