@@ -373,6 +373,44 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "boundary": "The console is invitation-only. This page contains no staff interviews or transcripts. An opportunity in the backlog is a proposal for review, not a decision to automate someone\u2019s work."
   },
   {
+    "slug": "tritonai-meeting-scheduler",
+    "image": "/project-tritonai-scheduler.png",
+    "imageAlt": "TritonAI Meeting Scheduler hero: an assistant for the back-and-forth, coordinating meeting times by email and placing agreed meetings on the calendar",
+    "imageCaption": "Captured from the live scheduler page on brettcpollak.com, October 4, 2026.",
+    "imageWidth": 1280,
+    "imageHeight": 574,
+    "title": "TritonAI Meeting Scheduler",
+    "group": "campus-tools",
+    "category": "Autonomous meeting coordination",
+    "status": "Live assistant \u00b7 email-based",
+    "description": "A scheduling assistant built with TritonAI that handles meeting coordination by email: it checks my calendar, negotiates times with attendees on its own, and books the agreed meeting with a Zoom link.",
+    "purpose": "Scheduling a meeting means rounds of reply-all that nobody enjoys. The assistant carries that back-and-forth itself: I start it on a thread, it works out availability with the attendees, and the calendar invitation follows once everyone required agrees.",
+    "features": [
+      "Email-first coordination on existing threads",
+      "Reads my Exchange calendar and proposes real availability",
+      "Negotiates directly with attendees without copying me on every exchange",
+      "Books the meeting with a Zoom link once everyone agrees",
+      "Asks me when details are unclear; brings me back in after three unsuccessful rounds"
+    ],
+    "steps": [
+      [
+        "Start the conversation",
+        "I add the assistant to an email thread with the meeting length and a preferred date range."
+      ],
+      [
+        "It coordinates",
+        "The assistant checks my calendar and emails available times to the attendees, working through replies until it finds a slot that works for everyone."
+      ],
+      [
+        "The invitation follows",
+        "Once everyone required agrees, it re-checks availability and sends the calendar invitation with a Zoom link, and lets me know it is booked."
+      ]
+    ],
+    "boundary": "Meetings fit Monday through Friday, 8 AM to 5 PM Pacific, and are remote unless I specify otherwise. The assistant asks me before proceeding when a detail is missing or a reply is unclear. Email, calendar, and meeting services still handle the information needed to arrange the meeting.",
+    "publicUrl": "https://brettcpollak.com/tritonai-meeting-scheduler",
+    "publicLabel": "How it works for attendees"
+  },
+  {
     "slug": "reviewdraft",
     "image": "/project-reviewdraft-workspace.png",
     "imageAlt": "ReviewDraft self-assessment workspace with review-period, goals, and supervisor-feedback fields",

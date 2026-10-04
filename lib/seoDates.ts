@@ -34,7 +34,7 @@ export const staticPageDates: Record<string, string> = {
   "/about": "2026-09-23",  // NASH AI Advisory Board added
   "/tritongpt": "2026-09-27",  // Harness out of pilot — supported build path
   "/speaking": "2026-09-10",  // new portrait
-  "/products": "2026-09-20",  // Henry feature: 92 automations
+  "/products": "2026-10-04",  // Meeting Scheduler walkthrough added
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-10-04",
