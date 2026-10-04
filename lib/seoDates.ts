@@ -27,7 +27,7 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-09-27",  // homepage: Harness status Pilot → Supported (out of pilot)
+  "/": "2026-10-04",  // homepage: SCG 1.0.7, 22 projects, agent stats 95/838/1,360
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",

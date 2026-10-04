@@ -131,7 +131,7 @@ const featuredApps = [
     title: 'Steel City Gameday',
     category: 'Game-day app',
     description: 'Turns football group texts into live game picks: private Crews, timed Flash Picks, and season-long receipts.',
-    latest: 'Version 1.0.6 now live in the App Store — invite codes, Crew chat notifications, replies, and mute controls; free to download for the 2026 season.',
+    latest: 'Version 1.0.7 now live in the App Store — invite codes, Crew chat notifications, replies, and mute controls; free to download for the 2026 season.',
     image: '/steel-city-gameday.png',
     imageAlt: 'Steel City Gameday with a private Crew room and live Flash Pick',
     href: '/products/steel-city-gameday',
@@ -513,7 +513,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <h2 id="featured-apps-heading" className="text-3xl font-medium md:text-4xl">Apps I&apos;ve built.</h2>
-            <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all 21 projects</Link>
+            <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all 22 projects</Link>
           </div>
           <p className="mt-3 max-w-2xl text-base leading-7 text-body">
             Nights and weekends I build independent mobile apps, campus prototypes, and automated personal agent systems.
@@ -582,8 +582,8 @@ export default function Home() {
               </h2>
               <p className="mt-3 text-base leading-7 text-body">
                 The daily briefings, research synthesis, and newsletters on this site are powered
-                by an agent I built and operate myself: 92 automated jobs, an 810-node knowledge graph,
-                and a 1,179-page wiki — all running on-premises on open-weight models, on a
+                by an agent I built and operate myself: 95 automated jobs, an 838-node knowledge graph,
+                and a 1,360-page wiki — all running on-premises on open-weight models, on a
                 shared memory ecosystem that Claude Code, Codex, and Hermes read and write together.
               </p>
               <Link
@@ -611,9 +611,9 @@ export default function Home() {
                 ))}
               </ol>
               <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-1.5 border-t border-line pt-4 text-xs text-body">
-                <span><strong className="text-ink font-mono font-semibold">92</strong> automated jobs</span>
-                <span><strong className="text-ink font-mono font-semibold">810</strong> graph nodes</span>
-                <span><strong className="text-ink font-mono font-semibold">1,179</strong> wiki pages</span>
+                <span><strong className="text-ink font-mono font-semibold">95</strong> automated jobs</span>
+                <span><strong className="text-ink font-mono font-semibold">838</strong> graph nodes</span>
+                <span><strong className="text-ink font-mono font-semibold">1,360</strong> wiki pages</span>
                 <span><strong className="text-ink font-semibold">On-prem</strong> open-weight inference</span>
               </div>
             </div>
