@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const title = "TritonAI Meeting Scheduler";
 const description =
-  "Brett Pollak's scheduling assistant coordinates meeting times by email, checks his calendar, and sends the invitation once everyone agrees.";
+  "I use my TritonAI scheduling assistant to coordinate meeting times by email, check my calendar, and send the invitation once everyone agrees.";
 
 export const metadata: Metadata = {
   title,
@@ -21,16 +21,16 @@ export const metadata: Metadata = {
 
 const steps = [
   {
-    title: "Brett starts the conversation",
-    body: "Brett adds the assistant to an email thread with the meeting length and a preferred date range. It includes everyone on that thread unless he names a different group.",
+    title: "I start the conversation",
+    body: "I add my assistant to an email thread with the meeting length and a preferred date range. It includes everyone on that thread unless I name a different group.",
   },
   {
     title: "You choose what works",
-    body: "The assistant checks Brett’s Exchange calendar and emails available times to the attendees. Reply with all the options that work for you, or suggest another day and time. Include your time zone if it differs from Pacific.",
+    body: "My assistant checks my Exchange calendar and emails available times to the attendees. Reply with all the options that work for you, or suggest another day and time. Include your time zone if it differs from Pacific.",
   },
   {
     title: "The invitation follows",
-    body: "Once everyone required agrees, the assistant checks availability again and sends a calendar invitation with the attendees, a short agenda, and the meeting details. It also lets Brett know the scheduling is complete.",
+    body: "Once everyone required agrees, my assistant checks availability again and sends a calendar invitation with the attendees, a short agenda, and the meeting details. It also lets me know the scheduling is complete.",
   },
 ];
 
