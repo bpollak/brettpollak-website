@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-09-27",
+  lastUpdated: "2026-10-04",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -37,7 +37,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems. This month the assistant became an LTI tool in the learning management system, so courses can use it without a separate login.",
+        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems. The assistant is now an LTI tool in the learning management system, so courses can use it without a separate login. This month we're taking it campus-wide for faculty and staff, with training and a coordinated launch.",
     },
     {
       label: "Governed AI enablement",
@@ -57,17 +57,17 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data platform modernization",
       body:
-        "The lakehouse migration off our legacy data warehouse is in evaluation: the RFP closed with about ten bids, and the field is narrowing toward a hybrid architecture, one platform for data engineering and another for integration and governance. Decision likely December as vendor pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data.",
+        "The lakehouse migration off our legacy data warehouse is in evaluation: the RFP closed with 19 bids, and the field is narrowing toward a hybrid architecture, one platform for data engineering and another for integration and governance. Vendor demos run this month, with a decision likely December as pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live this month. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. A small central team to coordinate access to AI platform capabilities is proposed.",
+        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. A small central team to coordinate access to AI platform capabilities is proposed.",
     },
     {
       label: "Core infrastructure consolidation",
       body:
-        "We finished moving about 1,500 virtual machines to an alternative hypervisor in roughly seven months, and UC San Diego is now a reference campus for peers working through the same licensing shift. Now the question is the main on-campus data center: the colocation model is set and the first partner racks arrive this fall, but ownership and funding are still to land.",
+        "We finished moving about 1,500 virtual machines to an alternative hypervisor in roughly seven months, and UC San Diego is now a reference campus for peers working through the same licensing shift. Now the question is the main on-campus data center: the colocation model is set, the first partner racks are arriving this month, but ownership and funding are still to land.",
     },
     {
       label: "Identity management",
@@ -77,12 +77,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Systemwide and national AI strategy",
       body:
-        "A systemwide AI council is now negotiating systemwide licensing directly with the major model providers, and I'm pushing API-first access over single-vendor lock-in. Contracts are expected soon, with final decisions landing with the Regents by December. Separately, our campus is the on-premises and open-source tier of that strategy. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group.",
+        "A systemwide AI council is now negotiating systemwide licensing directly with the major model providers, and I'm pushing API-first access over single-vendor lock-in. Contracts are expected soon, with final decisions landing with the Regents by December. Our campus AI strategy goes to the Regents this month. Separately, our campus is the on-premises and open-source tier of that strategy. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group.",
     },
     {
       label: "The apps I build",
       body:
-        "Outside the day job I build iOS apps, and all three shipped this month. Resolution Companion added coach check-ins. Horse Racing Companion is ready for the fall meet. Steel City Gameday launched for the 2026 season.",
+        "Outside the day job I build iOS apps. Resolution Companion's next release is in beta testing ahead of a December submission. Horse Racing Companion is live for the fall meet. Steel City Gameday is mid-season, with press outreach running for the rest of the schedule.",
     },
   ],
 };
