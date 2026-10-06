@@ -23,14 +23,24 @@ export type UcsdAiNewsletterData = {
 
 export const ucsdAiNewsletterData: UcsdAiNewsletterData = {
   "archive": [],
-  "generatedAt": "2026-09-28T12:04:10.857Z",
-  "weekLabel": "Week of September 28 – October 4, 2026",
-  "weekOf": "2026-09-28",
-  "weekEnding": "2026-10-04",
-  "publishedThrough": "September 28, 2026",
-  "editionCount": 7,
-  "itemCount": 65,
+  "generatedAt": "2026-10-06T12:46:12.603Z",
+  "weekLabel": "Week of October 5–11, 2026",
+  "weekOf": "2026-10-05",
+  "weekEnding": "2026-10-11",
+  "publishedThrough": "October 5, 2026",
+  "editionCount": 8,
+  "itemCount": 73,
   "editions": [
+    {
+      "isoDate": "2026-10-05",
+      "displayDate": "Monday, October 5",
+      "sourceFile": "ucsd-ai-newsletter-2026-10-05.md",
+      "toolUpdatesCount": 3,
+      "tritonAiNewsCount": 3,
+      "upcomingTrainingsCount": 2,
+      "heroImage": null,
+      "raw": "# UC San Diego AI Weekly Update\n\n## What's New in Your AI Tools\n\n### Google Gemini & Workspace\n\n- **[Find your learning tools all in one place with the student hub in Gemini](https://workspaceupdates.googleblog.com/2026/10/find-your-learning-tools-all-in-one-place-with-the-student-hub-in-Gemini.html)** — Announced October 1: the Gemini student hub is now available to Google Workspace for Education users of all ages. It gives students one starting point for Gemini's learning tools, including study notebooks, flashcards, and practice quizzes. Admins: the hub rides along with the existing Gemini App and Notebook controls in the Admin console, so your current settings decide who sees it.\n\n- **[Simple setup option for Workspace Client-side encryption](https://workspaceupdates.googleblog.com/2026/10/simple-setup-option-for-workspace-client-side-encryption.html)** — Announced October 1: Client-side encryption now has a simplified setup path in the Admin console. Google combines Cloud HSM keys with Google Identity to automate most of the setup flow, cutting deployment from a project to minutes while keeping encryption keys in your control. Availability is Enterprise Plus with the Assured Controls or Assured Controls Plus add-on. If your unit handles HIPAA- or export-controlled-adjacent data and has been deferring CSE because of the setup burden, this changes the math.\n\n- **[Built-in interoperability between Google Meet and Microsoft Teams on Android devices, now generally available](https://workspaceupdates.googleblog.com/2026/10/built-in-interoperability-between-Google-Meet-and-Microsoft-Teams-on-Android-AOSP-devices-now-generally-available.html)** — Announced October 1, full rollout starting that day: Meet hardware can join Microsoft Teams meetings, and Teams Rooms devices can join Meet meetings. Full rollout reaches all Google Workspace customers with Android-based Meet hardware over one to three days. Useful if your shared rooms still split between the two platforms.\n\n---\n\n## Coming Up: Trainings & Workshops\n\n- **TritonAI Discovery Series is live** — The first nine training videos launched October 5 on the redesigned Learn pages, covering the ecosystem from first orientation through safe, responsible use. The next six videos follow on October 15. Watch at [tritonai.ucsd.edu/training-resources/videos](https://tritonai.ucsd.edu/training-resources/videos/index.html).\n\n- **Digital Education Council certificate enrollment is open** — Staff and campus leaders can enroll in the DEC learning streams tied to the TritonAI program, including the leaders stream. Start at [tritonai.ucsd.edu/training-resources/certificate](https://tritonai.ucsd.edu/training-resources/certificate.html).\n\nSelf-paced options in the meantime:\n\n* Take the **[AI Foundations course](https://go.ucsd.edu/3FvH9Hf)** to learn core AI concepts and UC policies on AI tools.\n* Watch the **[AI Webinar #6 recording](https://tritonai.ucsd.edu/training-resources/webinars.html)** — a practical walkthrough of TritonGPT's first year, including MyDocuments, model switching, and chat sharing.\n* Explore the **[Everyday I AI video series](https://www.youtube.com/playlist?list=PLZoL-14Q0aIkY5gnibNuZZh3X0ikY6VGA)** for short, practical prompting tips that work across TritonGPT and other AI tools.\n\n---\n\n## TritonAI News\n\n- **Learn and Connect are live on the TritonAI site** — The site restructure launched October 5: [Learn](https://tritonai.ucsd.edu/training-resources/index.html) gathers training pathways, the Discovery Series, and certificate enrollment in one place, and [Connect](https://tritonai.ucsd.edu/connect/index.html) collects community and event links, including the AI Community of Practice and use-case submissions.\n\n- **September gateway usage is published** — TritonAI's Developer Gateway processed 71.7 billion tokens and 13.1 million requests in September; January through September totals reached 527.0 billion tokens and 157.0 million requests. The public page notes the reporting caveat that shared application keys combine their users' usage. See the [gateway usage section](https://tritonai.ucsd.edu/developer-apis/index.html).\n\n- **EDUCAUSE puts AI at the top of its 2027 issues list** — Announced October 1 at the EDUCAUSE annual conference: AI holds the No. 1 slot for the first time in the Top 10 IT Issues list, framed around a theme of \"perpetual change.\" The report calls for AI governance, funding, and staffing decisions to move into formal planning cycles. [GovTech's coverage](https://www.govtech.com/education/higher-ed/educause-26-top-10-reflects-age-of-perpetual-change) includes the full list and the sector context.\n\n---\n\n_Want to share feedback on this newsletter? Reply to this email._\n"
+    },
     {
       "isoDate": "2026-09-28",
       "displayDate": "Monday, September 28",
