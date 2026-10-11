@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-10-04",
+  lastUpdated: "2026-10-11",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -37,12 +37,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems. The assistant is now an LTI tool in the learning management system, so courses can use it without a separate login. This month we're taking it campus-wide for faculty and staff, with training and a coordinated launch.",
+        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems. The assistant is now an LTI tool in the learning management system, so courses can use it without a separate login. This week we launched it campus-wide for faculty and staff, with a full training program behind the rollout. I gave the campus leadership update on the citizen developer and sovereign AI pillars that everything else builds on.",
     },
     {
       label: "Governed AI enablement",
       body:
-        "The TritonAI Harness is out of pilot and is now a supported build path for development teams, with a broad rollout and a training program landing this month. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source.",
+        "The TritonAI Harness is out of pilot and is a supported build path for development teams, with a broad rollout and training program now live. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source. Past 100 active users, so this is a product now, not a pilot.",
     },
     {
       label: "AI workflow pilots and services",
@@ -62,7 +62,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. A small central team to coordinate access to AI platform capabilities is proposed.",
+        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. Next up: a pilot systemwide inference service where our campus provides the open-weight models and peer campuses consume them through our gateway. A small central team to coordinate access to AI platform capabilities is proposed.",
     },
     {
       label: "Core infrastructure consolidation",
@@ -82,7 +82,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "The apps I build",
       body:
-        "Outside the day job I build iOS apps. Resolution Companion's next release is in beta testing ahead of a December submission. Horse Racing Companion is live for the fall meet. Steel City Gameday is mid-season, with press outreach running for the rest of the schedule.",
+        "Outside the day job I build iOS apps. Resolution Companion's next release is feature-complete and in beta testing ahead of a December submission. Horse Racing Companion is live, with the fall meet opening in early November. Steel City Gameday shipped a public Crew feature this week, and site repositioning is done mid-season.",
     },
   ],
 };
