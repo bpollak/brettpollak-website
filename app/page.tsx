@@ -131,7 +131,7 @@ const featuredApps = [
     title: 'Steel City Gameday',
     category: 'Game-day app',
     description: 'Turns football group texts into live game picks: private Crews, timed Flash Picks, and season-long receipts.',
-    latest: 'Version 1.0.7 now live in the App Store — invite codes, Crew chat notifications, replies, and mute controls; free to download for the 2026 season.',
+    latest: 'Version 1.0.8 now live in the App Store — a public Crew for fan chat and picks, weekly matchup cards, and rotating pregame questions; free to download for the 2026 season.',
     image: '/steel-city-gameday.png',
     imageAlt: 'Steel City Gameday with a private Crew room and live Flash Pick',
     href: '/products/steel-city-gameday',
