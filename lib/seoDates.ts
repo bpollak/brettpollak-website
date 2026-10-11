@@ -31,7 +31,7 @@ export const staticPageDates: Record<string, string> = {
   "/ai-digest": "2026-09-08",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
-  "/about": "2026-09-23",  // NASH AI Advisory Board added
+  "/about": "2026-10-11",  // shared-platform framing aligned with /now and /tritongpt
   "/tritongpt": "2026-10-11",  // SCOUT broad availability + default model on UC-hosted infra
   "/speaking": "2026-09-10",  // new portrait
   "/products": "2026-10-04",  // Meeting Scheduler walkthrough added

@@ -69,7 +69,7 @@ const eras = [
     years: "2024 – now",
     org: "UC San Diego",
     role: "Executive Director, Workplace Technology & Infrastructure Services",
-    body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and peer institutions have adapted it. My current questions are adoption, governance, and how agent workflows fit campus operations.",
+    body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for several other campuses. My current questions are adoption, governance, and how agent workflows fit campus operations.",
     tone: "coral" as const,
   },
 ];
