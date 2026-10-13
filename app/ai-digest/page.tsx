@@ -51,26 +51,6 @@ export default function AiDigestPage() {
       </div>
     </section>
     <section className="mx-auto max-w-6xl px-6 py-10">
-      <h2 className="mb-6 text-3xl font-medium">Browse by topic</h2>
-      <div className="flex flex-wrap gap-2">
-        {DIGEST_TAGS.map(tag => (
-          <Link key={tag.slug} href={`/ai-digest/tag/${tag.slug}`} className="rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-body transition-colors hover:border-signal-blue hover:text-ink">{tag.label}</Link>
-        ))}
-      </div>
-    </section>
-    <section className="mx-auto max-w-6xl px-6 py-10">
-      <h2 className="mb-6 text-3xl font-medium">Browse editions</h2>
-      <div className="space-y-5">{digestEditions.map(day => <article id={day.isoDate} key={day.isoDate} className="editorial-panel p-6 md:p-8">
-        <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <h3 className="text-2xl font-medium"><Link href={`/ai-digest/${day.isoDate}`} className="text-signal-blue underline underline-offset-4">{editionDate(day.isoDate)}</Link></h3>
-          <p className="text-sm text-muted">Headlines: {day.headlines.length}</p>
-        </div>
-        <ul className="mt-5 list-disc space-y-2 pl-5 text-body">{day.headlines.slice(0, 3).map(headline => <li key={headline} className="leading-7">{headline}</li>)}</ul>
-        {day.headlines.length > 3 && <details className="mt-4"><summary className="cursor-pointer text-sm font-semibold text-signal-blue">More headlines ({day.headlines.length - 3})</summary><ul className="mt-3 list-disc space-y-2 pl-5 text-body">{day.headlines.slice(3).map(headline => <li key={headline}>{headline}</li>)}</ul></details>}
-        <Link href={`/ai-digest/${day.isoDate}`} className="button-secondary mt-5">Read edition<span className="sr-only"> for {editionDate(day.isoDate)}</span></Link>
-      </article>)}</div>
-    </section>
-    <section className="mx-auto max-w-6xl px-6 py-10">
       <h2 className="mb-4 text-3xl font-medium">How each edition is built</h2>
       <p className="mb-8 max-w-3xl leading-7 text-body">No feed reprints, no aggregator dumps. Every edition is assembled by an AI agent I built and operate, running the same pipeline every morning — with hard rules that keep it honest.</p>
       <div className="grid gap-5 md:grid-cols-2">
@@ -91,6 +71,26 @@ export default function AiDigestPage() {
           <p className="leading-7 text-body">The finished edition lands on this page automatically around 6:35 AM Pacific and goes out to email subscribers the same morning. The <Link href="/ai-agent-architecture" className="font-semibold text-signal-blue underline underline-offset-4">agent behind it</Link> is the same platform that powers the rest of this site&apos;s automation.</p>
         </article>
       </div>
+    </section>
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <h2 className="mb-6 text-3xl font-medium">Browse by topic</h2>
+      <div className="flex flex-wrap gap-2">
+        {DIGEST_TAGS.map(tag => (
+          <Link key={tag.slug} href={`/ai-digest/tag/${tag.slug}`} className="rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-body transition-colors hover:border-signal-blue hover:text-ink">{tag.label}</Link>
+        ))}
+      </div>
+    </section>
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <h2 className="mb-6 text-3xl font-medium">Browse editions</h2>
+      <div className="space-y-5">{digestEditions.map(day => <article id={day.isoDate} key={day.isoDate} className="editorial-panel p-6 md:p-8">
+        <div className="flex flex-wrap items-baseline justify-between gap-3">
+          <h3 className="text-2xl font-medium"><Link href={`/ai-digest/${day.isoDate}`} className="text-signal-blue underline underline-offset-4">{editionDate(day.isoDate)}</Link></h3>
+          <p className="text-sm text-muted">Headlines: {day.headlines.length}</p>
+        </div>
+        <ul className="mt-5 list-disc space-y-2 pl-5 text-body">{day.headlines.slice(0, 3).map(headline => <li key={headline} className="leading-7">{headline}</li>)}</ul>
+        {day.headlines.length > 3 && <details className="mt-4"><summary className="cursor-pointer text-sm font-semibold text-signal-blue">More headlines ({day.headlines.length - 3})</summary><ul className="mt-3 list-disc space-y-2 pl-5 text-body">{day.headlines.slice(3).map(headline => <li key={headline}>{headline}</li>)}</ul></details>}
+        <Link href={`/ai-digest/${day.isoDate}`} className="button-secondary mt-5">Read edition<span className="sr-only"> for {editionDate(day.isoDate)}</span></Link>
+      </article>)}</div>
     </section>
     <section aria-label="Related" className="mx-auto max-w-6xl px-6 pb-16">
       <p className="rule-label mb-4">The campus side of this</p>
