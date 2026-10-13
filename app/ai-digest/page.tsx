@@ -84,7 +84,7 @@ export default function AiDigestPage() {
         </article>
         <article className="editorial-panel border-l-signal-coral p-6">
           <p className="rule-label mb-3">Step 3 · The higher-ed lens</p>
-          <p className="leading-7 text-body">Each selected story gets key takeaways written through an institutional lens: what it means for people who run technology at a college or university, with the sector-wide implication stated first and campus-specific notes kept to genuinely campus stories.</p>
+          <p className="leading-7 text-body">Each selected story gets key takeaways written through an institutional lens: what it means for people who run technology at a college or university, with the sector-wide implication stated first and campus-specific notes kept to genuinely campus stories. The writing is done by models I run myself on the <Link href="/ai-agent-architecture#models" className="font-semibold text-signal-blue underline underline-offset-4">TritonAI on-premises platform</Link> — Z.ai GLM 5.3 as the primary reasoning model, with open-weight fallbacks (DeepSeek V4 Flash, Gemma 4) standing behind it.</p>
         </article>
         <article className="editorial-panel border-l-signal-green p-6">
           <p className="rule-label mb-3">Step 4 · Publishing</p>
