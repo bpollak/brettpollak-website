@@ -28,7 +28,7 @@ export const SITE_URL = "https://brettcpollak.com";
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
   "/": "2026-10-11",  // homepage: SCG 1.0.8, 22 projects, agent stats 95/838/1,360
-  "/ai-digest": "2026-09-08",
+  "/ai-digest": "2026-10-12",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-10-11",  // shared-platform framing aligned with /now and /tritongpt

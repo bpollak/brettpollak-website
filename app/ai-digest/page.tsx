@@ -70,6 +70,28 @@ export default function AiDigestPage() {
         <Link href={`/ai-digest/${day.isoDate}`} className="button-secondary mt-5">Read edition<span className="sr-only"> for {editionDate(day.isoDate)}</span></Link>
       </article>)}</div>
     </section>
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <h2 className="mb-4 text-3xl font-medium">How each edition is built</h2>
+      <p className="mb-8 max-w-3xl leading-7 text-body">No feed reprints, no aggregator dumps. Every edition is assembled by an AI agent I built and operate, running the same pipeline every morning — with hard rules that keep it honest.</p>
+      <div className="grid gap-5 md:grid-cols-2">
+        <article className="editorial-panel border-l-signal-blue p-6">
+          <p className="rule-label mb-3">Step 1 · Sources</p>
+          <p className="leading-7 text-body">Each morning the pipeline scans roughly fifteen standing sources: AI labs and research groups (OpenAI, Google DeepMind, Hugging Face, AI2, arXiv), higher-education press (Inside Higher Ed, Higher Ed Dive, Campus Technology, EdTech Magazine, eCampus News, University Business, WCET), and targeted web searches for state and federal AI policy affecting universities.</p>
+        </article>
+        <article className="editorial-panel border-l-signal-gold p-6">
+          <p className="rule-label mb-3">Step 2 · Selection rules</p>
+          <p className="leading-7 text-body">The agent may only include articles published within the last seven days, carrying their original headline and a working source link. Anything already covered in a recent edition is rejected outright, as are marketing pages, product homepages, and paywalled links. If fewer than five stories clear the bar, the edition ships smaller rather than padded.</p>
+        </article>
+        <article className="editorial-panel border-l-signal-coral p-6">
+          <p className="rule-label mb-3">Step 3 · The higher-ed lens</p>
+          <p className="leading-7 text-body">Each selected story gets key takeaways written through an institutional lens: what it means for people who run technology at a college or university, with the sector-wide implication stated first and campus-specific notes kept to genuinely campus stories.</p>
+        </article>
+        <article className="editorial-panel border-l-signal-green p-6">
+          <p className="rule-label mb-3">Step 4 · Publishing</p>
+          <p className="leading-7 text-body">The finished edition lands on this page automatically around 6:35 AM Pacific and goes out to email subscribers the same morning. The <Link href="/ai-agent-architecture" className="font-semibold text-signal-blue underline underline-offset-4">agent behind it</Link> is the same platform that powers the rest of this site&apos;s automation.</p>
+        </article>
+      </div>
+    </section>
     <section aria-label="Related" className="mx-auto max-w-6xl px-6 pb-16">
       <p className="rule-label mb-4">The campus side of this</p>
       <p className="leading-7 text-body">
