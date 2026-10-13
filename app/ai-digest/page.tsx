@@ -68,7 +68,7 @@ export default function AiDigestPage() {
         </article>
         <article className="editorial-panel border-l-signal-green p-6">
           <p className="rule-label mb-3">Step 4 · Publishing</p>
-          <p className="leading-7 text-body">The finished edition lands on this page automatically around 6:35 AM Pacific and goes out to email subscribers the same morning. The <Link href="/ai-agent-architecture" className="font-semibold text-signal-blue underline underline-offset-4">agent behind it</Link> is the same platform that powers the rest of this site&apos;s automation.</p>
+          <p className="leading-7 text-body">The finished edition lands on this page automatically around 6:35 AM Pacific. Email subscribers get it the same morning through a direct Buttondown API integration: the edition is rendered as a styled HTML email — source link, linked headline, bulleted takeaways, and a read-the-full-story button per article — and queued for delivery the moment the web edition publishes, so the two never drift. The <Link href="/ai-agent-architecture" className="font-semibold text-signal-blue underline underline-offset-4">agent behind it</Link> is the same platform that powers the rest of this site&apos;s automation.</p>
         </article>
       </div>
     </section>
