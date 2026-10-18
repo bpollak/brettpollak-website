@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-10-11",
+  lastUpdated: "2026-10-18",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -37,12 +37,17 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is available across campus, and the default model now runs on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and supervised agent workflows operate inside campus systems. The assistant is now an LTI tool in the learning management system, so courses can use it without a separate login. This week we launched it campus-wide for faculty and staff, with a full training program behind the rollout. I gave the campus leadership update on the citizen developer and sovereign AI pillars that everything else builds on.",
+        "TritonGPT is available across campus and runs by default on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and it now works as an LTI tool in the learning management system, so courses can use it without a separate login. The campus-wide launch for faculty and staff shipped with a full training program behind it. This week I delivered the campus leadership update on the citizen developer and sovereign AI pillars, and it turned into a much longer conversation than planned. University-wide sessions follow in November and December, with citizen developers co-presenting.",
     },
     {
       label: "Governed AI enablement",
       body:
         "The TritonAI Harness is out of pilot and is a supported build path for development teams, with a broad rollout and training program now live. The usage model is set: on-premises inference is free for administrative use, while cloud usage requires a funding source. Past 100 active users, so this is a product now, not a pilot.",
+    },
+    {
+      label: "AI agents in the business of the university",
+      body:
+        "Agents are moving out of the assistant and into core workflows. Two are now live: one drafts compensation offers using peer benchmarks, and students and faculty request their own AI platform access through a self-service agent instead of a ticket queue. The near-term roadmap is locked: an institutional-data Q&A tool for leadership, automating cash application in the financial system, and an enterprise data agent demo. Every plan is now framed around what it does to labor and cost, not personal productivity.",
     },
     {
       label: "AI workflow pilots and services",
@@ -57,7 +62,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Data platform modernization",
       body:
-        "The lakehouse migration off our legacy data warehouse is in evaluation: the RFP closed with 19 bids, and the field is narrowing toward a hybrid architecture, one platform for data engineering and another for integration and governance. Vendor demos run this month, with a decision likely December as pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data.",
+        "The lakehouse migration off our legacy data warehouse is in evaluation: the RFP closed with 19 bids, and the field is narrowing toward a hybrid architecture, one platform for data engineering and another for integration and governance. Vendor demos are running, with a decision likely December as pricing converges. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data. Endpoint security is moving to a shared systemwide product next year, with campus migration starting in the new year.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
@@ -82,7 +87,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "The apps I build",
       body:
-        "Outside the day job I build iOS apps. Resolution Companion's next release is feature-complete and in beta testing ahead of a December submission. Horse Racing Companion is live, with the fall meet opening in early November. Steel City Gameday shipped a public Crew feature this week, and site repositioning is done mid-season.",
+        "Outside the day job I build iOS apps. Resolution Companion 1.5 just went to App Review, auto-releasing when approved. Horse Racing Companion is live, with the fall meet opening in early November. Steel City Gameday is mid-season with its public Crew feature live, and a forecast fix shipped this week.",
     },
   ],
 };
