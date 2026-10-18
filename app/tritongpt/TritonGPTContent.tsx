@@ -167,7 +167,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Shared Resources and Adoption",
 	              description:
-	                "Guides, prompting practices, examples, and training that help campus teams use TritonAI more effectively.",
+	                "Guides, prompting practices, examples, and training that help campus teams use TritonAI more effectively, including the 15-part TritonAI Discovery video series launched in October 2026.",
 	              href: "https://tritonai.ucsd.edu/training-resources/index.html",
 	              icon: (
 	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

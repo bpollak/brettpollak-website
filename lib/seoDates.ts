@@ -32,7 +32,7 @@ export const staticPageDates: Record<string, string> = {
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-10-11",  // shared-platform framing aligned with /now and /tritongpt
-  "/tritongpt": "2026-10-11",  // SCOUT broad availability + default model on UC-hosted infra
+  "/tritongpt": "2026-10-18",  // TritonAI Discovery video series added to adoption card
   "/speaking": "2026-09-10",  // new portrait
   "/products": "2026-10-04",  // Meeting Scheduler walkthrough added
   "/products/cason-recruiting-crm": "2026-07-14",
