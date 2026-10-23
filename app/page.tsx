@@ -111,7 +111,7 @@ const featuredApps = [
     title: 'Resolution Companion',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
-    latest: 'Version 1.4.1 now available in the App Store — new coach check-ins and progress view.',
+    latest: 'Version 1.5.0 now available in the App Store — tell Coach your resolution in your own words and plan a January 1 start.',
     image: '/resolution-companion-social.webp',
     imageAlt: 'Resolution Companion: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.',
     href: '/products/resolution-companion',
@@ -139,7 +139,7 @@ const featuredApps = [
   },
 ];
 
-// Split an app's `latest` line ("Version 1.4.1 now available in the App Store —
+// Split an app's `latest` line ("Version 1.5.0 now available in the App Store —
 // what changed") into a short version tag and the change note, so the card can
 // show the version as metadata instead of a full release-note callout. Lines
 // that don't match the pattern fall back to showing the whole text as the note.

@@ -39,7 +39,7 @@ For a longer machine-readable briefing, use:
   - Web and mobile apps Brett has built, inside and outside UC San Diego.
   - Flagship app case studies (each links to the app's own site and the App Store):
     - Resolution Companion: https://brettcpollak.com/products/resolution-companion
-      - iOS habit and goal app with an AI coach; version 1.4.0 live in the App Store. Case study with current app screens.
+      - iOS habit and goal app with an AI coach; version 1.5.0 live in the App Store. Case study with current app screens.
     - Horse Racing Companion: https://brettcpollak.com/products/horse-racing-companion
       - iOS horse racing analysis app with saved picks and season record tracking; live in the App Store. Case study with season accuracy stats.
     - Steel City Gameday: https://brettcpollak.com/products/steel-city-gameday

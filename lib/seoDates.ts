@@ -27,14 +27,14 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-10-11",  // homepage: SCG 1.0.8, 22 projects, agent stats 95/838/1,360
+  "/": "2026-10-23",  // homepage: RC 1.5.0 card status
   "/ai-digest": "2026-10-12",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
   "/about": "2026-10-11",  // shared-platform framing aligned with /now and /tritongpt
   "/tritongpt": "2026-10-18",  // TritonAI Discovery video series added to adoption card
   "/speaking": "2026-09-10",  // new portrait
-  "/products": "2026-10-04",  // Meeting Scheduler walkthrough added
+  "/products": "2026-10-23",  // RC walkthrough v1.5.0
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-10-18",
