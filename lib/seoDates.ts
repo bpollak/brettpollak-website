@@ -37,7 +37,7 @@ export const staticPageDates: Record<string, string> = {
   "/products": "2026-10-23",  // RC walkthrough v1.5.0
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-10-18",
+  "/ai-agent-architecture": "2026-10-25",
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-07-26",
   "/tritonai-meeting-scheduler": "2026-10-04",
