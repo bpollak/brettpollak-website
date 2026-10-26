@@ -66,6 +66,13 @@ export const homeUpdates: HomeUpdatesData = {
 
     // ── Personal work ─────────────────────────────────────────────────
     {
+      date: '2026-10-24',
+      area: 'personal',
+      text: 'Resolution Companion 1.6.0 released — reminders for each habit',
+      note: 'Set a separate reminder time for each habit, so each nudge arrives when it is useful.',
+      href: 'https://resolutioncompanion.com/',
+    },
+    {
       date: '2026-10-18',
       area: 'personal',
       text: 'Resolution Companion 1.5.0 released — say your resolution to Coach',

@@ -97,7 +97,7 @@ const siteSchema = {
       "url": `${siteUrl}/`,
       "image": siteImage,
       "description": "Executive Director at UC San Diego working across infrastructure, digital services, institutional AI, and AI governance.",
-      "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+      "jobTitle": "Executive Director, IT Services",
       "worksFor": {
         "@type": "EducationalOrganization",
         "name": "University of California San Diego",

@@ -77,7 +77,7 @@ export default function LinkedIn() {
       name: "Brett Pollak",
       url: `${SITE_URL}/`,
       jobTitle:
-        "Executive Director, Workplace Technology & Infrastructure Services",
+        "Executive Director, IT Services",
       worksFor: {
         "@type": "EducationalOrganization",
         name: "University of California San Diego",

@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: '/brett-pollak-og-card.png',
         width: 1200,
         height: 630,
-        alt: 'Brett Pollak, Executive Director, Workplace Technology and Infrastructure Services at UC San Diego',
+        alt: 'Brett Pollak, Executive Director, IT Services at UC San Diego',
       },
     ],
   },
@@ -111,7 +111,7 @@ const featuredApps = [
     title: 'Resolution Companion',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
-    latest: 'Version 1.5.0 now available in the App Store — tell Coach your resolution in your own words and plan a January 1 start.',
+    latest: 'Version 1.6.0 now available in the App Store — set a reminder for each habit, at the time that suits it.',
     image: '/resolution-companion-social.webp',
     imageAlt: 'Resolution Companion: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.',
     href: '/products/resolution-companion',
@@ -139,7 +139,7 @@ const featuredApps = [
   },
 ];
 
-// Split an app's `latest` line ("Version 1.5.0 now available in the App Store —
+// Split an app's `latest` line ("Version 1.6.0 now available in the App Store —
 // what changed") into a short version tag and the change note, so the card can
 // show the version as metadata instead of a full release-note callout. Lines
 // that don't match the pattern fall back to showing the whole text as the note.
@@ -257,7 +257,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Brett Pollak",
-    "jobTitle": "Executive Director, Workplace Technology & Infrastructure Services",
+    "jobTitle": "Executive Director, IT Services",
     "description": "Executive Director at UC San Diego responsible for teams working across infrastructure, data, service desk, collaboration, endpoint management, and AI platforms.",
     "url": "https://brettcpollak.com/",
     "image": "https://brettcpollak.com/brett-pollak-headshot-sit-center.png",
@@ -352,10 +352,9 @@ export default function Home() {
                 Technology leadership at UC San Diego, and the apps I build outside it.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
-                By day I&rsquo;m the Executive Director of Workplace Technology and
-                Infrastructure Services, where my teams support infrastructure,
-                data, campus services, and AI. Nights and weekends I design and
-                ship my own products.
+                By day I&rsquo;m the Executive Director of IT Services at UC San
+                Diego, where my teams support infrastructure, data, campus services,
+                and AI. Nights and weekends I design and ship my own products.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="#selected-work" className="button-primary">Explore TritonAI</a>

@@ -117,7 +117,7 @@ export default function ContactContent() {
         <div className="editorial-panel editorial-dark p-8 md:p-12">
           <h2 className="text-3xl font-bold mb-6">Current Role</h2>
           <p className="text-2xl font-semibold mb-3 text-signal-gold-lift">
-            Executive Director, Workplace Technology & Infrastructure Services
+            Executive Director, IT Services
           </p>
           <p className="text-xl text-on-dark">
             University of California San Diego

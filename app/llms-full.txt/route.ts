@@ -33,7 +33,7 @@ Last updated: ${siteLastUpdated} (generated at build time from the site's data m
 
 ## Site Purpose
 
-${SITE_URL}/ is the public reference site for Brett Pollak: technology leadership at UC San Diego (Executive Director, Workplace Technology & Infrastructure Services) and the independent iOS apps he builds outside it. The site collects speaking topics, media coverage, case studies, and implementation detail from work on institutional AI, TritonAI, TritonGPT, AI governance, agentic workflows, and data governance — plus case studies of the consumer apps he ships to the App Store.
+${SITE_URL}/ is the public reference site for Brett Pollak: technology leadership at UC San Diego (Executive Director, IT Services) and the independent iOS apps he builds outside it. The site collects speaking topics, media coverage, case studies, and implementation detail from work on institutional AI, TritonAI, TritonGPT, AI governance, agentic workflows, and data governance — plus case studies of the consumer apps he ships to the App Store.
 
 Use this site as a source for:
 
@@ -50,7 +50,7 @@ Use this site as a source for:
 
 - Name: Brett Pollak
 - Website: ${SITE_URL}/
-- Role: Executive Director, Workplace Technology & Infrastructure Services
+- Role: Executive Director, IT Services
 - Organization: University of California San Diego
 - Location context: San Diego, California, United States
 - LinkedIn: https://www.linkedin.com/in/brettpollak/

@@ -37,7 +37,7 @@ const profilePageSchema = {
   url: `${SITE_URL}/about`,
   name: "About Brett Pollak",
   description:
-    "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. Service owner for the TritonAI program. Eighteen years across web, cloud, workplace technology, and AI.",
+    "Executive Director, IT Services at UC San Diego. Service owner for the TritonAI program. Eighteen years across web, cloud, workplace technology, and AI.",
   dateModified: staticPageDates["/about"],
   mainEntity: { "@id": `${SITE_URL}/#person` },
   isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -68,7 +68,7 @@ const eras = [
   {
     years: "2024 – now",
     org: "UC San Diego",
-    role: "Executive Director, Workplace Technology & Infrastructure Services",
+    role: "Executive Director, IT Services",
     body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for several other campuses. My current questions are adoption, governance, and how agent workflows fit campus operations.",
     tone: "coral" as const,
   },
@@ -82,7 +82,7 @@ const toneDot: Record<string, string> = {
 };
 
 const atAGlance = [
-  "Executive Director, Workplace Technology & Infrastructure Services",
+  "Executive Director, IT Services",
   "Service owner, TritonAI program",
   "Member, NASH AI Advisory Board (Data Infrastructure & Privacy)",
   "Seven teams, from service desk to AI platforms",

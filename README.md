@@ -1,6 +1,6 @@
 # Brett Pollak - Professional Portfolio Website
 
-A modern portfolio and thought leadership website for Brett Pollak, Executive Director of Workplace Technology & Infrastructure Services at UC San Diego.
+A modern portfolio and thought leadership website for Brett Pollak, Executive Director of IT Services at UC San Diego.
 
 ## Features
 

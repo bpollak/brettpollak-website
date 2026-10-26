@@ -27,22 +27,22 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-10-23",  // homepage: RC 1.5.0 card status
+  "/": "2026-10-26",  // homepage: IT Services title + RC 1.6.0 card status
   "/ai-digest": "2026-10-12",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
-  "/about": "2026-10-11",  // shared-platform framing aligned with /now and /tritongpt
+  "/about": "2026-10-26",  // title updated to Executive Director, IT Services
   "/tritongpt": "2026-10-25",  // TritonGPT 4.6.6 Voice Mode + coding sandbox added to exec summary
-  "/speaking": "2026-09-10",  // new portrait
-  "/products": "2026-10-23",  // RC walkthrough v1.5.0
+  "/speaking": "2026-10-26",  // title in speaker JSON-LD
+  "/products": "2026-10-26",  // RC walkthrough v1.6.0
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-10-25",
   "/podcasts": "2026-06-01",
-  "/linkedin": "2026-07-26",
+  "/linkedin": "2026-10-26",  // title
   "/tritonai-meeting-scheduler": "2026-10-04",
   "/sent-using-tritonai": "2026-10-02",
-  "/contact": "2026-09-05",
+  "/contact": "2026-10-26",  // title
   "/products/horse-racing-companion": "2026-09-09",
   "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store
 };

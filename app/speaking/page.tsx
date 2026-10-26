@@ -99,7 +99,7 @@ export default function SpeakingPage() {
     name: 'Brett Pollak',
     url: 'https://brettcpollak.com/',
     image: 'https://brettcpollak.com/brett-pollak-headshot-sit-center.png',
-    jobTitle: 'Executive Director, Workplace Technology & Infrastructure Services',
+    jobTitle: 'Executive Director, IT Services',
     worksFor: {
       '@type': 'EducationalOrganization',
       name: 'University of California San Diego',
