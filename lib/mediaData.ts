@@ -143,14 +143,6 @@ export const mediaItems: MediaItem[] = [
   },
 
 {
-    publication: 'The UCSD Guardian',
-    title: 'REVISITED: ChatGPT goes to college',
-    url: 'https://ucsdguardian.org/2025/11/03/revisited-chatgpt-goes-to-college/',
-    date: '2025-11-03',
-    category: 'article'
-  },
-
-{
     publication: 'EDUCAUSE Webinar',
     title: 'Business-Centric AI: From Problem Definition to Adoption',
     url: 'https://events.educause.edu/webinar/2025/business-centric-ai-from-problem-definition-to-adoption',
@@ -364,14 +356,6 @@ export const mediaItems: MediaItem[] = [
     url: 'https://www.asugsvsummit.com/speakers/brett-pollak',
     date: '2024-04-15',
     category: 'speaking'
-  },
-
-{
-    publication: 'San Diego Reader',
-    title: 'Artificial intelligence has come to the University of California San Diego',
-    url: 'https://www.sandiegoreader.com/news/2024/mar/27/radar-adelas-big-fat-raises/',
-    date: '2024-03-27',
-    category: 'article'
   },
 
 {
