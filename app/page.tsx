@@ -150,24 +150,6 @@ function splitReleaseNote(latest: string): { version: string | null; note: strin
   return { version, note: note.charAt(0).toUpperCase() + note.slice(1) };
 }
 
-// Input/output summary for the architecture module. Mirrors the categories in
-// HeroPipelineDiagram (Sources → Knowledge → Actions) so the homepage graphic
-// and the architecture page stay in agreement. Keep these high-level; the
-// architecture page owns the detail.
-const ARCH_INPUTS = [
-  { label: 'Calendar & email', note: 'MS Graph' },
-  { label: 'Meetings', note: 'transcripts' },
-  { label: 'Documents', note: 'Drive sync' },
-  { label: 'Campus sources', note: 'Confluence · RSS' },
-];
-
-const ARCH_OUTPUTS = [
-  { label: 'Daily briefings', note: 'every morning' },
-  { label: 'Meeting intelligence', note: 'commitments, follow-ups' },
-  { label: 'Real-time answers', note: 'with full context' },
-  { label: 'Published artifacts', note: 'newsletter, digest' },
-];
-
 const recentMedia = [...mediaItems]
   .sort((a, b) => (a.date < b.date ? 1 : -1))
   .slice(0, 4);
@@ -344,175 +326,125 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="paper-grid border-b border-line">
-        <div className="mx-auto max-w-7xl px-6 py-10 md:py-16">
-          <div className="grid items-center gap-9 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-            <div>
-              <h1 className="max-w-3xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl xl:text-6xl">
-                Technology leadership at UC San Diego, and the apps I build outside it.
-              </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl">
-                By day I&rsquo;m the Executive Director of IT Services at UC San
-                Diego, where my teams support infrastructure, data, campus services,
-                and AI. Nights and weekends I design and ship my own products.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a href="#selected-work" className="button-primary">Explore TritonAI</a>
-                <Link href="/products" className="button-secondary">My apps</Link>
-              </div>
-              <div className="mt-7 flex flex-col gap-2 border-t border-line pt-5 text-sm text-body sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5">
-                <Link href="/speaking" className="hover:text-ink">
-                  Recent talks: <span className="font-semibold text-ink">EDUCAUSE · ASU+GSV · UC AI Council</span>
-                </Link>
-                <Link href="/now" className="font-semibold text-signal-blue underline underline-offset-4">
-                  Current focus · Updated {formatNowDate(currentNow.lastUpdated)}
-                </Link>
-              </div>
+      <section className="border-b border-line">
+        <div className="mx-auto grid max-w-7xl items-center gap-9 px-6 py-10 md:py-16 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16 lg:py-20">
+          <div>
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-signal-blue sm:text-[13px]">
+              Executive Director, IT Services · UC San Diego
+            </p>
+            <h1 className="mt-5 max-w-3xl text-4xl font-normal leading-[1.06] text-ink sm:text-5xl xl:text-6xl">
+              Technology leadership at UC San Diego, and the apps I build outside it.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-body md:text-xl md:leading-9">
+              By day I&rsquo;m the Executive Director of IT Services at UC San
+              Diego, where my teams support infrastructure, data, campus services,
+              and AI. Nights and weekends I design and ship my own products.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/products" className="button-primary">See the work</Link>
+              <Link href="/ai-digest" className="button-secondary bg-paper-strong">Read the digest</Link>
             </div>
-            {/* On phones the portrait leads (shorter crop) so the first screen isn't all text. */}
-            <div className="home-portrait-panel order-first lg:order-none">
-              <Image src="/brettpollak-portrait-golden-hour.webp" alt="Brett Pollak on the UC San Diego campus" fill
-                className="object-cover object-[center_36%]" placeholder="blur" blurDataURL={heroBlurDataURL}
-                priority sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, 100vw" />
-            </div>
+            <p className="mt-8 text-sm text-body">
+              <Link href="/speaking" className="hover:text-ink">
+                Recent talks: <span className="font-semibold text-ink">EDUCAUSE · ASU+GSV · UC AI Council</span>
+              </Link>
+            </p>
           </div>
+          {/* On phones the portrait leads (shorter crop) so the first screen isn't all text. */}
+          <figure className="order-first lg:order-none">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-wash-blue lg:aspect-[4/5]">
+              <Image src="/brettpollak-portrait-golden-hour.webp" alt="Brett Pollak on the UC San Diego campus" fill
+                className="object-cover object-[center_30%]" placeholder="blur" blurDataURL={heroBlurDataURL}
+                priority sizes="(min-width: 1024px) 440px, (min-width: 640px) 600px, 100vw" />
+            </div>
+            <figcaption className="mt-3 text-sm text-muted">
+              Current focus · updated {formatNowDate(currentNow.lastUpdated)} ·{' '}
+              <Link href="/now" className="font-semibold text-signal-blue underline underline-offset-4">see /now</Link>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       {/* TRITONAI & CAMPUS WORK */}
-      <section id="selected-work" className="border-b border-line bg-paper-strong">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <div className="flex flex-wrap items-end justify-between gap-5">
-            <h2 className="text-3xl font-medium md:text-4xl">TritonAI at UC San Diego.</h2>
-            <a
-              href="https://tritonai.ucsd.edu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-signal-blue underline underline-offset-4"
-            >
+      <section id="selected-work" className="border-b border-line bg-paper-strong" aria-labelledby="tritonai-heading">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-[4.5rem]">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2">
+            <h2 id="tritonai-heading" className="text-3xl font-normal md:text-[2.5rem]">TritonAI at UC San Diego</h2>
+            <a href="https://tritonai.ucsd.edu" target="_blank" rel="noopener noreferrer"
+              className="text-[15px] font-semibold text-signal-blue underline-offset-4 hover:underline">
               tritonai.ucsd.edu ↗
             </a>
           </div>
+          <p className="mt-3 max-w-2xl text-base leading-7 text-body">
+            My work in AI centers on helping build and support TritonAI with colleagues across campus.
+            New tools have to fit the way people actually work, with support that lasts beyond the pilot.
+          </p>
 
-          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4 text-xs text-body">
-            <p className="max-w-2xl text-sm leading-6">
-              My work in AI centers on helping build and support TritonAI with colleagues across campus.
-              New tools have to fit the way people actually work, with support that lasts beyond the pilot.
-            </p>
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted">
-              <span className="font-bold text-signal-blue">1. Ask</span>
-              <span aria-hidden="true" className="text-muted">→</span>
-              <span className="font-bold text-signal-gold-ink">2. Embed</span>
-              <span aria-hidden="true" className="text-muted">→</span>
-              <span className="font-bold text-signal-green">3. Automate</span>
+          <ol className="mt-8 grid border-t-2 border-ink md:grid-cols-3">
+            {featuredWork.map((study, index) => {
+              const external = study.href.startsWith('http');
+              return (
+                <li key={study.id}
+                  className="flex flex-col border-b border-line py-7 md:border-b-0 md:px-7 md:first:pl-0 md:last:pr-0 md:[&:not(:last-child)]:border-r">
+                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-signal-blue">
+                    {String(index + 1).padStart(2, '0')} · {study.stepLabel}
+                    <span className="ml-2 font-normal normal-case tracking-normal text-muted">{study.status}</span>
+                  </p>
+                  <h3 className="mt-3 font-[family-name:var(--font-display)] text-[1.75rem] font-medium leading-tight">{study.title}</h3>
+                  <p className="mt-2.5 text-[15px] leading-relaxed text-body">{study.summary}</p>
+                  {external ? (
+                    <a href={study.href} target="_blank" rel="noopener noreferrer"
+                      className="mt-auto inline-flex pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">
+                      {study.linkLabel} ↗<span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  ) : (
+                    <Link href={study.href} className="mt-auto inline-flex pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4">
+                      {study.linkLabel} →
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+
+          {/* Campus dispatches, from lib/homeUpdatesData */}
+          <div className="mt-12">
+            <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-ink pb-3">
+              <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink">Recent campus dispatches</h3>
+              <Link href="/now" className="text-sm font-semibold text-signal-blue underline underline-offset-4">Full current focus →</Link>
             </div>
-          </div>
-
-          <div className="mt-6 grid gap-5 md:grid-cols-3">
-            {featuredWork.map(study => (
-              <article key={study.id} className="field-note flex flex-col p-6" data-tone={study.tone}>
-                <div className="flex items-center justify-between gap-2 border-b border-line/60 pb-3">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold text-white ${
-                        study.tone === 'blue'
-                          ? 'bg-signal-blue'
-                          : study.tone === 'gold'
-                          ? 'bg-signal-gold-ink'
-                          : 'bg-signal-green'
-                      }`}
-                    >
-                      {study.step}
-                    </span>
-                    <span className="text-xs font-bold uppercase tracking-[0.14em] text-ink">
-                      {study.stepLabel}
-                    </span>
-                  </div>
-                  <span className="rounded-full border border-line bg-white px-2.5 py-0.5 font-mono text-[0.68rem] font-bold uppercase tracking-wider text-body">
-                    {study.status}
-                  </span>
-                </div>
-
-                <h3 className="mt-4 text-2xl font-medium leading-7 text-ink">{study.title}</h3>
-
-                <p
-                  className={`mt-2.5 text-xs font-semibold leading-5 ${
-                    study.tone === 'blue'
-                      ? 'text-signal-blue'
-                      : study.tone === 'gold'
-                      ? 'text-signal-gold-ink'
-                      : 'text-signal-green'
-                  }`}
-                >
-                  {study.principle}
-                </p>
-
-                <p className="mt-3 text-sm leading-6 text-body">{study.summary}</p>
-
-                {study.href.startsWith('http') ? (
-                  <a
-                    href={study.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4"
-                  >
-                    {study.linkLabel}
-                    <span aria-hidden="true" className="font-mono text-xs">↗</span>
-                    <span className="sr-only">: {study.title}</span>
-                  </a>
-                ) : (
-                  <Link
-                    href={study.href}
-                    className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-semibold text-signal-blue underline underline-offset-4"
-                  >
-                    {study.linkLabel}
-                    <span aria-hidden="true" className="font-mono text-xs">↗</span>
-                    <span className="sr-only">: {study.title}</span>
-                  </Link>
-                )}
-              </article>
-            ))}
-          </div>
-
-          {/* Integrated Campus Updates Dispatch */}
-          <div className="mt-12 pt-8 border-t border-line">
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-              <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-body">
-                <span className="home-update-dot inline-block h-2 w-2 rounded-full" data-tone="blue" />
-                Recent Campus Dispatches
-              </h3>
-              <Link href="/now" className="text-xs font-semibold text-signal-blue underline underline-offset-4">Full current focus on /now →</Link>
-            </div>
-            <div className="border-y border-line">
+            <ul className="divide-y divide-line border-b border-line">
               {updatesByArea('work').slice(0, 3).map(update => (
-                <a key={update.text} href={update.href} target="_blank" rel="noopener noreferrer"
-                  className="home-update-row index-row group grid gap-1 py-4 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
-                  <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-line bg-white/70">
-                    {iconForUrl(update.href) ? (
-                      <Image src={iconForUrl(update.href) as string} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
-                    ) : (
-                      <span className="font-mono text-xs font-bold text-body">UC</span>
-                    )}
-                  </span>
-                  <span className="font-mono text-xs text-body">{update.date}</span>
-                  <span className="min-w-0">
-                    <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{update.text}</span>
-                    {update.note && <span className="mt-0.5 block text-xs leading-5 text-body">{update.note}</span>}
-                  </span>
-                  <span className="font-mono text-xs text-signal-blue opacity-0 transition-opacity group-hover:opacity-100">open ↗</span>
-                </a>
+                <li key={update.text}>
+                  <a href={update.href} target="_blank" rel="noopener noreferrer"
+                    className="group grid gap-1 py-4 sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4">
+                    <span aria-hidden="true" className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-line bg-white sm:flex">
+                      {iconForUrl(update.href) ? (
+                        <Image src={iconForUrl(update.href) as string} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
+                      ) : (
+                        <span className="font-mono text-xs font-bold text-body">UC</span>
+                      )}
+                    </span>
+                    <span className="font-mono text-xs text-muted">{update.date}</span>
+                    <span className="min-w-0">
+                      <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{update.text}</span>
+                      {update.note && <span className="mt-0.5 block text-sm leading-6 text-body">{update.note}</span>}
+                    </span>
+                    <span aria-hidden="true" className="hidden font-mono text-xs text-signal-blue sm:inline">↗</span>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* APPS */}
       <section className="border-b border-line bg-paper" aria-labelledby="featured-apps-heading">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <div className="flex flex-wrap items-end justify-between gap-5">
-            <h2 id="featured-apps-heading" className="text-3xl font-medium md:text-4xl">Apps I&apos;ve built.</h2>
-            <Link href="/products" className="text-sm font-semibold text-signal-blue underline underline-offset-4">View all 22 projects</Link>
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-[4.5rem]">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2">
+            <h2 id="featured-apps-heading" className="text-3xl font-normal md:text-[2.5rem]">Apps I&apos;ve built</h2>
+            <Link href="/products" className="text-[15px] font-semibold text-signal-blue underline-offset-4 hover:underline">All 22 projects →</Link>
           </div>
           <p className="mt-3 max-w-2xl text-base leading-7 text-body">
             Nights and weekends I build independent mobile apps, campus prototypes, and automated personal agent systems.
@@ -521,18 +453,18 @@ export default function Home() {
             {featuredApps.map(app => {
               const release = splitReleaseNote(app.latest);
               return (
-                <article key={app.title} className="flex flex-col border border-line bg-paper-strong">
-                  <div className="relative aspect-[1200/630] border-b border-line bg-white/70">
+                <article key={app.title} className="flex flex-col overflow-hidden rounded-md border border-line bg-paper-strong">
+                  <div className="relative aspect-[1200/630] border-b border-line bg-white">
                     <Image src={app.image} alt={app.imageAlt} fill
                       className="object-cover" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="text-sm text-muted">
+                    <p className="text-[13px] font-semibold text-signal-blue">
                       {app.category}
                       {release.version && <> · <span className="font-mono text-xs">v{release.version}</span></>}
                     </p>
-                    <h3 className="mt-1 text-2xl font-medium leading-8">{app.title}</h3>
-                    <p className="mt-3 text-base leading-7 text-body">{app.description}</p>
+                    <h3 className="mt-2 font-[family-name:var(--font-display)] text-[1.625rem] font-medium leading-tight">{app.title}</h3>
+                    <p className="mt-2 text-[15px] leading-relaxed text-body">{app.description}</p>
                     <p className="mt-3 line-clamp-2 text-sm leading-6 text-muted">
                       <span className="font-semibold text-body">New:</span> {release.note}
                     </p>
@@ -549,99 +481,36 @@ export default function Home() {
               );
             })}
           </div>
-
-          {/* Portfolio Breadth Directory */}
-          <div className="mt-10 border-t border-line pt-6">
-            <h3 className="mb-4 text-lg font-semibold text-ink">More projects across mobile, enterprise, and agents</h3>
-            <div className="grid sm:grid-cols-3 gap-5 text-sm">
-              <div className="border-l-2 border-signal-blue pl-3.5">
-                <p className="font-semibold text-ink">Mobile &amp; Consumer</p>
-                <p className="text-xs text-body mt-1 leading-5">Resolution Companion, Horse Racing Companion, Steel City Gameday, Rock Hill Property Radar</p>
-              </div>
-              <div className="border-l-2 border-signal-gold pl-3.5">
-                <p className="font-semibold text-ink">Campus &amp; Enterprise</p>
-                <p className="text-xs text-body mt-1 leading-5">Numbers Game HQ, Student Experience, Passports Visitor Management, TritonVerify, ReviewDraft, Process Discovery</p>
-              </div>
-              <div className="border-l-2 border-signal-green pl-3.5">
-                <p className="font-semibold text-ink">Family &amp; Discovery Agents</p>
-                <p className="text-xs text-body mt-1 leading-5">Scholarship Agent, Cason Recruiting Profile &amp; CRM, School Brief, Henry Personal AI OS</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI ARCHITECTURE — compact teaser; /ai-agent-architecture owns the detail */}
-      <section className="border-b border-line bg-paper-strong" aria-labelledby="ai-arch-heading">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
-            <div>
-              <h2 id="ai-arch-heading" className="text-3xl font-medium md:text-4xl text-ink">
-                The agent behind the output.
-              </h2>
-              <p className="mt-3 text-base leading-7 text-body">
-                The daily briefings, research synthesis, and newsletters on this site are powered
-                by an agent I built and operate myself: 95 automated jobs, an 838-node knowledge graph,
-                and a 1,360-page wiki — all running on-premises on open-weight models, on a
-                shared memory ecosystem that Claude Code, Codex, and Hermes read and write together.
-              </p>
-              <Link
-                href="/ai-agent-architecture"
-                className="mt-5 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4"
-              >
-                How the architecture works →
-              </Link>
-            </div>
-
-            <div>
-              <ol className="grid gap-3 sm:grid-cols-3 sm:gap-0">
-                {[
-                  { step: '1', label: 'What goes in', tone: 'bg-signal-green', items: ARCH_INPUTS.map(i => i.label).join(', ') },
-                  { step: '2', label: 'Context', tone: 'bg-signal-gold-ink', items: 'Three layers, loaded only when a task needs them' },
-                  { step: '3', label: 'What comes out', tone: 'bg-signal-blue', items: ARCH_OUTPUTS.map(i => i.label).join(', ') },
-                ].map(stage => (
-                  <li key={stage.step} className="border-l-2 border-line pl-4 sm:pr-4">
-                    <p className="flex items-center gap-2 text-sm font-semibold text-ink">
-                      <span aria-hidden="true" className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold text-white ${stage.tone}`}>{stage.step}</span>
-                      {stage.label}
-                    </p>
-                    <p className="mt-1.5 text-sm leading-6 text-body">{stage.items}</p>
-                  </li>
-                ))}
-              </ol>
-              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-1.5 border-t border-line pt-4 text-xs text-body">
-                <span><strong className="text-ink font-mono font-semibold">95</strong> automated jobs</span>
-                <span><strong className="text-ink font-mono font-semibold">838</strong> graph nodes</span>
-                <span><strong className="text-ink font-mono font-semibold">1,360</strong> wiki pages</span>
-                <span><strong className="text-ink font-semibold">On-prem</strong> open-weight inference</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* WRITING — the two newsletters, side by side, headlines only */}
-      <section className="border-b border-line bg-paper" aria-labelledby="writing-heading">
-        <div className="max-w-7xl mx-auto px-6 py-14 md:py-16">
-          <h2 id="writing-heading" className="text-3xl font-medium md:text-4xl">What I publish.</h2>
-          <p className="mt-3 max-w-2xl text-base leading-7 text-body">
-            Two newsletters: a daily AI briefing for people who run technology in higher education,
-            and a Monday update on UC San Diego&rsquo;s own AI tools and programs.
-          </p>
+      <section className="border-b border-line bg-paper-strong" aria-labelledby="writing-heading">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-14 md:py-[4.5rem] lg:grid-cols-[0.8fr_2fr] lg:gap-16">
+          <div>
+            <h2 id="writing-heading" className="text-3xl font-normal md:text-[2.5rem]">What I publish</h2>
+            <p className="mt-4 text-base leading-7 text-body">
+              Two newsletters: a daily AI briefing for people who run technology in higher education,
+              and a Monday update on UC San Diego&rsquo;s own AI tools and programs.
+            </p>
+            <p className="mt-4 text-sm leading-6 text-body">
+              Both are produced with an agent I built and run on-premises.{' '}
+              <Link href="/ai-agent-architecture" className="font-semibold text-signal-blue underline underline-offset-4">How it works →</Link>
+            </p>
+          </div>
 
-          <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-10">
             <div className="flex flex-col">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink pb-3">
-                <h3 className="font-[family-name:var(--font-display)] text-2xl font-medium text-ink">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b-2 border-ink pb-2.5">
+                <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink">
                   <Link href="/ai-digest" className="hover:text-signal-blue">The AI Digest</Link>
                 </h3>
-                <span className="text-sm text-muted">Daily · latest <span className="font-mono text-xs">{latestDigestEdition.isoDate}</span></span>
+                <span className="text-xs text-muted">Daily · <span className="font-mono">{latestDigestEdition.isoDate}</span></span>
               </div>
               <ul className="divide-y divide-line border-b border-line">
                 {latestDigestArticles.slice(0, 3).map(article => (
                   <li key={article.headline}>
-                    <Link href={`/ai-digest/${latestDigestEdition.isoDate}`}
-                      className="group block py-4 transition-colors hover:bg-paper-strong">
+                    <Link href={`/ai-digest/${latestDigestEdition.isoDate}`} className="group block py-3.5">
                       <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{article.headline}</span>
                     </Link>
                   </li>
@@ -661,16 +530,16 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink pb-3">
-                <h3 className="font-[family-name:var(--font-display)] text-2xl font-medium text-ink">
-                  <Link href="/ucsd-ai-news" className="hover:text-signal-blue">UC San Diego AI Weekly</Link>
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b-2 border-ink pb-2.5">
+                <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink">
+                  <Link href="/ucsd-ai-news" className="hover:text-signal-blue">UCSD AI Weekly</Link>
                 </h3>
-                <span className="text-sm text-muted">Mondays · latest <span className="font-mono text-xs">{latestNewsletterEdition.isoDate}</span></span>
+                <span className="text-xs text-muted">Mondays · <span className="font-mono">{latestNewsletterEdition.isoDate}</span></span>
               </div>
               <ul className="divide-y divide-line border-b border-line">
                 {latestNewsletterItems.map(item => (
                   <li key={item.headline}>
-                    <a href={item.url} className="group block py-4 transition-colors hover:bg-paper-strong">
+                    <a href={item.url} className="group block py-3.5">
                       <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{item.headline}</span>
                     </a>
                   </li>
@@ -694,72 +563,69 @@ export default function Home() {
       </section>
 
       {/* SPEAKING & PRESS */}
-      <section className="bg-[#17201b] text-white accent-strip" data-tone="gold">
-        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 xl:gap-16">
-            <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-medium">
-                Talks on AI in higher education.
-              </h2>
-              <p className="mt-5 text-white/70 text-base leading-7">
-                I speak to institutional leaders, IT conferences, and campus communities on
-                moving AI from experimental pilots to production infrastructure, governed agent workflows,
-                and citizen developer models.
-              </p>
-              <div className="mt-6 space-y-3">
-                <div className="border-l-2 border-[#c97712] pl-3 py-0.5">
-                  <p className="text-sm font-semibold text-white">Institutional AI: From Pilot to Service</p>
-                  <p className="text-xs text-white/60">Architecture, governance, and on-premises hosting at university scale</p>
-                </div>
-                <div className="border-l-2 border-[#366c5a] pl-3 py-0.5">
-                  <p className="text-sm font-semibold text-white">Agentic AI Workflows in Higher Ed</p>
-                  <p className="text-xs text-white/60">Supervised agents, administrative bottlenecks, and guardrails</p>
-                </div>
-                <div className="border-l-2 border-[#1f5a8a] pl-3 py-0.5">
-                  <p className="text-sm font-semibold text-white">The Citizen Developer Program</p>
-                  <p className="text-xs text-white/60">Empowering campus staff with governed APIs and compute credits</p>
-                </div>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4 items-center">
-                <Link href="/speaking" className="inline-flex min-h-11 items-center justify-center rounded-sm bg-signal-gold-lift px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white">
-                  Speaking topics &amp; booking →
-                </Link>
-              </div>
-            </div>
+      <section className="bg-ink text-white" aria-labelledby="speaking-heading">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:py-20 lg:grid-cols-[0.95fr_1.05fr] xl:gap-16">
+          <div>
+            <h2 id="speaking-heading" className="text-3xl font-normal leading-tight sm:text-4xl md:text-[2.75rem]">
+              Talks on AI in higher education
+            </h2>
+            <p className="mt-5 text-base leading-7 text-on-dark">
+              I speak to institutional leaders, IT conferences, and campus communities on
+              moving AI from experimental pilots to production infrastructure, governed agent workflows,
+              and citizen developer models.
+            </p>
+            <ol className="mt-7 border-t border-white/15">
+              {[
+                { title: 'Institutional AI: From Pilot to Service', note: 'Architecture, governance, and on-premises hosting at university scale' },
+                { title: 'Agentic AI Workflows in Higher Ed', note: 'Supervised agents, administrative bottlenecks, and guardrails' },
+                { title: 'The Citizen Developer Program', note: 'Empowering campus staff with governed APIs and compute credits' },
+              ].map((talk, index) => (
+                <li key={talk.title} className="grid grid-cols-[2.25rem_1fr] border-b border-white/15 py-3.5">
+                  <span className="font-mono text-xs text-on-dark-muted">{String(index + 1).padStart(2, '0')}</span>
+                  <span>
+                    <span className="block text-sm font-semibold text-white">{talk.title}</span>
+                    <span className="block text-sm leading-6 text-on-dark-muted">{talk.note}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+            <Link href="/speaking" className="mt-8 inline-flex min-h-11 items-center justify-center rounded-sm bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-wash-blue">
+              Speaking topics &amp; booking →
+            </Link>
+          </div>
 
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <p className="rule-label text-on-dark-muted">Writing &amp; Press</p>
-                <Link href="/media" className="text-xs font-semibold text-[#f2b84b] underline underline-offset-4">All 40+ appearances →</Link>
-              </div>
-              <div className="divide-y divide-white/12 border-y border-white/12">
-                {recentMedia.map((item) => {
-                  const icon = iconForUrl(item.url);
-                  return (
-                    <a
-                      key={item.url}
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="grid gap-2 py-4 transition-colors hover:bg-white/[0.04] sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4 sm:px-2"
-                    >
-                      <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-white/15 bg-white/[0.06]">
-                        {icon ? (
-                          <Image src={icon} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
-                        ) : (
-                          <span className="font-mono text-xs font-bold text-white/60">{publicationInitials(item.publication)}</span>
-                        )}
-                      </span>
-                      <span className="font-mono text-xs text-[#f2b84b]">{item.date}</span>
-                      <span className="min-w-0">
-                        <span className="block text-sm font-semibold text-white">{item.publication}</span>
-                        <span className="mt-0.5 block text-xs leading-5 text-white/72">{item.title}</span>
-                      </span>
-                      <span className="font-mono text-xs text-on-dark-muted">{item.category}</span>
-                    </a>
-                  );
-                })}
-              </div>
+          <div>
+            <div className="mb-4 flex items-center justify-between">
+              <p className="rule-label text-on-dark-muted">Writing &amp; Press</p>
+              <Link href="/media" className="text-sm font-semibold text-white underline underline-offset-4">All {mediaItems.length} appearances →</Link>
+            </div>
+            <div className="divide-y divide-white/12 border-y border-white/12">
+              {recentMedia.map((item) => {
+                const icon = iconForUrl(item.url);
+                return (
+                  <a
+                    key={item.url}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid gap-2 py-4 transition-colors hover:bg-white/[0.04] sm:grid-cols-[auto_7.5rem_1fr_auto] sm:items-center sm:gap-4 sm:px-2"
+                  >
+                    <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-white/15 bg-white/[0.06]">
+                      {icon ? (
+                        <Image src={icon} alt="" width={20} height={20} className="h-5 w-5" unoptimized />
+                      ) : (
+                        <span className="font-mono text-xs font-bold text-white/60">{publicationInitials(item.publication)}</span>
+                      )}
+                    </span>
+                    <span className="font-mono text-xs text-on-dark-muted">{item.date}</span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold text-white">{item.publication}</span>
+                      <span className="mt-0.5 block text-sm leading-6 text-on-dark">{item.title}</span>
+                    </span>
+                    <span className="font-mono text-xs text-on-dark-muted">{item.category}</span>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-10-26",  // homepage: IT Services title + RC 1.6.0 card status
+  "/": "2026-10-26",  // homepage: Option A redesign (nav, sections, architecture teaser folded into writing)
   "/ai-digest": "2026-10-12",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",

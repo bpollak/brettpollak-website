@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from "next";
+import type { ReactNode } from 'react';
 import { projectWalkthroughs } from '@/lib/projectWalkthroughs';
 import { SITE_URL } from '@/lib/seoDates';
 
@@ -279,16 +280,6 @@ const projectGroups = [
   { id: 'experiments', title: 'Experiments', description: 'Projects exploring personal AI systems, drafting workflows, and media authenticity.' },
 ];
 
-const frameColors = [
-  "bg-[#1f5a8a]",
-  "bg-[#366c5a]",
-  "bg-[#b8503f]",
-  "bg-[#c97712]",
-  "bg-[#17201b]",
-  "bg-[#5b4a86]",
-  "bg-[#2e6b6b]",
-];
-
 const productListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -309,6 +300,117 @@ const productListSchema = {
   })),
 };
 
+type Product = (typeof products)[number];
+
+function isInternalProduct(product: Product) {
+  return "internal" in product && product.internal === true;
+}
+
+// Internal walkthroughs route through next/link; external apps open in a new tab.
+function ProductLink({ product, className, children, hidden }: { product: Product; className: string; children: ReactNode; hidden?: boolean }) {
+  const a11y = hidden ? { tabIndex: -1, 'aria-hidden': true as const } : {};
+  return isInternalProduct(product) ? (
+    <Link href={product.href} className={className} {...a11y}>{children}</Link>
+  ) : (
+    <a href={product.href} target="_blank" rel="noopener noreferrer" className={className} {...a11y}>{children}</a>
+  );
+}
+
+function ProductCard({ product, priority }: { product: Product; priority: boolean }) {
+  return (
+    <article className="group flex flex-col">
+      <ProductLink product={product} hidden
+        className="flex aspect-[16/10] items-center justify-center overflow-hidden rounded-sm border border-line bg-wash-blue p-3 transition-colors group-hover:border-signal-blue">
+        <Image
+          src={product.image}
+          alt={product.imageAlt}
+          width={product.width}
+          height={product.height}
+          className="h-full w-auto max-w-full object-contain"
+          priority={priority}
+          sizes="(min-width: 1024px) 26vw, (min-width: 640px) 45vw, 100vw"
+        />
+      </ProductLink>
+      <p className="mt-4 text-[13px] font-semibold text-signal-blue">{product.category}</p>
+      <h3 className="mt-1 font-[family-name:var(--font-display)] text-2xl font-medium leading-tight text-ink">
+        <ProductLink product={product} className="group-hover:text-signal-blue">{product.title}</ProductLink>
+      </h3>
+      <p className="mt-1 text-xs text-muted">{product.status}</p>
+      <p className="mt-2.5 text-[15px] leading-relaxed text-body">{product.description}</p>
+      {"imageCaption" in product && product.imageCaption && <p className="mt-2 text-xs leading-5 text-muted">{product.imageCaption}</p>}
+      <p className="mt-3 text-sm leading-6 text-muted">{product.features.join(' · ')}</p>
+      <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-4 text-sm font-semibold">
+        <ProductLink product={product} className="text-signal-blue underline underline-offset-4">
+          {product.cta} {isInternalProduct(product) ? '→' : '↗'}
+        </ProductLink>
+        {'secondaryHref' in product && product.secondaryHref ? (
+          <a href={product.secondaryHref} target="_blank" rel="noopener noreferrer" className="text-body underline underline-offset-4 hover:text-ink">
+            {product.secondaryCta}
+          </a>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
+// The lead App Store app gets a real phone screen when its walkthrough has a gallery.
+function FeaturedApp({ product }: { product: Product }) {
+  const slug = product.href.replace('/products/', '');
+  const screen = projectWalkthroughs.find(project => project.slug === slug)?.gallery?.[0];
+  return (
+    <article className="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-14">
+      {screen ? (
+        <div className="mx-auto w-[200px] overflow-hidden rounded-[2.25rem] border-[8px] border-ink bg-ink md:w-[220px]">
+          <Image src={screen.image} alt={screen.alt} width={screen.width} height={screen.height}
+            className="block h-auto w-full rounded-[1.75rem]" priority sizes="220px" />
+        </div>
+      ) : (
+        <div className="relative aspect-[1200/630] overflow-hidden rounded-sm border border-line md:w-[420px]">
+          <Image src={product.image} alt={product.imageAlt} fill className="object-cover" priority sizes="420px" />
+        </div>
+      )}
+      <div>
+        <p className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-signal-blue">Featured · {product.category}</p>
+        <h3 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-normal leading-tight md:text-5xl">{product.title}</h3>
+        <p className="mt-2 text-sm text-muted">{product.status}</p>
+        <p className="mt-4 max-w-xl text-lg leading-8 text-body">{product.description}</p>
+        <ul className="mt-5 grid max-w-xl gap-x-6 gap-y-1.5 border-t border-line pt-4 sm:grid-cols-2">
+          {product.features.map(feature => (
+            <li key={feature} className="flex items-start gap-2.5 text-sm leading-6 text-ink">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-signal-blue" aria-hidden="true" />
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <div className="mt-7">
+          <ProductLink product={product} className="button-primary">{product.cta} →</ProductLink>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function AppStoreCard({ product }: { product: Product }) {
+  return (
+    <article className="group flex flex-col overflow-hidden rounded-md border border-line bg-paper">
+      <ProductLink product={product} hidden className="relative block aspect-[1200/630] border-b border-line">
+        <Image src={product.image} alt={product.imageAlt} fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
+      </ProductLink>
+      <div className="flex flex-1 flex-col p-6">
+        <p className="text-[13px] font-semibold text-signal-blue">{product.category}</p>
+        <h3 className="mt-1 font-[family-name:var(--font-display)] text-[1.75rem] font-medium leading-tight">
+          <ProductLink product={product} className="group-hover:text-signal-blue">{product.title}</ProductLink>
+        </h3>
+        <p className="mt-1 text-xs text-muted">{product.status}</p>
+        <p className="mt-2.5 text-[15px] leading-relaxed text-body">{product.description}</p>
+        <div className="mt-auto pt-5">
+          <ProductLink product={product} className="text-sm font-semibold text-signal-blue underline underline-offset-4">{product.cta} →</ProductLink>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default function Products() {
   return (
     <main className="min-h-screen bg-paper text-ink" id="main-content" tabIndex={-1}>
@@ -316,142 +418,68 @@ export default function Products() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema) }}
       />
-      <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-        <div className="mb-10 grid gap-6 border-b border-line pb-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-          <h1 className="text-5xl md:text-6xl leading-none font-medium text-ink">Projects</h1>
-          <p className="max-w-3xl text-xl leading-8 text-body md:text-2xl md:leading-9">
-            Web and mobile apps I have built for campus workflows, everyday interests, and family use. Project links lead to the application or a walkthrough.
-          </p>
-        </div>
-
-        <nav className="mb-12 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm" aria-label="Project categories">
-          <span className="text-muted">Jump to</span>
-          {projectGroups.map(group => (
-            <a key={group.id} href={`#${group.id}`} className="font-semibold text-signal-blue underline underline-offset-4">
-              {group.title} <span className="font-normal text-muted">({products.filter(product => product.group === group.id).length})</span>
-            </a>
-          ))}
-        </nav>
-        {projectGroups.map(group => <section key={group.id} id={group.id} className="mb-16 scroll-mt-24">
-          <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-ink pb-3">
-            <h2 className="text-3xl font-medium">{group.title}</h2>
-            <p className="max-w-2xl text-sm leading-6 text-body">{group.description}</p>
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-7xl px-6 pb-10 pt-14 md:pt-16">
+          <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-signal-blue sm:text-[13px]">Work · {products.length} projects</p>
+          <div className="mt-4 grid gap-6 lg:grid-cols-[0.6fr_1.4fr] lg:items-end">
+            <h1 className="text-5xl font-normal leading-none text-ink md:text-6xl">Projects</h1>
+            <p className="max-w-2xl text-lg leading-8 text-body lg:justify-self-end">
+              Web and mobile apps I have built for campus workflows, everyday interests, and family use. Project links lead to the application or a walkthrough.
+            </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.filter(product => product.group === group.id).map((product, index) => {
-            const isInternal = "internal" in product && product.internal === true;
-            const frameClass = `flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-line p-4 ${frameColors[index % frameColors.length]}`;
-            const thumbnail = (
-              <Image
-                src={product.image}
-                alt={product.imageAlt}
-                width={product.width}
-                height={product.height}
-                className="h-full w-auto max-w-full border border-white/15 object-contain"
-                priority={group.id === projectGroups[0].id && index < 3}
-                sizes="(min-width: 1024px) 26vw, (min-width: 640px) 45vw, 100vw"
-              />
-            );
-            const ctaLabel = (
-              <>
-                {product.cta}
-                <svg aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </>
-            );
-            const ctaClass = "inline-flex items-center gap-2 text-sm font-semibold text-signal-blue";
-            return (
-            <article
-              key={product.title}
-              className="group flex flex-col border border-line bg-paper-strong transition-colors hover:border-signal-blue"
-            >
-              {isInternal ? (
-                <Link href={product.href} className={frameClass} tabIndex={-1} aria-hidden="true">
-                  {thumbnail}
-                </Link>
-              ) : (
-                <a
-                  href={product.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={frameClass}
-                  tabIndex={-1}
-                  aria-hidden="true"
-                >
-                  {thumbnail}
-                </a>
-              )}
-              <div className="flex flex-1 flex-col p-5">
-                <p className="text-sm text-muted">{product.category} · <span className="text-signal-green">{product.status}</span></p>
-                <h3 className="mt-1 text-2xl leading-tight font-medium text-ink transition-colors group-hover:text-signal-blue">
-                  {product.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-body">{product.description}</p>
-                {"imageCaption" in product && <p className="mt-2 text-xs leading-5 text-muted">{product.imageCaption}</p>}
-                <ul className="mt-4 space-y-1.5 border-t border-line pt-3">
-                  {product.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-sm leading-6 text-ink">
-                      <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 bg-signal-gold" aria-hidden="true" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-3 pt-5">
-                  {isInternal ? (
-                    <Link href={product.href} className={ctaClass}>
-                      {ctaLabel}
-                    </Link>
-                  ) : (
-                    <a
-                      href={product.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={ctaClass}
-                    >
-                      {ctaLabel}
-                    </a>
-                  )}
-                  {'secondaryHref' in product && product.secondaryHref ? (
-                    <a
-                      href={product.secondaryHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-body underline underline-offset-4 hover:text-ink"
-                    >
-                      {product.secondaryCta}
-                    </a>
-                  ) : null}
-                </div>
+          <nav className="mt-9 flex flex-wrap gap-2" aria-label="Project categories">
+            {projectGroups.map(group => (
+              <a key={group.id} href={`#${group.id}`}
+                className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[#b9c2b3] bg-paper-strong px-[18px] text-[15px] font-medium text-ink transition-colors hover:border-ink">
+                {group.title} <span className="text-muted">{products.filter(product => product.group === group.id).length}</span>
+              </a>
+            ))}
+          </nav>
+        </div>
+      </section>
+
+      {projectGroups.map((group, groupIndex) => {
+        const groupProducts = products.filter(product => product.group === group.id);
+        const appStore = group.id === 'app-store';
+        return (
+          <section key={group.id} id={group.id} className={`scroll-mt-24 border-b border-line ${groupIndex % 2 === 0 ? 'bg-paper-strong' : 'bg-paper'}`}>
+            <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b-2 border-ink pb-3">
+                <h2 className="text-3xl font-normal md:text-4xl">{appStore ? 'On the App Store' : group.title}</h2>
+                <p className="max-w-2xl text-sm leading-6 text-body">{group.description}</p>
               </div>
-            </article>
-            );
-          })}
-          </div>
-        </section>)}
+              {appStore ? (
+                <>
+                  <div className="mt-10">
+                    <FeaturedApp product={groupProducts[0]} />
+                  </div>
+                  <div className="mt-12 grid gap-6 md:grid-cols-2">
+                    {groupProducts.slice(1).map(product => <AppStoreCard key={product.title} product={product} />)}
+                  </div>
+                </>
+              ) : (
+                <div className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                  {groupProducts.map((product, index) => (
+                    <ProductCard key={product.title} product={product} priority={groupIndex === 0 && index < 3} />
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      })}
 
-        <div className="mt-14 border border-dashed border-[#9fa89d] bg-paper-strong p-8 md:p-10">
-          <div className="grid gap-8 md:grid-cols-[0.55fr_1fr] md:items-center">
-            <div>
-              <h3 className="text-3xl md:text-4xl leading-tight font-medium text-ink">Other projects are in progress.</h3>
-            </div>
-            <div>
-              <p className="text-lg leading-8 text-body">
-                I&apos;m also working on software for education, productivity, and enterprise use. I&apos;ll add projects here when there is enough to document.
-              </p>
-              <Link
-                href="/linkedin"
-                className="mt-7 inline-flex items-center gap-2 rounded-sm bg-[#17201b] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
-              >
-                Follow on LinkedIn
-                <svg aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
+      <section className="mx-auto max-w-7xl px-6 py-14 md:py-16">
+        <div className="grid gap-8 border-t-2 border-ink pt-8 md:grid-cols-[0.55fr_1fr] md:items-center">
+          <h2 className="text-3xl font-normal leading-tight text-ink md:text-4xl">Other projects are in progress.</h2>
+          <div>
+            <p className="text-lg leading-8 text-body">
+              I&apos;m also working on software for education, productivity, and enterprise use. I&apos;ll add projects here when there is enough to document.
+            </p>
+            <Link href="/linkedin" className="button-primary mt-6">Follow on LinkedIn →</Link>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
