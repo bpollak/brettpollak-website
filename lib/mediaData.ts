@@ -119,14 +119,6 @@ export const mediaItems: MediaItem[] = [
   },
 
 {
-    publication: 'The Daily Californian',
-    title: 'UAW members ratify contracts with UC, bringing end to threat of large-scale strike',
-    url: 'https://www.dailycal.org/news/uc/uaw-members-ratify-contracts-with-uc-bringing-end-to-threat-of-large-scale-strike/article_59908f03-331f-4bf2-b177-b2b8e686dabe.html',
-    date: '2026-03-01',
-    category: 'article'
-  },
-
-{
     publication: 'CCW Emerging Tech Exchange',
     title: 'CCW Emerging Tech Exchange - San Diego',
     url: 'https://www.ccwexchangefebruary.com/agenda/session/1819201',
@@ -169,7 +161,7 @@ export const mediaItems: MediaItem[] = [
 {
     publication: 'Forbes',
     title: "Why Faculty Hold The Keys To Higher Ed's AI Digital Transformation",
-    url: "https://www.forbes.com/sites/avivalegatt/2025/08/10/why-faculty-hold-the-keys-to-higher-ed-s-ai-digital-transformation/",
+    url: "https://www.forbes.com/sites/avivalegatt/2025/08/10/why-faculty-hold-the-keys-to-higher-eds-ai-digital-transformation/",
     date: '2025-08-10',
     category: 'article'
   },
@@ -276,22 +268,6 @@ export const mediaItems: MediaItem[] = [
     url: 'https://www.verizon.com/business/resources/whitepapers/protecting-your-campus-ai-era.pdf',
     date: '2025-02-10',
     category: 'whitepaper'
-  },
-
-{
-    publication: 'The Daily Californian',
-    title: 'UC Berkeley chatbot BearGPT violated worker rights, GSI union alleges',
-    url: 'https://www.dailycal.org/news/campus/uc-berkeley-chatbot-beargpt-violated-worker-rights-gsi-union-alleges/article_67f64b7b-a584-4b44-82e9-15b92e0f3f43.html',
-    date: '2025-01-20',
-    category: 'article'
-  },
-
-{
-    publication: 'UAW Local 4811',
-    title: '2025 Unfair Labor Practice Charges (BearGPT)',
-    url: 'https://www.uaw4811.org/2025-ulps',
-    date: '2025-01-15',
-    category: 'article'
   },
 
 {
@@ -435,7 +411,7 @@ export const mediaItems: MediaItem[] = [
 {
     publication: 'UC Tech Awards',
     title: 'The 2022 Student Activity Hub (Silver UC Collaboration Award)',
-    url: 'https://blink.ucsd.edu/technology/about/news/posts/2022-08-22-its-honored-at-uc-tech-awards.html',
+    url: 'https://ucop.edu/information-technology-services/initiatives/uc-tech-awards/current-and-previous-awards/2022.html',
     date: '2022-08-16',
     category: 'award'
   },
