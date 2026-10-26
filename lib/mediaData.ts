@@ -31,14 +31,6 @@ export const mediaItems: MediaItem[] = [
   },
 
 {
-    publication: 'Higher Ed AI Playbook',
-    title: 'Live Interview: Inside TritonGPT — Build the Control Layer, Buy the Horsepower',
-    url: 'https://higheredaiplaybook.substack.com/p/adoption-without-authority-what-50000',
-    date: '2026-07-30',
-    category: 'interview'
-  },
-
-{
     publication: 'Inside Higher Ed',
     title: 'A Call to Meet the Moment at NACUBO',
     url: 'https://www.insidehighered.com/news/business/financial-health/2026/07/23/call-meet-moment-nacubo',
@@ -52,6 +44,14 @@ export const mediaItems: MediaItem[] = [
     url: 'https://www.nacubo.org/Events/2026/NACUBO-2026-Annual-Meeting',
     date: '2026-07-20',
     category: 'speaking'
+  },
+
+{
+    publication: 'Higher Ed AI Playbook',
+    title: 'UC San Diego Built Its Own AI — and Now Sells It to Berkeley',
+    url: 'https://www.higheredaiplaybook.com/p/uc-san-diego-built-its-own-ai-and',
+    date: '2026-07-08',
+    category: 'article'
   },
 
 {
@@ -180,6 +180,14 @@ export const mediaItems: MediaItem[] = [
     url: "https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html",
     date: '2025-08-08',
     category: 'interview'
+  },
+
+{
+    publication: 'CIO 100 Awards',
+    title: '2025 CIO 100 Award — UC San Diego, for TritonGPT',
+    url: 'https://www.accessnewswire.com/newsroom/en/publishing-and-media/cio-celebrates-innovations-in-business-technology-with-2025-cio-100-and-hall-o-1003895',
+    date: '2025-03-24',
+    category: 'award'
   },
 
 {
@@ -376,7 +384,7 @@ export const mediaItems: MediaItem[] = [
 
 {
     publication: 'ASU GSV Summit',
-    title: 'Featured Speaker',
+    title: 'Poster Session',
     url: 'https://www.asugsvsummit.com/speakers/brett-pollak',
     date: '2024-04-15',
     category: 'speaking'
@@ -398,14 +406,6 @@ export const mediaItems: MediaItem[] = [
     url: 'https://web.archive.org/web/20250512032728/https://cto.berkeley.edu/ai/videos/uc-san-diego-tritongpt-demo',
     date: '2024-03-21',
     category: 'speaking'
-  },
-
-{
-    publication: 'ScienceSprings',
-    title: "From The University of California-San Diego: Say Hello to TritonGPT",
-    url: 'https://sciencesprings.wordpress.com/2024/03/19/from-the-university-of-california-san-diego-say-hello-to-tritongpt/',
-    date: '2024-03-19',
-    category: 'article'
   },
 
 {
@@ -435,9 +435,9 @@ export const mediaItems: MediaItem[] = [
 {
     publication: 'UC Tech Awards',
     title: 'The 2022 Student Activity Hub (Silver UC Collaboration Award)',
-    url: 'https://www.ucop.edu/information-technology-services/_files/uc-tech-awards/2022/student-activity-hub.pdf',
-    date: '2022-08-15',
-    category: 'whitepaper'
+    url: 'https://blink.ucsd.edu/technology/about/news/posts/2022-08-22-its-honored-at-uc-tech-awards.html',
+    date: '2022-08-16',
+    category: 'award'
   },
 
 {
@@ -445,7 +445,7 @@ export const mediaItems: MediaItem[] = [
     title: 'The 2020 Return to Learn Program (Golden Award)',
     url: 'https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/sautter-2020/ucsd-return-to-learn.pdf',
     date: '2020-07-15',
-    category: 'whitepaper'
+    category: 'award'
   },
 
 {
@@ -507,16 +507,16 @@ export const mediaItems: MediaItem[] = [
 {
     publication: 'Larry L. Sautter Awards',
     title: 'The 2012 Responsive Design Framework (Golden Award)',
-    url: 'https://today.ucsd.edu/story/usa_today_names_uc_san_diego_among_5_colleges_with_great_mobile_apps',
+    url: 'https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2012.html',
     date: '2012-07-15',
-    category: 'article'
+    category: 'award'
   },
 
 {
     publication: 'Larry L. Sautter Awards',
-    title: 'The 2011 Campus Web Toolbox',
-    url: 'https://ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/ucsd_webtoolbox.docx',
+    title: 'The 2011 Campus Web Toolbox (Silver Award)',
+    url: 'https://www.ucop.edu/information-technology-services/initiatives/sautter-award-program/award-winners-and-applications/2011.html',
     date: '2011-07-15',
-    category: 'article'
+    category: 'award'
   },
 ];
