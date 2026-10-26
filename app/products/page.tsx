@@ -348,6 +348,7 @@ export default function Products() {
                 width={product.width}
                 height={product.height}
                 className="h-full w-auto max-w-full border border-white/15 object-contain"
+                priority={group.id === projectGroups[0].id && index < 3}
                 sizes="(min-width: 1024px) 26vw, (min-width: 640px) 45vw, 100vw"
               />
             );

@@ -87,7 +87,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "The apps I build",
       body:
-        "Outside the day job I build iOS apps. Resolution Companion 1.6 just went to App Review, adding per-habit reminders. Horse Racing Companion is live, with the fall meet opening in early November. Steel City Gameday is mid-season with its public Crew feature live, and a fix for cross-game replies shipped this week.",
+        "Outside the day job I build iOS apps. Resolution Companion 1.6 is live on the App Store, adding per-habit reminders. Horse Racing Companion is live, with the fall meet opening in early November. Steel City Gameday is mid-season with its public Crew feature live, and a fix for cross-game replies shipped this week.",
     },
   ],
 };

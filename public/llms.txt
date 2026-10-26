@@ -2,7 +2,7 @@
 
 > Technology leadership at UC San Diego, and the apps I build outside it.
 
-This is the public home for Brett Pollak, Executive Director, Workplace Technology & Infrastructure Services at UC San Diego and an independent iOS app developer. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, and the consumer apps Brett builds (Resolution Companion, Horse Racing Companion, Steel City Gameday).
+This is the public home for Brett Pollak, Executive Director, IT Services at UC San Diego and an independent iOS app developer. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, and the consumer apps Brett builds (Resolution Companion, Horse Racing Companion, Steel City Gameday).
 
 For a longer machine-readable briefing, use:
 
@@ -91,7 +91,7 @@ For a longer machine-readable briefing, use:
 ## Identity and Attribution
 
 - Name: Brett Pollak
-- Role: Executive Director, Workplace Technology & Infrastructure Services
+- Role: Executive Director, IT Services
 - Organization: University of California San Diego
 - LinkedIn: https://www.linkedin.com/in/brettpollak/
 - GitHub: https://github.com/bpollak

@@ -37,7 +37,7 @@ const profilePageSchema = {
   url: `${SITE_URL}/about`,
   name: "About Brett Pollak",
   description:
-    "Executive Director, Workplace Technology & Infrastructure Services at UC San Diego. Service owner for the TritonAI program. Eighteen years across web, cloud, workplace technology, and AI.",
+    "Executive Director, IT Services at UC San Diego. Service owner for the TritonAI program. Eighteen years across web, cloud, workplace technology, and AI.",
   dateModified: staticPageDates["/about"],
   mainEntity: { "@id": `${SITE_URL}/#person` },
   isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -68,7 +68,7 @@ const eras = [
   {
     years: "2024 – now",
     org: "UC San Diego",
-    role: "Executive Director, Workplace Technology & Infrastructure Services",
+    role: "Executive Director, IT Services",
     body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for several other campuses. My current questions are adoption, governance, and how agent workflows fit campus operations.",
     tone: "coral" as const,
   },
@@ -82,7 +82,7 @@ const toneDot: Record<string, string> = {
 };
 
 const atAGlance = [
-  "Executive Director, Workplace Technology & Infrastructure Services",
+  "Executive Director, IT Services",
   "Service owner, TritonAI program",
   "Member, NASH AI Advisory Board (Data Infrastructure & Privacy)",
   "Seven teams, from service desk to AI platforms",
@@ -128,6 +128,7 @@ export default function About() {
                   width={850}
                   height={1280}
                   className="w-full"
+                  priority
                   sizes="(min-width: 768px) 40vw, 100vw"
                 />
               </div>
@@ -235,7 +236,7 @@ export default function About() {
       {/* CLOSER — dark band */}
       <section className="bg-[#17201b] text-white accent-strip">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-          <p className="rule-label mb-3 text-signal-gold">Bring this to your campus</p>
+          <p className="rule-label mb-3 text-signal-gold-lift">Bring this to your campus</p>
           <h2 className="text-3xl font-medium mb-4">
             I speak on campus AI, agentic workflows, and what actually ships.
           </h2>

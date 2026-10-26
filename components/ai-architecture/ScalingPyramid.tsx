@@ -128,7 +128,7 @@ function Band({ tier, dimColor }: { tier: Tier; dimColor: string }) {
             </span>
           </div>
           <div className="flex items-center gap-3 flex-wrap">
-            <span className={`text-xs italic ${isDark ? 'text-on-dark-muted' : 'text-muted'}`}>
+            <span className={`text-xs italic ${isDark ? 'text-white/85' : 'text-muted'}`}>
               {tier.status}
             </span>
             <PrivacyMeter level={tier.privacyLevel} color={tier.color} dim={dimColor} />
