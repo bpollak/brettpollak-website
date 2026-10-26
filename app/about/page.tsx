@@ -128,6 +128,7 @@ export default function About() {
                   width={850}
                   height={1280}
                   className="w-full"
+                  priority
                   sizes="(min-width: 768px) 40vw, 100vw"
                 />
               </div>
@@ -235,7 +236,7 @@ export default function About() {
       {/* CLOSER — dark band */}
       <section className="bg-[#17201b] text-white accent-strip">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-          <p className="rule-label mb-3 text-signal-gold">Bring this to your campus</p>
+          <p className="rule-label mb-3 text-signal-gold-lift">Bring this to your campus</p>
           <h2 className="text-3xl font-medium mb-4">
             I speak on campus AI, agentic workflows, and what actually ships.
           </h2>

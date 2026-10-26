@@ -25,8 +25,9 @@
   /* Text-safe variants of the graphic signal colours. Each is checked against
      the wash tint it sits on, not just the page background: as chip text on
      --wash-coral, --signal-coral lands at 4.45:1 and --signal-gold at 3.09:1.
-     A browser axe-core pass caught both; static maths against paper alone did not. */
-  --signal-gold-ink: #9b5a06;
+     A browser axe-core pass caught both; static maths against paper alone did not.
+     #9b5a06 then measured 4.43:1 on the gold .field-note tint, hence #8f5205. */
+  --signal-gold-ink: #8f5205;
   --signal-coral-ink: #ad4a39;
 
   /* Text tones for the dark (ink) panels. Both clear AA comfortably on --ink,
@@ -396,13 +397,18 @@ html {
   border-top-color: var(--signal-coral);
 }
 
-.rule-label {
-  font-size: 0.72rem;
-  line-height: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--ink), transparent 34%);
+/* In the components layer so a colour utility on the same element
+   (`rule-label text-on-dark-muted`) wins. Unlayered, this rule beat every
+   utility and left the eyebrows on the dark bands ink-on-ink, i.e. invisible. */
+@layer components {
+  .rule-label {
+    font-size: 0.72rem;
+    line-height: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--ink), transparent 34%);
+  }
 }
 
 .card-3d iframe,

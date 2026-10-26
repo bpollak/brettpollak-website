@@ -402,9 +402,9 @@ export default function Home() {
             </p>
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted">
               <span className="font-bold text-signal-blue">1. Ask</span>
-              <span className="text-line">→</span>
+              <span aria-hidden="true" className="text-muted">→</span>
               <span className="font-bold text-signal-gold-ink">2. Embed</span>
-              <span className="text-line">→</span>
+              <span aria-hidden="true" className="text-muted">→</span>
               <span className="font-bold text-signal-green">3. Automate</span>
             </div>
           </div>
@@ -419,7 +419,7 @@ export default function Home() {
                         study.tone === 'blue'
                           ? 'bg-signal-blue'
                           : study.tone === 'gold'
-                          ? 'bg-signal-gold'
+                          ? 'bg-signal-gold-ink'
                           : 'bg-signal-green'
                       }`}
                     >
@@ -598,7 +598,7 @@ export default function Home() {
               <ol className="grid gap-3 sm:grid-cols-3 sm:gap-0">
                 {[
                   { step: '1', label: 'What goes in', tone: 'bg-signal-green', items: ARCH_INPUTS.map(i => i.label).join(', ') },
-                  { step: '2', label: 'Context', tone: 'bg-signal-gold', items: 'Three layers, loaded only when a task needs them' },
+                  { step: '2', label: 'Context', tone: 'bg-signal-gold-ink', items: 'Three layers, loaded only when a task needs them' },
                   { step: '3', label: 'What comes out', tone: 'bg-signal-blue', items: ARCH_OUTPUTS.map(i => i.label).join(', ') },
                 ].map(stage => (
                   <li key={stage.step} className="border-l-2 border-line pl-4 sm:pr-4">
@@ -722,7 +722,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-8 flex flex-wrap gap-4 items-center">
-                <Link href="/speaking" className="inline-flex items-center justify-center rounded-sm bg-[#c97712] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#d98520]">
+                <Link href="/speaking" className="inline-flex min-h-11 items-center justify-center rounded-sm bg-signal-gold-lift px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white">
                   Speaking topics &amp; booking →
                 </Link>
               </div>
@@ -730,7 +730,7 @@ export default function Home() {
 
             <div>
               <div className="flex items-center justify-between mb-4">
-                <p className="rule-label text-white/55">Writing &amp; Press</p>
+                <p className="rule-label text-on-dark-muted">Writing &amp; Press</p>
                 <Link href="/media" className="text-xs font-semibold text-[#f2b84b] underline underline-offset-4">All 40+ appearances →</Link>
               </div>
               <div className="divide-y divide-white/12 border-y border-white/12">
@@ -756,7 +756,7 @@ export default function Home() {
                         <span className="block text-sm font-semibold text-white">{item.publication}</span>
                         <span className="mt-0.5 block text-xs leading-5 text-white/72">{item.title}</span>
                       </span>
-                      <span className="font-mono text-xs text-white/45">{item.category}</span>
+                      <span className="font-mono text-xs text-on-dark-muted">{item.category}</span>
                     </a>
                   );
                 })}

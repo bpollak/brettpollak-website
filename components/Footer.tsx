@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <footer className="bg-paper-strong border-t border-line relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-[#17201b]/12"></div>
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="md:col-span-1">
             <div className="text-2xl font-semibold text-ink mb-4 font-[family-name:var(--font-display)]">

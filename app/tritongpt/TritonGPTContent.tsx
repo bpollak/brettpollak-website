@@ -202,7 +202,7 @@ export default function TritonGPTContent() {
               title: "TritonAI Harness",
               description:
                 `A campus development environment for tool-using AI workflows, now a supported build path for development teams. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
-              href: "https://tritonai.ucsd.edu/tools/index.html",
+              href: "https://tritonai.ucsd.edu/developer-apis/harness.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -213,7 +213,7 @@ export default function TritonGPTContent() {
             const style = programOfferingStyles[index % programOfferingStyles.length];
             return (
               <a
-                key={offering.href}
+                key={offering.title}
                 href={offering.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -306,14 +306,14 @@ export default function TritonGPTContent() {
                 <p className="mt-1 text-xs leading-5 text-body">A question, a workflow, a document task</p>
               </div>
             </div>
-            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-line md:rotate-0 md:px-2">&rarr;</span>
+            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-muted md:rotate-0 md:px-2">&rarr;</span>
             <div className="flex items-center justify-center border border-signal-blue/50 border-l-[5px] border-l-signal-blue bg-[var(--wash-blue)] p-5 text-center">
               <div>
                 <p className="font-serif text-xl font-medium text-signal-blue">TritonAI Gateway</p>
                 <p className="mt-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-body">identity · routing · policy</p>
               </div>
             </div>
-            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-line md:rotate-0 md:px-2">&rarr;</span>
+            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-muted md:rotate-0 md:px-2">&rarr;</span>
             <div className="flex flex-col justify-center gap-2.5">
               {[
                 { title: 'Approved models', note: 'Chosen for the task — UC-hosted or approved cloud', border: 'border-l-signal-blue', wash: 'bg-[var(--wash-blue)]' },
