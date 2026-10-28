@@ -27,11 +27,11 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-10-26",  // homepage: Option A redesign (nav, sections, architecture teaser folded into writing)
+  "/": "2026-10-28",  // homepage: work + apps rows refreshed (Discovery Series, SCOUT at UC Merced, SCG 1.0.8)
   "/ai-digest": "2026-10-12",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
-  "/about": "2026-10-26",  // title updated to Executive Director, IT Services
+  "/about": "2026-10-28",  // intro + description now use the IT Services title
   "/tritongpt": "2026-10-25",  // TritonGPT 4.6.6 Voice Mode + coding sandbox added to exec summary
   "/speaking": "2026-10-26",  // title in speaker JSON-LD
   "/products": "2026-10-26",  // RC walkthrough v1.6.0

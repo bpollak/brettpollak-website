@@ -5,13 +5,13 @@ import { SITE_URL, staticPageDates } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
   title: "About — Work in Higher Education and AI",
-  description: "Eighteen years at UC San Diego, from campus web manager to the executive director running workplace technology, infrastructure, and the campus AI program.",
+  description: "Eighteen years at UC San Diego, from campus web manager to Executive Director of IT Services, leading infrastructure and the campus AI program.",
   alternates: {
     canonical: "https://brettcpollak.com/about",
   },
   openGraph: {
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "Eighteen years at UC San Diego, from campus web manager to the executive director running workplace technology, infrastructure, and the campus AI program.",
+    description: "Eighteen years at UC San Diego, from campus web manager to Executive Director of IT Services, leading infrastructure and the campus AI program.",
     url: "https://brettcpollak.com/about",
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Brett Pollak | Work in Higher Education and AI",
-    description: "Eighteen years at UC San Diego, from campus web manager to the executive director running workplace technology, infrastructure, and the campus AI program.",
+    description: "Eighteen years at UC San Diego, from campus web manager to Executive Director of IT Services, leading infrastructure and the campus AI program.",
     images: ["/about-og.png"],
   },
 };
@@ -106,10 +106,10 @@ export default function About() {
                 Eighteen years at UC San Diego. From the campus web to campus AI.
               </h1>
               <p className="page-intro mb-8">
-                I joined as campus web manager in 2008. Today I lead workplace
-                technology and infrastructure services, and the campus AI
-                program built on top of them. This page is the path between
-                those two jobs.
+                I joined as campus web manager in 2008. Today I&rsquo;m Executive
+                Director of IT Services, leading the infrastructure portfolio
+                and the campus AI program built on top of it. This page is the
+                path between those two jobs.
               </p>
               <ul className="space-y-2">
                 {atAGlance.map((line) => (
