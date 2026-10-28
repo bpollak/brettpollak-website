@@ -32,29 +32,29 @@ export type HomeUpdatesData = {
 };
 
 export const homeUpdates: HomeUpdatesData = {
-  lastUpdated: '2026-09-08',
+  lastUpdated: '2026-10-28',
   updates: [
     // ── UC San Diego work ─────────────────────────────────────────────
+    {
+      date: '2026-10-04',
+      area: 'work',
+      text: 'TritonAI Discovery Series and certificate launch',
+      note: 'Short lessons on campus AI tools, data privacy, and responsible use, with browser-based knowledge checks.',
+      href: 'https://tritonai.ucsd.edu/training-resources/videos/index.html',
+    },
+    {
+      date: '2026-09-18',
+      area: 'work',
+      text: 'SCOUT opens to all of UC Merced',
+      note: 'After an early-access preview, UC Merced’s assistant is available campus-wide on the shared TritonAI platform.',
+      href: 'https://tritonai.ucsd.edu/about/tritonai-updates.html',
+    },
     {
       date: '2026-09-08',
       area: 'work',
       text: 'TritonGPT 4.6.6 reaches production',
       note: 'New default model on UC-hosted infrastructure, Voice Mode, and a coding sandbox.',
       href: 'https://tritonai.ucsd.edu/tritongpt/release-notes/9-8-2026-release.html',
-    },
-    {
-      date: '2026-08-21',
-      area: 'work',
-      text: 'TritonAI Harness access expands',
-      note: 'Faculty and staff can request the Harness desktop agent workspace through the approved gateway.',
-      href: 'https://tritonai.ucsd.edu/developer-apis/harness.html',
-    },
-    {
-      date: '2026-09-03',
-      area: 'work',
-      text: 'SCOUT in production beta at UC Merced',
-      note: 'The shared TritonAI platform now serves another UC campus — 100+ faculty and staff users.',
-      href: 'https://tritonai.ucsd.edu/about/tritonai-updates.html',
     },
     {
       date: '2026-08-30',
@@ -80,11 +80,11 @@ export const homeUpdates: HomeUpdatesData = {
       href: 'https://resolutioncompanion.com/',
     },
     {
-      date: '2026-09-10',
+      date: '2026-10-08',
       area: 'personal',
-      text: 'Steel City Gameday 1.0 is live on the App Store',
-      note: 'Private Crews, pregame picks, and Flash Picks — free to download for the 2026 season.',
-      href: 'https://steelcitygameday.com/',
+      text: 'Steel City Gameday 1.0.8 released — a public Crew for fans',
+      note: 'Join Steel City Public Crew to chat and make picks with other fans, alongside your private Crews.',
+      href: 'https://steelcitygameday.com/updates/',
     },
     {
       date: '2026-09-09',
