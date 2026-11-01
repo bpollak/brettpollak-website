@@ -97,7 +97,7 @@ export default function AiAgentArchitecturePage() {
           in a university setting and which remain untested.
         </p>
         <p className="text-sm text-body mb-10">
-          Architecture snapshot: October 25, 2026 &middot; Reading layout updated September 5, 2026.
+          Architecture snapshot: November 1, 2026 &middot; Reading layout updated September 5, 2026.
         </p>
 
         <nav aria-label="Architecture sections" className="reading-links mb-8">
@@ -109,11 +109,11 @@ export default function AiAgentArchitecturePage() {
         <div className="grid sm:grid-cols-3 gap-4 mb-10">
           <div className="editorial-panel p-6" data-tone="blue">
           <div className="rule-label mb-2">Automated jobs</div>
-          <div className="text-2xl font-semibold text-ink">95 enabled jobs</div>
+          <div className="text-2xl font-semibold text-ink">99 enabled jobs</div>
           </div>
           <div className="editorial-panel p-6" data-tone="green">
           <div className="rule-label mb-2">Durable memory</div>
-          <div className="text-2xl font-semibold text-ink">904 nodes · 1,471 pages</div>
+          <div className="text-2xl font-semibold text-ink">909 nodes · 1,494 pages</div>
           </div>
           <div className="editorial-panel p-6" data-tone="gold">
             <div className="rule-label mb-2">Context loading</div>
@@ -178,9 +178,9 @@ export default function AiAgentArchitecturePage() {
             whether the accumulated information is useful later.
           </p>
           <p>
-            This page documents how I built that knowledge layer for myself: 95 enabled automated
+            This page documents how I built that knowledge layer for myself: 99 enabled automated
             jobs routed through UC San Diego&rsquo;s TritonAI gateway, entirely on open-weight
-            models, with the primary inference path hosted on-prem. A 904-node knowledge graph, 1,471 wiki pages, a
+            models, with the primary inference path hosted on-prem. A 909-node knowledge graph, 1,494 wiki pages, a
             three-layer memory system, and a memory ecosystem that Claude Code, Codex, and
             the Hermes agent all read from and write back to.
             It also provides a starting point for considering whether parts of the
@@ -245,7 +245,7 @@ export default function AiAgentArchitecturePage() {
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/tech-stack/{'{tool-id}'}.md</code>.
             Ask &ldquo;why did we go with X?&rdquo; and it scans{' '}
             <code className="text-[0.9em] bg-wash-green px-1.5 py-0.5 rounded">wiki/decisions/</code>.
-            In this system, 1,471 wiki pages form a reference library. A relevant page is
+            In this system, 1,494 wiki pages form a reference library. A relevant page is
             retrieved when a matching person, project, technology, or decision is mentioned.
           </p>
           <p>
@@ -278,7 +278,7 @@ export default function AiAgentArchitecturePage() {
         </h2>
         <div className="text-body text-[1.06rem] leading-8 space-y-5 max-w-3xl">
           <p>
-            95 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
+            99 enabled jobs build the knowledge layer on a predictable daily rhythm. A typical
             weekday:
           </p>
         </div>
@@ -335,7 +335,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-blue font-semibold mb-2">
                 Knowledge Graph
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">904 nodes · 959 edges</div>
+              <div className="text-2xl font-bold text-ink mb-2">909 nodes · 964 edges</div>
               <p className="text-sm text-body leading-6">
                 Nodes: people, technologies, vendors, decisions, projects. Edges: relationships
                 (&ldquo;meets_with,&rdquo; &ldquo;often_meets_with,&rdquo; &ldquo;uses&rdquo;).
@@ -347,7 +347,7 @@ export default function AiAgentArchitecturePage() {
               <div className="text-xs uppercase tracking-[0.18em] text-signal-gold-ink font-semibold mb-2">
                 Wiki
               </div>
-              <div className="text-2xl font-bold text-ink mb-2">1,433 narrative pages</div>
+              <div className="text-2xl font-bold text-ink mb-2">1,494 narrative pages</div>
               <p className="text-sm text-body leading-6">
                 Markdown pages mirroring the highest-weight entities: people, tech-stack,
                 decisions, projects, concepts. Slow, rich, narrative. Good at answering
@@ -407,21 +407,23 @@ export default function AiAgentArchitecturePage() {
             returns a text description into the conversation.
           </p>
           <p>
-            As of October 25, 2026, <strong>all 95 enabled jobs run through{' '}
+            As of November 1, 2026, <strong>all 99 enabled jobs run through{' '}
             <a
               href="https://tritonai.ucsd.edu/"
               className="font-semibold text-signal-blue underline decoration-2 underline-offset-4 decoration-blue-600 hover:text-signal-blue"
             >
               TritonAI
             </a></strong>, UC San Diego&rsquo;s institutional AI gateway. The fleet runs on a
-            two-tier design: 60 inference jobs on open-weight models hosted on-prem — 55 on
-            GLM 5.3 for reasoning, tools, and long-horizon synthesis, 3 on the faster GLM 5.3
-            Flash for lightweight recurring scans, and 2 on Gemma 4 31B for quick
-            scan-and-check jobs. The other 35 jobs are deterministic scripts that
-            never call a model at all. Four of the 60 inference jobs pair with monitor
+            two-tier design: 64 inference jobs on open-weight models hosted on-prem — 61 on
+            GLM 5.3 for reasoning, tools, and long-horizon synthesis, and 3 on the faster
+            GLM 5.3 Flash for lightweight recurring scans. The other 35 jobs are
+            deterministic scripts that never call a model at all. Four of the 64
+            inference jobs pair with monitor
             mode: a deterministic script checks the source first, and the model call is
-            skipped entirely when nothing changed. Three fallback models (DeepSeek V4
-            Flash, Gemma 4 26B, Gemma 4 31B) stand ready behind the primary — a chain
+            skipped entirely when nothing changed. When the hub retired the Gemma 4 31B
+            model this week, the key-access monitor caught it and the affected jobs were
+            repinned to GLM 5.3 the same day, before any scheduled run failed. The
+            fallback chain (GLM 5.3 Flash, DeepSeek V4 Flash) is
             rebuilt from verified completions, since the gateway&rsquo;s model listing
             advertises models that reject real requests — and a key-access monitor checks
             the gateway&rsquo;s catalog twice a week and flags any scheduled route that stops
@@ -446,19 +448,14 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.3</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.3 (open weight)</td>
                 <td className="px-4 py-3 text-body">Main chat, tools, interactive sessions, and nearly all scheduled agent work</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive + 55</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">Interactive + 61</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink" rowSpan={2}>Lightweight scheduled work</td>
+                <td className="px-4 py-3 font-semibold text-ink">Lightweight scheduled work</td>
                 <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.3-flash</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.3 Flash (open weight)</td>
-                <td className="px-4 py-3 text-body" rowSpan={2}>Fast scan-and-check jobs where reasoning overhead is wasted: feed watches, date reminders, marketing scans</td>
+                <td className="px-4 py-3 text-body">Fast scan-and-check jobs where reasoning overhead is wasted: feed watches, date reminders, marketing scans</td>
                 <td className="px-4 py-3 text-right font-semibold text-ink">3</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-31b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 31B (open weight)</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">2</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-semibold text-ink">No inference needed</td>
@@ -468,26 +465,21 @@ export default function AiAgentArchitecturePage() {
                 <td className="px-4 py-3 text-right font-semibold text-ink">35</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-semibold text-ink" rowSpan={3}>Fallback chain</td>
+                <td className="px-4 py-3 font-semibold text-ink" rowSpan={2}>Fallback chain</td>
+                <td className="px-4 py-3 font-mono text-xs text-body">api-glm-5.3-flash</td>
+                <td className="px-4 py-3 text-body">TritonAI on-prem · Z.ai GLM 5.3 Flash (open weight)</td>
+                <td className="px-4 py-3 text-body" rowSpan={2}>Automatic if the primary is unreachable &mdash; tried in order, each verified by live completion probe</td>
+                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
+              </tr>
+              <tr>
                 <td className="px-4 py-3 font-mono text-xs text-body">api-deepseek-v4-flash</td>
                 <td className="px-4 py-3 text-body">TritonAI on-prem · DeepSeek V4 Flash (open weight)</td>
-                <td className="px-4 py-3 text-body" rowSpan={3}>Automatic if the primary is unreachable &mdash; tried in order, each verified by live completion probe</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-26b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 26B (open weight)</td>
-                <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 font-mono text-xs text-body">api-gemma-4-31b</td>
-                <td className="px-4 py-3 text-body">TritonAI on-prem · Google Gemma 4 31B (open weight)</td>
                 <td className="px-4 py-3 text-right font-semibold text-ink">—</td>
               </tr>
             </tbody>
           </table>
           <div className="px-4 py-3 text-xs text-muted border-t border-line">
-            Counts current as of October 25, 2026. Every fallback rung is verified with a
+            Counts current as of November 1, 2026. Every fallback rung is verified with a
             real completion call — the gateway&rsquo;s model listing is not trusted, after it
             was found advertising models that reject actual requests.
           </div>
@@ -514,13 +506,14 @@ export default function AiAgentArchitecturePage() {
             quarter of the schedule at once, and the multi-tier layout silently rotted —
             jobs drifted onto models they were never assigned to. Consolidating on one
             well-matched open-weight default removes that failure surface: one model to
-            pin, one swap to run, one monitoring lane. A small second tier (Gemma 4 31B)
-            covers the two jobs where a reasoning model is wasted overhead, and three
+            pin, one swap to run, one monitoring lane. The Gemma 4 31B second tier was
+            retired when the hub pulled the model in late October — its two jobs moved to
+            the primary without missing a run — and two
             fallback models stand ready behind the primary.
           </p>
           <p>
             <strong className="text-ink">Strict fallback is a privacy boundary:</strong>{' '}
-            every fallback rung — DeepSeek V4 Flash, Gemma 4 26B, Gemma 4 31B — is an
+            every fallback rung — GLM 5.3 Flash, DeepSeek V4 Flash — is an
             open-weight model served by the same on-prem gateway. If the primary and all
             fallbacks fail, Hermes surfaces the failure instead of silently sending private
             context to a cloud provider. No fallback path ever leaves the institution.
@@ -939,6 +932,23 @@ export default function AiAgentArchitecturePage() {
         </div>
 
         <ol className="space-y-6 relative before:absolute before:top-2 before:bottom-2 before:left-[7px] before:w-0.5 before:bg-wash-green pl-8">
+          <li className="relative">
+            <TimelineDot />
+            <Eyebrow>
+              November 1, 2026
+            </Eyebrow>
+            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet grows to 99 jobs, Gemma tier retired after hub pulls the model</div>
+            <p className="text-sm text-body leading-6">
+              Four inference jobs joined the fleet (rc-x-promo, hrc-weekly-recap,
+              forum-promo-drafts, hrc-daily-meet-scan), all pinned to GLM 5.3. The TritonAI
+              hub retired Gemma 4 31B mid-week; the key-access monitor caught the access
+              change and the two jobs running on it were repinned to GLM 5.3, so the
+              fleet shape is now 64 inference jobs (61 on GLM 5.3, 3 on GLM 5.3 Flash),
+              35 deterministic scripts, 4 in monitor mode. The knowledge graph grew
+              from 904 to 909 nodes and 959 to 964 edges. The wiki grew from 1,471 to
+              1,494 pages.
+            </p>
+          </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
