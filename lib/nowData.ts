@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-10-25",
+  lastUpdated: "2026-11-01",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -37,7 +37,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "AI as institutional infrastructure",
       body:
-        "TritonGPT is available across campus and runs by default on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and it now works as an LTI tool in the learning management system, so courses can use it without a separate login. The campus-wide launch for faculty and staff shipped with a full training program behind it. Earlier this month I delivered the campus leadership update on the citizen developer and sovereign AI pillars, and it turned into a much longer conversation than planned. University-wide sessions follow in November and December, with citizen developers co-presenting.",
+        "TritonGPT is available across campus and runs by default on university-hosted infrastructure, so routine campus AI traffic stays on UC-controlled hardware. Voice mode and a coding sandbox are live in the assistant, and it now works as an LTI tool in the learning management system, so courses can use it without a separate login. The campus-wide launch for faculty and staff shipped with a full training program behind it. In mid-October I delivered the campus leadership update on the citizen developer and sovereign AI pillars, and it turned into a much longer conversation than planned. University-wide sessions follow in November and December, with citizen developers co-presenting.",
     },
     {
       label: "Governed AI enablement",
@@ -67,7 +67,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. The data science platform relaunches this month under a new name with refreshed documentation. A pilot systemwide inference service is taking shape: our campus provides the open-weight models, and three partner campuses consume them through our gateway. A small central team to coordinate access to AI platform capabilities is proposed.",
+        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. The data science platform relaunched this week under a new name with refreshed documentation, though the public announcement is embargoed until November 3. A pilot systemwide inference service is taking shape: our campus provides the open-weight models, and three partner campuses consume them through our gateway. A small central team to coordinate access to AI platform capabilities is proposed.",
     },
     {
       label: "Core infrastructure consolidation",
@@ -82,12 +82,12 @@ export const currentNow: NowSnapshot = {
     {
       label: "Systemwide and national AI strategy",
       body:
-        "A systemwide AI council is now negotiating systemwide licensing directly with the major model providers, and I'm pushing API-first access over single-vendor lock-in. Contracts are expected soon, with final decisions landing with the Regents by December. Our campus AI strategy goes to the Regents this month. Separately, our campus is the on-premises and open-source tier of that strategy. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group. I'm co-writing an article for a UC technology publication on campuses sharing one open-weight platform, and a recorded podcast conversation on the same theme is coming.",
+        "A systemwide AI council is now negotiating systemwide licensing directly with the major model providers, and I'm pushing API-first access over single-vendor lock-in. Contracts are expected soon, with final decisions landing with the Regents by December. Our campus AI strategy goes to the Regents this month. Separately, our campus is the on-premises and open-source tier of that strategy. I also joined the NASH AI Advisory Board, the first national AI effort built exclusively for public higher education systems, on its Data Infrastructure & Privacy working group. An article I'm co-writing for a UC technology publication on campuses sharing one open-weight platform is due out soon, and a recorded podcast conversation on the same theme is coming.",
     },
     {
       label: "The apps I build",
       body:
-        "Outside the day job I build iOS apps. Resolution Companion 1.6 is live on the App Store, adding per-habit reminders. Horse Racing Companion is live, with the fall meet opening in early November. Steel City Gameday is mid-season with its public Crew feature live, and a fix for cross-game replies shipped this week.",
+        "Outside the day job I build iOS apps. Resolution Companion 1.6 is live on the App Store, adding per-habit reminders. Horse Racing Companion is live, with the fall meet opening November 6. Steel City Gameday is mid-season with its public Crew feature live, and a fix for cross-game replies shipped recently.",
     },
   ],
 };
