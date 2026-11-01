@@ -203,7 +203,8 @@ export default function About() {
               <p className="text-base leading-7 text-body">
                 ASU+GSV Summit 2026 on shared AI at scale, TechTalk Summits on
                 governed enterprise AI, NACUBO 2026 on the build, buy, or
-                shared-services decision.
+                shared-services decision, and an EDUCAUSE Member QuickTalk on
+                the next data decision for institutions.
               </p>
               <Link href="/speaking" className="mt-4 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
                 Speaking page
