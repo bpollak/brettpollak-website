@@ -32,9 +32,16 @@ export type HomeUpdatesData = {
 };
 
 export const homeUpdates: HomeUpdatesData = {
-  lastUpdated: '2026-10-28',
+  lastUpdated: '2026-11-07',
   updates: [
     // ── UC San Diego work ─────────────────────────────────────────────
+    {
+      date: '2026-10-26',
+      area: 'work',
+      text: 'Harness 0.4.1: record a task, turn it into a reusable skill',
+      note: 'Demonstrate a task in your desktop apps and the agent works with you to turn the recorded steps into a skill you can reuse.',
+      href: 'https://tritonai.ucsd.edu/developer-apis/harness-release-notes.html',
+    },
     {
       date: '2026-10-04',
       area: 'work',
@@ -55,13 +62,6 @@ export const homeUpdates: HomeUpdatesData = {
       text: 'TritonGPT 4.6.6 reaches production',
       note: 'New default model on UC-hosted infrastructure, Voice Mode, and a coding sandbox.',
       href: 'https://tritonai.ucsd.edu/tritongpt/release-notes/9-8-2026-release.html',
-    },
-    {
-      date: '2026-08-30',
-      area: 'work',
-      text: 'Citizen developer guidance published',
-      note: 'How campus staff can build with approved AI tools, data classes, and supported hosting.',
-      href: 'https://tritonai.ucsd.edu/about/tritonai-updates.html',
     },
 
     // ── Personal work ─────────────────────────────────────────────────

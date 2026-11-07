@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-11-01",
+  lastUpdated: "2026-11-07",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -57,17 +57,17 @@ export const currentNow: NowSnapshot = {
     {
       label: "Student system stabilization",
       body:
-        "The student system held through fall enrollment after a difficult summer, and the class-planning tool has doubled in use as it becomes the go-to path for course planning. The work now is data quality cleanup and deciding the longer-term replacement path, which is firming around that same tool.",
+        "The student system held through fall enrollment after a difficult summer, and the Class Planner has doubled in use as it becomes the go-to path for course planning. The work now is data quality cleanup and deciding the longer-term replacement path, which is firming around that same tool.",
     },
     {
       label: "Data platform modernization",
       body:
-        "The lakehouse migration off our legacy data warehouse is in evaluation: the RFP closed with 19 bids, and the field is narrowing toward a hybrid architecture, one platform for data engineering and another for integration and governance. Vendor demos are running, with a decision likely December as pricing converges. The target architecture is firming: data lands in a lakehouse on university-owned cloud storage, and the reporting tools people already use stay as consumers. On the observability side, architecture is locked: open-format telemetry feeds a data lake that vendor tools consume from. UC San Diego owns its telemetry data. Endpoint security is moving to a shared systemwide product next year, with campus migration starting in the new year.",
+        "The lakehouse migration off our legacy data warehouse is in evaluation, and the target architecture is firming: data lands in a lakehouse on university-owned cloud storage, and the reporting tools people already use stay as consumers. On the observability side, open-format telemetry feeds a data lake that vendor tools consume from — UC San Diego owns its telemetry data. Endpoint security moves to a shared systemwide product next year.",
     },
     {
       label: "On-prem AI infrastructure and expansion",
       body:
-        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. The data science platform relaunched this week under a new name with refreshed documentation, though the public announcement is embargoed until November 3. A pilot systemwide inference service is taking shape: our campus provides the open-weight models, and three partner campuses consume them through our gateway. A small central team to coordinate access to AI platform capabilities is proposed.",
+        "The shared AI platform now runs assistants for several other campuses, and the newest partner went live in September. Two newer moves: a peer campus will start paying for gateway usage, a first step toward offering the gateway as a service, and a shared GPU cluster for data science and machine learning has received funding and is moving forward, with a smaller shared cluster for teaching and learning alongside it. The data science platform relaunched as PARASOL with refreshed documentation, and a school has invested in shared GPU compute that joins the existing teaching cluster. A pilot systemwide inference service is taking shape: our campus provides the open-weight models, and three partner campuses consume them through our gateway. A small central team to coordinate access to AI platform capabilities is proposed.",
     },
     {
       label: "Core infrastructure consolidation",
