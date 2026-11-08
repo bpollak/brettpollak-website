@@ -36,17 +36,17 @@ export interface TritonAiMetrics {
 }
 
 export const tritonAiMetrics: TritonAiMetrics = {
-  lastUpdated: '2026-10-18',
-  reportingPeriod: 'First nine months of 2026 (January–September)',
+  lastUpdated: '2026-11-08',
+  reportingPeriod: 'First ten months of 2026 (January–October)',
   gateway: {
-    tokensBillions: 527.0,
+    tokensBillions: 598.3,
     tokensSuffix: 'B',
-    tokensPeriodLabel: 'January–September 2026',
+    tokensPeriodLabel: 'January–October 2026',
     tokensPeakNote: 'peaking at 78.9B in August',
-    requestsMillions: 157.0,
+    requestsMillions: 166.8,
     requestsSuffix: 'M',
     requestsRouteNote: 'Across self-hosted and approved cloud routes',
-    selfHostedPercent: 90.6,
+    selfHostedPercent: 89.6,
     selfHostedSuffix: '%',
     selfHostedNote: 'Self-hosted and internal routes rather than commercial cloud',
   },
