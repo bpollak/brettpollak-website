@@ -65,7 +65,10 @@ export const mediaItems: MediaItem[] = [
 {
     publication: 'TechTalk Summits',
     title: 'From AI Pilots to Enterprise Platforms: Building Secure, Governed AI at Scale',
-    url: 'https://techtalksummits.com/',
+    // techtalksummits.com expired and is now a parked GoDaddy domain, so this
+    // points at the organizer's own LinkedIn announcement of the June 4, 2026
+    // San Diego Technology Executive Summit. Swap back if they relaunch a site.
+    url: 'https://www.linkedin.com/posts/tech-talk-summits_sandiegotech-californiatech-socaltech-activity-7466142470750334976-9CwX',
     date: '2026-06-04',
     category: 'speaking'
   },
