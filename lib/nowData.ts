@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-11-07",
+  lastUpdated: "2026-11-08",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -72,7 +72,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "Core infrastructure consolidation",
       body:
-        "We finished moving about 1,500 virtual machines to an alternative hypervisor in roughly seven months, and UC San Diego is now a reference campus for peers working through the same licensing shift. Now the question is the main on-campus data center: the colocation model is set, the first partner racks are arriving this month, but ownership and funding are still to land.",
+        "We finished moving about 1,500 virtual machines to an alternative hypervisor in roughly seven months, and UC San Diego is now a reference campus for peers working through the same licensing shift. Now the question is the main on-campus data center: the colocation model is set and the first partner commitments are in place, but ownership and funding are still to land.",
     },
     {
       label: "Identity management",
@@ -87,7 +87,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "The apps I build",
       body:
-        "Outside the day job I build iOS apps. Resolution Companion 1.6 is live on the App Store, adding per-habit reminders. Horse Racing Companion is live, with the fall meet opening November 6. Steel City Gameday is mid-season with its public Crew feature live, and a fix for cross-game replies shipped recently.",
+        "Outside the day job I build iOS apps. Resolution Companion 1.6 is live on the App Store, adding per-habit reminders. Horse Racing Companion is live, with the fall meet underway. Steel City Gameday is mid-season with its public Crew feature live, and a fix for cross-game replies shipped recently.",
     },
   ],
 };
