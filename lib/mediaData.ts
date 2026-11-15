@@ -75,16 +75,11 @@ export const mediaItems: MediaItem[] = [
 
 {
     publication: 'UC AI Council Webinar Series',
-    title: 'Mitigating Risk through Awareness: A Framework for AI Literacy',
-    url: 'https://ucop.zoom.us/webinar/register/WN_DxGMOcL1RdG-bcyOmfOC1Q',
-    date: '2026-06-03',
-    category: 'speaking'
-  },
-
-{
-    publication: 'UC AI Council Webinar Series',
     title: 'The AI Roadmap — Driving from Idea to Innovation',
-    url: 'https://ucop.zoom.us/webinar/register/WN_8LWHt6d-SayHX66A3WHwNA',
+    // The Zoom registration links for this series now return 404, so this
+    // points at UCOP's recap page, which names the panel and links the
+    // session recordings.
+    url: 'https://link.ucop.edu/2026/11/02/watch-recordings-from-the-ai-literacy-and-launch-webinar-series/',
     date: '2026-05-21',
     category: 'speaking'
   },
