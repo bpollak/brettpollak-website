@@ -16,8 +16,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Resolution Companion",
     "group": "app-store",
     "category": "AI-powered habit building",
-    "status": "Available on iOS · v1.6.0",
-    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Version 1.6.0 is now live on the App Store.",
+    "status": "Available on iOS · v1.6.1",
+    "description": "An iPhone app for identity-based habit change: define who you're becoming, complete small daily actions, and review progress with an AI coach. Version 1.6.1 is now live on the App Store.",
     "purpose": "Most habit apps count streaks, and one broken streak ends the habit. Resolution Companion starts from identity instead: name who you are becoming, then log small daily actions that reinforce it, with an AI coach in the loop for the days when motivation runs out.",
     "features": [
       "Identity-based plans, not streak counts",
@@ -40,7 +40,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Chat-based check-ins, weekly reviews, and direct habit adjustments from the Journey calendar. Nothing changes until it is confirmed."
       ]
     ],
-    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.6.0 is live on the App Store as of October 24, 2026.",
+    "boundary": "Resolution Companion is live on the App Store with a free core and an optional Premium subscription. Plans and actions are stored on the device; the AI coach provides motivational and informational guidance only. Version 1.6.1 is live on the App Store as of November 11, 2026.",
     "gallery": [
       {
         "image": "/resolution-companion-screen-today.webp",
@@ -86,8 +86,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Horse Racing Companion",
     "group": "app-store",
     "category": "Independent race-day analysis",
-    "status": "Available on iOS · v1.0.2 · Bing Crosby fall meet ready Nov 6–29",
-    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. Version 1.0.2 adds the fall Bing Crosby meet schedule and a Pool money card that shows exotic-pool prices beside the pick.",
+    "status": "Available on iOS · v1.0.3 · Bing Crosby fall meet Nov 6–29",
+    "description": "An independent iPhone app for Del Mar race days: one pick per race with the reasons, every horse's estimated win chance, and a saved record of each final pick beside the official result. Version 1.0.3 puts the current meet on the Season Pass screen, grades dead heats by official finish position, and adds the fall Bing Crosby meet schedule alongside the Pool money card that shows exotic-pool prices beside the pick.",
     "purpose": "A day at Del Mar had one frustrating part: the betting window. Horse Racing Companion weighs public odds, past Del Mar results for horses, trainers, jockeys, and post position the same way for every race — and says so when the information is not there.",
     "features": [
       "One pick per race: Win, Show, or a three-horse Trifecta box",
@@ -129,10 +129,10 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "group": "app-store",
     "category": "Sports group experience",
     "status": "Live on the App Store · Fall 2026",
-    "description": "A private iPhone app for Steelers fans: invite-only Crews share game-day chat, pregame picks, timed live polls, and season-long standings. Now live on the App Store for the 2026 season.",
+    "description": "An iPhone app for Steelers fans: private invite-only Crews plus an optional public Crew for fan chat, with game-day picks, timed live polls, and season-long standings. Live on the App Store for the 2026 season.",
     "purpose": "Watching the game apart is normal now, but group texts lose the season. Steel City Gameday turns the people you watch with into a Crew and gives every game a scored record that lasts all year.",
     "features": [
-      "Invite-only Crews — no public feed",
+      "Private Crews by invite, plus an optional public Crew for fan chat",
       "Pregame picks, editable until kickoff and private until they lock",
       "Timed Flash Picks while the game is live",
       "Season standings, receipts, and quarter races",
