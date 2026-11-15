@@ -211,7 +211,7 @@ export default function TritonGPTContent() {
             {
               title: "TritonAI Harness",
               description:
-                `UC San Diego's primary supported agent workspace, in pilot on Mac and Windows for anyone with a Gateway key. It works with local files, code, Microsoft 365, Google Workspace, GitHub, Kuali Build, and n8n under supervised approval modes. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
+                `UC San Diego's primary supported agent workspace, in pilot on Mac (Apple Silicon) and Windows for anyone with a Gateway key. It works with local files, code, Microsoft 365, Google Workspace, GitHub, Jira, Kuali Build, n8n, and Lucid under supervised approval modes. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
               href: "https://tritonai.ucsd.edu/developer-apis/harness.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
