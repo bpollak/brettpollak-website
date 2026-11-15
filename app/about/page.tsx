@@ -69,7 +69,7 @@ const eras = [
     years: "2024 – now",
     org: "UC San Diego",
     role: "Executive Director, IT Services",
-    body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for several other campuses. My current questions are adoption, governance, and how agent workflows fit campus operations.",
+    body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for other campuses, including UC Berkeley’s BearGPT and SCOUT at UC Merced. My current questions are adoption, governance, and how agent workflows fit campus operations.",
     tone: "coral" as const,
   },
 ];
@@ -181,9 +181,9 @@ export default function About() {
                 national AI effort built exclusively for public higher
                 education systems, serving on the Data Infrastructure &
                 Privacy working group. Named to the 2026–2027 Constellation
-                Research Business Transformation 150. Coverage in Forbes,
-                CIO.com, EdTech Magazine, EDUCAUSE Review, and 30+ other
-                outlets.
+                Research Business Transformation 150. The campus AI program
+                won a 2025 CIO 100 Award. Coverage in Forbes, CIO.com, EdTech
+                Magazine, EDUCAUSE Review, and 30+ other outlets.
               </p>
               <Link href="/media" className="mt-4 inline-block text-sm font-semibold text-signal-blue underline underline-offset-4">
                 Full media index

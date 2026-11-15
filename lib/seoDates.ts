@@ -31,7 +31,7 @@ export const staticPageDates: Record<string, string> = {
   "/ai-digest": "2026-10-12",
   "/ucsd-ai-news": "2026-09-08",
   "/work": "2026-09-05",
-  "/about": "2026-11-01",  // Talks card: added EDUCAUSE Member QuickTalk
+  "/about": "2026-11-15",  // Multi-campus instances named (BearGPT, SCOUT); 2025 CIO 100 Award added
   "/tritongpt": "2026-10-29",  // realigned with tritonai.ucsd.edu: build paths, cost model, rung ladder, workflow portfolio, roadmap statuses
   "/speaking": "2026-10-26",  // title in speaker JSON-LD
   "/products": "2026-10-26",  // RC walkthrough v1.6.0
