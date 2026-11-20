@@ -17,10 +17,10 @@ const secondaryLinks = [
 const writingLinks = [
   { href: '/ai-digest', label: 'The AI Digest' },
   { href: '/ucsd-ai-news', label: 'UCSD AI Weekly' },
+  { href: '/work', label: 'Selected work' },
   { href: '/media', label: 'Media & press' },
   { href: '/ai-agent-architecture', label: 'AI architecture' },
   { href: '/podcasts', label: 'Podcasts' },
-  { href: '/linkedin', label: 'LinkedIn' },
   { href: '/now', label: 'Current focus' },
 ];
 
@@ -87,7 +87,7 @@ export default function Header() {
             {primaryLinks.map(navLink)}
             <div ref={writingRef} className="relative" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setWritingOpen(false); }}>
               <button ref={writingButton} type="button" aria-expanded={writingOpen} aria-controls="writing-navigation" onClick={() => setWritingOpen(!writingOpen)} className={`${linkClass(writingActive)} gap-1.5`}>
-                Writing
+                Writing &amp; Notes
                 <svg aria-hidden="true" className={`h-3.5 w-3.5 transition-transform ${writingOpen ? 'rotate-180' : ''}`} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M4 6l4 4 4-4" /></svg>
               </button>
               {writingOpen && <div id="writing-navigation" className="absolute left-0 mt-2 w-60 rounded-sm border border-line bg-paper-strong p-2 shadow-lg">
@@ -103,7 +103,7 @@ export default function Header() {
         </div>
         {mobileOpen && <div id="mobile-navigation" className="max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-t border-line py-3 lg:hidden">
           {[...primaryLinks, ...secondaryLinks, { href: '/contact', label: 'Contact' }].map(mobileLink)}
-          <p className="rule-label px-3 pt-5 pb-2">Writing</p>
+          <p className="rule-label px-3 pt-5 pb-2">Writing &amp; Notes</p>
           {writingLinks.map(mobileLink)}
         </div>}
       </nav>

@@ -27,22 +27,22 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-10-28",  // homepage: work + apps rows refreshed (Discovery Series, SCOUT at UC Merced, SCG 1.0.8)
-  "/ai-digest": "2026-10-12",
-  "/ucsd-ai-news": "2026-09-08",
-  "/work": "2026-09-05",
-  "/about": "2026-11-15",  // Multi-campus instances named (BearGPT, SCOUT); 2025 CIO 100 Award added
-  "/tritongpt": "2026-10-29",  // realigned with tritonai.ucsd.edu: build paths, cost model, rung ladder, workflow portfolio, roadmap statuses
-  "/speaking": "2026-10-26",  // title in speaker JSON-LD
-  "/products": "2026-10-26",  // RC walkthrough v1.6.0
+  "/": "2026-11-20",  // homepage: branded title, CTA alignment, NACUBO talk, internal UCSD Weekly links, gateway dispatch
+  "/work": "2026-11-20",  // TritonAI case study updated through 2026
+  "/about": "2026-11-20",  // Writing card links added
+  "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
+  "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
+  "/products": "2026-11-20",  // absolute schema URLs, title punctuation, direct LinkedIn CTA
+  "/products/resolution-companion": "2026-11-20",  // v1.6.1 caption refresh
+  "/products/passports-visitor-management": "2026-11-20",  // clarified prototype vs campus production
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-11-15",
+  "/ai-agent-architecture": "2026-11-20",  // Gemma timing fix, changelog privacy scrub & monthly rollup
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-10-26",  // title
   "/tritonai-meeting-scheduler": "2026-10-04",
   "/sent-using-tritonai": "2026-10-02",
-  "/contact": "2026-10-26",  // title
+  "/contact": "2026-11-20",  // dual-audience framing + app feedback topic
   "/products/horse-racing-companion": "2026-09-09",
   "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store
 };

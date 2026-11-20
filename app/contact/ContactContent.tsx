@@ -9,10 +9,10 @@ export default function ContactContent() {
           <p className="rule-label mb-6">Connect</p>
           <h1 className="page-title mb-6">Connect</h1>
           <p className="page-intro mb-6">
-            I&apos;m glad to connect with people in higher education working through similar questions about AI and governance.
+            Get in touch about higher-education AI, speaking invitations, or the iOS apps I build.
           </p>
           <p className="max-w-3xl text-xl leading-relaxed text-body">
-            If you&apos;re building something or want to share what your institution is learning, reach out.
+            Whether you&apos;re comparing notes across campuses, planning a session, or sending feedback on an app, write here.
           </p>
         </div>
       </section>
@@ -69,32 +69,32 @@ export default function ContactContent() {
               <div className="border-t border-line pt-8">
                 <h3 className="text-xl font-bold text-signal-gold-ink mb-4">Useful context</h3>
                 <p className="text-body mb-4 leading-relaxed">
-                  It&apos;s helpful to know a bit about what your institution is working through, especially around:
+                  A few details help me give a faster, more useful reply:
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-body">Cross-institution collaboration or shared learning</span>
+                    <span className="text-body">Speaking or panels: audience, target date, format, and topic focus</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-body">Research, writing, or panels with a learning focus</span>
+                    <span className="text-body">Higher-ed peers: what your campus is testing or running in production</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-body">Practical challenges from campus pilots or production systems</span>
+                    <span className="text-body">Apps: which app you&apos;re using (Resolution Companion, Horse Racing Companion, or Steel City Gameday) and what you ran into</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-body">What has and hasn&apos;t worked at your institution</span>
+                    <span className="text-body">Press or research: publication, deadline, and angle</span>
                   </li>
                 </ul>
               </div>

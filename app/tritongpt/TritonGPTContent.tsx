@@ -165,7 +165,7 @@ export default function TritonGPTContent() {
 	            {
 	              title: "Instructional AI",
 	              description:
-	                "A Canvas-integrated AI Tutor for each participating course. Instructors choose the material it can retrieve, what stays hidden, and whether it answers in Socratic or directive mode. The Fall 2026 cohort is open.",
+	                "A Canvas-integrated AI Tutor for each participating course. Instructors choose the material it can retrieve, what stays hidden, and whether it answers in Socratic or directive mode. Participating courses are running in Fall 2026 with upcoming quarters open for instructor onboarding.",
 	              href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
 	              icon: (
 	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +211,7 @@ export default function TritonGPTContent() {
             {
               title: "TritonAI Harness",
               description:
-                `UC San Diego's primary supported agent workspace, in pilot on Mac (Apple Silicon) and Windows for anyone with a Gateway key. It works with local files, code, Microsoft 365, Google Workspace, GitHub, Jira, Kuali Build, n8n, and Lucid under supervised approval modes. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
+                `UC San Diego's primary supported agent workspace, available on Mac (Apple Silicon) and Windows for anyone with a Gateway key. It works with local files, code, Microsoft 365, Google Workspace, GitHub, Jira, Kuali Build, n8n, and Lucid under supervised approval modes. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
               href: "https://tritonai.ucsd.edu/developer-apis/harness.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -513,8 +513,6 @@ export default function TritonGPTContent() {
                 <div className="relative">
                   <video
                     className="w-full aspect-video bg-black"
-                    autoPlay
-                    loop
                     muted
                     playsInline
                     controls
@@ -911,7 +909,7 @@ export default function TritonGPTContent() {
             {
               title: "Instructional AI Expansion",
               status: "Pilot",
-              desc: "Canvas-integrated AI Tutors are live for participating courses, and instructors can sign up for the Fall 2026 cohort. In the 2025–2026 pilot survey, 81% said it helped them understand concepts and 86% found it easy to use. Self-service course activation is in development.",
+              desc: "Canvas-integrated AI Tutors are live for participating courses in Fall 2026, with upcoming quarters open for instructor onboarding. In the 2025–2026 pilot survey, 81% said it helped them understand concepts and 86% found it easy to use. Self-service course activation is in development.",
             },
             {
               title: "Supported Rollout",

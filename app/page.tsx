@@ -26,7 +26,7 @@ function iconForUrl(url: string): string | null {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Technology leadership at UC San Diego, and the apps I build outside it',
+    absolute: 'Brett Pollak | Technology leadership at UC San Diego, and the apps I build outside it',
   },
   alternates: {
     canonical: 'https://brettcpollak.com/',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Technology leadership at UC San Diego, and the apps I build outside it',
+    title: 'Brett Pollak | Technology leadership at UC San Diego, and the apps I build outside it',
     description:
       'Technology leadership at UC San Diego, and the apps I build outside it — from institutional AI to independent iPhone apps.',
     url: 'https://brettcpollak.com/',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Technology leadership at UC San Diego, and the apps I build outside it',
+    title: 'Brett Pollak | Technology leadership at UC San Diego, and the apps I build outside it',
     description:
       'Technology leadership at UC San Diego, and the apps I build outside it — from institutional AI to independent iPhone apps.',
     images: ['/brett-pollak-og-card.png'],
@@ -341,12 +341,12 @@ export default function Home() {
               and AI. Nights and weekends I design and ship my own products.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/products" className="button-primary">See the work</Link>
+              <Link href="/products" className="button-primary">See projects</Link>
               <Link href="/ai-digest" className="button-secondary bg-paper-strong">Read the digest</Link>
             </div>
             <p className="mt-8 text-sm text-body">
               <Link href="/speaking" className="hover:text-ink">
-                Recent talks: <span className="font-semibold text-ink">EDUCAUSE · ASU+GSV · UC AI Council</span>
+                Recent talks: <span className="font-semibold text-ink">EDUCAUSE · NACUBO · ASU+GSV · UC AI Council</span>
               </Link>
             </p>
           </div>
@@ -539,9 +539,9 @@ export default function Home() {
               <ul className="divide-y divide-line border-b border-line">
                 {latestNewsletterItems.map(item => (
                   <li key={item.headline}>
-                    <a href={item.url} className="group block py-3.5">
+                    <Link href={`/ucsd-ai-news/${latestNewsletterEdition.isoDate}`} className="group block py-3.5">
                       <span className="block text-base font-medium leading-6 text-ink group-hover:text-signal-blue">{item.headline}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -572,13 +572,13 @@ export default function Home() {
             <p className="mt-5 text-base leading-7 text-on-dark">
               I speak to institutional leaders, IT conferences, and campus communities on
               moving AI from experimental pilots to production infrastructure, governed agent workflows,
-              and citizen developer models.
+              and shared multi-campus platforms.
             </p>
             <ol className="mt-7 border-t border-white/15">
               {[
                 { title: 'Institutional AI: From Pilot to Service', note: 'Architecture, governance, and on-premises hosting at university scale' },
-                { title: 'Agentic AI Workflows in Higher Ed', note: 'Supervised agents, administrative bottlenecks, and guardrails' },
-                { title: 'The Citizen Developer Program', note: 'Empowering campus staff with governed APIs and compute credits' },
+                { title: 'Agentic AI Workflows in Higher Ed', note: 'Supervised agents, operational ROI, and human review gates' },
+                { title: 'Governed Agent Workspaces and Shared Infrastructure', note: 'Gateway keys, developer enablement, and multi-campus AI economics' },
               ].map((talk, index) => (
                 <li key={talk.title} className="grid grid-cols-[2.25rem_1fr] border-b border-white/15 py-3.5">
                   <span className="font-mono text-xs text-on-dark-muted">{String(index + 1).padStart(2, '0')}</span>

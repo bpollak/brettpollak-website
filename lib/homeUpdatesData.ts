@@ -32,9 +32,16 @@ export type HomeUpdatesData = {
 };
 
 export const homeUpdates: HomeUpdatesData = {
-  lastUpdated: '2026-11-07',
+  lastUpdated: '2026-11-20',
   updates: [
     // ── UC San Diego work ─────────────────────────────────────────────
+    {
+      date: '2026-11-08',
+      area: 'work',
+      text: 'TritonAI Gateway crosses 598B tokens and 166M requests',
+      note: 'January–October 2026 campus usage, with 89.6% served on self-hosted university infrastructure.',
+      href: 'https://tritonai.ucsd.edu/developer-apis/index.html',
+    },
     {
       date: '2026-10-26',
       area: 'work',
@@ -56,42 +63,28 @@ export const homeUpdates: HomeUpdatesData = {
       note: 'After an early-access preview, UC Merced’s assistant is available campus-wide on the shared TritonAI platform.',
       href: 'https://tritonai.ucsd.edu/about/tritonai-updates.html',
     },
-    {
-      date: '2026-09-08',
-      area: 'work',
-      text: 'TritonGPT 4.6.6 reaches production',
-      note: 'New default model on UC-hosted infrastructure, Voice Mode, and a coding sandbox.',
-      href: 'https://tritonai.ucsd.edu/tritongpt/release-notes/9-8-2026-release.html',
-    },
 
     // ── Personal work ─────────────────────────────────────────────────
     {
-      date: '2026-10-24',
+      date: '2026-11-11',
       area: 'personal',
-      text: 'Resolution Companion 1.6.0 released — reminders for each habit',
-      note: 'Set a separate reminder time for each habit, so each nudge arrives when it is useful.',
+      text: 'Resolution Companion 1.6.1 released: per-habit reminders and polish',
+      note: 'Each reminder card names a routine that fits the suggested time, alongside fixes and polish.',
       href: 'https://resolutioncompanion.com/',
     },
     {
-      date: '2026-10-18',
+      date: '2026-11-06',
       area: 'personal',
-      text: 'Resolution Companion 1.5.0 released — say your resolution to Coach',
-      note: 'Tell Coach your goal in your own words, plan a January 1 start, and share a card of your year.',
-      href: 'https://resolutioncompanion.com/',
+      text: 'Horse Racing Companion 1.0.3 live for Del Mar fall meet',
+      note: 'Bing Crosby meet (Nov 6–29) included in the season pass, with official finish grading for dead heats.',
+      href: 'https://horseracingcompanion.com/',
     },
     {
       date: '2026-10-08',
       area: 'personal',
-      text: 'Steel City Gameday 1.0.8 released — a public Crew for fans',
+      text: 'Steel City Gameday 1.0.8 released: public Crew for fans',
       note: 'Join Steel City Public Crew to chat and make picks with other fans, alongside your private Crews.',
       href: 'https://steelcitygameday.com/updates/',
-    },
-    {
-      date: '2026-09-09',
-      area: 'personal',
-      text: 'Horse Racing Companion 1.0.2 approved — fall meet ready',
-      note: 'Bing Crosby meet (Nov 6–29) included in the summer pass at no extra charge; new Pool money card shows exotic-pool prices beside the pick. Summer record: 47 of 105 final picks matched (44.8%).',
-      href: 'https://horseracingcompanion.com/',
     },
 
     // ── Media & speaking ──────────────────────────────────────────────

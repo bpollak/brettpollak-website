@@ -16,7 +16,13 @@ const WEB3FORMS_ACCESS_KEY =
 
 export default function ContactForm() {
   const params = useSearchParams();
-  const initialSubject = params.get('topic') === 'speaking' ? 'Speaking Engagement' : '';
+  const topic = params.get('topic');
+  const initialSubject =
+    topic === 'speaking'
+      ? 'Speaking Engagement'
+      : topic === 'apps'
+        ? 'App Feedback / Support'
+        : '';
   return <ContactFormFields key={initialSubject} initialSubject={initialSubject} />;
 }
 
@@ -150,6 +156,7 @@ function ContactFormFields({ initialSubject }: { initialSubject: string }) {
             <option value="Collaboration">Collaboration Opportunity</option>
             <option value="Advisory">Advisory Inquiry</option>
             <option value="Media">Media Request</option>
+            <option value="App Feedback / Support">App Feedback / Support</option>
             <option value="Other">Other</option>
           </select>
         </div>

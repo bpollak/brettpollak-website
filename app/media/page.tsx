@@ -165,6 +165,26 @@ export default function Media() {
   const firstYear = Math.min(...sortedItems.map((item) => Number(item.date.slice(0, 4))));
   const latestYear = Math.max(...sortedItems.map((item) => Number(item.date.slice(0, 4))));
 
+  // Only mark Brett Pollak as author on pieces he wrote/coauthored; press
+  // coverage, interviews, speaking listings, and awards reference him as `about`.
+  const AUTHORED_URLS = new Set([
+    'https://www.cio.com/article/4158048/how-poor-data-foundations-can-undermine-ai-success.html',
+    'https://er.educause.edu/articles/2025/2/ushering-in-a-new-era-of-ai-driven-data-insights-at-uc-san-diego',
+    'https://er.educause.edu/articles/2015/11/responsive-web-design-in-higher-ed',
+    'https://library.educause.edu/resources/2015/12/mobile-apps-in-higher-education-developing-an-institutional-governance-strategy',
+    'https://library.educause.edu/resources/2014/9/understanding-responsive-web-design-in-higher-education',
+    'https://evolllution.com/opinions/shifting-to-responsive-web-design',
+  ]);
+  const isAuthoredByBrett = (item: MediaItem) =>
+    item.url.includes('linkedin.com/pulse/') || AUTHORED_URLS.has(item.url);
+
+  const brettPersonRef = {
+    "@type": "Person",
+    "@id": "https://brettcpollak.com/#person",
+    "name": "Brett Pollak",
+    "url": "https://brettcpollak.com/"
+  };
+
   // Create ItemList schema for all media items (for SEO)
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -177,11 +197,9 @@ export default function Media() {
         "headline": item.title,
         "url": item.url,
         "datePublished": item.date,
-        "author": {
-          "@type": "Person",
-          "name": "Brett Pollak",
-          "url": "https://brettcpollak.com/"
-        },
+        ...(isAuthoredByBrett(item)
+          ? { "author": brettPersonRef }
+          : { "about": brettPersonRef }),
         "publisher": {
           "@type": "Organization",
           "name": item.publication

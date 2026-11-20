@@ -54,32 +54,32 @@ const SPEAKING_TOPICS = [
   {
     title: 'Institutional AI: From Pilot to Service',
     description:
-      'How UC San Diego developed an institutional AI service from an early pilot. Covers architecture, governance, on-premises hosting, and lessons from campus use.',
-    takeaway: 'What it takes to move from a pilot to a supported campus service.',
+      'How UC San Diego grew TritonGPT from an early pilot into a supported campus service with 89%+ self-hosted traffic. Covers architecture, governance, on-premises hosting at SDSC, and lessons from real campus adoption.',
+    takeaway: 'What it takes to move from a pilot to a supported, accountable campus service.',
   },
   {
     title: 'Agentic AI Workflows in Higher Education',
     description:
-      'How supervised AI agents are being tested in administrative workflows, including contract review, financial data questions, and transcript matching. Covers controls, review, and measured results.',
-    takeaway: 'How to choose a workflow with clear limits and decide where human review belongs.',
+      'How supervised AI agents are moving from personal productivity into core university operations, including contract review, transcript matching, and institutional data Q&A. Covers controls, human review gates, and measured ROI.',
+    takeaway: 'How to pick workflows with real operational payoff and decide where human review belongs.',
   },
   {
-    title: 'AI Governance in Practice',
+    title: 'Governed Agent Workspaces and Developer Enablement',
     description:
-      'A practical look at data classification, review, and guardrails for institutional AI. Includes where governance has helped and where questions remain unresolved.',
-    takeaway: 'Questions to ask about data access, oversight, and responsibility before expanding use.',
+      'How UC San Diego equips developers and campus builders with one Gateway key, the TritonAI Harness, reusable skills, and a clear promotion ladder from local prototype to enterprise service.',
+    takeaway: 'How to help campus teams build with AI without duplicating platforms or losing governance.',
   },
   {
-    title: 'The Citizen Developer Program',
+    title: 'AI Governance and Data Foundations in Practice',
     description:
-      'How UC San Diego supports staff, researchers, and faculty as they build AI tools. Includes credits, templates, guardrails, and the steps from an idea to a supported application.',
-    takeaway: 'How to support people building tools without leaving each department to manage its own platform.',
+      'A practical look at data classification (P1-P4), gateway metering, review gates, and why weak data foundations stall AI programs. Covers where governance has helped and where hard tradeoffs remain.',
+    takeaway: 'Concrete questions to settle on data access, cost controls, and ownership before scaling.',
   },
   {
-    title: 'AI as Institutional Infrastructure',
+    title: 'Shared AI Infrastructure Across Institutions',
     description:
-      'How shared AI infrastructure can support campus services while reducing duplicated setup across departments. Includes examples from UC San Diego and peer institutions using related approaches.',
-    takeaway: 'How to compare shared services, local hosting, and cloud access against institutional needs.',
+      'Build, buy, or share: how UC San Diego runs a multi-tenant AI platform supporting UC Berkeley, UC Merced, UC ANR, and Fairleigh Dickinson, and how shared services change the economics of campus AI.',
+    takeaway: 'How to weigh shared university services, local hosting, and commercial cloud against institutional budgets.',
   },
 ];
 
@@ -180,7 +180,7 @@ export default function SpeakingPage() {
             <a href="#speaker-resources" className="button-secondary">Bio &amp; headshot</a>
           </div>
           <nav aria-label="Speaking page sections" className="reading-links mt-6">
-            <a href="#topics">Topics</a><a href="#recording">Watch a session</a><a href="#engagements">Recent engagements</a>
+            <a href="#topics">Topics</a><a href="#recording">Watch a session</a><a href="#speaker-resources">For event organizers</a><a href="#engagements">Recent engagements</a>
           </nav>
         </div>
       </section>
@@ -202,13 +202,13 @@ export default function SpeakingPage() {
 
         <section id="recording" className="mb-14 grid gap-8 border-y border-line py-8 md:grid-cols-2">
           <div>
-            <p className="rule-label mb-3">Watch a session · September 2024</p>
-            <h2 className="mb-4 text-3xl font-medium">A conversation about TritonGPT</h2>
-            <p className="text-body leading-7">A UC Tech webinar with Vince Kellen, Allorah Pradenas, and me on the platform, campus use, and collaboration with other institutions. This recording reflects the program at that time.</p>
+            <p className="rule-label mb-3">Watch a session · May 2026</p>
+            <h2 className="mb-4 text-3xl font-medium">The AI Roadmap: Driving from Idea to Innovation</h2>
+            <p className="text-body leading-7">A UC AI Council webinar session on moving institutional AI from early ideas into governed campus services, covering platform strategy, adoption, and shared lessons across the University of California.</p>
           </div>
           <div className="editorial-panel flex flex-col justify-center p-6">
-            <a className="button-primary w-fit" href="https://www.youtube.com/watch?v=0V8TmUXY-z4" target="_blank" rel="noopener noreferrer">Watch the webinar on YouTube ↗</a>
-            <a className="mt-5 text-sm font-semibold text-signal-blue underline underline-offset-4" href="https://uctechnews.ucop.edu/tritongpt-webinar-recap-democratizing-ai-for-uc-san-diego-and-the-broader-higher-education-community/">Read the UC Tech recap</a>
+            <a className="button-primary w-fit" href="https://link.ucop.edu/2026/11/02/watch-recordings-from-the-ai-literacy-and-launch-webinar-series/" target="_blank" rel="noopener noreferrer">Watch the 2026 UC AI Council recordings ↗</a>
+            <a className="mt-5 text-sm font-semibold text-signal-blue underline underline-offset-4" href="https://www.youtube.com/watch?v=0V8TmUXY-z4" target="_blank" rel="noopener noreferrer">Earlier session: September 2024 TritonGPT UC Tech webinar (YouTube) ↗</a>
           </div>
         </section>
 
