@@ -10,7 +10,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "slug": "resolution-companion",
     "image": "/resolution-companion-social.webp",
     "imageAlt": "Resolution Companion: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.",
-    "imageCaption": "Current social card from resolutioncompanion.com, captured September 8, 2026. The site also shows Today, Journey, Plan, and Coach screens from version 1.4.",
+    "imageCaption": "Current social card from resolutioncompanion.com. App screens below show the core Today, Plan, Journey, and Coach flows; version 1.6.1 is live on the App Store.",
     "imageWidth": 1200,
     "imageHeight": 630,
     "title": "Resolution Companion",
@@ -242,8 +242,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Passports Visitor Management",
     "group": "campus-tools",
     "category": "Visitor services",
-    "status": "Web prototype \u00b7 walkthrough",
-    "description": "A campus visitor-management prototype with a location-based check-in entry point for passport services.",
+    "status": "Early web prototype \u00b7 campus service now in production",
+    "description": "The early campus visitor-management prototype behind UC San Diego's Passport Services check-in flow, with a location-based entry point and staff queue dashboard.",
     "purpose": "A visitor\u2019s first step should be easy to find. This prototype presents the service location first and gives visitors a clear starting point for check-in.",
     "features": [
       "Location-based check-in",
@@ -265,7 +265,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "The app also includes an employee-dashboard entry for the staff side of the experience."
       ]
     ],
-    "boundary": "This is a prototype overview, not an announcement of a campus service rollout. The public entry page was reviewed; end-to-end check-in and staff-dashboard behavior have not been independently verified for this walkthrough. No visitor records are shown."
+    "boundary": "This walkthrough documents the early web prototype captured in September 2026. Passport Visitor Management has since moved into campus production at two UC San Diego locations (see the TritonAI portfolio overview). No visitor records are shown here."
   },
   {
     "slug": "school-brief",

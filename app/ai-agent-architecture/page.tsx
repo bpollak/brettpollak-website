@@ -421,7 +421,7 @@ export default function AiAgentArchitecturePage() {
             inference jobs pair with monitor
             mode: a deterministic script checks the source first, and the model call is
             skipped entirely when nothing changed. When the hub retired the Gemma 4 31B
-            model last week, the key-access monitor caught it and the affected jobs were
+            model in late October, the key-access monitor caught it and the affected jobs were
             repinned to GLM 5.3 the same day, before any scheduled run failed. The
             fallback chain (GLM 5.3 Flash, DeepSeek V4 Flash) is
             rebuilt from verified completions, since the gateway&rsquo;s model listing
@@ -937,26 +937,11 @@ export default function AiAgentArchitecturePage() {
             <Eyebrow>
               November 15, 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet steady at 99 jobs, graph adds 48 nodes</div>
+            <div className="text-ink font-semibold mb-1">Fleet steady at 99 jobs, graph at 984 nodes, wiki at 1,581 pages</div>
             <p className="text-sm text-body leading-6">
-              No jobs added or retired this week; the fleet shape is unchanged at 64
-              inference jobs (61 on GLM 5.3, 3 on GLM 5.3 Flash), 35 deterministic
-              scripts, 4 in monitor mode. The knowledge graph grew from 936 to 984
-              nodes and 991 to 1,048 edges. The wiki grew from 1,533 to 1,581 pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              November 8, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet steady at 99 jobs, graph and wiki keep growing</div>
-            <p className="text-sm text-body leading-6">
-              No jobs added or retired this week; the fleet shape is unchanged at 64
-              inference jobs (61 on GLM 5.3, 3 on GLM 5.3 Flash), 35 deterministic
-              scripts, 4 in monitor mode. The knowledge graph grew
-              from 909 to 936 nodes and 964 to 991 edges. The wiki grew from 1,494 to
-              1,533 pages.
+              Fleet shape holds at 64 inference jobs (61 on GLM 5.3, 3 on GLM 5.3 Flash),
+              35 deterministic scripts, and 4 jobs in monitor mode. The knowledge graph
+              reached 984 nodes and 1,048 edges, and the wiki reached 1,581 pages.
             </p>
           </li>
           <li className="relative">
@@ -964,264 +949,41 @@ export default function AiAgentArchitecturePage() {
             <Eyebrow>
               November 1, 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet grows to 99 jobs, Gemma tier retired after hub pulls the model</div>
+            <div className="text-ink font-semibold mb-1">Fleet reaches 99 jobs; Gemma tier retired after hub catalog change</div>
             <p className="text-sm text-body leading-6">
-              Four inference jobs joined the fleet (rc-x-promo, hrc-weekly-recap,
-              forum-promo-drafts, hrc-daily-meet-scan), all pinned to GLM 5.3. The TritonAI
-              hub retired Gemma 4 31B mid-week; the key-access monitor caught the access
-              change and the two jobs running on it were repinned to GLM 5.3, so the
-              fleet shape is now 64 inference jobs (61 on GLM 5.3, 3 on GLM 5.3 Flash),
-              35 deterministic scripts, 4 in monitor mode. The knowledge graph grew
-              from 904 to 909 nodes and 959 to 964 edges. The wiki grew from 1,471 to
-              1,494 pages.
+              Four inference jobs joined the fleet, all pinned to GLM 5.3. When the TritonAI
+              hub retired Gemma 4 31B mid-week, the key-access monitor caught the change
+              and the two jobs running on it were repinned to GLM 5.3 before any run failed.
             </p>
           </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
-              October 25, 2026
+              October 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet steady at 95 jobs, graph crosses 900 nodes, wiki nears 1,500 pages</div>
+            <div className="text-ink font-semibold mb-1">Steady growth across the graph and wiki; coding-session memory mirrored</div>
             <p className="text-sm text-body leading-6">
-              No jobs added or retired this week; the fleet shape is unchanged at 60
-              inference jobs (55 on GLM 5.3, 3 on GLM 5.3 Flash, 2 on Gemma 4 31B),
-              35 deterministic scripts, 4 in monitor mode. The knowledge graph grew
-              from 894 to 904 nodes and 949 to 959 edges. The wiki grew from 1,433 to
-              1,471 pages, led by continued growth across people and decision pages.
+              The fleet held at 95 enabled jobs through October while the knowledge graph
+              crossed 900 nodes and the wiki grew from 1,278 to 1,471 pages. A new session
+              memory sync began mirroring coding-agent memory pages into the wiki tree
+              alongside ongoing people, project, and decision updates.
             </p>
           </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
-              October 18, 2026
+              September 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet steady at 95 jobs, graph and wiki keep growing</div>
+            <div className="text-ink font-semibold mb-1">Three-agent shared memory, monitor mode, vision offload, and GLM 5.3 Flash tier</div>
             <p className="text-sm text-body leading-6">
-              No jobs added or retired this week; the fleet shape is unchanged at 60
-              inference jobs (55 on GLM 5.3, 3 on GLM 5.3 Flash, 2 on Gemma 4 31B),
-              35 deterministic scripts, 4 in monitor mode. The knowledge graph grew
-              from 857 to 894 nodes and 913 to 949 edges. The wiki grew from 1,394 to
-              1,433 pages, led by continued growth across people and decision pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              October 11, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet steady at 95 jobs, graph and wiki keep growing</div>
-            <p className="text-sm text-body leading-6">
-              No jobs added or retired this week; the fleet shape is unchanged at 60
-              inference jobs (55 on GLM 5.3, 3 on GLM 5.3 Flash, 2 on Gemma 4 31B),
-              35 deterministic scripts, 4 in monitor mode. The knowledge graph grew
-              from 838 to 857 nodes and 894 to 913 edges. The wiki grew from 1,360 to
-              1,394 pages, led by continued growth across people and decision pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              October 4, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet steady at 95 jobs, graph and wiki grow</div>
-            <p className="text-sm text-body leading-6">
-              No jobs added or retired this week; the fleet shape is unchanged at 60
-              inference jobs (55 on GLM 5.3, 3 on GLM 5.3 Flash, 2 on Gemma 4 31B),
-              35 deterministic scripts, 4 in monitor mode. The knowledge graph grew
-              from 829 to 838 nodes and 885 to 894 edges. The wiki grew from 1,278 to
-              1,360 pages, with most of the jump coming from a new Claude Code memory
-              sync that mirrors 74 session-memory pages into the wiki tree, alongside
-              steady growth across people and decision pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 27, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet at 95 jobs, wiki passes 1,275 pages</div>
-            <p className="text-sm text-body leading-6">
-              Three deterministic scripts joined the fleet and none were retired: a Silas
-              contact-lens fitting reminder, a weekly agentshield audit, and a Granola
-              actions inbox. A third tier appeared in the inference layer: three lightweight
-              recurring scans now run on GLM 5.3 Flash (the X digest draft and two Steel
-              City Gameday jobs), so the fleet shape is 60 inference jobs (55 on GLM 5.3,
-              3 on GLM 5.3 Flash, 2 on Gemma 4 31B), 35 deterministic scripts, 4 in monitor
-              mode. The knowledge graph grew from 810 to 829 nodes and 866 to 885 edges, and
-              the wiki grew from 1,179 to 1,278 pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 20, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet passes 90 jobs, wiki tops 1,175 pages</div>
-            <p className="text-sm text-body leading-6">
-              Six jobs joined the fleet and none were retired: podcast-comment-draft,
-              weekly-site-metrics, and four Steel City Gameday jobs (scg-daily-scan,
-              scg-weekly-beat, scg-gameday, SCG daily traffic ping). Fleet shape is now
-              60 inference jobs (58 on GLM 5.3, 2 on Gemma 4 31B), 32 deterministic
-              scripts, 4 in monitor mode. The wiki grew from 1,100 to 1,179 pages, and
-              Sunday&rsquo;s knowledge-graph rebuild left the graph at 810 nodes and 866
-              edges.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 13, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: fleet at 86 jobs, wiki passes 1,100 curated pages</div>
-            <p className="text-sm text-body leading-6">
-              One job joined the fleet (daily-x-digest-tweet-draft, an 8 AM X post draft
-              built from the morning AI digest) and one was retired
-              (harness-review-quarterly, whose mission-control targets no longer exist).
-              The new job arrived unpinned and was pinned to TritonAI GLM 5.3, keeping the
-              every-job-pinned rule intact. The knowledge graph grew from 873 to 886 nodes
-              and 926 to 930 edges, and the wiki grew from 1,076 to 1,100 curated pages.
-              Fleet shape is otherwise unchanged: 55 inference jobs (53 on GLM 5.3, 2 on
-              Gemma 4 31B), 31 deterministic scripts, 4 in monitor mode.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 11, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Memory ecosystem goes three-agent: Claude Code, Codex, and Hermes share one memory</div>
-            <p className="text-sm text-body leading-6">
-              The two-way bridge described on this page is now the default for every
-              coding agent I run. Claude Code and Codex on both Macs get wiki, graph,
-              and memory context injected at session start through hooks, query the
-              same stores through an MCP server mid-session, and write recaps back to
-              an inbox that a nightly job promotes into the wiki and decision log.
-              Claude Code&rsquo;s own durable memories mirror into the wiki in both
-              directions. Fleet stands at 85 enabled jobs (52 on GLM 5.3, 2 on Gemma
-              4 31B, 31 deterministic scripts, 4 in monitor mode); the knowledge graph
-              is at 873 nodes and 926 edges, and the wiki at 1,076 curated pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 9, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Evening update: graph crosses 860, wiki passes 1,044 curated pages</div>
-            <p className="text-sm text-body leading-6">
-              The nightly team-vault ingest returned from a five-day deadlock and processed
-              the backlog: the knowledge graph grew from 852 to 860 nodes and 888 to 904
-              edges, and the wiki grew from 1,038 to 1,044 curated pages. The homepage now
-              carries a summary of this architecture with links into each section.
-            </p>
-            <TimelineDot />
-            <Eyebrow>
-              September 9, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly refresh: 86 jobs, vision offload, OpenClaw-era router paragraph retired</div>
-            <p className="text-sm text-body leading-6">
-              Fleet grew from 83 to 86 enabled jobs (TritonAI roadmap auto-review, an Agent
-              Wiki digest, a Resolution Companion marketing heartbeat), and monitor mode
-              expanded from three jobs to four. Vision now offloads — GLM 5.3 is text-only, so
-              image analysis runs on a vision-capable model behind the same TritonAI gateway
-              and returns a text description into the conversation. The two-hour
-              &ldquo;autonomous router&rdquo; this page described was an OpenClaw-era mechanism
-              that never survived the migration; routing health rests on pinned jobs, catalog
-              monitoring, and a fallback chain whose three rungs were re-verified with live
-              completion calls today. Knowledge graph grew from 848 to 852 nodes and 884 to
-              888 edges; the wiki grew from 1,008 to 1,038 pages, led by 16 new people pages,
-              7 project pages, and 3 decision pages.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 6, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly stats refresh: 83 jobs, graph +45 nodes, wiki crosses 1,000 pages</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge graph grew from 803 to 848 nodes and 844 to 884 edges. The wiki
-              crossed a thousand pages, growing from 898 to 1,008 (+110): the largest single
-              addition is a 60-page mirror of Claude Code work-session memories from the
-              work Mac, plus new project pages for four TritonAI initiatives (comeback
-              cohort agent, course redesign studio, recharge cost attribution engine,
-              student voice intelligence engine). Four jobs joined the fleet
-              (agent-session-ingest, which pulls Claude Code and Codex session recaps into
-              the wiki; decision-brief-weekly; vendor-terms-watch;
-              opportunity-validation-loop) and the daily enhancement sprint was retired.
-              The fleet now stands at 83 enabled jobs: 52 inference (50 on GLM 5.3, 2 on
-              Gemma 4 31B) and 31 deterministic scripts.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 2, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Runtime upgraded to Hermes v0.21.0; monitor mode and run continuity added; fallback chain rebuilt from verified completions</div>
-            <p className="text-sm text-body leading-6">
-              The agent runtime moved from Hermes v0.20.6 to v0.21.0. Three monitoring jobs
-              now run in monitor mode: a deterministic script checks the source first, and
-              the model call is skipped entirely when nothing changed — the release-watch,
-              blog-watch, and key-access jobs only &ldquo;think&rdquo; when there is
-              something to think about. Seven reasoning jobs gained cross-run continuity,
-              so each run starts from where the last one ended instead of from zero.
-              Rebuilding the fallback chain surfaced a sharper lesson: the gateway&rsquo;s
-              model listing advertises models that reject real requests, so every fallback
-              rung is now verified with a live completion call. Three of the four listed
-              fallbacks were dead and were replaced with verified models (DeepSeek V4
-              Flash, Gemma 4 26B, Gemma 4 31B).
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              September 2, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Diagrams redesigned; model fleet corrected to two-tier; stats re-verified against live system</div>
-            <p className="text-sm text-body leading-6">
-              All four diagrams rebuilt with distinct visual grammars — pipeline rail, retrieval
-              cross-section, daily-rhythm waterfall, and scaling bands — and every number on the
-              page re-verified against the live system: 80 enabled jobs (49 inference + 31
-              deterministic scripts), 803 graph nodes and 844 edges, 898 wiki pages. The model
-              fleet was corrected to its real shape: 47 jobs on GLM 5.3, 2 lightweight scan jobs
-              moved to Gemma 4 31B, 31 script jobs with no model call. The old multi-model
-              allocation table (GPT-OSS, Mistral Small/Large, Gemma 4 26B, Claude Sonnet) is
-              retired; those tiers described a fleet layout that no longer exists after the
-              GLM 5.2&ndash;&gt;5.3 swap flattened every job to the primary. Also removed the
-              fictional 3 AM &ldquo;dreaming cron&rdquo; — nightly memory consolidation actually
-              runs at 7:35 PM, after the evening synthesis pass. A split-brain digest publisher
-              job (midnight fires targeting a stale site clone) was found and retired.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              August 30, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Wiki grew +64 pages; model allocation corrected; cron count held at 65+</div>
-            <p className="text-sm text-body leading-6">
-              Wiki expanded from 834 to 898 pages (+64), driven by 39 new people pages, 15 new decision pages, and 2 new project pages (regulatory-change-intelligence-agent, transfer-credit-articulation-agent). Enabled cron jobs held steady at 69 (65+). Model allocation table corrected: the fleet now spans four open-weight models (gpt-oss-120b, mistral-small, gemma-4-26b, mistral-large) plus 5 jobs on Claude Sonnet for deeper reasoning and 1 on DeepSeek V4 Flash Max. Knowledge graph held at 793 nodes and 837 edges (no drift).
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              August 23, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Wiki surged +58 pages; enabled crons corrected to 65+</div>
-            <p className="text-sm text-body leading-6">
-              Wiki expanded from 776 to 834 pages (+58), driven by new project pages including academic-integrity-case-triage-agent, behavioral-disengagement-engine, and tritonai-transfer-credit-intelligence-agent, plus continued growth across people and decision pages. Knowledge graph held steady at 793 nodes and 837 edges (no drift). Enabled cron jobs corrected from 77 to 69 (rounded to 65+) after retiring 8 one-shot reminder and dashboard jobs that had completed their purpose.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              August 16, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Graph grew +21 nodes, +21 edges; wiki +5 pages</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge graph expanded from 772 to 793 nodes and 816 to 837 edges (+21 each), driven by new people pages across ITS leadership and community college partners. Wiki grew from 771 to 776 pages (+5), with new and updated project pages including enrollment-aid-exception-agent, citizen-developer-program, and agentic-procurement-spend-optimization-agent. Enabled cron jobs held steady at 76 (no drift). One job retired since last week (architecture-review-monthly consolidated into this weekly review).
+              Claude Code, Codex, and Hermes converged on one shared memory ecosystem:
+              hooks inject context at session start, an MCP server serves mid-session
+              queries, and nightly jobs fold session recaps back into the wiki. The runtime
+              upgraded to Hermes v0.21.0 with monitor mode (skipping inference when sources
+              have not changed), vision offload through the institutional gateway, a faster
+              GLM 5.3 Flash tier for lightweight scans, and a fallback chain verified by
+              live completion probes rather than gateway catalog listings. The wiki crossed
+              1,000 pages and the fleet grew from 80 to 95 enabled jobs.
             </p>
           </li>
           <li className="relative">
@@ -1231,27 +993,10 @@ export default function AiAgentArchitecturePage() {
             </Eyebrow>
             <div className="text-ink font-semibold mb-1">Platform migrated from OpenClaw to Hermes Agent</div>
             <p className="text-sm text-body leading-6">
-              Decommissioned OpenClaw after 8 months. Migrated 74 cron jobs to Hermes Agent (by Nous Research), bringing the total to 77 enabled jobs. All scripts, integrations, wiki (771 pages), credentials, and memory archives ported. Hermes provides the cron scheduler, agent runtime, Telegram gateway, multi-model gateway, skill system, and plugin SDK. Model allocation unchanged: GLM 5.2 remains the on-prem default via TritonAI with deepseek-v4-flash-max, gpt-oss-120b, gemma-4-26b, and mistral-small as fallbacks. OpenClaw uninstalled; 3.3GB backup archived.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              August 2, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Graph surged +136 nodes, wiki +89 pages</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge graph grew from 636 to 772 nodes and 680 to 816 edges (+136 each), driven by new people pages across ITS leadership and community college partners. Wiki expanded from 602 to 691 pages (+89), led by 20+ new decision pages including agentic CMS strategy, community college pilot structure, data governance three-council model, observability restructure, and HR redesign roadmap. New concept pages added: scenic-ai, uc-it-ai-council, and tritonai-research-administration-copilot. Enabled cron jobs steady at 69 (65+).
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              July 19, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Wiki surged +58 pages, cron count corrected to 65+</div>
-            <p className="text-sm text-body leading-6">
-              Wiki grew to 602 pages (+58), driven by new project pages including spa2-performance-management, splunk-opensearch-bifurcation, ai-training-video-series, ucla-health-partnership, bfs-cash-receipt-automation, observability-modernization, and ccc-partnership. Knowledge graph held steady at 636 nodes and 680 edges. Enabled cron jobs corrected to 65+ (rounded from 69) after retiring unused and one-shot reminder jobs.
+              Decommissioned OpenClaw after 8 months and migrated 74 cron jobs to Hermes
+              Agent (by Nous Research), porting all scripts, integrations, wiki (771 pages),
+              and memory archives. Hermes now provides the cron scheduler, agent runtime,
+              Telegram gateway, multi-model routing, skill system, and plugin SDK.
             </p>
           </li>
           <li className="relative">
@@ -1259,387 +1004,38 @@ export default function AiAgentArchitecturePage() {
             <Eyebrow>
               July 15, 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">GLM 5.2 became the on-prem default &middot; proprietary automation routes retired</div>
+            <div className="text-ink font-semibold mb-1">GLM 5.2 became the on-prem default; proprietary automation routes retired</div>
             <p className="text-sm text-body leading-6">
-              Corrected the TritonAI catalog identifier from{' '}
-              <span className="font-mono text-xs">glm-5.2</span> to{' '}
-              <span className="font-mono text-xs">api-glm-5.2</span> and made GLM 5.2 the main
-              agent, utility, active-memory, router, and default cron model. Repaired the
-              two-hour router after the cron state moved to SQLite, replacing its
-              Claude CLI decision path with direct on-prem GLM inference. The live fleet is now
-              90 enabled jobs: 81 inherit GLM 5.2 and nine lightweight jobs use DeepSeek V4
-              Flash Max. No scheduled job has a proprietary override, the main fallback list is
-              empty, vision uses on-prem Gemma 4, and local model and cron canaries passed.
+              Standardized scheduled jobs onto on-premises GLM 5.2 via TritonAI, retiring
+              proprietary cloud overrides across the automation fleet. Wiki coverage grew
+              past 600 pages through July alongside regular graph deduplication.
             </p>
           </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
-              July 12, 2026
+              May &ndash; June 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Wiki continued its rapid expansion — +55 pages, graph +3 nodes</div>
+            <div className="text-ink font-semibold mb-1">100% on-prem open-weight fleet, key-access monitoring, and team vault pilot</div>
             <p className="text-sm text-body leading-6">
-              Wiki grew to 544 pages (+55), driven by new tech-stack entries (crowdstrike, databricks, litellm, glm-5, openai, and 10+ others), decisions (fde-program-restructure-2026-07, frontier-model-risk-mitigation-framework, student-scheduling-assistant-launch, and 25+ more), and new people pages across ITS leadership and TritonAI collaborators. Knowledge graph edged up to 636 nodes and 680 edges (+3 nodes, +6 edges). New project pages added: tritonai-developer-api, tritonbuild, and ai-contract-reviewer. New concept pages: ai-policy-navigator, hsdsc, preferential-rehire, research-portfolio-intelligence-agent, and ucsd-skills-library. Enabled cron jobs steady at 69.
+              Migrated the automation fleet off third-party APIs onto TritonAI&rsquo;s
+              on-premises open-weight catalog, added twice-weekly{' '}
+              <span className="font-mono text-xs">/v1/models</span> catalog monitoring to
+              catch model identifier changes before jobs fail, and launched the 3-person
+              TritonAI Team Knowledge Vault pilot with proposals-first agent writes.
             </p>
           </li>
           <li className="relative">
             <TimelineDot />
             <Eyebrow>
-              July 5, 2026
+              April 2026
             </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Steady growth — knowledge graph +36 nodes, wiki +31 pages</div>
+            <div className="text-ink font-semibold mb-1">Confluence sync, Teams ingestion, and hybrid AI digest pipeline</div>
             <p className="text-sm text-body leading-6">
-              Knowledge graph expanded to 633 nodes and 674 edges (up +36 nodes, +36 edges). Wiki grew to 489 pages (+31), driven by new decision pages (citizen-developer-program-rady-engagement, crowdstrike-falcon-complete, hermes-enhancement-plan, hsdsc-inference-expansion, ta-matching-automation-accelerated), 15 new people pages, and 6 new tech-stack entries. No new cron jobs added; enabled jobs steady at 69.
-            </p>
-          </li>
-                    <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              June 28, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Wiki growth accelerated — +81 pages, graph +31 nodes</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge graph expanded to 597 nodes and 638 edges (up +31 nodes, +21 edges). Wiki surged to 458 pages (+81), driven by new project pages (GrantIQ, Student Scheduling Assistant, TA Matching Algorithm, TritonAI Harness) and 15+ decisions added. No new cron jobs added; enabled jobs steady at 69.
-            </p>
-          </li>
-                    <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              June 21, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Graph and wiki accelerated growth — knowledge graph +25 nodes, wiki +52 pages</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge graph expanded to 566 nodes and 617 edges (up +25 each). Wiki grew to 377 pages (+52), driven by 8 new people pages, 2 new project pages (tritonai-harness, canvas-onyx-integration), and 15+ decisions spanning TritonAI social layer architecture, Onyx contract renewal, AI Tutor Canvas tool naming, iMessage integration, and the FY27 budget win for ITS. Enabled cron jobs steady at 69.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              June 14, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Weekly architecture metrics update</div>
-            <p className="text-sm text-body leading-6">
-              Graph grew to 541 nodes and 592 edges (up +156 nodes, +162 edges). Wiki expanded to 325 pages (+58). Enabled cron jobs rose to 69 (rounded 65+). Added new project pages for recent initiatives.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              June 9, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Router outage fixed &middot; fleet rebalanced to ~99% open-weight &middot; Gmail triage localized</div>
-            <p className="text-sm text-body leading-6">
-              A platform upgrade silently moved cron job storage into the
-              gateway&rsquo;s internal store, which broke the model-router&rsquo;s state digest
-              &mdash; it had been failing every 2-hour cycle since June 3 with no decisions and
-              no alerts. Patched the digest to read merged state from the gateway, verified the
-              52-test suite plus a live cycle, and the router is back on duty. The same
-              storage migration explained why one earlier fleet edit never took effect
-              (<span className="font-mono text-xs">email-task-scanner</span> was still running a
-              model known to decorate sentinel outputs &mdash; now corrected through the gateway
-              API). Rebalanced the fleet: five heartbeat-sentinel jobs moved off{' '}
-              <span className="font-mono text-xs">api-mistral-small-3.2-2506</span> to{' '}
-              <span className="font-mono text-xs">api-gpt-oss-120b</span>, two file-editing
-              weekly jobs with repeat apply-patch failures moved to{' '}
-              <span className="font-mono text-xs">deepseek-v4-flash-max</span>, and both{' '}
-              <span className="font-mono text-xs">provider-quota-monitor</span> and{' '}
-              <span className="font-mono text-xs">gmail-important-emails</span> came off
-              proprietary Claude Sonnet to local models (the Gmail swap verified with a live
-              run before committing to it). Every single-model job gained a local fallback
-              chain, and the default fallback order is now local-first:{' '}
-              <span className="font-mono text-xs">deepseek-v4-flash-max &rarr; api-gpt-oss-120b
-              &rarr; claude-sonnet-4-6</span>. New distribution across 73 enabled jobs: 47 on{' '}
-              <span className="font-mono text-xs">api-gpt-oss-120b</span>, 7 on{' '}
-              <span className="font-mono text-xs">deepseek-v4-flash-max</span>, 6 each on{' '}
-              <span className="font-mono text-xs">api-mistral-small-3.2-2506</span> and{' '}
-              <span className="font-mono text-xs">mistral-large-3-675b</span>, 5 on{' '}
-              <span className="font-mono text-xs">api-gemma-4-26b</span>, and exactly 1 on
-              proprietary <span className="font-mono text-xs">claude-sonnet-4-6</span>.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              June 7, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Graph and wiki growth – nodes, edges, and pages expanded</div>
-            <p className="text-sm text-body leading-6">
-              Updated knowledge graph to 385 nodes and 430 edges, wiki grew to 267 pages, and enabled cron jobs remain at 65+. Added several new project wiki pages (e.g., tritonai.md, databricks-platform-direction.md) reflecting recent initiatives.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              May 31, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Architecture stats refreshed &ndash; growth across graph, wiki, and crons</div>
-            <p className="text-sm text-body leading-6">
-              Updated graph to 329 nodes and 374 edges, wiki expanded to 263 pages, and enabled cron jobs increased to 67 (rounded to 65+). 4 new wiki pages across projects and tech-stack. May 19 rebalance gains fully absorbed; identity-drift-review timeout bumped to 900s to prevent repeat failures.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              May 21, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">TritonAI catalog refresh · key rotation · 57 jobs re-routed · catalog-change monitor added</div>
-            <p className="text-sm text-body leading-6">
-              TritonAI rotated personal API keys and shipped a server-side catalog refresh that
-              retired several models the cron fleet had been routing to &mdash;{' '}
-              <span className="font-mono text-xs">moonshotai.kimi-k2.5</span>,{' '}
-              <span className="font-mono text-xs">nemotron-3-super-120b-instant</span>,{' '}
-              <span className="font-mono text-xs">claude-haiku-4-5-20251001</span>, and{' '}
-              <span className="font-mono text-xs">claude-opus-4-6</span> &mdash; and replaced
-              them with <span className="font-mono text-xs">claude-opus-4-7</span>,{' '}
-              <span className="font-mono text-xs">gpt-5.5</span>,{' '}
-              <span className="font-mono text-xs">gpt-5.3-codex</span>, and{' '}
-              <span className="font-mono text-xs">deepseek-v4-flash-max</span>. On-prem open-weight
-              models also got an <span className="font-mono text-xs">api-</span> prefix
-              (<span className="font-mono text-xs">api-gpt-oss-120b</span>,{' '}
-              <span className="font-mono text-xs">api-gemma-4-26b</span>,{' '}
-              <span className="font-mono text-xs">api-mistral-small-3.2-2506</span>) and are now
-              segregated behind a separate on-prem key from the hyperscaler-proxied cloud tier.
-              Rotated both keys, normalized every cron&rsquo;s model assignment to the canonical
-              provider/model path, and bulk-re-routed 57+ jobs in a single pass to prefer the
-              on-prem open-weight tier &mdash; new distribution is 20 on{' '}
-              <span className="font-mono text-xs">api-gemma-4-26b</span> (briefings &amp;
-              summarization), 18 on <span className="font-mono text-xs">api-mistral-small-3.2-2506</span>{' '}
-              (syncs &amp; monitors), 14 on <span className="font-mono text-xs">api-gpt-oss-120b</span>{' '}
-              (heavy synthesis), 7 on <span className="font-mono text-xs">mistral-large-3-675b</span>{' '}
-              (long-form &amp; deep research), 1 on{' '}
-              <span className="font-mono text-xs">deepseek-v4-flash-max</span> (overnight code
-              maintenance), and 2 explicit escalations to{' '}
-              <span className="font-mono text-xs">claude-sonnet-4-6</span> &mdash;{' '}
-              <span className="font-mono text-xs">provider-quota-monitor</span> and{' '}
-              <span className="font-mono text-xs">gmail-important-emails</span> &mdash; where a
-              missed signal carries real downstream cost. Default agent fallback chain rebuilt:{' '}
-              <span className="font-mono text-xs">claude-sonnet-4-6 &rarr; claude-opus-4-7 &rarr;
-              api-gpt-oss-120b</span>. Added a new{' '}
-              <span className="font-mono text-xs">tritonai-key-access-monitor</span> cron that
-              fires Mondays and Thursdays at 6&nbsp;PM PT, probes TritonAI&rsquo;s{' '}
-              <span className="font-mono text-xs">/v1/models</span> endpoint for both keys,
-              diffs against a stored snapshot, and Telegrams a summary of any changes &mdash;
-              with broken-job warnings if a current cron route is no longer accessible. Net
-              effect: the next TritonAI catalog refresh surfaces itself before a cron fails.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              May 19, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Open-source rebalance · 11 jobs to gpt-oss-120b · aggressive efficiency</div>
-            <p className="text-sm text-body leading-6">
-              Rebalanced 11 jobs from commercial models (claude-sonnet-4.6, mistral-large-3) to <span className="font-mono text-xs">tritonai-prod/gpt-oss-120b</span> based on actual workload patterns &mdash; news aggregation, event curation, script runners, and auditing tasks don&rsquo;t need commercial reasoning. Kept claude-sonnet-4.6 for synthesis-heavy jobs (meeting debriefs, daily reflection, memory promotion), mistral-large-3 for web research + thesis generation. Net effect: ~$300&ndash;400/month institutional savings while staying on TritonAI&rsquo;s open-weight platform. <em>(Superseded by the May 21 entry above; meeting debriefs, daily reflection, and memory promotion have since moved off claude-sonnet.)</em>
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              May 17, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Architecture stats refreshed – growth across graph, wiki, and crons</div>
-            <p className="text-sm text-body leading-6">
-              Updated graph to 250 nodes and 298 edges, wiki expanded to 247 pages, and enabled cron jobs increased to 56 (rounded to 55+). Added new project pages: gartner-eoi-2026, biobib-formatter, citizen-developer-program.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              May 10, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Architecture stats refreshed</div>
-            <p className="text-sm text-body leading-6">
-              Updated graph to 222 nodes and 265 edges, wiki expanded to 219 narrative pages, and enabled cron jobs remain at 56 (rounded to 55+). No new cron jobs added this week.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              May 9, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">100% local open-weight achieved · 31-job migration · Telegram routing fix</div>
-            <p className="text-sm text-body leading-6">
-              Bulk-migrated 31 cron jobs onto TritonAI&rsquo;s locally-hosted open-weight catalog.
-              Every proxied closed-weight model retired in one pass: 14 jobs off{' '}
-              <span className="font-mono text-xs">tritonai-haiku</span> (Claude Haiku 4.5 via
-              proxy), 4 off <span className="font-mono text-xs">tritonai-opus</span> (Claude Opus
-              4.6), 3 off Codex / codex-mini (capped weekly cap + a model that no longer existed),
-              1 off <span className="font-mono text-xs">or-haiku</span> (OpenRouter Anthropic), 1
-              off Ollama gemma4 (slow on Apple Silicon). New endpoints brought in: TritonAI&rsquo;s
-              <span className="font-mono text-xs"> mistral-small-3.2-2506</span> for fastest light
-              monitors, more weight on
-              <span className="font-mono text-xs"> nemotron-3-super-120b-instant</span>,{' '}
-              <span className="font-mono text-xs">moonshotai.kimi-k2.5</span>, and{' '}
-              <span className="font-mono text-xs">mistral-large-3-675b</span>. Each candidate
-              probe-tested against a strict 50-token short-output prompt and a 400-token synthesis
-              prompt before assignment;{' '}
-              <span className="font-mono text-xs">minimax-m2</span> and{' '}
-              <span className="font-mono text-xs">gpt-oss-120b-high</span> failed the trap test
-              and were excluded. End state: 48 of 48 enabled jobs on TritonAI, every model
-              open-weight, zero ongoing third-party API spend on automation. Cross-provider
-              canary retired &mdash; concentration risk now an explicit institutional bet.
-              Separately, repaired a Telegram-DM routing collision: the heartbeat lane had quietly
-              captured the bot&rsquo;s direct-chat session and was returning{' '}
-              <span className="font-mono text-xs">HEARTBEAT_OK</span> to every message.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 30, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Codex deprecation handled · all-TritonAI achieved · cron tuning</div>
-            <p className="text-sm text-body leading-6">
-              OpenAI Codex deprecated <span className="font-mono text-xs">gpt-5.4-mini</span> on
-              the OAuth route mid-morning, breaking 6 cron jobs that depended on it. Migrated 10
-              affected jobs to TritonAI in a single bulk patch &mdash; 9 to TritonAI open-weight
-              models (Kimi K2.5 for synthesis, Mistral Large 3 for long-form, Opus 4.7 for heavy
-              reasoning), 1 kept on OpenAI Codex (gpt-5.5) as a cross-provider canary. End state:
-              45 of 46 enabled jobs on TritonAI. Same day, tuned five high-frequency crons (-1,860
-              fires/month) and added two new TritonAI aliases for verified-clean light-monitor
-              models: <span className="font-mono text-xs">tritonai-mistral-small</span> (Mistral
-              Small 3.2) and <span className="font-mono text-xs">tritonai-nemotron-instant</span>
-              {' '}(NVIDIA Nemotron 3).
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 29, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">OpenRouter dependency dropped · Platform runtime upgraded to 2026.4.27</div>
-            <p className="text-sm text-body leading-6">
-              Migrated 9 remaining OpenRouter-paid jobs onto TritonAI (light monitors to{' '}
-              <span className="font-mono text-xs">tritonai-haiku</span>; weekly deep-dive to{' '}
-              <span className="font-mono text-xs">tritonai-opus</span> &mdash; Claude Opus 4.7 on
-              raised institutional quota). Zero jobs on OpenRouter post-migration. Upgraded the
-              runtime from 2026.4.23 to 2026.4.27 (skipping the 2026.4.24 bonjour-broken
-              release) for cron correctness improvements, OpenAI-compatible empty-response retry,
-              and mixed-version safety. Ran <span className="font-mono text-xs">platform security
-              audit</span> &mdash; chmod 600 on the config file fixed a critical world-readable
-              finding.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 28, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">31-job migration to TritonAI open-weight models</div>
-            <p className="text-sm text-body leading-6">
-              UC San Diego raised the TritonAI virtual-key budget. Migrated 31 cron jobs from a mixed
-              OpenRouter / Codex / Google fleet onto TritonAI&rsquo;s open-weight catalog: Kimi
-              K2.5 for synthesis-heavy work (briefings, opportunity scan), Mistral Large 3 for
-              long-form (newsletter, audits), gpt-oss 120B for single-shot agentic, Gemma 4 for
-              mid-tier multimodal. Discovered along the way that the catalog&rsquo;s{' '}
-              <span className="font-mono text-xs">reasoning</span> flag was unreliable for
-              short-output cron tasks &mdash; some &ldquo;non-reasoning&rdquo; models burned
-              their token budget on chain-of-thought scratch and never produced final content.
-              Two TritonAI model identifiers also turned out to need vendor prefixes (e.g.{' '}
-              <span className="font-mono text-xs">moonshotai.kimi-k2.5</span>); fixed at the
-              alias-registry level so the cron prompts stayed unchanged.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 26, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Graph stability + steady wiki growth</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge layer wiki coverage expanded from 185 to 189 narrative pages, bringing greater depth to the durable layer. Enabled automated jobs grew to 46 (from 40+), adding more coverage to the daily pipeline.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 24, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Citizen developer framework + accessibility audit + new monitoring crons</div>
-            <p className="text-sm text-body leading-6">
-              Knowledge layer crossed 179 graph nodes and 185 wiki pages (up from 163/111 nine
-              days earlier &mdash; a +67% jump in wiki coverage as graph-to-wiki reconciliation
-              caught up with accumulated entities). Two new crons: a daily{' '}
-              <span className="font-mono text-xs">tritonai-model-hub-snapshot</span> that diffs
-              UCSD&rsquo;s LLM gateway model catalog week-over-week into the Monday newsletter,
-              and a Friday{' '}
-              <span className="font-mono text-xs">backlog-completion-scan</span> that
-              cross-references backlog tasks against the week&rsquo;s meetings, debriefs, and
-              sent mail to flag probable completions. An Accessibility
-              Audit screen was added surfacing vendor accessibility statements across 150 enterprise
-              systems. New wiki page: TritonAI AI Initiative Readiness Copilot.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 15, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Hybrid AI digest sourcing</div>
-            <p className="text-sm text-body leading-6">
-              Replaced flaky generic web search with a hybrid pipeline: 14 curated RSS feeds
-              (AI labs, arXiv, higher-ed tech publications) pulled fresh at 6&nbsp;AM, plus
-              site-scoped searches across major outlets (NYT, Bloomberg, WSJ, Wired, Ars
-              Technica, TechCrunch). Added a fallback so the digest produces real content even
-              when search APIs are offline, and loosened the diversity gate so digests reliably
-              surface 5&ndash;7 articles.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 14, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Team chat ingestion + weekly deep-dive</div>
-            <p className="text-sm text-body leading-6">
-              Added Microsoft Teams channel sync via MS Graph delegated scopes &mdash; scoped
-              to high-signal channels, noise-filtered, chmod-600 on disk. New Sunday 2&nbsp;PM
-              deep-research cron picks one significant AI development each week and produces a
-              600&ndash;1000 word multi-source brief, separate from daily headlines.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 12, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Confluence integration (hybrid)</div>
-            <p className="text-sm text-body leading-6">
-              Added the institutional Confluence wiki as a sixth data source. A nightly 4&nbsp;AM
-              cron mirrors 2,500+ pages from nine UCSD ITS spaces (AI Hub, WTS, BIA, Service
-              Desk KB, Endpoint Management, Hybrid Cloud, Enterprise Architecture, Build &amp;
-              Release, CI Ops) into local cache, and an Atlassian MCP server handles realtime
-              search. Wiki-ingest&rsquo;s strategic-doc scanner auto-promotes high-signal pages
-              into Layer 2 nightly.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 12, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Knowledge promotion pipeline fixes</div>
-            <p className="text-sm text-body leading-6">
-              Repaired broken daily-reflection and context-promotion crons (timeouts bumped to
-              600s). Deduped 46 reversed-name person nodes (183&nbsp;&rarr;&nbsp;163). Added
-              weekly-signal-synthesis cron for cross-day trends. Enhanced wiki-ingest with
-              graph-to-wiki reconciliation and strategic-doc scanning. Documented three-layer
-              context loading in AGENTS.md. Restructured MEMORY.md into 12 named sections.
-            </p>
-          </li>
-          <li className="relative">
-            <TimelineDot />
-            <Eyebrow>
-              April 11, 2026
-            </Eyebrow>
-            <div className="text-ink font-semibold mb-1">Model migration off Anthropic + Ollama</div>
-            <p className="text-sm text-body leading-6">
-              Migrated all 32 cron jobs off Anthropic Claude and local Ollama (quota and timeout
-              issues). New allocation: Tier A (OpenAI gpt-5.4) for code and reasoning, Tier B
-              (Google gemini-3.1-pro) for analysis, Tier C (gpt-5.4-mini) for fast monitors.
-              Fallback: codex &rarr; codex-mini &rarr; gemini &rarr; gemini-flash-lite. Added a
-              provider-quota-monitor cron every 30 min.
+              Added nightly mirroring of institutional Confluence spaces and scoped
+              Microsoft Teams channels into the durable knowledge layer. Replaced generic
+              web search in the morning AI digest with a hybrid pipeline of curated RSS
+              feeds and targeted searches.
             </p>
           </li>
           <li className="relative">
@@ -1651,8 +1047,8 @@ export default function AiAgentArchitecturePage() {
             <p className="text-sm text-body leading-6">
               Built the initial knowledge graph from a 577-meeting transcript corpus (Feb
               2025&ndash;Apr 2026). Set up daily crons for calendar briefings, AI news,
-              opportunity scanning, and meeting debriefs. Added the wiki structure with
-              SCHEMA.md and initial people/tech/decision pages.
+              opportunity scanning, and meeting debriefs, plus the initial wiki structure
+              for people, tech-stack, project, and decision pages.
             </p>
           </li>
           <li className="relative">

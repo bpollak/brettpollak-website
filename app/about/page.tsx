@@ -197,6 +197,14 @@ export default function About() {
                 plus Ithaka S+R, the Journal of Higher Education Web
                 Professionals, and others.
               </p>
+              <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                <Link href="/ai-digest" className="text-sm font-semibold text-signal-blue underline underline-offset-4">
+                  Daily AI Digest
+                </Link>
+                <Link href="/media" className="text-sm font-semibold text-signal-blue underline underline-offset-4">
+                  Published articles
+                </Link>
+              </div>
             </div>
             <div className="border border-line bg-paper p-6">
               <h3 className="text-lg font-bold text-ink mb-4">Talks</h3>

@@ -65,7 +65,7 @@ const products = [
     group: "personal-apps",
     status: "Public website",
     category: "College recruiting",
-    title: "Cason Pollak. Track & Field Recruiting Profile",
+    title: "Cason Pollak: Track & Field Recruiting Profile",
     href: "https://casonpollak.com/",
     image: "/cason-recruiting.png",
     imageAlt: "Cason Pollak recruiting profile homepage showing hero section with athlete photo, personal bests, and navigation",
@@ -132,7 +132,7 @@ const products = [
     group: "experiments",
     status: "Personal setup · documentation",
     category: "AI agent system",
-    title: "Henry. Personal AI Operating System",
+    title: "Personal AI Operating System",
     href: "/ai-agent-architecture",
     internal: true,
     image: "/products-og.png",
@@ -292,7 +292,7 @@ const productListSchema = {
     item: {
       "@type": "SoftwareApplication",
       name: product.title,
-      url: product.href,
+      url: product.href.startsWith("http") ? product.href : `${SITE_URL}${product.href}`,
       description: product.description,
       applicationCategory: product.category,
       author: { "@id": `${SITE_URL}/#person` },
@@ -476,7 +476,7 @@ export default function Products() {
             <p className="text-lg leading-8 text-body">
               I&apos;m also working on software for education, productivity, and enterprise use. I&apos;ll add projects here when there is enough to document.
             </p>
-            <Link href="/linkedin" className="button-primary mt-6">Follow on LinkedIn →</Link>
+            <a href="https://www.linkedin.com/in/brettpollak/" target="_blank" rel="noopener noreferrer" className="button-primary mt-6">Follow on LinkedIn ↗</a>
           </div>
         </div>
       </section>
