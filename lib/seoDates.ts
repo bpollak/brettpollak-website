@@ -73,7 +73,7 @@ function clampToBuildDate(iso: string): string {
 
 // Derived automatically from the data modules; nothing to maintain here.
 export const latestMediaDate = clampToBuildDate(
-  maxIso(['2026-09-05', ...mediaItems.map((item) => item.date)]) // Featured selections revised September 5.
+  maxIso(['2026-11-20', ...mediaItems.map((item) => item.date)]) // Featured selections revised November 20.
 );
 
 export const latestDigestDate = clampToBuildDate(

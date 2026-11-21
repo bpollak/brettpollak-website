@@ -72,9 +72,9 @@ function groupByYear(items: MediaItem[]) {
 }
 
 const featuredMedia = [
-  { title: 'Shifting to Responsive Web Design', note: 'My account of bringing responsive templates to campus websites and applications.' },
-  { title: 'Ushering in a New Era of AI-Driven Data Insights at UC San Diego', note: 'An article I coauthored about connecting institutional information with AI assistants.' },
-  { title: 'TritonGPT is Here and Ready to Help', note: 'The university’s account of the platform, campus rollout, and partnerships.' },
+  { title: 'NASH Launches First National AI Advisory Board Built Exclusively for Public Higher Education Systems', note: 'Serving on the Data Infrastructure & Privacy working group of the first national AI advisory board for public higher education systems.' },
+  { title: "2.5 Hours to 11 Minutes, 60,000 Transcripts at 98%, 17 Models Under One Roof: Inside UC San Diego's Build-It-Yourself AI Strategy", note: 'An inside look at UC San Diego’s build-it-yourself AI architecture, production workflows, and multi-model routing.' },
+  { title: 'How poor data foundations can undermine AI success', note: 'Why institutional AI programs stall without clean data, governance, and clear service ownership.' },
 ].map(feature => ({ ...feature, item: mediaItems.find(item => item.title === feature.title) }));
 
 export default function MediaContent() {
