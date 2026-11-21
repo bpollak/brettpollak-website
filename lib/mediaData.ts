@@ -15,6 +15,38 @@ export interface MediaItem {
 // allowed values, or the chart math will be off.
 export const mediaItems: MediaItem[] = [
 {
+    publication: 'UC San Diego Today',
+    title: "UC San Diego's Halıcıoğlu School Expands AI Computing Infrastructure to Address Critical Shortages",
+    url: 'https://today.ucsd.edu/story/uc-san-diegos-halcolu-school-expands-ai-computing-infrastructure-to-address-critical-shortages',
+    date: '2026-11-03',
+    category: 'article'
+  },
+
+{
+    publication: 'UC San Diego Today',
+    title: 'Learn Today, Build Tomorrow',
+    url: 'https://today.ucsd.edu/story/learn-today-build-tomorrow',
+    date: '2026-10-07',
+    category: 'article'
+  },
+
+{
+    publication: 'NASH',
+    title: 'NASH Launches First National AI Advisory Board Built Exclusively for Public Higher Education Systems',
+    url: 'https://nash.edu/2026/09/nash-launches-first-national-ai-advisory-board-built-exclusively-for-public-higher-education-systems/',
+    date: '2026-09-22',
+    category: 'article'
+  },
+
+{
+    publication: 'My Robot Teacher',
+    title: "Ep. 17: Why UC San Diego Runs Its Own AI: Chancellor Pradeep Khosla on Higher Education's Future",
+    url: 'https://calearninglab.org/myrobotteacher/ep-17/',
+    date: '2026-08-19',
+    category: 'interview'
+  },
+
+{
     publication: 'EDUCAUSE',
     title: 'Member QuickTalk: The Next Data Decision — What Institutions Should Focus on in Their Data Journey',
     url: 'https://events.educause.edu/member-quicktalks/2026/the-next-data-decision-what-institutions-should-focus-on-in-their-data-journey',
@@ -106,6 +138,14 @@ export const mediaItems: MediaItem[] = [
     url: 'https://www.asugsvsummit.com/schedule/shared-ai-at-scale-developed-by-universities-for-universities',
     date: '2026-04-14',
     category: 'speaking'
+  },
+
+{
+    publication: 'University of California News',
+    title: 'What does it mean to learn with AI?',
+    url: 'https://www.universityofcalifornia.edu/news/what-does-it-mean-learn-ai',
+    date: '2026-04-09',
+    category: 'article'
   },
 
 {
@@ -357,11 +397,9 @@ export const mediaItems: MediaItem[] = [
   },
 
 {
-    publication: 'UC Berkeley CTO',
+    publication: 'UC Berkeley AI Community',
     title: 'TritonGPT Presentation & Demo, UC Berkeley AI Community',
-    // cto.berkeley.edu no longer resolves (the host is gone, not just the page),
-    // so this points at the Internet Archive capture. Swap back if Berkeley rehosts.
-    url: 'https://web.archive.org/web/20250512032728/https://cto.berkeley.edu/ai/videos/uc-san-diego-tritongpt-demo',
+    url: 'https://www.youtube.com/watch?v=lppSGaYPODk',
     date: '2024-03-21',
     category: 'speaking'
   },
@@ -391,6 +429,14 @@ export const mediaItems: MediaItem[] = [
   },
 
 {
+    publication: 'Hannon Hill',
+    title: 'Customer Spotlight: University of California San Diego',
+    url: 'https://www.hannonhill.com/blog/2022/customer-spotlight-university-of-california-san-diego.html',
+    date: '2022-10-20',
+    category: 'article'
+  },
+
+{
     publication: 'UC Tech Awards',
     title: 'The 2022 Student Activity Hub (Silver UC Collaboration Award)',
     url: 'https://ucop.edu/information-technology-services/initiatives/uc-tech-awards/current-and-previous-awards/2022.html',
@@ -415,10 +461,50 @@ export const mediaItems: MediaItem[] = [
   },
 
 {
+    publication: 'UC Tech News',
+    title: 'UCSD IT Services Leading the Way with Collaborative, Flexible Work Environment',
+    url: 'https://uctechnews.ucop.edu/a-team-sport-it-services-leading-the-way-with-collaborative-flexible-work-environment/',
+    date: '2019-04-10',
+    category: 'article'
+  },
+
+{
+    publication: 'UC San Diego Today',
+    title: 'IT Services Opens Tech Hub at the Hive',
+    url: 'https://today.ucsd.edu/story/it-services-opens-tech-hub-at-the-hive',
+    date: '2019-03-21',
+    category: 'article'
+  },
+
+{
+    publication: 'UC San Diego Today',
+    title: "Parking on Campus? There's an App for That!",
+    url: 'https://today.ucsd.edu/story/parking-on-campus-theres-an-app-for-that',
+    date: '2019-03-07',
+    category: 'article'
+  },
+
+{
     publication: 'LinkedIn',
     title: 'Good things ahead for UC San Diego with Student Activity Hub',
     url: 'https://www.linkedin.com/pulse/good-things-ahead-uc-san-diego-student-activity-hub-brett-pollak',
     date: '2018-09-30',
+    category: 'article'
+  },
+
+{
+    publication: 'EdScoop',
+    title: 'UCSD aims to revolutionize student success with new data-rich platform',
+    url: 'https://edscoop.com/ucsd-aims-to-revolutionize-student-success-with-new-data-rich-platform/',
+    date: '2017-11-27',
+    category: 'article'
+  },
+
+{
+    publication: 'UC Tech News',
+    title: 'UC Contracts for Cloud Services',
+    url: 'https://uctechnews.ucop.edu/uc-contracts-for-cloud-services/',
+    date: '2016-06-15',
     category: 'article'
   },
 
@@ -459,6 +545,14 @@ export const mediaItems: MediaItem[] = [
     title: 'Shifting to Responsive Web Design',
     url: 'https://evolllution.com/opinions/shifting-to-responsive-web-design',
     date: '2012-10-08',
+    category: 'article'
+  },
+
+{
+    publication: 'UC San Diego Today',
+    title: "USA Today Names UC San Diego Among '5 Colleges with Great Mobile Apps'",
+    url: 'https://today.ucsd.edu/story/usa_today_names_uc_san_diego_among_5_colleges_with_great_mobile_apps',
+    date: '2012-08-28',
     category: 'article'
   },
 
