@@ -69,7 +69,7 @@ const eras = [
     years: "2024 – now",
     org: "UC San Diego",
     role: "Executive Director, IT Services",
-    body: "Now the full infrastructure portfolio, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for other campuses, including UC Berkeley’s BearGPT and SCOUT at UC Merced. My current questions are adoption, governance, and how agent workflows fit campus operations.",
+    body: "Now infrastructure, data, and enterprise architecture, plus the AI program that grew out of a late-2023 pilot. TritonGPT runs campus-wide, mostly on university infrastructure, and the shared platform now runs assistants for other campuses, including UC Berkeley’s BearGPT and SCOUT at UC Merced. My current questions are adoption, governance, and how agent workflows fit campus operations.",
     tone: "coral" as const,
   },
 ];
@@ -85,7 +85,7 @@ const atAGlance = [
   "Executive Director, IT Services",
   "Service owner, TritonAI program",
   "Member, NASH AI Advisory Board (Data Infrastructure & Privacy)",
-  "Seven teams, from service desk to AI platforms",
+  "Portfolio spanning infrastructure, data, enterprise architecture, and AI platforms",
 ];
 
 export default function About() {
@@ -107,8 +107,8 @@ export default function About() {
               </h1>
               <p className="page-intro mb-8">
                 I joined as campus web manager in 2008. Today I&rsquo;m Executive
-                Director of IT Services, leading the infrastructure portfolio
-                and the campus AI program built on top of it. This page is the
+                Director of IT Services, leading infrastructure, data, and the
+                campus AI program built on top of it. This page is the
                 path between those two jobs.
               </p>
               <ul className="space-y-2">

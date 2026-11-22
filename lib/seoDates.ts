@@ -29,7 +29,7 @@ export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
   "/": "2026-11-20",  // homepage: branded title, CTA alignment, NACUBO talk, internal UCSD Weekly links, gateway dispatch
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
-  "/about": "2026-11-20",  // Writing card links added
+  "/about": "2026-11-22",  // Portfolio framing refreshed post-reorg (with speakerBio)
   "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
   "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
   "/products": "2026-11-20",  // absolute schema URLs, title punctuation, direct LinkedIn CTA
