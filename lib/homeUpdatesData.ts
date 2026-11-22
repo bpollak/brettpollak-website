@@ -3,10 +3,11 @@
  * personal builds, and media & speaking. Rows use the site's index-row
  * language (mono date, plain text, hover accent) — no sentence underlines.
  *
- * Refreshed by the Hermes `home-page-weekly-refresh` cron job (same pattern
- * as nowData.ts). Manual edits welcome; the cron compares against current
- * state and only pushes reasoned changes, so a human edit sticks until
- * something material changes.
+ * Maintained by the Hermes `website-content-weekly-audit` job (Sunday 12:33).
+ * The old `home-page-weekly-refresh` job this file used to name no longer
+ * exists, so nothing refreshes these rows automatically between audits.
+ * Manual edits welcome; an audit run only adds a row when a shipped release
+ * or launch clearly supersedes the newest one here.
  *
  * Rules:
  * - Keep 3–4 rows per module. Keep one module per area of life.
@@ -32,9 +33,16 @@ export type HomeUpdatesData = {
 };
 
 export const homeUpdates: HomeUpdatesData = {
-  lastUpdated: '2026-11-20',
+  lastUpdated: '2026-11-22',
   updates: [
     // ── UC San Diego work ─────────────────────────────────────────────
+    {
+      date: '2026-11-14',
+      area: 'work',
+      text: 'Harness 0.4.2 is the current stable release',
+      note: 'A clearer Project Home and reorganized settings, plus follow-up flags in Outlook inbox listings and message reads.',
+      href: 'https://tritonai.ucsd.edu/developer-apis/harness-release-notes.html',
+    },
     {
       date: '2026-11-08',
       area: 'work',
@@ -55,13 +63,6 @@ export const homeUpdates: HomeUpdatesData = {
       text: 'TritonAI Discovery Series and certificate launch',
       note: 'Short lessons on campus AI tools, data privacy, and responsible use, with browser-based knowledge checks.',
       href: 'https://tritonai.ucsd.edu/training-resources/videos/index.html',
-    },
-    {
-      date: '2026-09-18',
-      area: 'work',
-      text: 'SCOUT opens to all of UC Merced',
-      note: 'After an early-access preview, UC Merced’s assistant is available campus-wide on the shared TritonAI platform.',
-      href: 'https://tritonai.ucsd.edu/about/tritonai-updates.html',
     },
 
     // ── Personal work ─────────────────────────────────────────────────
