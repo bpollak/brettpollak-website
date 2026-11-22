@@ -135,7 +135,7 @@ export default function SpeakingPage() {
     '@context': 'https://schema.org',
     '@type': 'Event',
     name: e.title,
-    url: e.url,
+    ...(e.url !== '#' ? { url: e.url } : {}),
     startDate: e.date,
     organizer: {
       '@type': 'Organization',
@@ -250,10 +250,29 @@ export default function SpeakingPage() {
 }
 
 function EngagementList({ items }: { items: typeof mediaItems }) {
-  return <ul className="space-y-3">{items.map(item => <li key={`${item.date}-${item.title}`}>
-    <a href={item.url} target="_blank" rel="noopener noreferrer" className="grid gap-2 border border-line bg-paper-strong p-5 hover:border-[#1f5a8a] sm:grid-cols-[6rem_1fr]">
-      <time dateTime={item.date} className="text-sm text-muted">{new Date(`${item.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })}</time>
-      <span className="min-w-0"><span className="block text-sm text-signal-blue">{item.publication}</span><span className="font-semibold">{item.title} <span aria-hidden="true">↗</span></span></span>
-    </a>
-  </li>)}</ul>;
+  return <ul className="space-y-3">{items.map(item => {
+    const formattedDate = new Date(`${item.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+    const hasLink = item.url !== '#';
+    const content = (
+      <>
+        <time dateTime={item.date} className="text-sm text-muted">{formattedDate}</time>
+        <span className="min-w-0">
+          <span className="block text-sm text-signal-blue">{item.publication}</span>
+          <span className="font-semibold">{item.title}{hasLink && <> <span aria-hidden="true">↗</span></>}</span>
+        </span>
+      </>
+    );
+
+    return <li key={`${item.date}-${item.title}`}>
+      {hasLink ? (
+        <a href={item.url} target="_blank" rel="noopener noreferrer" className="grid gap-2 border border-line bg-paper-strong p-5 hover:border-[#1f5a8a] sm:grid-cols-[6rem_1fr]">
+          {content}
+        </a>
+      ) : (
+        <div className="grid gap-2 border border-line bg-paper-strong p-5 sm:grid-cols-[6rem_1fr]">
+          {content}
+        </div>
+      )}
+    </li>;
+  })}</ul>;
 }

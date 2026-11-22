@@ -76,21 +76,20 @@ export default function PodcastsContent() {
   const [modalOpen, setModalOpen] = useState(false);
   const [upvotedIds, setUpvotedIds] = useState<Set<string>>(() => getUpvotedIds());
   const [firestorePodcasts, setFirestorePodcasts] = useState<CommunityPodcast[]>([]);
-  const [loading, setLoading] = useState(true);
 
   const firebaseEnabled = isFirebaseConfigured();
 
-  // Load podcasts from Firestore (or fall back to static data)
+  // Load community podcasts and live upvote counts from Firestore in the background
+  // while keeping Brett's curated static picks rendered immediately for initial paint and indexing.
   useEffect(() => {
     let cancelled = false;
 
     async function load() {
       if (!firebaseEnabled) {
-        setLoading(false);
         return;
       }
 
-      // Race Firestore against a timeout so the page never spins forever
+      // Race Firestore against a timeout so slow networks fall back cleanly
       const TIMEOUT_MS = 5000;
       const timeout = new Promise<'timeout'>((resolve) =>
         setTimeout(() => resolve('timeout'), TIMEOUT_MS)
@@ -102,8 +101,7 @@ export default function PodcastsContent() {
         if (cancelled) return;
 
         if (result === 'timeout') {
-          console.warn('Firestore timed out — falling back to static podcasts');
-          setLoading(false);
+          console.warn('Firestore timed out — keeping static podcasts');
           return;
         }
 
@@ -128,8 +126,6 @@ export default function PodcastsContent() {
         }
       } catch (err) {
         console.error('Failed to load podcasts from Firestore:', err);
-      } finally {
-        if (!cancelled) setLoading(false);
       }
     }
 
@@ -270,35 +266,23 @@ export default function PodcastsContent() {
         )}
       </div>
 
-      {/* Loading state */}
-      {loading && firebaseEnabled && (
-        <div className="flex justify-center py-16">
-          <div className="flex items-center gap-3 text-muted">
-            <div className="w-6 h-6 border-2 border-line border-t-blue-500 rounded-full animate-spin" />
-            Loading podcasts...
-          </div>
-        </div>
-      )}
-
       {/* Podcast Grid */}
-      {!loading && (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPodcasts.map((podcast, index) => (
-            <PodcastCard
-              key={podcast.id ?? podcast.name}
-              podcast={podcast}
-              index={index}
-              colorStyle={COLOR_CYCLE[index % COLOR_CYCLE.length]}
-              hasUpvoted={!!podcast.id && upvotedIds.has(podcast.id)}
-              onUpvote={handleUpvote}
-              firebaseEnabled={firebaseEnabled}
-            />
-          ))}
-        </div>
-      )}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredPodcasts.map((podcast, index) => (
+          <PodcastCard
+            key={podcast.id ?? podcast.name}
+            podcast={podcast}
+            index={index}
+            colorStyle={COLOR_CYCLE[index % COLOR_CYCLE.length]}
+            hasUpvoted={!!podcast.id && upvotedIds.has(podcast.id)}
+            onUpvote={handleUpvote}
+            firebaseEnabled={firebaseEnabled}
+          />
+        ))}
+      </div>
 
       {/* Empty state */}
-      {!loading && filteredPodcasts.length === 0 && (
+      {filteredPodcasts.length === 0 && (
         <div className="text-center py-16">
           <p className="text-muted text-lg">
             No podcasts found in this category.

@@ -195,7 +195,7 @@ export default function Media() {
       "item": {
         "@type": item.category === 'article' || item.category === 'interview' ? "NewsArticle" : "CreativeWork",
         "headline": item.title,
-        "url": item.url,
+        ...(item.url !== '#' ? { "url": item.url } : {}),
         "datePublished": item.date,
         ...(isAuthoredByBrett(item)
           ? { "author": brettPersonRef }
@@ -204,10 +204,14 @@ export default function Media() {
           "@type": "Organization",
           "name": item.publication
         },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": item.url
-        }
+        ...(item.url !== '#'
+          ? {
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": item.url
+              }
+            }
+          : {})
       }
     }))
   };

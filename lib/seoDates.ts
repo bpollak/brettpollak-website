@@ -31,20 +31,20 @@ export const staticPageDates: Record<string, string> = {
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
   "/about": "2026-11-22",  // Portfolio framing refreshed post-reorg (with speakerBio)
   "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
-  "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
-  "/products": "2026-11-20",  // absolute schema URLs, title punctuation, direct LinkedIn CTA
+  "/speaking": "2026-11-22",  // unlinked stale CCW 2027 redirect URL
+  "/products": "2026-11-22",  // Steel City Gameday v1.0.8 version parity
   "/products/resolution-companion": "2026-11-20",  // v1.6.1 caption refresh
   "/products/passports-visitor-management": "2026-11-20",  // clarified prototype vs campus production
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
   "/ai-agent-architecture": "2026-11-22",  // weekly refresh: graph 1,041 nodes, wiki 1,639 pages
-  "/podcasts": "2026-06-01",
+  "/podcasts": "2026-11-22",  // pre-render curated picks in static HTML
   "/linkedin": "2026-10-26",  // title
   "/tritonai-meeting-scheduler": "2026-10-04",
   "/sent-using-tritonai": "2026-10-02",
   "/contact": "2026-11-20",  // dual-audience framing + app feedback topic
   "/products/horse-racing-companion": "2026-09-09",
-  "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store
+  "/products/steel-city-gameday": "2026-11-22",  // v1.0.8 version parity
 };
 
 /** First-published dates for long-form pages that carry Article JSON-LD. */
@@ -73,7 +73,7 @@ function clampToBuildDate(iso: string): string {
 
 // Derived automatically from the data modules; nothing to maintain here.
 export const latestMediaDate = clampToBuildDate(
-  maxIso(['2026-11-20', ...mediaItems.map((item) => item.date)]) // Featured selections revised November 20.
+  maxIso(['2026-11-22', ...mediaItems.map((item) => item.date)]) // Unlinked stale CCW session URL Nov 22.
 );
 
 export const latestDigestDate = clampToBuildDate(

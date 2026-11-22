@@ -173,14 +173,9 @@ export default function MediaContent() {
               <div className="min-w-0 border-y border-line">
                 {itemsByYear[Number(year)].map((item) => {
                   const icon = iconForUrl(item.url);
-                  return (
-                  <a
-                    key={`${item.date}-${item.title}`}
-                    href={item.url}
-                    target={item.url === '#' ? undefined : '_blank'}
-                    rel={item.url === '#' ? undefined : 'noopener noreferrer'}
-                    className="index-row group relative flex items-start gap-4 py-5 pl-4 pr-2 md:gap-5"
-                  >
+                  const hasLink = item.url !== '#';
+                  const rowBody = (
+                    <>
                     <span
                       aria-hidden="true"
                       className="absolute inset-y-2 left-0 w-[3px] opacity-30 transition-opacity duration-150 group-hover:opacity-100"
@@ -199,7 +194,7 @@ export default function MediaContent() {
                       )}
                     </span>
                     <span className="min-w-0 flex-1 break-words">
-                      <span className="block text-lg font-medium leading-7 text-ink transition-colors group-hover:text-[#1f5a8a]">
+                      <span className={`block text-lg font-medium leading-7 text-ink${hasLink ? ' transition-colors group-hover:text-[#1f5a8a]' : ''}`}>
                         {item.title}
                       </span>
                       <span className="mt-2 block text-xs font-semibold uppercase text-muted sm:hidden">{item.category}</span>
@@ -214,15 +209,34 @@ export default function MediaContent() {
                         {item.category}
                       </span>
                       <span className="hidden font-mono text-xs text-signal-blue sm:inline-flex sm:items-center sm:gap-1">
-                        {item.url === '#' ? 'record' : 'open'}
-                        {item.url !== '#' && (
+                        {hasLink ? 'open' : 'record'}
+                        {hasLink && (
                           <span aria-hidden="true" className="transition-transform duration-150 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                             &#8599;
                           </span>
                         )}
                       </span>
                     </span>
-                  </a>
+                    </>
+                  );
+
+                  return hasLink ? (
+                    <a
+                      key={`${item.date}-${item.title}`}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="index-row group relative flex items-start gap-4 py-5 pl-4 pr-2 md:gap-5"
+                    >
+                      {rowBody}
+                    </a>
+                  ) : (
+                    <div
+                      key={`${item.date}-${item.title}`}
+                      className="index-row relative flex items-start gap-4 py-5 pl-4 pr-2 md:gap-5"
+                    >
+                      {rowBody}
+                    </div>
                   );
                 })}
               </div>

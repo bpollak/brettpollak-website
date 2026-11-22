@@ -24,7 +24,11 @@ export function GET(): Response {
   const nowFocus = currentNow.items.map((item) => `- ${item.label}`).join("\n");
 
   const recentMediaLines = recentMedia
-    .map((item) => `- ${item.date}: ${item.title} (${item.publication}) — ${item.url}`)
+    .map((item) =>
+      item.url === "#"
+        ? `- ${item.date}: ${item.title} (${item.publication})`
+        : `- ${item.date}: ${item.title} (${item.publication}) — ${item.url}`
+    )
     .join("\n");
 
   const body = `# Brett Pollak - LLM Reference Brief

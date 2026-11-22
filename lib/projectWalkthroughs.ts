@@ -128,8 +128,8 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Steel City Gameday",
     "group": "app-store",
     "category": "Sports group experience",
-    "status": "Live on the App Store · Fall 2026",
-    "description": "An iPhone app for Steelers fans: private invite-only Crews plus an optional public Crew for fan chat, with game-day picks, timed live polls, and season-long standings. Live on the App Store for the 2026 season.",
+    "status": "Available on iOS · v1.0.8 · Fall 2026",
+    "description": "An iPhone app for Steelers fans: private invite-only Crews plus an optional public Crew for fan chat, with game-day picks, timed live polls, and season-long standings. Version 1.0.8 is live on the App Store for the 2026 season.",
     "purpose": "Watching the game apart is normal now, but group texts lose the season. Steel City Gameday turns the people you watch with into a Crew and gives every game a scored record that lasts all year.",
     "features": [
       "Private Crews by invite, plus an optional public Crew for fan chat",

@@ -25,13 +25,18 @@ export function GET(): Response {
     selfUrl: `${SITE_URL}/media/feed.xml`,
     description:
       "Brett Pollak's published articles, interviews, speaking engagements, whitepapers, and awards on AI in higher education.",
-    items: items.map((item) => ({
-      title: `${item.title} — ${item.publication}`,
-      link: item.url,
-      guid: item.url,
-      isoDate: item.date,
-      description: `${categoryLabels[item.category] ?? item.category} · ${item.publication}`,
-    })),
+    items: items.map((item) => {
+      const hasUrl = item.url !== "#";
+      return {
+        title: `${item.title} — ${item.publication}`,
+        link: hasUrl ? item.url : `${SITE_URL}/media`,
+        guid: hasUrl
+          ? item.url
+          : `${SITE_URL}/media#${item.date}-${encodeURIComponent(item.title)}`,
+        isoDate: item.date,
+        description: `${categoryLabels[item.category] ?? item.category} · ${item.publication}`,
+      };
+    }),
   });
 
   return rssResponse(xml);

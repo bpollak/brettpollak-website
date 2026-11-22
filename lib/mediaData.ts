@@ -159,7 +159,8 @@ export const mediaItems: MediaItem[] = [
 {
     publication: 'CCW Emerging Tech Exchange',
     title: 'CCW Emerging Tech Exchange - San Diego',
-    url: 'https://www.ccwexchangefebruary.com/agenda/session/1819201',
+    // Original 2026 session URL now redirects to the 2027 event template without speaker listing.
+    url: '#',
     date: '2026-02-04',
     category: 'speaking'
   },
