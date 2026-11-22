@@ -222,7 +222,7 @@ export default function TritonGPTContent() {
             {
               title: "Approved AI Tools Guidance",
               description:
-                "Guidance on which generative AI tools can be used with university data and for what: TritonGPT, the Harness, Zoom AI Companion, Microsoft Copilot, and Google Gemini, organized by the work someone needs to get done.",
+                "Guidance on which generative AI tools can be used with university data and for what: TritonGPT, the Harness, Zoom AI Companion, Microsoft Copilot, and Google Gemini, organized by the work someone needs to get done. UC announced a systemwide OpenAI agreement in November 2026; ChatGPT Edu is not available at UC San Diego yet, and campus guidance will accompany its rollout.",
               href: "https://tritonai.ucsd.edu/tools/index.html",
               icon: (
                 <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
