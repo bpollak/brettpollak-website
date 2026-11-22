@@ -37,7 +37,7 @@ export const staticPageDates: Record<string, string> = {
   "/products/passports-visitor-management": "2026-11-20",  // clarified prototype vs campus production
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
-  "/ai-agent-architecture": "2026-11-20",  // Gemma timing fix, changelog privacy scrub & monthly rollup
+  "/ai-agent-architecture": "2026-11-22",  // weekly refresh: graph 1,041 nodes, wiki 1,639 pages
   "/podcasts": "2026-06-01",
   "/linkedin": "2026-10-26",  // title
   "/tritonai-meeting-scheduler": "2026-10-04",
