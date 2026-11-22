@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-11-20",
+  lastUpdated: "2026-11-22",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -37,17 +37,17 @@ export const currentNow: NowSnapshot = {
     {
       label: "Institutional AI at UC San Diego",
       body:
-        "TritonGPT runs across campus and defaults to university-hosted infrastructure, so routine traffic stays on hardware we control. Voice Mode, an in-chat coding sandbox, and a Canvas LMS integration are live. In November we put the platform in front of campus in one session with about 600 attendees, and the sharpest feedback was simple: show the first click, not just finished demos. December's workshop is step by step, one tool at a time, and we're building a five-session spring series around that format alongside the new campus AI council.",
+        "TritonGPT runs across campus and defaults to university-hosted infrastructure, so routine traffic stays on hardware we control. Voice Mode, an in-chat coding sandbox, and a Canvas LMS integration are live. In November we put the platform in front of campus in one session with about 600 attendees, and the sharpest feedback was simple: show the first click, not just finished demos. December's session is step by step, one tool at a time. The proposed follow-on is a five-session series through spring on the same format, alongside a campus AI council that is still forming.",
     },
     {
       label: "Developer enablement and operational agents",
       body:
-        "The TritonAI Harness is a supported build path for campus developers, backed by training and more than 100 active users. On-premises inference carries no recharge for campus administrative work, while cloud routes bill to a departmental chartstring. Access stopped being the constraint this year. Fluency is the constraint now. Meanwhile, supervised agents are moving into core workflows, including offer-drafting with peer benchmarks, self-service AI platform access requests, and leadership Q&A over institutional data.",
+        "The TritonAI Harness is the supported build path for campus developers. It is on 0.4.2 with a rebuilt training course, and more than 400 active installs since October. On-premises inference carries no recharge for campus administrative work, while cloud routes bill to a departmental chartstring. Access stopped being the constraint this year. Fluency is the constraint now. Meanwhile, supervised agents are moving into core workflows, including offer-drafting with peer benchmarks, self-service AI platform access requests, and leadership Q&A over institutional data.",
     },
     {
       label: "Shared infrastructure across campuses",
       body:
-        "The shared TritonAI platform now supports peer institutions including UC Berkeley (BearGPT), UC Merced (SCOUT), UC Agriculture and Natural Resources, and Fairleigh Dickinson University (FredGPT). Next steps include intercampus gateway usage and expanded shared GPU compute for data science, machine learning, and teaching, alongside the relaunch of PARASOL. On core infrastructure, my teams finished migrating about 1,500 virtual machines to an alternative hypervisor in roughly seven months and are modernizing the campus data platform and identity registry.",
+        "The shared TritonAI platform now supports peer institutions including UC Berkeley (BearGPT), UC Merced (SCOUT), UC Agriculture and Natural Resources, and Fairleigh Dickinson University (FredGPT). I've been taking the Harness to the systemwide AI community of practice as a UC-agnostic build platform, and the first non-UC institutions are asking about it. GPU capacity for data science, machine learning, and teaching is funded and being built out under PARASOL, the platform's new name. On core infrastructure, on-premises capacity is going up, not down, while we modernize the campus data platform and identity registry.",
     },
     {
       label: "Systemwide and national AI governance",
@@ -57,7 +57,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "The apps I build",
       body:
-        "Resolution Companion 1.6.1 is live on the App Store with per-habit reminders and polish fixes, and a New Year release is next. Horse Racing Companion 1.0.3 shipped its fall meet updates for Del Mar's Bing Crosby meet (Nov 6–29). Steel City Gameday 1.0.8 is mid-season with public Crew chat, weekly matchup cards, and live Flash Picks.",
+        "Resolution Companion 1.6.1 is live on the App Store with per-habit reminders and polish fixes, and a New Year release is next. Horse Racing Companion 1.0.3 shipped its fall meet updates for Del Mar's Bing Crosby meet (Nov 6–29). Steel City Gameday 1.0.8 is mid-season with public Crew chat, weekly matchup cards, and live Flash Picks. I built a single-chat phone client for the Harness. It's in TestFlight: one conversation, no thread or model picking.",
     },
   ],
 };
