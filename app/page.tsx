@@ -108,6 +108,16 @@ const featuredWork = [
 
 const featuredApps = [
   {
+    title: 'Pocket Relay',
+    category: 'Developer tools',
+    description: 'An iPhone and iPad app for following your coding agent in Google Antigravity, approving its actions, and answering its questions away from your desk.',
+    latest: 'Version 1.0 now live in the App Store — free for iPhone and iPad, pairing with a free bridge on Mac, Windows, or Linux.',
+    image: '/pocket-relay-social.png',
+    imageAlt: 'Pocket Relay: the app mascot beside the line "Follow and steer your coding agent from your iPhone or iPad."',
+    href: '/products/pocket-relay',
+    appStoreUrl: 'https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748',
+  },
+  {
     title: 'Resolution Companion',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
@@ -444,19 +454,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-[4.5rem]">
           <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2">
             <h2 id="featured-apps-heading" className="text-3xl font-normal md:text-[2.5rem]">Apps I&apos;ve built</h2>
-            <Link href="/products" className="text-[15px] font-semibold text-signal-blue underline-offset-4 hover:underline">All 22 projects →</Link>
+            <Link href="/products" className="text-[15px] font-semibold text-signal-blue underline-offset-4 hover:underline">All 23 projects →</Link>
           </div>
           <p className="mt-3 max-w-2xl text-base leading-7 text-body">
             Nights and weekends I build independent mobile apps, campus prototypes, and automated personal agent systems.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {featuredApps.map(app => {
               const release = splitReleaseNote(app.latest);
               return (
                 <article key={app.title} className="flex flex-col overflow-hidden rounded-md border border-line bg-paper-strong">
                   <div className="relative aspect-[1200/630] border-b border-line bg-white">
                     <Image src={app.image} alt={app.imageAlt} fill
-                      className="object-cover" sizes="(min-width: 1280px) 395px, (min-width: 768px) 33vw, 100vw" />
+                      className="object-cover" sizes="(min-width: 1280px) 290px, (min-width: 768px) 50vw, 100vw" />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <p className="text-[13px] font-semibold text-signal-blue">

@@ -159,6 +159,69 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "creditLabel": "Download on the App Store"
   },
   {
+    "slug": "pocket-relay",
+    "image": "/pocket-relay-social.png",
+    "imageAlt": "Pocket Relay social card: the app's planet mascot beside the line \"Follow and steer your coding agent from your iPhone or iPad.\"",
+    "imageCaption": "Social card from pocketrelay.app. The app screens below come from real agent sessions on the app's own public repositories, recorded November 23, 2026.",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "title": "Pocket Relay",
+    "group": "app-store",
+    "category": "Developer tools",
+    "status": "Live on the App Store · v1.0",
+    "description": "A free iPhone and iPad app that pairs with Google Antigravity on your own computer, so you can follow your coding agent, approve or deny its actions, and answer its questions away from your desk. Version 1.0 is live on the App Store.",
+    "purpose": "Coding agents now run for minutes at a time, and they stall the moment they need a person: a command to approve, a question to answer. Pocket Relay puts those moments on your phone, so a long task keeps moving while you are in a meeting or across the room.",
+    "features": [
+      "A one-line status of what the agent is doing right now",
+      "Approve or deny commands and file edits, once or always",
+      "Answer the agent's questions and send new prompts, including by voice",
+      "Review file changes and watch terminals",
+      "No servers of its own: the phone talks only to computers you pair"
+    ],
+    "steps": [
+      [
+        "Pair your computer",
+        "Install the free Pocket Relay Bridge, then scan its QR code or enter a 6-digit code from a nearby computer on the same network."
+      ],
+      [
+        "Hand the agent a task",
+        "Start from the phone or the desktop. The status line shows whether the agent is thinking, editing files, running commands, or finished."
+      ],
+      [
+        "Step in when it asks",
+        "Approval cards and questions arrive on the phone. Approve once, approve always, or deny, then read the result and the diff when it is done."
+      ]
+    ],
+    "boundary": "Pocket Relay is an independent app, not made by or affiliated with Google. It is free on the App Store as of November 24, 2026, and requires iOS or iPadOS 26 or later. Prompts and files stay between your devices and the AI providers configured on your own computer; the developer does not receive them.",
+    "publicUrl": "https://pocketrelay.app/",
+    "publicLabel": "Visit the app's website",
+    "creditUrl": "https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748",
+    "creditLabel": "Download on the App Store",
+    "gallery": [
+      {
+        "image": "/pocket-relay-screen-working.webp",
+        "alt": "Pocket Relay showing the agent editing files on a support-page task, 21 steps in",
+        "width": 736,
+        "height": 1600,
+        "caption": "Status: one line says what the agent is doing, here editing files to add a troubleshooting section."
+      },
+      {
+        "image": "/pocket-relay-screen-approval.webp",
+        "alt": "Pocket Relay approval card asking to run the bridge test suite, with Deny, Allow Once, and Always buttons",
+        "width": 736,
+        "height": 1600,
+        "caption": "Approvals: the agent asks before running the test suite, and the answer is one tap."
+      },
+      {
+        "image": "/pocket-relay-screen-finished.webp",
+        "alt": "Pocket Relay showing a finished task with the agent's summary of changes and verification",
+        "width": 736,
+        "height": 1600,
+        "caption": "Finished: the agent's summary of what changed and how it checked the work."
+      }
+    ]
+  },
+  {
     "slug": "numbers-game-hq",
     "image": "/project-numbers-game-hq.png",
     "imageAlt": "Numbers Game HQ Waivers screen captured in the iOS simulator",

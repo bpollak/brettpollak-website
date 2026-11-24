@@ -67,6 +67,13 @@ export const homeUpdates: HomeUpdatesData = {
 
     // ── Personal work ─────────────────────────────────────────────────
     {
+      date: '2026-11-24',
+      area: 'personal',
+      text: 'Pocket Relay 1.0 live on the App Store',
+      note: 'A free iPhone and iPad app for following your coding agent in Google Antigravity and approving its actions from anywhere.',
+      href: 'https://pocketrelay.app/',
+    },
+    {
       date: '2026-11-11',
       area: 'personal',
       text: 'Resolution Companion 1.6.1 released: per-habit reminders and polish',
