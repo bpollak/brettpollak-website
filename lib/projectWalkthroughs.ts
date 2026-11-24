@@ -200,23 +200,23 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "gallery": [
       {
         "image": "/pocket-relay-screen-working.webp",
-        "alt": "Pocket Relay showing the agent editing files on a support-page task, 21 steps in",
-        "width": 736,
-        "height": 1600,
-        "caption": "Status: one line says what the agent is doing, here editing files to add a troubleshooting section."
+        "alt": "Pocket Relay in a phone frame, showing the agent editing files while it adds a version flag to the bridge",
+        "width": 600,
+        "height": 1176,
+        "caption": "Status: one line says what the agent is doing, here editing files while it adds a --version flag to the bridge."
       },
       {
         "image": "/pocket-relay-screen-approval.webp",
-        "alt": "Pocket Relay approval card asking to run the bridge test suite, with Deny, Allow Once, and Always buttons",
-        "width": 736,
-        "height": 1600,
+        "alt": "Pocket Relay in a phone frame: an approval card asking to run the bridge test suite, with Deny, Allow Once, and Always buttons",
+        "width": 600,
+        "height": 1176,
         "caption": "Approvals: the agent asks before running the test suite, and the answer is one tap."
       },
       {
         "image": "/pocket-relay-screen-finished.webp",
-        "alt": "Pocket Relay showing a finished task with the agent's summary of changes and verification",
-        "width": 736,
-        "height": 1600,
+        "alt": "Pocket Relay in a phone frame, showing a finished task with the agent's summary of changes and verification",
+        "width": 600,
+        "height": 1176,
         "caption": "Finished: the agent's summary of what changed and how it checked the work."
       }
     ]
