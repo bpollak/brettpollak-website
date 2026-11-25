@@ -27,7 +27,7 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-11-25",  // homepage: Harness Chat app card, Pocket Relay 1.2
+  "/": "2026-11-25",  // homepage: Campus Technology Insider feature, Harness Chat app card, Pocket Relay 1.2
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
   "/about": "2026-11-25",  // five App Store apps
   "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed

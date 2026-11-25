@@ -5,6 +5,7 @@ import { currentNow } from '@/lib/nowData';
 import { updatesByArea } from '@/lib/homeUpdatesData';
 import { mediaItems } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
+import FeaturedEpisode from '@/components/home/FeaturedEpisode';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 import { publicationInitials } from '@/lib/publicationInitials';
@@ -395,6 +396,9 @@ export default function Home() {
           </figure>
         </div>
       </section>
+
+      {/* FEATURED APPEARANCE, from lib/featuredAppearance */}
+      <FeaturedEpisode />
 
       {/* TRITONAI & CAMPUS WORK */}
       <section id="selected-work" className="border-b border-line bg-paper-strong" aria-labelledby="tritonai-heading">

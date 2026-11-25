@@ -15,6 +15,14 @@ export interface MediaItem {
 // allowed values, or the chart math will be off.
 export const mediaItems: MediaItem[] = [
 {
+    publication: 'Campus Technology Insider',
+    title: 'Season 7, Ep. 9: Supporting Citizen Developers and AI Innovation at UC San Diego',
+    url: 'https://campustechnology.com/podcasts/2026/11/supporting-citizen-developers-and-ai-innovation-at-uc-san-diego.aspx',
+    date: '2026-11-23',
+    category: 'interview'
+  },
+
+{
     publication: 'UC San Diego Today',
     title: "UC San Diego's Halıcıoğlu School Expands AI Computing Infrastructure to Address Critical Shortages",
     url: 'https://today.ucsd.edu/story/uc-san-diegos-halcolu-school-expands-ai-computing-infrastructure-to-address-critical-shortages',

@@ -97,6 +97,13 @@ export const homeUpdates: HomeUpdatesData = {
 
     // ── Media & speaking ──────────────────────────────────────────────
     {
+      date: '2026-11-23',
+      area: 'media',
+      text: 'Campus Technology Insider podcast',
+      note: 'Supporting citizen developers and AI innovation at UC San Diego, with editor-in-chief Rhea Kelly.',
+      href: 'https://campustechnology.com/podcasts/2026/11/supporting-citizen-developers-and-ai-innovation-at-uc-san-diego.aspx',
+    },
+    {
       date: '2026-08-10',
       area: 'media',
       text: 'EDUCAUSE Member QuickTalk',
