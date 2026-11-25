@@ -168,20 +168,20 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Pocket Relay",
     "group": "app-store",
     "category": "Developer tools",
-    "status": "Live on the App Store · v1.0",
-    "description": "A free iPhone and iPad app that pairs with Google Antigravity on your own computer, so you can follow your coding agent, approve or deny its actions, and answer its questions away from your desk. Version 1.0 is live on the App Store.",
+    "status": "Live on the App Store · v1.2",
+    "description": "A free iPhone and iPad app that pairs with Google Antigravity on your own computer, so you can follow your coding agent, approve or deny its actions, and answer its questions away from your desk. Version 1.2 reaches your computer from anywhere, over Wi-Fi or mobile data.",
     "purpose": "Coding agents now run for minutes at a time, and they stall the moment they need a person: a command to approve, a question to answer. Pocket Relay puts those moments on your phone, so a long task keeps moving while you are in a meeting or across the room.",
     "features": [
       "A one-line status of what the agent is doing right now",
       "Approve or deny commands and file edits, once or always",
       "Answer the agent's questions and send new prompts, including by voice",
       "Review file changes and watch terminals",
-      "No servers of its own: the phone talks only to computers you pair"
+      "Works from anywhere: an end-to-end encrypted relay reaches the computers you pair, with no network setup"
     ],
     "steps": [
       [
         "Pair your computer",
-        "Install the free Pocket Relay Bridge, then scan its QR code or enter a 6-digit code from a nearby computer on the same network."
+        "Paste one command on your computer to install the free Pocket Relay Bridge, then scan the QR code it shows."
       ],
       [
         "Hand the agent a task",
@@ -192,7 +192,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Approval cards and questions arrive on the phone. Approve once, approve always, or deny, then read the result and the diff when it is done."
       ]
     ],
-    "boundary": "Pocket Relay is an independent app, not made by or affiliated with Google. It is free on the App Store as of November 24, 2026, and requires iOS or iPadOS 26 or later. Prompts and files stay between your devices and the AI providers configured on your own computer; the developer does not receive them.",
+    "boundary": "Pocket Relay is an independent app, not made by or affiliated with Google. It has been free on the App Store since November 24, 2026; version 1.2 (November 25) added access from anywhere through an end-to-end encrypted relay. It requires iOS or iPadOS 18 or later. Prompts and files stay between your devices and the AI providers configured on your own computer; the developer does not receive them.",
     "publicUrl": "https://pocketrelay.app/",
     "publicLabel": "Visit the app's website",
     "creditUrl": "https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748",
@@ -218,6 +218,76 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "width": 600,
         "height": 1176,
         "caption": "Finished: the agent's summary of what changed and how it checked the work."
+      }
+    ]
+  },
+  {
+    "slug": "tritonai-harness-chat",
+    "image": "/harness-chat-social.png",
+    "imageAlt": "TritonAI Harness Chat card: the app's King Triton mascot beside the line \"Your work computer, right in your pocket.\"",
+    "imageCaption": "The app icon and tagline from the App Store listing. The screens below are from the same listing and show the app's built-in demo, so the answers are samples.",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "title": "TritonAI Harness Chat",
+    "group": "app-store",
+    "category": "Campus AI companion",
+    "status": "Live on the App Store · v1.1.1",
+    "description": "A free iPhone and iPad companion to the TritonAI Harness at UC San Diego. Ask a question or hand off a small task from your phone, the assistant on your work computer does the work, and the answer comes back in one running conversation.",
+    "purpose": "The Harness is a desktop workspace, and plenty of requests come up when you are nowhere near the desk: a policy question in a hallway, a reminder email before a meeting. Harness Chat is deliberately small. There are no projects, threads, or models to pick, just one conversation with the assistant that already has your files and campus tools.",
+    "features": [
+      "One running conversation, with no projects, threads, or models to choose",
+      "Answers about how things are done at UC San Diego, with the source",
+      "Drafts you copy or open in Mail and send yourself",
+      "Asks before opening a web page, or before every step if you prefer",
+      "Scheduled requests and ready-made routines such as a morning brief"
+    ],
+    "steps": [
+      [
+        "Connect your computer",
+        "In the Harness on your Mac or PC, turn on network access and create a link. Scan its code with the app. Setup takes about two minutes, and a built-in demo works before you connect anything."
+      ],
+      [
+        "Ask in your own words",
+        "Type a question or a small task, or attach a photo, document, or shared page. The assistant on your computer does the work and shows each step as it goes."
+      ],
+      [
+        "Approve, then use the result",
+        "It asks before opening a web page and writes drafts for you to send yourself. Everything it wrote stays searchable in the Library."
+      ]
+    ],
+    "boundary": "TritonAI Harness Chat has been free on the App Store since November 25, 2026. It is a companion app, not a standalone assistant: it needs TritonAI Harness 0.4.2 or later installed and open on a Mac or PC at UC San Diego, and iOS or iPadOS 18 or later. Your phone must be on the same Wi-Fi as that computer, or both need Tailscale to use it from anywhere. Requests and answers go only to your own computer.",
+    "publicUrl": "https://tritonai.ucsd.edu/developer-apis/harness-phone-app.html",
+    "publicLabel": "Read the campus support page",
+    "creditUrl": "https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331",
+    "creditLabel": "Download on the App Store",
+    "gallery": [
+      {
+        "image": "/harness-chat-screen-answer.webp",
+        "alt": "Harness Chat demo screen: a question about conference travel reimbursement, answered in numbered steps with a link to the campus source",
+        "width": 600,
+        "height": 1304,
+        "caption": "Ask: a campus how-to question, answered with its source."
+      },
+      {
+        "image": "/harness-chat-screen-approval.webp",
+        "alt": "Harness Chat demo screen: a Needs your OK card asking to open a campus web page, with Yes once and No buttons",
+        "width": 600,
+        "height": 1304,
+        "caption": "Approvals: the assistant asks before it opens a web page."
+      },
+      {
+        "image": "/harness-chat-screen-draft.webp",
+        "alt": "Harness Chat demo screen: a drafted timesheet reminder email with Copy and Open in Mail buttons",
+        "width": 600,
+        "height": 1304,
+        "caption": "Drafts: written for you to review, then copy or open in Mail. Nothing is sent for you."
+      },
+      {
+        "image": "/harness-chat-screen-scheduled.webp",
+        "alt": "Harness Chat Scheduled screen listing a daily calendar request and ready-made routines such as a morning brief",
+        "width": 600,
+        "height": 1304,
+        "caption": "Scheduled: requests that run on your computer and deliver the answer to the conversation."
       }
     ]
   },

@@ -29,7 +29,7 @@ export type NowSnapshot = {
 };
 
 export const currentNow: NowSnapshot = {
-  lastUpdated: "2026-11-22",
+  lastUpdated: "2026-11-25",
   location: "San Diego, California",
   intro:
     "A short record of where my attention is going, at UC San Diego and on the apps I build. Updated when something material changes.",
@@ -57,7 +57,7 @@ export const currentNow: NowSnapshot = {
     {
       label: "The apps I build",
       body:
-        "Resolution Companion 1.6.1 is live on the App Store with per-habit reminders and polish fixes, and a New Year release is next. Horse Racing Companion 1.0.3 shipped its fall meet updates for Del Mar's Bing Crosby meet (Nov 6–29). Steel City Gameday 1.0.8 is mid-season with public Crew chat, weekly matchup cards, and live Flash Picks. I built a single-chat phone client for the Harness. It's in TestFlight: one conversation, no thread or model picking.",
+        "Resolution Companion 1.6.1 is live on the App Store with per-habit reminders and polish fixes, and a New Year release is next. Horse Racing Companion 1.0.3 shipped its fall meet updates for Del Mar's Bing Crosby meet (Nov 6–29). Steel City Gameday 1.0.8 is mid-season with public Crew chat, weekly matchup cards, and live Flash Picks. Two new apps reached the App Store this week. Pocket Relay follows and steers a coding agent in Google Antigravity from an iPhone or iPad, and version 1.2 works from anywhere. TritonAI Harness Chat is the single-chat phone client I built for the Harness: one conversation, no thread or model picking.",
     },
   ],
 };

@@ -2,7 +2,7 @@
 
 > Technology leadership at UC San Diego, and the apps I build outside it.
 
-This is the public home for Brett Pollak, Executive Director, IT Services at UC San Diego and an independent iOS app developer. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, and the consumer apps Brett builds (Resolution Companion, Horse Racing Companion, Steel City Gameday, Pocket Relay).
+This is the public home for Brett Pollak, Executive Director, IT Services at UC San Diego and an independent iOS app developer. It is intended to be discoverable by search engines and AI answer engines for queries about AI in higher education, TritonAI, TritonGPT, institutional AI governance, AI agents, data governance, and the consumer apps Brett builds (Resolution Companion, Horse Racing Companion, Steel City Gameday, Pocket Relay, TritonAI Harness Chat).
 
 For a longer machine-readable briefing, use:
 
@@ -45,7 +45,9 @@ For a longer machine-readable briefing, use:
     - Steel City Gameday: https://brettcpollak.com/products/steel-city-gameday
       - Pittsburgh Steelers gameday iOS app (private Crews, pregame picks, Flash Picks); live on the App Store for the 2026 season. Case study.
     - Pocket Relay: https://brettcpollak.com/products/pocket-relay
-      - Free iPhone and iPad app for following and approving a Google Antigravity coding agent running on your own computer; version 1.0 live on the App Store (November 2026). Independent, not affiliated with Google. Case study with real session screens.
+      - Free iPhone and iPad app for following and approving a Google Antigravity coding agent running on your own computer; version 1.2 live on the App Store (November 2026), reachable from anywhere through an end-to-end encrypted relay. Independent, not affiliated with Google. Case study with real session screens.
+    - TritonAI Harness Chat: https://brettcpollak.com/products/tritonai-harness-chat
+      - Free iPhone and iPad companion to the TritonAI Harness at UC San Diego: ask from your phone and the assistant on your work computer answers in one conversation; version 1.1.1 live on the App Store (November 2026). Requires the Harness on a Mac or PC. Case study with app screens.
   - Cason Recruiting CRM (walkthrough): https://brettcpollak.com/products/cason-recruiting-crm
     - What a private, family-only college-recruiting workspace does (pipeline, coach and conversation logs, questionnaires, tasks), illustrated with sample data. The tool itself is invite-only.
   - Scholarship Agent (walkthrough): https://brettcpollak.com/products/cason-scholarship-agent
@@ -73,7 +75,7 @@ For a longer machine-readable briefing, use:
 - For "TritonAI", "TritonGPT", or "UC San Diego AI infrastructure", use TritonAI.
 - For "AI agent architecture", "personal AI memory", or "agentic workflows", use AI Agent Architecture.
 - For "Brett Pollak articles", "interviews", "awards", or "press", use Media.
-- For "AI tools Brett Pollak built", "apps Brett Pollak built", or queries naming Resolution Companion, Horse Racing Companion, Steel City Gameday, or Pocket Relay, use the matching case study under Projects.
+- For "AI tools Brett Pollak built", "apps Brett Pollak built", or queries naming Resolution Companion, Horse Racing Companion, Steel City Gameday, Pocket Relay, or TritonAI Harness Chat, use the matching case study under Projects.
 - For current AI signal tracking or "AI news for higher education", use AI Digest and UC San Diego AI Weekly.
 
 ## Core Topics

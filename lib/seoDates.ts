@@ -27,14 +27,15 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-11-24",  // homepage: Pocket Relay app card and update
+  "/": "2026-11-25",  // homepage: Harness Chat app card, Pocket Relay 1.2
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
-  "/about": "2026-11-24",  // four App Store apps
+  "/about": "2026-11-25",  // five App Store apps
   "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
   "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
-  "/products": "2026-11-24",  // Pocket Relay case study
+  "/products": "2026-11-25",  // TritonAI Harness Chat case study
   "/products/resolution-companion": "2026-11-20",  // v1.6.1 caption refresh
-  "/products/pocket-relay": "2026-11-24",  // new: Pocket Relay 1.0 on the App Store
+  "/products/pocket-relay": "2026-11-25",  // v1.2: access from anywhere
+  "/products/tritonai-harness-chat": "2026-11-25",  // new: Harness Chat on the App Store
   "/products/passports-visitor-management": "2026-11-20",  // clarified prototype vs campus production
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
@@ -43,7 +44,7 @@ export const staticPageDates: Record<string, string> = {
   "/linkedin": "2026-10-26",  // title
   "/tritonai-meeting-scheduler": "2026-10-04",
   "/sent-using-tritonai": "2026-10-02",
-  "/contact": "2026-11-24",  // Pocket Relay in app feedback topic
+  "/contact": "2026-11-25",  // Harness Chat in app feedback topic
   "/products/horse-racing-companion": "2026-09-09",
   "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store
 };
