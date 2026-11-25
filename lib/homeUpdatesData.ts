@@ -33,7 +33,7 @@ export type HomeUpdatesData = {
 };
 
 export const homeUpdates: HomeUpdatesData = {
-  lastUpdated: '2026-11-22',
+  lastUpdated: '2026-11-25',
   updates: [
     // ── UC San Diego work ─────────────────────────────────────────────
     {
@@ -67,10 +67,17 @@ export const homeUpdates: HomeUpdatesData = {
 
     // ── Personal work ─────────────────────────────────────────────────
     {
-      date: '2026-11-24',
+      date: '2026-11-25',
       area: 'personal',
-      text: 'Pocket Relay 1.0 live on the App Store',
-      note: 'A free iPhone and iPad app for following your coding agent in Google Antigravity and approving its actions from anywhere.',
+      text: 'TritonAI Harness Chat live on the App Store',
+      note: 'A free iPhone companion to the TritonAI Harness: ask from your phone and the assistant on your work computer answers.',
+      href: 'https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331',
+    },
+    {
+      date: '2026-11-25',
+      area: 'personal',
+      text: 'Pocket Relay 1.2 released: works from anywhere',
+      note: 'Reaches your computer over Wi-Fi or mobile data through an end-to-end encrypted relay, with setup down to two steps.',
       href: 'https://pocketrelay.app/',
     },
     {
@@ -87,15 +94,15 @@ export const homeUpdates: HomeUpdatesData = {
       note: 'Bing Crosby meet (Nov 6–29) included in the season pass, with official finish grading for dead heats.',
       href: 'https://horseracingcompanion.com/',
     },
-    {
-      date: '2026-10-08',
-      area: 'personal',
-      text: 'Steel City Gameday 1.0.8 released: public Crew for fans',
-      note: 'Join Steel City Public Crew to chat and make picks with other fans, alongside your private Crews.',
-      href: 'https://steelcitygameday.com/updates/',
-    },
 
     // ── Media & speaking ──────────────────────────────────────────────
+    {
+      date: '2026-11-23',
+      area: 'media',
+      text: 'Campus Technology Insider podcast',
+      note: 'Supporting citizen developers and AI innovation at UC San Diego, with editor-in-chief Rhea Kelly.',
+      href: 'https://campustechnology.com/podcasts/2026/11/supporting-citizen-developers-and-ai-innovation-at-uc-san-diego.aspx',
+    },
     {
       date: '2026-08-10',
       area: 'media',

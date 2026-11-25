@@ -5,6 +5,7 @@ import { currentNow } from '@/lib/nowData';
 import { updatesByArea } from '@/lib/homeUpdatesData';
 import { mediaItems } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
+import FeaturedEpisode from '@/components/home/FeaturedEpisode';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 import { publicationInitials } from '@/lib/publicationInitials';
@@ -108,14 +109,26 @@ const featuredWork = [
 
 const featuredApps = [
   {
+    title: 'TritonAI Harness Chat',
+    category: 'Campus AI companion',
+    description: 'An iPhone and iPad companion to the TritonAI Harness at UC San Diego. Ask from your phone, and the assistant on your work computer does the work and answers in one conversation.',
+    latest: 'Version 1.1.1 now live in the App Store — free, with drafts you send yourself, approvals before it opens a web page, and scheduled routines such as a morning brief.',
+    image: '/harness-chat-social.png',
+    imageAlt: 'TritonAI Harness Chat: the King Triton mascot beside the line "Your work computer, right in your pocket."',
+    href: '/products/tritonai-harness-chat',
+    appStoreUrl: 'https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331',
+    launched: '2026-11-25',
+  },
+  {
     title: 'Pocket Relay',
     category: 'Developer tools',
     description: 'An iPhone and iPad app for following your coding agent in Google Antigravity, approving its actions, and answering its questions away from your desk.',
-    latest: 'Version 1.0 now live in the App Store — free for iPhone and iPad, pairing with a free bridge on Mac, Windows, or Linux.',
+    latest: 'Version 1.2 now live in the App Store — works from anywhere over Wi-Fi or mobile data through an end-to-end encrypted relay, with setup down to two steps.',
     image: '/pocket-relay-social.png',
     imageAlt: 'Pocket Relay: the app mascot beside the line "Follow and steer your coding agent from your iPhone or iPad."',
     href: '/products/pocket-relay',
     appStoreUrl: 'https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748',
+    launched: '2026-11-24',
   },
   {
     title: 'Resolution Companion',
@@ -148,6 +161,15 @@ const featuredApps = [
     appStoreUrl: 'https://apps.apple.com/us/app/steel-city-gameday/id6806732803',
   },
 ];
+
+// An app wears the "New" tag for three weeks after its App Store launch. The
+// site rebuilds on every push (the digest cron pushes daily), so the tag drops
+// off on its own instead of going stale.
+const NEW_APP_WINDOW_MS = 21 * 24 * 60 * 60 * 1000;
+function isNewApp(app: { launched?: string }): boolean {
+  if (!app.launched) return false;
+  return Date.now() - new Date(app.launched + 'T12:00:00Z').getTime() < NEW_APP_WINDOW_MS;
+}
 
 // Split an app's `latest` line ("Version 1.6.0 now available in the App Store —
 // what changed") into a short version tag and the change note, so the card can
@@ -375,6 +397,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FEATURED APPEARANCE, from lib/featuredAppearance */}
+      <FeaturedEpisode />
+
       {/* TRITONAI & CAMPUS WORK */}
       <section id="selected-work" className="border-b border-line bg-paper-strong" aria-labelledby="tritonai-heading">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-[4.5rem]">
@@ -454,24 +479,32 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-[4.5rem]">
           <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2">
             <h2 id="featured-apps-heading" className="text-3xl font-normal md:text-[2.5rem]">Apps I&apos;ve built</h2>
-            <Link href="/products" className="text-[15px] font-semibold text-signal-blue underline-offset-4 hover:underline">All 23 projects →</Link>
+            <Link href="/products" className="text-[15px] font-semibold text-signal-blue underline-offset-4 hover:underline">All 24 projects →</Link>
           </div>
           <p className="mt-3 max-w-2xl text-base leading-7 text-body">
             Nights and weekends I build independent mobile apps, campus prototypes, and automated personal agent systems.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {featuredApps.map(app => {
+          {/* Six-column track: the newest launches lead two-up, the rest sit three-up below. */}
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-6">
+            {featuredApps.map((app, index) => {
               const release = splitReleaseNote(app.latest);
+              const lead = index < 2;
               return (
-                <article key={app.title} className="flex flex-col overflow-hidden rounded-md border border-line bg-paper-strong">
+                <article key={app.title}
+                  className={`flex flex-col overflow-hidden rounded-md border border-line bg-paper-strong ${lead ? 'xl:col-span-3' : 'xl:col-span-2'} ${index === featuredApps.length - 1 && featuredApps.length % 2 === 1 ? 'md:max-xl:col-span-2' : ''}`}>
                   <div className="relative aspect-[1200/630] border-b border-line bg-white">
                     <Image src={app.image} alt={app.imageAlt} fill
-                      className="object-cover" sizes="(min-width: 1280px) 290px, (min-width: 768px) 50vw, 100vw" />
+                      className="object-cover" sizes={lead ? '(min-width: 1280px) 600px, (min-width: 768px) 50vw, 100vw' : '(min-width: 1280px) 390px, (min-width: 768px) 50vw, 100vw'} />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="text-[13px] font-semibold text-signal-blue">
-                      {app.category}
-                      {release.version && <> · <span className="font-mono text-xs">v{release.version}</span></>}
+                    <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] font-semibold text-signal-blue">
+                      {isNewApp(app) && (
+                        <span className="rounded-sm bg-signal-gold-ink px-1.5 py-0.5 font-mono text-[11px] font-semibold uppercase tracking-[0.08em] text-white">New</span>
+                      )}
+                      <span>
+                        {app.category}
+                        {release.version && <> · <span className="font-mono text-xs">v{release.version}</span></>}
+                      </span>
                     </p>
                     <h3 className="mt-2 font-[family-name:var(--font-display)] text-[1.625rem] font-medium leading-tight">{app.title}</h3>
                     <p className="mt-2 text-[15px] leading-relaxed text-body">{app.description}</p>

@@ -18,6 +18,7 @@ const OG_IMAGES: Record<string, { url: string; alt: string }> = {
   'resolution-companion': { url: '/resolution-companion-social.webp', alt: 'Resolution Companion app social card: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.' },
   'horse-racing-companion': { url: '/horse-racing-companion-social.jpg', alt: 'Horse Racing Companion app social card: race entries and analysis on a phone, with the app name and tagline.' },
   'pocket-relay': { url: '/pocket-relay-social.png', alt: 'Pocket Relay app social card: the app mascot beside the line "Follow and steer your coding agent from your iPhone or iPad."' },
+  'tritonai-harness-chat': { url: '/harness-chat-social.png', alt: 'TritonAI Harness Chat app social card: the King Triton mascot beside the line "Your work computer, right in your pocket."' },
   'steel-city-gameday': { url: '/steel-city-gameday.png', alt: 'Steel City Gameday app social card: Pittsburgh Steelers gameday app with crews, picks, and season coverage.' },
 };
 const OG_IMAGE_FALLBACK = { url: '/brett-pollak-og-card.png', alt: 'Brett Pollak, technology leader at UC San Diego and independent app developer' };
