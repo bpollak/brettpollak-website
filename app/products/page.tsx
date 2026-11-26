@@ -40,9 +40,9 @@ const products = [
     width: project.imageWidth, height: project.imageHeight, description: project.description, features: project.features, cta: "See how it works",
   })),
   {
-    group: "app-store",
-    status: "Live on the App Store · v1.1.1",
-    category: "Campus AI companion",
+    group: "experiments",
+    status: "Experimental beta · UC San Diego employees only",
+    category: "Mobile experiment",
     title: "TritonAI Harness Chat",
     href: "https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331",
     image: "/tritonai-harness-chat.jpg",
@@ -50,14 +50,14 @@ const products = [
     width: 598,
     height: 1300,
     description:
-      "A free iPhone companion for people who use the TritonAI Harness on a Mac or PC at UC San Diego. Ask a question or hand off a small task from your phone, and the assistant on your computer does the work; the answer comes back in one running conversation.",
+      "An experiment in working with the TritonAI Harness from a phone. UC San Diego employees in the beta ask a question or hand off a small task on their iPhone, and the Harness on their Mac or PC does the work. It is a test of the idea, not a supported service, and it may or may not go further.",
     features: [
-      "Answers about how things are done at UC San Diego, with sources",
-      "First drafts of emails, agendas, and summaries to review and send yourself",
-      "Scheduled requests and ready-made routines, such as a morning brief",
-      "Asks before opening a web page; requests and answers go only to your own computer",
+      "Beta for UC San Diego employees who already use the TritonAI Harness",
+      "Ask in your own words; the assistant on your computer does the work",
+      "Drafts come back for you to review and send yourself",
+      "Requests and answers go only to your own computer",
     ],
-    cta: "Download on the App Store",
+    cta: "See the beta listing",
   },
   {
     group: "personal-apps",
@@ -302,7 +302,7 @@ const projectGroups = [
   { id: 'app-store', title: 'App Store', description: `Independently built and shipped iOS apps. ${appStoreLive} live on the App Store right now.` },
   { id: 'campus-tools', title: 'Campus tools', description: 'Applications and prototypes for campus workflows, student and visitor services, document preparation, and AI planning.' },
   { id: 'personal-apps', title: 'Personal apps', description: 'Apps and websites for everyday interests and family use. Private projects have public walkthroughs.' },
-  { id: 'experiments', title: 'Experiments', description: 'Projects exploring personal AI systems, drafting workflows, and media authenticity.' },
+  { id: 'experiments', title: 'Experiments', description: 'Projects exploring personal AI systems, drafting workflows, media authenticity, and new ways to work with campus AI tools.' },
 ];
 
 const productListSchema = {

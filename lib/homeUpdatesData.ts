@@ -39,8 +39,8 @@ export const homeUpdates: HomeUpdatesData = {
     {
       date: '2026-11-25',
       area: 'work',
-      text: 'TritonAI Harness Chat is now on the App Store',
-      note: 'A free iPhone companion: ask from your phone and the Harness on your Mac or PC does the work with its files and connected systems.',
+      text: 'Experiment: TritonAI Harness Chat beta for iPhone',
+      note: 'A beta for UC San Diego employees, testing one way to work with the Harness from a phone. It may or may not become a supported service.',
       href: 'https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331',
     },
     {
