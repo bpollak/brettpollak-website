@@ -231,7 +231,7 @@ export default function About() {
           </h2>
           <p className="max-w-3xl text-base leading-7 text-body">
             Nights and weekends I build independent iOS apps. Four are in the
-            App Store, including Resolution: Habit Tracker and a Steelers gameday
+            App Store, including Resolution Companion and a Steelers gameday
             app my family&apos;s group chat runs on every Sunday. The same
             instinct as the day job, smaller blast radius: build it, ship it,
             keep it honest.

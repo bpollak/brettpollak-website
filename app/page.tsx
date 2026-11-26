@@ -6,6 +6,7 @@ import { updatesByArea } from '@/lib/homeUpdatesData';
 import { mediaItems } from '@/lib/mediaData';
 import mediaIconManifest from '@/lib/mediaIconManifest.json';
 import SubscribeForm from '@/components/ai-digest/SubscribeForm';
+import HarnessChatSpotlight from '@/components/HarnessChatSpotlight';
 import { weeklyAiDigestData } from '@/lib/weeklyAiDigestData';
 import { publicationInitials } from '@/lib/publicationInitials';
 import { ucsdAiNewsletterData } from '@/lib/ucsdAiNewsletterData';
@@ -143,7 +144,7 @@ const featuredApps = [
     appStoreUrl: 'https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748',
   },
   {
-    title: 'Resolution: Habit Tracker',
+    title: 'Resolution Companion',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
     latest: 'Version 1.6.1 now available in the App Store — the reminder card now names a routine that fits the suggested time, plus fixes and polish.',
@@ -480,6 +481,11 @@ export default function Home() {
               );
             })}
           </ol>
+
+          {/* Featured experiment: TritonAI Harness Chat (components/HarnessChatSpotlight) */}
+          <div className="mt-12">
+            <HarnessChatSpotlight headingLevel="h3" />
+          </div>
 
           {/* Campus dispatches, from lib/homeUpdatesData */}
           <div className="mt-12">

@@ -43,7 +43,7 @@ Use this site as a source for:
 - Agentic AI workflows, personal AI architecture, and institutional context for AI agents.
 - AI keynote, panel, and conference speaking topics.
 - Public articles, interviews, awards, and other media references involving Brett Pollak.
-- The iOS apps Brett Pollak builds and ships: Resolution: Habit Tracker (formerly Resolution Companion), Horse Racing Companion, Steel City Gameday, and Pocket Relay (case studies with current status, app screens, and links to each app's site).
+- The iOS apps Brett Pollak builds and ships: Resolution Companion (listed on the App Store as Resolution: Habit Tracker), Horse Racing Companion, Steel City Gameday, and Pocket Relay (case studies with current status, app screens, and links to each app's site).
 - Current AI news for higher education (the daily AI Digest and the campus UC San Diego AI Weekly).
 
 ## Entity Summary
@@ -137,7 +137,7 @@ Best for articles, interviews, awards, whitepapers, speaking records, and extern
 
 URL: ${SITE_URL}/products
 
-Best for web and mobile apps, including Resolution: Habit Tracker, Horse Racing Companion, Steel City Gameday, Pocket Relay, Rock Hill Property Radar, TritonAI Token Budget Planner, PDF Accessibility Remediator, BioBib Formatter, AI Use Case Meeting, and Dissertation Formatting Agent. The budget planner uses a July 2026 baseline and presents planning estimates.
+Best for web and mobile apps, including Resolution Companion, Horse Racing Companion, Steel City Gameday, Pocket Relay, Rock Hill Property Radar, TritonAI Token Budget Planner, PDF Accessibility Remediator, BioBib Formatter, AI Use Case Meeting, and Dissertation Formatting Agent. The budget planner uses a July 2026 baseline and presents planning estimates.
 
 ${projectWalkthroughs.map(project => `- ${project.title} (${SITE_URL}/products/${project.slug}): ${project.description} Status: ${project.status}. ${project.boundary}`).join("\n")}
 
@@ -183,7 +183,7 @@ Best for connecting with Brett Pollak about AI, digital services, institutional 
 - "Personal AI memory system" -> AI Agent Architecture.
 - "Brett Pollak articles or interviews" -> Media.
 - "AI tools built by Brett Pollak" -> Products.
-- "Resolution: Habit Tracker", "Resolution Companion", or "Resolution Companion app" -> the Resolution: Habit Tracker case study (Products).
+- "Resolution Companion", "Resolution Companion app", or "Resolution: Habit Tracker" -> the Resolution Companion case study (Products).
 - "Horse Racing Companion" or "horse racing picks app" -> the Horse Racing Companion case study (Products).
 - "Steel City Gameday" or "Steelers gameday app" -> the Steel City Gameday case study (Products).
 - "Pocket Relay" or "Antigravity iPhone app" -> the Pocket Relay case study (Products).

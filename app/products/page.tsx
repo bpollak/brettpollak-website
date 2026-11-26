@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from "next";
 import type { ReactNode } from 'react';
 import { projectWalkthroughs } from '@/lib/projectWalkthroughs';
+import HarnessChatSpotlight, { HARNESS_CHAT_HREF } from '@/components/HarnessChatSpotlight';
 import { SITE_URL } from '@/lib/seoDates';
 
 export const metadata: Metadata = {
@@ -39,26 +40,6 @@ const products = [
     image: project.image, imageAlt: project.imageAlt, imageCaption: project.imageCaption,
     width: project.imageWidth, height: project.imageHeight, description: project.description, features: project.features, cta: "See how it works",
   })),
-  {
-    group: "experiments",
-    status: "Experimental beta · UC San Diego employees only",
-    category: "Mobile experiment",
-    title: "TritonAI Harness Chat",
-    href: "https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331",
-    image: "/tritonai-harness-chat.jpg",
-    imageAlt: "TritonAI Harness Chat on an iPhone: the TritonAI assistant asks \"What can I do for you?\" with suggested requests, under the line \"Your work computer, right in your pocket.\"",
-    width: 598,
-    height: 1300,
-    description:
-      "An experiment in working with the TritonAI Harness from a phone. UC San Diego employees in the beta ask a question or hand off a small task on their iPhone, and the Harness on their Mac or PC does the work. It is a test of the idea, not a supported service, and it may or may not go further.",
-    features: [
-      "Beta for UC San Diego employees who already use the TritonAI Harness",
-      "Ask in your own words; the assistant on your computer does the work",
-      "Drafts come back for you to review and send yourself",
-      "Requests and answers go only to your own computer",
-    ],
-    cta: "See the beta listing",
-  },
   {
     group: "personal-apps",
     status: "Public web app",
@@ -295,7 +276,9 @@ const products = [
 
 // Spelled out so the App Store blurb stays right as apps are added to the data.
 const NUMBER_WORDS = ['No apps are', 'One is', 'Two are', 'Three are', 'Four are', 'Five are', 'Six are', 'Seven are', 'Eight are', 'Nine are'];
-const appStoreCount = products.filter(product => product.group === 'app-store').length;
+// The spotlighted experiment leads the page, so the category lists skip it.
+const listedProducts = products.filter(product => product.href !== HARNESS_CHAT_HREF);
+const appStoreCount = listedProducts.filter(product => product.group === 'app-store').length;
 const appStoreLive = NUMBER_WORDS[appStoreCount] ?? `${appStoreCount} are`;
 
 const projectGroups = [
@@ -456,15 +439,21 @@ export default function Products() {
             {projectGroups.map(group => (
               <a key={group.id} href={`#${group.id}`}
                 className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[#b9c2b3] bg-paper-strong px-[18px] text-[15px] font-medium text-ink transition-colors hover:border-ink">
-                {group.title} <span className="text-muted">{products.filter(product => product.group === group.id).length}</span>
+                {group.title} <span className="text-muted">{listedProducts.filter(product => product.group === group.id).length}</span>
               </a>
             ))}
           </nav>
         </div>
       </section>
 
+      <section className="border-b border-line bg-paper" aria-label="Featured experiment">
+        <div className="mx-auto max-w-7xl px-6 py-10 md:py-14">
+          <HarnessChatSpotlight />
+        </div>
+      </section>
+
       {projectGroups.map((group, groupIndex) => {
-        const groupProducts = products.filter(product => product.group === group.id);
+        const groupProducts = listedProducts.filter(product => product.group === group.id);
         const appStore = group.id === 'app-store';
         return (
           <section key={group.id} id={group.id} className={`scroll-mt-24 border-b border-line ${groupIndex % 2 === 0 ? 'bg-paper-strong' : 'bg-paper'}`}>

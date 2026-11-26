@@ -37,13 +37,6 @@ export const homeUpdates: HomeUpdatesData = {
   updates: [
     // ── UC San Diego work ─────────────────────────────────────────────
     {
-      date: '2026-11-25',
-      area: 'work',
-      text: 'Experiment: TritonAI Harness Chat beta for iPhone',
-      note: 'A beta for UC San Diego employees, testing one way to work with the Harness from a phone. It may or may not become a supported service.',
-      href: 'https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331',
-    },
-    {
       date: '2026-11-14',
       area: 'work',
       text: 'Harness 0.4.2 is the current stable release',
