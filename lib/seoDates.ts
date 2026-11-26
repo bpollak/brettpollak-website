@@ -30,7 +30,7 @@ export const staticPageDates: Record<string, string> = {
   "/": "2026-11-25",  // homepage: Harness Chat spotlight, featured podcast band, Pocket Relay 1.2.0
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
   "/about": "2026-11-24",  // four App Store apps
-  "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
+  "/tritongpt": "2026-11-26",  // Visual redesign: screenshots, demo player, results charts, roadmap timeline
   "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
   "/products": "2026-11-25",  // Harness Chat spotlight + case study; App Store count, Pocket Relay 1.2.0
   "/products/resolution-companion": "2026-11-25",  // status names the App Store listing title

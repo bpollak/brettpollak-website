@@ -505,6 +505,12 @@ html {
   }
 }
 
+/* Bars inside a Reveal block hold at zero until the block scrolls into view,
+   so charts further down the page animate when they are seen, not on load. */
+.reveal:not(.is-visible) .grow-bar {
+  animation-play-state: paused;
+}
+
 /* Gentle hover lift for interactive cards / diagrams */
 .lift {
   transition: transform 180ms ease, box-shadow 180ms ease;

@@ -1,982 +1,1057 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import CountUp from '@/components/motion/CountUp';
+import Reveal from '@/components/motion/Reveal';
+import DemoPlayer, { type Demo } from '@/components/tritongpt/DemoPlayer';
 import TritonAISystemMap from '@/components/tritongpt/TritonAISystemMap';
 import { tritonAiMetrics } from '@/lib/tritonAiMetrics';
 
-export default function TritonGPTContent() {
-  const programOfferingStyles = [
-    {
-      card: "border-l-[#1f5a8a]",
-      iconWrap: "bg-wash-blue text-signal-blue",
-      cta: "text-signal-blue",
-    },
-    {
-      card: "border-l-[#c97712]",
-      iconWrap: "bg-wash-gold text-signal-gold-ink",
-      cta: "text-signal-gold-ink",
-    },
-    {
-      card: "border-l-[#466b54]",
-      iconWrap: "bg-wash-green text-[#466b54]",
-      cta: "text-[#466b54]",
-    },
-    {
-      card: "border-l-[#b85642]",
-      iconWrap: "bg-wash-coral text-[#b85642]",
-      cta: "text-[#b85642]",
-    },
-    {
-      card: "border-l-[#17201b]",
-      iconWrap: "bg-[#eef0eb] text-ink",
-      cta: "text-ink",
-    },
-    {
-      card: "border-l-[#1f5a8a]",
-      iconWrap: "bg-wash-blue text-signal-blue",
-      cta: "text-signal-blue",
-    },
-    {
-      card: "border-l-[#c97712]",
-      iconWrap: "bg-wash-gold text-signal-gold-ink",
-      cta: "text-signal-gold-ink",
-    },
-  ];
+/* ------------------------------------------------------------------ */
+/* Icons (24px outline paths)                                          */
+/* ------------------------------------------------------------------ */
 
-  // Status vocabulary mirrors tritonai.ucsd.edu (use-case portfolio + public roadmap).
-  const statusStyles: Record<string, string> = {
-    Production: "bg-wash-green text-signal-green",
-    Shipped: "bg-wash-green text-signal-green",
-    Pilot: "bg-wash-gold text-signal-gold-ink",
-    "In development": "bg-wash-blue text-signal-blue",
-    Exploring: "bg-[#eef0eb] text-ink",
-  };
+const ICON_PATHS: Record<string, string[]> = {
+  platform: ['M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01'],
+  chat: ['M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.3-3.9A7.75 7.75 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'],
+  academic: ['M12 14l9-5-9-5-9 5 9 5z', 'M12 14l6.16-3.422A12.083 12.083 0 0121 14.5c0 4.418-4.03 8-9 8s-9-3.582-9-8a12.083 12.083 0 012.84-3.922L12 14z'],
+  book: ['M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'],
+  code: ['M16 18l6-6-6-6M8 6l-6 6 6 6'],
+  skills: ['M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z', 'M12 3h9v9'],
+  bolt: ['M13 10V3L4 14h7v7l9-11h-7z'],
+  shield: ['M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'],
+  share: ['M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z'],
+  clipboard: ['M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'],
+  grid: ['M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'],
+  swap: ['M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4'],
+  sparkles: ['M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'],
+  building: ['M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'],
+  search: ['M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'],
+  pencil: ['M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z'],
+  flow: ['M4 6h4v4H4zM16 14h4v4h-4zM8 8h4a2 2 0 012 2v4a2 2 0 002 2'],
+};
+
+function Icon({ name, className = 'h-5 w-5' }: { name: keyof typeof ICON_PATHS; className?: string }) {
+  return (
+    <svg aria-hidden="true" className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {ICON_PATHS[name].map((d) => (
+        <path key={d} strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d={d} />
+      ))}
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Content                                                             */
+/* ------------------------------------------------------------------ */
+
+const TONES = {
+  blue: { text: 'text-signal-blue', wash: 'bg-wash-blue', bar: 'bg-signal-blue', border: 'border-t-signal-blue', left: 'border-l-signal-blue' },
+  gold: { text: 'text-signal-gold-ink', wash: 'bg-wash-gold', bar: 'bg-signal-gold', border: 'border-t-signal-gold', left: 'border-l-signal-gold' },
+  green: { text: 'text-signal-green', wash: 'bg-wash-green', bar: 'bg-signal-green', border: 'border-t-signal-green', left: 'border-l-signal-green' },
+  coral: { text: 'text-signal-coral-ink', wash: 'bg-wash-coral', bar: 'bg-signal-coral', border: 'border-t-signal-coral', left: 'border-l-signal-coral' },
+  ink: { text: 'text-ink', wash: 'bg-[#eef0eb]', bar: 'bg-ink', border: 'border-t-ink', left: 'border-l-ink' },
+} as const;
+type Tone = keyof typeof TONES;
+
+// Status vocabulary mirrors tritonai.ucsd.edu (use-case portfolio + public roadmap).
+const STATUS_STYLES: Record<string, string> = {
+  Production: 'bg-wash-green text-signal-green',
+  Shipped: 'bg-wash-green text-signal-green',
+  Pilot: 'bg-wash-gold text-signal-gold-ink',
+  'In development': 'bg-wash-blue text-signal-blue',
+  Exploring: 'bg-[#eef0eb] text-ink',
+};
+
+function StatusPill({ status, className = '' }: { status: string; className?: string }) {
+  return (
+    <span className={`inline-block px-2.5 py-1 font-mono text-[0.66rem] uppercase tracking-[0.12em] ${STATUS_STYLES[status]} ${className}`}>
+      {status}
+    </span>
+  );
+}
+
+const INSTANCES: { name: string; place: string; note: string; tone: Tone; home?: boolean }[] = [
+  { name: 'TritonGPT', place: 'UC San Diego', note: 'Home campus', tone: 'blue', home: true },
+  { name: 'BearGPT', place: 'UC Berkeley', note: 'Partner deployment', tone: 'gold' },
+  { name: 'SCOUT', place: 'UC Merced', note: 'Full campus since Sept 2026', tone: 'green' },
+  { name: 'ANR AI', place: 'UC Agriculture and Natural Resources', note: 'Staff service', tone: 'coral' },
+  { name: 'FredGPT', place: 'Fairleigh Dickinson University', note: 'Research-oriented instance', tone: 'ink' },
+];
+
+const OFFERINGS: { title: string; body: string; href: string; icon: keyof typeof ICON_PATHS; tone: Tone; meta?: string }[] = [
+  {
+    title: 'TritonGPT Platform',
+    body: 'Secure campus AI hosted at SDSC, with assistants built around specific university work.',
+    href: 'https://tritonai.ucsd.edu/tritongpt/index.html',
+    icon: 'platform',
+    tone: 'blue',
+  },
+  {
+    title: 'TritonAI Harness',
+    body: "UC San Diego's supported agent workspace for Mac and Windows. It works with local files, code, Microsoft 365, Google Workspace, GitHub, and more, under supervised approval modes.",
+    href: 'https://tritonai.ucsd.edu/developer-apis/harness.html',
+    icon: 'bolt',
+    tone: 'gold',
+    meta: `${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens · ${tritonAiMetrics.harness.mergedPullRequests} merged PRs · ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews`,
+  },
+  {
+    title: 'Embedded Website Support',
+    body: "A no-sign-in assistant grounded in a site's public content, live on 16 campus websites, with live parking and Geisel Library busyness.",
+    href: 'https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html',
+    icon: 'chat',
+    tone: 'green',
+  },
+  {
+    title: 'Instructional AI',
+    body: 'A Canvas AI Tutor for each participating course. Instructors choose the material, what stays hidden, and Socratic or directive mode.',
+    href: 'https://tritonai.ucsd.edu/tritongpt/instruction.html',
+    icon: 'academic',
+    tone: 'coral',
+  },
+  {
+    title: 'Developer APIs',
+    body: 'One Gateway key to approved cloud and UC-hosted models, from the Harness, Claude Code, Codex, n8n, or your own code.',
+    href: 'https://tritonai.ucsd.edu/developer-apis/index.html',
+    icon: 'code',
+    tone: 'blue',
+  },
+  {
+    title: 'UCSD Skills Library',
+    body: 'Reviewed, reusable skills and connectors, so teams adapt tested work instead of rebuilding every integration.',
+    href: 'https://tritonai.ucsd.edu/skills/index.html',
+    icon: 'skills',
+    tone: 'gold',
+  },
+  {
+    title: 'Training and Community',
+    body: 'A 15-part Discovery Series, Harness training, a Certificate in AI for Higher Education, and communities of practice.',
+    href: 'https://tritonai.ucsd.edu/connect/index.html',
+    icon: 'book',
+    tone: 'green',
+  },
+  {
+    title: 'Approved AI Tools Guidance',
+    body: 'Which AI tools can be used with university data, and for what. ChatGPT Edu is not at UC San Diego yet; guidance will come with its rollout.',
+    href: 'https://tritonai.ucsd.edu/tools/index.html',
+    icon: 'shield',
+    tone: 'coral',
+  },
+];
+
+const DEMOS: Demo[] = [
+  {
+    title: 'UC San Diego Assistant',
+    tag: 'Campus answers',
+    description: 'Answers campus policy and service questions from curated department knowledge.',
+    src: 'https://tritongpt-deck.vercel.app/media/media1.mov',
+    poster: 'https://tritongpt-deck.vercel.app/media/image36.png',
+  },
+  {
+    title: 'Contract Reviewer',
+    tag: 'In production',
+    description: 'Reviews NDAs and contracts from a monitored inbox and redlines them against UC terms and legal positions.',
+    src: 'https://tritongpt-deck.vercel.app/media/media7.mp4',
+    poster: 'https://tritongpt-deck.vercel.app/media/image47.png',
+  },
+  {
+    title: 'Job Description Helper',
+    tag: 'HR drafting',
+    description: 'Helps HR and hiring managers draft clear, compliant job descriptions in minutes.',
+    src: 'https://tritongpt-deck.vercel.app/media/media4.mov',
+  },
+  {
+    title: 'Fund Manager Coach',
+    tag: 'Research finance',
+    description: 'Guides fund managers on compliance, allowable expenses, and spending restrictions.',
+    src: 'https://tritongpt-deck.vercel.app/media/media3.mov',
+  },
+];
+
+const SHOWCASE: { name: string; status: string; desc: string; image: string; alt: string; width: number; height: number; href?: string }[] = [
+  {
+    name: 'Passport Visitor Management',
+    status: 'Production',
+    desc: 'Visitors check in at two campus locations while staff run each site from a shared queue.',
+    image: '/project-passports-visitor-management.png',
+    alt: 'UC San Diego Passports check-in screen with Central Service Center and Bookstore locations',
+    width: 1280,
+    height: 900,
+    href: '/products/passports-visitor-management',
+  },
+  {
+    name: 'AI Use-Case Meeting',
+    status: 'Production',
+    desc: 'Biweekly sessions where staff bring an AI idea and leave with a scoped use case.',
+    image: '/ai-use-case-meeting.png',
+    alt: 'AI Use Case meeting site describing the biweekly forum and upcoming sessions',
+    width: 1280,
+    height: 800,
+  },
+  {
+    name: 'BioBib',
+    status: 'Pilot',
+    desc: 'Turns a faculty CV into a BioBib draft. The faculty member checks every section.',
+    image: '/biobib-formatter.png',
+    alt: 'BioBib Formatter upload page for turning a faculty CV into a BioBib',
+    width: 1280,
+    height: 800,
+  },
+  {
+    name: 'Dissertation Formatter',
+    status: 'Pilot',
+    desc: 'Checks 60+ formatting rules, fixes what it safely can, and flags the rest for the student.',
+    image: '/dissertation-agent.png',
+    alt: 'Dissertation Formatting Agent page with upload, review, and download steps',
+    width: 1280,
+    height: 800,
+  },
+  {
+    name: 'PDF Remediator',
+    status: 'Pilot',
+    desc: 'Finds the accessibility problems software can catch and hands a remediator the evidence for the rest.',
+    image: '/pdf-remediator.png',
+    alt: 'PDF Remediator start page for an accessibility check',
+    width: 1280,
+    height: 800,
+  },
+  {
+    name: 'Voice Agent',
+    status: 'Pilot',
+    desc: 'Consent-based voice interviews capture how work really happens and surface automation opportunities.',
+    image: '/project-process-discovery-workspace.png',
+    alt: 'Interview template editor showing the agent persona, opening line, and interview sections',
+    width: 1210,
+    height: 810,
+    href: '/products/process-discovery',
+  },
+];
+
+const MORE_WORKFLOWS: { name: string; status: string; desc: string }[] = [
+  { name: 'Contract Review', status: 'Production', desc: 'Annotated NDA and contract redlines for Procurement, checked by a qualified reviewer.' },
+  { name: 'Transcript Matching', status: 'Production', desc: 'Matches incoming transcripts to student records and routes uncertain cases to staff.' },
+  { name: 'Class Planner App', status: 'Production', desc: 'Conflict-free schedule options from live section data, handed off for booking.' },
+  { name: 'TritonGPT Class Planner', status: 'Production', desc: 'Students describe their courses and constraints; the assistant drafts a schedule.' },
+  { name: 'Instructional AI', status: 'Pilot', desc: 'Canvas tutors that answer only from instructor-approved material.' },
+  { name: 'Research Alignment', status: 'In development', desc: 'Matches researcher profiles to funding and explains why each one surfaced.' },
+];
+
+const ASSISTANT_GROUPS: { category: string; icon: keyof typeof ICON_PATHS; tone: Tone; assistants: [string, string][] }[] = [
+  {
+    category: 'Campus and employee info',
+    icon: 'building',
+    tone: 'blue',
+    assistants: [
+      ['UC San Diego Assistant', '70+ department sites, ServiceNow articles, and policies, plus live parking and busyness'],
+      ['Benefit Assistant', 'Employee benefit questions'],
+      ['Data Dictionary Assistant', 'Definitions from Activity Hubs and Blink'],
+      ['Supplier Search Tool', 'Campus suppliers and purchasing steps'],
+    ],
+  },
+  {
+    category: 'Teaching and planning',
+    icon: 'academic',
+    tone: 'green',
+    assistants: [
+      ['Socratic Tutor', 'Guides students without handing over answers'],
+      ['Instructor AI Assistant', 'Quizzes, summaries, and study guides from lectures'],
+      ['Class Scheduling Assistant', 'Course combinations around other commitments'],
+    ],
+  },
+  {
+    category: 'Research and funding',
+    icon: 'search',
+    tone: 'gold',
+    assistants: [
+      ['Deep Research Assistant', 'Synthesis across many documents and sources'],
+      ['Fund Manager Coach', 'Grant compliance and allowable expenses'],
+      ['Internet Search Assistant', 'Answers with current web information'],
+    ],
+  },
+  {
+    category: 'Drafting and delivery',
+    icon: 'pencil',
+    tone: 'coral',
+    assistants: [
+      ['Job Description Helper', 'Compliant job descriptions; 30 min → 5 min'],
+      ['Expert Notetaker', 'Decisions and action items from notes'],
+      ['Project Charter Assistant', 'Professional project charters'],
+      ['Triton Developer Assistant', 'Coding help and documentation analysis'],
+      ['AI Workplace Opportunity Assistant', 'Finds AI use cases in daily tasks'],
+    ],
+  },
+  {
+    category: 'Review and risk',
+    icon: 'shield',
+    tone: 'ink',
+    assistants: [
+      ['General AI Assistant', 'Writing and editing without campus context'],
+      ['Email Phishing Analyzer', 'Scores suspicious emails and explains why'],
+      ['Performance Review Evaluator', 'Checks ratings against written comments'],
+    ],
+  },
+];
+const ASSISTANT_COUNT = ASSISTANT_GROUPS.reduce((total, group) => total + group.assistants.length, 0);
+
+const PRINCIPLES: { title: string; body: string; icon: keyof typeof ICON_PATHS; tone: Tone }[] = [
+  { title: 'Trust is infrastructure', body: 'Each service picks an approved UC-hosted or enterprise cloud route for its data, and governance covers the whole workflow, not just the model.', icon: 'shield', tone: 'blue' },
+  { title: 'AI as a shared utility', body: 'One setup, one way in, one place costs show up. Teams start faster and reuse what already worked elsewhere.', icon: 'share', tone: 'gold' },
+  { title: 'Solve specific pain points', body: 'The strongest use cases come back every week: contracts, search, scheduling, accessibility, transcripts, teaching.', icon: 'clipboard', tone: 'green' },
+  { title: 'Meet people in the workflow', body: 'TritonAI shows up in Blink, public websites, Canvas, the campus mobile app, and departmental systems.', icon: 'grid', tone: 'coral' },
+  { title: 'Stay model-agnostic', body: 'Swapping the model underneath does not mean rebuilding the service, and no single vendor can strand the campus.', icon: 'swap', tone: 'blue' },
+  { title: 'Prepare for agency', body: 'Skills, APIs, scoped connectors, and monitoring are the pieces being built now so supervised agents can be safe.', icon: 'sparkles', tone: 'gold' },
+];
+
+const MILESTONES: { when: string; title: string; body: string }[] = [
+  { when: '2023', title: 'Beta', body: '400+ staff in the campus beta, plus AI Essentials training.' },
+  { when: 'Q1 2024', title: 'First assistants', body: 'UC San Diego Assistant and Job Description Helper launch.' },
+  { when: 'Q2 2024', title: 'Campus-wide', body: 'Open to ~37K employees with campus single sign-on.' },
+  { when: 'Q2 2025', title: 'Students', body: '45K students onboarded, with My Documents.' },
+  { when: 'Q3 2025', title: 'Blink widget', body: 'An assistant with no login, and model choice.' },
+  { when: 'Q4 2025', title: 'AI search', body: 'Blink AI overview and Deep Research.' },
+  { when: '2026', title: 'Agents', body: 'Workflows in production and the Harness access path.' },
+];
+
+const ROADMAP: { title: string; status: 'Pilot' | 'In development' | 'Exploring'; body: string }[] = [
+  { title: 'Instructional AI expansion', status: 'Pilot', body: 'Canvas tutors live for Fall 2026 courses; self-service course activation is in development.' },
+  { title: 'Multi-institution expansion', status: 'In development', body: 'Partner instances inherit the same hosting, model choice, trust, and observability controls.' },
+  { title: 'Governed builder path', status: 'In development', body: 'Public Harness access and setup, with shared team and project memory still in design.' },
+  { title: 'Supported rollout', status: 'In development', body: 'Discovery Series, certificate streams, and office hours as Harness onboarding widens.' },
+  { title: 'Academic advising agent', status: 'In development', body: 'A scoped prototype for tier-one advising questions and triage.' },
+  { title: 'Governed agency at campus scale', status: 'Exploring', body: 'Before an agent can change a system: allowed scope, tests, audit logs, approval points, and a rollback owner.' },
+];
+
+/* ------------------------------------------------------------------ */
+/* Small visual pieces                                                 */
+/* ------------------------------------------------------------------ */
+
+function Bar({ percent, tone, label, value }: { percent: number; tone: Tone; label: string; value: string }) {
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-3 text-sm">
+        <span className="text-body">{label}</span>
+        <span className="font-mono font-semibold text-ink">{value}</span>
+      </div>
+      <div className="mt-1.5 h-3 w-full bg-[#e8ece4]">
+        <div className={`grow-bar h-full ${TONES[tone].bar}`} style={{ width: `${Math.max(percent, 1.5)}%` }} />
+      </div>
+    </div>
+  );
+}
+
+function SectionIntro({ label, title, children, dark = false }: { label: string; title: string; children?: React.ReactNode; dark?: boolean }) {
+  return (
+    <div className="mb-10 max-w-3xl">
+      <p className={`rule-label mb-4 ${dark ? 'text-on-dark' : ''}`}>{label}</p>
+      <h2 className={`text-3xl font-medium leading-tight md:text-5xl ${dark ? 'text-white' : 'text-ink'}`}>{title}</h2>
+      {children && <p className={`mt-4 text-lg leading-8 ${dark ? 'text-on-dark' : 'text-body'}`}>{children}</p>}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Page                                                                */
+/* ------------------------------------------------------------------ */
+
+export default function TritonGPTContent() {
+  const { gateway } = tritonAiMetrics;
+  const heroStats = [
+    { value: 73000, format: (n: number) => Math.round(n).toLocaleString(), suffix: '+', label: 'Students, faculty, and staff served', tone: 'blue' as Tone },
+    { value: gateway.tokensBillions, format: (n: number) => n.toFixed(1), suffix: gateway.tokensSuffix, label: `Tokens through the gateway, ${gateway.tokensPeriodLabel}`, tone: 'gold' as Tone },
+    { value: gateway.requestsMillions, format: (n: number) => n.toFixed(1), suffix: gateway.requestsSuffix, label: 'API requests completed', tone: 'green' as Tone },
+    { value: gateway.selfHostedPercent, format: (n: number) => n.toFixed(1), suffix: gateway.selfHostedSuffix, label: 'Served by self-hosted models', tone: 'coral' as Tone },
+  ];
 
   return (
     <main className="min-h-screen bg-paper text-ink" id="main-content" tabIndex={-1}>
-      {/* Hero Section */}
-      <section className="paper-grid border-b border-line">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-end">
+      {/* ---------------- Hero ---------------- */}
+      <section className="paper-grid overflow-hidden border-b border-line">
+        <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 md:pb-20 md:pt-24">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
-              <p className="rule-label mb-6">Program overview</p>
-              <h1 className="text-5xl md:text-7xl leading-none font-medium text-ink">TritonAI</h1>
-              <p className="mt-8 text-2xl md:text-3xl leading-10 text-body">
+              <p className="rule-label mb-6">Program overview · Updated November 2026</p>
+              <h1 className="text-5xl font-medium leading-none text-ink md:text-7xl">TritonAI</h1>
+              <p className="mt-7 text-2xl leading-9 text-body md:text-3xl md:leading-10">
                 AI tools, training, and support for UC San Diego, from everyday chat to supervised campus workflows.
               </p>
-            </div>
-            <div className="border-y border-line py-6">
-              <p className="text-lg leading-8 text-body">
-                TritonAI runs TritonGPT, reviews which generative AI tools can be used with university data, trains people to use them well, and helps teams build their own. Every service draws on the same approved model access, campus data, and shared components, and every supported service has a named owner.
+              <p className="mt-6 max-w-xl text-base leading-7 text-body">
+                TritonAI runs TritonGPT, reviews which AI tools can be used with university data, trains people to use them well,
+                and helps teams build their own. Every supported service has a named owner.
               </p>
-              <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                <div className="system-node p-4">
-                  <p className="font-mono text-xs text-signal-gold-ink">UPDATED</p>
-                  <p className="mt-2 font-semibold">November 2026</p>
+              <ul className="mt-7 flex flex-wrap gap-2" aria-label="Platform facts">
+                {['Default model runs at SDSC', 'Approved up to P3 data', `${ASSISTANT_COUNT} task-built assistants`].map((fact) => (
+                  <li key={fact} className="border border-line bg-paper-strong px-3 py-1.5 text-sm font-semibold text-ink">
+                    {fact}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative lg:pl-4">
+              <div className="overflow-hidden rounded-md border border-line bg-white shadow-[14px_14px_0_rgba(201,119,18,0.22)]">
+                <div className="flex items-center gap-1.5 border-b border-line bg-[#eef0eb] px-4 py-2.5" aria-hidden="true">
+                  <span className="h-2.5 w-2.5 rounded-full bg-signal-coral/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-signal-gold/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-signal-green/70" />
+                  <span className="ml-3 truncate rounded-sm bg-white px-3 py-0.5 font-mono text-[0.68rem] text-muted">TritonGPT · UC San Diego Assistant</span>
                 </div>
-                <div className="system-node p-4">
-                  <p className="font-mono text-xs text-signal-gold-ink">CONTEXT</p>
-                  <p className="mt-2 font-semibold">University of California, San Diego</p>
-                </div>
+                <Image
+                  src="/tritongpt-uc-san-diego-assistant.png"
+                  alt="TritonGPT with the UC San Diego Assistant open and a list of campus assistants in the sidebar"
+                  width={1200}
+                  height={860}
+                  priority
+                  sizes="(min-width: 1024px) 680px, 100vw"
+                  className="h-auto w-full"
+                />
+              </div>
+              <div className="absolute -bottom-6 left-0 hidden max-w-[15rem] border border-line bg-paper-strong p-4 shadow-lg sm:block lg:-left-6">
+                <p className="font-mono text-[0.65rem] uppercase tracking-[0.14em] text-signal-gold-ink">Since release 4.6.6</p>
+                <p className="mt-1.5 text-sm font-semibold leading-5 text-ink">The default model is an open model on UC San Diego hardware</p>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="border-t border-line bg-paper-strong/80">
+          <dl className="mx-auto grid max-w-7xl grid-cols-2 px-6 lg:grid-cols-4">
+            {heroStats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col py-7 pr-4 ${index % 2 === 1 ? 'pl-4 border-l border-line lg:pl-6' : ''} ${index === 2 ? 'border-t border-line lg:border-t-0 lg:border-l lg:pl-6' : ''} ${index === 3 ? 'border-t border-line lg:border-t-0' : ''}`}
+              >
+                <dt className="order-2 mt-2 text-sm leading-5 text-body">{stat.label}</dt>
+                <dd className="order-1">
+                  <CountUp
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    format={stat.format}
+                    className={`block text-3xl font-semibold leading-none md:text-5xl ${TONES[stat.tone].text}`}
+                  />
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
-      {/* Executive Summary */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+      {/* ---------------- Reach ---------------- */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="rule-label mb-4">Executive summary</p>
-            <h2 className="text-4xl md:text-5xl leading-tight font-medium text-ink">Scope of the program.</h2>
-          </div>
-          <div className="field-note p-8">
-            <p className="text-xl text-body leading-9 mb-7">
-            <span className="font-bold text-signal-blue">TritonAI</span> is UC San Diego&apos;s institutional AI program, serving 73,000+ students, faculty, and staff. It includes infrastructure, task-specific assistants, campus data tools, instructional pilots, developer access, and shared workflows.
-          </p>
-            <p className="text-xl text-body leading-9 mb-8">
-            <span className="font-bold text-signal-blue">TritonGPT</span> is the shared platform at the center of that work. Students, staff, and faculty sign in with their campus account, pick a model, work with their own documents, and open assistants built for campus tasks. Since the 4.6.6 release, the default model is an open model running on UC San Diego infrastructure at SDSC, which keeps routine campus AI traffic on UC-controlled hardware. The release also added Voice Mode, an in-chat coding sandbox, and adjustable reasoning effort. UC San Diego has approved TritonGPT and the TritonAI Harness for information up to Protection Level 3 within an approved service; P4 data is not approved.
-          </p>
-            <p className="text-xl text-body leading-9">
-              The platform has also been licensed to peer institutions, including <span className="font-bold">UC Berkeley (BearGPT)</span>, <span className="font-bold">UC Merced (SCOUT)</span>, which opened to its full campus in September 2026, <span className="font-bold">UC Agriculture and Natural Resources</span>, and <span className="font-bold">Fairleigh Dickinson University (FredGPT)</span>.
+            <p className="rule-label mb-4">One platform, five institutions</p>
+            <h2 className="text-3xl font-medium leading-tight text-ink md:text-5xl">Built for UC San Diego, now shared.</h2>
+            <p className="mt-5 text-lg leading-8 text-body">
+              TritonGPT is the shared platform at the center of TritonAI. People sign in with their campus account, pick a
+              model, work with their own documents, and open assistants built for campus tasks. Peer institutions now license
+              the same platform under their own names.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2" aria-label="New in TritonGPT 4.6.6">
+              {['Voice Mode', 'In-chat coding sandbox', 'Adjustable reasoning effort'].map((feature) => (
+                <li key={feature} className="inline-flex items-center gap-2 bg-wash-blue px-3 py-1.5 text-sm text-ink">
+                  <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-signal-blue" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm leading-6 text-muted">
+              Approved for information up to Protection Level 3 within an approved service. P4 data is not approved.
             </p>
           </div>
+
+          <Reveal>
+            <ol className="grid gap-3 sm:grid-cols-2" aria-label="Institutions running the platform">
+              {INSTANCES.map((instance) => (
+                <li
+                  key={instance.name}
+                  className={`lift border border-line border-t-4 bg-paper-strong p-5 ${TONES[instance.tone].border} ${instance.home ? 'sm:col-span-2 sm:flex sm:items-center sm:gap-5' : ''}`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-serif text-2xl font-medium ${TONES[instance.tone].wash} ${TONES[instance.tone].text}`}
+                  >
+                    {instance.name.charAt(0)}
+                  </span>
+                  <span className="mt-3 block sm:mt-0">
+                    <span className="block text-lg font-semibold text-ink">{instance.name}</span>
+                    <span className="block text-sm text-body">{instance.place}</span>
+                    <span className={`mt-1 block font-mono text-[0.66rem] uppercase tracking-[0.12em] ${TONES[instance.tone].text}`}>{instance.note}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="mb-8 border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
-          <TritonAISystemMap />
-        </div>
-        <div className="grid gap-3 md:grid-cols-4">
-          {[
-            ['01', 'Access', 'TritonGPT and embedded assistants give people approved ways to ask questions and work with documents'],
-            ['02', 'Build', 'Developer APIs, the TritonAI Harness, and reusable skills help teams assemble supervised workflows'],
-            ['03', 'Connect', 'Approved sources and scoped connectors let a service use only the information its task permits'],
-            ['04', 'Operate', 'Hosting, observability, support, review gates, and named owners keep useful services accountable'],
-          ].map(([number, title, body]) => (
-            <div key={title} className="system-node p-5">
-              <p className="font-mono text-xs text-signal-gold-ink">{number}</p>
-              <h3 className="mt-5 text-lg font-semibold text-ink">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-body">{body}</p>
+      {/* ---------------- Architecture ---------------- */}
+      <section className="border-y border-line bg-paper-strong py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionIntro label="How it fits together" title="One governed core, four ways in.">
+            Every service draws on the same approved model access, campus data, and shared components.
+          </SectionIntro>
+          <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
+            <div className="border border-line bg-white/70 p-4 shadow-[8px_8px_0_rgba(31,90,138,0.08)]">
+              <TritonAISystemMap />
             </div>
-          ))}
+            <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {[
+                ['01', 'Access', 'TritonGPT and embedded assistants for questions and documents.', 'blue'],
+                ['02', 'Build', 'Developer APIs, the Harness, and reusable skills.', 'green'],
+                ['03', 'Connect', 'Approved sources and scoped connectors, limited to the task.', 'gold'],
+                ['04', 'Operate', 'Hosting, observability, review gates, and named owners.', 'coral'],
+              ].map(([number, title, body, tone]) => (
+                <li key={title} className={`border-l-4 bg-paper px-5 py-4 ${TONES[tone as Tone].left}`}>
+                  <p className={`font-mono text-xs ${TONES[tone as Tone].text}`}>{number}</p>
+                  <p className="mt-1 font-semibold text-ink">{title}</p>
+                  <p className="mt-1 text-sm leading-6 text-body">{body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
-      {/* TritonAI Program Offerings */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="mb-10 max-w-4xl">
-          <p className="rule-label mb-4">Program parts</p>
-          <h2 className="text-3xl md:text-5xl font-medium leading-tight text-ink mb-4">What TritonAI Includes</h2>
-          <p className="text-lg leading-8 text-body">
-            TritonAI includes the shared pieces needed to support campus adoption: a governed platform, embedded experiences, instructional tools,
-            guidance on approved AI tools, developer access, reusable skills, and a path toward supervised agent workflows. Most teams start by
-            chatting, then add AI to a system they already run, then automate the parts that repeat.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-	          {[
-	            {
-	              title: "TritonGPT Platform",
-	              description:
-	                "A secure, SDSC-hosted foundation for campus AI with assistants built around specific university workflows and campus-aware context.",
-	              href: "https://tritonai.ucsd.edu/tritongpt/index.html",
-	              icon: (
-	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1.5-1.5L4 19.25l.75-3.25a7.5 7.5 0 1115-1.5 7.5 7.5 0 01-9.5 7.25z" />
-	                </svg>
-	              ),
-	            },
-	            {
-	              title: "Embedded Website Support",
-	              description:
-	                "An embeddable assistant grounded in a site's public content, live on 16 campus websites. No sign-in required; every message passes jailbreak and harmful-content filters, and live tools add parking availability and Geisel Library busyness.",
-              href: "https://tritonai.ucsd.edu/tritongpt/chatbot-widget.html",
-              icon: (
-                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.3-3.9A7.75 7.75 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              ),
-	            },
-	            {
-	              title: "Instructional AI",
-	              description:
-	                "A Canvas-integrated AI Tutor for each participating course. Instructors choose the material it can retrieve, what stays hidden, and whether it answers in Socratic or directive mode. Participating courses are running in Fall 2026 with upcoming quarters open for instructor onboarding.",
-	              href: "https://tritonai.ucsd.edu/tritongpt/instruction.html",
-	              icon: (
-	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0121 14.5c0 4.418-4.03 8-9 8s-9-3.582-9-8a12.083 12.083 0 012.84-3.922L12 14z" />
-                </svg>
-              ),
-	            },
-	            {
-	              title: "Training and Community",
-	              description:
-	                "The 15-part TritonAI Discovery Series, self-paced Harness training, and a Certificate in AI for Higher Education with staff and leadership streams. TritonAI Connect adds communities of practice, a biweekly AI Use-Case Group, and AI consulting hours.",
-	              href: "https://tritonai.ucsd.edu/connect/index.html",
-	              icon: (
-	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              ),
-	            },
-	            {
-	              title: "Developer APIs",
-	              description:
-	                "One Gateway key to approved cloud and UC-hosted models, usable from the TritonAI Harness, Claude Code, Codex, n8n, or your own code. UC-hosted routes carry no recharge for campus administrative work.",
-	              href: "https://tritonai.ucsd.edu/developer-apis/index.html",
-	              icon: (
-	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                </svg>
-              ),
-	            },
-	            {
-	              title: "UCSD Skills Library",
-	              description:
-	                "A live library of reusable, reviewed skills and connectors, so teams can adapt work that has already been tested instead of rebuilding each integration. A community contribution path pairs automated checks with human review.",
-	              href: "https://tritonai.ucsd.edu/skills/index.html",
-	              icon: (
-	                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-3.4.4.4-3.4 7.3-7.3a1 1 0 011.4 0l1.6 1.6z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3h9v9" />
-                </svg>
-              ),
-            },
-            {
-              title: "TritonAI Harness",
-              description:
-                `UC San Diego's primary supported agent workspace, available on Mac (Apple Silicon) and Windows for anyone with a Gateway key. It works with local files, code, Microsoft 365, Google Workspace, GitHub, Jira, Kuali Build, n8n, and Lucid under supervised approval modes. Early usage includes ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens, ${tritonAiMetrics.harness.mergedPullRequests} merged pull requests, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews.`,
-              href: "https://tritonai.ucsd.edu/developer-apis/harness.html",
-              icon: (
-                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              ),
-            },
-            {
-              title: "Approved AI Tools Guidance",
-              description:
-                "Guidance on which generative AI tools can be used with university data and for what: TritonGPT, the Harness, Zoom AI Companion, Microsoft Copilot, and Google Gemini, organized by the work someone needs to get done. UC announced a systemwide OpenAI agreement in November 2026; ChatGPT Edu is not available at UC San Diego yet, and campus guidance will accompany its rollout.",
-              href: "https://tritonai.ucsd.edu/tools/index.html",
-              icon: (
-                <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              ),
-            },
-          ].map((offering, index) => {
-            const style = programOfferingStyles[index % programOfferingStyles.length];
+      {/* ---------------- Offerings ---------------- */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <SectionIntro label="Program parts" title="What TritonAI includes">
+          Most teams start by chatting, then add AI to a system they already run, then automate the parts that repeat.
+        </SectionIntro>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {OFFERINGS.map((offering) => {
+            const tone = TONES[offering.tone];
             return (
               <a
                 key={offering.title}
                 href={offering.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group border border-l-4 border-line bg-paper-strong p-7 transition-colors hover:bg-white ${style.card}`}
+                className="lift group flex flex-col border border-line bg-paper-strong p-6 transition-colors hover:bg-white"
               >
-                <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 flex items-center justify-center flex-shrink-0 ${style.iconWrap}`}>
-                    {offering.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ink">{offering.title}</h3>
-                    <p className="mt-2 text-sm text-body leading-6">{offering.description}</p>
-                    <p className={`mt-4 text-sm font-semibold inline-flex items-center gap-2 ${style.cta}`}>
-                      Learn more
-                      <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </p>
-                  </div>
-                </div>
+                <span className={`flex h-11 w-11 items-center justify-center ${tone.wash} ${tone.text}`}>
+                  <Icon name={offering.icon} className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold text-ink">{offering.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-6 text-body">{offering.body}</p>
+                {offering.meta && (
+                  <p className={`mt-4 font-mono text-[0.66rem] uppercase leading-5 tracking-[0.1em] ${tone.text}`}>{offering.meta}</p>
+                )}
+                <span className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${tone.text}`}>
+                  Learn more
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">↗</span>
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </span>
               </a>
             );
           })}
         </div>
       </section>
 
-      {/* Developer API Program */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="mb-10 max-w-4xl">
-          <p className="rule-label mb-4">Developer API Program</p>
-          <h2 className="text-3xl md:text-5xl font-medium leading-tight text-ink mb-4">
-            A governed path from a personal experiment to a campus service.
-          </h2>
-          <p className="text-lg leading-8 text-body">
-            A recurring challenge in campus AI is moving from a working prototype to something the
-            university can operate. The TritonAI LLM Gateway gives every campus builder one key to approved
-            cloud and UC-hosted models, under UC enterprise agreements and approved for data up to P3. Before
-            choosing a path, a project names its user, its task, the approved data it may touch, and the
-            outcome to measure it against.
-          </p>
+      {/* ---------------- Demos ---------------- */}
+      <section className="bg-ink py-20 text-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionIntro label="Recorded work" title="See it working" dark>
+            Short recordings from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.
+          </SectionIntro>
+          <DemoPlayer demos={DEMOS} />
         </div>
+      </section>
 
-        {/* Gateway usage */}
-        <div className="mb-12 grid border-y border-line md:grid-cols-3">
-          {[
-            {
-              value: tritonAiMetrics.gateway.tokensBillions,
-              suffix: tritonAiMetrics.gateway.tokensSuffix,
-              label: 'Tokens through the gateway',
-              detail: `${tritonAiMetrics.gateway.tokensPeriodLabel}, ${tritonAiMetrics.gateway.tokensPeakNote}`,
-              colorClass: 'text-signal-blue',
-              decimals: true,
-            },
-            {
-              value: tritonAiMetrics.gateway.requestsMillions,
-              suffix: tritonAiMetrics.gateway.requestsSuffix,
-              label: 'API requests completed',
-              detail: tritonAiMetrics.gateway.requestsRouteNote,
-              colorClass: 'text-signal-green',
-              decimals: true,
-            },
-            {
-              value: tritonAiMetrics.gateway.selfHostedPercent,
-              suffix: tritonAiMetrics.gateway.selfHostedSuffix,
-              label: 'Served by self-hosted models',
-              detail: tritonAiMetrics.gateway.selfHostedNote,
-              colorClass: 'text-signal-gold-ink',
-              decimals: true,
-            },
-          ].map(({ value, suffix, label, detail, colorClass }, index) => (
-            <div key={label} className="border-b border-line p-7 md:border-b-0 md:border-r md:last:border-r-0">
-              <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
-              <CountUp
-                value={value}
-                suffix={suffix}
-                format={(n) => n.toFixed(1)}
-                className={`mt-5 block text-5xl font-semibold leading-none ${colorClass}`}
-              />
-              <div className="mt-5 font-semibold text-ink">{label}</div>
-              <div className="mt-2 text-sm leading-6 text-body">{detail}</div>
+      {/* ---------------- Results ---------------- */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <SectionIntro label="Measured signals" title="What changed for the people doing the work">
+          Counting users is not enough. Each service is judged on reach, efficiency, quality, and trust.
+        </SectionIntro>
+        <Reveal>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="border border-line bg-paper-strong p-6 md:p-7">
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-coral-ink">Contract review · Procurement</p>
+              <p className="mt-3 text-4xl font-semibold text-ink md:text-5xl">
+                <CountUp value={91} suffix="%" /> <span className="text-xl font-medium text-body">faster</span>
+              </p>
+              <div className="mt-6 space-y-4">
+                <Bar label="Before" value="120 min" percent={100} tone="ink" />
+                <Bar label="With TritonAI" value="11 min" percent={(11 / 120) * 100} tone="coral" />
+              </div>
+              <p className="mt-4 text-xs leading-5 text-muted">Average NDA and T&amp;C review in the reported workflow.</p>
             </div>
-          ))}
-        </div>
 
-        {/* Governed route figure — the TritonAI gateway graphic, restyled in the site's design language */}
-        <figure className="mb-12 border border-line bg-paper p-5 md:p-7" aria-describedby="governed-route-caption">
-          <div className="grid items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1.15fr] md:gap-0">
-            <div className="flex items-center justify-center border border-line bg-[var(--wash-blue)] p-5 text-center">
-              <div>
-                <p className="text-sm font-semibold text-ink">Campus need</p>
-                <p className="mt-1 text-xs leading-5 text-body">A question, a workflow, a document task</p>
+            <div className="border border-line bg-paper-strong p-6 md:p-7">
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-blue">Job descriptions · HR</p>
+              <p className="mt-3 text-4xl font-semibold text-ink md:text-5xl">
+                <CountUp value={83} suffix="%" /> <span className="text-xl font-medium text-body">faster drafting</span>
+              </p>
+              <div className="mt-6 space-y-4">
+                <Bar label="Before" value="30 min" percent={100} tone="ink" />
+                <Bar label="With the Job Description Helper" value="5 min" percent={(5 / 30) * 100} tone="blue" />
               </div>
+              <p className="mt-4 text-xs leading-5 text-muted">Average drafting time reported for the assistant.</p>
             </div>
-            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-muted md:rotate-0 md:px-2">&rarr;</span>
-            <div className="flex items-center justify-center border border-signal-blue/50 border-l-[5px] border-l-signal-blue bg-[var(--wash-blue)] p-5 text-center">
-              <div>
-                <p className="font-serif text-xl font-medium text-signal-blue">TritonAI Gateway</p>
-                <p className="mt-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-body">identity · routing · policy</p>
-              </div>
-            </div>
-            <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-muted md:rotate-0 md:px-2">&rarr;</span>
-            <div className="flex flex-col justify-center gap-2.5">
-              {[
-                { title: 'Approved models', note: 'Chosen for the task — UC-hosted or approved cloud', border: 'border-l-signal-blue', wash: 'bg-[var(--wash-blue)]' },
-                { title: 'Approved knowledge', note: 'Grounded at request time, not trained into weights', border: 'border-l-signal-gold', wash: 'bg-[var(--wash-gold)]' },
-                { title: 'Approved tools', note: 'Bounded capabilities a person can check', border: 'border-l-signal-green', wash: 'bg-[var(--wash-green)]' },
-              ].map(stage => (
-                <div key={stage.title} className={`border-l-4 px-4 py-3 ${stage.border} ${stage.wash}`}>
-                  <p className="text-sm font-semibold text-ink">{stage.title}</p>
-                  <p className="mt-0.5 text-xs leading-5 text-body">{stage.note}</p>
+
+            <div className="border border-line bg-paper-strong p-6 md:p-7">
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-gold-ink">Transcript matching · Enrollment</p>
+              <p className="mt-3 text-4xl font-semibold text-ink md:text-5xl">
+                <CountUp value={99.86} suffix="%" format={(n) => n.toFixed(2)} /> <span className="text-xl font-medium text-body">accurate</span>
+              </p>
+              <div className="mt-6" aria-hidden="true">
+                <div className="flex h-10 w-full overflow-hidden">
+                  <div className="grow-bar h-full flex-1 bg-signal-gold" />
+                  <div className="h-full w-1 bg-signal-coral" />
                 </div>
-              ))}
+                <div className="mt-2 flex justify-between font-mono text-[0.66rem] uppercase tracking-[0.1em] text-muted">
+                  <span>3,700+ records matched</span>
+                  <span className="text-signal-coral-ink">5 errors</span>
+                </div>
+              </div>
+              <p className="mt-4 text-xs leading-5 text-muted">Published validation sample. Uncertain matches go to enrollment staff.</p>
+            </div>
+
+            <div className="border border-line bg-paper-strong p-6 md:p-7">
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-green">Instructional AI · Canvas pilot</p>
+              <p className="mt-3 text-4xl font-semibold text-ink md:text-5xl">
+                <CountUp value={81} suffix="%" /> <span className="text-xl font-medium text-body">said it helped</span>
+              </p>
+              <div className="mt-6 space-y-4">
+                <Bar label="Helped me understand concepts" value="81%" percent={81} tone="green" />
+                <Bar label="Easy to use" value="86%" percent={86} tone="green" />
+              </div>
+              <p className="mt-4 text-xs leading-5 text-muted">Pilot survey, 68 student responses, 2025–2026.</p>
             </div>
           </div>
-          <figcaption id="governed-route-caption" className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-4">
-            <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-body">Human review — ownership · evidence</span>
-            <span className="inline-flex items-center gap-1.5">
-              {[
-                { label: 'Evaluation', dot: 'bg-signal-coral' },
-                { label: 'Accessibility', dot: 'bg-signal-green' },
-                { label: 'Monitoring', dot: 'bg-signal-blue' },
-              ].map(pill => (
-                <span key={pill.label} className="inline-flex items-center gap-1.5 border border-line bg-white px-2.5 py-1 text-xs font-semibold text-ink">
-                  <span aria-hidden="true" className={`inline-block h-1.5 w-1.5 rounded-full ${pill.dot}`} />
-                  {pill.label}
-                </span>
-              ))}
-            </span>
-            <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-body md:ml-auto">Controls surround the full service</span>
-          </figcaption>
-        </figure>
-
-        {/* Build paths */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-ink mb-2">Three ways to build, one key</h3>
-          <p className="text-body leading-7 mb-6 max-w-3xl">
-            Every path uses the same Gateway key, which reaches approved enterprise cloud models on AWS,
-            Microsoft Azure, and Google Cloud Vertex AI, plus open models hosted at the San Diego
-            Supercomputer Center. A project can change paths as its audience, data, or support needs change.
-          </p>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                name: 'Work with an agent',
-                who: 'Staff, analysts, developers',
-                body: 'The TritonAI Harness runs on your computer and works with local files, spreadsheets, code, and Microsoft 365. Supervised mode pauses file changes and write tools for approval while people are learning.',
-              },
-              {
-                name: 'Automate a process',
-                who: 'Teams with a known process',
-                body: 'Campus-hosted n8n runs a defined series of steps from a schedule, webhook, email, or file event, adds a model step where it helps, and pauses for a person before anything consequential.',
-              },
-              {
-                name: 'Build an app or pipeline',
-                who: 'Developers and research labs',
-                body: 'Build on the Gateway with the client libraries you already use, start from the Skills Library, and ship on a supported campus hosting path.',
-              },
-            ].map((path) => (
-              <div key={path.name} className="system-node p-6">
-                <p className="font-mono text-xs text-signal-gold-ink">{path.who}</p>
-                <h4 className="mt-4 text-lg font-semibold text-ink">{path.name}</h4>
-                <p className="mt-2 text-sm leading-6 text-body">{path.body}</p>
-              </div>
-            ))}
+        </Reveal>
+        <div className="mt-4 flex flex-col gap-5 border border-line bg-paper-strong p-6 md:flex-row md:items-center md:p-7">
+          <div className="md:w-64 md:flex-none">
+            <p className="font-mono text-xs uppercase tracking-[0.12em] text-signal-blue">Website assistant</p>
+            <p className="mt-2 text-4xl font-semibold text-ink"><CountUp value={16} /> <span className="text-xl font-medium text-body">campus sites</span></p>
           </div>
-          <p className="mt-5 text-sm leading-6 text-body max-w-4xl">
-            <span className="font-semibold text-ink">Clients:</span> the TritonAI Harness is the primary supported client;
-            Claude Code and Codex are supported alternatives; Hermes, OpenCode, and other compatible clients can connect
-            with the same endpoint and key.
-          </p>
-        </div>
-
-        {/* Cost model */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-ink mb-2">What a key costs</h3>
-          <p className="text-body leading-7 mb-6 max-w-3xl">
-            The approval for each key sets its routes, limits, and billing, so cost and usage show up in one place.
-          </p>
-          <div className="grid border-y border-line sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: 'Campus work', body: 'UC-hosted models carry no recharge for campus administrative work. Monthly caps apply.' },
-              { title: 'Cloud models', body: 'Billed to a departmental chartstring from the first token, with a named budget owner and spend limit.' },
-              { title: 'Grant research', body: 'UC-hosted and cloud use are charged to the grant or approved project chartstring.' },
-              { title: 'Other campuses', body: 'Other UC campuses connect through an intercampus recharge agreement.' },
-            ].map((item, index) => (
-              <div key={item.title} className="border-b border-line p-6 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(n+3)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0">
-                <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
-                <p className="mt-3 font-semibold text-ink">{item.title}</p>
-                <p className="mt-2 text-sm leading-6 text-body">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Hosting lanes */}
-        <div className="field-note p-8">
-          <h3 className="text-2xl font-semibold text-ink mb-2">Add hosting and support as more people rely on it</h3>
-          <p className="text-body leading-7 mb-8 max-w-3xl">
-            Something useful is not yet a service. A project moves up a rung when its audience grows, when it
-            touches more data or integrations, or when failure starts to cost something. The platform team runs
-            the Gateway and reviews the path; the department owns the application, its data, accessibility,
-            testing, user support, and a named technical owner.
-          </p>
-          <ol className="space-y-4">
-            {[
-              { rung: 'Rung 1', name: 'Prototype', hosting: 'Your own workspace: the Harness or a local sandbox', body: 'Testing an idea alone with sample data you are approved to use. You protect the data and check the results.' },
-              { rung: 'Rung 2', name: 'Team workflow', hosting: 'Department-owned application or n8n workflow with campus sign-in', body: 'A recurring job for a known group with a business owner, after an initial risk and scope review.' },
-              { rung: 'Rung 3', name: 'Campus service', hosting: 'TritonAI or ITS-managed path', body: 'A shared workflow other units depend on. A named team monitors quality, security, accessibility, and uptime.' },
-              { rung: 'Rung 4', name: 'Enterprise service', hosting: 'Enterprise platform', body: 'Campus-wide delivery with formal operating ownership, governance, monitoring, and continuity.' },
-            ].map((item) => (
-              <li key={item.rung} className="flex flex-col gap-2 border-t border-line pt-4 sm:flex-row sm:gap-6">
-                <span className="font-mono text-xs text-signal-blue sm:w-20 sm:flex-none sm:pt-1">
-                  {item.rung}
-                </span>
-                <span className="flex-1">
-                  <span className="block font-semibold text-ink">{item.name}</span>
-                  <span className="mt-1 block font-mono text-[0.68rem] uppercase tracking-[0.1em] text-signal-gold-ink">{item.hosting}</span>
-                  <span className="mt-1 block text-sm leading-6 text-body">{item.body}</span>
-                </span>
+          <ul className="grid flex-1 grid-cols-8 gap-1.5 sm:gap-2" aria-hidden="true">
+            {Array.from({ length: 16 }, (_, index) => (
+              <li key={index} className="aspect-[4/3] border border-line bg-white p-1">
+                <span className="block h-1 w-full bg-signal-blue/60" />
+                <span className="mt-1 block h-0.5 w-2/3 bg-line" />
+                <span className="ml-auto mt-1.5 block h-2 w-2 rounded-full bg-signal-gold" />
               </li>
             ))}
-          </ol>
-          <a
-            href="https://tritonai.ucsd.edu/developer-apis/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 font-semibold text-signal-blue transition-colors hover:text-ink"
-          >
-            Build with TritonAI: access, hosting, and ownership
-            <span aria-hidden="true">→</span>
-          </a>
+          </ul>
         </div>
-      </section>
-
-      {/* TritonGPT Demo Videos */}
-      <section className="bg-[#eef2ea] py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-12 max-w-4xl">
-            <p className="rule-label mb-4">Recorded work</p>
-            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-4">TritonAI in Action</h2>
-            <p className="text-xl leading-8 text-body">Examples from the TritonAI portfolio, built on TritonGPT and connected to everyday university work.</p>
-          </div>
-          <div className="grid grid-cols-1 gap-8">
-            {[
-              {
-                title: "Job Description Helper",
-                description: "Helps HR and hiring managers draft clear, compliant job descriptions in minutes.",
-                src: "https://tritongpt-deck.vercel.app/media/media4.mov",
-              },
-              {
-                title: "Fund Manager Coach",
-                description: "Guides grant and fund managers on compliance, allowable expenses, and spending restrictions.",
-                src: "https://tritongpt-deck.vercel.app/media/media3.mov",
-              },
-              {
-                title: "UC San Diego Assistant",
-                description: "Answers campus policy and service questions using curated departmental knowledge and institutional resources.",
-                src: "https://tritongpt-deck.vercel.app/media/media1.mov",
-                poster: "https://tritongpt-deck.vercel.app/media/image36.png",
-              },
-              {
-                title: "Contract Reviewer (In Production)",
-                description: "Automated NDA and contract review via monitored inbox + portal. Auto-redlines third-party contracts against UC San Diego and UC Terms & Conditions and Legal Position.",
-                src: "https://tritongpt-deck.vercel.app/media/media7.mp4",
-                poster: "https://tritongpt-deck.vercel.app/media/image47.png",
-              },
-            ].map((video) => (
-              <div
-                key={video.src}
-                className="overflow-hidden border border-line bg-paper-strong"
-              >
-                <div className="p-6 border-b border-line">
-                  <h3 className="text-xl font-semibold text-ink">{video.title}</h3>
-                  <p className="mt-2 text-sm text-body leading-6">{video.description}</p>
-                </div>
-                <div className="relative">
-                  <video
-                    className="w-full aspect-video bg-black"
-                    muted
-                    playsInline
-                    controls
-                    preload="metadata"
-                    poster={video.poster}
-                    aria-label={`${video.title} demo video`}
-                  >
-                    <source
-                      src={video.src}
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Metrics */}
-      <section className="bg-paper-strong py-20 border-y border-line">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-            <div>
-              <p className="rule-label mb-4">Measured signals</p>
-              <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink">Early Signals from TritonAI</h2>
-            </div>
-            <p className="text-lg leading-8 text-body max-w-3xl">
-              Counting users is not enough. A service has to make something measurably better without making anything else worse,
-              so each one is judged on reach, efficiency, quality, and trust.
-            </p>
-          </div>
-          <div className="grid border-y border-line md:grid-cols-4">
-            {[
-              { value: 16, decimals: 0, suffix: '', label: 'Campus Websites', detail: 'Running the TritonGPT website widget', colorClass: 'text-signal-blue' },
-              { value: 91, decimals: 0, suffix: '%', label: 'Faster Contract Review', detail: '120 minutes to 11 minutes in the reported workflow', colorClass: 'text-signal-coral-ink' },
-              { value: 99.86, decimals: 2, suffix: '%', label: 'Transcript Match Accuracy', detail: 'Published validation sample of 3,700+ records', colorClass: 'text-signal-gold-ink' },
-              { value: 81, decimals: 0, suffix: '%', label: 'Helped Understanding', detail: 'Instructional AI pilot survey, 68 student responses', colorClass: 'text-signal-green' },
-            ].map(({ value, decimals, suffix, label, detail, colorClass }, index) => (
-              <div key={label} className="border-b border-line p-7 md:border-b-0 md:border-r md:last:border-r-0">
-                <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
-                <CountUp
-                  value={value}
-                  suffix={suffix}
-                  format={(n) => n.toFixed(decimals)}
-                  className={`mt-5 block text-5xl font-semibold leading-none ${colorClass}`}
-                />
-                <div className="mt-5 font-semibold text-ink">{label}</div>
-                <div className="mt-2 text-sm leading-6 text-body">{detail}</div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-5 text-sm leading-6 text-body">
-            Each result covers only the service and measurement period shown. None of them is a campus-wide average.
-          </p>
-        </div>
-      </section>
-
-      {/* Strategic Vision */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <p className="rule-label mb-4">Operating principles</p>
-        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">How TritonAI Is Taking Shape</h2>
-        <p className="text-lg leading-8 text-body max-w-4xl mb-10">
-          TritonAI is being developed around a few practical principles: governed infrastructure for sensitive work, shared access across projects,
-          tools designed around specific campus pain points, model choice without fragmented governance, and an architecture that can evolve from assistants toward supervised agency.
+        <p className="mt-4 text-sm leading-6 text-body">
+          Each result covers only the service and measurement period shown. None of them is a campus-wide average.
         </p>
+      </section>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            {
-              title: 'Trust Is Infrastructure',
-              description:
-                'Sensitive work in HR, finance, legal, student support, and institutional operations needs governed infrastructure. Each service picks an approved UC-hosted or enterprise cloud route based on its data classification, required capability, and controls, and governance covers the whole workflow, not just the model.',
-            },
-            {
-              title: 'Make AI a Shared Utility',
-              description:
-                'One shared setup, one way in, and one place the costs show up. Teams start faster and can copy what already worked somewhere else, and UC-hosted routes keep everyday campus work free of recharge.',
-            },
-            {
-              title: 'Solve Specific Pain Points',
-              description:
-                'The strongest use cases have been concrete ones that come back every week: contract review, search, scheduling, accessibility, transcript workflows, and instructional support. Each starts with someone who owns the problem and something worth measuring.',
-            },
-            {
-              title: 'Meet People in the Workflow',
-              description:
-                'TritonAI shows up in Blink, public websites, Canvas, the campus mobile app, and departmental systems. People use it when it is already where they are working.',
-            },
-            {
-              title: 'Stay Model-Agnostic',
-              description:
-                'Services are built on one shared gateway with several approved hosting options behind it, plus the evaluation and governance around it. Swapping the model underneath does not mean rebuilding the service, and no single vendor can strand the campus.',
-            },
-            {
-              title: 'Prepare for Agency',
-              description:
-                'Assistants answer questions. Agents fetch data, call tools, and finish multi-step work under supervision. Reusable skills, APIs, scoped connectors, and monitoring are the pieces being built now to make that shift safe.',
-            },
-          ].map((principle) => (
-            <div key={principle.title} className="field-note p-8">
-              <h3 className="text-xl font-semibold text-ink mb-3">{principle.title}</h3>
-              <p className="text-body leading-7">{principle.description}</p>
-            </div>
-          ))}
-        </div>
+      {/* ---------------- Portfolio ---------------- */}
+      <section className="border-y border-line bg-[#eef2ea] py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionIntro label="Portfolio" title="Supervised workflows across campus">
+            Each service solves a different problem, but they share the same accountability points.
+          </SectionIntro>
 
-        <div className="mt-14">
-          <h3 className="text-2xl font-semibold text-ink mb-2">How an idea becomes a service</h3>
-          <p className="text-body leading-7 mb-6 max-w-3xl">
-            Operating evidence feeds back into discovery, so an owner can improve, narrow, or retire a service.
-          </p>
-          <ol className="grid gap-3 md:grid-cols-4">
+          <ol className="mb-12 grid gap-2 sm:grid-cols-5" aria-label="Anatomy of a supervised workflow">
             {[
-              ['01', 'Discover', 'Name the people, workflow, approved data, service owner, review point, and the result that should improve.'],
-              ['02', 'Pilot', 'Test the approach in a bounded environment with realistic examples and close human review.'],
-              ['03', 'Prove', 'Measure reach, efficiency, quality, and trust, and refine until the evidence supports wider use.'],
-              ['04', 'Operate', 'Establish approved hosting, accessibility, monitoring, support, and an escalation path before people depend on it.'],
-            ].map(([number, title, body]) => (
-              <li key={title} className="system-node p-5">
-                <p className="font-mono text-xs text-signal-gold-ink">{number}</p>
-                <p className="mt-4 text-lg font-semibold text-ink">{title}</p>
-                <p className="mt-2 text-sm leading-6 text-body">{body}</p>
+              ['Campus need', 'A bounded problem with an owner'],
+              ['Approved inputs', 'Data cleared for the task'],
+              ['AI-supported work', 'Models, skills, automation'],
+              ['Human review', 'A person checks what matters'],
+              ['Evidence', 'Quality and exceptions'],
+            ].map(([title, body], index) => (
+              <li key={title} className="relative bg-paper-strong px-4 py-4">
+                <span className={`flex h-7 w-7 items-center justify-center rounded-full font-mono text-xs font-semibold text-white ${index === 3 ? 'bg-signal-gold' : 'bg-signal-blue'}`}>
+                  {index + 1}
+                </span>
+                <span className="mt-3 block text-sm font-semibold text-ink">{title}</span>
+                <span className="mt-0.5 block text-xs leading-5 text-body">{body}</span>
+                {index < 4 && (
+                  <span aria-hidden="true" className="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 -translate-y-1/2 rotate-45 border-r-2 border-t-2 border-signal-blue/50 bg-[#eef2ea] sm:block" />
+                )}
               </li>
             ))}
           </ol>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {SHOWCASE.map((item) => {
+              const card = (
+                <>
+                  <div className="relative overflow-hidden border-b border-line bg-white">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      width={item.width}
+                      height={item.height}
+                      sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                      className="aspect-[16/10] h-auto w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <StatusPill status={item.status} className="self-start" />
+                    <h3 className="mt-3 text-lg font-semibold text-ink">{item.name}</h3>
+                    <p className="mt-1.5 flex-1 text-sm leading-6 text-body">{item.desc}</p>
+                    {item.href && (
+                      <span className="mt-3 text-sm font-semibold text-signal-blue">Read the case study →</span>
+                    )}
+                  </div>
+                </>
+              );
+              return item.href ? (
+                <Link key={item.name} href={item.href} className="lift group flex flex-col overflow-hidden border border-line bg-paper-strong">
+                  {card}
+                </Link>
+              ) : (
+                <div key={item.name} className="group flex flex-col overflow-hidden border border-line bg-paper-strong">
+                  {card}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-10">
+            <h3 className="text-xl font-semibold text-ink">Also in the portfolio</h3>
+            <ul className="mt-4 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+              {MORE_WORKFLOWS.map((workflow) => (
+                <li key={workflow.name} className="bg-paper-strong p-5">
+                  <StatusPill status={workflow.status} />
+                  <p className="mt-3 font-semibold text-ink">{workflow.name}</p>
+                  <p className="mt-1 text-sm leading-6 text-body">{workflow.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="bg-paper py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-4xl mb-10">
-            <p className="rule-label mb-4">Portfolio</p>
-            <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">Supervised Workflows Across Campus</h2>
-            <p className="text-lg leading-8 text-body">
-              Each service solves a different problem, but they share the same accountability points. The status on each one says whether
-              people can use it today or whether the work is still being proven.
+      {/* ---------------- Assistants ---------------- */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <SectionIntro label="Assistant index" title={`${ASSISTANT_COUNT} TritonGPT assistants, by the work`}>
+          Each is built around a kind of campus work where grounded context matters. Opening one does not grant access to new
+          data, and the person responsible still reviews the result.
+        </SectionIntro>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          {ASSISTANT_GROUPS.map((group) => {
+            const tone = TONES[group.tone];
+            return (
+              <div key={group.category} className={`border border-line border-t-4 bg-paper-strong p-5 ${tone.border}`}>
+                <div className="flex items-center gap-3">
+                  <span className={`flex h-9 w-9 items-center justify-center ${tone.wash} ${tone.text}`}>
+                    <Icon name={group.icon} />
+                  </span>
+                  <h3 className="text-base font-semibold leading-5 text-ink">{group.category}</h3>
+                </div>
+                <ul className="mt-4 space-y-3">
+                  {group.assistants.map(([name, desc]) => (
+                    <li key={name} className="text-sm leading-5">
+                      <span className="block font-semibold text-ink">{name}</span>
+                      <span className="block text-xs leading-5 text-body">{desc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ---------------- Build ---------------- */}
+      <section className="border-y border-line bg-paper-strong py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionIntro label="Developer API program" title="From a personal experiment to a campus service.">
+            The TritonAI LLM Gateway gives every campus builder one key to approved cloud and UC-hosted models, under UC
+            enterprise agreements and approved for data up to P3.
+          </SectionIntro>
+
+          {/* Governed route */}
+          <figure className="mb-14 border border-line bg-paper p-5 md:p-7" aria-describedby="governed-route-caption">
+            <div className="grid items-stretch gap-4 md:grid-cols-[1fr_auto_1fr_auto_1.15fr] md:gap-0">
+              <div className="flex items-center justify-center border border-line bg-wash-blue p-5 text-center">
+                <div>
+                  <p className="text-sm font-semibold text-ink">Campus need</p>
+                  <p className="mt-1 text-xs leading-5 text-body">A question, a workflow, a document task</p>
+                </div>
+              </div>
+              <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-muted md:rotate-0 md:px-2">&rarr;</span>
+              <div className="flex items-center justify-center border border-signal-blue/50 border-l-[5px] border-l-signal-blue bg-wash-blue p-5 text-center">
+                <div>
+                  <p className="font-serif text-xl font-medium text-signal-blue">TritonAI Gateway</p>
+                  <p className="mt-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-body">identity · routing · policy</p>
+                </div>
+              </div>
+              <span aria-hidden="true" className="self-center justify-self-center rotate-90 font-mono text-sm text-muted md:rotate-0 md:px-2">&rarr;</span>
+              <div className="flex flex-col justify-center gap-2.5">
+                {[
+                  { title: 'Approved models', note: 'UC-hosted or approved cloud, chosen for the task', tone: 'border-l-signal-blue bg-wash-blue' },
+                  { title: 'Approved knowledge', note: 'Grounded at request time, not trained into weights', tone: 'border-l-signal-gold bg-wash-gold' },
+                  { title: 'Approved tools', note: 'Bounded capabilities a person can check', tone: 'border-l-signal-green bg-wash-green' },
+                ].map((stage) => (
+                  <div key={stage.title} className={`border-l-4 px-4 py-3 ${stage.tone}`}>
+                    <p className="text-sm font-semibold text-ink">{stage.title}</p>
+                    <p className="mt-0.5 text-xs leading-5 text-body">{stage.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <figcaption id="governed-route-caption" className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-4">
+              <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-body">Human review — ownership · evidence</span>
+              <span className="inline-flex flex-wrap items-center gap-1.5">
+                {[
+                  { label: 'Evaluation', dot: 'bg-signal-coral' },
+                  { label: 'Accessibility', dot: 'bg-signal-green' },
+                  { label: 'Monitoring', dot: 'bg-signal-blue' },
+                ].map((pill) => (
+                  <span key={pill.label} className="inline-flex items-center gap-1.5 border border-line bg-white px-2.5 py-1 text-xs font-semibold text-ink">
+                    <span aria-hidden="true" className={`inline-block h-1.5 w-1.5 rounded-full ${pill.dot}`} />
+                    {pill.label}
+                  </span>
+                ))}
+              </span>
+              <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-body md:ml-auto">Controls surround the full service</span>
+            </figcaption>
+          </figure>
+
+          {/* Build paths */}
+          <div className="mb-14">
+            <h3 className="text-2xl font-semibold text-ink">Three ways to build, one key</h3>
+            <p className="mt-2 max-w-3xl leading-7 text-body">
+              Every path reaches approved models on AWS, Microsoft Azure, and Google Cloud Vertex AI, plus open models hosted at
+              the San Diego Supercomputer Center.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {[
+                { name: 'Work with an agent', who: 'Staff, analysts, developers', icon: 'bolt' as const, tone: 'gold' as Tone, body: 'The TritonAI Harness works with local files, spreadsheets, code, and Microsoft 365. Supervised mode pauses changes for approval while people learn.' },
+                { name: 'Automate a process', who: 'Teams with a known process', icon: 'flow' as const, tone: 'green' as Tone, body: 'Campus-hosted n8n runs defined steps from a schedule, webhook, email, or file, and pauses for a person before anything consequential.' },
+                { name: 'Build an app or pipeline', who: 'Developers and research labs', icon: 'code' as const, tone: 'blue' as Tone, body: 'Use the client libraries you already know, start from the Skills Library, and ship on a supported campus hosting path.' },
+              ].map((path) => (
+                <div key={path.name} className="border border-line bg-paper p-6">
+                  <span className={`flex h-10 w-10 items-center justify-center ${TONES[path.tone].wash} ${TONES[path.tone].text}`}>
+                    <Icon name={path.icon} />
+                  </span>
+                  <p className="mt-4 font-mono text-xs text-signal-gold-ink">{path.who}</p>
+                  <h4 className="mt-1 text-lg font-semibold text-ink">{path.name}</h4>
+                  <p className="mt-2 text-sm leading-6 text-body">{path.body}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 max-w-4xl text-sm leading-6 text-body">
+              <span className="font-semibold text-ink">Clients:</span> the TritonAI Harness is the primary supported client;
+              Claude Code and Codex are supported alternatives; Hermes, OpenCode, and other compatible clients can connect with
+              the same endpoint and key.
             </p>
           </div>
 
-          <ol className="mb-10 flex flex-col gap-2 md:flex-row md:items-stretch" aria-label="Anatomy of a supervised workflow">
-            {[
-              ['Campus need', 'A bounded problem with a named owner'],
-              ['Approved inputs', 'Data and sources cleared for the task'],
-              ['AI-supported work', 'Models, rules, skills, or automation'],
-              ['Human review', 'A person checks consequential results'],
-              ['Outcome and evidence', 'Quality, usefulness, and exceptions'],
-            ].map(([title, body], index) => (
-              <li key={title} className="flex flex-1 items-center gap-2">
-                <span className="flex-1 border-l-4 border-l-signal-blue bg-[var(--wash-blue)] px-4 py-3">
-                  <span className="block text-sm font-semibold text-ink">{title}</span>
-                  <span className="mt-0.5 block text-xs leading-5 text-body">{body}</span>
+          {/* Hosting staircase */}
+          <div className="mb-14">
+            <h3 className="text-2xl font-semibold text-ink">Add hosting and support as more people rely on it</h3>
+            <p className="mt-2 max-w-3xl leading-7 text-body">
+              Something useful is not yet a service. A project climbs a rung when its audience grows, it touches more data, or
+              failure starts to cost something. The department owns the application; the platform team runs the Gateway.
+            </p>
+            <Reveal>
+              <ol className="mt-8 grid gap-4 md:grid-cols-4 md:items-end">
+                {[
+                  { name: 'Prototype', hosting: 'Your own workspace', body: 'Testing an idea alone with data you are approved to use.', height: 'md:h-4', tone: 'bg-signal-blue/40' },
+                  { name: 'Team workflow', hosting: 'Department app or n8n', body: 'A recurring job for a known group with a business owner.', height: 'md:h-8', tone: 'bg-signal-blue/60' },
+                  { name: 'Campus service', hosting: 'TritonAI or ITS-managed', body: 'Other units depend on it; a named team monitors it.', height: 'md:h-12', tone: 'bg-signal-blue/80' },
+                  { name: 'Enterprise service', hosting: 'Enterprise platform', body: 'Campus-wide, with formal ownership and continuity.', height: 'md:h-16', tone: 'bg-signal-blue' },
+                ].map((rung, index) => (
+                  <li key={rung.name} className="flex flex-col">
+                    <div className="border border-line bg-paper p-5">
+                      <p className="font-mono text-xs text-signal-blue">Rung {index + 1}</p>
+                      <p className="mt-1 font-semibold text-ink">{rung.name}</p>
+                      <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-signal-gold-ink">{rung.hosting}</p>
+                      <p className="mt-2 text-sm leading-6 text-body">{rung.body}</p>
+                    </div>
+                    <div aria-hidden="true" className={`h-2 w-full ${rung.tone} ${rung.height}`} />
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
+          </div>
+
+          {/* Cost model */}
+          <div>
+            <h3 className="text-2xl font-semibold text-ink">What a key costs</h3>
+            <p className="mt-2 max-w-3xl leading-7 text-body">
+              The approval for each key sets its routes, limits, and billing, so cost and usage show up in one place.
+            </p>
+            <div className="mt-6 grid border-y border-line sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { title: 'Campus work', body: 'UC-hosted models carry no recharge for campus administrative work. Monthly caps apply.' },
+                { title: 'Cloud models', body: 'Billed to a departmental chartstring from the first token, with a named budget owner and spend limit.' },
+                { title: 'Grant research', body: 'UC-hosted and cloud use are charged to the grant or approved project chartstring.' },
+                { title: 'Other campuses', body: 'Other UC campuses connect through an intercampus recharge agreement.' },
+              ].map((item, index) => (
+                <div key={item.title} className="border-b border-line p-6 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(n+3)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0">
+                  <p className="font-mono text-xs text-signal-gold-ink">0{index + 1}</p>
+                  <p className="mt-3 font-semibold text-ink">{item.title}</p>
+                  <p className="mt-2 text-sm leading-6 text-body">{item.body}</p>
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://tritonai.ucsd.edu/developer-apis/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 font-semibold text-signal-blue transition-colors hover:text-ink"
+            >
+              Build with TritonAI: access, hosting, and ownership
+              <span aria-hidden="true">↗</span>
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- Principles ---------------- */}
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <SectionIntro label="Operating principles" title="How TritonAI is taking shape" />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {PRINCIPLES.map((principle) => {
+            const tone = TONES[principle.tone];
+            return (
+              <div key={principle.title} className="border border-line bg-paper-strong p-6">
+                <span className={`flex h-10 w-10 items-center justify-center rounded-full ${tone.wash} ${tone.text}`}>
+                  <Icon name={principle.icon} />
                 </span>
-                {index < 4 && <span aria-hidden="true" className="hidden font-mono text-sm text-muted md:inline">&rarr;</span>}
+                <h3 className="mt-4 text-lg font-semibold text-ink">{principle.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-body">{principle.body}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-semibold text-ink">How an idea becomes a service</h3>
+          <ol className="mt-6 grid gap-3 md:grid-cols-4">
+            {[
+              ['Discover', 'Name the people, workflow, approved data, owner, and the result that should improve.'],
+              ['Pilot', 'Test in a bounded environment with realistic examples and close human review.'],
+              ['Prove', 'Measure reach, efficiency, quality, and trust until the evidence supports wider use.'],
+              ['Operate', 'Approved hosting, accessibility, monitoring, support, and an escalation path.'],
+            ].map(([title, body], index) => (
+              <li key={title} className="relative border border-line bg-paper-strong p-5">
+                <span className="font-mono text-3xl font-semibold text-signal-blue/30">0{index + 1}</span>
+                <p className="mt-1 text-lg font-semibold text-ink">{title}</p>
+                <p className="mt-2 text-sm leading-6 text-body">{body}</p>
+                {index < 3 && (
+                  <span aria-hidden="true" className="absolute -right-3 top-8 z-10 hidden font-mono text-lg text-signal-blue md:block">→</span>
+                )}
               </li>
             ))}
           </ol>
+          <div aria-hidden="true" className="mx-[12%] hidden h-7 rounded-b-2xl border-2 border-t-0 border-dashed border-signal-gold/70 md:block" />
+          <p className="mt-3 text-center font-mono text-xs uppercase tracking-[0.12em] text-signal-gold-ink">
+            ↺ Operating evidence feeds back into discovery, so an owner can improve, narrow, or retire a service
+          </p>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Contract Review",
-                status: "Production",
-                desc: "NDA and contract review for Procurement through a monitored inbox and portal. Compares language against approved UC legal positions and prepares annotated redlines for a qualified reviewer.",
-                metric: "91% time savings for NDAs/T&Cs",
-                stats: "120 min → 11 min average",
-              },
-              {
-                name: "Transcript Matching",
-                status: "Production",
-                desc: "Matches incoming transcripts to student records with an OnBase handoff, scores its own confidence, and routes uncertain cases to enrollment staff.",
-                metric: "99.86% accuracy in validation",
-                stats: "Across 3,700+ records with five errors",
-              },
-              {
-                name: "Class Planner App",
-                status: "Production",
-                desc: "Undergraduates build conflict-free schedule options from live section data, compare them side by side, and hand the finished plan to TSS for booking.",
-              },
-              {
-                name: "TritonGPT Class Planner",
-                status: "Production",
-                desc: "Students say which courses they need and when they cannot meet, and the assistant drafts a conflict-free schedule for them to review.",
-              },
-              {
-                name: "Passport Visitor Management",
-                status: "Production",
-                desc: "Visitors check in for Passport Services at two campus locations while staff manage each site from a shared queue dashboard.",
-              },
-              {
-                name: "AI Use-Case Meeting",
-                status: "Production",
-                desc: "Biweekly sessions where campus staff bring an AI idea and leave with a scoped use case and a recommendation on whether to proceed.",
-              },
-              {
-                name: "Instructional AI",
-                status: "Pilot",
-                desc: "Canvas course tutors that answer only from material the instructor approved, inside the limits that instructor sets.",
-                metric: "81% said it helped them understand concepts",
-                stats: "68 student survey responses, 2025–2026",
-              },
-              {
-                name: "BioBib",
-                status: "Pilot",
-                desc: "Assembles a faculty BioBib draft from approved activity data, then the faculty member checks every section before it goes anywhere.",
-              },
-              {
-                name: "Dissertation Formatter",
-                status: "Pilot",
-                desc: "Checks a dissertation against graduate formatting rules, fixes what it safely can, and flags the rest for the student to decide.",
-              },
-              {
-                name: "PDF Remediator",
-                status: "Pilot",
-                desc: "Finds the document-accessibility problems software can catch reliably and hands a qualified remediator the evidence for the rest.",
-              },
-              {
-                name: "Voice Agent",
-                status: "Pilot",
-                desc: "Consent-based voice interviews capture how work actually happens and turn it into reviewable process records and automation opportunities.",
-              },
-              {
-                name: "Research Alignment",
-                status: "In development",
-                desc: "Matches researcher profiles against outside funding and collaboration opportunities and explains why each one surfaced.",
-              },
-            ].map((workflow) => (
-              <div key={workflow.name} className="system-node flex flex-col p-7">
-                <span className={`self-start px-2.5 py-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] ${statusStyles[workflow.status]}`}>
-                  {workflow.status}
-                </span>
-                <h3 className="mt-5 text-xl font-semibold text-ink mb-3">{workflow.name}</h3>
-                <p className="text-sm text-body mb-4 leading-6 flex-1">{workflow.desc}</p>
-                {workflow.metric && (
-                  <div className="mt-auto">
-                    <p className="text-sm font-semibold mb-1 text-signal-blue">{workflow.metric}</p>
-                    {workflow.stats && <p className="text-xs text-[#6b746b]">{workflow.stats}</p>}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+      {/* ---------------- Roadmap ---------------- */}
+      <section className="border-y border-line bg-paper-strong py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionIntro label="Roadmap" title="From a 2023 beta to supervised agents">
+            The public roadmap runs from the first chatbot beta to the 2026 governed builder path.
+          </SectionIntro>
 
-          <div className="mt-20 max-w-4xl mb-10">
-            <p className="rule-label mb-4">Assistant index</p>
-            <h2 className="text-3xl md:text-4xl font-medium leading-tight text-ink mb-5">TritonGPT Assistants, by the Work</h2>
-            <p className="text-lg leading-8 text-body">
-              These are not generic chatbots. Each is built around a specific kind of campus work where grounded context matters. Opening an
-              assistant does not grant access to new data, and the person responsible for the work still reviews the result.
-            </p>
-          </div>
+          <Reveal>
+            <ol className="grid md:grid-cols-7" aria-label="Shipped milestones">
+              {MILESTONES.map((milestone, index) => {
+                const last = index === MILESTONES.length - 1;
+                return (
+                  <li key={milestone.when} className="relative border-l-2 border-signal-blue/40 pb-7 pl-6 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pr-4 md:pt-6">
+                    <span
+                      aria-hidden="true"
+                      className={`absolute -left-[7px] top-1 h-3 w-3 rounded-full md:-top-[7px] md:left-0 ${last ? 'bg-signal-gold ring-4 ring-wash-gold' : 'bg-signal-blue'}`}
+                    />
+                    <p className={`font-mono text-xs ${last ? 'text-signal-gold-ink' : 'text-signal-blue'}`}>{milestone.when}</p>
+                    <p className="mt-1 font-semibold text-ink">{milestone.title}</p>
+                    <p className="mt-1 text-sm leading-6 text-body">{milestone.body}</p>
+                  </li>
+                );
+              })}
+            </ol>
+          </Reveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                category: "Campus and employee information",
-                note: "Find campus services, benefits, and shared data definitions.",
-                assistants: [
-                  { name: "UC San Diego Assistant", desc: "Answers from 70+ curated department websites, ServiceNow knowledge articles, and campus policies, with live parking and busyness tools." },
-                  { name: "UC San Diego Benefit Assistant", desc: "Answers questions about employee benefit packages." },
-                  { name: "Data Dictionary Assistant", desc: "Definitions from campus data sources such as the Activity Hubs and Blink." },
-                  { name: "Supplier Search Tool", desc: "Finds campus suppliers and explains the purchasing process." },
-                ],
-              },
-              {
-                category: "Teaching, learning, and planning",
-                note: "Work with course material or compare class schedule options.",
-                assistants: [
-                  { name: "Socratic Tutor", desc: "Guides students toward answers without handing them over." },
-                  { name: "Instructor AI Assistant", desc: "Drafts quizzes, summaries, and study guides from lecture content." },
-                  { name: "Class Scheduling Assistant", desc: "Compares course combinations around work, activities, and other commitments." },
-                ],
-              },
-              {
-                category: "Research and funding support",
-                note: "Gather current information and organize research or grant guidance.",
-                assistants: [
-                  { name: "Deep Research Assistant", desc: "Synthesis and analysis across many documents and sources." },
-                  { name: "Fund Manager Coach", desc: "Guidance on grant compliance, allowable expenses, and spending restrictions." },
-                  { name: "Internet Search Assistant", desc: "Conversational answers with current web information." },
-                ],
-              },
-              {
-                category: "Drafting and project delivery",
-                note: "Turn structured input into a draft, plan, meeting record, or technical starting point.",
-                assistants: [
-                  { name: "Job Description Helper", desc: "Drafts clear, compliant job descriptions and interview questions. 83% faster drafting: 30 min → 5 min average." },
-                  { name: "Expert Notetaker", desc: "Turns transcripts or notes into decisions and action items." },
-                  { name: "Project Charter Assistant", desc: "Helps draft professional project charters." },
-                  { name: "Triton Developer Assistant", desc: "Coding support and documentation analysis." },
-                  { name: "AI Workplace Opportunity Assistant", desc: "Interviews people about daily tasks and suggests AI use cases and prompts." },
-                ],
-              },
-              {
-                category: "Review, alignment, and risk",
-                note: "Prepare findings that support a policy, security, or performance review.",
-                assistants: [
-                  { name: "General AI Assistant", desc: "Writing and editing support without campus-specific context." },
-                  { name: "Email Phishing Analyzer", desc: "Scores suspicious emails for phishing risk and explains the warning signs." },
-                  { name: "Performance Review Evaluator", desc: "Checks whether performance ratings are supported by the written comments." },
-                ],
-              },
-            ].map((group) => (
-              <div key={group.category} className="field-note p-7">
-                <h3 className="text-xl font-semibold text-ink">{group.category}</h3>
-                <p className="mt-2 text-sm leading-6 text-body">{group.note}</p>
-                <ul className="mt-5 space-y-3 border-t border-line pt-4">
-                  {group.assistants.map((assistant) => (
-                    <li key={assistant.name} className="text-sm leading-6">
-                      <span className="font-semibold text-ink">{assistant.name}</span>
-                      <span className="text-body"> — {assistant.desc}</span>
+          <h3 className="mt-16 text-2xl font-semibold text-ink">Now and next</h3>
+          <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            {(['Pilot', 'In development', 'Exploring'] as const).map((status) => (
+              <div key={status} className="border border-line bg-paper p-5">
+                <StatusPill status={status} />
+                <ul className="mt-4 space-y-4">
+                  {ROADMAP.filter((item) => item.status === status).map((item) => (
+                    <li key={item.title} className="border-t border-line pt-4">
+                      <p className="font-semibold text-ink">{item.title}</p>
+                      <p className="mt-1 text-sm leading-6 text-body">{item.body}</p>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
+          <a
+            href="https://tritonai.ucsd.edu/about/roadmap.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 font-semibold text-signal-blue transition-colors hover:text-ink"
+          >
+            See the full public roadmap
+            <span aria-hidden="true">↗</span>
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
         </div>
       </section>
 
-      {/* Recognition & Awards */}
-      <section className="bg-[#eef2ea] py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="rule-label mb-4">External recognition</p>
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-12">Recognition & Awards</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <a 
-              href="https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html"
+      {/* ---------------- Recognition ---------------- */}
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <p className="rule-label mb-6">External recognition</p>
+        <div className="grid gap-4 md:grid-cols-2">
+          {[
+            { title: 'CIO 100 Award', note: '2025 CIO 100 recipient', href: 'https://www.cio.com/article/4032770/unpacking-uc-san-diegos-use-of-llms-to-boost-access-to-knowledge.html', tone: 'gold' as Tone },
+            { title: 'Gartner Eye on Innovation', note: 'Finalist in the education category', href: 'https://www.gartner.com/en/about/awards/eye-on-innovation', tone: 'blue' as Tone },
+          ].map((award) => (
+            <a
+              key={award.title}
+              href={award.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block border border-line bg-paper-strong p-8 transition-colors hover:bg-white"
+              className="lift group flex items-center gap-5 border border-line bg-paper-strong p-6 transition-colors hover:bg-white"
             >
-              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-wash-gold text-signal-gold-ink">
-                <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+              <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${TONES[award.tone].wash} ${TONES[award.tone].text}`}>
+                <svg aria-hidden="true" className="h-7 w-7" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-ink mb-2 transition-colors group-hover:text-[#1f5a8a]">CIO 100 Award</h3>
-              <p className="text-body">2025 CIO 100 recipient</p>
-            </a>
-            <a 
-              href="https://www.gartner.com/en/about/awards/eye-on-innovation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block border border-line bg-paper-strong p-8 transition-colors hover:bg-white"
-            >
-              <div className="mb-8 flex h-12 w-12 items-center justify-center bg-wash-blue text-signal-blue">
-                <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-semibold text-ink mb-2 transition-colors group-hover:text-[#1f5a8a]">Gartner Eye on Innovation</h3>
-              <p className="text-body">Finalist in the education category</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Future Roadmap */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <p className="rule-label mb-4">Roadmap</p>
-        <h2 className="text-4xl md:text-5xl font-medium leading-tight text-ink mb-5">Where TritonAI Is Going Next</h2>
-        <p className="text-lg leading-8 text-body max-w-4xl mb-6">
-          The public roadmap runs from the 2023 chatbot launch to the 2026 governed builder path. The current horizon is about getting
-          prototypes to supported services, extending the platform to partner institutions, and preparing for supervised agents at campus scale.
-        </p>
-        <ul className="mb-12 flex flex-wrap gap-x-5 gap-y-2" aria-label="Status key">
-          {[
-            ['Shipped', 'Publicly available'],
-            ['Pilot', 'Bounded testing with oversight'],
-            ['In development', 'Active work, no committed launch date'],
-            ['Exploring', 'Discovery only'],
-          ].map(([status, meaning]) => (
-            <li key={status} className="inline-flex items-center gap-2 text-xs text-body">
-              <span className={`px-2 py-0.5 font-mono text-[0.62rem] uppercase tracking-[0.12em] ${statusStyles[status]}`}>{status}</span>
-              {meaning}
-            </li>
-          ))}
-        </ul>
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            {
-              title: "Multi-Institution Expansion",
-              status: "In development",
-              desc: "The platform is becoming a governed multi-tenant service. BearGPT (UC Berkeley), ANR AI (UC Agriculture and Natural Resources), FredGPT (Fairleigh Dickinson University), and SCOUT (UC Merced, broadly available since September 2026) are live, and each partner inherits the same hosting, model choice, trust, and observability controls.",
-            },
-            {
-              title: "Governed Builder Path",
-              status: "In development",
-              desc: `The TritonAI Harness now has a public Gateway request, billing, installer, and setup path, with broader adoption staged. ${tritonAiMetrics.harness.tokensBillions}${tritonAiMetrics.harness.tokensSuffix} tokens used, ${tritonAiMetrics.harness.mergedPullRequests} merged PRs, and ${tritonAiMetrics.harness.aiReviews.toLocaleString()} AI reviews ${tritonAiMetrics.harness.timeframeNote}. Personal Harness memory is in the stable release; shared team and project memory is still in design.`,
-            },
-            {
-              title: "Instructional AI Expansion",
-              status: "Pilot",
-              desc: "Canvas-integrated AI Tutors are live for participating courses in Fall 2026, with upcoming quarters open for instructor onboarding. In the 2025–2026 pilot survey, 81% said it helped them understand concepts and 86% found it easy to use. Self-service course activation is in development.",
-            },
-            {
-              title: "Supported Rollout",
-              status: "In development",
-              desc: "The 15-part Discovery Series is published, the certificate offers staff and leadership streams, and AI use-case office hours share staff-built agent workflows. Readiness measures will track access, use, connected tools, and safeguards as Harness onboarding widens.",
-            },
-            {
-              title: "Academic Advising Agent",
-              status: "In development",
-              desc: "A scoped prototype for tier-one academic advising questions and triage, still in the build phase.",
-            },
-            {
-              title: "Governed Agency at Campus Scale",
-              status: "Exploring",
-              desc: "Repeatable, supervised agent workflows that call only approved tools within bounded scope. Before an agent can change a system, each service would define allowed scope, required tests, audit logs, approval points, and who owns rollback.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="system-node p-7">
-              <span className={`inline-block px-2.5 py-1 font-mono text-[0.68rem] uppercase tracking-[0.12em] ${statusStyles[item.status]}`}>
-                {item.status}
               </span>
-              <h3 className="mt-5 text-xl font-semibold text-ink mb-3">{item.title}</h3>
-              <p className="text-sm text-body leading-6">{item.desc}</p>
-            </div>
+              <span>
+                <span className="block text-xl font-semibold text-ink transition-colors group-hover:text-signal-blue">{award.title}</span>
+                <span className="block text-body">{award.note}</span>
+              </span>
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
           ))}
         </div>
-        <a
-          href="https://tritonai.ucsd.edu/about/roadmap.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 font-semibold text-signal-blue transition-colors hover:text-ink"
-        >
-          See the full public roadmap
-          <span aria-hidden="true">→</span>
-        </a>
       </section>
 
-      {/* Conclusion */}
-      <section className="bg-[#17201b] text-white py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="rule-label mb-4 text-[#d9dfd3]">Program lesson</p>
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-8">What We&apos;re Learning Through TritonAI</h2>
-          <p className="text-2xl text-[#d9dfd3] leading-10 mb-8">
-            One lesson so far is that shared infrastructure makes institutional AI easier to support. Models will keep changing. What keeps a service running is approved integrations, clean sources, reusable skills, honest evaluation, and a named owner, plus partnership with the people doing the work.
-          </p>
-          <div className="border-l-4 border-[#c97712] bg-white/5 px-6 py-4">
-            <p className="text-[#eef2ea] italic">TritonAI is one way of learning how shared institutional AI can become practical and trusted.</p>
+      {/* ---------------- Closing ---------------- */}
+      <section className="bg-ink py-20 text-white">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
+          <div>
+            <p className="rule-label mb-4 text-on-dark">Program lesson</p>
+            <h2 className="text-3xl font-medium leading-tight md:text-5xl">What we&apos;re learning through TritonAI</h2>
+            <p className="mt-6 text-xl leading-9 text-on-dark">
+              Shared infrastructure makes institutional AI easier to support. Models will keep changing. What keeps a service
+              running is approved integrations, clean sources, reusable skills, honest evaluation, and a named owner, plus
+              partnership with the people doing the work.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="bg-paper py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-medium text-ink mb-6">Want to Compare Notes?</h2>
-          <p className="text-xl leading-8 text-body mb-8">
-            If you&apos;re building something similar in higher education, I&apos;d be glad to compare notes and hear what your institution is learning.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-sm bg-[#17201b] px-8 py-4 font-semibold text-white transition-colors hover:bg-[#1f5a8a] focus:outline-none focus:ring-2 focus:ring-[#1f5a8a] focus:ring-offset-2"
-          >
-            Start a Conversation
-            <svg aria-hidden="true" className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <div className="border-l-4 border-signal-gold bg-white/5 p-6">
+            <p className="text-lg font-semibold">Want to compare notes?</p>
+            <p className="mt-2 leading-7 text-on-dark">
+              If you&apos;re building something similar in higher education, I&apos;d be glad to hear what your institution is learning.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-sm bg-white px-6 py-3 font-semibold text-ink transition-colors hover:bg-wash-blue"
+            >
+              Start a conversation <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </section>
     </main>
