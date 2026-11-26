@@ -73,7 +73,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     ],
     "publicUrl": "https://resolutioncompanion.com/",
     "publicLabel": "Visit the app's website",
-    "creditUrl": "https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708",
+    "creditUrl": "https://apps.apple.com/us/app/resolution-habit-tracker/id6757996708",
     "creditLabel": "Download on the App Store"
   },
   {
@@ -168,20 +168,20 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "title": "Pocket Relay",
     "group": "app-store",
     "category": "Developer tools",
-    "status": "Live on the App Store · v1.0",
-    "description": "A free iPhone and iPad app that pairs with Google Antigravity on your own computer, so you can follow your coding agent, approve or deny its actions, and answer its questions away from your desk. Version 1.0 is live on the App Store.",
+    "status": "Live on the App Store · v1.2.0",
+    "description": "A free iPhone and iPad app that pairs with Google Antigravity on your own computer, so you can follow your coding agent, approve or deny its actions, and answer its questions away from your desk, at home or anywhere else. Version 1.2.0 is live on the App Store.",
     "purpose": "Coding agents now run for minutes at a time, and they stall the moment they need a person: a command to approve, a question to answer. Pocket Relay puts those moments on your phone, so a long task keeps moving while you are in a meeting or across the room.",
     "features": [
       "A one-line status of what the agent is doing right now",
       "Approve or deny commands and file edits, once or always",
       "Answer the agent's questions and send new prompts, including by voice",
       "Review file changes and watch terminals",
-      "No servers of its own: the phone talks only to computers you pair"
+      "Works from anywhere: directly on your Wi-Fi, or through an end-to-end encrypted relay that cannot read your prompts or files"
     ],
     "steps": [
       [
         "Pair your computer",
-        "Install the free Pocket Relay Bridge, then scan its QR code or enter a 6-digit code from a nearby computer on the same network."
+        "Paste one command on your computer to install the free Pocket Relay Bridge, then scan its QR code. On the same Wi-Fi, a 6-digit code works too."
       ],
       [
         "Hand the agent a task",
@@ -192,7 +192,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
         "Approval cards and questions arrive on the phone. Approve once, approve always, or deny, then read the result and the diff when it is done."
       ]
     ],
-    "boundary": "Pocket Relay is an independent app, not made by or affiliated with Google. It is free on the App Store as of November 24, 2026, and requires iOS or iPadOS 26 or later. Prompts and files stay between your devices and the AI providers configured on your own computer; the developer does not receive them.",
+    "boundary": "Pocket Relay is an independent app, not made by or affiliated with Google. It is free on the App Store as of November 24, 2026, and requires iOS or iPadOS 26 or later. Away from home the phone reaches your computer through an end-to-end encrypted relay that cannot read prompts or files and stores nothing. Prompts and files go only to the AI providers configured on your own computer; the developer does not receive them.",
     "publicUrl": "https://pocketrelay.app/",
     "publicLabel": "Visit the app's website",
     "creditUrl": "https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748",

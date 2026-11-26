@@ -106,12 +106,37 @@ const featuredWork = [
   },
 ];
 
+// Featured podcast episode, shown as a band under the hero. The band hides
+// itself FEATURE_DAYS after `date`; the site rebuilds daily, so a stale
+// "new episode" never lingers. The episode also lives in lib/mediaData.ts,
+// which keeps it on /media and in the press list after the band is gone.
+const FEATURE_DAYS = 90;
+const featuredEpisode = {
+  show: 'Campus Technology Insider',
+  title: 'Supporting Citizen Developers and AI Innovation at UC San Diego',
+  date: '2026-11-23',
+  displayDate: 'November 23, 2026',
+  minutes: 31,
+  summary:
+    'I talked with Rhea Kelly, editor-in-chief of Campus Technology, about running open-weight models on campus infrastructure, how the TritonAI Harness connects AI to campus data, and what changes when staff can build their own tools.',
+  listenUrl: 'https://podcasts.apple.com/us/podcast/supporting-citizen-developers-and-ai-innovation-at-uc/id1521500107?i=1000803647358',
+  episodeUrl: 'https://campustechnology.com/podcasts/2026/11/supporting-citizen-developers-and-ai-innovation-at-uc-san-diego.aspx',
+  chapters: [
+    { time: '01:50', title: 'Origins of TritonGPT' },
+    { time: '10:47', title: 'TritonAI Harness explained' },
+    { time: '13:51', title: 'Citizen development at scale' },
+    { time: '26:36', title: 'Avoiding tool sprawl' },
+  ],
+};
+const showFeaturedEpisode =
+  Date.now() - Date.parse(`${featuredEpisode.date}T12:00:00Z`) < FEATURE_DAYS * 24 * 60 * 60 * 1000;
+
 const featuredApps = [
   {
     title: 'Pocket Relay',
     category: 'Developer tools',
     description: 'An iPhone and iPad app for following your coding agent in Google Antigravity, approving its actions, and answering its questions away from your desk.',
-    latest: 'Version 1.0 now live in the App Store — free for iPhone and iPad, pairing with a free bridge on Mac, Windows, or Linux.',
+    latest: 'Version 1.2.0 now live in the App Store — works from anywhere through an end-to-end encrypted relay, and setup is down to one command and a QR code.',
     image: '/pocket-relay-social.png',
     imageAlt: 'Pocket Relay: the app mascot beside the line "Follow and steer your coding agent from your iPhone or iPad."',
     href: '/products/pocket-relay',
@@ -125,7 +150,7 @@ const featuredApps = [
     image: '/resolution-companion-social.webp',
     imageAlt: 'Resolution Companion: a real app screen showing a reading habit and its two-minute alternative, with the app name and tagline.',
     href: '/products/resolution-companion',
-    appStoreUrl: 'https://apps.apple.com/us/app/resolution-companion-ai-coach/id6757996708',
+    appStoreUrl: 'https://apps.apple.com/us/app/resolution-habit-tracker/id6757996708',
   },
   {
     title: 'Horse Racing Companion',
@@ -374,6 +399,45 @@ export default function Home() {
           </figure>
         </div>
       </section>
+
+      {/* FEATURED PODCAST — see featuredEpisode */}
+      {showFeaturedEpisode && (
+        <section className="border-b border-line bg-wash-blue" aria-labelledby="podcast-heading">
+          <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:py-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:gap-16">
+            <div>
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-signal-blue">
+                New podcast · {featuredEpisode.show}
+              </p>
+              <h2 id="podcast-heading" className="mt-3 text-2xl font-normal leading-tight md:text-[2rem]">
+                {featuredEpisode.title}
+              </h2>
+              <p className="mt-2 font-mono text-xs text-muted">
+                <time dateTime={featuredEpisode.date}>{featuredEpisode.displayDate}</time> · {featuredEpisode.minutes} min
+              </p>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-body">{featuredEpisode.summary}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a href={featuredEpisode.listenUrl} target="_blank" rel="noopener noreferrer" className="button-primary">
+                  Listen on Apple Podcasts ↗<span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a href={featuredEpisode.episodeUrl} target="_blank" rel="noopener noreferrer" className="button-secondary bg-paper-strong">
+                  Episode page ↗<span className="sr-only"> on Campus Technology (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <p className="border-b border-ink pb-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] text-ink">In this episode</p>
+              <ol className="divide-y divide-line">
+                {featuredEpisode.chapters.map(chapter => (
+                  <li key={chapter.time} className="grid grid-cols-[3.5rem_1fr] py-2.5 text-[15px]">
+                    <span className="font-mono text-xs leading-6 text-muted">{chapter.time}</span>
+                    <span className="text-ink">{chapter.title}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* TRITONAI & CAMPUS WORK */}
       <section id="selected-work" className="border-b border-line bg-paper-strong" aria-labelledby="tritonai-heading">

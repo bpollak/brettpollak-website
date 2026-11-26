@@ -40,6 +40,26 @@ const products = [
     width: project.imageWidth, height: project.imageHeight, description: project.description, features: project.features, cta: "See how it works",
   })),
   {
+    group: "app-store",
+    status: "Live on the App Store · v1.1.1",
+    category: "Campus AI companion",
+    title: "TritonAI Harness Chat",
+    href: "https://apps.apple.com/us/app/tritonai-harness-chat/id6837802331",
+    image: "/tritonai-harness-chat.jpg",
+    imageAlt: "TritonAI Harness Chat on an iPhone: the TritonAI assistant asks \"What can I do for you?\" with suggested requests, under the line \"Your work computer, right in your pocket.\"",
+    width: 598,
+    height: 1300,
+    description:
+      "A free iPhone companion for people who use the TritonAI Harness on a Mac or PC at UC San Diego. Ask a question or hand off a small task from your phone, and the assistant on your computer does the work; the answer comes back in one running conversation.",
+    features: [
+      "Answers about how things are done at UC San Diego, with sources",
+      "First drafts of emails, agendas, and summaries to review and send yourself",
+      "Scheduled requests and ready-made routines, such as a morning brief",
+      "Asks before opening a web page; requests and answers go only to your own computer",
+    ],
+    cta: "Download on the App Store",
+  },
+  {
     group: "personal-apps",
     status: "Public web app",
     category: "Housing research",
@@ -273,8 +293,13 @@ const products = [
   },
 ];
 
+// Spelled out so the App Store blurb stays right as apps are added to the data.
+const NUMBER_WORDS = ['No apps are', 'One is', 'Two are', 'Three are', 'Four are', 'Five are', 'Six are', 'Seven are', 'Eight are', 'Nine are'];
+const appStoreCount = products.filter(product => product.group === 'app-store').length;
+const appStoreLive = NUMBER_WORDS[appStoreCount] ?? `${appStoreCount} are`;
+
 const projectGroups = [
-  { id: 'app-store', title: 'App Store', description: 'Independently built and shipped iOS apps. Three are live on the App Store right now.' },
+  { id: 'app-store', title: 'App Store', description: `Independently built and shipped iOS apps. ${appStoreLive} live on the App Store right now.` },
   { id: 'campus-tools', title: 'Campus tools', description: 'Applications and prototypes for campus workflows, student and visitor services, document preparation, and AI planning.' },
   { id: 'personal-apps', title: 'Personal apps', description: 'Apps and websites for everyday interests and family use. Private projects have public walkthroughs.' },
   { id: 'experiments', title: 'Experiments', description: 'Projects exploring personal AI systems, drafting workflows, and media authenticity.' },

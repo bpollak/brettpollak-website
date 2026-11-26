@@ -27,14 +27,14 @@ export const SITE_URL = "https://brettcpollak.com";
  */
 export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
-  "/": "2026-11-24",  // homepage: Pocket Relay app card and update
+  "/": "2026-11-25",  // homepage: featured podcast band, Pocket Relay 1.2.0, Harness Chat dispatch
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
   "/about": "2026-11-24",  // four App Store apps
   "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
   "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
-  "/products": "2026-11-24",  // Pocket Relay case study
+  "/products": "2026-11-25",  // TritonAI Harness Chat added; App Store count, Pocket Relay 1.2.0
   "/products/resolution-companion": "2026-11-20",  // v1.6.1 caption refresh
-  "/products/pocket-relay": "2026-11-24",  // new: Pocket Relay 1.0 on the App Store
+  "/products/pocket-relay": "2026-11-25",  // Pocket Relay 1.2.0: encrypted relay, one-command setup
   "/products/passports-visitor-management": "2026-11-20",  // clarified prototype vs campus production
   "/products/cason-recruiting-crm": "2026-07-14",
   "/products/cason-scholarship-agent": "2026-07-25",
