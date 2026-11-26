@@ -111,8 +111,29 @@ export function linkDigestHeadlines(raw: string): string {
   return out.join('\n');
 }
 
+// URLs must survive the prose sanitizer: substitutions like /\byour\b/ -> 'institutional'
+// would otherwise rewrite link targets and ship dead links (a Google blog slug containing
+// "your" became "institutional"). Protect every URL behind a placeholder while the prose
+// replacements run, then restore it verbatim.
+const URL_PLACEHOLDER = /\u0000URL(\d+)\u0000/g;
+
+function protectUrls(text: string): { text: string; urls: string[] } {
+  const urls: string[] = [];
+  const protectedText = text.replace(/https?:\/\/[^\s)\]"'<>]+/g, (match) => {
+    urls.push(match);
+    return `\u0000URL${urls.length - 1}\u0000`;
+  });
+  return { text: protectedText, urls };
+}
+
+function restoreUrls(text: string, urls: string[]): string {
+  if (urls.length === 0) return text;
+  return text.replace(URL_PLACEHOLDER, (match, index) => urls[Number(index)] ?? match);
+}
+
 function sanitizePublicLine(text: string): string {
-  return text
+  const { text: protectedText, urls } = protectUrls(text);
+  return restoreUrls(protectedText
     .replace(/\bBrett[’']s\b/g, 'the')
     .replace(/\bCurated from your knowledge graph\b/gi, 'Curated from recent AI developments')
     .replace(/\bAs a Claude-heavy shop\b/gi, 'For organizations with significant Claude usage')
@@ -181,7 +202,7 @@ function sanitizePublicLine(text: string): string {
     .replace(/\bBrett\b/g, 'institutional leaders')
     .replace(/\s{2,}/g, ' ')
     .replace(/\s+([.,;:!?])/g, '$1')
-    .trim();
+    .trim(), urls);
 }
 
 export function sanitizePublicDigest(raw: string): string {
@@ -195,6 +216,10 @@ export function sanitizePublicDigest(raw: string): string {
     if (/^Curated from your knowledge graph/i.test(trimmed)) continue;
     if (/^🔗\s+Graph:/i.test(trimmed)) continue;
     if (/^📅\s+Published:/i.test(trimmed)) continue;
+    if (/^📰\s+https?:\/\//i.test(trimmed)) {
+      out.push(trimmed);
+      continue;
+    }
 
     if (/^💡\s+\*\*Signal:\*\*/i.test(trimmed)) {
       const text = trimmed.replace(/^💡\s+\*\*Signal:\*\*\s*/i, '');
