@@ -143,7 +143,7 @@ const featuredApps = [
     appStoreUrl: 'https://apps.apple.com/us/app/pocket-relay-for-antigravity/id6837743748',
   },
   {
-    title: 'Resolution Companion',
+    title: 'Resolution: Habit Tracker',
     category: 'Mobile app',
     description: 'An iOS app that turns a personal goal into short daily activities, with AI coaching and progress tracking.',
     latest: 'Version 1.6.1 now available in the App Store — the reminder card now names a routine that fits the suggested time, plus fixes and polish.',

@@ -18,7 +18,7 @@ const FOOTER_GROUPS: FooterGroup[] = [
       { href: '/speaking', label: 'Speaking' },
       { href: '/media', label: 'Media & Publications' },
       { href: '/products', label: 'Projects' },
-      { href: 'https://resolutioncompanion.com/', label: 'Resolution Companion', external: true },
+      { href: 'https://resolutioncompanion.com/', label: 'Resolution: Habit Tracker', external: true },
     ],
   },
   {

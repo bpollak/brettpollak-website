@@ -88,7 +88,7 @@ export default function ContactContent() {
                     <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-body">Apps: which app you&apos;re using (Resolution Companion, Horse Racing Companion, Steel City Gameday, or Pocket Relay) and what you ran into</span>
+                    <span className="text-body">Apps: which app you&apos;re using (Resolution: Habit Tracker, Horse Racing Companion, Steel City Gameday, or Pocket Relay) and what you ran into</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg aria-hidden="true" className="w-5 h-5 text-signal-gold-ink flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

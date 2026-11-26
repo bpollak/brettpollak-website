@@ -13,7 +13,7 @@ export const projectWalkthroughs: ProjectWalkthrough[] = [
     "imageCaption": "Current social card from resolutioncompanion.com. App screens below show the core Today, Plan, Journey, and Coach flows; version 1.6.1 is live on the App Store.",
     "imageWidth": 1200,
     "imageHeight": 630,
-    "title": "Resolution Companion",
+    "title": "Resolution: Habit Tracker",
     "group": "app-store",
     "category": "AI-powered habit building",
     "status": "Available on iOS · v1.6.1",

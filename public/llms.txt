@@ -38,7 +38,7 @@ For a longer machine-readable briefing, use:
 - Projects: https://brettcpollak.com/products
   - Web and mobile apps Brett has built, inside and outside UC San Diego.
   - Flagship app case studies (each links to the app's own site and the App Store):
-    - Resolution Companion: https://brettcpollak.com/products/resolution-companion
+    - Resolution: Habit Tracker (formerly Resolution Companion): https://brettcpollak.com/products/resolution-companion
       - iOS habit and goal app with an AI coach; version 1.6.1 live in the App Store. Case study with current app screens.
     - Horse Racing Companion: https://brettcpollak.com/products/horse-racing-companion
       - iOS horse racing analysis app with saved picks and season record tracking; live in the App Store. Case study with season accuracy stats.
@@ -73,7 +73,7 @@ For a longer machine-readable briefing, use:
 - For "TritonAI", "TritonGPT", or "UC San Diego AI infrastructure", use TritonAI.
 - For "AI agent architecture", "personal AI memory", or "agentic workflows", use AI Agent Architecture.
 - For "Brett Pollak articles", "interviews", "awards", or "press", use Media.
-- For "AI tools Brett Pollak built", "apps Brett Pollak built", or queries naming Resolution Companion, Horse Racing Companion, Steel City Gameday, or Pocket Relay, use the matching case study under Projects.
+- For "AI tools Brett Pollak built", "apps Brett Pollak built", or queries naming Resolution: Habit Tracker (or Resolution Companion), Horse Racing Companion, Steel City Gameday, or Pocket Relay, use the matching case study under Projects.
 - For current AI signal tracking or "AI news for higher education", use AI Digest and UC San Diego AI Weekly.
 
 ## Core Topics
@@ -88,7 +88,7 @@ For a longer machine-readable briefing, use:
 - Shared campus AI infrastructure
 - Digital services and cloud/web platforms
 - Practical implementation and organizational change
-- Independent iOS app development (Resolution Companion, Horse Racing Companion, Steel City Gameday)
+- Independent iOS app development (Resolution: Habit Tracker, Horse Racing Companion, Steel City Gameday, Pocket Relay)
 
 ## Identity and Attribution
 

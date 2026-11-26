@@ -29,11 +29,11 @@ export const staticPageDates: Record<string, string> = {
   ...Object.fromEntries(projectWalkthroughs.map(project => [`/products/${project.slug}`, "2026-09-07"])),
   "/": "2026-11-25",  // homepage: featured podcast band, Pocket Relay 1.2.0, Harness Chat dispatch
   "/work": "2026-11-20",  // TritonAI case study updated through 2026
-  "/about": "2026-11-24",  // four App Store apps
+  "/about": "2026-11-25",  // Resolution: Habit Tracker name
   "/tritongpt": "2026-11-20",  // Fall 2026 cohort wording, Harness supported status, video autoplay removed
   "/speaking": "2026-11-20",  // refreshed bio, 2026 topics, May 2026 UC AI Council featured session
   "/products": "2026-11-25",  // TritonAI Harness Chat beta (experiments); App Store count, Pocket Relay 1.2.0
-  "/products/resolution-companion": "2026-11-20",  // v1.6.1 caption refresh
+  "/products/resolution-companion": "2026-11-25",  // renamed to match the App Store: Resolution: Habit Tracker
   "/products/pocket-relay": "2026-11-25",  // Pocket Relay 1.2.0: encrypted relay, one-command setup
   "/products/passports-visitor-management": "2026-11-20",  // clarified prototype vs campus production
   "/products/cason-recruiting-crm": "2026-07-14",
@@ -43,7 +43,7 @@ export const staticPageDates: Record<string, string> = {
   "/linkedin": "2026-10-26",  // title
   "/tritonai-meeting-scheduler": "2026-10-04",
   "/sent-using-tritonai": "2026-10-02",
-  "/contact": "2026-11-24",  // Pocket Relay in app feedback topic
+  "/contact": "2026-11-25",  // Resolution: Habit Tracker name in app feedback topic
   "/products/horse-racing-companion": "2026-09-09",
   "/products/steel-city-gameday": "2026-09-10",  // SCG live on the App Store
 };
